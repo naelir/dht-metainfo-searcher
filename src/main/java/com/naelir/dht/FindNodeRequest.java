@@ -22,4 +22,9 @@ public class FindNodeRequest implements IRequest {
     public String method() {
         return this.method;
     }
+
+    @Override
+    public ByteBuffer tid() {
+        return this.tid;
+    }
 }

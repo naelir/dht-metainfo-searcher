@@ -1,22 +1,34 @@
 package com.naelir.dht;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DhtFileManager {
+    public static final Logger logger = LogManager.getLogger(DhtFileManager.class);
     private File file;
+    private Path hashes;
 
     public DhtFileManager() {
         this.file = new File(System.getProperty("user.home"), "dht.info");
+        this.hashes = Paths.get(System.getProperty("user.home"), "hashes.info");
     }
 
-    public Info read() {
+    Info read() {
         if (this.file == null || !this.file.exists())
             return new Info();
         try (FileInputStream fis = new FileInputStream(this.file)) {
@@ -38,24 +50,32 @@ public class DhtFileManager {
 
     void save(ByteBuffer myself, List<Node> nodes) {
         try (FileOutputStream fos = new FileOutputStream(this.file);) {
-            // First write our own node id - 20 bytes
             fos.write(myself.array());
-            // Find the 100 closest nodes
             if (nodes == null || nodes.size() == 0)
                 return;
-            // Write IP length
             fos.write(nodes.get(0).ip.length);
-            // Write their compact info - 26 bytes * number of nodes
             ByteBuffer compact = CompactInfo.compactNodes(nodes);
             fos.write(compact.array());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+        }
+    }
+
+    void save(Set<String> hashes) {
+        try (BufferedWriter bufferedWriter = Files.newBufferedWriter(this.hashes, StandardOpenOption.CREATE,
+                StandardOpenOption.APPEND)) {
+            for (String string : hashes) {
+                bufferedWriter.append(string);
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
         }
     }
 
     public static class Info {
         public List<Node> nodes;
-        public ByteBuffer myselfNodeId;
+        public ByteBuffer myself;
 
         public Info() {
             this(Collections.emptyList(), Generator.generateRandomID());
@@ -63,12 +83,12 @@ public class DhtFileManager {
 
         public Info(List<Node> nodes, byte[] nodeId) {
             this.nodes = nodes;
-            this.myselfNodeId = ByteBuffer.wrap(nodeId);
+            this.myself = ByteBuffer.wrap(nodeId);
         }
 
         public Info(List<Node> nodes, ByteBuffer nodeId) {
             this.nodes = nodes;
-            this.myselfNodeId = nodeId;
+            this.myself = nodeId;
         }
     }
 }

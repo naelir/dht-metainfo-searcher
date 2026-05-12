@@ -5,6 +5,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompactInfo {
+    private static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0; j < bytes.length; j++) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = HEX_ARRAY[v >>> 4];
+            hexChars[j * 2 + 1] = HEX_ARRAY[v & 0x0F];
+        }
+        return new String(hexChars);
+    }
+
     static byte[] compact(byte[] nodeId, byte[] ip, int port) {
         ByteBuffer cibb = ByteBuffer.allocate(nodeId.length + ip.length + 2);
         cibb.put(nodeId);
@@ -45,7 +57,39 @@ public class CompactInfo {
         return peers;
     }
 
-    public static List<Node> of(ByteBuffer info) {
+    public static List<Node> expand(List<ByteBuffer> info) {
+        int count = info.size();
+        List<Node> list = new ArrayList<>(count);
+        for (ByteBuffer buffer : info) {
+            list.add(expandNode(buffer));
+        }
+        return list;
+    }
+
+    public static List<String> expandHashes(ByteBuffer info) {
+        int count = info.array().length / 20;
+        List<String> list = new ArrayList<>(count);
+        for (int i = 0; i < count; i++) {
+            byte[] idBytes = new byte[20];
+            info.get(idBytes);
+            list.add(bytesToHex(idBytes));
+        }
+        return list;
+    }
+
+    public static Node expandNode(ByteBuffer info) {
+        byte[] idBytes = new byte[20];
+        info.get(idBytes);
+        byte[] ip = new byte[4];
+        info.get(ip);
+        byte[] portBytes = new byte[2];
+        info.get(portBytes);
+        ByteBuffer id = ByteBuffer.wrap(idBytes);
+        int port = ((portBytes[0] & 0xFF) << 8) | (portBytes[1] & 0xFF);
+        return new Node(ip, port, id);
+    }
+
+    public static List<Node> expandNodes(ByteBuffer info) {
         int count = info.array().length / 26;
         List<Node> list = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {

@@ -11,10 +11,10 @@ import com.github.cdefgah.bencoder4j.BencodeFormatException;
 import com.github.cdefgah.bencoder4j.io.BencodeStreamIterator;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 
-public class BDecoder {
+public final class BDecoder {
     public static final Logger logger = LogManager.getLogger(BDecoder.class);
 
-    static Optional<BencodedDictionary> decode(byte[] data) {
+    public static Optional<BencodedDictionary> decode(byte[] data) {
         try {
             return Optional.of(map(data));
         } catch (IOException | BencodeFormatException e) {

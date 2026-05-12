@@ -10,8 +10,24 @@ public class GetPeersRequest implements IRequest {
     ByteBuffer tid;
     String method = "get_peers";
 
+    public GetPeersRequest() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public GetPeersRequest(ByteBuffer tid, ByteBuffer id, ByteBuffer infoHash) {
+        super();
+        this.tid = tid;
+        this.id = id;
+        this.infoHash = infoHash;
+    }
+
     @Override
     public String method() {
         return this.method;
+    }
+
+    @Override
+    public ByteBuffer tid() {
+        return this.tid;
     }
 }

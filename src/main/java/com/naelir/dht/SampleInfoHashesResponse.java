@@ -22,7 +22,7 @@ import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
     "y": "r"
 }
 */
-public class SampleInfoHashesResponse {
+public class SampleInfoHashesResponse implements IResponse {
     public static SampleInfoHashesResponse of(BencodedDictionary map) {
         SampleInfoHashesResponse name = new SampleInfoHashesResponse();
         name.tid = KRPCKeys.getTransaction(map);
@@ -37,11 +37,28 @@ public class SampleInfoHashesResponse {
 
     ByteBuffer tid;
     ByteBuffer id;
-    String type;
-    ByteBuffer interval;
+    String type = "sample_infohashes";
+    Integer interval;
     ByteBuffer nodes;
-    int num;
+    Integer num;
     ByteBuffer samples;
+    private IRequest request;
+
+    public SampleInfoHashesResponse() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public SampleInfoHashesResponse(ByteBuffer tid, ByteBuffer id, Integer interval, ByteBuffer nodes, Integer num,
+            ByteBuffer samples, IRequest request) {
+        super();
+        this.tid = tid;
+        this.id = id;
+        this.interval = interval;
+        this.nodes = nodes;
+        this.num = num;
+        this.samples = samples;
+        this.request = request;
+    }
 
     public byte[] encode() throws IOException, CircularReferenceException {
         BencodedDictionary answer = new BencodedDictionary();
@@ -56,5 +73,10 @@ public class SampleInfoHashesResponse {
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         answer.writeObject(os);
         return os.toByteArray();
+    }
+
+    @Override
+    public IRequest request() {
+        return this.request;
     }
 }

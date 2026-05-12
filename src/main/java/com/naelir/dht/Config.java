@@ -30,5 +30,5 @@ public class Config {
     final static long ANNOUNCE_INTERVAL = 70 * 1000; // 70 sec
     final static long BLACKLIST_TIMEOUT = 10 * 60 * 1000; // 10 mins
     final static long TOKEN_TIMEOUT = 10 * 60 * 1000; // 10 mins
-    public static final int BUCKET_SIZE = 8;
+    public static final int BUCKET_SIZE = 2;
 }

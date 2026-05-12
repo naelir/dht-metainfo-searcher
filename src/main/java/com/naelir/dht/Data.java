@@ -2,12 +2,15 @@ package com.naelir.dht;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
+
+import com.naeir.bt.Torrent;
 
 public class Data {
     static List<Node> parse(ByteBuffer nodes, InetAddress address) {
@@ -30,38 +33,21 @@ public class Data {
         return list;
     }
 
-    Buckets buckets;
-    Map<CommandId, IRequest> commandsSent;
-    Map<ByteBuffer, Node> nodes;
+    RoutingTable table;
+    Map<CommandId, IRequest> sent;
     Map<ByteBuffer, Torrent> torrents;
     ByteBuffer myself;
-    Map<ByteBuffer, Token> tokens;
+    Map<ByteBuffer, Node> tokensSent;
+    Map<ByteBuffer, Node> tokensReceived;
+    Set<String> hashes;
 
     public Data(ByteBuffer myself) {
         this.myself = myself;
-        this.commandsSent = new ConcurrentHashMap<>();
-        this.nodes = new ConcurrentHashMap<>();
+        this.sent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
-        this.buckets = new Buckets(myself);
-    }
-
-    public List<Node> closest(ByteBuffer id, int max) {
-        List<ByteBuffer> ids = this.buckets.getClosest(id, 2 * max);
-        List<Node> closest = new ArrayList<>(ids.size());
-        for (ByteBuffer key : ids) {
-            Node node = this.nodes.get(key);
-            if (node != null && !node.isUnsafe && closest.size() < max) {
-                closest.add(node);
-            }
-        }
-        if (closest.size() < max) {
-            for (ByteBuffer key : ids) {
-                Node node = this.nodes.get(key);
-                if (node != null && node.isUnsafe && closest.size() < max) {
-                    closest.add(node);
-                }
-            }
-        }
-        return closest;
+        this.tokensSent = new ConcurrentHashMap<>();
+        this.tokensReceived = new ConcurrentHashMap<>();
+        this.table = new RoutingTable(myself);
+        this.hashes = new ConcurrentSkipListSet<>();
     }
 }

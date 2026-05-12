@@ -13,8 +13,26 @@ public class AnnouncePeerRequest implements IRequest {
     int port;
     String method = "announce_peer";
 
+    public AnnouncePeerRequest() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public AnnouncePeerRequest(ByteBuffer tid, ByteBuffer id, ByteBuffer infoHash, ByteBuffer token, int port) {
+        super();
+        this.tid = tid;
+        this.id = id;
+        this.infoHash = infoHash;
+        this.token = token;
+        this.port = port;
+    }
+
     @Override
     public String method() {
         return this.method;
+    }
+
+    @Override
+    public ByteBuffer tid() {
+        return this.tid;
     }
 }

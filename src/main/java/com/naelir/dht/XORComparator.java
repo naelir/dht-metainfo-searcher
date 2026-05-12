@@ -3,7 +3,7 @@ package com.naelir.dht;
 import java.nio.ByteBuffer;
 import java.util.Comparator;
 
-public class XORComparator implements Comparator<ByteBuffer> {
+public class XORComparator implements Comparator<Node> {
     private final byte[] target;
 
     public XORComparator(ByteBuffer target) {
@@ -11,9 +11,9 @@ public class XORComparator implements Comparator<ByteBuffer> {
     }
 
     @Override
-    public int compare(ByteBuffer a, ByteBuffer b) {
-        byte a_ba[] = a.array();
-        byte b_ba[] = b.array();
+    public int compare(Node a, Node b) {
+        byte a_ba[] = a.id.array();
+        byte b_ba[] = b.id.array();
         for (int i = 0; i < this.target.length; i++) {
             int ld = (a_ba[i] ^ this.target[i]) & 0xff;
             int rd = (b_ba[i] ^ this.target[i]) & 0xff;

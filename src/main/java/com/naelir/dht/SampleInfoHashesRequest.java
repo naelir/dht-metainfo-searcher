@@ -34,8 +34,24 @@ public class SampleInfoHashesRequest implements IRequest {
     ByteBuffer id;
     ByteBuffer target;
 
+    public SampleInfoHashesRequest() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public SampleInfoHashesRequest(ByteBuffer tid, ByteBuffer id, ByteBuffer target) {
+        super();
+        this.tid = tid;
+        this.id = id;
+        this.target = target;
+    }
+
     @Override
     public String method() {
         return this.method;
+    }
+
+    @Override
+    public ByteBuffer tid() {
+        return this.tid;
     }
 }

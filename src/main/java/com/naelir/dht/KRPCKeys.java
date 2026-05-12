@@ -55,9 +55,9 @@ public final class KRPCKeys {
         return target != null ? ByteBuffer.wrap(target.getByteSequence()) : null;
     }
 
-    public static ByteBuffer getInterval(BencodedDictionary map) {
-        BencodedByteSequence type = (BencodedByteSequence) map.get("interval");
-        return type != null ? ByteBuffer.wrap(type.getByteSequence()) : null;
+    public static Integer getInterval(BencodedDictionary map) {
+        BencodedInteger type = (BencodedInteger) map.get("interval");
+        return type != null ? (int) type.getValue() : null;
     }
 
     public static ByteBuffer getNodes(BencodedDictionary map) {
