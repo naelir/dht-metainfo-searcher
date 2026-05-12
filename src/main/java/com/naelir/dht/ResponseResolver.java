@@ -1,13 +1,23 @@
 package com.naelir.dht;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Deque;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
+import com.naelir.bt.IpRangeFilter;
+import com.naelir.bt.Torrent;
+import com.naelir.dht.Node.Command;
 
 public class ResponseResolver {
     public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
@@ -17,37 +27,82 @@ public class ResponseResolver {
         this.data = data;
     }
 
-    private AnnouncePeerResponse resolve(AnnouncePeerRequest message, From from) {
-        Token found = this.data.tokens.get(message.token);
-        if (found != null && found.nodeId().equals(message.id)) {
+    private Object forAddress(From from) {
+        try {
+            return InetAddress.getByAddress(from.ip);
+        } catch (UnknownHostException e) {
+            return Arrays.toString(from.ip);
+        }
+    }
+
+    private void logFrom(Object decode, From from) {
+        logger.debug("{} {}, from {}, port {}", decode.getClass().getSimpleName(), decode, forAddress(from), from.port);
+    }
+
+    private void logTo(Object decode, From from) {
+        logger.debug("{} {}, to {}, port {}", decode.getClass().getSimpleName(), decode, forAddress(from), from.port);
+    }
+
+    private Optional<byte[]> optional(byte[] encode) {
+        if (encode != null && encode.length > 0)
+            return Optional.of(encode);
+        else
+            return Optional.empty();
+    }
+
+    private Object resolve(AnnouncePeerRequest message, From from) {
+        Node found = this.data.tokensSent.get(message.token);
+        ByteBuffer hashed = Token.token(from.ip);
+        if (found != null && message.token.equals(hashed)) {
             Integer remotePort = message.port;
             if (message.implied != 0) {
                 remotePort = from.port;
             }
-            Torrent torrent = this.data.torrents.get(message.infoHash);
             Node node = new Node(from.ip, remotePort, message.id);
-            torrent.peers.add(node);
-        }
-        return new AnnouncePeerResponse(message.tid, this.data.myself);
+            String hex = Generator.toHex(message.infoHash.array());
+            Torrent previous = this.data.torrents.get(hex);
+            if (previous != null) {
+                previous.peers().add(node);
+            } else {
+                Torrent name = new Torrent(hex).addPeer(node);
+                this.data.torrents.put(hex, name);
+            }
+            return new AnnouncePeerResponse(message.tid, this.data.myself, message);
+        } else
+            return new Error(203, "invalid token", message.tid);
     }
 
     private void resolve(AnnouncePeerResponse decode, From from) {
-        // TODO Auto-generated method stub
+        if (decode.request instanceof AnnouncePeerRequest apr) {
+            Query command = apr.node.get(Command.ANNOUNCE);
+            command.setResponded();
+        }
     }
 
     public Optional<byte[]> resolve(BencodedDictionary map, From from) {
         try {
             String type = KRPCKeys.getType(map);
             if (KRPCKeys.QUERY.equals(type)) {
-                String method = KRPCKeys.getQuery(map);
-                Object decode = CommandDecoder.decode(map, method);
+                Object decode = CommandDecoder.decodeRequest(map);
+                logFrom(decode, from);
                 return resolve(decode, from);
+            } else if (KRPCKeys.RESPONSE.equals(type)) {
+                ByteBuffer tid = KRPCKeys.getTransaction(map);
+                IRequest found = this.data.sent.remove(tid);
+                if (found != null) {
+                    Object decode = CommandDecoder.decodeResponse(map, found);
+                    logFrom(decode, from);
+                    return resolve(decode, from);
+                }
             } else {
                 ByteBuffer tid = KRPCKeys.getTransaction(map);
-                IRequest found = this.data.commandsSent.remove(new CommandId(tid, from.ip, from.port));
-                if (found != null) {
-                    Object decode = CommandDecoder.decode(map, found.method());
-                    return resolve(decode, from);
+                if (tid != null) {
+                    IRequest found = this.data.sent.remove(tid);
+                    if (found != null) {
+                        Object decode = CommandDecoder.decodeError(map, found);
+                        logFrom(decode, from);
+                        return resolve(decode, from);
+                    }
                 }
             }
         } catch (Exception e) {
@@ -57,62 +112,142 @@ public class ResponseResolver {
     }
 
     private FindNodeResponse resolve(FindNodeRequest message, From from) {
-        List<Node> nodeList = this.data.closest(message.target, Config.NUM_RETURN_NODES);
-        ByteBuffer compact = CompactInfo.compactNodes(nodeList);
-        return new FindNodeResponse(message.tid, this.data.myself, compact);
+        List<Node> nodes = this.data.table.closest(message.target);
+        logger.info("request to myself {} resolved, found {} close nodes", Generator.toHex(message.target.array()),
+                nodes.size());
+        return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    private GetPeersResponse resolve(GetPeersRequest message, From from) {
-        Token token = new Token(message.id, from.ip);
-        this.data.tokens.put(token.token(), token);
-        ByteBuffer infoHash = message.infoHash;
-        Torrent torrent = this.data.torrents.get(infoHash);
-        if (torrent != null && torrent.peers.size() > 0) {
-            List<ByteBuffer> compact = CompactInfo.compactPeers(torrent.peers);
-            return new GetPeersResponse1(message.tid, this.data.myself, token.token, compact);
-        } else {
-            List<Node> closest = this.data.closest(infoHash, Config.NUM_RETURN_NODES);
-            Node node = this.data.nodes.get(message.id);
-            ByteBuffer nodes = CompactInfo.compactNodes(closest);
-            this.data.torrents.put(infoHash, new Torrent(infoHash, token.token, node));
-            return new GetPeersResponse2(message.tid, this.data.myself, token.token, nodes);
+        decode.request.node.get(Command.FIND_NODE).setResponded();
+        for (Node node : decode.nodes) {
+            this.data.table.insert(node);
         }
+        return Optional.empty();
     }
 
-    private Optional<byte[]> resolve(GetPeersResponse1 decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
+    private Object resolve(GetPeersRequest message, From from) {
+        Token token = new Token(from.ip);
+        ByteBuffer infoHash = message.infoHash;
+        String hex = Generator.toHex(infoHash.array());
+        Torrent torrent = this.data.torrents.get(hex);
+        this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id));
+        List<Node> closest = this.data.table.closest(infoHash);
+        if (torrent != null) {
+            Deque<Node> peers = torrent.peers();
+            List<Node> name = new ArrayList<>(peers);
+            return new GetPeersResponse(message.tid, this.data.myself, token.value, name, closest, message);
+        } else
+            return new GetPeersResponse(message.tid, this.data.myself, token.value, Collections.emptyList(), closest,
+                    message);
     }
 
-    private Optional<byte[]> resolve(GetPeersResponse2 decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
+    private Optional<byte[]> resolve(GetPeersResponse decode, From from) {
+        IRequest req = decode.request;
+        if (req instanceof GetPeersRequest gpr) {
+            if (decode.token != null) {
+                this.data.tokensReceived.put(decode.token, gpr.node);
+            }
+            String hex = Generator.toHex(gpr.infoHash.array());
+            Torrent torrent = this.data.torrents.get(hex);
+            if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0) {
+                for (Node node : decode.peers) {
+                    if (IpRangeFilter.isDenied(node.ip)) {
+                        logger.warn("asian scam ip {} for torrent {}", node.address(), hex);
+                    } else {
+                        this.data.pingTasks.add(new PingPeersTorrentTask(List.of(node), torrent));
+                    }
+                }
+            }
+        }
+        return Optional.empty();
+    }
+
+    private Optional<byte[]> resolve(IRequest decode, From from) {
+        if (decode instanceof AnnouncePeerRequest apr) {
+            Object r = resolve(apr, from);
+            logTo(r, from);
+            byte[] encode = BEncoder.encode(r);
+            return optional(encode);
+        } else if (decode instanceof GetPeersRequest gpr) {
+            Object r = resolve(gpr, from);
+            logTo(r, from);
+            byte[] encode = BEncoder.encode(r);
+            return optional(encode);
+        } else if (decode instanceof FindNodeRequest fnr) {
+            FindNodeResponse r = resolve(fnr, from);
+            logTo(r, from);
+            byte[] encode = BEncoder.encode(r);
+            return optional(encode);
+        } else if (decode instanceof PingRequest pr) {
+            PingResponse r = resolve(pr, from);
+            logTo(r, from);
+            byte[] encode = BEncoder.encode(r);
+            return optional(encode);
+        } else if (decode instanceof SampleInfoHashesRequest sihr) {
+            IResponse r = resolve(sihr, from);
+            logTo(r, from);
+            byte[] encode = BEncoder.encode(r);
+            return optional(encode);
+        } else
+            return Optional.empty();
+    }
+
+    private Optional<byte[]> resolve(IResponse decode, From from) {
+        if (decode instanceof AnnouncePeerResponse apr) {
+            resolve(apr, from);
+        } else if (decode instanceof GetPeersResponse gpr) {
+            resolve(gpr, from);
+        } else if (decode instanceof FindNodeResponse pr) {
+            resolve(pr, from);
+        } else if (decode instanceof SampleInfoHashesResponse sihr) {
+            resolve(sihr, from);
+        } else if (decode instanceof PingResponse sihr) {
+            resolve(sihr, from);
+        }
+        return Optional.empty();
     }
 
     private Optional<byte[]> resolve(Object decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
+        if (decode instanceof IRequest ir)
+            return resolve(ir, from);
+        else if (decode instanceof IResponse rsp)
+            return resolve(rsp, from);
+        else
+            return Optional.empty();
     }
 
     private PingResponse resolve(PingRequest decode, From from) {
-        return new PingResponse(decode.tid, this.data.myself);
+        return new PingResponse(decode.tid, this.data.myself, decode);
     }
 
     private void resolve(PingResponse decode, From from) {
+        decode.request.node.get(Command.PING).responded(TimeUnit.MINUTES, 15);
     }
 
-    private Optional<byte[]> resolve(SampleInfoHashesRequest decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
+    private IResponse resolve(SampleInfoHashesRequest decode, From from) {
+        List<Node> nodes = this.data.table.closest(decode.target, 8);
+        return new SampleInfoHashesResponse(decode.tid, this.data.myself, 3600, nodes, 0, List.of(), decode);
     }
 
-    private Optional<byte[]> resolve(SampleInfoHashesResponse decode, From from) {
-        // TODO Auto-generated method stub
-        return null;
+    private void resolve(SampleInfoHashesResponse decode, From from) {//
+        if (decode.samples.isEmpty() == false) {
+            int i = 0;
+            for (String hash : decode.samples) {
+                Torrent torrent = new Torrent(hash);
+                Torrent prev = this.data.torrents.putIfAbsent(hash, torrent);
+                if (prev == null) {
+                    i++;
+                }
+            }
+            logger.info("found {} samples from {}, inserted new {}", decode.samples.size(), from, i);
+            this.data.samples.offer(decode);
+            decode.request.node.get(Command.SAMPLE).responded(TimeUnit.SECONDS, decode.interval);
+            if (this.data.table.nodes().size() < Config.MAX_NODES) {
+                for (Node node : decode.nodes) {
+                    this.data.table.insert(node);
+                }
+            }
+        }
     }
 }
