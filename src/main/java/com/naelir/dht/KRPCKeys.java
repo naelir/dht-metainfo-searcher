@@ -1,13 +1,16 @@
 package com.naelir.dht;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import com.github.cdefgah.bencoder4j.model.BencodedByteSequence;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.github.cdefgah.bencoder4j.model.BencodedInteger;
 import com.github.cdefgah.bencoder4j.model.BencodedList;
+import com.github.cdefgah.bencoder4j.model.BencodedObject;
 
 public final class KRPCKeys {
     public static final String TRANSACTIONID = "t";
@@ -27,6 +30,7 @@ public final class KRPCKeys {
     public static final List<String> BEP05_METHODS = List.of(Commands.PING, Commands.ANNOUNCE_PEER, Commands.FIND_NODE,
             Commands.GET_PEERS);
     public static final List<String> BEP051_METHODS = List.of(Commands.SAMPLE_INFOHASHES);
+    public static final String SAMPLES = "samples";
 
     public static boolean equals(byte[] bytes, String krpc) {
         return Arrays.equals(bytes, krpc.getBytes());
@@ -55,9 +59,9 @@ public final class KRPCKeys {
         return target != null ? ByteBuffer.wrap(target.getByteSequence()) : null;
     }
 
-    public static ByteBuffer getInterval(BencodedDictionary map) {
-        BencodedByteSequence type = (BencodedByteSequence) map.get("interval");
-        return type != null ? ByteBuffer.wrap(type.getByteSequence()) : null;
+    public static Integer getInterval(BencodedDictionary map) {
+        BencodedInteger type = (BencodedInteger) map.get("interval");
+        return type != null ? (int) type.getValue() : null;
     }
 
     public static ByteBuffer getNodes(BencodedDictionary map) {
@@ -109,8 +113,19 @@ public final class KRPCKeys {
         return type != null ? type.toUTF8String() : null;
     }
 
-    public static BencodedList getValues(BencodedDictionary args) {
-        return (BencodedList) args.get(VALUES);
+    public static List<ByteBuffer> getValues(BencodedDictionary args) {
+        BencodedList list = (BencodedList) args.get(VALUES);
+        if (list != null) {
+            List<ByteBuffer> l = new ArrayList<>(8);
+            for (BencodedObject peer : list) {
+                BencodedByteSequence p = (BencodedByteSequence) peer;
+                if (p != null && p.getByteSequence().length == 6) {
+                    l.add(ByteBuffer.wrap(p.getByteSequence()));
+                }
+            }
+            return l;
+        }
+        return Collections.emptyList();
     }
 
     public static class Commands {

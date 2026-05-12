@@ -1,89 +1,68 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package com.naelir.dht;
 
-import java.math.BigInteger;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
-public class Generator {
-    private final static BigInteger FF = ff();
-//    private final static BigInteger one = new BigInteger("1");
+import org.apache.commons.lang3.RandomStringUtils;
 
-    static BigInteger ff() {
-        byte[] allOnesByteArray = new byte[20];
-        for (int i = 0; i < 20; i++) {
-            allOnesByteArray[i] = (byte) 0xff;
-        }
-        return new BigInteger(1, allOnesByteArray);
+public class Generator {
+    // imitate something
+    private static final String NAME = "-SZ1000-";
+    static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+
+    public static byte[] client(byte[] peerId) {
+        return Arrays.copyOfRange(peerId, 0, 8);
+    }
+
+    public static int client(Object o) {
+        if (o instanceof IRequest ir)
+            return ir.id().getInt(0);
+        else if (o instanceof IResponse irsp)
+            return irsp.id().getInt(0);
+        return 0;
+    }
+
+    public static String clientPrefix(byte[] peerId) {
+        return new String(client(peerId), StandardCharsets.UTF_8);
+    }
+
+    public static String generatePeerID() {
+        String randomAlphanumeric = RandomStringUtils.randomAlphanumeric(12);
+        return NAME.concat(randomAlphanumeric);
     }
 
     public static byte[] generateRandomByteID() {
         byte[] nid = new byte[20];
         new Random().nextBytes(nid);
-        // try to do SHA1 to generate more entropy
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA1");
-            nid = md.digest(nid);
-        } catch (NoSuchAlgorithmException ex) {
-            //
-        }
         return nid;
     }
 
     public static ByteBuffer generateRandomID() {
-        byte[] nid = new byte[20];
-        new Random().nextBytes(nid);
-        // try to do SHA1 to generate more entropy
+        return ByteBuffer.wrap(generateRandomByteID());
+    }
+
+    public static InetAddress inet(byte[] ip) {
         try {
-            MessageDigest md = MessageDigest.getInstance("SHA1");
-            nid = md.digest(nid);
-        } catch (NoSuchAlgorithmException ex) {
-            //
+            return InetAddress.getByAddress(ip);
+        } catch (UnknownHostException e) {
+            return null;
         }
-        return ByteBuffer.wrap(nid);
     }
 
-    public static ByteBuffer generateRandomID(BigInteger myID, int range) {
-        byte[] b = new byte[20];
-        new Random().nextBytes(b);
-        BigInteger b_bi = new BigInteger(1, b);
-        // create masks
-        BigInteger mask_a = FF.shiftRight(160 - range);
-        BigInteger mask_b = mask_a.xor(FF);
-        BigInteger newval = mask_a.and(b_bi).or(mask_b.and(myID)); // compose two parts
-        newval = newval.xor(new BigInteger("1").shiftLeft(range)); // invert 'range' bit
-        // copy array
-        byte[] newvalArray = newval.toByteArray();
-        byte[] ret = new byte[20];
-        Arrays.fill(ret, (byte) 0);
-        for (int i = newvalArray.length - 1, j = 19; i >= 0 && j >= 0; i--, j--) {
-            ret[j] = newvalArray[i];
-        }
-        return ByteBuffer.wrap(ret);
-    }
-
-    public static ByteBuffer generateRandomID(ByteBuffer myID, int range) {
-        return generateRandomID(new BigInteger(1, myID.array()), range);
-    }
-
-    public static void main(String[] args) {
-        long now = System.currentTimeMillis();
-        long l = now / 600000;
-        System.out.println(l);
+    public static String ip(byte[] ip) {
+        return String.format("%d.%d.%d.%d", Byte.toUnsignedInt(ip[0]), Byte.toUnsignedInt(ip[1]),
+                Byte.toUnsignedInt(ip[1]), Byte.toUnsignedInt(ip[1]));
     }
 
     public static byte[] sha1(byte[] ip) {
         try {
-//            long now = System.currentTimeMillis();
-//            long l = now / 600000;
-//            for (int i = 0; i < ip.length; i++) {
-//                l = l + ip[i];
-//            }
             byte[] token = new byte[8];
             byte[] digest = MessageDigest.getInstance("SHA1").digest(ip);
             System.arraycopy(digest, 0, token, 0, 8);
@@ -91,5 +70,34 @@ public class Generator {
         } catch (NoSuchAlgorithmException ex) {
             return new byte[0];
         }
+    }
+
+    public static byte[] toArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4) + Character.digit(s.charAt(i + 1), 16));
+        }
+        return data;
+    }
+//
+//    static ByteBuffer getTid(int id) {
+//        id = id % Config.MAX_MESSAGE_ID;
+//        byte[] bytes = { (byte) (id & 0xFF), (byte) ((id & 0xFF00) >>> 8) };
+//        return ByteBuffer.wrap(bytes);
+//    }
+
+    public static String toHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0; j < bytes.length; j++) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = Generator.HEX_ARRAY[v >>> 4];
+            hexChars[j * 2 + 1] = Generator.HEX_ARRAY[v & 0x0F];
+        }
+        return new String(hexChars);
+    }
+
+    public static List<String> toHex(List<Node> nodes) {
+        return nodes.stream().map(e -> toHex(e.id.array())).toList();
     }
 }

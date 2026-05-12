@@ -2,12 +2,22 @@ package com.naelir.dht;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.Collections;
+import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import com.naelir.bt.Torrent;
+import com.naelir.bt.TorrentMeta;
+import com.naelir.http.IRemoteClient;
 
 public class Data {
     static List<Node> parse(ByteBuffer nodes, InetAddress address) {
@@ -30,38 +40,70 @@ public class Data {
         return list;
     }
 
-    Buckets buckets;
-    Map<CommandId, IRequest> commandsSent;
-    Map<ByteBuffer, Node> nodes;
-    Map<ByteBuffer, Torrent> torrents;
-    ByteBuffer myself;
-    Map<ByteBuffer, Token> tokens;
+    public RoutingTable table;
+    Map<ByteBuffer, IRequest> sent;
+    public Map<String, Torrent> torrents;
+    public Set<String> unresolved;
+    public Deque<SampleInfoHashesResponse> samples;
+    public Queue<MetaTorrentTask> tasks;
+    public List<PingPeersTorrentTask> pingTasks;
+    public ByteBuffer myself;
+    Map<ByteBuffer, Node> tokensSent;
+    Map<ByteBuffer, Node> tokensReceived;
+    String tcpmyself;
+    public FileManager fm;
+    public Set<InetAddress> denied;
+    public QueryStats queryStats;
+    public IRemoteClient remoteClient;
+    public final int maxNodes;
 
-    public Data(ByteBuffer myself) {
+    public Data(ByteBuffer myself, String tcpmyself, FileManager fm, int maxNodes) {
         this.myself = myself;
-        this.commandsSent = new ConcurrentHashMap<>();
-        this.nodes = new ConcurrentHashMap<>();
+        this.tcpmyself = tcpmyself;
+        this.maxNodes = maxNodes;
+        this.queryStats = new QueryStats();
+        this.sent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
-        this.buckets = new Buckets(myself);
+        this.samples = new ArrayDeque<>(500);
+        this.tokensSent = new ConcurrentHashMap<>();
+        this.tokensReceived = new ConcurrentHashMap<>();
+        this.table = new RoutingTable();
+        this.unresolved = new HashSet<>();
+        this.denied = new HashSet<>();
+        this.tasks = new ArrayBlockingQueue<>(5000);
+        this.pingTasks = new CopyOnWriteArrayList<PingPeersTorrentTask>();
+        this.remoteClient =
+                new IRemoteClient() {
+            
+            @Override
+            public void saveMeta(String hash, TorrentMeta meta) {
+                // TODO Auto-generated method stub
+                
+            }
+        };
+//         new RemoteClient(RemoteClient.REMOTE_URL);
+//        this.tasks = new PriorityQueue<>(5000, new Comparator<ResolveTorrentTask>() {
+//            @Override
+//            public int compare(ResolveTorrentTask o1, ResolveTorrentTask o2) {
+//                return Integer.compare(o1.torrent.peers().size(), o2.torrent.peers().size());
+//            }
+//        }) {
+//            private static final long serialVersionUID = 8689824993615653687L;
+//
+//            @Override
+//            public synchronized boolean offer(ResolveTorrentTask e) {
+//                return super.offer(e);
+//            }
+//
+//            @Override
+//            public synchronized ResolveTorrentTask poll() {
+//                return super.poll();
+//            }
+//        };
+        this.fm = fm;
     }
 
-    public List<Node> closest(ByteBuffer id, int max) {
-        List<ByteBuffer> ids = this.buckets.getClosest(id, 2 * max);
-        List<Node> closest = new ArrayList<>(ids.size());
-        for (ByteBuffer key : ids) {
-            Node node = this.nodes.get(key);
-            if (node != null && !node.isUnsafe && closest.size() < max) {
-                closest.add(node);
-            }
-        }
-        if (closest.size() < max) {
-            for (ByteBuffer key : ids) {
-                Node node = this.nodes.get(key);
-                if (node != null && node.isUnsafe && closest.size() < max) {
-                    closest.add(node);
-                }
-            }
-        }
-        return closest;
+    public String getTcpmyself() {
+        return this.tcpmyself;
     }
 }
