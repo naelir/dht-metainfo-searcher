@@ -5,7 +5,6 @@ import java.nio.ByteBuffer;
 import java.util.Optional;
 
 import com.naelir.dht.From;
-import com.naelir.dht.Generator;
 import com.naelir.dht.UdpClient;
 
 import io.netty.channel.Channel;
@@ -14,17 +13,18 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     private String torrent;
+    private ByteBuffer myself;
 
-    public ClientHandler(String torrent) {
+    public ClientHandler(String torrent, ByteBuffer myself) {
         this.torrent = torrent;
+        this.myself = myself;
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         byte[] hash = UdpClient.hexStringToByteArray(this.torrent);
-        ByteBuffer randomID = Generator.generateRandomID();
         Channel channel = ctx.channel();
-        channel.writeAndFlush(new HandshakeRequest(hash, randomID.array()));
+        channel.writeAndFlush(new HandshakeRequest(hash, this.myself.array()));
     }
 
     @Override

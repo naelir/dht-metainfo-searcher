@@ -1,7 +1,10 @@
 package com.naeir.bt;
 
 import java.net.InetAddress;
+import java.nio.ByteBuffer;
 import java.util.Scanner;
+
+import com.naelir.dht.Generator;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -17,15 +20,18 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class BtTcpClient {
     public static void main(String[] args) throws Exception {
         InetAddress addr = InetAddress.getByName("127.0.0.1");
-        ChannelFuture future = new BtTcpClient("fa364df414550722d55d8f03071faa5fb782a3af").connect(addr, 6881);
+        ByteBuffer myself = Generator.generateRandomID();
+        ChannelFuture future = new BtTcpClient("fa364df414550722d55d8f03071faa5fb782a3af", myself).connect(addr, 6881);
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
 
     private String hash;
+    private ByteBuffer myself;
 
-    public BtTcpClient(String hash) {
+    public BtTcpClient(String hash, ByteBuffer myself) {
         this.hash = hash;
+        this.myself = myself;
     }
 
     public ChannelFuture connect(InetAddress addr, int port) {
@@ -41,7 +47,7 @@ public class BtTcpClient {
                         ChannelPipeline pipeline = ch.pipeline();
                         pipeline.addLast("he", new HandshakeEncoder());
                         pipeline.addLast("hd", new HandshakeDecoder());
-                        pipeline.addLast("ch", new ClientHandler(BtTcpClient.this.hash));
+                        pipeline.addLast("ch", new ClientHandler(BtTcpClient.this.hash, BtTcpClient.this.myself));
                     }
                 })
                 .connect(addr, port);
