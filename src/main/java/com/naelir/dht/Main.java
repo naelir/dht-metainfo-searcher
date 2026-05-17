@@ -13,8 +13,6 @@ import org.apache.logging.log4j.core.config.Configurator;
 public class Main {
     public static void main(String[] args) throws Exception {
         Configurator.setRootLevel(Level.DEBUG);
-        String host = "localhost";
-        int port = 9876;
         ByteBuffer myself = Generator.generateRandomID();
         Data data = new Data(myself);
         OnDataListener crawler = new OnDataListener(data);
@@ -29,9 +27,6 @@ public class Main {
             InetAddress byName = InetAddress.getByName("127.0.0.1");
             ByteBuffer torrent = ByteBuffer
                     .wrap(UdpClient.hexStringToByteArray("f54bc6f23cc751598486bf6c54ebe3e05d80ec9e"));
-//            ByteBuffer tid = UdpClient.getTid(1);
-//            GetPeersRequest name = new GetPeersRequest(tid, myself, torrent);
-//            client.send(name, byName, 55706);
             Node node = new Node(byName.getAddress(), 55706, null);
             client.sendGetPeers(torrent, node);
 //            client.sendSampleInfohashes(myself, node);
