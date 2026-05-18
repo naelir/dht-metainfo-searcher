@@ -138,6 +138,7 @@ public final class RoutingTable {
         return this.nodes.get(id);
     }
 
+
     /**
      * Attempts to insert {@code node} into the routing table.
      *
@@ -171,6 +172,7 @@ public final class RoutingTable {
     public Collection<Node> nodes() {
         return Collections.unmodifiableCollection(this.nodes.values());
     }
+
 
     /**
      * Removes the node with the given {@code nodeId} from the routing table.

@@ -9,6 +9,9 @@ import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.logging.log4j.LogManager;
@@ -34,6 +37,7 @@ public class UdpClient implements Runnable, AutoCloseable {
         return data;
     }
 
+    ExecutorService executor = Executors.newSingleThreadExecutor();
     final DatagramSocket socket;
     private final int bufferSize;
     private final AtomicBoolean running = new AtomicBoolean(false);
@@ -82,6 +86,10 @@ public class UdpClient implements Runnable, AutoCloseable {
         logger.info("{}, to {}, port {}", decode.getClass().getSimpleName(), Arrays.toString(from.ip), from.port);
     }
 
+    public void start() {
+        executor.execute(this);
+    }
+    
     @Override
     public void run() {
         this.running.set(true);
@@ -151,5 +159,6 @@ public class UdpClient implements Runnable, AutoCloseable {
 
     void stop() {
         this.running.set(false);
+        executor.shutdown();
     }
 }

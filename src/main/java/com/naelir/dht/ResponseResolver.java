@@ -50,9 +50,9 @@ public class ResponseResolver {
     }
 
     private void resolve(AnnouncePeerResponse decode, From from) {
-        Node node = this.data.table.getNode(decode.id);
-        if (node != null) {
-            node.replyOn(decode);
+        Node stat = this.data.table.getNode(decode.id);
+        if (stat != null) {
+            stat.query.responded();
         }
     }
 
@@ -94,9 +94,9 @@ public class ResponseResolver {
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         RoutingTable buckets = this.data.table;
-        Node responded = buckets.getNode(decode.id);
-        if (responded != null) {
-            responded.replyOn(decode);
+        Node stat = buckets.getNode(decode.id);
+        if (stat != null) {
+            stat.query.responded();
         }
         ByteBuffer nodes = decode.nodes;
         List<Node> expandNodes = CompactInfo.expandNodes(nodes);
@@ -224,9 +224,9 @@ public class ResponseResolver {
     }
 
     private void resolve(PingResponse decode, From from) {
-        Node node = this.data.table.getNode(decode.id);
-        if (node != null) {
-            node.replyOn(decode);
+        Node stat = this.data.table.getNode(decode.id);
+        if (stat != null) {
+            stat.query.responded();
         }
     }
 
@@ -237,11 +237,13 @@ public class ResponseResolver {
 
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples != null && decode.samples.array().length > 0) {
-            Node node = this.data.table.getNode(decode.id);
             List<String> expandHashes = CompactInfo.expandHashes(decode.samples);
             logger.warn("found torrent hashes {}", expandHashes);
             this.data.hashes.addAll(expandHashes);
-            node.replyOn(decode);
+            Node stat = this.data.table.getNode(decode.id);
+            if (stat != null) {
+                stat.query.responded();
+            }
         }
     }
 }

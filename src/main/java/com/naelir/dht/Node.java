@@ -23,10 +23,8 @@ public class Node {
     byte[] ip;
     int port;
     ByteBuffer id;
+    Query query;
     List<ByteBuffer> torrents;
-    long lastSeen;
-    long nextRequestTime;
-    boolean asked;
 
     public Node(byte[] ip, int port, ByteBuffer id) {
         this(ip, port, id, Collections.emptyList());
@@ -38,35 +36,19 @@ public class Node {
         this.id = id;
         this.torrents = torrents;
         this.tid = 1;
-        this.lastSeen = 0;
-        this.asked = false;
-        this.nextRequestTime = 0;
+        this.query = new Query(Command.PING);
     }
 
+    public Query query() {
+        return query;
+    }
+    
     public InetAddress address() throws UnknownHostException {
         return InetAddress.getByAddress(this.ip);
     }
 
-    public boolean expired() {
-        return this.lastSeen != 0 && System.currentTimeMillis() - this.lastSeen > Config.NODE_EXPIRE_TIME;
-    }
-
-    public boolean forPing() {
-        long l = System.currentTimeMillis() - this.nextRequestTime;
-        this.nextRequestTime = System.currentTimeMillis() + Config.NODE_PING_TIME;
-        return l > 0;
-    }
-
     public int nextId() {
         return this.tid++;
-    }
-
-    public void replyOn(IResponse key) {
-        if (key instanceof SampleInfoHashesResponse sihr) {
-            this.nextRequestTime = System.currentTimeMillis() + sihr.interval * 1000;
-        } else if (key instanceof PingResponse) {
-            this.nextRequestTime = System.currentTimeMillis() + Config.NODE_PING_TIME;
-        }
     }
 
     enum Command {
