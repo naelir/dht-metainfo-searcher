@@ -8,6 +8,7 @@ import com.naelir.dht.Node;
 
 public class Torrent {
     ByteBuffer infoHash;
+    TorrentMeta meta;
     List<Node> peers;
 
     public Torrent(ByteBuffer infoHash) {
@@ -20,7 +21,15 @@ public class Torrent {
         this.peers = peers;
     }
 
+    public TorrentMeta meta() {
+        return this.meta;
+    }
+
     public List<Node> peers() {
         return this.peers;
+    }
+
+    public void setMeta(TorrentMeta meta) {
+        this.meta = meta;
     }
 }

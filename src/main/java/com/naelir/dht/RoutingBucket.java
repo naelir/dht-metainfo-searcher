@@ -19,7 +19,7 @@ import java.util.List;
  */
 final class RoutingBucket {
     /** Maximum number of nodes a bucket may hold (k = 8 per the spec). */
-    static final int CAPACITY = 2;
+    static final int CAPACITY = 8;
     /** Inclusive lower bound of the ID range covered by this bucket. */
     final BigInteger min;
     /** Exclusive upper bound of the ID range covered by this bucket. */

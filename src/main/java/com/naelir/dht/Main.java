@@ -29,10 +29,10 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             scanner.nextLine();
             DhtFileManager fm = new DhtFileManager();
-            Collection<Node> values = data.table.nodes();
+            Collection<Node> values = data.table.closest(myself, 100);
             List<Node> nodes = new ArrayList<>(values);
             fm.save(myself, nodes);
-            fm.save(data.hashes);
+//            fm.save(data.hashes);
         }
     }
 }

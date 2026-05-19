@@ -86,6 +86,10 @@ public final class RoutingTable {
         return Collections.unmodifiableList(this.buckets);
     }
 
+    public List<Node> closest(ByteBuffer targetId) {
+        return closest(targetId, RoutingBucket.CAPACITY);
+    }
+
     /**
      * Returns up to {@value RoutingBucket#CAPACITY} nodes whose IDs are closest to
      * {@code targetId} according to the XOR metric:
@@ -105,7 +109,7 @@ public final class RoutingTable {
      * @return an unmodifiable list of at most {@value RoutingBucket#CAPACITY}
      *         nodes, sorted from closest to farthest.
      */
-    public List<Node> closest(ByteBuffer targetId) {
+    public List<Node> closest(ByteBuffer targetId, int max) {
         BigInteger target = new BigInteger(1, targetId.array());
         int startIdx = bucketIndexFor(target);
         // Collect candidates by expanding outward from the target bucket.
@@ -130,14 +134,13 @@ public final class RoutingTable {
         // Sort all candidates by XOR distance to the target.
         candidates.sort(Comparator.comparing(node -> new BigInteger(1, node.id.array()).xor(target)));
         // Return at most CAPACITY results.
-        int limit = Math.min(candidates.size(), RoutingBucket.CAPACITY);
+        int limit = Math.min(candidates.size(), max);
         return Collections.unmodifiableList(candidates.subList(0, limit));
     }
 
     public Node getNode(ByteBuffer id) {
         return this.nodes.get(id);
     }
-
 
     /**
      * Attempts to insert {@code node} into the routing table.
@@ -172,7 +175,6 @@ public final class RoutingTable {
     public Collection<Node> nodes() {
         return Collections.unmodifiableCollection(this.nodes.values());
     }
-
 
     /**
      * Removes the node with the given {@code nodeId} from the routing table.

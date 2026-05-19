@@ -3,8 +3,8 @@ package com.naelir.dht;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
-import java.util.Collections;
-import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Node {
     public static Node of(ByteBuffer compactInfo, int ipLength) {
@@ -23,32 +23,30 @@ public class Node {
     byte[] ip;
     int port;
     ByteBuffer id;
-    Query query;
-    List<ByteBuffer> torrents;
+    Map<Command, Query> queryMap;
 
     public Node(byte[] ip, int port, ByteBuffer id) {
-        this(ip, port, id, Collections.emptyList());
-    }
-
-    public Node(byte[] ip, int port, ByteBuffer id, List<ByteBuffer> torrents) {
         this.ip = ip;
         this.port = port;
         this.id = id;
-        this.torrents = torrents;
         this.tid = 1;
-        this.query = new Query(Command.PING);
+        this.queryMap = new ConcurrentHashMap<>();
     }
 
-    public Query query() {
-        return query;
-    }
-    
     public InetAddress address() throws UnknownHostException {
         return InetAddress.getByAddress(this.ip);
     }
 
+    public void command(Command command) {
+        this.queryMap.put(command, new Query(command));
+    }
+
     public int nextId() {
         return this.tid++;
+    }
+
+    public Query query(Command command) {
+        return this.queryMap.get(command);
     }
 
     enum Command {

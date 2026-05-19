@@ -6,9 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentSkipListSet;
 
 import com.naeir.bt.Torrent;
 
@@ -39,7 +37,6 @@ public class Data {
     ByteBuffer myself;
     Map<ByteBuffer, Node> tokensSent;
     Map<ByteBuffer, Node> tokensReceived;
-    Set<String> hashes;
 
     public Data(ByteBuffer myself) {
         this.myself = myself;
@@ -48,6 +45,5 @@ public class Data {
         this.tokensSent = new ConcurrentHashMap<>();
         this.tokensReceived = new ConcurrentHashMap<>();
         this.table = new RoutingTable(myself);
-        this.hashes = new ConcurrentSkipListSet<>();
     }
 }

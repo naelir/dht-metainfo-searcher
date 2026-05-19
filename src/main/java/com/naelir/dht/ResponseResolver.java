@@ -4,12 +4,14 @@ import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naeir.bt.Torrent;
+import com.naelir.dht.Node.Command;
 
 public class ResponseResolver {
     public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
@@ -50,9 +52,10 @@ public class ResponseResolver {
     }
 
     private void resolve(AnnouncePeerResponse decode, From from) {
-        Node stat = this.data.table.getNode(decode.id);
-        if (stat != null) {
-            stat.query.responded();
+        Node node = this.data.table.getNode(decode.id);
+        if (node != null) {
+            Query command = node.query(Command.ANNOUNCE);
+            command.responded();
         }
     }
 
@@ -94,15 +97,15 @@ public class ResponseResolver {
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         RoutingTable buckets = this.data.table;
-        Node stat = buckets.getNode(decode.id);
-        if (stat != null) {
-            stat.query.responded();
+        Node node = buckets.getNode(decode.id);
+        if (node != null) {
+            node.query(Command.FIND_NODE).responded();
         }
         ByteBuffer nodes = decode.nodes;
         List<Node> expandNodes = CompactInfo.expandNodes(nodes);
         logger.info("found {} nodes from {}", expandNodes.size(), from.ip);
-        for (Node node : expandNodes) {
-            this.data.table.insertNode(node);
+        for (Node en : expandNodes) {
+            this.data.table.insertNode(en);
         }
         return Optional.empty();
     }
@@ -224,9 +227,9 @@ public class ResponseResolver {
     }
 
     private void resolve(PingResponse decode, From from) {
-        Node stat = this.data.table.getNode(decode.id);
-        if (stat != null) {
-            stat.query.responded();
+        Node node = this.data.table.getNode(decode.id);
+        if (node != null) {
+            node.query(Command.PING).responded(TimeUnit.MINUTES, 15);
         }
     }
 
@@ -237,12 +240,14 @@ public class ResponseResolver {
 
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples != null && decode.samples.array().length > 0) {
-            List<String> expandHashes = CompactInfo.expandHashes(decode.samples);
-            logger.warn("found torrent hashes {}", expandHashes);
-            this.data.hashes.addAll(expandHashes);
-            Node stat = this.data.table.getNode(decode.id);
-            if (stat != null) {
-                stat.query.responded();
+            List<ByteBuffer> expandHashes = CompactInfo.expandHashes(decode.samples);
+            logger.info("found torrent hashes {}", expandHashes.size());
+            for (ByteBuffer hash : expandHashes) {
+                this.data.torrents.put(hash, new Torrent(hash));
+            }
+            Node node = this.data.table.getNode(decode.id);
+            if (node != null) {
+                node.query(Command.SAMPLE).responded(TimeUnit.SECONDS, decode.interval);
             }
         }
     }

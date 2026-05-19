@@ -9,13 +9,14 @@ import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.naelir.dht.Node.Command;
 
 public class UdpClient implements Runnable, AutoCloseable {
     private static final int DEFAULT_BUFFER_SIZE = 4096;
@@ -78,7 +79,6 @@ public class UdpClient implements Runnable, AutoCloseable {
             CommandId commandId = new CommandId(tid, node.ip, node.port);
             FindNodeRequest initial = new FindNodeRequest(tid, this.myself, this.myself);
             send(initial, node.address(), node.port);
-            this.db.sent.put(commandId, initial);
         }
     }
 
@@ -86,10 +86,6 @@ public class UdpClient implements Runnable, AutoCloseable {
         logger.info("{}, to {}, port {}", decode.getClass().getSimpleName(), Arrays.toString(from.ip), from.port);
     }
 
-    public void start() {
-        executor.execute(this);
-    }
-    
     @Override
     public void run() {
         this.running.set(true);
@@ -130,35 +126,44 @@ public class UdpClient implements Runnable, AutoCloseable {
         Token token = new Token(node.ip);
         AnnouncePeerRequest r = new AnnouncePeerRequest(nextId, this.myself, torrent, token.value,
                 this.socket.getPort());
+        node.command(Command.ANNOUNCE);
         send(r, node.address(), node.port);
     }
 
     public void sendFindNode(ByteBuffer id, Node node) throws Exception {
         ByteBuffer nextId = getTid(node.nextId());
         FindNodeRequest r = new FindNodeRequest(nextId, this.myself, id);
+        node.command(Command.FIND_NODE);
         send(r, node.address(), node.port);
     }
 
     public void sendGetPeers(ByteBuffer torrent, Node node) throws Exception {
         ByteBuffer nextId = getTid(node.nextId());
         GetPeersRequest r = new GetPeersRequest(nextId, this.myself, torrent);
+        node.command(Command.GET_PEER);
         send(r, node.address(), node.port);
     }
 
     public void sendPing(Node node) throws Exception {
         ByteBuffer nextId = getTid(node.nextId());
         PingRequest r = new PingRequest(nextId, this.myself);
+        node.command(Command.PING);
         send(r, node.address(), node.port);
     }
 
     public void sendSampleInfohashes(ByteBuffer range, Node node) throws UnknownHostException, Exception {
         ByteBuffer nextId = getTid(node.nextId());
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(nextId, this.myself, range);
+        node.query(Command.SAMPLE);
         send(r, node.address(), node.port);
+    }
+
+    public void start() {
+        this.executor.execute(this);
     }
 
     void stop() {
         this.running.set(false);
-        executor.shutdown();
+        this.executor.shutdown();
     }
 }

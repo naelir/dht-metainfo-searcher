@@ -66,13 +66,13 @@ public class CompactInfo {
         return list;
     }
 
-    public static List<String> expandHashes(ByteBuffer info) {
+    public static List<ByteBuffer> expandHashes(ByteBuffer info) {
         int count = info.array().length / 20;
-        List<String> list = new ArrayList<>(count);
+        List<ByteBuffer> list = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
             byte[] idBytes = new byte[20];
             info.get(idBytes);
-            list.add(bytesToHex(idBytes));
+            list.add(ByteBuffer.wrap(idBytes));
         }
         return list;
     }

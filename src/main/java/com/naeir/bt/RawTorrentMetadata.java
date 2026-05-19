@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.github.cdefgah.bencoder4j.model.BencodedByteSequence;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.github.cdefgah.bencoder4j.model.BencodedInteger;
@@ -20,6 +23,7 @@ class RawTorrentMetadata {
     public static final long METADATA_PIECE_SIZE = 16 << 10;
     public static final byte[] PIECES = new byte[] { 54, 58, 112, 105, 101, 99, 101, 115 };
     public static final byte[] EE = new byte[] { 101, 101 };
+    public static final Logger logger = LogManager.getLogger(RawTorrentMetadata.class);
 
     private static int indexOf(byte[] parent, byte[] child, int position) {
         for (int i = position; i < parent.length - child.length + 1; ++i) {
@@ -67,22 +71,26 @@ class RawTorrentMetadata {
     public Optional<TorrentMeta> resolve(String torrent, From from) {
         Optional<BencodedDictionary> optional = parse(this.bytes.array());
         if (optional.isPresent()) {
-            BencodedDictionary map = optional.get();
-            List<MetaFile> list = new ArrayList<>();
-            BencodedList files = (BencodedList) map.get(BtKeys.FILES);
-            for (BencodedObject e : files) {
-                BencodedDictionary file = (BencodedDictionary) e;
-                BencodedInteger length = (BencodedInteger) file.get(BtKeys.LENGTH);
-                BencodedList path = (BencodedList) file.get(BtKeys.PATH);
-                for (BencodedObject p : path) {
-                    BencodedByteSequence pp = (BencodedByteSequence) p;
-                    String filePath = pp.toUTF8String();
-                    list.add(new MetaFile(filePath, length.getValue()));
+            try {
+                BencodedDictionary map = optional.get();
+                List<MetaFile> list = new ArrayList<>();
+                BencodedList files = (BencodedList) map.get(BtKeys.FILES);
+                for (BencodedObject e : files) {
+                    BencodedDictionary file = (BencodedDictionary) e;
+                    BencodedInteger length = (BencodedInteger) file.get(BtKeys.LENGTH);
+                    BencodedList path = (BencodedList) file.get(BtKeys.PATH);
+                    for (BencodedObject p : path) {
+                        BencodedByteSequence pp = (BencodedByteSequence) p;
+                        String filePath = pp.toUTF8String();
+                        list.add(new MetaFile(filePath, length.getValue()));
+                    }
                 }
+                BencodedByteSequence name = (BencodedByteSequence) map.get(BtKeys.NAME);
+                String utf8String = name.toUTF8String();
+                return Optional.of(new TorrentMeta(torrent, utf8String, list, from));
+            } catch (Exception e) {
+                logger.error(e.getMessage(), e);
             }
-            BencodedByteSequence name = (BencodedByteSequence) map.get(BtKeys.NAME);
-            String utf8String = name.toUTF8String();
-            return Optional.of(new TorrentMeta(torrent, utf8String, list, from));
         }
         return Optional.empty();
     }
