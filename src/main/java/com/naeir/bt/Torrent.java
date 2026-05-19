@@ -21,6 +21,14 @@ public class Torrent {
         this.peers = peers;
     }
 
+    public void add(Node node) {
+        this.peers.add(node);
+    }
+
+    public ByteBuffer infoHash() {
+        return this.infoHash;
+    }
+
     public TorrentMeta meta() {
         return this.meta;
     }

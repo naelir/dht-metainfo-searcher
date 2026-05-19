@@ -41,9 +41,7 @@ public class ResponseResolver {
                 remotePort = from.port;
             }
             Node node = new Node(from.ip, remotePort, message.id);
-            Torrent newOne = new Torrent(message.infoHash);
-            newOne.peers().add(node);
-            Torrent previous = this.data.torrents.putIfAbsent(message.infoHash, newOne);
+            Torrent previous = this.data.torrents.get(message.infoHash);
             if (previous != null) {
                 previous.peers().add(node);
             }
@@ -127,7 +125,7 @@ public class ResponseResolver {
         } else {
             List<Node> closest = this.data.table.closest(infoHash);
             ByteBuffer nodes = CompactInfo.compactNodes(closest);
-            this.data.torrents.put(infoHash, new Torrent(infoHash));
+//            this.data.torrents.put(infoHash, new Torrent(infoHash));
             return new GetPeersResponse2(message.tid, this.data.myself, token.value, nodes, message);
         }
     }
@@ -147,7 +145,7 @@ public class ResponseResolver {
             if (torrent != null) {
                 torrent.peers().addAll(expand);
             } else {
-                this.data.torrents.put(gpr.infoHash, new Torrent(gpr.infoHash, expand));
+                this.data.torrents.putIfAbsent(gpr.infoHash, new Torrent(gpr.infoHash, expand));
             }
         }
         return Optional.empty();
@@ -243,7 +241,9 @@ public class ResponseResolver {
             List<ByteBuffer> expandHashes = CompactInfo.expandHashes(decode.samples);
             logger.info("found torrent hashes {}", expandHashes.size());
             for (ByteBuffer hash : expandHashes) {
-                this.data.torrents.put(hash, new Torrent(hash));
+                Torrent value = new Torrent(hash);
+                value.add(new Node(from.ip, from.port, decode.id));
+                this.data.torrents.putIfAbsent(hash, value);
             }
             Node node = this.data.table.getNode(decode.id);
             if (node != null) {

@@ -1,5 +1,6 @@
 package com.naeir.bt;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import com.naelir.dht.From;
@@ -8,9 +9,9 @@ public class TorrentMeta {
     private String name;
     private List<MetaFile> list;
     private From from;
-    private String torrent;
+    private ByteBuffer torrent;
 
-    public TorrentMeta(String torrent, String name, List<MetaFile> list, From from) {
+    public TorrentMeta(ByteBuffer torrent, String name, List<MetaFile> list, From from) {
         this.torrent = torrent;
         this.name = name;
         this.list = list;

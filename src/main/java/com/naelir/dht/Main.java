@@ -16,8 +16,11 @@ public class Main {
         ByteBuffer myself = Generator.generateRandomID();
         Data data = new Data(myself);
         OnDataListener crawler = new OnDataListener(data);
-        try (UdpClient client = new UdpClient(data, crawler);
-                NodeMaintainer keeper = new NodeMaintainer(client, data)) {
+        try (
+                UdpClient client = new UdpClient(data, crawler);
+                NodeMaintainer keeper = new NodeMaintainer(client, data);
+                Scanner scanner = new Scanner(System.in);
+        ) {
             client.start();
             keeper.start();
             InetAddress byName = InetAddress.getByName("127.0.0.1");
@@ -26,7 +29,6 @@ public class Main {
             Node node = new Node(byName.getAddress(), 55706, null);
             client.sendGetPeers(torrent, node);
 //            client.sendSampleInfohashes(myself, node);
-            Scanner scanner = new Scanner(System.in);
             scanner.nextLine();
             DhtFileManager fm = new DhtFileManager();
             Collection<Node> values = data.table.closest(myself, 100);

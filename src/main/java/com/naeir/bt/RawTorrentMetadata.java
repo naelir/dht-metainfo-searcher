@@ -55,6 +55,11 @@ class RawTorrentMetadata {
 
     ByteBuffer bytes;
     boolean firstPacket = true;
+    private ByteBuffer torrent;
+
+    public RawTorrentMetadata(ByteBuffer torrent) {
+        this.torrent = torrent;
+    }
 
     public void read(ByteBuf buffer) {
         if (this.firstPacket) {
@@ -68,7 +73,7 @@ class RawTorrentMetadata {
         this.bytes.put(data, 0, data.length);
     }
 
-    public Optional<TorrentMeta> resolve(String torrent, From from) {
+    public Optional<TorrentMeta> resolve(From from) {
         Optional<BencodedDictionary> optional = parse(this.bytes.array());
         if (optional.isPresent()) {
             try {
@@ -87,7 +92,7 @@ class RawTorrentMetadata {
                 }
                 BencodedByteSequence name = (BencodedByteSequence) map.get(BtKeys.NAME);
                 String utf8String = name.toUTF8String();
-                return Optional.of(new TorrentMeta(torrent, utf8String, list, from));
+                return Optional.of(new TorrentMeta(this.torrent, utf8String, list, from));
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
             }

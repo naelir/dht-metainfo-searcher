@@ -1,5 +1,6 @@
 package com.naeir.bt;
 
+import java.nio.ByteBuffer;
 import java.util.List;
 
 import io.netty.buffer.ByteBuf;
@@ -11,10 +12,10 @@ public class HandshakeDecoder extends ByteToMessageDecoder {
     private boolean ext;
     private RawTorrentMetadata data;
 
-    public HandshakeDecoder() {
+    public HandshakeDecoder(ByteBuffer torrent) {
         this.handshaken = false;
         this.ext = false;
-        this.data = new RawTorrentMetadata();
+        this.data = new RawTorrentMetadata(torrent);
     }
 
     @Override
