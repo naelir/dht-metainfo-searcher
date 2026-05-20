@@ -8,4 +8,12 @@ public class From {
         this.ip = ip;
         this.port = port;
     }
+
+    public byte[] getIp() {
+        return this.ip;
+    }
+
+    public int getPort() {
+        return this.port;
+    }
 }

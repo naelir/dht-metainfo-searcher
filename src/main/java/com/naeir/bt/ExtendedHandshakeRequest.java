@@ -29,6 +29,7 @@ public class ExtendedHandshakeRequest {
         Optional<BencodedDictionary> decode = BDecoder.decode(data);
         if (decode.isPresent()) {
             BencodedDictionary map = decode.get();
+//            System.out.println(Convert.to(map));
             BencodedDictionary mkey = (BencodedDictionary) map.get("m");
             BencodedInteger code = (BencodedInteger) mkey.get("ut_metadata");
             this.utCode = (int) code.getValue();

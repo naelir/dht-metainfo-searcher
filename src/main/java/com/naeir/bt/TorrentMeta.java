@@ -3,6 +3,7 @@ package com.naeir.bt;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import com.naelir.dht.CompactInfo;
 import com.naelir.dht.From;
 
 public class TorrentMeta {
@@ -10,12 +11,30 @@ public class TorrentMeta {
     private List<MetaFile> list;
     private From from;
     private ByteBuffer torrent;
+    long found;
 
     public TorrentMeta(ByteBuffer torrent, String name, List<MetaFile> list, From from) {
         this.torrent = torrent;
         this.name = name;
         this.list = list;
         this.from = from;
+        this.found = System.currentTimeMillis();
+    }
+
+    public long getFound() {
+        return this.found;
+    }
+
+    public List<MetaFile> getList() {
+        return this.list;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getTorrent() {
+        return CompactInfo.bytesToHex(this.torrent.array());
     }
 
     @Override
@@ -31,6 +50,14 @@ public class TorrentMeta {
         public MetaFile(String path, long bytes) {
             this.path = path;
             this.bytes = bytes;
+        }
+
+        public long getBytes() {
+            return this.bytes;
+        }
+
+        public String getPath() {
+            return this.path;
         }
 
         @Override

@@ -239,7 +239,7 @@ public class ResponseResolver {
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples != null && decode.samples.array().length > 0) {
             List<ByteBuffer> expandHashes = CompactInfo.expandHashes(decode.samples);
-            logger.info("found torrent hashes {}", expandHashes.size());
+            logger.info("found torrent sample hashes {}", expandHashes.size());
             for (ByteBuffer hash : expandHashes) {
                 Torrent value = new Torrent(hash);
                 value.add(new Node(from.ip, from.port, decode.id));

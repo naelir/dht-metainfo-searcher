@@ -53,12 +53,16 @@ class RawTorrentMetadata {
         return BDecoder.decode(files);
     }
 
-    ByteBuffer bytes;
+    private ByteBuffer bytes;
     boolean firstPacket = true;
     private ByteBuffer torrent;
 
     public RawTorrentMetadata(ByteBuffer torrent) {
         this.torrent = torrent;
+    }
+
+    public boolean isComplete() {
+        return this.firstPacket == false && this.bytes.position() > 0 && this.bytes.position() == this.bytes.capacity();
     }
 
     public void read(ByteBuf buffer) {

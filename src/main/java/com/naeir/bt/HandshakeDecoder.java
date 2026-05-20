@@ -20,6 +20,9 @@ public class HandshakeDecoder extends ByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+        int readableBytes = in.readableBytes();
+        if (readableBytes < 2)
+            return;
         if (this.handshaken == false) {
             HandshakeRequest data = new HandshakeRequest();
             data.read(in);
@@ -30,9 +33,9 @@ public class HandshakeDecoder extends ByteToMessageDecoder {
             name.read(in);
             out.add(name);
             this.ext = true;
-        } else {
+        } else if (this.data.isComplete() == false) {
             this.data.read(in);
-            if (this.data.bytes.position() == this.data.bytes.capacity()) {
+            if (this.data.isComplete()) {
                 out.add(this.data);
             }
         }

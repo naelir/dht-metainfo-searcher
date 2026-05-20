@@ -50,7 +50,7 @@ public class UdpClient implements Runnable, AutoCloseable {
         this.myself = data.myself;
         this.listener = listener;
         this.bufferSize = DEFAULT_BUFFER_SIZE;
-        this.socket = new DatagramSocket();
+        this.socket = new DatagramSocket(7000);
         // A positive timeout lets the receiver thread wake up periodically
         // to check the running flag instead of blocking forever.
         this.socket.setSoTimeout(DEFAULT_TIMEOUT_MS);
@@ -76,7 +76,6 @@ public class UdpClient implements Runnable, AutoCloseable {
         List<Node> contactPoints = contactPoints();
         ByteBuffer tid = getTid(1);
         for (Node node : contactPoints) {
-            CommandId commandId = new CommandId(tid, node.ip, node.port);
             FindNodeRequest initial = new FindNodeRequest(tid, this.myself, this.myself);
             send(initial, node.address(), node.port);
         }

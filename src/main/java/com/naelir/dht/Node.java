@@ -3,10 +3,16 @@ package com.naelir.dht;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Node {
+    public static final Logger logger = LogManager.getLogger(Node.class);
+
     public static Node of(ByteBuffer compactInfo, int ipLength) {
         byte[] rawId = new byte[20];
         compactInfo.get(rawId);
@@ -38,6 +44,7 @@ public class Node {
     }
 
     public void command(Command command) {
+        logger.info("command {} set to node with ip {}", command, Arrays.toString(this.ip));
         this.queryMap.put(command, new Query(command));
     }
 
@@ -47,6 +54,11 @@ public class Node {
 
     public Query query(Command command) {
         return this.queryMap.get(command);
+    }
+
+    @Override
+    public String toString() {
+        return "Node [ip=" + Arrays.toString(this.ip) + ", port=" + this.port + ", queryMap=" + this.queryMap + "]";
     }
 
     enum Command {
