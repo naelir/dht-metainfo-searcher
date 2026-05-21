@@ -25,9 +25,9 @@ public class BtTcpClient {
         Configurator.setRootLevel(Level.DEBUG);
         InetAddress addr = InetAddress.getByName("127.0.0.1");
         ByteBuffer myself = Generator.generateRandomID();
-        byte[] btes = UdpClient.hexStringToByteArray("fa364df414550722d55d8f03071faa5fb782a3af");
+        byte[] btes = UdpClient.hexStringToByteArray("ED6D8004994E94A22EDA3EA891E869E5785258E4");
         ByteBuffer torrent = ByteBuffer.wrap(btes);
-        ChannelFuture future = new BtTcpClient(new Torrent(torrent), myself).connect(addr, 6881);
+        ChannelFuture future = new BtTcpClient(new Torrent(torrent), myself).connect(addr, 54667);
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }

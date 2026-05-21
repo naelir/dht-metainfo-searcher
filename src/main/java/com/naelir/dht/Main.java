@@ -19,16 +19,16 @@ public class Main {
         try (
                 UdpClient client = new UdpClient(data, crawler);
 //                NodeMaintainer keeper = new NodeMaintainer(client, data);
-                Scanner scanner = new Scanner(System.in);
         ) {
             client.start();
 //            keeper.start();
             InetAddress byName = InetAddress.getByName("localhost");
             ByteBuffer torrent = ByteBuffer
-                    .wrap(UdpClient.hexStringToByteArray("ED6D8004994E94A22EDA3EA891E869E5785258E4"));
-            Node node = new Node(byName.getAddress(), 54667, null);
+                    .wrap(UdpClient.hexStringToByteArray("f54bc6f23cc751598486bf6c54ebe3e05d80ec9e"));
+            Node node = new Node(byName.getAddress(), 6881, null);
             client.sendFindNode(myself, node);
 //            client.sendSampleInfohashes(myself, node);
+            Scanner scanner = new Scanner(System.in);
             scanner.nextLine();
             DhtFileManager fm = new DhtFileManager();
             Collection<Node> values = data.table.closest(myself, 100);
