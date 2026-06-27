@@ -16,6 +16,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.naelir.bt.Torrent;
+import com.naelir.bt.TorrentMeta;
+import com.naelir.http.IRemoteClient;
+import com.naelir.http.RemoteClient;
 
 public class Data {
     static List<Node> parse(ByteBuffer nodes, InetAddress address) {
@@ -38,11 +41,11 @@ public class Data {
         return list;
     }
 
-    RoutingTable table;
+    public RoutingTable table;
     Map<ByteBuffer, IRequest> sent;
     public Map<String, Torrent> torrents;
     public Set<String> unresolved;
-    Deque<SampleInfoHashesResponse> samples;
+    public Deque<SampleInfoHashesResponse> samples;
     public Queue<MetaTorrentTask> tasks;
     public List<PingPeersTorrentTask> pingTasks;
     ByteBuffer myself;
@@ -51,6 +54,8 @@ public class Data {
     String tcpmyself;
     public FileManager fm;
     public Set<InetAddress> denied;
+    
+    public IRemoteClient remoteClient;
 
     public Data(ByteBuffer myself, String tcpmyself, FileManager fm) {
         this.myself = myself;
@@ -65,6 +70,16 @@ public class Data {
         this.denied = new HashSet<>();
         this.tasks = new ArrayBlockingQueue<>(5000);
         this.pingTasks = new CopyOnWriteArrayList<>();
+        this.remoteClient =
+//                new IRemoteClient() {
+//            
+//            @Override
+//            public void saveMeta(String hash, TorrentMeta meta) {
+//                // TODO Auto-generated method stub
+//                
+//            }
+//        };
+         new RemoteClient(RemoteClient.REMOTE_URL);
 //        this.tasks = new PriorityQueue<>(5000, new Comparator<ResolveTorrentTask>() {
 //            @Override
 //            public int compare(ResolveTorrentTask o1, ResolveTorrentTask o2) {

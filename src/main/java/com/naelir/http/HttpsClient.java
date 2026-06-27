@@ -1,4 +1,4 @@
-package com.axway.st.server.httpd;
+package com.naelir.http;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

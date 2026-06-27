@@ -1,5 +1,6 @@
 package com.naelir.bt;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.file.Path;
@@ -9,9 +10,15 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.messages.ChokeMessage;
 import com.naelir.bt.messages.HandshakeMessage;
@@ -27,6 +34,7 @@ import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.MetaTorrentTask;
 import com.naelir.dht.Node;
+import com.naelir.http.RemoteClient;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -81,14 +89,14 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.info("received {}, to string {}", msg.getClass().getSimpleName(), msg);
+        logger.debug("received {}, to string {}", msg.getClass().getSimpleName(), msg);
         Channel channel = ctx.channel();
         InetSocketAddress remoteAddress = (InetSocketAddress) channel.remoteAddress();
         int port = remoteAddress.getPort();
         InetAddress address = remoteAddress.getAddress();
         byte[] addr = address.getAddress();
         if (msg instanceof HandshakeMessage hr) {
-            logger.info("peer {} responded, supports meta {}", hr.peerID, hr.isExtended());
+            logger.debug("peer {} responded, supports meta {}", hr.peerID, hr.isExtended());
             if (hr.isExtended() == false) {
                 ctx.close();
             }
@@ -129,7 +137,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             System.arraycopy(r.meta, 0, this.metadata, r.msg.piece * TorrentMetadataResponse.METADATA_PIECE_SIZE,
                     r.meta.length);
             this.piecesReceived++;
-            logger.warn("piece {} received from expected {}", this.piecesReceived, this.piecesExpected);
+            logger.info("piece {} received from expected {}", this.piecesReceived, this.piecesExpected);
             if (this.piecesReceived == this.piecesExpected) {
                 decode(true, addr, port);
                 ctx.close();
@@ -149,8 +157,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             logger.warn(meta);
             this.data.fm.saveMeta(this.task.infoHash, meta);
             this.task.setMeta(TorrentMeta.RESOLVED);
+            this.data.remoteClient.saveMeta(this.task.infoHash, meta);
         } else {
-            logger.error("metadata seems invalid, trying again");
+            logger.error("metadata seems invalid");
             logger.info(Arrays.toString(this.metadata));
 //            this.data.tasks.offer(new MetaTorrentTask(new Node(addr, port), this.task));
         }
@@ -165,4 +174,5 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     private boolean islt(String peer) {
         return peer != null && (peer.startsWith("-lt") || peer.startsWith("-LT"));
     }
+
 }

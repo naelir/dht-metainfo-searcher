@@ -36,11 +36,11 @@ public class ResponseResolver {
     }
 
     private void logFrom(Object decode, From from) {
-        logger.debug("{} {}, from {}, port {}", decode.getClass().getSimpleName(), decode, forAddress(from), from.port);
+        logger.debug("{}, from {}, port {}", decode, forAddress(from), from.port);
     }
 
     private void logTo(Object decode, From from) {
-        logger.debug("{} {}, to {}, port {}", decode.getClass().getSimpleName(), decode, forAddress(from), from.port);
+        logger.debug("{}, to {}, port {}", decode, forAddress(from), from.port);
     }
 
     private Optional<byte[]> optional(byte[] encode) {
@@ -120,8 +120,10 @@ public class ResponseResolver {
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         decode.request.node.get(Command.FIND_NODE).setResponded();
-        for (Node node : decode.nodes) {
-            this.data.table.insert(node);
+        if (Config.MAX_NODES > data.table.size()) {
+            for (Node node : decode.nodes) {
+                this.data.table.insert(node);
+            }
         }
         return Optional.empty();
     }
@@ -153,7 +155,7 @@ public class ResponseResolver {
             if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0) {
                 for (Node node : decode.peers) {
                     if (IpRangeFilter.isDenied(node.ip)) {
-                        logger.warn("asian scam ip {} for torrent {}", node.address(), hex);
+                        logger.debug("asian scam ip {} for torrent {}", node.address(), hex);
                     } else {
                         this.data.pingTasks.add(new PingPeersTorrentTask(List.of(node), torrent));
                     }

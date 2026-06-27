@@ -29,7 +29,7 @@ public class SampleInfoHashesResponse implements IResponse {
     Integer interval;
     List<Node> nodes;
     Integer num;
-    List<String> samples;
+    public List<String> samples;
     SampleInfoHashesRequest request;
 
     public SampleInfoHashesResponse(ByteBuffer tid, ByteBuffer myself, int interval, List<Node> nodes, int num,

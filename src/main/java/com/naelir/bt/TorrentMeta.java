@@ -80,21 +80,22 @@ public class TorrentMeta {
         int indexOf = indexOf(array, PIECES, 0);
         if (indexOf < 0)
             return Optional.empty();
-        int i = indexOf + 1 - 2;
-        byte[] important = new byte[i];
-        System.arraycopy(array, 2, important, 0, i - 1);
-        important[i - 1] = 101;
-        int skip = indexOf(important, EE, 0) + 2;
-        int filesInfoSize = important.length - skip;
-        byte[] files = new byte[filesInfoSize];
-        System.arraycopy(important, skip, files, 0, filesInfoSize);
-        return BDecoder.decode(files);
+        byte[] important = new byte[indexOf + 1];
+        // add e to fix up metadata without binary data
+        important[indexOf] = 101;
+        System.arraycopy(array, 0, important, 0, indexOf);
+        return BDecoder.decode(important);
     }
+    
 
     private String name;
     private List<MetaFile> list;
     long found;
     Genre genre;
+    
+    public TorrentMeta() {
+        // TODO Auto-generated constructor stub
+    }
 
     public TorrentMeta(String name, List<MetaFile> list) {
         this.name = name;
@@ -125,12 +126,27 @@ public class TorrentMeta {
     }
 
     public enum Genre {
-        MOVIE_VIDEO, TV, MUSIC, GAME_PC, GAME_PLAYSTATION, GAME_NINTENDO, GAME_XBOX, SOFTWARE, UNKNOWN, XXX;
+        MOVIE_VIDEO("MV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
+        GAME_XBOX("XBOX"), SOFTWARE("APP"), UNKNOWN("NA"), XXX("XXX");
+
+        private String txt;
+
+        private Genre(String txt) {
+            this.txt = txt;
+        }
+        
+        public String getTxt() {
+            return txt;
+        }
     }
 
     public static final class MetaFile {
         String path;
         long bytes;
+        
+        public MetaFile() {
+            // TODO Auto-generated constructor stub
+        }
 
         public MetaFile(String path, long bytes) {
             this.path = path;
@@ -149,5 +165,18 @@ public class TorrentMeta {
         public String toString() {
             return "MetaFile [path=" + this.path + ", bytes=" + this.bytes + "]";
         }
+    }
+
+    public static Entry toEntry(String infoHash, TorrentMeta meta) {
+        int size = meta.list.isEmpty() ? 1 : meta.list.size();
+        Genre genre = meta.genre;
+        boolean nfo = false;
+        for (MetaFile b : meta.list) {
+            if (b.path.contains(".nfo")) {
+                nfo = true;
+                break;
+            }
+        }
+        return new Entry(meta.getName(), infoHash, size, meta.getFound(), nfo, genre.getTxt());
     }
 }

@@ -44,13 +44,12 @@ public class NodeMaintainer implements AutoCloseable {
             List<PingPeersTorrentTask> resolved = new ArrayList<>();
             for (PingPeersTorrentTask task : this.data.pingTasks) {
                 for (Node nit : task.getNodes()) {
-                    Query query2 = nit.get(Command.PING);
+                    Query query2 = nit.get(Command.FIND_NODE);
                     if (query2 != null) {
                         if (query2.notResponding()) {
                             i++;
                             list.add(nit);
-                        } else if (query2.responding()
-                                && (System.currentTimeMillis() - query2.getResponded() > 60000)) {
+                        } else if (query2.responding()) {
                             j++;
                             this.data.tasks.offer(new MetaTorrentTask(nit, task.torrent));
                             list.add(nit);
@@ -219,6 +218,29 @@ public class NodeMaintainer implements AutoCloseable {
             logger.error(e.getMessage(), e);
         }
     }
+    
+    public void findNodeToPeers() {
+        try {
+            int limit = 20;
+            int i = 0;
+            for (PingPeersTorrentTask task : this.data.pingTasks) {
+                for (Node node : task.getNodes()) {
+                    Query query = node.get(Command.FIND_NODE);
+                    if (limit < 0) {
+                        break;
+                    }
+                    if (query == null) {
+                        limit--;
+                        i++;
+                        this.client.sendFindNode(data.myself, node);
+                    }
+                }
+            }
+            logger.info("findNodeToPeers is checking {} peers", i);
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
 
     public void pingRoutingTableNodes() {
         try {
@@ -245,7 +267,8 @@ public class NodeMaintainer implements AutoCloseable {
         this.executor.scheduleAtFixedRate(this::findNodes, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::findSampleInfohashes, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::findSampleInfohashesPeers, 0, 5, TimeUnit.SECONDS);
-        this.executor.scheduleAtFixedRate(this::pingPeers, 0, 5, TimeUnit.SECONDS);
+//      this.executor.scheduleAtFixedRate(this::pingPeers, 0, 5, TimeUnit.SECONDS);
+        this.executor.scheduleAtFixedRate(this::findNodeToPeers, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::expirePeers, 0, 10, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::resolve, 20, 20, TimeUnit.MINUTES);
 //      this.executor.scheduleAtFixedRate(this::findPeers, 0, 20, TimeUnit.SECONDS);

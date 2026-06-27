@@ -7,14 +7,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.naelir.bt.Entry;
 import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
@@ -93,6 +97,32 @@ public class FileManager {
             logger.error(e.getMessage(), e);
         }
         return set;
+    }
+    
+    public void convert() {
+        Set<Entry> list = new HashSet<>();
+        String random = RandomStringUtils.randomAlphabetic(10);
+        Path to = HOME.resolve(random);
+        try (
+                BufferedReader reader = Files.newBufferedReader(tcache);
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND)
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] split = line.split("#");
+                if ("FINE".equals(split[1])) {
+                    Torrent torrent = new Torrent(split[0]);
+                    TorrentMeta value = mapper.readValue(split[2], TorrentMeta.class);
+                    list.add(TorrentMeta.toEntry(torrent.infoHash(), value));
+                }
+            }
+            writer.write(mapper.writeValueAsString(list));
+
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
     }
 //    void saveDhtNodes(ByteBuffer myself, List<Node> nodes) {
 //        try (

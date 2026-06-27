@@ -1,4 +1,4 @@
-package com.naelir.dht;
+package com.naelir;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -14,17 +14,25 @@ import org.apache.logging.log4j.core.config.builder.api.AppenderComponentBuilder
 import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilder;
 import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory;
 import org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.api.LoggerComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder;
 import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.Torrent;
+import com.naelir.dht.Arguments;
+import com.naelir.dht.Data;
+import com.naelir.dht.FileManager;
+import com.naelir.dht.Generator;
+import com.naelir.dht.Node;
+import com.naelir.dht.NodeMaintainer;
+import com.naelir.dht.OnDataListener;
+import com.naelir.dht.SampleInfoHashesResponse;
+import com.naelir.dht.TorrentResolver;
+import com.naelir.dht.UdpClient;
 
-public class MainBuilder {
-    static final Logger logger;
-
-    static {
+public class Application {
+    static final Logger logger = logger();
+    
+    static Logger logger() {
         ConfigurationBuilder<BuiltConfiguration> builder = ConfigurationBuilderFactory.newConfigurationBuilder();
         builder.setStatusLevel(Level.WARN);
 
@@ -45,11 +53,20 @@ public class MainBuilder {
             .add(builder.newAppenderRef("Console"))
             .add(builder.newAppenderRef("LogFile")));
         Configurator.initialize(builder.build());
-        logger = LogManager.getLogger(MainBuilder.class);
+        return LogManager.getLogger(Application.class);
     }
     
-    public static void main(String[] args) throws Exception {
-        List<ByteBuffer> divide = BitSpaceDivider.divide(100).subList(1, 100);
+    
+    private Arguments arguments;
+
+    public Application(Arguments args) {
+        this.arguments = args;
+    }
+    
+    public void run() throws Exception {
+
+        List<ByteBuffer> divide = BitSpaceDivider.divide(arguments.bitspaceParts)
+                .subList(1, arguments.bitspaceParts);
         List<Node> startup = new ArrayList<>();
         for (ByteBuffer udpmyself : divide) {
 //            String hname = Generator.toHex(udpmyself.array());
@@ -78,7 +95,7 @@ public class MainBuilder {
                     }
                     Thread.sleep(2000);
                 }
-                List<Node> nodes = data.table.closest(udpmyself, 100);
+                List<Node> nodes = data.table.closest(udpmyself, arguments.maxNodes);
                 Set<String> set = new HashSet<>();
                 for (SampleInfoHashesResponse sample : data.samples) {
                     set.addAll(sample.samples);
@@ -94,5 +111,10 @@ public class MainBuilder {
                 }
             }
         }
+    }
+    public static void main(String[] args) throws Exception {
+        Arguments arguments = Arguments.parse(args);
+        logger.info("Starting with {}", arguments);
+        new Application(arguments).run();
     }
 }

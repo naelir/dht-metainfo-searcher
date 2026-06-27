@@ -28,7 +28,7 @@ public class Node {
     byte[] ip;
     int port;
     ByteBuffer id;
-    Map<Command, Query> queryMap;
+    public Map<Command, Query> queryMap;
 //    IpRange range;
 
     public Node(byte[] ip, int port) {

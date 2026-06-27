@@ -12,7 +12,6 @@ import com.github.cdefgah.bencoder4j.BencodeFormatException;
 import com.github.cdefgah.bencoder4j.io.BencodeStreamIterator;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.github.cdefgah.bencoder4j.model.BencodedInteger;
-import com.github.cdefgah.bencoder4j.model.BencodedObject;
 
 public final class BDecoder {
     public static final Logger logger = LogManager.getLogger(BDecoder.class);
