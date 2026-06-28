@@ -1,4 +1,4 @@
-package com.naelir.dht;
+package com.naelir;
 
 public class Arguments {
     public final int maxNodes;
@@ -6,7 +6,7 @@ public class Arguments {
     public final String continueFrom;
     public final int bitspaceParts;
 
-    private Arguments(int maxNodes, String postUrl, int bitspaceParts, String continueFrom) {
+    Arguments(int maxNodes, String postUrl, int bitspaceParts, String continueFrom) {
         this.maxNodes = maxNodes;
         this.postUrl = postUrl;
         this.bitspaceParts = bitspaceParts;

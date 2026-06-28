@@ -14,7 +14,7 @@ public class Token {
             byte[] digest = SHA1.digest(ip);
             return ByteBuffer.wrap(digest);
         } catch (NoSuchAlgorithmException e) {
-            byte[] tokenBA = new byte[Config.TOKEN_LENGTH];
+            byte[] tokenBA = new byte[8];
             RANDOM.nextBytes(tokenBA);
             return ByteBuffer.wrap(tokenBA);
         }

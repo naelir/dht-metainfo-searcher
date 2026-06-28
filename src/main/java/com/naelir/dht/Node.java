@@ -5,6 +5,7 @@ import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,6 +13,8 @@ import org.apache.logging.log4j.Logger;
 public class Node {
     public static final Logger logger = LogManager.getLogger(Node.class);
 
+    private static final AtomicInteger COUNTER = new AtomicInteger();
+    
     public static Node of(ByteBuffer compactInfo, int ipLength) {
         byte[] rawId = new byte[20];
         compactInfo.get(rawId);
@@ -29,7 +32,8 @@ public class Node {
     int port;
     ByteBuffer id;
     public Map<Command, Query> queryMap;
-//    IpRange range;
+
+    private int c;
 
     public Node(byte[] ip, int port) {
         this(ip, port, Generator.generateRandomID());
@@ -41,7 +45,7 @@ public class Node {
         this.id = id;
         this.tid = 1;
         this.queryMap = new ConcurrentHashMap<>();
-//        this.range = IpRangeFilter.inRange(ip, IpRangeFilter.RANGES_ALLOW);
+        this.c = COUNTER.incrementAndGet();
     }
 
     public InetAddress address() {
@@ -50,6 +54,10 @@ public class Node {
         } catch (UnknownHostException e) {
             return null;
         }
+    }
+    
+    public int getCounter() {
+        return c;
     }
 
     public Query get(Command command) {
@@ -66,13 +74,13 @@ public class Node {
 
     public void put(Command command) {
         this.queryMap.put(command, new Query(command));
-        logger.debug("adding {} on node {}", command, this);
+        logger.info("adding {} on node {}", command, this);
     }
 
     @Override
     public String toString() {
-        return "Node [id=" + Generator.toHex(this.id.array()) + /* ", country=" + this.range.country + */ ", ip="
-                + Generator.ip(this.ip) + ", port=" + this.port + ", queryMap=" + this.queryMap + "]";
+        return "Node [id=" + c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port + ", queryMap=" + this.queryMap
+                + "]";
     }
 
     enum Command {

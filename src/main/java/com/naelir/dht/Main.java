@@ -32,8 +32,8 @@ public class Main {
         String tcpmyself = Generator.generatePeerID();
         int serverPort = 6888;
         String tmp = Generator.toHex(udpmyself.array()).concat(".tmp");
-        FileManager fm = FileManager.of();
-        Data data = new Data(udpmyself, tcpmyself, fm);
+        FileManager fm = FileManager.of(tmp);
+        Data data = new Data(udpmyself, tcpmyself, fm, 100);
         OnDataListener crawler = new OnDataListener(data);
 //        DhtInfo info = fm.readDhtCache();
 //        List<Node> readNodes = info.nodes;

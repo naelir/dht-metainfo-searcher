@@ -24,7 +24,7 @@ public class OnDataListener implements IOnDataListener {
         if (decode.isPresent()) {
             BencodedDictionary bmap = decode.get();
             if (bmap.get("error") != null) {
-                logger.error("cannot decode from {}, port {} {}", Arrays.toString(buffer), address, port);
+                logger.error("cannot decode from address {}, port {}",address, port);
             } else
                 return this.resolver.resolve(bmap, from);
         }

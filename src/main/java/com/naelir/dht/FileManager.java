@@ -28,9 +28,10 @@ public class FileManager {
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     public static final Logger logger = LogManager.getLogger(FileManager.class);
 
-    public static FileManager of() throws IOException {
+    public static FileManager of(String saveOn) throws IOException {
         Files.createDirectories(HOME);
         Path ts = HOME.resolve("torrents.txt");
+        Path tout = HOME.resolve("torrents.txt".concat(saveOn));
         Path un = HOME.resolve("unresolved.txt");
         if (Files.exists(ts) == false) {
             Files.createFile(ts);
@@ -38,17 +39,19 @@ public class FileManager {
         if (Files.exists(un) == false) {
             Files.createFile(un);
         }
-        return new FileManager(ts, un);
+        return new FileManager(ts, un, tout);
     }
 
 //    private Path peerCache;
     private Path tcache;
     private Path unresolved;
+    private Path tout;
 
-    public FileManager(Path tcache, Path unresolved) {
+    public FileManager(Path tcache, Path unresolved, Path tout) {
 //        this.peerCache = peerCache;
         this.tcache = tcache;
         this.unresolved = unresolved;
+        this.tout = tout;
     }
 //    List<Node> readDhtCache() {
 //        try (
@@ -170,7 +173,7 @@ public class FileManager {
 
     public void saveMeta(Collection<Torrent> torrents) {
         try (
-                BufferedWriter writer = Files.newBufferedWriter(this.tcache, StandardOpenOption.CREATE,
+                BufferedWriter writer = Files.newBufferedWriter(this.tout, StandardOpenOption.CREATE,
                         StandardOpenOption.APPEND)
         ) {
             ObjectMapper mapper = new ObjectMapper();
@@ -204,7 +207,7 @@ public class FileManager {
         if (meta == null)
             return;
         try (
-                BufferedWriter writer = Files.newBufferedWriter(this.tcache, StandardOpenOption.CREATE,
+                BufferedWriter writer = Files.newBufferedWriter(this.tout, StandardOpenOption.CREATE,
                         StandardOpenOption.APPEND)
         ) {
             ObjectMapper mapper = new ObjectMapper();

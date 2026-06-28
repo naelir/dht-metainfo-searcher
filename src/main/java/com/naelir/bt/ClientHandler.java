@@ -137,7 +137,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             System.arraycopy(r.meta, 0, this.metadata, r.msg.piece * TorrentMetadataResponse.METADATA_PIECE_SIZE,
                     r.meta.length);
             this.piecesReceived++;
-            logger.info("piece {} received from expected {}", this.piecesReceived, this.piecesExpected);
+            logger.debug("piece {} received from expected {}", this.piecesReceived, this.piecesExpected);
             if (this.piecesReceived == this.piecesExpected) {
                 decode(true, addr, port);
                 ctx.close();
@@ -160,7 +160,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             this.data.remoteClient.saveMeta(this.task.infoHash, meta);
         } else {
             logger.error("metadata seems invalid");
-            logger.info(Arrays.toString(this.metadata));
+            logger.debug(Arrays.toString(this.metadata));
 //            this.data.tasks.offer(new MetaTorrentTask(new Node(addr, port), this.task));
         }
     }

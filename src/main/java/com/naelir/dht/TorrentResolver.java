@@ -36,7 +36,7 @@ public class TorrentResolver implements Runnable, AutoCloseable {
                     continue;
                 }
                 String hex = task.torrent.infoHash();
-                if (this.data.torrents.containsKey(hex) && this.data.torrents.get(hex).meta() == TorrentMeta.RESOLVED) {
+                if (this.data.torrents.containsKey(hex) && this.data.torrents.get(hex).meta() != null) {
                     logger.info("torrent {} already resolved, skipping.", hex);
                     continue;
                 }

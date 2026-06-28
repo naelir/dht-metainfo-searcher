@@ -22,7 +22,7 @@ public class IpRangeFilter {
     public static final String UNKNOWN = "Unknown";
     public static final String DEFAULT = "default";
     public static final Logger logger = LogManager.getLogger(IpRangeFilter.class);
-    public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
+//    public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
     public static final List<IpRange> RANGES_DENY = getDenyRanges();
 
     public static void main(String[] args) {
@@ -35,7 +35,6 @@ public class IpRangeFilter {
         BigInteger address = toBigInteger(ip);
         for (IpRange ipRange : RANGES_DENY) {
             if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0) {
-//                logger.warn("ip {} found in range {}", Arrays.toString(ip), ipRange);
                 return true;
             }
         }

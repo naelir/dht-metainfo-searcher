@@ -1,17 +1,23 @@
 package com.naelir.dht;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.naelir.dht.Node.Command;
 
 public class Query {
+    private static final AtomicInteger COUNTER = new AtomicInteger();
+
     Node.Command command;
     long responded;
     long sent;
     private long nextTryIn;
 
+    private int count;
+
     public Query(Command command) {
         super();
+        this.count = COUNTER.incrementAndGet();
         this.command = command;
         this.sent = System.currentTimeMillis();
         this.nextTryIn = 0;
@@ -44,6 +50,7 @@ public class Query {
 
     @Override
     public String toString() {
-        return "Query [command=" + this.command + ", responded=" + this.responded + ", sent=" + this.sent + "]";
+        return "Query [count=" + count + ", command=" + command + ", responded=" + responded + "]";
     }
+
 }

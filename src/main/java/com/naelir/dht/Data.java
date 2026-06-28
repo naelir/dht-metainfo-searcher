@@ -56,10 +56,12 @@ public class Data {
     public Set<InetAddress> denied;
     
     public IRemoteClient remoteClient;
+    public final int maxNodes;
 
-    public Data(ByteBuffer myself, String tcpmyself, FileManager fm) {
+    public Data(ByteBuffer myself, String tcpmyself, FileManager fm, int maxNodes) {
         this.myself = myself;
         this.tcpmyself = tcpmyself;
+        this.maxNodes = maxNodes;
         this.sent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
         this.samples = new ArrayDeque<>(500);
@@ -71,15 +73,15 @@ public class Data {
         this.tasks = new ArrayBlockingQueue<>(5000);
         this.pingTasks = new CopyOnWriteArrayList<>();
         this.remoteClient =
-//                new IRemoteClient() {
-//            
-//            @Override
-//            public void saveMeta(String hash, TorrentMeta meta) {
-//                // TODO Auto-generated method stub
-//                
-//            }
-//        };
-         new RemoteClient(RemoteClient.REMOTE_URL);
+                new IRemoteClient() {
+            
+            @Override
+            public void saveMeta(String hash, TorrentMeta meta) {
+                // TODO Auto-generated method stub
+                
+            }
+        };
+//         new RemoteClient(RemoteClient.REMOTE_URL);
 //        this.tasks = new PriorityQueue<>(5000, new Comparator<ResolveTorrentTask>() {
 //            @Override
 //            public int compare(ResolveTorrentTask o1, ResolveTorrentTask o2) {

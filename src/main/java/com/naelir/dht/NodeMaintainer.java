@@ -41,6 +41,8 @@ public class NodeMaintainer implements AutoCloseable {
             int j = 0;
             int z = 0;
             List<Node> list = new ArrayList<>();
+
+            logger.info("expirePeers run on {} ping tasks", this.data.pingTasks.size());
             List<PingPeersTorrentTask> resolved = new ArrayList<>();
             for (PingPeersTorrentTask task : this.data.pingTasks) {
                 for (Node nit : task.getNodes()) {
@@ -49,10 +51,12 @@ public class NodeMaintainer implements AutoCloseable {
                         if (query2.notResponding()) {
                             i++;
                             list.add(nit);
+                            logger.info("node {} not reponding", nit.getCounter());
                         } else if (query2.responding()) {
                             j++;
                             this.data.tasks.offer(new MetaTorrentTask(nit, task.torrent));
                             list.add(nit);
+                            logger.info("node {} is reponding", nit.getCounter());
                         } else {
                             z++;
                         }
@@ -65,7 +69,7 @@ public class NodeMaintainer implements AutoCloseable {
                 }
             }
             this.data.pingTasks.removeAll(resolved);
-            logger.info("expirePeers removed {} not responding peers, {} tasks found peer, {} still waiting for", i, j,
+            logger.info("expirePeers removed {} not responding peers, {} tasks found peer, {} not resolved yet", i, j,
                     z);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -109,7 +113,7 @@ public class NodeMaintainer implements AutoCloseable {
             Collection<Node> nodes = this.data.table.nodes();
             int target = 30;
             logger.info("nodes in the routing table {}", nodes.size());
-            if (nodes.size() > Config.MAX_NODES)
+            if (nodes.size() >= data.maxNodes)
                 return;
             int i = 0;
             for (Node node : nodes) {
@@ -136,7 +140,7 @@ public class NodeMaintainer implements AutoCloseable {
     public void findPeers() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            if (nodes.size() < Config.MAX_NODES)
+            if (nodes.size() < data.maxNodes)
                 return;
             logger.info("findPeers: not resolved torrents {}", this.data.torrents.size());
             int i = 5;
@@ -163,7 +167,7 @@ public class NodeMaintainer implements AutoCloseable {
     public void findSampleInfohashes() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            if (nodes.size() < Config.MAX_NODES)
+            if (nodes.size() < data.maxNodes)
                 return;
             int target = 20;
             for (Node node : nodes) {
@@ -187,8 +191,14 @@ public class NodeMaintainer implements AutoCloseable {
             if (this.data.samples.isEmpty() == false) {
                 SampleInfoHashesResponse poll = this.data.samples.poll();
                 for (String hash : poll.samples) {
-                    byte[] array = Generator.toArray(hash);
-                    this.client.sendGetPeers(ByteBuffer.wrap(array), poll.request.node);
+                    Torrent torrent = data.torrents.get(hash);
+                    if (torrent == null || torrent.meta() == null) {
+                        byte[] array = Generator.toArray(hash);
+                        this.client.sendGetPeers(ByteBuffer.wrap(array), poll.request.node);
+                    } else {
+                        logger.info("hash already resolved {}", hash);
+
+                    }
                 }
             }
         } catch (Exception e) {
@@ -260,7 +270,9 @@ public class NodeMaintainer implements AutoCloseable {
     }
 
     public void resolve() {
-        this.resolved = true;
+        if (data.samples.size() == 0) {
+            this.resolved = true;
+        }
     }
 
     public void start() {
@@ -270,7 +282,7 @@ public class NodeMaintainer implements AutoCloseable {
 //      this.executor.scheduleAtFixedRate(this::pingPeers, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::findNodeToPeers, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::expirePeers, 0, 10, TimeUnit.SECONDS);
-        this.executor.scheduleAtFixedRate(this::resolve, 20, 20, TimeUnit.MINUTES);
+        this.executor.scheduleAtFixedRate(this::resolve, 5, 5, TimeUnit.MINUTES);
 //      this.executor.scheduleAtFixedRate(this::findPeers, 0, 20, TimeUnit.SECONDS);
 //        this.executor.scheduleAtFixedRate(this::pingRoutingTableNodes, 2, 160, TimeUnit.SECONDS);
 //        this.executor.scheduleAtFixedRate(this::expireRoutingTableNodes, 2, 30, TimeUnit.MINUTES);

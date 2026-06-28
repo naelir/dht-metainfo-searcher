@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.IpRangeFilter;
 import com.naelir.bt.Torrent;
+import com.naelir.bt.TorrentMeta;
 import com.naelir.dht.Node.Command;
 
 public class ResponseResolver {
@@ -119,10 +120,15 @@ public class ResponseResolver {
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        decode.request.node.get(Command.FIND_NODE).setResponded();
-        if (Config.MAX_NODES > data.table.size()) {
+        Query query = decode.request.node.get(Command.FIND_NODE);
+        if (query != null) {
+            query.setResponded();
+        }
+        if (data.maxNodes > data.table.size()) {
             for (Node node : decode.nodes) {
-                this.data.table.insert(node);
+                if (IpRangeFilter.isDenied(node.ip) == false) {
+                    this.data.table.insert(node);
+                }
             }
         }
         return Optional.empty();
@@ -152,13 +158,10 @@ public class ResponseResolver {
             }
             String hex = Generator.toHex(gpr.infoHash.array());
             Torrent torrent = this.data.torrents.get(hex);
-            if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0) {
-                for (Node node : decode.peers) {
-                    if (IpRangeFilter.isDenied(node.ip)) {
-                        logger.debug("asian scam ip {} for torrent {}", node.address(), hex);
-                    } else {
-                        this.data.pingTasks.add(new PingPeersTorrentTask(List.of(node), torrent));
-                    }
+            if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0 && torrent.meta() == null) {
+                List<Node> list = decode.peers.stream().filter(e -> IpRangeFilter.isDenied(e.ip) == false).toList();
+                if (list.isEmpty() == false) {
+                    this.data.pingTasks.add(new PingPeersTorrentTask(list, torrent));
                 }
             }
         }
@@ -245,7 +248,7 @@ public class ResponseResolver {
             logger.info("found {} samples from {}, inserted new {}", decode.samples.size(), from, i);
             this.data.samples.offer(decode);
             decode.request.node.get(Command.SAMPLE).responded(TimeUnit.SECONDS, decode.interval);
-            if (this.data.table.nodes().size() < Config.MAX_NODES) {
+            if (this.data.table.nodes().size() < data.maxNodes) {
                 for (Node node : decode.nodes) {
                     this.data.table.insert(node);
                 }
