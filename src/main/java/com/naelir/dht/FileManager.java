@@ -102,12 +102,13 @@ public class FileManager {
         return set;
     }
     
-    public void convert() {
+    public void convert(String path) {
         Set<Entry> list = new HashSet<>();
         String random = RandomStringUtils.randomAlphabetic(10);
         Path to = HOME.resolve(random);
+        Path from = HOME.resolve(path);
         try (
-                BufferedReader reader = Files.newBufferedReader(tcache);
+                BufferedReader reader = Files.newBufferedReader(from);
                 BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
                         StandardOpenOption.APPEND)
         ) {

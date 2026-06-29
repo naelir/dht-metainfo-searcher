@@ -19,21 +19,21 @@ public class Entry {
     @JsonProperty("foundTime")
     public long foundTime;
     
-    @JsonProperty("nfo")
-    public boolean nfo;
+    @JsonProperty("size")
+    public long size;
     
     @JsonProperty("genre")
     public String genre;
 
     public Entry() {}
 
-    public Entry(String name, String hash, int fileCount, long foundTime, boolean nfo, String genre) {
+    public Entry(String name, String hash, int fileCount, long foundTime, long size, String genre) {
         super();
         this.name = name;
         this.hash = hash;
         this.fileCount = fileCount;
         this.foundTime = foundTime;
-        this.nfo = nfo;
+        this.size = size;
         this.genre = genre;
     }
 

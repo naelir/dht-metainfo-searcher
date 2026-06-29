@@ -90,8 +90,9 @@ public class TorrentMeta {
 
     private String name;
     private List<MetaFile> list;
-    long found;
+    public long found;
     Genre genre;
+    public int count;
     
     public TorrentMeta() {
         // TODO Auto-generated constructor stub
@@ -102,6 +103,7 @@ public class TorrentMeta {
         this.list = list;
         this.found = System.currentTimeMillis();
         this.genre = NameFilter.from(name, list);
+        this.count = list.size();
     }
 
     public long getFound() {
@@ -119,6 +121,10 @@ public class TorrentMeta {
     public String getName() {
         return this.name;
     }
+    
+    public int getCount() {
+        return count;
+    }
 
     @Override
     public String toString() {
@@ -126,7 +132,7 @@ public class TorrentMeta {
     }
 
     public enum Genre {
-        MOVIE_VIDEO("MV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
+        MOVIE_VIDEO("MOV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
         GAME_XBOX("XBOX"), SOFTWARE("APP"), UNKNOWN("NA"), XXX("XXX");
 
         private String txt;
@@ -168,15 +174,15 @@ public class TorrentMeta {
     }
 
     public static Entry toEntry(String infoHash, TorrentMeta meta) {
-        int size = meta.list.isEmpty() ? 1 : meta.list.size();
         Genre genre = meta.genre;
         boolean nfo = false;
+        long size = 0L;
         for (MetaFile b : meta.list) {
             if (b.path.contains(".nfo")) {
                 nfo = true;
-                break;
             }
+            size += b.bytes;
         }
-        return new Entry(meta.getName(), infoHash, size, meta.getFound(), nfo, genre.getTxt());
+        return new Entry(meta.getName(), infoHash, meta.count, meta.getFound(), size, genre.getTxt());
     }
 }

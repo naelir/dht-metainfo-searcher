@@ -1,41 +1,59 @@
 package com.naelir.convert;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.naelir.bt.Entry;
+import com.naelir.bt.TorrentMeta;
+import com.naelir.bt.TorrentMeta.MetaFile;
 import com.naelir.dht.FileManager;
 
 public class Parser {
 
+    private static final Pattern PR_FILE_COUNT = Pattern.compile("<span class=torrent_files style=color:#666;padding-left:10px>(\\d+)</span>");
     private static final Pattern FILE_COUNT = Pattern.compile(".+?&nbsp;(\\d+) hidden");
     private static final Pattern AGO = Pattern.compile("found (.+?)<.+");
-    private static final Pattern SIZE = Pattern.compile("([\\d\\.]+)&nbsp;([MBG]+)");
+    private static final Pattern SIZE = Pattern.compile("([\\d\\.]+)&nbsp;([MBGK]+)");
     private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
-    
+    //
     public static Meta parse(String line) {
+        Matcher matcher00 = PR_FILE_COUNT.matcher(line);
         Matcher matcher01 = FILE_COUNT.matcher(line);
         Matcher matcher02 = AGO.matcher(line);
         Matcher matcher03 = SIZE.matcher(line);
         Matcher matcher04 = HASH_NAME.matcher(line);
         
-        String count = matcher01.matches() ? matcher01.group(1) : "1";
-        String ago = matcher02.matches() ? matcher02.group(1) : "";
-        String size = matcher03.matches() ? matcher03.group(1).concat(matcher03.group(2)) : "";
-        String hash = matcher04.matches() ? matcher04.group(1) : "";
-        String name = matcher04.matches() ? matcher04.group(2) : "";
+        String count0 = matcher00.find() ? matcher00.group(1) : "0";
+        String count = matcher01.find() ? matcher01.group(1) : "0";
+        String ago = matcher02.find() ? matcher02.group(1) : "";
+        String size = matcher03.find() ? matcher03.group(1) : "0";
+        String suf = matcher03.find() ? matcher03.group(2) : "";
+        boolean b = matcher04.find();
+        String hash = b ? matcher04.group(1) : "";
+        String name = b ? matcher04.group(2) : "";
         
-        return new Meta(count, ago, size, hash, name);
+        int multiplier = "KB".equals(suf) ? 1024 : "MB".equals(suf) ? 1024 * 1024 : "GB".equals(suf) ? 1024 * 1024 * 1024 : 0;
+        long sizel = (long) (Float.valueOf(size) * multiplier);
+        int c = Integer.parseInt(count0) + Integer.parseInt(count);
+        return new Meta(c, ago, sizel, hash, name);
     }
     
     public static void walk(Path path) throws IOException {
-        List<Meta> list = new ArrayList<Parser.Meta>();
+//        Set<Entry> list = new HashSet<>();
+
+        FileManager fm = FileManager.of("temp.ffffv");
         Files.walk(path).forEach(e -> {
             try {
                 if (Files.isDirectory(e) == false) {
@@ -43,25 +61,33 @@ public class Parser {
                     String[] split = lines.split("\\.\\.\\.");
                     for (int i = 1; i < split.length; i++) {
                         Meta meta = parse(split[i]);
-                        list.add(meta);
+                        if (split.length < 10) {
+                            continue;
+                        }
+                        MetaFile me = new MetaFile(meta.name, meta.size);
+                        TorrentMeta name = new TorrentMeta(meta.name, List.of(me));
+                        name.count = meta.filesCount;
+//                        Entry entry = TorrentMeta.toEntry(meta.hash, name);
+                        fm.saveMeta(meta.hash, name);
+                        System.out.println(meta);
                     }
                 }
             } catch (IOException e1) {
                 e1.printStackTrace();
             }
         });
-        for (Meta meta : list) {
-            System.out.println(meta);
-        }
+//        ObjectMapper name = new ObjectMapper();
+//        String writeValueAsString = name.writeValueAsString(list);
+//        Files.writeString(Path.of("xaxaxax"), writeValueAsString, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
     
     static class Meta {
-        String filesCount;
+        int filesCount;
         String ago;
-        String size;
+        long size;
         String hash;
         String name;
-        public Meta(String filesCount, String ago, String size, String hash, String name) {
+        public Meta(int filesCount, String ago, long size, String hash, String name) {
             super();
             this.filesCount = filesCount;
             this.ago = ago;
@@ -80,9 +106,10 @@ public class Parser {
     }
     
     public static void main(String[] args) throws IOException {
-        String a = "</a></div></div></div></div></div></div><div style=display:table-row><div style=padding-top:15px></div></div><div class=one_result style=display:table-row;background-color:#e8e8e8><div style=display:table-cell;color:rgb(0,0,0)><div style=display:table><div style=display:table-row><div class=torrent_name style=display:table-cell><a style=color:rgb(0,0,204);text-decoration:underline;font-size:150% href=\"https://btdig.com/b8a953c33ad19226baa9c7171a09f256a18fb5d5/=afo\"><b style=color:red;background-color:yellow>afo</b>-tslomw-0301-720-web[EZTVx.to].mkv</a></div></div></div><div style=display:table><div style=display:table-row><div style=display:table-cell><span class=torrent_size style=color:#666;padding-left:10px>1.47&nbsp;GB</span><span class=torrent_age style=\"color:rgb(0,102,0);padding-left:10px;margin:0px 4px\">found 3 months ago</span></div></div></div><div class=torrent_excerpt style=display:table;padding:10px;white-space:nowrap><div class=\"fa fa-file-video-o\" style=padding-left:0em>&nbsp;<b style=color:red;background-color:yellow>afo</b>-tslomw-0301-720-web[EZTVx.to].mkv</div><span style=color:#666;padding-left:10px>&nbsp;1.47&nbsp;GB\r\n"
-                + "</span><br></div><div style=display:table;width:100%;padding:10px><div style=display:table-row><div class=torrent_magnet style=display:table-cell><div class=\"fa fa-magnet\" style=color:#cc0000><a href=\"magnet:?xt=urn:btih:b8a953c33ad19226baa9c7171a09f256a18fb5d5&amp;dn=afo-tslomw-0301-720-web%5BEZTVx.to%5D.mkv&amp;tr=udp://tracker.openbittorrent.com:80&amp;tr=udp://tracker.opentrackr.org:1337/announce\" title=\"Download via magnet-link\">&nbsp;magnet:?xt=urn:btih:b8a953c33a";
-        Meta meta = Parser.parse(a);
-        System.out.println(meta);
+//        Parser.walk(Path.of("C:\\Users\\7470\\Downloads\\btdig"));
+
+        FileManager of = FileManager.of("xaxa");
+        of.convert("torrents.txttemp.ffffv");
+
     }
 }
