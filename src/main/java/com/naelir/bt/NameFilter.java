@@ -45,7 +45,7 @@ public class NameFilter {
         return Genre.UNKNOWN;
     }
 
-    static boolean match(String name, boolean checkDash) {
+    public static boolean match(String name, boolean checkDash) {
         for (String string : KNOWN_PREFIXES) {
             name.replaceAll(string, "");
         }

@@ -12,6 +12,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +25,7 @@ import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
 import com.naelir.bt.TorrentMeta.Genre;
+import com.naelir.bt.TorrentMeta.MetaFile;
 
 public class FileManager {
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
@@ -31,7 +34,7 @@ public class FileManager {
     public static FileManager of(String saveOn) throws IOException {
         Files.createDirectories(HOME);
         Path ts = HOME.resolve("torrents.txt");
-        Path tout = HOME.resolve("torrents.txt".concat(saveOn));
+        Path tout = HOME.resolve(saveOn);
         Path un = HOME.resolve("unresolved.txt");
         if (Files.exists(ts) == false) {
             Files.createFile(ts);
@@ -42,13 +45,11 @@ public class FileManager {
         return new FileManager(ts, un, tout);
     }
 
-//    private Path peerCache;
     private Path tcache;
     private Path unresolved;
     private Path tout;
 
     public FileManager(Path tcache, Path unresolved, Path tout) {
-//        this.peerCache = peerCache;
         this.tcache = tcache;
         this.unresolved = unresolved;
         this.tout = tout;
@@ -183,7 +184,7 @@ public class FileManager {
                 if (meta == null) {
                     continue;
                 }
-                if (NameFilter.match(meta) && meta.getGenre().equals(Genre.XXX) == false) {
+                if (NameFilter.match(meta.getName(), true) && meta.getGenre().equals(Genre.XXX) == false) {
                     writer.append(torrent.infoHash());
                     writer.append("#");
                     writer.append("FINE");
@@ -230,5 +231,101 @@ public class FileManager {
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
+    }
+    
+
+    private static final Pattern PR_FILE_COUNT = Pattern.compile("<span class=torrent_files style=color:#666;padding-left:10px>(\\d+)</span>");
+    private static final Pattern FILE_COUNT = Pattern.compile(".+?&nbsp;(\\d+) hidden");
+    private static final Pattern AGO = Pattern.compile("found (.+?)<.+");
+    private static final Pattern SIZE = Pattern.compile("([\\d\\.]+?)&nbsp;([MBGK]+)");
+    private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
+    //
+    static BtDiggMeta parse(String line) {
+        Matcher matcher00 = PR_FILE_COUNT.matcher(line);
+        Matcher matcher01 = FILE_COUNT.matcher(line);
+        Matcher matcher02 = AGO.matcher(line);
+        Matcher matcher03 = SIZE.matcher(line);
+        Matcher matcher04 = HASH_NAME.matcher(line);
+        
+        String count0 = matcher00.find() ? matcher00.group(1) : "0";
+        String count = matcher01.find() ? matcher01.group(1) : "0";
+        String ago = matcher02.find() ? matcher02.group(1) : "";
+        boolean b = matcher03.find();
+        String size = b ? matcher03.group(1) : "0";
+        String suf = b ? matcher03.group(2) : "";
+        boolean b1 = matcher04.find();
+        String hash = b1 ? matcher04.group(1) : "";
+        String name = b1 ? matcher04.group(2) : "";
+        
+        int multiplier = "KB".equals(suf) ? 1024 : "MB".equals(suf) ? 1024 * 1024 : "GB".equals(suf) ? 1024 * 1024 * 1024 : 0;
+        long sizel = (long) (Float.valueOf(size) * multiplier);
+        int c = Integer.parseInt(count0);
+        c = c == 0 ? 1: c;
+        return new BtDiggMeta(c, ago, sizel, hash, name);
+    }
+    
+    public void readBtDigg(Path path) throws IOException {
+        Files.walk(path).forEach(e -> {
+            try {
+                if (Files.isDirectory(e) == false) {
+                    System.out.println(e.getFileName());
+                    String lines = Files.readString(e);
+                    String[] split = lines.split("\\.\\.\\.");
+                    List<Torrent> list = new ArrayList<Torrent>();
+                    for (int i = 0; i < split.length; i++) {
+                        String line = split[i];
+                        if (i == 0) {
+                            int indexOf = line.indexOf("Previous");
+                            if (indexOf < 0) {
+                                continue;
+                            }
+                            line = line.substring(indexOf, line.length());
+                        }
+                        BtDiggMeta meta = parse(line);
+                        if (meta.filesCount > 100) {
+                            System.err.println(meta);
+                            continue;
+                        }
+                        
+                        MetaFile me = new MetaFile(meta.name, meta.size);
+                        TorrentMeta name = new TorrentMeta(meta.name, List.of(me));
+                        name.count = meta.filesCount;
+                        Torrent e2 = new Torrent(meta.hash);
+                        e2.setMeta(name);
+                        list.add(e2);
+                    }
+                    saveMeta(list);
+                }
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+//        ObjectMapper name = new ObjectMapper();
+//        String writeValueAsString = name.writeValueAsString(list);
+//        Files.writeString(Path.of("xaxaxax"), writeValueAsString, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+    }
+    
+    static class BtDiggMeta {
+        int filesCount;
+        String ago;
+        long size;
+        String hash;
+        String name;
+        public BtDiggMeta(int filesCount, String ago, long size, String hash, String name) {
+            super();
+            this.filesCount = filesCount;
+            this.ago = ago;
+            this.size = size;
+            this.hash = hash;
+            this.name = name;
+        }
+        @Override
+        public String toString() {
+            return "Meta [hash=" + hash + ", name=" + name + ", filesCount=" + filesCount + ", ago=" + ago + ", size="
+                    + size + "]";
+        }
+        
+        
+        
     }
 }

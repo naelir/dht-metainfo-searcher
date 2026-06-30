@@ -116,7 +116,7 @@ public class Application implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = new Arguments(600, null, 200, null);// Arguments.parse(args);
+        Arguments arguments = new Arguments(400, null, 200, null);// Arguments.parse(args);
         logger.info("Starting with {}", arguments);
         var application = new Application(arguments);
         new Thread(application).start();
