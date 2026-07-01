@@ -13,8 +13,8 @@ public class AnnouncePeerRequest implements IRequest {
     ByteBuffer id;
     ByteBuffer infoHash;
     ByteBuffer token;
-    int implied;
-    int port;
+    Integer implied;
+    Integer port;
     String method = "announce_peer";
     ByteBuffer tid;
     Node node;

@@ -41,12 +41,11 @@ public class NodeMaintainer implements AutoCloseable {
             int j = 0;
             int z = 0;
             List<Node> list = new ArrayList<>();
-
             logger.info("expirePeers run on {} ping tasks", this.data.pingTasks.size());
             List<PingPeersTorrentTask> resolved = new ArrayList<>();
             for (PingPeersTorrentTask task : this.data.pingTasks) {
                 for (Node nit : task.getNodes()) {
-                    Query query2 = nit.get(Command.FIND_NODE);
+                    Query query2 = nit.get(Command.PING);
                     if (query2 != null) {
                         if (query2.notResponding()) {
                             i++;
@@ -69,8 +68,8 @@ public class NodeMaintainer implements AutoCloseable {
                 }
             }
             this.data.pingTasks.removeAll(resolved);
-            logger.info("expirePeers removed {} not responding peers, {} tasks found peer, {} not resolved yet", i, j,
-                    z);
+            logger.info("expirePeers removed {} not alive peers, {} alive found peer, torrents with no peers {}", i, j,
+                    resolved.size());
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
@@ -194,10 +193,13 @@ public class NodeMaintainer implements AutoCloseable {
                     Torrent torrent = data.torrents.get(hash);
                     if (torrent == null || torrent.meta() == null) {
                         byte[] array = Generator.toArray(hash);
-                        this.client.sendGetPeers(ByteBuffer.wrap(array), poll.request.node);
+                        ByteBuffer wrap = ByteBuffer.wrap(array);
+                        List<Node> closest = data.table.closest(wrap, 2);
+                        for (Node node : closest) {
+                            this.client.sendGetPeers(wrap, node);
+                        }
                     } else {
                         logger.info("hash already resolved {}", hash);
-
                     }
                 }
             }
@@ -220,6 +222,7 @@ public class NodeMaintainer implements AutoCloseable {
                         limit--;
                         i++;
                         this.client.sendPing(node);
+                        Thread.sleep(20);
                     }
                 }
             }
@@ -228,7 +231,7 @@ public class NodeMaintainer implements AutoCloseable {
             logger.error(e.getMessage(), e);
         }
     }
-    
+
     public void findNodeToPeers() {
         try {
             int limit = 20;
@@ -278,9 +281,9 @@ public class NodeMaintainer implements AutoCloseable {
     public void start() {
         this.executor.scheduleAtFixedRate(this::findNodes, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::findSampleInfohashes, 0, 5, TimeUnit.SECONDS);
-        this.executor.scheduleAtFixedRate(this::findSampleInfohashesPeers, 0, 5, TimeUnit.SECONDS);
-//      this.executor.scheduleAtFixedRate(this::pingPeers, 0, 5, TimeUnit.SECONDS);
-        this.executor.scheduleAtFixedRate(this::findNodeToPeers, 0, 5, TimeUnit.SECONDS);
+        this.executor.scheduleAtFixedRate(this::findSampleInfohashesPeers, 0, 15, TimeUnit.SECONDS);
+        this.executor.scheduleAtFixedRate(this::pingPeers, 0, 5, TimeUnit.SECONDS);
+//        this.executor.scheduleAtFixedRate(this::findNodeToPeers, 0, 5, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::expirePeers, 0, 10, TimeUnit.SECONDS);
         this.executor.scheduleAtFixedRate(this::resolve, 5, 5, TimeUnit.MINUTES);
 //      this.executor.scheduleAtFixedRate(this::findPeers, 0, 20, TimeUnit.SECONDS);

@@ -74,7 +74,7 @@ public class Node {
 
     public void put(Command command) {
         this.queryMap.put(command, new Query(command));
-        logger.info("adding {} on node {}", command, this);
+        logger.debug("adding {} on node {}", command, this);
     }
 
     @Override

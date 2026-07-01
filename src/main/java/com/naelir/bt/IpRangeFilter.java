@@ -22,7 +22,7 @@ public class IpRangeFilter {
     public static final String UNKNOWN = "Unknown";
     public static final String DEFAULT = "default";
     public static final Logger logger = LogManager.getLogger(IpRangeFilter.class);
-//    public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
+    public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
     public static final List<IpRange> RANGES_DENY = getDenyRanges();
 
     public static void main(String[] args) {
@@ -41,6 +41,16 @@ public class IpRangeFilter {
         return false;
     }
 
+    public static boolean isAllow(byte[] ip) {
+        BigInteger address = toBigInteger(ip);
+        for (IpRange ipRange : RANGES_ALLOW) {
+            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     private static List<IpRange> getAllowRanges() {
         List<IpRange> list = new ArrayList<>();
         try (
@@ -61,10 +71,8 @@ public class IpRangeFilter {
                 }
                 list.add(new IpRange(split[0], split[1], country));
             }
-            list.add(new IpRange("0.0.0.0", "255.255.255.255", UNKNOWN));
         } catch (Exception e) {
             logger.error("Failed to read IP range file: {}", e.getMessage(), e);
-            list.add(new IpRange("0.0.0.0", "255.255.255.255", DEFAULT));
         }
         return list;
     }

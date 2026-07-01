@@ -28,7 +28,7 @@ public class Query {
     }
 
     public boolean notResponding() {
-        return this.responded == 0 && (System.currentTimeMillis() - TimeUnit.SECONDS.toMillis(30) > this.sent);
+        return this.responded == 0 && (System.currentTimeMillis() - TimeUnit.SECONDS.toMillis(60) > this.sent);
     }
 
     public void responded(TimeUnit unit, Integer interval) {

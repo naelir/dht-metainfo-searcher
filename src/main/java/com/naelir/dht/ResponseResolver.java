@@ -124,9 +124,10 @@ public class ResponseResolver {
         if (query != null) {
             query.setResponded();
         }
-        if (data.maxNodes > data.table.size()) {
+        int size = data.table.size();
+        if (data.maxNodes > size) {
             for (Node node : decode.nodes) {
-                if (IpRangeFilter.isDenied(node.ip) == false) {
+                if (IpRangeFilter.isDenied(node.ip) == false || size < 5) {
                     this.data.table.insert(node);
                 }
             }
@@ -161,6 +162,7 @@ public class ResponseResolver {
             if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0 && torrent.meta() == null) {
                 List<Node> list = decode.peers.stream().filter(e -> IpRangeFilter.isDenied(e.ip) == false).toList();
                 if (list.isEmpty() == false) {
+                    logger.info("found {} peers for {}, applicable {}", decode.peers.size(), hex, list.size());
                     this.data.pingTasks.add(new PingPeersTorrentTask(list, torrent));
                 }
             }

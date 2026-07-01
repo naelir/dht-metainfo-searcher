@@ -71,7 +71,7 @@ public class Data {
         this.unresolved = new HashSet<>();
         this.denied = new HashSet<>();
         this.tasks = new ArrayBlockingQueue<>(5000);
-        this.pingTasks = new CopyOnWriteArrayList<>();
+        this.pingTasks = new CopyOnWriteArrayList<PingPeersTorrentTask>();
         this.remoteClient =
                 new IRemoteClient() {
             
