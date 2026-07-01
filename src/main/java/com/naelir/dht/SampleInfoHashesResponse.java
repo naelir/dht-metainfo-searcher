@@ -86,7 +86,6 @@ public class SampleInfoHashesResponse implements IResponse {
 
     @Override
     public String toString() {
-        int i = this.samples != null ? this.samples.size() / 20 : 0;
         return "SampleInfoHashesResponse [id=" + Generator.toHex(this.id.array()) + ", interval=" + this.interval
                 + ", nodes=" + this.nodes.size() + ", num=" + this.num + ", samples=" + this.samples + "]";
     }

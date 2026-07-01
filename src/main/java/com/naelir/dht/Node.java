@@ -3,7 +3,9 @@ package com.naelir.dht;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -60,10 +62,6 @@ public class Node {
         return c;
     }
 
-    public Query get(Command command) {
-        return this.queryMap.get(command);
-    }
-
     public int nextId() {
         return this.tid++;
     }
@@ -72,18 +70,32 @@ public class Node {
         return this.port;
     }
 
-    public void put(Command command) {
-        this.queryMap.put(command, new Query(command));
-        logger.debug("adding {} on node {}", command, this);
-    }
-
     @Override
     public String toString() {
         return "Node [id=" + c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port + ", queryMap=" + this.queryMap
                 + "]";
     }
+    
 
-    enum Command {
-        PING, FIND_NODE, GET_PEER, SAMPLE, ANNOUNCE
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + Arrays.hashCode(ip);
+        result = prime * result + Objects.hash(port);
+        return result;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Node other = (Node) obj;
+        return Arrays.equals(ip, other.ip) && port == other.port;
+    }
+    
 }

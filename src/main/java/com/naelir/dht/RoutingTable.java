@@ -35,7 +35,6 @@ public final class RoutingTable {
     /** 2^160 — the exclusive upper bound of the entire ID space. */
     static final BigInteger MAX_ID = BigInteger.ONE.shiftLeft(160);
     /** The own node ID used to decide whether a full bucket may be split. */
-    private final BigInteger ownId;
     /**
      * Ordered list of buckets. The list is always sorted by {@code min} so that a
      * binary search can locate the correct bucket in O(log n).
@@ -48,8 +47,7 @@ public final class RoutingTable {
      *
      * @param ownId the 20-byte ID of the local node.
      */
-    public RoutingTable(ByteBuffer ownId) {
-        this.ownId = new BigInteger(1, ownId.array());
+    public RoutingTable() {
         this.buckets = new ArrayList<>();
         // Start with one bucket covering [0, 2^160).
         this.buckets.add(new RoutingBucket(BigInteger.ZERO, MAX_ID));

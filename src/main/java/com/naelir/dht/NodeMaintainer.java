@@ -16,7 +16,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
-import com.naelir.dht.Node.Command;
 
 public class NodeMaintainer implements AutoCloseable {
     public static final Logger logger = LogManager.getLogger(NodeMaintainer.class);
@@ -39,26 +38,24 @@ public class NodeMaintainer implements AutoCloseable {
         try {
             int i = 0;
             int j = 0;
-            int z = 0;
             List<Node> list = new ArrayList<>();
             logger.info("expirePeers run on {} ping tasks", this.data.pingTasks.size());
             List<PingPeersTorrentTask> resolved = new ArrayList<>();
             for (PingPeersTorrentTask task : this.data.pingTasks) {
-                for (Node nit : task.getNodes()) {
-                    Query query2 = nit.get(Command.PING);
-                    if (query2 != null) {
-                        if (query2.notResponding()) {
-                            i++;
-                            list.add(nit);
-                            logger.info("node {} not reponding", nit.getCounter());
-                        } else if (query2.responding()) {
-                            j++;
-                            this.data.tasks.offer(new MetaTorrentTask(nit, task.torrent));
-                            list.add(nit);
-                            logger.info("node {} is reponding", nit.getCounter());
+                for (Node node : task.getNodes()) {
+                    if (data.queryStats.notResponding(node)) {
+                        if (this.data.queryStats.haveSlot(node)) {
+                            client.sendPing(node);
                         } else {
-                            z++;
+                            i++;
+                            list.add(node);
+                            logger.info("node {} not reponding", node.getCounter());
                         }
+                    } else {
+                        j++;
+                        this.data.tasks.offer(new MetaTorrentTask(node, task.torrent));
+                        list.add(node);
+                        logger.info("node {} is reponding", node.getCounter());
                     }
                 }
                 task.getNodes().removeAll(list);
@@ -81,20 +78,7 @@ public class NodeMaintainer implements AutoCloseable {
             logger.info("expire triggered on {} nodes", nodes.size());
             Set<Node> expired = new HashSet<>();
             for (Node node : nodes) {
-                Query query1 = node.get(Command.FIND_NODE);
-                if (query1 != null && query1.notResponding()) {
-                    expired.add(node);
-                }
-                Query query4 = node.get(Command.GET_PEER);
-                if (query4 != null && query4.notResponding()) {
-                    expired.add(node);
-                }
-                Query query2 = node.get(Command.PING);
-                if (query2 != null && query2.notResponding()) {
-                    expired.add(node);
-                }
-                Query query3 = node.get(Command.SAMPLE);
-                if (query3 != null && query3.notResponding()) {
+                if (data.queryStats.notResponding(node)) {
                     expired.add(node);
                 }
             }
@@ -116,7 +100,7 @@ public class NodeMaintainer implements AutoCloseable {
                 return;
             int i = 0;
             for (Node node : nodes) {
-                if (node.get(Command.FIND_NODE) == null) {
+                if (data.queryStats.have(node, Command.FIND_NODE) == false) {
                     i++;
                     target--;
                     this.client.sendFindNode(this.data.myself, node);
@@ -170,8 +154,7 @@ public class NodeMaintainer implements AutoCloseable {
                 return;
             int target = 20;
             for (Node node : nodes) {
-                Query query = node.get(Command.SAMPLE);
-                if (query == null) {
+                if (data.queryStats.have(node, Command.SAMPLE) == false) {
                     target--;
                     this.client.sendSampleInfohashes(this.data.myself, node);
                 }
@@ -214,11 +197,10 @@ public class NodeMaintainer implements AutoCloseable {
             int i = 0;
             for (PingPeersTorrentTask task : this.data.pingTasks) {
                 for (Node node : task.getNodes()) {
-                    Query query = node.get(Command.PING);
                     if (limit < 0) {
                         break;
                     }
-                    if (query == null) {
+                    if (data.queryStats.have(node, Command.PING) == false) {
                         limit--;
                         i++;
                         this.client.sendPing(node);
@@ -238,11 +220,10 @@ public class NodeMaintainer implements AutoCloseable {
             int i = 0;
             for (PingPeersTorrentTask task : this.data.pingTasks) {
                 for (Node node : task.getNodes()) {
-                    Query query = node.get(Command.FIND_NODE);
                     if (limit < 0) {
                         break;
                     }
-                    if (query == null) {
+                    if (data.queryStats.have(node, Command.FIND_NODE) == false) {
                         limit--;
                         i++;
                         this.client.sendFindNode(data.myself, node);
@@ -260,8 +241,7 @@ public class NodeMaintainer implements AutoCloseable {
             Collection<Node> nodes = this.data.table.nodes();
             int i = 0;
             for (Node node : nodes) {
-                Query query = node.get(Command.PING);
-                if (query == null || query.shouldRecheck()) {
+                if (data.queryStats.have(node, Command.PING) == false) {
                     i++;
                     this.client.sendPing(node);
                 }

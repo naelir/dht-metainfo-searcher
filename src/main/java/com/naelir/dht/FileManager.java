@@ -235,20 +235,17 @@ public class FileManager {
     
 
     private static final Pattern PR_FILE_COUNT = Pattern.compile("<span class=torrent_files style=color:#666;padding-left:10px>(\\d+)</span>");
-    private static final Pattern FILE_COUNT = Pattern.compile(".+?&nbsp;(\\d+) hidden");
     private static final Pattern AGO = Pattern.compile("found (.+?)<.+");
     private static final Pattern SIZE = Pattern.compile("([\\d\\.]+?)&nbsp;([MBGK]+)");
     private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
     //
     static BtDiggMeta parse(String line) {
         Matcher matcher00 = PR_FILE_COUNT.matcher(line);
-        Matcher matcher01 = FILE_COUNT.matcher(line);
         Matcher matcher02 = AGO.matcher(line);
         Matcher matcher03 = SIZE.matcher(line);
         Matcher matcher04 = HASH_NAME.matcher(line);
         
         String count0 = matcher00.find() ? matcher00.group(1) : "0";
-        String count = matcher01.find() ? matcher01.group(1) : "0";
         String ago = matcher02.find() ? matcher02.group(1) : "";
         boolean b = matcher03.find();
         String size = b ? matcher03.group(1) : "0";

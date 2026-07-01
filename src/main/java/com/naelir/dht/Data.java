@@ -18,7 +18,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
 import com.naelir.http.IRemoteClient;
-import com.naelir.http.RemoteClient;
 
 public class Data {
     static List<Node> parse(ByteBuffer nodes, InetAddress address) {
@@ -54,7 +53,7 @@ public class Data {
     String tcpmyself;
     public FileManager fm;
     public Set<InetAddress> denied;
-    
+    public QueryStats queryStats;
     public IRemoteClient remoteClient;
     public final int maxNodes;
 
@@ -62,12 +61,13 @@ public class Data {
         this.myself = myself;
         this.tcpmyself = tcpmyself;
         this.maxNodes = maxNodes;
+        this.queryStats = new QueryStats();
         this.sent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
         this.samples = new ArrayDeque<>(500);
         this.tokensSent = new ConcurrentHashMap<>();
         this.tokensReceived = new ConcurrentHashMap<>();
-        this.table = new RoutingTable(myself);
+        this.table = new RoutingTable();
         this.unresolved = new HashSet<>();
         this.denied = new HashSet<>();
         this.tasks = new ArrayBlockingQueue<>(5000);

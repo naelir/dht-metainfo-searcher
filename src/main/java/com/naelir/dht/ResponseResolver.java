@@ -17,8 +17,6 @@ import org.apache.logging.log4j.Logger;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.IpRangeFilter;
 import com.naelir.bt.Torrent;
-import com.naelir.bt.TorrentMeta;
-import com.naelir.dht.Node.Command;
 
 public class ResponseResolver {
     public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
@@ -75,8 +73,9 @@ public class ResponseResolver {
 
     private void resolve(AnnouncePeerResponse decode, From from) {
         if (decode.request instanceof AnnouncePeerRequest apr) {
-            Query command = apr.node.get(Command.ANNOUNCE);
-            command.setResponded();
+            data.queryStats.get(apr.node, Command.ANNOUNCE).ifPresent(q -> {
+                q.setResponded();
+            });
         }
     }
 
@@ -120,10 +119,10 @@ public class ResponseResolver {
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        Query query = decode.request.node.get(Command.FIND_NODE);
-        if (query != null) {
-            query.setResponded();
-        }
+        data.queryStats.get(decode.request.node, Command.ANNOUNCE).ifPresent(q -> {
+            q.setResponded();
+        });
+
         int size = data.table.size();
         if (data.maxNodes > size) {
             for (Node node : decode.nodes) {
@@ -229,7 +228,9 @@ public class ResponseResolver {
     }
 
     private void resolve(PingResponse decode, From from) {
-        decode.request.node.get(Command.PING).responded(TimeUnit.MINUTES, 15);
+        data.queryStats.get(decode.request.node, Command.PING).ifPresent(q -> {
+            q.responded(TimeUnit.MINUTES, 15);
+        });
     }
 
     private IResponse resolve(SampleInfoHashesRequest decode, From from) {
@@ -249,7 +250,11 @@ public class ResponseResolver {
             }
             logger.info("found {} samples from {}, inserted new {}", decode.samples.size(), from, i);
             this.data.samples.offer(decode);
-            decode.request.node.get(Command.SAMPLE).responded(TimeUnit.SECONDS, decode.interval);
+
+            data.queryStats.get(decode.request.node, Command.SAMPLE).ifPresent(q -> {
+                q.responded(TimeUnit.SECONDS, decode.interval);
+            });
+            
             if (this.data.table.nodes().size() < data.maxNodes) {
                 for (Node node : decode.nodes) {
                     this.data.table.insert(node);

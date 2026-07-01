@@ -14,8 +14,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Node.Command;
-
 public class UdpClient implements Runnable, AutoCloseable {
     private static final int DEFAULT_BUFFER_SIZE = 1 << 17;
     private static final int DEFAULT_TIMEOUT_MS = 5000;
@@ -115,31 +113,31 @@ public class UdpClient implements Runnable, AutoCloseable {
     public void sendAnnouncePeer(ByteBuffer torrent, Node node) throws Exception {
         Token token = new Token(node.ip);
         AnnouncePeerRequest r = new AnnouncePeerRequest(this.myself, torrent, token.value, this.socket.getPort(), node);
-        node.put(Command.ANNOUNCE);
+        db.queryStats.put(node, Command.ANNOUNCE);
         send(r, node.address(), node.port);
     }
 
     public void sendFindNode(ByteBuffer id, Node node) throws Exception {
         FindNodeRequest r = new FindNodeRequest(this.myself, id, node);
-        node.put(Command.FIND_NODE);
+        db.queryStats.put(node, Command.FIND_NODE);
         send(r, node.address(), node.port);
     }
 
     public void sendGetPeers(ByteBuffer torrent, Node node) throws Exception {
         GetPeersRequest r = new GetPeersRequest(this.myself, torrent, node);
-        node.put(Command.GET_PEER);
+        db.queryStats.put(node, Command.GET_PEER);
         send(r, node.address(), node.port);
     }
 
     public void sendPing(Node node) throws Exception {
         PingRequest r = new PingRequest(this.myself, node);
-        node.put(Command.PING);
+        db.queryStats.put(node, Command.PING);
         send(r, node.address(), node.port);
     }
 
     public void sendSampleInfohashes(ByteBuffer range, Node node) throws UnknownHostException, Exception {
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(this.myself, range, node);
-        node.put(Command.SAMPLE);
+        db.queryStats.put(node, Command.SAMPLE);
         send(r, node.address(), node.port);
     }
 

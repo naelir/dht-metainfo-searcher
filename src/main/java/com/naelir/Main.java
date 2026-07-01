@@ -1,4 +1,4 @@
-package com.naelir.dht;
+package com.naelir;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
@@ -21,6 +21,12 @@ import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BtTcpClient;
 import com.naelir.bt.Torrent;
+import com.naelir.dht.Data;
+import com.naelir.dht.FileManager;
+import com.naelir.dht.Generator;
+import com.naelir.dht.Node;
+import com.naelir.dht.OnDataListener;
+import com.naelir.dht.UdpClient;
 
 public class Main {
     public static final Logger logger = LogManager.getLogger(Main.class);
@@ -93,17 +99,17 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             scanner.nextLine();
 //            Collection<Node> values = data.table.closest(udpmyself, 100);
-            Set<String> values = data.table.nodes()
-                    .stream()
-                    .filter(e -> e.id != null)
-                    .map(e -> Generator.toHex(e.id.array()))
-                    .collect(Collectors.toSet());
+//            Set<String> values = data.table.nodes()
+//                    .stream()
+//                    .filter(e -> e.id != null)
+//                    .map(e -> Generator.toHex(e.id.array()))
+//                    .collect(Collectors.toSet());
 //            Path
 //            List<Node> nodes = new ArrayList<>(values);
 //            fm.saveMeta(data.torrents.values());
-            Path any = Paths.get(System.getProperty("user.home"), "close-nodes.info");
+//            Path any = Paths.get(System.getProperty("user.home"), "close-nodes.info");
 //            fm.saveDhtNodes(udpmyself, nodes);
-            fm.saveHashesTo(values, any);
+//            fm.saveHashesTo(values, any);
         }
     }
 }

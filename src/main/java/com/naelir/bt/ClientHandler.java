@@ -1,6 +1,5 @@
 package com.naelir.bt;
 
-import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.file.Path;
@@ -10,20 +9,12 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
-import com.naelir.bt.messages.ChokeMessage;
 import com.naelir.bt.messages.HandshakeMessage;
 import com.naelir.bt.messages.HaveNone;
-import com.naelir.bt.messages.NotInterestedMessage;
 import com.naelir.bt.messages.PeerWireMessage;
 import com.naelir.bt.messages.PortMessage;
 import com.naelir.bt.messages.ext.ExtendedMessageHandshake;
@@ -32,9 +23,6 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
-import com.naelir.dht.MetaTorrentTask;
-import com.naelir.dht.Node;
-import com.naelir.http.RemoteClient;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -44,8 +32,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
     public static final Path CACHE_FILE = Paths.get(System.getProperty("user.home"), "torrents.info");
     public static final Path CRAP_FILE = Paths.get(System.getProperty("user.home"), "torrents.CRAP");
-    private static final List<String> ALLOWED_PRE = List.of("-BC", "-DE", "-LT", "-lt", "-qB", "-TR", "-UT", "-BT",
-            "TIX");
+//    private static final List<String> ALLOWED_PRE = List.of("-BC", "-DE", "-LT", "-lt", "-qB", "-TR", "-UT", "-BT",
+//            "TIX");
     private static final List<String> DENIED_PRE = List.of("-XT");
     
     private String myself;
@@ -56,7 +44,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     volatile int piecesExpected;
     volatile int piecesReceived;
     volatile private byte ut_metadata_code;
-    private String peerID;
 
     public ClientHandler(Data data, Torrent task) {
         this.data = data;
@@ -100,7 +87,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             if (hr.isExtended() == false) {
                 ctx.close();
             }
-            this.peerID = hr.peerID;
             if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
                 this.task.setMeta(TorrentMeta.SCAM);
                 this.data.fm.saveMeta(this.task.infoHash, TorrentMeta.SCAM);
@@ -142,9 +128,8 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 decode(true, addr, port);
                 ctx.close();
             }
-        } else if (msg instanceof PortMessage pm) {//
-        } else if (msg instanceof PeerWireMessage ud) {
-            //
+        } else if (msg instanceof PortMessage) {//
+        } else if (msg instanceof PeerWireMessage) {//
         }
     }
 
@@ -169,10 +154,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         logger.error(cause);
         ctx.close();
-    }
-
-    private boolean islt(String peer) {
-        return peer != null && (peer.startsWith("-lt") || peer.startsWith("-LT"));
     }
 
 }
