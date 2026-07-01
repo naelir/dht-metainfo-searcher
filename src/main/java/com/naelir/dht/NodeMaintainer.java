@@ -46,6 +46,7 @@ public class NodeMaintainer implements AutoCloseable {
                     if (data.queryStats.notResponding(node)) {
                         if (this.data.queryStats.haveSlot(node)) {
                             client.sendPing(node);
+                            logger.info("node {} not reponding, sending another ping", node.getCounter());
                         } else {
                             i++;
                             list.add(node);
@@ -65,7 +66,7 @@ public class NodeMaintainer implements AutoCloseable {
                 }
             }
             this.data.pingTasks.removeAll(resolved);
-            logger.info("expirePeers removed {} not alive peers, {} alive found peer, torrents with no peers {}", i, j,
+            logger.info("expirePeers removed {} not alive peers, {} alive, torrents skipped because of no peers {}", i, j,
                     resolved.size());
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -94,7 +95,7 @@ public class NodeMaintainer implements AutoCloseable {
     public void findNodes() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            int target = 30;
+            int step = 30;
             logger.info("nodes in the routing table {}", nodes.size());
             if (nodes.size() >= data.maxNodes)
                 return;
@@ -102,10 +103,10 @@ public class NodeMaintainer implements AutoCloseable {
             for (Node node : nodes) {
                 if (data.queryStats.have(node, Command.FIND_NODE) == false) {
                     i++;
-                    target--;
+                    step--;
                     this.client.sendFindNode(this.data.myself, node);
                 }
-                if (target < 0) {
+                if (step < 0) {
                     break;
                 }
             }
@@ -126,10 +127,10 @@ public class NodeMaintainer implements AutoCloseable {
             if (nodes.size() < data.maxNodes)
                 return;
             logger.info("findPeers: not resolved torrents {}", this.data.torrents.size());
-            int i = 5;
+            int step = 5;
             for (Entry<String, Torrent> torrent : this.data.torrents.entrySet()) {
                 if (torrent.getValue().meta() == TorrentMeta.EMPTY) {
-                    i--;
+                    step--;
                     String key = torrent.getKey();
                     byte[] array = Generator.toArray(key);
                     List<Node> closest = this.data.table.closest(ByteBuffer.wrap(array), 8);
@@ -138,7 +139,7 @@ public class NodeMaintainer implements AutoCloseable {
                         this.client.sendGetPeers(ByteBuffer.wrap(array), node);
                     }
                 }
-                if (i == 0) {
+                if (step == 0) {
                     break;
                 }
             }
