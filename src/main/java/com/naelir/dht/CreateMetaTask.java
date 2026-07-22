@@ -25,6 +25,7 @@ public class CreateMetaTask implements ITask {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
                         this.data.tasks.offer(new MetaTorrentTask(peer, sample.torrent));
+                        this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
                     }
                 }
             }

@@ -3,12 +3,14 @@ package com.naelir.dht;
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import com.naelir.Arguments;
 import com.naelir.bt.Entry;
@@ -55,6 +57,7 @@ public class Data {
     public Queue<ByteBuffer> udpIds;
     public final Arguments arguments;
     public final EntryRepository repo;
+    public Deque<MetaTorrentTask> tcptasks;
 
     public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileDB fm, Arguments arguments) {
         this.udpIds = udpIds;
@@ -69,7 +72,8 @@ public class Data {
         this.tokensReceived = new ConcurrentHashMap<>();
         this.table = new RoutingTable();
 //        this.unresolved = new HashSet<>();
-        this.tasks = new ArrayBlockingQueue<>(5000);
+        this.tasks = new LinkedBlockingQueue<>(5000);
+        this.tcptasks = new LinkedBlockingDeque<>(5000);
         this.remoteClient = new IRemoteClient() {
             @Override
             public void saveMeta(String hash, TorrentMeta meta) {

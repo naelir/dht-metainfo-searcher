@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.concurrent.Semaphore;
 
 import org.apache.logging.log4j.Level;
@@ -57,7 +56,7 @@ public final class DhtApplication implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = new Arguments.Builder().continueFrom("0F5C28F5C28F5C28F5C28F5C28F5C28F5C28F5BF")
+        Arguments arguments = new Arguments.Builder().continueFrom("1999999999999999999999999999999999999992")
                 .bitspaceParts(100)
                 .build();
         logger.info("Starting with {}", arguments);
@@ -119,15 +118,9 @@ public final class DhtApplication implements Runnable {
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
                 client.explore(data.myself, saved);
                 this.semaphore.acquire();
-//                fm.saveUnresolved(data.unresolved);
                 List<Node> nodes = data.table.closest(data.myself, 20);
                 peerFm.saveCompactInfo(data.myself, nodes);
                 logger.info("stopped with {}", Generator.toHex(data.myself.array()));
-                if (this.arguments.onlyHashes) {
-                    Set<String> keySet = data.samples.keySet();
-//                    fm.saveUnresolved(keySet);
-                    logger.info("saved {} hashes", keySet.size());
-                }
             }
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);

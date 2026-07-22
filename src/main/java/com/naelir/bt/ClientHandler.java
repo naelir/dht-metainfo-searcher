@@ -135,9 +135,11 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             logger.info("resolved {}", meta.getName());
             if (this.task.meta() == null) {
                 this.task.setMeta(meta);
-                this.data.fm.saveMeta(this.task.infoHash, meta);
                 this.data.fm.create(new FileRecord(this.task.infoHash, meta.getName(), meta));
-                this.data.repo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
+                boolean fine = this.data.fm.saveMeta(this.task.infoHash, meta);
+                if (fine) {
+                    this.data.repo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
+                }
             }
         } else {
             logger.error("metadata was invalid");

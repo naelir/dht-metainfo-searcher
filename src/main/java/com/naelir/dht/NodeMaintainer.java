@@ -28,15 +28,16 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-            GetPeersTask gpt = new GetPeersTask(client, data);
 //            tasks.offer(new RemoveNoPeersTask(data));
 //            tasks.offer(new PingPeersTask(client, data));
+            GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
-            TorrentResolverTask trt = new TorrentResolverTask(client, data);
+            TorrentResolverTask trt = new TorrentResolverTask(client, data.tasks);
+            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
             tasks.offer(new ITask() {
                 @Override
                 public boolean resolved() {
-                    return gpt.resolved() && trt.resolved();
+                    return gpt.resolved() && trt.resolved() && ttrt.resolved();
                 }
 
                 @Override
@@ -44,9 +45,9 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
                     gpt.run();
                     ct.run();
                     trt.run();
+                    ttrt.run();
                 }
             });
-            tasks.offer(new TcpTorrentResolverTask(tcp, data));
             tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, semaphore);

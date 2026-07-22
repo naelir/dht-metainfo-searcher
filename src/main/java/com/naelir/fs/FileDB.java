@@ -317,9 +317,9 @@ public class FileDB implements AutoCloseable {
         return result;
     }
 
-    public void saveMeta(String hash, TorrentMeta meta) {
+    public boolean saveMeta(String hash, TorrentMeta meta) {
         if (meta == null)
-            return;
+            return false;
         try (
                 BufferedWriter dw = Files.newBufferedWriter(this.done, StandardOpenOption.CREATE,
                         StandardOpenOption.APPEND);
@@ -330,10 +330,12 @@ public class FileDB implements AutoCloseable {
                 dw.append(mapper.writeValueAsString(entry));
                 dw.append(",");
                 dw.newLine();
+                return true;
             }
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
+        return false;
     }
 
     /**
