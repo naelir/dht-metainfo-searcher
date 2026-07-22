@@ -23,6 +23,7 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
+import com.naelir.fs.FileRecord;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -85,7 +86,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
                 TorrentMeta meta = new TorrentMeta("CRAP");
                 this.task.setMeta(meta);
-                this.data.fm.saveMeta(this.task.infoHash, meta);
+                this.data.fm.create(new FileRecord(this.task.infoHash, "CRAP"));
                 logger.error("deny id {}", hr.peerID.substring(0, 3));
                 ctx.close();
             }
@@ -128,13 +129,14 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     void decode(boolean complete, byte[] addr, int port) {
         Optional<BencodedDictionary> decode = complete ? BDecoder.decode(this.metadata)
                 : TorrentMeta.parse(this.metadata);
-        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(task.infoHash, decode);
+        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
             logger.info("resolved {}", meta.getName());
             if (this.task.meta() == null) {
-                this.data.fm.saveMeta(this.task.infoHash, meta);
                 this.task.setMeta(meta);
+                this.data.fm.saveMeta(this.task.infoHash, meta);
+                this.data.fm.create(new FileRecord(this.task.infoHash, meta.getName(), meta));
                 this.data.repo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
             }
         } else {

@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.BtTcpClient;
 import com.naelir.utp.NettyUtpClient;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
@@ -17,7 +18,8 @@ import io.netty.util.concurrent.DefaultThreadFactory;
 public class NodeMaintainer implements Runnable, AutoCloseable {
     public static final Logger logger = LogManager.getLogger(NodeMaintainer.class);
 
-    public static NodeMaintainer of(Data data, NettyUtpClient client, Semaphore semaphore) throws Exception {
+    public static NodeMaintainer of(Data data, NettyUtpClient client, BtTcpClient tcp, Semaphore semaphore)
+            throws Exception {
         Queue<ITask> tasks = new LinkedList<>();
         if (data.arguments.onlyHashes) {
             tasks.offer(new FindNodeTask(client, data));
@@ -26,11 +28,25 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new GetPeersTask(client, data));
-            tasks.offer(new RemoveNoPeersTask(data));
+            GetPeersTask gpt = new GetPeersTask(client, data);
+//            tasks.offer(new RemoveNoPeersTask(data));
 //            tasks.offer(new PingPeersTask(client, data));
-            tasks.offer(new CreateMetaTask(data));
-            tasks.offer(new TorrentResolverTask(client, data));
+            CreateMetaTask ct = new CreateMetaTask(data);
+            TorrentResolverTask trt = new TorrentResolverTask(client, data);
+            tasks.offer(new ITask() {
+                @Override
+                public boolean resolved() {
+                    return gpt.resolved() && trt.resolved();
+                }
+
+                @Override
+                public void run() {
+                    gpt.run();
+                    ct.run();
+                    trt.run();
+                }
+            });
+            tasks.offer(new TcpTorrentResolverTask(tcp, data));
             tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, semaphore);

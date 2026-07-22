@@ -10,6 +10,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import com.naelir.dht.Node;
 
 public class Torrent {
+    public static final Torrent EMPTY = new Torrent("0");
+
     public static Torrent empty(String hash) {
         Torrent name = new Torrent(hash);
         name.meta = new TorrentMeta(hash);

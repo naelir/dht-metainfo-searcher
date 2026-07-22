@@ -5,16 +5,27 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.naelir.bt.Entry;
+import com.naelir.bt.NameFilter;
+import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
+import com.naelir.bt.TorrentMeta.Genre;
 
 /**
  * Simple file-backed CRUD store.
@@ -30,11 +41,13 @@ import com.naelir.bt.TorrentMeta;
  * {@code id} column is the unique key.
  */
 public class FileDB implements AutoCloseable {
+    public static final Logger logger = LogManager.getLogger(FileDB.class);
     private static final String SEP = "#";
     private static final String HEX_CHARS = "0123456789abcdef";
     private static final ObjectMapper MAPPER = new ObjectMapper();
     /** Base directory: ~/filedb/ */
     private static final Path BASE_DIR = Path.of(System.getProperty("user.home")).resolve("filedb");
+    private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
 
     /** Escapes newlines and the separator character inside field values. */
     private static String escape(String value) {
@@ -50,8 +63,14 @@ public class FileDB implements AutoCloseable {
             return null;
         String id = unescape(line.substring(0, sep1));
         String name = unescape(line.substring(sep1 + 1, sep2));
-        TorrentMeta meta = MAPPER.readValue(line.substring(sep2 + 1), TorrentMeta.class);
-        return new FileRecord(id, name, meta);
+//        TorrentMeta meta = MAPPER.readValue(line.substring(sep2 + 1), TorrentMeta.class);
+        return new FileRecord(id, name, null);
+    }
+
+    public static void main(String[] args) throws IOException {
+        FileDB of = FileDB.of();
+        Optional<FileRecord> optional = of.get("0C7251C5DDC4324547A0397D56123BCB2E4EF549");
+        System.out.println("here");
     }
 
     public static FileDB of() throws IOException {
@@ -64,7 +83,9 @@ public class FileDB implements AutoCloseable {
             }
             writers.put(shard, Files.newBufferedWriter(shard, java.nio.file.StandardOpenOption.APPEND));
         }
-        return new FileDB(writers);
+        Files.createDirectories(HOME);
+        Path done = HOME.resolve("done.".concat(RandomStringUtils.randomAlphabetic(5)));
+        return new FileDB(writers, done);
     }
 
     /** Returns the shard file for the given hex character (0-f). */
@@ -90,7 +111,7 @@ public class FileDB implements AutoCloseable {
     // -------------------------------------------------------------------------
 
     private static String toLine(FileRecord record) throws IOException {
-        String metaJson = MAPPER.writeValueAsString(record.getMeta());
+        String metaJson = record.getMeta() != null ? MAPPER.writeValueAsString(record.getMeta()) : "";
         return escape(record.getId()) + SEP + escape(record.getName()) + SEP + metaJson;
     }
 
@@ -136,9 +157,11 @@ public class FileDB implements AutoCloseable {
     // -------------------------------------------------------------------------
 
     private Map<Path, BufferedWriter> writers;
+    private Path done;
 
-    private FileDB(Map<Path, BufferedWriter> writers) {
+    private FileDB(Map<Path, BufferedWriter> writers, Path done) {
         this.writers = writers;//
+        this.done = done;
     }
     // -------------------------------------------------------------------------
     // helpers
@@ -156,18 +179,22 @@ public class FileDB implements AutoCloseable {
      *
      * @throws IllegalArgumentException if a record with the same id already exists
      */
-    public void create(FileRecord record) throws IOException {
-        Optional<FileRecord> existing = get(record.getId());
-        if (existing.isPresent()) {
-            if (FileRecord.DEFAULT_NAME.equals(existing.get().getName())) {
-                update(record);
+    public void create(FileRecord record) {
+        try {
+            Optional<FileRecord> existing = get(record.getId());
+            if (existing.isPresent()) {
+                if (FileRecord.DEFAULT_NAME.equals(existing.get().getName())) {
+                    update(record);
+                }
+                return;
             }
-            return;
+            Path shard = shardPathForId(record.getId());
+            BufferedWriter writer = this.writers.get(shard);
+            writer.write(toLine(record));
+            writer.newLine();
+        } catch (Exception e) {
+            logger.error("cannot save", e);
         }
-        Path shard = shardPathForId(record.getId());
-        BufferedWriter writer = this.writers.get(shard);
-        writer.write(toLine(record));
-        writer.newLine();
     }
 
     public void create(Set<FileRecord> records) throws IOException {
@@ -202,14 +229,17 @@ public class FileDB implements AutoCloseable {
      */
     public Optional<FileRecord> get(String id) throws IOException {
         Path shard = shardPathForId(id);
+        int i = 0;
         try (
                 BufferedReader reader = Files.newBufferedReader(shard)
         ) {
             String line;
             while ((line = reader.readLine()) != null) {
+                i++;
                 if (line.isBlank()) {
                     continue;
                 }
+//                System.out.println(i);
                 FileRecord record = fromLine(line);
                 if (record != null && record.getId().equals(id))
                     return Optional.of(record);
@@ -242,6 +272,32 @@ public class FileDB implements AutoCloseable {
         return result;
     }
 
+    public void metaToEntry(String path) {
+        Set<Entry> list = new HashSet<>();
+        String random = RandomStringUtils.randomAlphabetic(10);
+        Path to = HOME.resolve(random);
+        Path from = HOME.resolve(path);
+        try (
+                BufferedReader reader = Files.newBufferedReader(from);
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND)
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] split = line.split("#");
+                if ("FINE".equals(split[1])) {
+                    Torrent torrent = new Torrent(split[0]);
+                    TorrentMeta value = mapper.readValue(split[2], TorrentMeta.class);
+                    list.add(TorrentMeta.toEntry(torrent.infoHash(), value));
+                }
+            }
+            writer.write(mapper.writeValueAsString(list));
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+
     private List<FileRecord> readShard(Path shard) throws IOException {
         List<FileRecord> result = new ArrayList<>();
         try (
@@ -259,6 +315,25 @@ public class FileDB implements AutoCloseable {
             }
         }
         return result;
+    }
+
+    public void saveMeta(String hash, TorrentMeta meta) {
+        if (meta == null)
+            return;
+        try (
+                BufferedWriter dw = Files.newBufferedWriter(this.done, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            if (NameFilter.match(meta) && meta.getGenre().equals(Genre.XXX) == false) {
+                Entry entry = TorrentMeta.toEntry(hash, meta);
+                dw.append(mapper.writeValueAsString(entry));
+                dw.append(",");
+                dw.newLine();
+            }
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
     }
 
     /**

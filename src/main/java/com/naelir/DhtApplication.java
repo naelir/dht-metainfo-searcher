@@ -20,13 +20,16 @@ import org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder;
 import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
+import com.naelir.bt.BtTcpClient;
+import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.NodeMaintainer;
 import com.naelir.dht.OnDataListener;
 import com.naelir.dht.SavedCompactInfo;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
+import com.naelir.fs.FileRecord;
 import com.naelir.fs.SavedCompactInfoFileManager;
 import com.naelir.utp.NettyUtpClient;
 import com.naelir.utp.UTPManager;
@@ -54,7 +57,9 @@ public final class DhtApplication implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = Arguments.parse(args);//
+        Arguments arguments = new Arguments.Builder().continueFrom("0F5C28F5C28F5C28F5C28F5C28F5C28F5C28F5BF")
+                .bitspaceParts(100)
+                .build();
         logger.info("Starting with {}", arguments);
         var application = new DhtApplication(arguments);
         new Thread(application, "dht-metainfo").start();
@@ -95,16 +100,19 @@ public final class DhtApplication implements Runnable {
                     : BigInteger.ZERO;
             Queue<ByteBuffer> divide = divide(from);
             String tcpmyself = Generator.generatePeerID();
-            FileManager fm = FileManager.of();
+            FileDB fm = FileDB.of();
+            List<FileRecord> all = fm.getAll().stream().filter(e -> "NO_PEERS".equals(e.getName()) == false).toList();
             SavedCompactInfoFileManager peerFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peerFm.readCompactInfo();
             Data data = new Data(divide, tcpmyself, fm, this.arguments);
+            all.forEach(e -> data.torrents.put(e.getId(), Torrent.EMPTY));
             UTPManager manager = new UTPManager();
             UtpDataListener utp = new UtpDataListener(manager);
             OnDataListener udp = new OnDataListener(data);
             try (
                     NettyUtpClient client = new NettyUtpClient(utp, udp, data);
-                    NodeMaintainer keeper = NodeMaintainer.of(data, client, this.semaphore)
+                    BtTcpClient tcp = new BtTcpClient(data);
+                    NodeMaintainer keeper = NodeMaintainer.of(data, client, tcp, this.semaphore)
             ) {
                 client.start();
                 keeper.start();
@@ -117,7 +125,7 @@ public final class DhtApplication implements Runnable {
                 logger.info("stopped with {}", Generator.toHex(data.myself.array()));
                 if (this.arguments.onlyHashes) {
                     Set<String> keySet = data.samples.keySet();
-                    fm.saveUnresolved(keySet);
+//                    fm.saveUnresolved(keySet);
                     logger.info("saved {} hashes", keySet.size());
                 }
             }

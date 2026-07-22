@@ -16,7 +16,7 @@ import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
 import com.naelir.db.EntryRepository;
 import com.naelir.db.MongoEntryRepository;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
 import com.naelir.http.IRemoteClient;
 
 public class Data {
@@ -50,16 +50,16 @@ public class Data {
     Map<ByteBuffer, Node> tokensSent;
     Map<ByteBuffer, Node> tokensReceived;
     String tcpmyself;
-    public FileManager fm;
+    public FileDB fm;
     public IRemoteClient remoteClient;
     public Queue<ByteBuffer> udpIds;
     public final Arguments arguments;
     public final EntryRepository repo;
 
-    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileManager fm, Arguments arguments) {
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileDB fm, Arguments arguments) {
         this.udpIds = udpIds;
-        this.repo = getRepo();
         this.arguments = arguments;
+        this.repo = getRepo();
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
         this.sent = new ConcurrentHashMap<>();
@@ -79,61 +79,59 @@ public class Data {
         this.fm = fm;
     }
 
+    EntryRepository getRepo() {
+        return this.arguments.connectionString != null
+                ? new MongoEntryRepository(this.arguments.connectionString, this.arguments.db, this.arguments.table)
+                : new EntryRepository() {
+                    @Override
+                    public long count() {
+                        // TODO Auto-generated method stub
+                        return 0;
+                    }
+
+                    @Override
+                    public List<Entry> findAll(int page, int pageSize) {
+                        // TODO Auto-generated method stub
+                        return null;
+                    }
+
+                    @Override
+                    public Entry findByHash(String hash) {
+                        // TODO Auto-generated method stub
+                        return null;
+                    }
+
+                    @Override
+                    public List<Entry> findByName(String pattern) {
+                        // TODO Auto-generated method stub
+                        return null;
+                    }
+
+                    @Override
+                    public Entry insert(Entry entry) {
+                        // TODO Auto-generated method stub
+                        return null;
+                    }
+
+                    @Override
+                    public boolean remove(String hash) {
+                        // TODO Auto-generated method stub
+                        return false;
+                    }
+
+                    @Override
+                    public boolean update(Entry entry) {
+                        // TODO Auto-generated method stub
+                        return false;
+                    }
+                };
+    }
+
     public String getTcpmyself() {
         return this.tcpmyself;
     }
 
     public void nextId() {
         this.myself = this.udpIds.poll();
-    }
-    
-
-
-    EntryRepository getRepo() {
-        return arguments.connectionString != null ? new MongoEntryRepository(arguments.connectionString, arguments.db, arguments.table) : new EntryRepository() {
-
-            @Override
-            public List<Entry> findAll(int page, int pageSize) {
-                // TODO Auto-generated method stub
-                return null;
-            }
-
-            @Override
-            public long count() {
-                // TODO Auto-generated method stub
-                return 0;
-            }
-
-            @Override
-            public Entry findByHash(String hash) {
-                // TODO Auto-generated method stub
-                return null;
-            }
-
-            @Override
-            public List<Entry> findByName(String pattern) {
-                // TODO Auto-generated method stub
-                return null;
-            }
-
-            @Override
-            public Entry insert(Entry entry) {
-                // TODO Auto-generated method stub
-                return null;
-            }
-
-            @Override
-            public boolean update(Entry entry) {
-                // TODO Auto-generated method stub
-                return false;
-            }
-
-            @Override
-            public boolean remove(String hash) {
-                // TODO Auto-generated method stub
-                return false;
-            }
-           
-        };
     }
 }

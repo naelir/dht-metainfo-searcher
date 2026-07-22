@@ -17,7 +17,7 @@ import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.UdpClient;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
 
 public class Main {
     public static final Logger logger = LogManager.getLogger(Main.class);
@@ -29,7 +29,7 @@ public class Main {
         String tcpmyself = Generator.generatePeerID();
         int serverPort = 6888;
         String tmp = Generator.toHex(udpmyself.array()).concat(".tmp");
-        FileManager fm = FileManager.of();
+        FileDB fm = FileDB.of();
         Queue<ByteBuffer> udp = new LinkedList<>();
         udp.add(udpmyself);
         Data data = new Data(udp, tcpmyself, fm, Arguments.parse(args));
@@ -85,8 +85,8 @@ public class Main {
 //            data.torrents.put(torrent.infoHash(), torrent);
 //            Torrent torrent = new Torrent(tt);
 //            MetaTorrentTask task = new MetaTorrentTask(node, torrent);
-            BtTcpClient btTcpClient = new BtTcpClient(torrent, node, data);
-            btTcpClient.connect();
+            BtTcpClient btTcpClient = new BtTcpClient(data);
+            btTcpClient.connect(torrent, node);
 //            client.explore();
             Scanner scanner = new Scanner(System.in);
             scanner.nextLine();

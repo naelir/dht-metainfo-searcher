@@ -1,6 +1,7 @@
 package com.naelir.dht;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +10,6 @@ import com.naelir.utp.NettyUtpClient;
 
 public class FindSampleInfohashesTask implements ITask {
     public static final Logger logger = LogManager.getLogger(FindSampleInfohashesTask.class);
-
     private Data data;
     private NettyUtpClient client;
 
@@ -17,7 +17,23 @@ public class FindSampleInfohashesTask implements ITask {
         this.client = client;
         this.data = data;
     }
-    
+
+    @Override
+    public boolean resolved() {
+        boolean allMatch = this.data.table.nodes().stream().allMatch(e -> e.have(Command.SAMPLE));
+        if (allMatch) {
+            List<Node> delete = this.data.table.nodes()
+                    .stream()
+                    .filter(e -> e.have(Command.SAMPLE_R) == false)
+                    .toList();
+            delete.forEach(e -> this.data.table.remove(e.id));
+        } else {
+            List<Node> list = this.data.table.nodes().stream().filter(e -> e.have(Command.SAMPLE) == false).toList();
+            logger.info("nodes to check for samples: {}", list.size());
+        }
+        return allMatch;
+    }
+
     @Override
     public void run() {
         try {
@@ -35,10 +51,5 @@ public class FindSampleInfohashesTask implements ITask {
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
-    }
-    
-    @Override
-    public boolean resolved() {
-        return this.data.samples.size() > data.arguments.maxSamples;
     }
 }

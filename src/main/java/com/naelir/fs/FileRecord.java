@@ -9,7 +9,6 @@ import com.naelir.bt.TorrentMeta;
  */
 public class FileRecord {
     /** String value matching {@link com.naelir.bt.TorrentMeta#EMPTY}. */
-    private static final TorrentMeta DEFAULT_META = new TorrentMeta("0000000000000000000000000000000000000000");
     static final String DEFAULT_NAME = "NAME";
     private final String id;
     private String name;
@@ -20,7 +19,7 @@ public class FileRecord {
      * {@code "EMPTY"}.
      */
     public FileRecord(String id) {
-        this(id, DEFAULT_NAME, DEFAULT_META);
+        this(id, DEFAULT_NAME);
     }
 
     /**
@@ -28,14 +27,14 @@ public class FileRecord {
      * {@link com.naelir.bt.TorrentMeta#EMPTY}).
      */
     public FileRecord(String id, String name) {
-        this(id, name, DEFAULT_META);
+        this(id, name, null);
     }
 
     /** Full constructor. */
     public FileRecord(String id, String name, TorrentMeta meta) {
         this.id = Objects.requireNonNull(id, "id must not be null");
         this.name = Objects.requireNonNull(name, "name must not be null");
-        this.meta = Objects.requireNonNull(meta, "meta must not be null");
+        this.meta = meta;
     }
 
     @Override

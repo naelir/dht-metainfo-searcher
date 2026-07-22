@@ -11,7 +11,7 @@ import com.naelir.utp.NettyUtpClient;
 
 public class GetPeersTask implements ITask {
     private static final int QUERY_MAX_NODES = 2;
-    private static final int SAMPLE_QUERY_COUNT = 4;
+    private static final int SAMPLE_QUERY_COUNT = 2;
     public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
     private Data data;
     private NettyUtpClient client;
@@ -27,9 +27,9 @@ public class GetPeersTask implements ITask {
         if (sample.checked == 0)
             return List.of(sample.from);
         else if (sample.checked == 1)
-            return this.data.table.closest(wrap, 8);
-        else if (sample.checked > 1)
-            return sample.table.closest(wrap, 8);
+            return this.data.table.closest(wrap, 4);
+//        else if (sample.checked > 1)
+//            return sample.table.closest(wrap, 8);
         else
             return Collections.emptyList();
     }
@@ -64,9 +64,12 @@ public class GetPeersTask implements ITask {
                         continue;
                     }
                     List<Node> closest = closest(sample, wrap);
-                    List<Node> sublist = sublist(closest, 2);
-                    logger.info("sample {} sending get peers to {}", sample.torrent.infoHash(), sublist);
-                    for (Node node : sublist) {
+                    if (closest.isEmpty()) {
+                        continue;
+                    }
+//                    List<Node> sublist = sublist(closest, 2);
+                    logger.info("sample {} sending get peers to {}", sample.torrent.infoHash(), closest.size());
+                    for (Node node : closest) {
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                         i++;

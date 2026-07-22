@@ -27,19 +27,19 @@ import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.DefaultThreadFactory;
 
-public class BtTcpClient {
+public class BtTcpClient implements AutoCloseable {
     public static final Logger logger = LogManager.getLogger(BtTcpClient.class);
     private Data data;
-    private Torrent torrent;
-    private Node node;
 
-    public BtTcpClient(Torrent torrent, Node node, Data data) {
-        this.torrent = torrent;
-        this.node = node;
+    public BtTcpClient(Data data) {
         this.data = data;
     }
 
-    public void connect() throws InterruptedException, UnknownHostException {
+    @Override
+    public void close() throws Exception {//
+    }
+
+    public void connect(Torrent torrent, Node node) throws InterruptedException, UnknownHostException {
         var group = new MultiThreadIoEventLoopGroup(1, new DefaultThreadFactory("bt"), NioIoHandler.newFactory());
         try {
             Bootstrap bootstrap = new Bootstrap();
@@ -48,21 +48,20 @@ public class BtTcpClient {
                     .option(ChannelOption.SO_KEEPALIVE, false)
                     .option(ChannelOption.SO_RCVBUF, 4096)
                     .option(ChannelOption.SO_SNDBUF, 4096)
-                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 1000)
-                    .handler(new ChannelHandler(this.torrent, this.data))
-                    .connect(this.node.address(), this.node.port());
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 500)
+                    .handler(new ChannelHandler(torrent, this.data))
+                    .connect(node.address(), node.port());
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
-
-            InetAddress address = this.node.address();
+            InetAddress address = node.address();
             String country = IpRangeFilter.getCountry(address.getAddress());
             if (!connectFuture.isSuccess()) {
                 // connection refused, timed-out, etc. — no channel to close
-                logger.warn("Connection to {} {}:{} failed: {}", country, this.node.address(), this.node.port(),
+                logger.warn("Connection to {} {}:{} failed: {}", country, node.address(), node.port(),
                         connectFuture.cause().getMessage());
                 return;
             } else {
-                logger.warn("Connection to {} {}:{} succeeded", country, this.node.address(), this.node.port());
+                logger.warn("Connection to {} {}:{} succeeded", country, node.address(), node.port());
             }
             // blocks until channel is closed: either RawTorrentMetadata received,
             // error in ClientHandler, or IdleStateHandler fires after 1s of silence

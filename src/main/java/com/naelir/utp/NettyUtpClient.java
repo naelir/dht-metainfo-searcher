@@ -33,7 +33,7 @@ import com.naelir.dht.OnDataListener;
 import com.naelir.dht.PingRequest;
 import com.naelir.dht.SampleInfoHashesRequest;
 import com.naelir.dht.Token;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
 import com.naelir.tracker.ConnectRequest;
 import com.naelir.tracker.TrackerOnDataListener;
 
@@ -114,7 +114,7 @@ public class NettyUtpClient implements AutoCloseable {
         String peerId = Generator.generatePeerID();
         Queue<ByteBuffer> udpIds = new LinkedList<>();
         udpIds.add(udpId);
-        Data data = new Data(udpIds, peerId, FileManager.of(), Arguments.parse(args));
+        Data data = new Data(udpIds, peerId, FileDB.of(), Arguments.parse(args));
         UTPManager manager = new UTPManager();
         UtpDataListener utp = new UtpDataListener(manager);
         OnDataListener udp = new OnDataListener(data);
@@ -122,7 +122,7 @@ public class NettyUtpClient implements AutoCloseable {
                 NettyUtpClient client = new NettyUtpClient(utp, udp, data)
         ) {
             client.start();
-            //tracker.tryhackx.org
+            // tracker.tryhackx.org
             String infoHash = "fc43a8dbe2c723ffd857d13f4cd513a93f251c2e";
             InetAddress addr = InetAddress.getByName("tracker.opentrackr.org");
             client.connectTracker(new Torrent(infoHash), addr, port);
@@ -188,8 +188,12 @@ public class NettyUtpClient implements AutoCloseable {
             writeUdp(syn, addr, port);
         }
     }
-    
-    
+
+    public void connectPeer(Torrent torrent, Node node) throws Exception {
+        connectPeer(torrent, node.address(), node.port());
+    }
+    // ── Inbound handler ───────────────────────────────────────────────────────
+
     public void connectTracker(Torrent torrent, InetAddress addr, int port) throws Exception {
         int tid = new Random().nextInt();
         ConnectRequest connectRequest = new ConnectRequest(tid & 0x7FFFFFFF); // Ensure positive transaction ID
@@ -197,11 +201,6 @@ public class NettyUtpClient implements AutoCloseable {
         writeUdp(encode, addr, port);
     }
     // ── uTP packet detection ──────────────────────────────────────────────────
-
-    public void connectPeer(Torrent torrent, Node node) throws Exception {
-        connectPeer(torrent, node.address(), node.port());
-    }
-    // ── Inbound handler ───────────────────────────────────────────────────────
 
     private List<Node> contactPoints() throws UnknownHostException {
 //      byte[] byName1 = InetAddress.getByName("router.bittorrent.com").getAddress();
@@ -321,7 +320,7 @@ public class NettyUtpClient implements AutoCloseable {
      * Netty channel.
      */
     private void writeUdp(byte[] data, InetAddress addr, int port) {
-        if (channel == null || !channel.isActive()) {
+        if (this.channel == null || !this.channel.isActive()) {
             // Channel is gone (remote side dropped the connection). Do NOT allocate
             // a ByteBuf that nobody will release — just drop the packet with a warning.
             logger.warn("writeUdp: channel not active, dropping {} byte(s) to {}:{}", data.length, addr, port);
@@ -329,7 +328,7 @@ public class NettyUtpClient implements AutoCloseable {
         }
         ByteBuf buf = Unpooled.wrappedBuffer(data);
         DatagramPacket pkt = new DatagramPacket(buf, new InetSocketAddress(addr, port));
-        channel.writeAndFlush(pkt).addListener((ChannelFuture f) -> {
+        this.channel.writeAndFlush(pkt).addListener((ChannelFuture f) -> {
             if (!f.isSuccess()) {
                 // Netty releases the DatagramPacket (and its ByteBuf) through the pipeline
                 // on failure, but if the channel closed between the isActive() guard and

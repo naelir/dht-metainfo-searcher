@@ -104,7 +104,7 @@ public class ResponseResolver {
 
     private FindNodeResponse resolve(FindNodeRequest message, From from) {
         List<Node> nodes = this.data.table.closest(message.target);
-        logger.info("find node to {} resolved, found {} close nodes", Generator.toHex(message.target.array()),
+        logger.info("find node from {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
                 nodes.size());
         return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
     }
@@ -115,7 +115,7 @@ public class ResponseResolver {
             if (IpRangeFilter.isAllowed(node.ip) || this.data.table.size() < 10) {
                 this.data.table.insert(node);
             } else {
-                logger.info("{} denied", node);
+                logger.debug("{} denied", node);
             }
         }
         return Optional.empty();
@@ -148,16 +148,16 @@ public class ResponseResolver {
             if (sample != null) {
                 int denied = 0;
                 for (Node node : decode.peers) {
-//                    if (IpRangeFilter.isDenied(node.ip) == false) {
-                    sample.addPeer(node);
-//                    } else {
-//                        denied++;
-//                    }
+                    if (IpRangeFilter.isDenied(node.ip) == false) {
+                        sample.addPeer(node);
+                    } else {
+                        denied++;
+                    }
                 }
                 int size = decode.peers.size();
-//                if (size > 0 && denied * 100 / size >= 75) {
-//                    sample.isCrap = true;
-//                }
+                if (size > 0 && denied * 100 / size >= 75) {
+                    sample.isCrap = true;
+                }
                 logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
                     if (IpRangeFilter.isDenied(node.ip) == false) {
@@ -256,9 +256,9 @@ public class ResponseResolver {
             }
             logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
             decode.request.node.put(Command.SAMPLE_R);
-            for (Node node : decode.nodes) {
-                this.data.table.insert(node);
-            }
+//            for (Node node : decode.nodes) {
+//                this.data.table.insert(node);
+//            }
         }
     }
 }
