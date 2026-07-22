@@ -2,21 +2,21 @@ package com.naelir.dht;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
-import java.util.ArrayDeque;
 import java.util.Collections;
-import java.util.Deque;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.naelir.Arguments;
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
+import com.naelir.db.EntryRepository;
+import com.naelir.db.MongoEntryRepository;
+import com.naelir.fs.FileManager;
 import com.naelir.http.IRemoteClient;
 
 public class Data {
@@ -41,69 +41,99 @@ public class Data {
     }
 
     public RoutingTable table;
-    Map<ByteBuffer, IRequest> sent;
+    public Map<ByteBuffer, IRequest> sent;
     public Map<String, Torrent> torrents;
-    public Set<String> unresolved;
-    public Deque<SampleInfoHashesResponse> samples;
+//    public Set<String> unresolved;
+    public Map<String, Sample> samples;
     public Queue<MetaTorrentTask> tasks;
-    public List<PingPeersTorrentTask> pingTasks;
     public ByteBuffer myself;
     Map<ByteBuffer, Node> tokensSent;
     Map<ByteBuffer, Node> tokensReceived;
     String tcpmyself;
     public FileManager fm;
-    public Set<InetAddress> denied;
-    public QueryStats queryStats;
     public IRemoteClient remoteClient;
-    public final int maxNodes;
+    public Queue<ByteBuffer> udpIds;
+    public final Arguments arguments;
+    public final EntryRepository repo;
 
-    public Data(ByteBuffer myself, String tcpmyself, FileManager fm, int maxNodes) {
-        this.myself = myself;
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileManager fm, Arguments arguments) {
+        this.udpIds = udpIds;
+        this.repo = getRepo();
+        this.arguments = arguments;
+        this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
-        this.maxNodes = maxNodes;
-        this.queryStats = new QueryStats();
         this.sent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
-        this.samples = new ArrayDeque<>(500);
+        this.samples = new ConcurrentHashMap<>();
         this.tokensSent = new ConcurrentHashMap<>();
         this.tokensReceived = new ConcurrentHashMap<>();
         this.table = new RoutingTable();
-        this.unresolved = new HashSet<>();
-        this.denied = new HashSet<>();
+//        this.unresolved = new HashSet<>();
         this.tasks = new ArrayBlockingQueue<>(5000);
-        this.pingTasks = new CopyOnWriteArrayList<PingPeersTorrentTask>();
-        this.remoteClient =
-                new IRemoteClient() {
-            
+        this.remoteClient = new IRemoteClient() {
             @Override
             public void saveMeta(String hash, TorrentMeta meta) {
                 // TODO Auto-generated method stub
-                
             }
         };
-//         new RemoteClient(RemoteClient.REMOTE_URL);
-//        this.tasks = new PriorityQueue<>(5000, new Comparator<ResolveTorrentTask>() {
-//            @Override
-//            public int compare(ResolveTorrentTask o1, ResolveTorrentTask o2) {
-//                return Integer.compare(o1.torrent.peers().size(), o2.torrent.peers().size());
-//            }
-//        }) {
-//            private static final long serialVersionUID = 8689824993615653687L;
-//
-//            @Override
-//            public synchronized boolean offer(ResolveTorrentTask e) {
-//                return super.offer(e);
-//            }
-//
-//            @Override
-//            public synchronized ResolveTorrentTask poll() {
-//                return super.poll();
-//            }
-//        };
         this.fm = fm;
     }
 
     public String getTcpmyself() {
         return this.tcpmyself;
+    }
+
+    public void nextId() {
+        this.myself = this.udpIds.poll();
+    }
+    
+
+
+    EntryRepository getRepo() {
+        return arguments.connectionString != null ? new MongoEntryRepository(arguments.connectionString, arguments.db, arguments.table) : new EntryRepository() {
+
+            @Override
+            public List<Entry> findAll(int page, int pageSize) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public long count() {
+                // TODO Auto-generated method stub
+                return 0;
+            }
+
+            @Override
+            public Entry findByHash(String hash) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public List<Entry> findByName(String pattern) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public Entry insert(Entry entry) {
+                // TODO Auto-generated method stub
+                return null;
+            }
+
+            @Override
+            public boolean update(Entry entry) {
+                // TODO Auto-generated method stub
+                return false;
+            }
+
+            @Override
+            public boolean remove(String hash) {
+                // TODO Auto-generated method stub
+                return false;
+            }
+           
+        };
     }
 }

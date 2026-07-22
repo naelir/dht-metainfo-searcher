@@ -2,6 +2,7 @@ package com.naelir.http;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -10,11 +11,13 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
-import java.util.HashMap;
+import java.util.Base64;
+import java.util.List;
 import java.util.Map;
 
 import javax.net.ssl.SSLContext;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -28,10 +31,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Configurator;
 
 /**
  * HTTPS client backed by Apache HttpComponents 4.5.14.
@@ -97,30 +98,60 @@ public class HttpsClient implements AutoCloseable {
 //            e.printStackTrace();
 //        }
 //    }
+    // https://zamunda.rip/api/torrents?q=&bg_audio=true&bg_movies=false&bg_arena=false&zelka=false&offset=80
+
+    static String createBasicAuthHeader(String username, String password) {
+        String credentials = username + ":" + password;
+        String encoded = Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
+        return "Basic " + encoded;
+    }
+//
+//    public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
+//        List<String> list = List.of(
+////                "https://www.limetorrents.fun/browse-torrents/Movies/date/"//,
+////                "https://www.limetorrents.fun/browse-torrents/TV-shows/date/"//,
+//                "https://www.limetorrents.fun/browse-torrents/Games/date/"
+//                );
+//        Path path = Paths.get(System.getProperty("user.home")).resolve(RandomStringUtils.randomAlphanumeric(10));
+//        try (
+//                HttpsClient name = new HttpsClient();
+//                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
+//                        StandardOpenOption.APPEND)
+//        ) {
+//            for (String string : list) {
+//                for (int i = 380; i < 1000; i++) {
+//                    String body = name.get(string.concat(Integer.toString(i)));
+//                    bufferedWriter.append(body);
+//                    bufferedWriter.newLine();
+//                    bufferedWriter.flush();
+//                    Thread.sleep(1000);
+//                    System.out.println(i);
+//                }
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
-        Configurator.setRootLevel(Level.DEBUG);
-        String[] headers = new String[] { "Accept-language", "\"en-US,en;q=0.9\"", "Priority", "u=0, i", "Sec-Ch-Ua",
-                "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"", "Sec-Ch-Ua-Mobile",
-                "\"?0\"", "Sec-Ch-Ua-Platform", "\"Windows\"", "Sec-Fetch-Dest", "document", "Sec-Fetch-Mode",
-                "navigate", "Sec-Fetch-Site", "none", "Sec-Fetch-User", "?1", "Upgrade-Insecure-Requests", "1",
-                "Accept-Encoding", "gzip, deflate, br, zstd", "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36" };
-        Map<String, String> map = new HashMap<>();
-        for (int i = 0; i < headers.length; i = i + 2) {
-            map.put(headers[i], headers[i + 1]);
-        }
-        Path path = Paths.get(System.getProperty("user.home")).resolve("btdigg.mcome");
+        List<String> list = List.of(
+                "https://zamunda.rip/api/torrents?q=&bg_audio=true&bg_movies=false&bg_arena=false&zelka=false&offset=");
+        Path path = Paths.get(System.getProperty("user.home")).resolve(RandomStringUtils.randomAlphanumeric(10));
         try (
                 HttpsClient name = new HttpsClient();
                 BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
                         StandardOpenOption.APPEND)
         ) {
-            String body = name.get("https://btdig.com/67b06ba9c4e0318ab524a51cfebd9b5676b1d578", map);
-            bufferedWriter.append(body);
-            bufferedWriter.newLine();
+            for (String string : list) {
+                for (int i = 0; i < 450000; i = i + 20) {
+                    String body = name.get(string.concat(Integer.toString(i)));
+                    bufferedWriter.append(body);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                    Thread.sleep(1000);
+                    System.out.println(i);
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -130,6 +161,8 @@ public class HttpsClient implements AutoCloseable {
     // -------------------------------------------------------------------------
     // Public API
     // -------------------------------------------------------------------------
+    private String user;
+    private String password;
 
     /**
      * Creates an HttpsClient that trusts <b>all</b> server certificates.
@@ -172,6 +205,12 @@ public class HttpsClient implements AutoCloseable {
     @Override
     public void close() throws IOException {
         this.mHttpClient.close();
+    }
+
+    public HttpsClient credentials(String user, String password) {
+        this.user = user;
+        this.password = password;
+        return this;
     }
 
     /**
@@ -227,6 +266,7 @@ public class HttpsClient implements AutoCloseable {
         if (headers != null) {
             headers.forEach(request::addHeader);
         }
+//        request.addHeader("Authentication", createBasicAuthHeader(this.user, this.password));
         LOG.debug("Sending GET request to: {}", url);
         Header[] allHeaders = request.getAllHeaders();
         for (Header header : allHeaders) {
@@ -276,6 +316,7 @@ public class HttpsClient implements AutoCloseable {
         if (headers != null) {
             headers.forEach(request::addHeader);
         }
+        request.addHeader("Authentication", createBasicAuthHeader(this.user, this.password));
         if (requestBody != null) {
             try {
                 StringEntity entity = new StringEntity(requestBody, DEFAULT_CHARSET);

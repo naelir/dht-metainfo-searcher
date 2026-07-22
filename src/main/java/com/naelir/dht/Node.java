@@ -4,9 +4,9 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
-import java.util.Map;
+import java.util.LinkedList;
 import java.util.Objects;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.logging.log4j.LogManager;
@@ -14,9 +14,8 @@ import org.apache.logging.log4j.Logger;
 
 public class Node {
     public static final Logger logger = LogManager.getLogger(Node.class);
-
     private static final AtomicInteger COUNTER = new AtomicInteger();
-    
+
     public static Node of(ByteBuffer compactInfo, int ipLength) {
         byte[] rawId = new byte[20];
         compactInfo.get(rawId);
@@ -33,9 +32,8 @@ public class Node {
     byte[] ip;
     int port;
     ByteBuffer id;
-    public Map<Command, Query> queryMap;
-
     private int c;
+    public Queue<Command> queries;
 
     public Node(byte[] ip, int port) {
         this(ip, port, Generator.generateRandomID());
@@ -46,44 +44,20 @@ public class Node {
         this.port = port;
         this.id = id;
         this.tid = 1;
-        this.queryMap = new ConcurrentHashMap<>();
         this.c = COUNTER.incrementAndGet();
+        this.queries = new LinkedList<>();
     }
 
+    public byte[] ip() {
+        return ip;
+    }
+    
     public InetAddress address() {
         try {
             return InetAddress.getByAddress(this.ip);
         } catch (UnknownHostException e) {
             return null;
         }
-    }
-    
-    public int getCounter() {
-        return c;
-    }
-
-    public int nextId() {
-        return this.tid++;
-    }
-
-    public int port() {
-        return this.port;
-    }
-
-    @Override
-    public String toString() {
-        return "Node [id=" + c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port + ", queryMap=" + this.queryMap
-                + "]";
-    }
-    
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + Arrays.hashCode(ip);
-        result = prime * result + Objects.hash(port);
-        return result;
     }
 
     @Override
@@ -95,7 +69,40 @@ public class Node {
         if (getClass() != obj.getClass())
             return false;
         Node other = (Node) obj;
-        return Arrays.equals(ip, other.ip) && port == other.port;
+        return Arrays.equals(this.ip, other.ip) && this.port == other.port;
     }
-    
+
+    public int getCounter() {
+        return this.c;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + Arrays.hashCode(this.ip);
+        result = prime * result + Objects.hash(this.port);
+        return result;
+    }
+
+    public boolean have(Command command) {
+        return this.queries.contains(command);
+    }
+
+    public int nextId() {
+        return this.tid++;
+    }
+
+    public int port() {
+        return this.port;
+    }
+
+    public void put(Command command) {
+        this.queries.add(command);
+    }
+
+    @Override
+    public String toString() {
+        return "Node [id=" + this.c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port;
+    }
 }

@@ -2,31 +2,22 @@ package com.naelir;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
-import org.apache.logging.log4j.core.config.builder.api.AppenderComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilder;
-import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory;
-import org.apache.logging.log4j.core.config.builder.api.LoggerComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.api.RootLoggerComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BtTcpClient;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
-import com.naelir.dht.FileManager;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
-import com.naelir.dht.OnDataListener;
 import com.naelir.dht.UdpClient;
+import com.naelir.fs.FileManager;
 
 public class Main {
     public static final Logger logger = LogManager.getLogger(Main.class);
@@ -38,14 +29,15 @@ public class Main {
         String tcpmyself = Generator.generatePeerID();
         int serverPort = 6888;
         String tmp = Generator.toHex(udpmyself.array()).concat(".tmp");
-        FileManager fm = FileManager.of(tmp);
-        Data data = new Data(udpmyself, tcpmyself, fm, 100);
-        OnDataListener crawler = new OnDataListener(data);
+        FileManager fm = FileManager.of();
+        Queue<ByteBuffer> udp = new LinkedList<>();
+        udp.add(udpmyself);
+        Data data = new Data(udp, tcpmyself, fm, Arguments.parse(args));
 //        DhtInfo info = fm.readDhtCache();
 //        List<Node> readNodes = info.nodes;
 //        Set<String> existingHashes = fm.readMeta();
         try (
-                UdpClient client = new UdpClient(data, crawler);
+                UdpClient client = new UdpClient(data);
 //                NodeMaintainer keeper = new NodeMaintainer(client, data);
 //                TorrentResolver resolver = new TorrentResolver(data);
         ) {
@@ -68,13 +60,13 @@ public class Main {
 //            byte[] btes = Generator.toArray("fa364df414550722d55d8f03071faa5fb782a3af");
 //            int port = 6881;
             // qb fc43a8dbe2c723ffd857d13f4cd513a93f251c2e
-//            String tt = "a25f87ceb33224161a4df4fa6c679d3f496cbe6f";
-//            byte[] btes = Generator.toArray(tt);
-//            int port = 56514;
-            // bitcomet fc43a8dbe2c723ffd857d13f4cd513a93f251c2e
-            String tt = "d36e7acc0ac863e6e4ae984bfe20c4099e1d82fc";
+            String tt = "a25f87ceb33224161a4df4fa6c679d3f496cbe6f";
             byte[] btes = Generator.toArray(tt);
-            int port = 6882;
+            int port = 56514;
+            // bitcomet fc43a8dbe2c723ffd857d13f4cd513a93f251c2e
+//            String tt = "d36e7acc0ac863e6e4ae984bfe20c4099e1d82fc";
+//            byte[] btes = Generator.toArray(tt);
+//            int port = 6882;
             // utorrent
 //            String tt = "FC43A8DBE2C723FFD857D13F4CD513A93F251C2E";
 ////            byte[] btes = Generator.toArray(tt);

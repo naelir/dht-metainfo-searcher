@@ -20,7 +20,7 @@ public class Token {
         }
     }
 
-    ByteBuffer value;
+    public ByteBuffer value;
     private long generatedTime;
 
     public Token(byte[] ip) {

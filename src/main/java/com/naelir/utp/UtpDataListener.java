@@ -4,10 +4,11 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.Optional;
 
-import com.naelir.dht.IOnDataListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class UtpDataListener implements IOnDataListener {
-
+public class UtpDataListener {
+    public static final Logger logger = LogManager.getLogger(UtpDataListener.class);
     private UTPManager utpManager;
 
     public UtpDataListener(UTPManager utpManager) {
@@ -15,13 +16,12 @@ public class UtpDataListener implements IOnDataListener {
     }
 
     public UTPManager getUtpManager() {
-        return utpManager;
+        return this.utpManager;
     }
 
-    @Override
     public Optional<byte[]> onData(byte[] data, InetAddress addr, int port) {
-        byte[] response = utpManager.handlePacket(data, new InetSocketAddress(addr, port));
+        logger.debug("Received data from {}:{}", addr.getHostAddress(), port);
+        byte[] response = this.utpManager.handlePacket(data, new InetSocketAddress(addr, port));
         return response != null ? Optional.of(response) : Optional.empty();
     }
-
 }

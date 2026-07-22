@@ -32,13 +32,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
     public static final Path CACHE_FILE = Paths.get(System.getProperty("user.home"), "torrents.info");
     public static final Path CRAP_FILE = Paths.get(System.getProperty("user.home"), "torrents.CRAP");
-//    private static final List<String> ALLOWED_PRE = List.of("-BC", "-DE", "-LT", "-lt", "-qB", "-TR", "-UT", "-BT",
-//            "TIX");
     private static final List<String> DENIED_PRE = List.of("-XT");
-    
     private String myself;
     private Torrent task;
-    // private int serverPort;
     private Data data;
     byte[] metadata;
     volatile int piecesExpected;
@@ -48,7 +44,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     public ClientHandler(Data data, Torrent task) {
         this.data = data;
         this.myself = data.getTcpmyself();
-//        this.serverPort = serverPort;
         this.task = Objects.requireNonNull(task);
         this.metadata = new byte[0];
     }
@@ -76,7 +71,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.debug("received {}, to string {}", msg.getClass().getSimpleName(), msg);
+        logger.debug("received {}", msg.getClass().getSimpleName());
         Channel channel = ctx.channel();
         InetSocketAddress remoteAddress = (InetSocketAddress) channel.remoteAddress();
         int port = remoteAddress.getPort();
@@ -88,11 +83,10 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
             }
             if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
-                this.task.setMeta(TorrentMeta.SCAM);
-                this.data.fm.saveMeta(this.task.infoHash, TorrentMeta.SCAM);
+                TorrentMeta meta = new TorrentMeta("CRAP");
+                this.task.setMeta(meta);
+                this.data.fm.saveMeta(this.task.infoHash, meta);
                 logger.error("deny id {}", hr.peerID.substring(0, 3));
-//                this.data.denied.add(address);
-//                this.data.pingTasks.forEach(e -> e.getNodes().removeIf(f -> address.equals(f.address())));
                 ctx.close();
             }
         } else if (msg instanceof ExtendedMessageHandshake eh) {
@@ -106,12 +100,10 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             this.metadata = new byte[eh.metadata_size];
             this.piecesExpected = eh.metadata_size / TorrentMetadataResponse.METADATA_PIECE_SIZE + 1;
             this.ut_metadata_code = (byte) eh.ut_metadata;
-
             for (int i = 0; i < this.piecesExpected; i++) {
                 channel.write(new UtMetadataRequest(0, this.ut_metadata_code, i));
             }
             channel.flush();
-            
             channel.write(new HaveNone());
             channel.flush();
         } else if (msg instanceof TorrentMetadataResponse r) {
@@ -136,17 +128,20 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     void decode(boolean complete, byte[] addr, int port) {
         Optional<BencodedDictionary> decode = complete ? BDecoder.decode(this.metadata)
                 : TorrentMeta.parse(this.metadata);
-        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(decode);
+        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
-            logger.warn(meta);
-            this.data.fm.saveMeta(this.task.infoHash, meta);
-            this.task.setMeta(TorrentMeta.RESOLVED);
-            this.data.remoteClient.saveMeta(this.task.infoHash, meta);
+            logger.info("resolved {}", meta.getName());
+            if (this.task.meta() == null) {
+                this.data.fm.saveMeta(this.task.infoHash, meta);
+                this.task.setMeta(meta);
+                this.data.repo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
+            }
         } else {
-            logger.error("metadata seems invalid");
-            logger.debug(Arrays.toString(this.metadata));
-//            this.data.tasks.offer(new MetaTorrentTask(new Node(addr, port), this.task));
+            logger.error("metadata was invalid");
+            if (logger.isDebugEnabled()) {
+                logger.debug(Arrays.toString(this.metadata));
+            }
         }
     }
 
@@ -155,5 +150,4 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         logger.error(cause);
         ctx.close();
     }
-
 }

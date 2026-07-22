@@ -1,15 +1,10 @@
 package com.naelir.dht;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,11 +22,9 @@ public class ResponseResolver {
     }
 
     private Object forAddress(From from) {
-        try {
-            return InetAddress.getByAddress(from.ip);
-        } catch (UnknownHostException e) {
-            return Arrays.toString(from.ip);
-        }
+        if (from.ip == null || from.ip.length != 4)
+            return "0.0.0.0";
+        return (from.ip[0] & 0xFF) + "." + (from.ip[1] & 0xFF) + "." + (from.ip[2] & 0xFF) + "." + (from.ip[3] & 0xFF);
     }
 
     private void logFrom(Object decode, From from) {
@@ -54,7 +47,7 @@ public class ResponseResolver {
         ByteBuffer hashed = Token.token(from.ip);
         if (found != null && message.token.equals(hashed)) {
             Integer remotePort = message.port;
-            if (message.implied != 0) {
+            if (message.implied != null && message.implied > 0) {
                 remotePort = from.port;
             }
             Node node = new Node(from.ip, remotePort, message.id);
@@ -73,9 +66,7 @@ public class ResponseResolver {
 
     private void resolve(AnnouncePeerResponse decode, From from) {
         if (decode.request instanceof AnnouncePeerRequest apr) {
-            data.queryStats.get(apr.node, Command.ANNOUNCE).ifPresent(q -> {
-                q.setResponded();
-            });
+            apr.node.put(Command.ANNOUNCE_R);
         }
     }
 
@@ -113,22 +104,18 @@ public class ResponseResolver {
 
     private FindNodeResponse resolve(FindNodeRequest message, From from) {
         List<Node> nodes = this.data.table.closest(message.target);
-        logger.info("request to myself {} resolved, found {} close nodes", Generator.toHex(message.target.array()),
+        logger.info("find node to {} resolved, found {} close nodes", Generator.toHex(message.target.array()),
                 nodes.size());
         return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        data.queryStats.get(decode.request.node, Command.ANNOUNCE).ifPresent(q -> {
-            q.setResponded();
-        });
-
-        int size = data.table.size();
-        if (data.maxNodes > size) {
-            for (Node node : decode.nodes) {
-                if (IpRangeFilter.isDenied(node.ip) == false || size < 20) {
-                    this.data.table.insert(node);
-                }
+        decode.request.node.put(Command.FIND_NODE_R);
+        for (Node node : decode.nodes) {
+            if (IpRangeFilter.isAllowed(node.ip) || this.data.table.size() < 10) {
+                this.data.table.insert(node);
+            } else {
+                logger.info("{} denied", node);
             }
         }
         return Optional.empty();
@@ -140,13 +127,12 @@ public class ResponseResolver {
         String hex = Generator.toHex(infoHash.array());
         Torrent torrent = this.data.torrents.get(hex);
         this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id));
-        List<Node> closest = this.data.table.closest(infoHash);
+        List<Node> nodes = this.data.table.closest(infoHash);
         if (torrent != null) {
-            Deque<Node> peers = torrent.peers();
-            List<Node> name = new ArrayList<>(peers);
-            return new GetPeersResponse(message.tid, this.data.myself, token.value, name, closest, message);
+            List<Node> peers = new ArrayList<>(torrent.peers());
+            return new GetPeersResponse(message.tid, this.data.myself, token.value, nodes, peers, message);
         } else
-            return new GetPeersResponse(message.tid, this.data.myself, token.value, Collections.emptyList(), closest,
+            return new GetPeersResponse(message.tid, this.data.myself, token.value, nodes, Collections.emptyList(),
                     message);
     }
 
@@ -156,13 +142,27 @@ public class ResponseResolver {
             if (decode.token != null) {
                 this.data.tokensReceived.put(decode.token, gpr.node);
             }
+            gpr.node.put(Command.GET_PEER_R);
             String hex = Generator.toHex(gpr.infoHash.array());
-            Torrent torrent = this.data.torrents.get(hex);
-            if (torrent != null && torrent.infoHash() != null && torrent.infoHash().length() > 0 && torrent.meta() == null) {
-                List<Node> list = decode.peers.stream().filter(e -> IpRangeFilter.isDenied(e.ip) == false).toList();
-                if (list.isEmpty() == false) {
-                    logger.info("found {} peers for {}, applicable {}", decode.peers.size(), hex, list.size());
-                    this.data.pingTasks.add(new PingPeersTorrentTask(list, torrent));
+            Sample sample = this.data.samples.get(hex);
+            if (sample != null) {
+                int denied = 0;
+                for (Node node : decode.peers) {
+//                    if (IpRangeFilter.isDenied(node.ip) == false) {
+                    sample.addPeer(node);
+//                    } else {
+//                        denied++;
+//                    }
+                }
+                int size = decode.peers.size();
+//                if (size > 0 && denied * 100 / size >= 75) {
+//                    sample.isCrap = true;
+//                }
+                logger.info("found {} peers for {}, denied {}", size, hex, denied);
+                for (Node node : decode.nodes) {
+                    if (IpRangeFilter.isDenied(node.ip) == false) {
+                        sample.table.insert(node);
+                    }
                 }
             }
         }
@@ -228,37 +228,36 @@ public class ResponseResolver {
     }
 
     private void resolve(PingResponse decode, From from) {
-        data.queryStats.get(decode.request.node, Command.PING).ifPresent(q -> {
-            q.responded(TimeUnit.MINUTES, 15);
-        });
+        logger.info("ping response from {}", from);
+        decode.request.node.put(Command.PING_R);
     }
 
     private IResponse resolve(SampleInfoHashesRequest decode, From from) {
         List<Node> nodes = this.data.table.closest(decode.target, 8);
-        return new SampleInfoHashesResponse(decode.tid, this.data.myself, 3600, nodes, 0, List.of(), decode);
+        int values = this.data.samples.size();
+        int min = Math.min(20, values);
+        List<String> list = new ArrayList<>(this.data.samples.values()).subList(0, min)
+                .stream()
+                .map(e -> e.torrent.infoHash())
+                .toList();
+        return new SampleInfoHashesResponse(decode.tid, this.data.myself, 3600, nodes, min, list, decode);
     }
 
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples.isEmpty() == false) {
             int i = 0;
             for (String hash : decode.samples) {
-                Torrent torrent = new Torrent(hash);
-                Torrent prev = this.data.torrents.putIfAbsent(hash, torrent);
-                if (prev == null) {
+                if (this.data.torrents.containsKey(hash)) {
+                    logger.info("hash {} already resolved", hash);
                     i++;
+                } else {
+                    this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node));
                 }
             }
-            logger.info("found {} samples from {}, inserted new {}", decode.samples.size(), from, i);
-            this.data.samples.offer(decode);
-
-            data.queryStats.get(decode.request.node, Command.SAMPLE).ifPresent(q -> {
-                q.responded(TimeUnit.SECONDS, decode.interval);
-            });
-            
-            if (this.data.table.nodes().size() < data.maxNodes) {
-                for (Node node : decode.nodes) {
-                    this.data.table.insert(node);
-                }
+            logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
+            decode.request.node.put(Command.SAMPLE_R);
+            for (Node node : decode.nodes) {
+                this.data.table.insert(node);
             }
         }
     }

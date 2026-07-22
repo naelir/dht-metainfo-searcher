@@ -28,7 +28,7 @@ public class BitSpaceDivider {
         // line
         BigInteger step = keySpace.divide(BigInteger.valueOf(n));
         List<ByteBuffer> keys = new ArrayList<>(n);
-        BigInteger current = BigInteger.ZERO;
+        BigInteger current = BigInteger.ONE; // start from 1 to avoid the all-zero key;
         for (int i = 0; i < n; i++) {
             keys.add(ByteBuffer.wrap(to160BitBytes(current)));
             current = current.add(step);

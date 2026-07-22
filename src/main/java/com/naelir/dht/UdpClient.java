@@ -6,7 +6,6 @@ import java.net.InetAddress;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -23,17 +22,16 @@ public class UdpClient implements Runnable, AutoCloseable {
     private static final int DEFAULT_BUFFER_SIZE = 1 << 17;
     private static final int DEFAULT_TIMEOUT_MS = 5000;
     public static final Logger logger = LogManager.getLogger(UdpClient.class);
-    // ExecutorService executor = Executors.newSingleThreadExecutor();
     final DatagramSocket socket;
     private final int bufferSize;
     private final AtomicBoolean running = new AtomicBoolean(false);
     private ByteBuffer myself;
-    private IOnDataListener listener;
+    private OnDataListener listener;
     private Data db;
 
-    public UdpClient(Data data, IOnDataListener listener) throws Exception {
+    public UdpClient(Data data) throws Exception {
         this.myself = data.myself;
-        this.listener = listener;
+        this.listener = new OnDataListener(data);
         this.bufferSize = DEFAULT_BUFFER_SIZE;
         this.socket = new DatagramSocket();
         // A positive timeout lets the receiver thread wake up periodically
@@ -57,10 +55,28 @@ public class UdpClient implements Runnable, AutoCloseable {
         return List.of(/* new Node(byName1, 6881), */new Node(byName2, 6881)/* , new Node(byName3, 6881) */);
     }
 
-    public void explore() throws Exception {
-        List<Node> contactPoints = contactPoints();
-        for (Node node : contactPoints) {
-            sendFindNode(this.myself, node);
+    public void explore(List<Node> closest) throws Exception {
+        if (closest.isEmpty() == false) {
+            int fails = 0;
+            for (Node node : closest) {
+                try {
+                    sendFindNode(this.myself, node);
+                } catch (Exception e) {
+                    fails++;
+                    logger.error(e.getMessage());
+                }
+            }
+            if (fails == closest.size()) {
+                List<Node> contactPoints = contactPoints();
+                for (Node node : contactPoints) {
+                    sendFindNode(this.myself, node);
+                }
+            }
+        } else {
+            List<Node> contactPoints = contactPoints();
+            for (Node node : contactPoints) {
+                sendFindNode(this.myself, node);
+            }
         }
     }
 
@@ -73,7 +89,7 @@ public class UdpClient implements Runnable, AutoCloseable {
     }
 
     private void logTo(Object decode, From from) {
-        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Arrays.toString(from.ip),
+        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Generator.inet(from.ip),
                 from.port);
     }
 
@@ -104,17 +120,6 @@ public class UdpClient implements Runnable, AutoCloseable {
         }
     }
 
-    public void send(IRequest request, InetAddress addr, int port) throws Exception {
-        From from = new From(addr.getAddress(), port);
-        logTo(request, from);
-        byte[] encode = BEncoder.encode(request);
-        if (isEmpty(from.ip) == false) {
-            this.db.sent.put(request.tid(), request);
-            DatagramPacket packet = new DatagramPacket(encode, encode.length, addr, port);
-            this.socket.send(packet);
-        }
-    }
-    
     public void send(byte[] encode, InetAddress addr, int port) throws Exception {
         From from = new From(addr.getAddress(), port);
         if (isEmpty(from.ip) == false) {
@@ -123,13 +128,35 @@ public class UdpClient implements Runnable, AutoCloseable {
         }
     }
 
+    public void send(IRequest request, InetAddress addr, int port) throws Exception {
+        From from = new From(addr.getAddress(), port);
+        logTo(request, from);
+        byte[] encode = BEncoder.encode(request);
+        if (isEmpty(from.ip) == false && port > 0) {
+            this.db.sent.put(request.tid(), request);
+            DatagramPacket packet = new DatagramPacket(encode, encode.length, addr, port);
+            this.socket.send(packet);
+        }
+    }
+
     public void sendAnnouncePeer(ByteBuffer torrent, Node node) throws Exception {
         Token token = new Token(node.ip);
         AnnouncePeerRequest r = new AnnouncePeerRequest(this.myself, torrent, token.value, this.socket.getPort(), node);
-        db.queryStats.put(node, Command.ANNOUNCE);
+        node.put(Command.ANNOUNCE);
         send(r, node.address(), node.port);
     }
 
+    public void sendFindNode(ByteBuffer id, Node node) throws Exception {
+        FindNodeRequest r = new FindNodeRequest(this.myself, id, node);
+        node.put(Command.FIND_NODE);
+        send(r, node.address(), node.port);
+    }
+
+    public void sendGetPeers(ByteBuffer torrent, Node node) throws Exception {
+        GetPeersRequest r = new GetPeersRequest(this.myself, torrent, node);
+        node.put(Command.GET_PEER);
+        send(r, node.address(), node.port);
+    }
 
     public void sendHandshake(Node node) throws Exception {
         HandshakeMessage name = new HandshakeMessage();
@@ -138,27 +165,15 @@ public class UdpClient implements Runnable, AutoCloseable {
         send(buffer.array(), node.address(), node.port);
     }
 
-    public void sendFindNode(ByteBuffer id, Node node) throws Exception {
-        FindNodeRequest r = new FindNodeRequest(this.myself, id, node);
-        db.queryStats.put(node, Command.FIND_NODE);
-        send(r, node.address(), node.port);
-    }
-
-    public void sendGetPeers(ByteBuffer torrent, Node node) throws Exception {
-        GetPeersRequest r = new GetPeersRequest(this.myself, torrent, node);
-        db.queryStats.put(node, Command.GET_PEER);
-        send(r, node.address(), node.port);
-    }
-
     public void sendPing(Node node) throws Exception {
         PingRequest r = new PingRequest(this.myself, node);
-        db.queryStats.put(node, Command.PING);
+        node.put(Command.PING);
         send(r, node.address(), node.port);
     }
 
     public void sendSampleInfohashes(ByteBuffer range, Node node) throws UnknownHostException, Exception {
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(this.myself, range, node);
-        db.queryStats.put(node, Command.SAMPLE);
+        node.put(Command.SAMPLE);
         send(r, node.address(), node.port);
     }
 

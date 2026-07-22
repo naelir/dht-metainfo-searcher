@@ -12,10 +12,8 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Configurator;
 
 public class IpRangeFilter {
     public static final String UNKNOWN = "Unknown";
@@ -24,36 +22,19 @@ public class IpRangeFilter {
     public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
     public static final List<IpRange> RANGES_DENY = getDenyRanges();
 
-    public static void main(String[] args) {
-        Configurator.setRootLevel(Level.DEBUG);
-        boolean denied = isDenied(toBytes("77.70.34.83"));
-        System.out.println(denied);
-    }
-    
-    public static boolean isDenied(byte[] ip) {
+    public static IpRange findRange(byte[] ip, List<IpRange> ranges) {
         BigInteger address = toBigInteger(ip);
-        for (IpRange ipRange : RANGES_DENY) {
-            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0) {
-                return true;
-            }
+        for (IpRange ipRange : ranges) {
+            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
+                return ipRange;
         }
-        return false;
+        return null;
     }
 
-    public static boolean isAllow(byte[] ip) {
-        BigInteger address = toBigInteger(ip);
-        for (IpRange ipRange : RANGES_ALLOW) {
-            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
     private static List<IpRange> getAllowRanges() {
         List<IpRange> list = new ArrayList<>();
         try (
-                InputStream is = Files.newInputStream(Path.of("ip-range.txt"), StandardOpenOption.READ);
+                InputStream is = Files.newInputStream(Path.of("ip-range.allow"), StandardOpenOption.READ);
                 InputStreamReader name = new InputStreamReader(is);
                 BufferedReader e = new BufferedReader(name)
         ) {
@@ -74,6 +55,15 @@ public class IpRangeFilter {
             logger.error("Failed to read IP range file: {}", e.getMessage(), e);
         }
         return list;
+    }
+
+    public static String getCountry(byte[] ip) {
+        BigInteger address = toBigInteger(ip);
+        for (IpRange ipRange : RANGES_ALLOW) {
+            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
+                return ipRange.country != null ? ipRange.country : UNKNOWN;
+        }
+        return UNKNOWN;
     }
 
     private static List<IpRange> getDenyRanges() {
@@ -102,13 +92,22 @@ public class IpRangeFilter {
         return list;
     }
 
-    public static IpRange findRange(byte[] ip, List<IpRange> ranges) {
+    public static boolean isAllowed(byte[] ip) {
         BigInteger address = toBigInteger(ip);
-        for (IpRange ipRange : ranges) {
+        for (IpRange ipRange : RANGES_ALLOW) {
             if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
-                return ipRange;
+                return true;
         }
-        return null;
+        return RANGES_ALLOW.isEmpty();
+    }
+
+    public static boolean isDenied(byte[] ip) {
+        BigInteger address = toBigInteger(ip);
+        for (IpRange ipRange : RANGES_DENY) {
+            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
+                return true;
+        }
+        return false;
     }
 
     /**

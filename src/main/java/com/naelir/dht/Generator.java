@@ -58,7 +58,7 @@ public class Generator {
 
     public static String ip(byte[] ip) {
         return String.format("%d.%d.%d.%d", Byte.toUnsignedInt(ip[0]), Byte.toUnsignedInt(ip[1]),
-                Byte.toUnsignedInt(ip[1]), Byte.toUnsignedInt(ip[1]));
+                Byte.toUnsignedInt(ip[2]), Byte.toUnsignedInt(ip[3]));
     }
 
     public static byte[] sha1(byte[] ip) {

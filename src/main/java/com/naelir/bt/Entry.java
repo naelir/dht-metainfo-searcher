@@ -24,7 +24,7 @@ public class Entry {
     
     @JsonProperty("genre")
     public String genre;
-
+    
     public Entry() {}
 
     public Entry(String name, String hash, int fileCount, long foundTime, long size, String genre) {

@@ -1,5 +1,6 @@
 package com.naelir.bt;
 
+import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
@@ -44,18 +45,24 @@ public class BtTcpClient {
             Bootstrap bootstrap = new Bootstrap();
             ChannelFuture connectFuture = bootstrap.group(group)
                     .channel(NioSocketChannel.class)
-                    .option(ChannelOption.SO_KEEPALIVE, true)
-                    .option(ChannelOption.SO_RCVBUF, 32768)
-                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 2000)
+                    .option(ChannelOption.SO_KEEPALIVE, false)
+                    .option(ChannelOption.SO_RCVBUF, 4096)
+                    .option(ChannelOption.SO_SNDBUF, 4096)
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 1000)
                     .handler(new ChannelHandler(this.torrent, this.data))
                     .connect(this.node.address(), this.node.port());
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
+
+            InetAddress address = this.node.address();
+            String country = IpRangeFilter.getCountry(address.getAddress());
             if (!connectFuture.isSuccess()) {
                 // connection refused, timed-out, etc. — no channel to close
-                logger.warn("Connection to {}:{} failed: {}", this.node.address(), this.node.port(),
+                logger.warn("Connection to {} {}:{} failed: {}", country, this.node.address(), this.node.port(),
                         connectFuture.cause().getMessage());
                 return;
+            } else {
+                logger.warn("Connection to {} {}:{} succeeded", country, this.node.address(), this.node.port());
             }
             // blocks until channel is closed: either RawTorrentMetadata received,
             // error in ClientHandler, or IdleStateHandler fires after 1s of silence

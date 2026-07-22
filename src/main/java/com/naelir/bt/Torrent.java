@@ -12,13 +12,7 @@ import com.naelir.dht.Node;
 public class Torrent {
     public static Torrent empty(String hash) {
         Torrent name = new Torrent(hash);
-        name.meta = TorrentMeta.EMPTY;
-        return name;
-    }
-
-    public static Torrent resolved(String hash) {
-        Torrent name = new Torrent(hash);
-        name.meta = TorrentMeta.RESOLVED;
+        name.meta = new TorrentMeta(hash);
         return name;
     }
 

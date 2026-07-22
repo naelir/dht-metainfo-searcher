@@ -1,6 +1,7 @@
 package com.naelir.bt;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,9 +21,6 @@ public class TorrentMeta {
     public static final byte[] PIECES = new byte[] { 54, 58, 112, 105, 101, 99, 101, 115 };
     public static final byte[] EE = new byte[] { 101, 101 };
     public static final byte[] BYTE20 = new byte[] { 20, 1 };
-    public static final TorrentMeta EMPTY = new TorrentMeta("EMPTY", List.of());
-    public static final TorrentMeta SCAM = new TorrentMeta("SCAM", List.of());
-    public static final TorrentMeta RESOLVED = new TorrentMeta("RESOLVED", List.of());
 
     private static int indexOf(byte[] parent, byte[] child, int position) {
         for (int i = position; i < parent.length - child.length + 1; ++i) {
@@ -39,7 +37,7 @@ public class TorrentMeta {
         return -1;
     }
 
-    public static Optional<TorrentMeta> of(Optional<BencodedDictionary> meta) {
+    public static Optional<TorrentMeta> of(String hash, Optional<BencodedDictionary> meta) {
         if (meta.isPresent()) {
             try {
                 BencodedDictionary map = meta.get();
@@ -62,12 +60,12 @@ public class TorrentMeta {
                         }
                     }
                     String utf8String = name.toUTF8String();
-                    return Optional.of(new TorrentMeta(utf8String, list));
+                    return Optional.of(new TorrentMeta(hash, utf8String, list));
                 } else if (name != null) {
                     BencodedInteger length = (BencodedInteger) map.get(BtKeys.LENGTH);
                     String utf8String = name.toUTF8String();
                     list.add(new MetaFile(utf8String, length.getValue()));
-                    return Optional.of(new TorrentMeta(utf8String, list));
+                    return Optional.of(new TorrentMeta(hash, utf8String, list));
                 }
             } catch (Exception e) {
                 logger.error(e.getMessage(), e);
@@ -93,12 +91,23 @@ public class TorrentMeta {
     public long found;
     Genre genre;
     public int count;
+    public String hash;
     
     public TorrentMeta() {
         // TODO Auto-generated constructor stub
     }
 
-    public TorrentMeta(String name, List<MetaFile> list) {
+
+    public TorrentMeta(String hash) {
+        this(hash, "NAME", Collections.emptyList());
+    }
+
+    public TorrentMeta(String hash, String name) {
+        this(hash, name, Collections.emptyList());
+    }
+    
+    public TorrentMeta(String hash, String name, List<MetaFile> list) {
+        this.hash = hash;
         this.name = name;
         this.list = list;
         this.found = System.currentTimeMillis();
@@ -106,6 +115,11 @@ public class TorrentMeta {
         this.count = list.size();
     }
 
+    
+    public String getHash() {
+        return hash;
+    }
+    
     public long getFound() {
         return this.found;
     }

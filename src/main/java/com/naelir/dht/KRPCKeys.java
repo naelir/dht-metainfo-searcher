@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 import com.github.cdefgah.bencoder4j.model.BencodedByteSequence;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
@@ -37,7 +38,7 @@ public final class KRPCKeys {
     }
 
     public static BencodedDictionary getArgs(BencodedDictionary map) {
-        return (BencodedDictionary) map.get(ARGUMENTS);
+        return (BencodedDictionary) Objects.requireNonNull(map.get(ARGUMENTS));
     }
 
     public static BencodedList getError(BencodedDictionary map) {
