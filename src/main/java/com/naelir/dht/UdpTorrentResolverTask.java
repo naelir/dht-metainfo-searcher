@@ -9,12 +9,12 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.utp.NettyUtpClient;
 
-public class TorrentResolverTask implements ITask {
-    private static final Logger logger = LogManager.getLogger(TorrentResolverTask.class);
+public class UdpTorrentResolverTask implements ITask {
+    private static final Logger logger = LogManager.getLogger(UdpTorrentResolverTask.class);
     private final Queue<MetaTorrentTask> tasks;
     private NettyUtpClient client;
 
-    public TorrentResolverTask(NettyUtpClient client, Queue<MetaTorrentTask> tasks) {
+    public UdpTorrentResolverTask(NettyUtpClient client, Queue<MetaTorrentTask> tasks) {
         this.client = client;
         this.tasks = tasks;
     }

@@ -401,7 +401,7 @@ public class NettyUtpClient implements AutoCloseable {
 
         @Override
         public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-            logger.error("NettyUtpClient inbound error: {}", cause.getMessage(), cause);
+            logger.error("NettyUtpClient inbound error: {}", cause.getMessage());
         }
     }
 }

@@ -2,6 +2,7 @@ package com.naelir.dht;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -17,9 +18,9 @@ public class GetPeersResponse implements IResponse {
     ByteBuffer id;
     ByteBuffer token;
     ByteBuffer tid;
-    List<Node> peers;
+    List<Node> peers = Collections.emptyList();
     IRequest request;
-    List<Node> nodes;
+    List<Node> nodes = Collections.emptyList();
 
     public GetPeersResponse(ByteBuffer tid, ByteBuffer myself, ByteBuffer token, List<Node> nodes, List<Node> peers,
             GetPeersRequest message) {
@@ -39,11 +40,13 @@ public class GetPeersResponse implements IResponse {
     public void decode(BencodedDictionary map) throws IOException, CircularReferenceException {
         BencodedDictionary rsp = KRPCKeys.getResponse(map);
         this.tid = KRPCKeys.getTransaction(map);
-        this.id = KRPCKeys.getId(rsp);
-        this.token = KRPCKeys.getToken(rsp);
-        this.nodes = CompactInfo.expandNodes(KRPCKeys.getNodes(rsp));
-        List<ByteBuffer> values = KRPCKeys.getValues(rsp);
-        this.peers = CompactInfo.expandPeers(values);
+        if (rsp != null) {
+            this.id = KRPCKeys.getId(rsp);
+            this.token = KRPCKeys.getToken(rsp);
+            this.nodes = CompactInfo.expandNodes(KRPCKeys.getNodes(rsp));
+            List<ByteBuffer> values = KRPCKeys.getValues(rsp);
+            this.peers = CompactInfo.expandPeers(values);
+        }
     }
 
     @Override

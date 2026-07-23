@@ -56,7 +56,7 @@ public final class DhtApplication implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = new Arguments.Builder().continueFrom("1999999999999999999999999999999999999992")
+        Arguments arguments = new Arguments.Builder().continueFrom("0CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC9")
                 .bitspaceParts(100)
                 .build();
         logger.info("Starting with {}", arguments);

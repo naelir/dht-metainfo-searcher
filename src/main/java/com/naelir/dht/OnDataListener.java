@@ -22,7 +22,7 @@ public class OnDataListener {
         if (decode.isPresent()) {
             BencodedDictionary bmap = decode.get();
             if (bmap.get("error") != null) {
-                logger.error("cannot decode from address {}, port {}", address, port);
+                logger.debug("cannot decode from address {}, port {}", address, port);
             } else
                 return this.resolver.resolve(bmap, from);
         }

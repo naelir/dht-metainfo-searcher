@@ -12,9 +12,9 @@ public class NameFilter {
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
+    private static final List<String> GAME_KEYWORDS = List.of("FitGirl");
     //
     private static final List<String> KNOWN_PREFIXES = List.of("www.UIndex.org    -    ");
-
     private static final List<String> XXX = List.of("xxx");
     private static final Pattern TV = Pattern.compile("\\.S\\d+E\\d+\\.");
     private static final Pattern MUSIC = Pattern.compile("\\([a-zA-Z]+\\d+\\)");
@@ -41,6 +41,8 @@ public class NameFilter {
         else if (matchKeyword(lower, MOVIE_KEYWORDS))
             return Genre.MOVIE_VIDEO;
         else if (matchGameKeyword(list))
+            return Genre.GAME_PC;
+        else if (matchKeyword(lower, GAME_KEYWORDS))
             return Genre.GAME_PC;
         return Genre.UNKNOWN;
     }
@@ -91,5 +93,4 @@ public class NameFilter {
         }
         return false;
     }
-
 }

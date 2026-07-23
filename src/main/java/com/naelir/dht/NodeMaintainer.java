@@ -32,7 +32,7 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
 //            tasks.offer(new PingPeersTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
-            TorrentResolverTask trt = new TorrentResolverTask(client, data.tasks);
+            UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.tasks);
             TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
             tasks.offer(new ITask() {
                 @Override
@@ -77,9 +77,9 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         if (this.currentTask != null && this.data.myself != null) {
             this.currentTask.run();
             if (this.currentTask.resolved()) {
+                this.tasks.offer(this.currentTask);
                 logger.info("task {} resolved", this.currentTask.getClass().getSimpleName());
                 this.currentTask = this.tasks.poll();
-                this.tasks.offer(this.currentTask);
             }
         } else {
             this.semaphore.release();

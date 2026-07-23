@@ -30,7 +30,7 @@ public class TcpTorrentResolverTask implements ITask {
             int step = 5;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
-                MetaTorrentTask task = this.tasks.pop();
+                MetaTorrentTask task = this.tasks.pollLast();
                 if (task == null) {
                     continue;
                 }

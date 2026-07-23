@@ -20,5 +20,6 @@ public class NextIdTask implements ITask {
         List<Node> nodes = this.data.table.closest(this.data.myself, 20);
         this.data.table = new RoutingTable();
         nodes.forEach(e -> this.data.table.insert(e));
+        this.data.samples.clear();
     }
 }
