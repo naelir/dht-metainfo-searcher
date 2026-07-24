@@ -25,15 +25,14 @@ import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
 
 public class ThirdPartyFileManager {
-    static class BtDiggMeta {
+    private static class Meta {
         int filesCount;
         String ago;
         long size;
         String hash;
         String name;
 
-        public BtDiggMeta(int filesCount, String ago, long size, String hash, String name) {
-            super();
+        public Meta(int filesCount, String ago, long size, String hash, String name) {
             this.filesCount = filesCount;
             this.ago = ago;
             this.size = size;
@@ -48,23 +47,6 @@ public class ThirdPartyFileManager {
         }
     }
 
-    static class LimeMeta {
-        String ago;
-        long size;
-        String hash;
-        String name;
-        int seeders;
-        int leechers;
-
-        public LimeMeta(String ago, long size, String hash, String name, int seeders, int leechers) {
-            this.ago = ago;
-            this.size = size;
-            this.hash = hash;
-            this.name = name;
-            this.seeders = seeders;
-            this.leechers = leechers;
-        }
-    }
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     public static final Logger logger = LogManager.getLogger(ThirdPartyFileManager.class);
 
@@ -76,7 +58,7 @@ public class ThirdPartyFileManager {
     private static final Pattern LIME = Pattern.compile(
             "<tr.+?><a href=\\\"http:\\/\\/itorrents.net\\/torrent\\/(.+?)\\.torrent\\?title=(.+?)\\\".+?<td class=\\\"tdnormal\\\">(.+?)<.+?<td class=\\\"tdnormal\\\">(.+?) ([KBMGbytes]+)<\\/td><td class=\"tdseed\">(.+?)<\\/td><td class=\"tdleech\">(\\d+)<\\/td>");
 
-    public void convertBtDigPages(Path path) throws IOException {
+    public void convertPages(Path path) throws IOException {
         String random = RandomStringUtils.randomAlphabetic(10);
         Path to = HOME.resolve(random);
         Path toC = HOME.resolve(random);
@@ -103,7 +85,7 @@ public class ThirdPartyFileManager {
                                 }
                                 line = line.substring(indexOf, line.length());
                             }
-                            BtDiggMeta meta = parse(line);
+                            Meta meta = parse(line);
                             if (meta.filesCount > 100) {
                                 System.err.println(meta);
                                 continue;
@@ -188,7 +170,7 @@ public class ThirdPartyFileManager {
         }
     }
 
-    BtDiggMeta parse(String line) {
+    Meta parse(String line) {
         Matcher matcher00 = PR_FILE_COUNT.matcher(line);
         Matcher matcher02 = AGO.matcher(line);
         Matcher matcher03 = SIZE.matcher(line);
@@ -206,6 +188,6 @@ public class ThirdPartyFileManager {
         long sizel = (long) (Float.valueOf(size) * multiplier);
         int c = Integer.parseInt(count0);
         c = c == 0 ? 1 : c;
-        return new BtDiggMeta(c, ago, sizel, hash, name);
+        return new Meta(c, ago, sizel, hash, name);
     }
 }

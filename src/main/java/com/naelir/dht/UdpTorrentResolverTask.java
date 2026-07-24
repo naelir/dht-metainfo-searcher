@@ -30,12 +30,8 @@ public class UdpTorrentResolverTask implements ITask {
             int step = 5;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
-                MetaTorrentTask task = this.tasks.poll();
+                MetaTorrentTask task = get();
                 if (task == null) {
-                    continue;
-                }
-                if (task.torrent.meta() != null) {
-                    logger.info("will not get, torrent {} resolved", task.torrent.meta().getName());
                     continue;
                 }
                 list.add(task);
@@ -51,4 +47,14 @@ public class UdpTorrentResolverTask implements ITask {
             logger.error("Unexpected error resolving torrent", e);
         }
     }
+
+    MetaTorrentTask get() {
+        while (true) {
+            MetaTorrentTask pollLast = this.tasks.poll();
+            if (pollLast == null || pollLast.torrent.meta() == null) {
+                return pollLast;
+            }
+        }
+    }
+    
 }

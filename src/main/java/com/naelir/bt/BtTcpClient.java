@@ -49,7 +49,7 @@ public class BtTcpClient implements AutoCloseable {
                     .option(ChannelOption.SO_RCVBUF, 4096)
                     .option(ChannelOption.SO_SNDBUF, 4096)
                     .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 500)
-                    .handler(new ChannelHandler(torrent, this.data))
+                    .handler(new ChannelHandlerInitializer(torrent, this.data))
                     .connect(node.address(), node.port());
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
@@ -73,11 +73,11 @@ public class BtTcpClient implements AutoCloseable {
         }
     }
 
-    private static final class ChannelHandler extends ChannelInitializer<SocketChannel> {
+    private static final class ChannelHandlerInitializer extends ChannelInitializer<SocketChannel> {
         private Torrent task;
         private Data data;
 
-        public ChannelHandler(Torrent task, Data data) {
+        public ChannelHandlerInitializer(Torrent task, Data data) {
             this.task = task;
             this.data = data;
         }

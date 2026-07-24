@@ -276,7 +276,7 @@ public class NettyUtpClient implements AutoCloseable {
     }
 
     public void sendSampleInfohashes(ByteBuffer myself, ByteBuffer range, Node node)
-            throws UnknownHostException, Exception {
+            throws Exception {
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(myself, range, node);
         node.put(Command.SAMPLE);
         send(r, node.address(), node.port());

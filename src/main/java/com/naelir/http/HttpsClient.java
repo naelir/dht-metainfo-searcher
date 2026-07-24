@@ -133,29 +133,6 @@ public class HttpsClient implements AutoCloseable {
 //        }
 //    }
 
-    public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
-        List<String> list = List.of(
-                "https://zamunda.rip/api/torrents?q=&bg_audio=true&bg_movies=false&bg_arena=false&zelka=false&offset=");
-        Path path = Paths.get(System.getProperty("user.home")).resolve(RandomStringUtils.randomAlphanumeric(10));
-        try (
-                HttpsClient name = new HttpsClient();
-                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
-                        StandardOpenOption.APPEND)
-        ) {
-            for (String string : list) {
-                for (int i = 0; i < 450000; i = i + 20) {
-                    String body = name.get(string.concat(Integer.toString(i)));
-                    bufferedWriter.append(body);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                    Thread.sleep(1000);
-                    System.out.println(i);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private final CloseableHttpClient mHttpClient;
     // -------------------------------------------------------------------------

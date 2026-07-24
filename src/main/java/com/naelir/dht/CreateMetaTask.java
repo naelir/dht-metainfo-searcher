@@ -21,6 +21,9 @@ public class CreateMetaTask implements ITask {
         try {
             logger.info("createMetaTasks run on {} samples", this.data.samples.size());
             for (Sample sample : this.data.samples.values()) {
+                if (sample.peers.size() < data.arguments.minPeers) {
+                    continue;
+                }
                 for (Node peer : sample.peers) {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
@@ -29,7 +32,6 @@ public class CreateMetaTask implements ITask {
                     }
                 }
             }
-//            this.data.samples.clear();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
