@@ -12,7 +12,7 @@ public class Sample {
     int checked;
     public final Node from;
 
-    boolean isCrap;
+    boolean skip;
     
     public Sample(Torrent torrent, Node from) {
         this.torrent = torrent;

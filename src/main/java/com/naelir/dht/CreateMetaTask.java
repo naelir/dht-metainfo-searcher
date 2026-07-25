@@ -21,13 +21,17 @@ public class CreateMetaTask implements ITask {
         try {
             logger.info("createMetaTasks run on {} samples", this.data.samples.size());
             for (Sample sample : this.data.samples.values()) {
+                if (sample.peers.size() < data.arguments.minPeers) {
+                    continue;
+                }
                 for (Node peer : sample.peers) {
-//                    if (peer.have(Command.PING_R)) {
-                        this.data.tasks.offer(new MetaTorrentTask(peer, sample.torrent));
-//                    }
+                    if (peer.have(Command.META) == false) {
+                        peer.put(Command.META);
+                        this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+                        this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+                    }
                 }
             }
-            this.data.samples.clear();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

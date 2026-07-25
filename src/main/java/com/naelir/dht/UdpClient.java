@@ -26,12 +26,12 @@ public class UdpClient implements Runnable, AutoCloseable {
     private final int bufferSize;
     private final AtomicBoolean running = new AtomicBoolean(false);
     private ByteBuffer myself;
-    private OnDataListener listener;
+    private UdpOnDataListener listener;
     private Data db;
 
     public UdpClient(Data data) throws Exception {
         this.myself = data.myself;
-        this.listener = new OnDataListener(data);
+        this.listener = new UdpOnDataListener(data);
         this.bufferSize = DEFAULT_BUFFER_SIZE;
         this.socket = new DatagramSocket();
         // A positive timeout lets the receiver thread wake up periodically

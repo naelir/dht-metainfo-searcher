@@ -69,92 +69,11 @@ public class HttpsClient implements AutoCloseable {
         }
         return SSLContext.getDefault();
     }
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
-//    public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
-//        List<String> list = List.of(
-//                /*
-//                 * "https://predb.me/?cats=movies-hd&page=",
-//                 * "https://predb.me/?cats=tv-hd&page=",
-//                 */
-//                "https://predb.me/?cats=music&page=", "https://predb.me/?cats=games&page=");
-//        Path path = Paths.get(System.getProperty("user.home")).resolve("predb.me");
-//        try (
-//                HttpsClient name = new HttpsClient();
-//                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
-//                        StandardOpenOption.APPEND)
-//        ) {
-//            for (String string : list) {
-//                for (int i = 1; i < 200; i++) {
-//                    String body = name.get(string.concat(Integer.toString(i)));
-//                    bufferedWriter.append(body);
-//                    bufferedWriter.newLine();
-//                    Thread.sleep(2000);
-//                    System.out.println(i);
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-    // https://zamunda.rip/api/torrents?q=&bg_audio=true&bg_movies=false&bg_arena=false&zelka=false&offset=80
 
     static String createBasicAuthHeader(String username, String password) {
         String credentials = username + ":" + password;
         String encoded = Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
         return "Basic " + encoded;
-    }
-//
-//    public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
-//        List<String> list = List.of(
-////                "https://www.limetorrents.fun/browse-torrents/Movies/date/"//,
-////                "https://www.limetorrents.fun/browse-torrents/TV-shows/date/"//,
-//                "https://www.limetorrents.fun/browse-torrents/Games/date/"
-//                );
-//        Path path = Paths.get(System.getProperty("user.home")).resolve(RandomStringUtils.randomAlphanumeric(10));
-//        try (
-//                HttpsClient name = new HttpsClient();
-//                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
-//                        StandardOpenOption.APPEND)
-//        ) {
-//            for (String string : list) {
-//                for (int i = 380; i < 1000; i++) {
-//                    String body = name.get(string.concat(Integer.toString(i)));
-//                    bufferedWriter.append(body);
-//                    bufferedWriter.newLine();
-//                    bufferedWriter.flush();
-//                    Thread.sleep(1000);
-//                    System.out.println(i);
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-    public static void main(String[] args) throws HttpsClientException, IOException, InterruptedException {
-        List<String> list = List.of(
-                "https://zamunda.rip/api/torrents?q=&bg_audio=true&bg_movies=false&bg_arena=false&zelka=false&offset=");
-        Path path = Paths.get(System.getProperty("user.home")).resolve(RandomStringUtils.randomAlphanumeric(10));
-        try (
-                HttpsClient name = new HttpsClient();
-                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
-                        StandardOpenOption.APPEND)
-        ) {
-            for (String string : list) {
-                for (int i = 0; i < 450000; i = i + 20) {
-                    String body = name.get(string.concat(Integer.toString(i)));
-                    bufferedWriter.append(body);
-                    bufferedWriter.newLine();
-                    bufferedWriter.flush();
-                    Thread.sleep(1000);
-                    System.out.println(i);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private final CloseableHttpClient mHttpClient;

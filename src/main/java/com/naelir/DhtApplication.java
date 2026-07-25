@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.concurrent.Semaphore;
 
 import org.apache.logging.log4j.Level;
@@ -20,17 +19,20 @@ import org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder;
 import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
+import com.naelir.bt.BtTcpClient;
+import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.NodeMaintainer;
-import com.naelir.dht.OnDataListener;
+import com.naelir.dht.UdpOnDataListener;
 import com.naelir.dht.SavedCompactInfo;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
+import com.naelir.fs.FileRecord;
 import com.naelir.fs.SavedCompactInfoFileManager;
-import com.naelir.utp.NettyUtpClient;
+import com.naelir.utp.UtpClient;
 import com.naelir.utp.UTPManager;
-import com.naelir.utp.UtpDataListener;
+import com.naelir.utp.UtpOnDataListener;
 
 public final class DhtApplication implements Runnable {
     static final Logger logger = logger();
@@ -54,7 +56,10 @@ public final class DhtApplication implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = Arguments.parse(args);//
+        Arguments arguments = new Arguments.Builder()
+                .continueFrom("266666666666666666666666666666666666665C")
+                .bitspaceParts(100)
+                .build();
         logger.info("Starting with {}", arguments);
         var application = new DhtApplication(arguments);
         new Thread(application, "dht-metainfo").start();
@@ -95,31 +100,28 @@ public final class DhtApplication implements Runnable {
                     : BigInteger.ZERO;
             Queue<ByteBuffer> divide = divide(from);
             String tcpmyself = Generator.generatePeerID();
-            FileManager fm = FileManager.of();
-            SavedCompactInfoFileManager peerFm = SavedCompactInfoFileManager.of();
-            SavedCompactInfo compactInfo = peerFm.readCompactInfo();
+            FileDB fm = FileDB.of();
+            List<FileRecord> all = fm.getAll().stream().filter(e -> "NO_PEERS".equals(e.getName()) == false).toList();
+            SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
+            SavedCompactInfo compactInfo = peersFm.readCompactInfo();
             Data data = new Data(divide, tcpmyself, fm, this.arguments);
+            all.forEach(e -> data.torrents.put(e.getId(), Torrent.EMPTY));
             UTPManager manager = new UTPManager();
-            UtpDataListener utp = new UtpDataListener(manager);
-            OnDataListener udp = new OnDataListener(data);
+            UtpOnDataListener utp = new UtpOnDataListener(manager);
+            UdpOnDataListener udp = new UdpOnDataListener(data);
             try (
-                    NettyUtpClient client = new NettyUtpClient(utp, udp, data);
-                    NodeMaintainer keeper = NodeMaintainer.of(data, client, this.semaphore)
+                    UtpClient utpClient = new UtpClient(utp, udp, data);
+                    BtTcpClient tcpClient = new BtTcpClient(data);
+                    NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient, this.semaphore)
             ) {
-                client.start();
-                keeper.start();
+                utpClient.start();
+                maintainer.start();
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
-                client.explore(data.myself, saved);
+                utpClient.explore(data.myself, saved);
                 this.semaphore.acquire();
-//                fm.saveUnresolved(data.unresolved);
                 List<Node> nodes = data.table.closest(data.myself, 20);
-                peerFm.saveCompactInfo(data.myself, nodes);
+                peersFm.saveCompactInfo(data.myself, nodes);
                 logger.info("stopped with {}", Generator.toHex(data.myself.array()));
-                if (this.arguments.onlyHashes) {
-                    Set<String> keySet = data.samples.keySet();
-                    fm.saveUnresolved(keySet);
-                    logger.info("saved {} hashes", keySet.size());
-                }
             }
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);

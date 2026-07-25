@@ -8,11 +8,11 @@ import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 
-public class OnDataListener {
-    public static final Logger logger = LogManager.getLogger(OnDataListener.class);
+public class UdpOnDataListener {
+    public static final Logger logger = LogManager.getLogger(UdpOnDataListener.class);
     private ResponseResolver resolver;
 
-    public OnDataListener(Data data) {
+    public UdpOnDataListener(Data data) {
         this.resolver = new ResponseResolver(data);
     }
 
@@ -22,7 +22,7 @@ public class OnDataListener {
         if (decode.isPresent()) {
             BencodedDictionary bmap = decode.get();
             if (bmap.get("error") != null) {
-                logger.error("cannot decode from address {}, port {}", address, port);
+                logger.debug("cannot decode from address {}, port {}", address, port);
             } else
                 return this.resolver.resolve(bmap, from);
         }

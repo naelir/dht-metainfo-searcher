@@ -29,11 +29,11 @@ import com.naelir.dht.Generator;
 import com.naelir.dht.GetPeersRequest;
 import com.naelir.dht.IRequest;
 import com.naelir.dht.Node;
-import com.naelir.dht.OnDataListener;
+import com.naelir.dht.UdpOnDataListener;
 import com.naelir.dht.PingRequest;
 import com.naelir.dht.SampleInfoHashesRequest;
 import com.naelir.dht.Token;
-import com.naelir.fs.FileManager;
+import com.naelir.fs.FileDB;
 import com.naelir.tracker.ConnectRequest;
 import com.naelir.tracker.TrackerOnDataListener;
 
@@ -62,9 +62,9 @@ import io.netty.util.concurrent.DefaultThreadFactory;
  * {@link ChannelInboundHandlerAdapter}; the UTP tick is driven by a recurring
  * task submitted to the Netty event loop so that no extra thread is needed.
  */
-public class NettyUtpClient implements AutoCloseable {
+public class UtpClient implements AutoCloseable {
     private static final long TICK_INTERVAL_MS = 500;
-    public static final Logger logger = LogManager.getLogger(NettyUtpClient.class);
+    public static final Logger logger = LogManager.getLogger(UtpClient.class);
 
     /**
      * Returns {@code true} when {@code data} looks like a valid uTP datagram.
@@ -100,49 +100,18 @@ public class NettyUtpClient implements AutoCloseable {
                 && type <= UTPConnection.ST_SYN; // type in { 0, 1, 2, 3, 4 }
     }
 
-    /**
-     * Usage: NettyUtpClient [host] [port]
-     * <p>
-     * Sends a BitTorrent {@link HandshakeMessage} to the given peer over uTP using
-     * Netty's NIO transport. Defaults to {@code localhost:56514}.
-     */
-    public static void main(String[] args) throws Exception {
-        String host = args.length > 0 ? args[0] : "tracker.opentrackr.org";
-        int port = args.length > 1 ? Integer.parseInt(args[1]) : 1337;
-        Configurator.setRootLevel(Level.DEBUG);
-        ByteBuffer udpId = Generator.generateRandomID();
-        String peerId = Generator.generatePeerID();
-        Queue<ByteBuffer> udpIds = new LinkedList<>();
-        udpIds.add(udpId);
-        Data data = new Data(udpIds, peerId, FileManager.of(), Arguments.parse(args));
-        UTPManager manager = new UTPManager();
-        UtpDataListener utp = new UtpDataListener(manager);
-        OnDataListener udp = new OnDataListener(data);
-        try (
-                NettyUtpClient client = new NettyUtpClient(utp, udp, data)
-        ) {
-            client.start();
-            //tracker.tryhackx.org
-            String infoHash = "fc43a8dbe2c723ffd857d13f4cd513a93f251c2e";
-            InetAddress addr = InetAddress.getByName("tracker.opentrackr.org");
-            client.connectTracker(new Torrent(infoHash), addr, port);
-            new Scanner(System.in).nextLine();
-            logger.info("Done.");
-        }
-    }
-
-    private final UtpDataListener listener;
+    private final UtpOnDataListener listener;
     private final EventLoopGroup group;
     private volatile Channel channel;
-    private OnDataListener udp;
+    private UdpOnDataListener udp;
     private Data data;
     private TrackerOnDataListener tracker;
 
-    public NettyUtpClient(UtpDataListener utp, OnDataListener udp, Data data) {
+    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, Data data) {
         this(utp, udp, data, new TrackerOnDataListener());
     }
 
-    public NettyUtpClient(UtpDataListener utp, OnDataListener udp, Data data, TrackerOnDataListener tracker) {
+    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, Data data, TrackerOnDataListener tracker) {
         this.listener = utp;
         this.udp = udp;
         this.data = data;
@@ -188,8 +157,12 @@ public class NettyUtpClient implements AutoCloseable {
             writeUdp(syn, addr, port);
         }
     }
-    
-    
+
+    public void connectPeer(Torrent torrent, Node node) throws Exception {
+        connectPeer(torrent, node.address(), node.port());
+    }
+    // ── Inbound handler ───────────────────────────────────────────────────────
+
     public void connectTracker(Torrent torrent, InetAddress addr, int port) throws Exception {
         int tid = new Random().nextInt();
         ConnectRequest connectRequest = new ConnectRequest(tid & 0x7FFFFFFF); // Ensure positive transaction ID
@@ -197,11 +170,6 @@ public class NettyUtpClient implements AutoCloseable {
         writeUdp(encode, addr, port);
     }
     // ── uTP packet detection ──────────────────────────────────────────────────
-
-    public void connectPeer(Torrent torrent, Node node) throws Exception {
-        connectPeer(torrent, node.address(), node.port());
-    }
-    // ── Inbound handler ───────────────────────────────────────────────────────
 
     private List<Node> contactPoints() throws UnknownHostException {
 //      byte[] byName1 = InetAddress.getByName("router.bittorrent.com").getAddress();
@@ -277,7 +245,7 @@ public class NettyUtpClient implements AutoCloseable {
     }
 
     public void sendSampleInfohashes(ByteBuffer myself, ByteBuffer range, Node node)
-            throws UnknownHostException, Exception {
+            throws Exception {
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(myself, range, node);
         node.put(Command.SAMPLE);
         send(r, node.address(), node.port());
@@ -321,7 +289,7 @@ public class NettyUtpClient implements AutoCloseable {
      * Netty channel.
      */
     private void writeUdp(byte[] data, InetAddress addr, int port) {
-        if (channel == null || !channel.isActive()) {
+        if (this.channel == null || !this.channel.isActive()) {
             // Channel is gone (remote side dropped the connection). Do NOT allocate
             // a ByteBuf that nobody will release — just drop the packet with a warning.
             logger.warn("writeUdp: channel not active, dropping {} byte(s) to {}:{}", data.length, addr, port);
@@ -329,7 +297,7 @@ public class NettyUtpClient implements AutoCloseable {
         }
         ByteBuf buf = Unpooled.wrappedBuffer(data);
         DatagramPacket pkt = new DatagramPacket(buf, new InetSocketAddress(addr, port));
-        channel.writeAndFlush(pkt).addListener((ChannelFuture f) -> {
+        this.channel.writeAndFlush(pkt).addListener((ChannelFuture f) -> {
             if (!f.isSuccess()) {
                 // Netty releases the DatagramPacket (and its ByteBuf) through the pipeline
                 // on failure, but if the channel closed between the isActive() guard and
@@ -344,7 +312,7 @@ public class NettyUtpClient implements AutoCloseable {
 
     /**
      * Receives incoming {@link DatagramPacket}s from the Netty pipeline, delegates
-     * to {@link UtpDataListener#onData} when the payload is a valid uTP datagram,
+     * to {@link UtpOnDataListener#onData} when the payload is a valid uTP datagram,
      * and writes any response back to the sender.
      */
     private class InboundHandler extends ChannelInboundHandlerAdapter {
@@ -358,7 +326,7 @@ public class NettyUtpClient implements AutoCloseable {
                     byte[] data = new byte[pkt.content().readableBytes()];
                     pkt.content().readBytes(data);
                     if (isUtpPacket(data)) {
-                        NettyUtpClient.this.listener.onData(data, addr, port).ifPresent(response -> {
+                        UtpClient.this.listener.onData(data, addr, port).ifPresent(response -> {
                             ByteBuf respBuf = Unpooled.wrappedBuffer(response);
                             DatagramPacket reply = new DatagramPacket(respBuf, sender);
                             ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
@@ -370,7 +338,7 @@ public class NettyUtpClient implements AutoCloseable {
                             });
                         });
                     } else if (TrackerOnDataListener.isTrackerPacket(data)) {
-                        NettyUtpClient.this.tracker.onData(data, addr, port).ifPresent(response -> {
+                        UtpClient.this.tracker.onData(data, addr, port).ifPresent(response -> {
                             ByteBuf respBuf = Unpooled.wrappedBuffer(response);
                             DatagramPacket reply = new DatagramPacket(respBuf, sender);
                             ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
@@ -382,7 +350,7 @@ public class NettyUtpClient implements AutoCloseable {
                             });
                         });
                     } else {
-                        NettyUtpClient.this.udp.onData(data, addr, port).ifPresent(response -> {
+                        UtpClient.this.udp.onData(data, addr, port).ifPresent(response -> {
                             ByteBuf respBuf = Unpooled.wrappedBuffer(response);
                             DatagramPacket reply = new DatagramPacket(respBuf, sender);
                             ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
@@ -402,7 +370,7 @@ public class NettyUtpClient implements AutoCloseable {
 
         @Override
         public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-            logger.error("NettyUtpClient inbound error: {}", cause.getMessage(), cause);
+            logger.error("NettyUtpClient inbound error: {}", cause.getMessage());
         }
     }
 }

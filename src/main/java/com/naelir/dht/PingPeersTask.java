@@ -3,14 +3,14 @@ package com.naelir.dht;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.utp.NettyUtpClient;
+import com.naelir.utp.UtpClient;
 
 public class PingPeersTask implements ITask {
     public static final Logger logger = LogManager.getLogger(PingPeersTask.class);
     private Data data;
-    private NettyUtpClient client;
+    private UtpClient client;
 
-    public PingPeersTask(NettyUtpClient client, Data data) {
+    public PingPeersTask(UtpClient client, Data data) {
         this.client = client;
         this.data = data;
     }

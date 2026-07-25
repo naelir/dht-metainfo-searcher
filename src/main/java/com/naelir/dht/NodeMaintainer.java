@@ -10,14 +10,16 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.utp.NettyUtpClient;
+import com.naelir.bt.BtTcpClient;
+import com.naelir.utp.UtpClient;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
 
 public class NodeMaintainer implements Runnable, AutoCloseable {
     public static final Logger logger = LogManager.getLogger(NodeMaintainer.class);
 
-    public static NodeMaintainer of(Data data, NettyUtpClient client, Semaphore semaphore) throws Exception {
+    public static NodeMaintainer of(Data data, UtpClient client, BtTcpClient tcp, Semaphore semaphore)
+            throws Exception {
         Queue<ITask> tasks = new LinkedList<>();
         if (data.arguments.onlyHashes) {
             tasks.offer(new FindNodeTask(client, data));
@@ -26,11 +28,26 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new GetPeersTask(client, data));
-            tasks.offer(new RemoveNoPeersTask(data));
+//            tasks.offer(new RemoveNoPeersTask(data));
 //            tasks.offer(new PingPeersTask(client, data));
-            tasks.offer(new CreateMetaTask(data));
-            tasks.offer(new TorrentResolverTask(client, data));
+            GetPeersTask gpt = new GetPeersTask(client, data);
+            CreateMetaTask ct = new CreateMetaTask(data);
+            UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.udptasks);
+            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
+            tasks.offer(new ITask() {
+                @Override
+                public boolean resolved() {
+                    return gpt.resolved() && trt.resolved() && ttrt.resolved();
+                }
+
+                @Override
+                public void run() {
+                    gpt.run();
+                    ct.run();
+                    trt.run();
+                    ttrt.run();
+                }
+            });
             tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, semaphore);
@@ -60,9 +77,9 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         if (this.currentTask != null && this.data.myself != null) {
             this.currentTask.run();
             if (this.currentTask.resolved()) {
+                this.tasks.offer(this.currentTask);
                 logger.info("task {} resolved", this.currentTask.getClass().getSimpleName());
                 this.currentTask = this.tasks.poll();
-                this.tasks.offer(this.currentTask);
             }
         } else {
             this.semaphore.release();
