@@ -30,6 +30,7 @@ import com.naelir.dht.SavedCompactInfo;
 import com.naelir.fs.FileDB;
 import com.naelir.fs.FileRecord;
 import com.naelir.fs.SavedCompactInfoFileManager;
+import com.naelir.tracker.TrackerOnDataListener;
 import com.naelir.utp.UtpClient;
 import com.naelir.utp.UTPManager;
 import com.naelir.utp.UtpOnDataListener;
@@ -109,8 +110,9 @@ public final class DhtApplication implements Runnable {
             UTPManager manager = new UTPManager();
             UtpOnDataListener utp = new UtpOnDataListener(manager);
             UdpOnDataListener udp = new UdpOnDataListener(data);
+            TrackerOnDataListener tr = new TrackerOnDataListener(data);
             try (
-                    UtpClient utpClient = new UtpClient(utp, udp, data);
+                    UtpClient utpClient = new UtpClient(utp, udp, tr, data);
                     BtTcpClient tcpClient = new BtTcpClient(data);
                     NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient, this.semaphore)
             ) {

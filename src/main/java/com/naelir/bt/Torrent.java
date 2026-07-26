@@ -18,6 +18,7 @@ public class Torrent {
         return name;
     }
 
+    boolean active;
     String infoHash;
     TorrentMeta meta;
     Deque<Node> peers;
@@ -30,6 +31,10 @@ public class Torrent {
         this.askNodes = new CopyOnWriteArraySet<>();
     }
 
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+    
     public Torrent addNodes(Collection<Node> nodes) {
         this.askNodes.addAll(nodes);
         return this;

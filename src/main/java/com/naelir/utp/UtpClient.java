@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.Level;
@@ -107,11 +108,7 @@ public class UtpClient implements AutoCloseable {
     private Data data;
     private TrackerOnDataListener tracker;
 
-    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, Data data) {
-        this(utp, udp, data, new TrackerOnDataListener());
-    }
-
-    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, Data data, TrackerOnDataListener tracker) {
+    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, TrackerOnDataListener tracker, Data data) {
         this.listener = utp;
         this.udp = udp;
         this.data = data;
@@ -163,7 +160,7 @@ public class UtpClient implements AutoCloseable {
     }
     // ── Inbound handler ───────────────────────────────────────────────────────
 
-    public void connectTracker(Torrent torrent, InetAddress addr, int port) throws Exception {
+    public void connectTracker(Set<Torrent> torrents, InetAddress addr, int port) throws Exception {
         int tid = new Random().nextInt();
         ConnectRequest connectRequest = new ConnectRequest(tid & 0x7FFFFFFF); // Ensure positive transaction ID
         byte[] encode = connectRequest.encode();

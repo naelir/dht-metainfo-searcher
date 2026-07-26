@@ -2,12 +2,19 @@ package com.naelir.tracker;
 
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Torrent;
+import com.naelir.dht.Data;
 import com.naelir.dht.From;
+import com.naelir.dht.Generator;
+import com.naelir.tracker.ScrapeResponse.TorrentStats;
 
 /**
  * Parses incoming UDP datagrams that belong to the BitTorrent UDP tracker
@@ -32,7 +39,13 @@ import com.naelir.dht.From;
  */
 public class TrackerOnDataListener {
     public static final Logger logger = LogManager.getLogger(TrackerOnDataListener.class);
+    private Data data;
+    private List<Torrent> list;
 
+    public TrackerOnDataListener(Data data) {
+        this.data = data;
+        this.list = Collections.emptyList();
+    }
     /**
      * Entry point called by the network layer for every incoming UDP datagram
      * that has been identified as a tracker protocol packet.
@@ -107,7 +120,17 @@ public class TrackerOnDataListener {
 
     protected Optional<byte[]> onConnectResponse(ConnectResponse resp, From from) {
         logger.debug("Tracker → {} from {}", resp, from);
-        return Optional.empty();
+        list = data.torrents.values().stream().filter(t -> t.meta() != null).distinct().toList();
+        int min = Math.min(list.size(), 74);
+        byte[] bytes = new byte[min * 20];
+        List<Torrent> subList = list.subList(0, min);
+        for (int i = 0; i < min; i++) {
+            String hash = subList.get(i).infoHash();
+            byte[] array = Generator.toArray(hash);
+            System.arraycopy(array, 0, bytes, i * 20, 20);
+        }
+        ScrapeRequest scrapeRequest = new ScrapeRequest(resp.connectionId, resp.transactionId, bytes);
+        return Optional.of(scrapeRequest.encode());
     }
 
     protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
@@ -117,6 +140,17 @@ public class TrackerOnDataListener {
 
     protected Optional<byte[]> onScrapeResponse(ScrapeResponse resp, From from) {
         logger.debug("Tracker → {} from {}", resp, from);
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            Torrent torrent = list.get(i);
+            if (i >= resp.stats.size()) {
+                logger.warn("Scrape response missing file stats for torrent {}", torrent.infoHash());
+                continue;
+            }
+            TorrentStats stats = resp.stats.get(i);
+            logger.debug("Scrape stats for {}: stats={}", torrent.infoHash(), stats);
+            torrent.setActive(stats.seeders() > 0 || stats.leechers() > 0);
+        }
         return Optional.empty();
     }
 
