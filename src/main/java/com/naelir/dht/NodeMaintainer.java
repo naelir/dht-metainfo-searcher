@@ -24,20 +24,24 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         if (data.arguments.onlyHashes) {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
+            tasks.offer(new UpdateSeenTorrentsTask(data));
             tasks.offer(new NextIdTask(data));
+        } else if (data.arguments.scrape) {
+            tasks.offer(new CreateScrapeHashesTask(data));
+            tasks.offer(new ScrapeTask(client, data));
+            tasks.offer(new WaitScrapeTask(data));
+            tasks.offer(new UpdateSeenTorrentsTask(data));
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-//            tasks.offer(new RemoveNoPeersTask(data));
-//            tasks.offer(new PingPeersTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.udptasks);
-            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
+//            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
             tasks.offer(new ITask() {
                 @Override
                 public boolean resolved() {
-                    return gpt.resolved() && trt.resolved() && ttrt.resolved();
+                    return gpt.resolved() && trt.resolved();// && ttrt.resolved();
                 }
 
                 @Override
@@ -45,9 +49,10 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
                     gpt.run();
                     ct.run();
                     trt.run();
-                    ttrt.run();
+                    //ttrt.run();
                 }
             });
+            tasks.offer(new UpdateSeenTorrentsTask(data));
             tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, semaphore);

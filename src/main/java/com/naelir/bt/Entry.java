@@ -6,23 +6,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Entry {
     
-    @JsonProperty("name")
+    @JsonProperty("n")
     public String name;
 
-    @JsonProperty("hash")
+    @JsonProperty("h")
     public String hash;
 
-    @JsonProperty("fileCount")
+    @JsonProperty("fc")
     public int fileCount;
 
     /** Unix epoch milliseconds */
-    @JsonProperty("foundTime")
+    @JsonProperty("se")
     public long foundTime;
     
-    @JsonProperty("size")
+    @JsonProperty("sz")
     public long size;
     
-    @JsonProperty("genre")
+    @JsonProperty("g")
     public String genre;
     
     public Entry() {}

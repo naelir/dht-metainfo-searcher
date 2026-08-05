@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -79,7 +80,7 @@ public class ResponseResolver {
                 return resolve(decode, from);
             } else if (KRPCKeys.RESPONSE.equals(type)) {
                 ByteBuffer tid = KRPCKeys.getTransaction(map);
-                IRequest found = this.data.sent.remove(tid);
+                IRequest found = this.data.requestsSent.remove(tid);
                 if (found != null) {
                     Object decode = CommandDecoder.decodeResponse(map, found);
                     logFrom(decode, from);
@@ -88,7 +89,7 @@ public class ResponseResolver {
             } else {
                 ByteBuffer tid = KRPCKeys.getTransaction(map);
                 if (tid != null) {
-                    IRequest found = this.data.sent.remove(tid);
+                    IRequest found = this.data.requestsSent.remove(tid);
                     if (found != null) {
                         Object decode = CommandDecoder.decodeError(map, found);
                         logFrom(decode, from);
@@ -247,18 +248,19 @@ public class ResponseResolver {
         if (decode.samples.isEmpty() == false) {
             int i = 0;
             for (String hash : decode.samples) {
-                if (this.data.torrents.containsKey(hash)) {
-                    logger.info("hash {} already resolved", hash);
+                Torrent torrent = this.data.torrents.get(hash);
+                boolean skip = this.data.torrents.containsKey(hash);
+
+                if (skip) {
+                    data.forUpdate.add(new ImmutablePair<>(hash, new ImmutablePair<>(torrent.meta().getName(), 1)));
+                    logger.info("hash {} already resolved as {}", hash, torrent.meta().getName());
                     i++;
                 } else {
-                    this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node));
+                    this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node, false));
                 }
             }
             logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
             decode.request.node.put(Command.SAMPLE_R);
-//            for (Node node : decode.nodes) {
-//                this.data.table.insert(node);
-//            }
         }
     }
 }

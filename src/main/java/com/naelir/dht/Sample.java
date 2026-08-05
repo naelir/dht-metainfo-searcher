@@ -15,12 +15,17 @@ public class Sample {
     boolean skip;
     
     public Sample(Torrent torrent, Node from) {
+        this(torrent, from, false);
+    }
+
+    public Sample(Torrent torrent, Node from, boolean skip) {
         this.torrent = torrent;
         this.from = from;
         this.table = new RoutingTable();
         this.peers = new HashSet<>();
+        this.skip = skip;
     }
-
+    
     public synchronized void addPeer(Node list) {
         this.peers.add(list);
     }

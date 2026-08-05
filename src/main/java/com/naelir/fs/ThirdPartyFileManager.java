@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +24,8 @@ import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
 import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
+import com.naelir.http.HttpsClient;
+import com.naelir.http.HttpsClient.HttpsClientException;
 
 public class ThirdPartyFileManager {
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
@@ -36,9 +39,8 @@ public class ThirdPartyFileManager {
             "<tr.+?><a href=\\\"http:\\/\\/itorrents.net\\/torrent\\/(.+?)\\.torrent\\?title=(.+?)\\\".+?<td class=\\\"tdnormal\\\">(.+?)<.+?<td class=\\\"tdnormal\\\">(.+?) ([KBMGbytes]+)<\\/td><td class=\"tdseed\">(.+?)<\\/td><td class=\"tdleech\">(\\d+)<\\/td>");
 
     public void convertLimePages(String path) {
-        String random = RandomStringUtils.randomAlphabetic(10);
-        Path to = HOME.resolve(random);
-        Path toC = HOME.resolve(random);
+        Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
+        Path toC = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path from = HOME.resolve(path);
         try (
                 BufferedReader reader = Files.newBufferedReader(from);
@@ -50,6 +52,8 @@ public class ThirdPartyFileManager {
             ObjectMapper mapper = new ObjectMapper();
             String line;
             int i = 0;
+            writer.append("[");
+            writerC.append("[");
             while ((line = reader.readLine()) != null) {
                 i++;
                 if (i % 1000 == 0) {
@@ -81,12 +85,14 @@ public class ThirdPartyFileManager {
                     }
                 }
             }
+            writer.append("]");
+            writerC.append("]");
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
     }
 
-    public void convertPages(Path path) throws IOException {
+    public void convertBtPages(Path path) throws IOException {
         String random = RandomStringUtils.randomAlphabetic(10);
         Path to = HOME.resolve(random);
         try (
@@ -110,7 +116,7 @@ public class ThirdPartyFileManager {
                                 }
                                 line = line.substring(indexOf, line.length());
                             }
-                            Meta meta = parse(line);
+                            BtMeta meta = parse(line);
                             if (meta.filesCount > 100) {
                                 System.err.println(meta);
                                 continue;
@@ -138,8 +144,55 @@ public class ThirdPartyFileManager {
             logger.error(e.getMessage(), e);
         }
     }
+    public void convertRarbg(Path path) {
+        String random = RandomStringUtils.randomAlphabetic(10);
+        Path to = HOME.resolve(random);
+        try (
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
 
-    Meta parse(String line) {
+            Pattern date = Pattern.compile("\\d\\d\\d\\d\\.\\d\\d\\.\\d\\d");
+            Files.walk(path).forEach(e -> {
+
+                if (Files.isDirectory(e) == false) {
+                try (
+                        BufferedReader reader = Files.newBufferedReader(e);
+                ) {
+                        String line;
+                        int i = 0;
+                        while ((line = reader.readLine()) != null) {
+                            i++;
+                            if (i % 1000 == 0) {
+                                logger.info("processed {} lines", i);
+                            }
+                            String hash = line.substring(20, 60);
+                            String name = line.substring(64, line.length());
+                            if (NameFilter.TV.matcher(name).find() || date.matcher(name).find()) {
+                                continue;
+                            }
+                            TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, 0L)));
+                            Entry entry = TorrentMeta.toEntry(hash, meta);
+                            entry.genre = "MUSIC";
+//                            if (NameFilter.match(name, true) && meta.getGenre().equals(Genre.XXX) == false) {
+                                writer.append(mapper.writeValueAsString(entry));
+                                writer.append(",");
+                                writer.newLine();
+                                writer.flush();
+//                            }
+                        }
+                    
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }});
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+    
+    BtMeta parse(String line) {
         Matcher matcher00 = PR_FILE_COUNT.matcher(line);
         Matcher matcher02 = AGO.matcher(line);
         Matcher matcher03 = SIZE.matcher(line);
@@ -159,35 +212,47 @@ public class ThirdPartyFileManager {
         c = c == 0 ? 1 : c;
         name = name.replaceAll("%5B", "[");
         name = name.replaceAll("%5D", "]");
-        return new Meta(c, ago, sizel, hash, name);
+        return new BtMeta(c, ago, sizel, hash, name);
     }
 
-    static class LimeMeta {
-        String ago;
-        long size;
-        String hash;
-        String name;
-        int seeders;
-        int leechers;
-
-        public LimeMeta(String ago, long size, String hash, String name, int seeders, int leechers) {
-            this.ago = ago;
-            this.size = size;
-            this.hash = hash;
-            this.name = name;
-            this.seeders = seeders;
-            this.leechers = leechers;
+    
+    public String limePages(int lastMoviePage, int lastTvPage, int lastGamePage) throws HttpsClientException, InterruptedException {
+        Map<String, Integer> list = Map.of(
+                "https://www.limetorrents.fun/browse-torrents/Movies/date/", lastMoviePage,
+                "https://www.limetorrents.fun/browse-torrents/TV-shows/date/", lastTvPage,
+                "https://www.limetorrents.fun/browse-torrents/Games/date/", lastGamePage
+                );
+        String n = RandomStringUtils.randomAlphanumeric(10);
+        Path path = Paths.get(System.getProperty("user.home")).resolve(n);
+        try (
+                HttpsClient name = new HttpsClient();
+                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND)
+        ) {
+            for (java.util.Map.Entry<String, Integer> e : list.entrySet()) {
+                for (int i = 1; i < e.getValue(); i++) {
+                    String body = name.get(e.getKey().concat(Integer.toString(i)));
+                    bufferedWriter.append(body);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                    Thread.sleep(1000);
+                    System.out.println(i);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return n;
     }
 
-    private static class Meta {
+    private static class BtMeta {
         int filesCount;
         String ago;
         long size;
         String hash;
         String name;
 
-        public Meta(int filesCount, String ago, long size, String hash, String name) {
+        public BtMeta(int filesCount, String ago, long size, String hash, String name) {
             this.filesCount = filesCount;
             this.ago = ago;
             this.size = size;

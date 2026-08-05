@@ -133,7 +133,7 @@ public class UdpClient implements Runnable, AutoCloseable {
         logTo(request, from);
         byte[] encode = BEncoder.encode(request);
         if (isEmpty(from.ip) == false && port > 0) {
-            this.db.sent.put(request.tid(), request);
+            this.db.requestsSent.put(request.tid(), request);
             DatagramPacket packet = new DatagramPacket(encode, encode.length, addr, port);
             this.socket.send(packet);
         }

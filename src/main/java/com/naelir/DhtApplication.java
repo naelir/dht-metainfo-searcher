@@ -20,7 +20,9 @@ import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
+import com.naelir.bt.TorrentMeta;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
@@ -28,7 +30,6 @@ import com.naelir.dht.NodeMaintainer;
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.fs.FileDB;
-import com.naelir.fs.FileRecord;
 import com.naelir.fs.SavedCompactInfoFileManager;
 import com.naelir.tracker.TrackerOnDataListener;
 import com.naelir.utp.UtpClient;
@@ -58,7 +59,7 @@ public final class DhtApplication implements Runnable {
 
     public static void main(String[] args) throws Exception {
         Arguments arguments = new Arguments.Builder()
-                .continueFrom("266666666666666666666666666666666666665C")
+                .continueFrom("1C28F5C28F5C28F5C28F5C28F5C28F5C28F5C288")
                 .bitspaceParts(100)
                 .build();
         logger.info("Starting with {}", arguments);
@@ -102,11 +103,12 @@ public final class DhtApplication implements Runnable {
             Queue<ByteBuffer> divide = divide(from);
             String tcpmyself = Generator.generatePeerID();
             FileDB fm = FileDB.of();
-            List<FileRecord> all = fm.getAll().stream().filter(e -> "NO_PEERS".equals(e.getName()) == false).toList();
+            
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
             Data data = new Data(divide, tcpmyself, fm, this.arguments);
-            all.forEach(e -> data.torrents.put(e.getId(), Torrent.EMPTY));
+            String myself = Generator.toHex(data.myself.array());
+            fm.getAll(myself.toLowerCase()).forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
             UTPManager manager = new UTPManager();
             UtpOnDataListener utp = new UtpOnDataListener(manager);
             UdpOnDataListener udp = new UdpOnDataListener(data);

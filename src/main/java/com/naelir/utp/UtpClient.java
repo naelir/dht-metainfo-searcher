@@ -32,11 +32,14 @@ import com.naelir.dht.IRequest;
 import com.naelir.dht.Node;
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.dht.PingRequest;
+import com.naelir.dht.Sample;
 import com.naelir.dht.SampleInfoHashesRequest;
 import com.naelir.dht.Token;
 import com.naelir.fs.FileDB;
 import com.naelir.tracker.ConnectRequest;
+import com.naelir.tracker.TrackerConnection;
 import com.naelir.tracker.TrackerOnDataListener;
+import com.naelir.tracker.TrackerUdpManager;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
@@ -106,13 +109,13 @@ public class UtpClient implements AutoCloseable {
     private volatile Channel channel;
     private UdpOnDataListener udp;
     private Data data;
-    private TrackerOnDataListener tracker;
+    private TrackerOnDataListener trackerListener;
 
     public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, TrackerOnDataListener tracker, Data data) {
         this.listener = utp;
         this.udp = udp;
         this.data = data;
-        this.tracker = tracker;
+        this.trackerListener = tracker;
         this.group = new NioEventLoopGroup(1, new DefaultThreadFactory("utp-client"));
     }
 
@@ -158,15 +161,14 @@ public class UtpClient implements AutoCloseable {
     public void connectPeer(Torrent torrent, Node node) throws Exception {
         connectPeer(torrent, node.address(), node.port());
     }
-    // ── Inbound handler ───────────────────────────────────────────────────────
 
-    public void connectTracker(Set<Torrent> torrents, InetAddress addr, int port) throws Exception {
-        int tid = new Random().nextInt();
-        ConnectRequest connectRequest = new ConnectRequest(tid & 0x7FFFFFFF); // Ensure positive transaction ID
-        byte[] encode = connectRequest.encode();
-        writeUdp(encode, addr, port);
+    public void scrape(Set<String> hashes, InetAddress addr, int port) throws Exception {
+        TrackerUdpManager trackerUdpManager = this.trackerListener.getTrackerUdpManager();
+        byte[] encode = trackerUdpManager.newConnection(hashes, addr.getHostAddress(), port);
+        if (encode != null && encode.length > 0) {
+            writeUdp(encode, addr, port);
+        }
     }
-    // ── uTP packet detection ──────────────────────────────────────────────────
 
     private List<Node> contactPoints() throws UnknownHostException {
 //      byte[] byName1 = InetAddress.getByName("router.bittorrent.com").getAddress();
@@ -174,7 +176,6 @@ public class UtpClient implements AutoCloseable {
 //      byte[] byName3 = InetAddress.getByName("router.utorrent.com").getAddress();
         return List.of(/* new Node(byName1, 6881), */new Node(byName2, 6881)/* , new Node(byName3, 6881) */);
     }
-    // ── main (smoke-test) ─────────────────────────────────────────────────────
 
     public void explore(ByteBuffer myself, List<Node> closest) throws Exception {
         if (closest.isEmpty() == false) {
@@ -206,12 +207,12 @@ public class UtpClient implements AutoCloseable {
                 from.port);
     }
 
-    public void send(IRequest request, InetAddress addr, int port) throws Exception {
+    void send(IRequest request, InetAddress addr, int port) throws Exception {
         From from = new From(addr.getAddress(), port);
         logTo(request, from);
         byte[] encode = BEncoder.encode(request);
         if (port > 0) {
-            this.data.sent.put(request.tid(), request);
+            this.data.requestsSent.put(request.tid(), request);
             writeUdp(encode, addr, port);
         }
     }
@@ -335,7 +336,7 @@ public class UtpClient implements AutoCloseable {
                             });
                         });
                     } else if (TrackerOnDataListener.isTrackerPacket(data)) {
-                        UtpClient.this.tracker.onData(data, addr, port).ifPresent(response -> {
+                        UtpClient.this.trackerListener.onData(data, addr, port).ifPresent(response -> {
                             ByteBuf respBuf = Unpooled.wrappedBuffer(response);
                             DatagramPacket reply = new DatagramPacket(respBuf, sender);
                             ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {

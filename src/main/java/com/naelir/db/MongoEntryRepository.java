@@ -2,10 +2,9 @@ package com.naelir.db;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
@@ -18,10 +17,12 @@ import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.IndexOptions;
 import com.mongodb.client.model.Indexes;
 import com.mongodb.client.model.ReplaceOptions;
+import com.mongodb.client.model.Sorts;
+import com.mongodb.client.model.UpdateOptions;
+import com.mongodb.client.result.UpdateResult;
 import com.naelir.bt.Entry;
 
 public class MongoEntryRepository implements EntryRepository {
-    public static final Logger logger = LogManager.getLogger(MongoEntryRepository.class);
 
     private final MongoCollection<Document> collection;
 
@@ -32,19 +33,9 @@ public class MongoEntryRepository implements EntryRepository {
         ensureIndexes();
     }
 
-    /**
-     * Creates the required indexes if they do not already exist.
-     *
-     * <ul>
-     *   <li>Unique index on {@code hash}     – enforces deduplication and drives findByHash.</li>
-     *   <li>Descending index on {@code foundTime} – speeds up the sort in {@link #findAll}.</li>
-     * </ul>
-     */
     private void ensureIndexes() {
-        collection.createIndex(Indexes.ascending("hash"), new IndexOptions().unique(true).sparse(true));
-        collection.createIndex(Indexes.descending("foundTime"));
-        // speeds up prefix queries; arbitrary contains-searches are a full-scan in any DB
-        collection.createIndex(Indexes.ascending("name"));
+        collection.createIndex(Indexes.ascending("h"), new IndexOptions().unique(true));
+        collection.createIndex(Indexes.ascending("n"));
     }
 
     // ...existing code...
@@ -62,8 +53,8 @@ public class MongoEntryRepository implements EntryRepository {
         }
         Pattern regex = Pattern.compile(sb.toString(), Pattern.CASE_INSENSITIVE);
         List<Entry> results = new ArrayList<>();
-        collection.find(Filters.regex("name", regex))
-                .sort(new Document("foundTime", -1))
+        collection.find(Filters.regex("n", regex))
+                .sort(Sorts.descending("_id"))
                 .limit(200)
                 .forEach(doc -> results.add(fromDocument(doc)));
         return results;
@@ -74,7 +65,7 @@ public class MongoEntryRepository implements EntryRepository {
         int skip = Math.max(0, (page - 1) * pageSize);
         List<Entry> results = new ArrayList<>();
         collection.find()
-                .sort(new Document("foundTime", -1))
+                .sort(Sorts.descending("_id"))
                 .skip(skip)
                 .limit(pageSize)
                 .forEach(doc -> results.add(fromDocument(doc)));
@@ -94,30 +85,39 @@ public class MongoEntryRepository implements EntryRepository {
             if (e.getCode() == 11000) {
                 return entry;   // duplicate hash – skip silently
             }
-            logger.error("Failed to insert entry with hash {}: ", entry.hash, e);
-
+            throw e;
         }
         return entry;
     }
 
     @Override
     public boolean update(Entry entry) {
-        Bson eq = Filters.eq("hash", entry.hash);
+        Bson eq = Filters.eq("h", entry.hash);
         Document document = toDocument(entry);
         ReplaceOptions upsert = new ReplaceOptions().upsert(false);
         long modified = collection.replaceOne(eq, document, upsert).getModifiedCount();
         return modified > 0;
     }
+    
+
+    @Override
+    public long updateMany(List<String> hashes) {
+        Bson filter = Filters.in("h", hashes);
+        UpdateOptions upsert = new UpdateOptions().upsert(false);
+        Bson update = new Document("$set", new Document("se", System.currentTimeMillis()));
+        UpdateResult result = collection.updateMany(filter, update, upsert);
+        return result.getMatchedCount();
+    }
 
     @Override
     public Entry findByHash(String hash) {
-        Document doc = collection.find(Filters.eq("hash", hash)).first();
+        Document doc = collection.find(Filters.eq("h", hash)).first();
         return doc != null ? fromDocument(doc) : null;
     }
 
     @Override
     public boolean remove(String hash) {
-        long deleted = collection.deleteOne(Filters.eq("hash", hash)).getDeletedCount();
+        long deleted = collection.deleteOne(Filters.eq("h", hash)).getDeletedCount();
         return deleted > 0;
     }
 
@@ -126,23 +126,23 @@ public class MongoEntryRepository implements EntryRepository {
     // -------------------------------------------------------------------------
 
     private static Document toDocument(Entry e) {
-        return new Document("hash", e.hash)
-                .append("name", e.name)
-                .append("genre", e.genre)
-                .append("fileCount", e.fileCount)
-                .append("foundTime", e.foundTime)
-                .append("size", e.size);
+        return new Document("h", e.hash)
+                .append("n", e.name)
+                .append("g", e.genre)
+                .append("fc", e.fileCount)
+                .append("se", e.foundTime)
+                .append("sz", e.size);
     }
 
     private static Entry fromDocument(Document doc) {
         Entry e = new Entry();
-        e.name      = doc.getString("name");
-        e.hash      = doc.getString("hash");
-        e.genre      = doc.getString("genre");
-        Integer fc  = doc.getInteger("fileCount");
+        e.name      = doc.getString("n");
+        e.hash      = doc.getString("h");
+        e.genre      = doc.getString("g");
+        Integer fc  = doc.getInteger("fc");
         e.fileCount = fc != null ? fc : 0;
-        e.foundTime = toLong(doc.get("foundTime"));
-        e.size       = toLong(doc.get("size"));
+        e.foundTime = toLong(doc.get("se"));
+        e.size       = toLong(doc.get("sz"));
         return e;
     }
 

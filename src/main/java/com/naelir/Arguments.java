@@ -1,5 +1,7 @@
 package com.naelir;
 
+import java.net.InetAddress;
+
 public class Arguments {
     /**
      * Parses command-line arguments.
@@ -70,6 +72,9 @@ public class Arguments {
     public final String table;
     public int queryCount = 1;
     public int minPeers = 10;
+    public boolean scrape;
+    public InetAddress trackerUrl;
+    public int trackerPort;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;

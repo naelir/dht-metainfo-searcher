@@ -22,22 +22,19 @@ public class Torrent {
     String infoHash;
     TorrentMeta meta;
     Deque<Node> peers;
-    Set<Node> askNodes;
-
-    public Torrent(String infoHash) {
-        super();
+    
+    public Torrent(String infoHash, TorrentMeta meta) {
         this.infoHash = infoHash;
         this.peers = new ArrayDeque<>(20);
-        this.askNodes = new CopyOnWriteArraySet<>();
+        this.meta = meta;
+    }
+    
+    public Torrent(String infoHash) {
+        this(infoHash, null);
     }
 
     public void setActive(boolean active) {
         this.active = active;
-    }
-    
-    public Torrent addNodes(Collection<Node> nodes) {
-        this.askNodes.addAll(nodes);
-        return this;
     }
 
     public Torrent addPeer(Node node) {
@@ -55,10 +52,6 @@ public class Torrent {
             return false;
         Torrent other = (Torrent) obj;
         return Objects.equals(this.infoHash, other.infoHash);
-    }
-
-    public Set<Node> getAskNodes() {
-        return this.askNodes;
     }
 
     @Override

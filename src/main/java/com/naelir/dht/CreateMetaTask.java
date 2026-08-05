@@ -13,7 +13,7 @@ public class CreateMetaTask implements ITask {
 
     @Override
     public boolean resolved() {
-        return this.data.samples.isEmpty();
+        return true;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class CreateMetaTask implements ITask {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
                         this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent));
-                        this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+//                        this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
                     }
                 }
             }
