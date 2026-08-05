@@ -1,17 +1,31 @@
 package com.naelir;
 
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class Arguments {
     /**
      * Parses command-line arguments.
      * <ul>
-     * <li>{@code --max-nodes <int>} – maximum number of closest nodes to collect
-     * (default: 100)</li>
-     * <li>{@code --post-url <String>} – URL to POST resolved metadata to (default:
-     * null)</li>
      * <li>{@code --bitspace-parts <int>} – number of bit-space partitions to
      * explore (default: 100)</li>
+     * <li>{@code --continue-from <String>} – hash to continue from (default:
+     * null)</li>
+     * <li>{@code --only-hashes} – only collect hashes, skip metadata resolution
+     * (default: false)</li>
+     * <li>{@code --connection-string <String>} – database connection string
+     * (default: null)</li>
+     * <li>{@code --db <String>} – database name (default: null)</li>
+     * <li>{@code --table <String>} – table name (default: null)</li>
+     * <li>{@code --query-count <int>} – number of queries to perform per hash
+     * (default: 1)</li>
+     * <li>{@code --min-peers <int>} – minimum number of peers required before
+     * resolving metadata (default: 1)</li>
+     * <li>{@code --scrape} – enable scraping of peer counts from trackers
+     * (default: false)</li>
+     * <li>{@code --tracker-url <String>} – tracker host address (default:
+     * null)</li>
+     * <li>{@code --tracker-port <int>} – tracker port (default: 0)</li>
      * </ul>
      */
     public static Arguments parse(String[] args) {
@@ -21,11 +35,16 @@ public class Arguments {
         String connectionString = null;
         String db = null;
         String table = null;
+        int queryCount = 1;
+        int minPeers = 1;
+        boolean scrape = false;
+        InetAddress trackerUrl = null;
+        int trackerPort = 0;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
             case "--continue-from":
                 if (i + 1 >= args.length)
-                    throw new IllegalArgumentException("Missing value for --max-nodes");
+                    throw new IllegalArgumentException("Missing value for --continue-from");
                 from = args[++i];
                 break;
             case "--bitspace-parts":
@@ -51,6 +70,33 @@ public class Arguments {
                     throw new IllegalArgumentException("Missing value for --table");
                 table = args[++i];
                 break;
+            case "--query-count":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --query-count");
+                queryCount = Integer.parseInt(args[++i]);
+                break;
+            case "--min-peers":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --min-peers");
+                minPeers = Integer.parseInt(args[++i]);
+                break;
+            case "--scrape":
+                scrape = true;
+                break;
+            case "--tracker-url":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --tracker-url");
+                try {
+                    trackerUrl = InetAddress.getByName(args[++i]);
+                } catch (UnknownHostException e) {
+                    throw new IllegalArgumentException("Invalid value for --tracker-url: " + args[i], e);
+                }
+                break;
+            case "--tracker-port":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --tracker-port");
+                trackerPort = Integer.parseInt(args[++i]);
+                break;
             default:
                 throw new IllegalArgumentException("Unknown argument: " + args[i]);
             }
@@ -61,6 +107,11 @@ public class Arguments {
                 .connectionString(connectionString)
                 .db(db)
                 .table(table)
+                .queryCount(queryCount)
+                .minPeers(minPeers)
+                .scrape(scrape)
+                .trackerUrl(trackerUrl)
+                .trackerPort(trackerPort)
                 .build();
     }
 
@@ -70,11 +121,11 @@ public class Arguments {
     public final String connectionString;
     public final String db;
     public final String table;
-    public int queryCount = 1;
-    public int minPeers = 10;
-    public boolean scrape;
-    public InetAddress trackerUrl;
-    public int trackerPort;
+    public final int queryCount;
+    public final int minPeers;
+    public final boolean scrape;
+    public final InetAddress trackerUrl;
+    public final int trackerPort;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -83,6 +134,11 @@ public class Arguments {
         this.connectionString = builder.connectionString;
         this.db = builder.db;
         this.table = builder.table;
+        this.queryCount = builder.queryCount;
+        this.minPeers = builder.minPeers;
+        this.scrape = builder.scrape;
+        this.trackerUrl = builder.trackerUrl;
+        this.trackerPort = builder.trackerPort;
     }
 
     @Override
@@ -97,6 +153,11 @@ public class Arguments {
         private String connectionString;
         private String db;
         private String table;
+        private int queryCount = 1;
+        private int minPeers = 1;
+        private boolean scrape;
+        private InetAddress trackerUrl;
+        private int trackerPort;
 
         public Builder bitspaceParts(int bitspaceParts) {
             this.bitspaceParts = bitspaceParts;
@@ -129,6 +190,31 @@ public class Arguments {
 
         public Builder table(String table) {
             this.table = table;
+            return this;
+        }
+
+        public Builder queryCount(int queryCount) {
+            this.queryCount = queryCount;
+            return this;
+        }
+
+        public Builder minPeers(int minPeers) {
+            this.minPeers = minPeers;
+            return this;
+        }
+
+        public Builder scrape(boolean scrape) {
+            this.scrape = scrape;
+            return this;
+        }
+
+        public Builder trackerUrl(InetAddress trackerUrl) {
+            this.trackerUrl = trackerUrl;
+            return this;
+        }
+
+        public Builder trackerPort(int trackerPort) {
+            this.trackerPort = trackerPort;
             return this;
         }
     }
