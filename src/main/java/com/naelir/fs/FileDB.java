@@ -160,6 +160,8 @@ public class FileDB implements AutoCloseable {
             
             mainwriter.write(json);
             mainwriter.newLine();
+            writer.flush();
+            mainwriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);
         }

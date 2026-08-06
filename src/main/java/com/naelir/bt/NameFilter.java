@@ -56,6 +56,19 @@ public class NameFilter {
         } else
             return isOk;
     }
+    
+    public static boolean fine(String name, boolean checkDash) {
+        boolean isxxx = matchKeyword(name.toLowerCase(), XXX);
+        if (isxxx) {
+            return false;
+        }
+        boolean isOk = VALID_NAMES.matcher(name).matches();
+        if (checkDash) {
+            boolean haveDash = name.indexOf("-") > 0;
+            return isOk && haveDash;
+        } else
+            return isOk;
+    }
 
     public static boolean match(TorrentMeta meta) {
         if (StringUtils.isBlank(meta.getName()))

@@ -37,6 +37,7 @@ public class Arguments {
         String table = null;
         int queryCount = 1;
         int minPeers = 1;
+        int maxNodes = 600;
         boolean scrape = false;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
@@ -80,6 +81,11 @@ public class Arguments {
                     throw new IllegalArgumentException("Missing value for --min-peers");
                 minPeers = Integer.parseInt(args[++i]);
                 break;
+            case "--max-nodes":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --max-nodes");
+                maxNodes = Integer.parseInt(args[++i]);
+                break;
             case "--scrape":
                 scrape = true;
                 break;
@@ -112,6 +118,7 @@ public class Arguments {
                 .scrape(scrape)
                 .trackerUrl(trackerUrl)
                 .trackerPort(trackerPort)
+                .maxNodes(maxNodes)
                 .build();
     }
 
@@ -126,6 +133,7 @@ public class Arguments {
     public final boolean scrape;
     public final InetAddress trackerUrl;
     public final int trackerPort;
+    public final int maxNodes;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -139,6 +147,7 @@ public class Arguments {
         this.scrape = builder.scrape;
         this.trackerUrl = builder.trackerUrl;
         this.trackerPort = builder.trackerPort;
+        this.maxNodes = builder.maxNodes;
     }
 
     @Override
@@ -158,9 +167,15 @@ public class Arguments {
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;
+        private int maxNodes;
 
         public Builder bitspaceParts(int bitspaceParts) {
             this.bitspaceParts = bitspaceParts;
+            return this;
+        }
+
+        public Builder maxNodes(int maxNodes) {
+            this.maxNodes = maxNodes;
             return this;
         }
 

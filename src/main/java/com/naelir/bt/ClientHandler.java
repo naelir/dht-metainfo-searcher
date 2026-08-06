@@ -133,9 +133,11 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             logger.info("resolved {}", meta.getName());
             if (this.task.meta() == null) {
                 this.task.setMeta(meta);
-                boolean fine = NameFilter.match(meta.getName(), true);
+                Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);
+                this.data.fileManager.create(entry);
+                boolean fine = NameFilter.fine(meta.getName(), true);
                 if (fine) {
-                    this.data.dbRepo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
+                    this.data.dbRepo.insert(entry);
                 }
             }
         } else {

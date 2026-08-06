@@ -19,7 +19,7 @@ public class FindNodeTask implements ITask {
 
     @Override
     public boolean resolved() {
-        return this.data.table.nodes().size() >= 600;
+        return this.data.table.nodes().size() >= this.data.arguments.maxNodes;
     }
 
     @Override

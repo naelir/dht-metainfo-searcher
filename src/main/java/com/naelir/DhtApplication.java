@@ -126,6 +126,8 @@ public final class DhtApplication implements Runnable {
                 List<Node> nodes = data.table.closest(data.myself, 20);
                 peersFm.saveCompactInfo(data.myself, nodes);
                 logger.info("stopped with {}", Generator.toHex(data.myself.array()));
+            } finally {
+                fm.close();
             }
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);

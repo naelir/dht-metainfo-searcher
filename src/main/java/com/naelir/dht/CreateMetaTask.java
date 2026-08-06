@@ -3,6 +3,8 @@ package com.naelir.dht;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.IpRangeFilter;
+
 public class CreateMetaTask implements ITask {
     public static final Logger logger = LogManager.getLogger(CreateMetaTask.class);
     private Data data;
@@ -27,8 +29,10 @@ public class CreateMetaTask implements ITask {
                 for (Node peer : sample.peers) {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
-                        this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent));
-//                        this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+                        if (IpRangeFilter.isAllowed(peer.ip)) {
+                            this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+//                            this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
+                        }
                     }
                 }
             }
