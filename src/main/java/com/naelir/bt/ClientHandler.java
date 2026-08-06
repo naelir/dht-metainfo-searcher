@@ -135,8 +135,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 this.task.setMeta(meta);
                 Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);
                 this.data.fileManager.create(entry);
-                boolean fine = NameFilter.fine(meta.getName(), true);
+                boolean fine = NameFilter.fine(meta, true);
                 if (fine) {
+                    this.data.fileManager.createFine(entry);
                     this.data.dbRepo.insert(entry);
                 }
             }

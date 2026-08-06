@@ -157,10 +157,17 @@ public class FileDB implements AutoCloseable {
             String entryLine = toEntryLine(fr.hash, json);
             writer.write(entryLine);
             writer.newLine();
-            
+            writer.flush();
+        } catch (Exception e) {
+            logger.error("cannot save", e);
+        }
+    }
+    
+    public void createFine(Entry fr) {
+        try {
+            String json = MAPPER.writeValueAsString(fr);            
             mainwriter.write(json);
             mainwriter.newLine();
-            writer.flush();
             mainwriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);

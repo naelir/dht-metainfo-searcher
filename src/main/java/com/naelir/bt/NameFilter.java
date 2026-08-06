@@ -28,11 +28,11 @@ public class NameFilter {
             return Genre.TV;
         else if (MUSIC.matcher(lower).find())
             return Genre.MUSIC;
-        else if (lower.indexOf("ps5-") >= 0)
+        else if (lower.indexOf(".ps5-") >= 0 || lower.indexOf(".psx-") >= 0 || lower.indexOf(".ps4-") >= 0)
             return Genre.GAME_PLAYSTATION;
-        else if (lower.indexOf("nsw-") >= 0)
+        else if (lower.indexOf("_nsw-") >= 0)
             return Genre.GAME_NINTENDO;
-        else if (lower.indexOf("xbox360-") >= 0)
+        else if (lower.indexOf("_xbox360-") >= 0 || lower.indexOf("_xbox-") >= 0 || lower.indexOf("_xbox_") >= 0)
             return Genre.GAME_XBOX;
         else if (lower.indexOf("incl.key") >= 0)
             return Genre.SOFTWARE;
@@ -41,14 +41,11 @@ public class NameFilter {
         else if (matchGameKeyword(list))
             return Genre.GAME_PC;
         else if (matchKeyword(lower, GAME_KEYWORDS))
-            return Genre.GAME_PC;
+            return Genre.GAME_REPACK;
         return Genre.UNKNOWN;
     }
 
     public static boolean match(String name, boolean checkDash) {
-//        for (String string : KNOWN_PREFIXES) {
-//            name.replaceAll(string, "");
-//        }
         boolean isOk = VALID_NAMES.matcher(name).matches();
         if (checkDash) {
             boolean haveDash = name.indexOf("-") > 0;
@@ -57,9 +54,9 @@ public class NameFilter {
             return isOk;
     }
     
-    public static boolean fine(String name, boolean checkDash) {
-        boolean isxxx = matchKeyword(name.toLowerCase(), XXX);
-        if (isxxx) {
+    public static boolean fine(TorrentMeta meta, boolean checkDash) {
+        String name = meta.getName();
+        if (Genre.XXX.equals(meta.genre) || Genre.UNKNOWN.equals(meta.genre)) {
             return false;
         }
         boolean isOk = VALID_NAMES.matcher(name).matches();
@@ -89,11 +86,15 @@ public class NameFilter {
     }
 
     static boolean matchGameKeyword(List<MetaFile> list) {
+        boolean hasIso = false;
+        boolean hasNfo = false;
         for (MetaFile e : list) {
-            if (e.path.contains(".iso"))
-                return true;
+            if (e.path.endsWith(".iso"))
+                hasIso = true;
+            if (e.path.endsWith(".nfo"))
+                hasNfo = true;
         }
-        return false;
+        return hasIso && hasNfo;
     }
 
     static boolean matchKeyword(String name, List<String> keys) {

@@ -149,7 +149,7 @@ public class TorrentMeta {
     }
 
     public enum Genre {
-        MOVIE_VIDEO("MOV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
+        MOVIE_VIDEO("MOV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_REPACK("GAME_REPACK"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
         GAME_XBOX("XBOX"), SOFTWARE("APP"), UNKNOWN("NA"), XXX("XXX");
 
         private String txt;
