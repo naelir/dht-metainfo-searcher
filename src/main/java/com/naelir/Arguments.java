@@ -167,7 +167,7 @@ public class Arguments {
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;
-        private int maxNodes;
+        private int maxNodes = 300;
 
         public Builder bitspaceParts(int bitspaceParts) {
             this.bitspaceParts = bitspaceParts;

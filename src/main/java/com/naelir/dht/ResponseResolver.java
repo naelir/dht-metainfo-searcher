@@ -159,8 +159,11 @@ public class ResponseResolver {
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip = true;
-                    logger.info("marking sample {} as crap due to too many denied peers", hex);
-                    data.fileManager.create(Entry.crap(hex));
+                    // 1 is too low, can be a false positive, 2 is better
+                    if (size > 1) {
+                        logger.info("marking sample {} as crap due to too many denied peers", hex);
+                        data.fileManager.create(Entry.crap(hex));
+                    }
                 }
                 logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
