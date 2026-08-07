@@ -12,10 +12,11 @@ public class NameFilter {
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
-    private static final List<String> GAME_KEYWORDS = List.of("FitGirl");
+    private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
+    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws");
     private static final List<String> XXX = List.of("xxx");
     public static final Pattern TV = Pattern.compile("\\.S\\d+E\\d+\\.");
-    private static final Pattern MUSIC = Pattern.compile("\\([a-zA-Z]+\\d+\\)");
+    private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
     private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
 
     public static Genre from(String name, List<MetaFile> list) {
@@ -24,6 +25,8 @@ public class NameFilter {
         String lower = name.toLowerCase();
         if (matchKeyword(lower, XXX))
             return Genre.XXX;
+        else if (matchKeyword(lower, ANIME_KEYWORDS))
+            return Genre.ANIME;
         else if (TV.matcher(lower).find())
             return Genre.TV;
         else if (MUSIC.matcher(lower).find())
@@ -40,7 +43,7 @@ public class NameFilter {
             return Genre.MOVIE_VIDEO;
         else if (matchGameKeyword(list))
             return Genre.GAME_PC;
-        else if (matchKeyword(lower, GAME_KEYWORDS))
+        else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
             return Genre.GAME_REPACK;
         return Genre.UNKNOWN;
     }
