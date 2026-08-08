@@ -83,8 +83,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
             }
             if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
-                TorrentMeta meta = new TorrentMeta("CRAP");
-                this.task.setMeta(meta);
                 logger.error("deny id {}", hr.peerID.substring(0, 3));
                 ctx.close();
             }

@@ -249,17 +249,16 @@ public class FileDB implements AutoCloseable {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
+                if (line.startsWith("{") == false) {
+                    continue;
+                }
                 Entry e = MAPPER.readValue(line, Entry.class);
                 create(e);
             }
+            System.out.println(i);
         } catch (IOException e) {
             logger.error("line {}", i, e);
         }
-    }
-    
-    public static void main(String[] args) throws IOException {
-        FileDB of = FileDB.of();
-        of.importDone("all");
     }
 
 }

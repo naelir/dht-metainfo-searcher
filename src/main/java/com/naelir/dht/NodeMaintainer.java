@@ -34,6 +34,7 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
+            tasks.offer(new UpdateSeenTorrentsTask(data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.udptasks);
@@ -52,7 +53,6 @@ public class NodeMaintainer implements Runnable, AutoCloseable {
                     //ttrt.run();
                 }
             });
-            tasks.offer(new UpdateSeenTorrentsTask(data));
             tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, semaphore);
