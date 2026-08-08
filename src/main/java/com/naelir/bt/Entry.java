@@ -8,7 +8,7 @@ import com.naelir.bt.TorrentMeta.Genre;
 public class Entry {
     
     public static Entry crap(String hash) {
-        return new Entry("chinese_korean_crap", hash, 0, System.currentTimeMillis(), 0, Genre.UNKNOWN.name());
+        return new Entry("chinese_korean_crap", hash, 0, 0, 0, Genre.UNKNOWN.name());
     }
     
     @JsonProperty("n")
