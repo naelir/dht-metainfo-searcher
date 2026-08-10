@@ -7,11 +7,11 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class UtpDataListener {
-    public static final Logger logger = LogManager.getLogger(UtpDataListener.class);
+public class UtpOnDataListener {
+    public static final Logger logger = LogManager.getLogger(UtpOnDataListener.class);
     private UTPManager utpManager;
 
-    public UtpDataListener(UTPManager utpManager) {
+    public UtpOnDataListener(UTPManager utpManager) {
         this.utpManager = utpManager;
     }
 

@@ -1,12 +1,8 @@
 package com.naelir.tracker;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * UDP tracker IPv4 announce request (BEP-15).

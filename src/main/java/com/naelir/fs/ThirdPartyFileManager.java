@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,124 +24,23 @@ import com.naelir.bt.Torrent;
 import com.naelir.bt.TorrentMeta;
 import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
+import com.naelir.http.HttpsClient;
+import com.naelir.http.HttpsClient.HttpsClientException;
 
 public class ThirdPartyFileManager {
-    static class BtDiggMeta {
-        int filesCount;
-        String ago;
-        long size;
-        String hash;
-        String name;
-
-        public BtDiggMeta(int filesCount, String ago, long size, String hash, String name) {
-            super();
-            this.filesCount = filesCount;
-            this.ago = ago;
-            this.size = size;
-            this.hash = hash;
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return "Meta [hash=" + this.hash + ", name=" + this.name + ", filesCount=" + this.filesCount + ", ago="
-                    + this.ago + ", size=" + this.size + "]";
-        }
-    }
-
-    static class LimeMeta {
-        String ago;
-        long size;
-        String hash;
-        String name;
-        int seeders;
-        int leechers;
-
-        public LimeMeta(String ago, long size, String hash, String name, int seeders, int leechers) {
-            this.ago = ago;
-            this.size = size;
-            this.hash = hash;
-            this.name = name;
-            this.seeders = seeders;
-            this.leechers = leechers;
-        }
-    }
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     public static final Logger logger = LogManager.getLogger(ThirdPartyFileManager.class);
-
     private static final Pattern PR_FILE_COUNT = Pattern
-            .compile("<span class=torrent_files style=color:#666;padding-left:10px>(\\d+)</span>");
+            .compile("<span class=torrent_files style=color:#666;padding-inline-start:10px>(\\d+)</span>");
     private static final Pattern AGO = Pattern.compile("found (.+?)<.+");
     private static final Pattern SIZE = Pattern.compile("([\\d\\.]+?)&nbsp;([MBGK]+)");
     private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
     private static final Pattern LIME = Pattern.compile(
             "<tr.+?><a href=\\\"http:\\/\\/itorrents.net\\/torrent\\/(.+?)\\.torrent\\?title=(.+?)\\\".+?<td class=\\\"tdnormal\\\">(.+?)<.+?<td class=\\\"tdnormal\\\">(.+?) ([KBMGbytes]+)<\\/td><td class=\"tdseed\">(.+?)<\\/td><td class=\"tdleech\">(\\d+)<\\/td>");
 
-    public void convertBtDigPages(Path path) throws IOException {
-        String random = RandomStringUtils.randomAlphabetic(10);
-        Path to = HOME.resolve(random);
-        Path toC = HOME.resolve(random);
-        try (
-                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
-                        StandardOpenOption.APPEND);
-                BufferedWriter writerC = Files.newBufferedWriter(toC, StandardOpenOption.CREATE,
-                        StandardOpenOption.APPEND)
-        ) {
-            ObjectMapper mapper = new ObjectMapper();
-            Files.walk(path).forEach(e -> {
-                try {
-                    if (Files.isDirectory(e) == false) {
-                        System.out.println(e.getFileName());
-                        String lines = Files.readString(e);
-                        String[] split = lines.split("\\.\\.\\.");
-                        List<Torrent> list = new ArrayList<Torrent>();
-                        for (int i = 0; i < split.length; i++) {
-                            String line = split[i];
-                            if (i == 0) {
-                                int indexOf = line.indexOf("Previous");
-                                if (indexOf < 0) {
-                                    continue;
-                                }
-                                line = line.substring(indexOf, line.length());
-                            }
-                            BtDiggMeta meta = parse(line);
-                            if (meta.filesCount > 100) {
-                                System.err.println(meta);
-                                continue;
-                            }
-                            MetaFile me = new MetaFile(meta.name, meta.size);
-                            TorrentMeta name = new TorrentMeta(meta.hash, meta.name, List.of(me));
-                            name.count = meta.filesCount;
-                            Torrent e2 = new Torrent(meta.hash);
-                            e2.setMeta(name);
-                            list.add(e2);
-                            Entry entry = TorrentMeta.toEntry(meta.hash, name);
-                            if (NameFilter.match(name) && name.getGenre().equals(Genre.XXX) == false) {
-                                writer.append(mapper.writeValueAsString(entry));
-                                writer.append(",");
-                                writer.newLine();
-                                writer.flush();
-                            } else {
-                                writerC.append(mapper.writeValueAsString(entry));
-                                writerC.append(",");
-                                writerC.newLine();
-                                writerC.flush();
-                            }
-                        }
-                    }
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            });
-        } catch (IOException e) {
-            logger.error(e.getMessage(), e);
-        }
-    }
-
     public void convertLimePages(String path) {
-        String random = RandomStringUtils.randomAlphabetic(10);
-        Path to = HOME.resolve(random);
-        Path toC = HOME.resolve(random);
+        Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
+        Path toC = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path from = HOME.resolve(path);
         try (
                 BufferedReader reader = Files.newBufferedReader(from);
@@ -152,6 +52,8 @@ public class ThirdPartyFileManager {
             ObjectMapper mapper = new ObjectMapper();
             String line;
             int i = 0;
+            writer.append("[");
+            writerC.append("[");
             while ((line = reader.readLine()) != null) {
                 i++;
                 if (i % 1000 == 0) {
@@ -183,12 +85,114 @@ public class ThirdPartyFileManager {
                     }
                 }
             }
+            writer.append("]");
+            writerC.append("]");
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
     }
 
-    BtDiggMeta parse(String line) {
+    public void convertBtPages(Path path) throws IOException {
+        String random = RandomStringUtils.randomAlphabetic(10);
+        Path to = HOME.resolve(random);
+        try (
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            Files.walk(path).forEach(e -> {
+                try {
+                    if (Files.isDirectory(e) == false) {
+                        System.out.println(e.getFileName());
+                        String lines = Files.readString(e);
+                        String[] split = lines.split("\\.\\.\\.");
+                        List<Torrent> list = new ArrayList<Torrent>();
+                        for (int i = 0; i < split.length; i++) {
+                            String line = split[i];
+                            if (i == 0) {
+                                int indexOf = line.indexOf("다음 →");
+                                if (indexOf < 0) {
+                                    continue;
+                                }
+                                line = line.substring(indexOf, line.length());
+                            }
+                            BtMeta meta = parse(line);
+                            if (meta.filesCount > 100) {
+                                System.err.println(meta);
+                                continue;
+                            }
+                            MetaFile me = new MetaFile(meta.name, meta.size);
+                            TorrentMeta name = new TorrentMeta(meta.hash, meta.name, List.of(me));
+                            name.count = meta.filesCount;
+                            Torrent e2 = new Torrent(meta.hash);
+                            e2.setMeta(name);
+                            list.add(e2);
+                            Entry entry = TorrentMeta.toEntry(meta.hash, name);
+                            if (NameFilter.match(meta.name, true)) {
+                                writer.append(mapper.writeValueAsString(entry));
+                                writer.append(",");
+                                writer.newLine();
+                                writer.flush();
+                            }
+                        }
+                    }
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            });
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+    public void convertRarbg(Path path) {
+        String random = RandomStringUtils.randomAlphabetic(10);
+        Path to = HOME.resolve(random);
+        try (
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+
+            Pattern date = Pattern.compile("\\d\\d\\d\\d\\.\\d\\d\\.\\d\\d");
+            Files.walk(path).forEach(e -> {
+
+                if (Files.isDirectory(e) == false) {
+                try (
+                        BufferedReader reader = Files.newBufferedReader(e);
+                ) {
+                        String line;
+                        int i = 0;
+                        while ((line = reader.readLine()) != null) {
+                            i++;
+                            if (i % 1000 == 0) {
+                                logger.info("processed {} lines", i);
+                            }
+                            String hash = line.substring(20, 60);
+                            String name = line.substring(64, line.length());
+                            if (NameFilter.TV.matcher(name).find() || date.matcher(name).find()) {
+                                continue;
+                            }
+                            TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, 0L)));
+                            Entry entry = TorrentMeta.toEntry(hash, meta);
+                            entry.genre = "MUSIC";
+//                            if (NameFilter.match(name, true) && meta.getGenre().equals(Genre.XXX) == false) {
+                                writer.append(mapper.writeValueAsString(entry));
+                                writer.append(",");
+                                writer.newLine();
+                                writer.flush();
+//                            }
+                        }
+                    
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+            }});
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+    
+    BtMeta parse(String line) {
         Matcher matcher00 = PR_FILE_COUNT.matcher(line);
         Matcher matcher02 = AGO.matcher(line);
         Matcher matcher03 = SIZE.matcher(line);
@@ -206,6 +210,60 @@ public class ThirdPartyFileManager {
         long sizel = (long) (Float.valueOf(size) * multiplier);
         int c = Integer.parseInt(count0);
         c = c == 0 ? 1 : c;
-        return new BtDiggMeta(c, ago, sizel, hash, name);
+        name = name.replaceAll("%5B", "[");
+        name = name.replaceAll("%5D", "]");
+        return new BtMeta(c, ago, sizel, hash, name);
+    }
+
+    
+    public String limePages(int lastMoviePage, int lastTvPage, int lastGamePage) throws HttpsClientException, InterruptedException {
+        Map<String, Integer> list = Map.of(
+                "https://www.limetorrents.fun/browse-torrents/Movies/date/", lastMoviePage,
+                "https://www.limetorrents.fun/browse-torrents/TV-shows/date/", lastTvPage,
+                "https://www.limetorrents.fun/browse-torrents/Games/date/", lastGamePage
+                );
+        String n = RandomStringUtils.randomAlphanumeric(10);
+        Path path = Paths.get(System.getProperty("user.home")).resolve(n);
+        try (
+                HttpsClient name = new HttpsClient();
+                BufferedWriter bufferedWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND)
+        ) {
+            for (java.util.Map.Entry<String, Integer> e : list.entrySet()) {
+                for (int i = 1; i < e.getValue(); i++) {
+                    String body = name.get(e.getKey().concat(Integer.toString(i)));
+                    bufferedWriter.append(body);
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                    Thread.sleep(1000);
+                    System.out.println(i);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return n;
+    }
+
+    private static class BtMeta {
+        int filesCount;
+        String ago;
+        long size;
+        String hash;
+        String name;
+
+        public BtMeta(int filesCount, String ago, long size, String hash, String name) {
+            this.filesCount = filesCount;
+            this.ago = ago;
+            this.size = size;
+            this.hash = hash;
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return "Meta [hash=" + this.hash + ", name=" + this.name + ", filesCount=" + this.filesCount + ", ago="
+                    + this.ago + ", size=" + this.size + "]";
+        }
     }
 }

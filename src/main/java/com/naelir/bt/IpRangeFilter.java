@@ -6,9 +6,6 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +31,7 @@ public class IpRangeFilter {
     private static List<IpRange> getAllowRanges() {
         List<IpRange> list = new ArrayList<>();
         try (
-                InputStream is = Files.newInputStream(Path.of("ip-range.allow"), StandardOpenOption.READ);
+                InputStream is = IpRangeFilter.class.getResourceAsStream("/ip-range.allow");
                 InputStreamReader name = new InputStreamReader(is);
                 BufferedReader e = new BufferedReader(name)
         ) {
@@ -69,7 +66,7 @@ public class IpRangeFilter {
     private static List<IpRange> getDenyRanges() {
         List<IpRange> list = new ArrayList<>();
         try (
-                InputStream is = Files.newInputStream(Path.of("ip-range.deny"), StandardOpenOption.READ);
+                InputStream is = IpRangeFilter.class.getResourceAsStream("/ip-range.deny");
                 InputStreamReader name = new InputStreamReader(is);
                 BufferedReader e = new BufferedReader(name)
         ) {

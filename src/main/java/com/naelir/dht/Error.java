@@ -12,8 +12,8 @@ import com.github.cdefgah.bencoder4j.model.BencodedList;
 public final class Error implements IResponse {
     Integer status;
     String message;
-    public ByteBuffer tid;
-    private IRequest found;
+    ByteBuffer tid;
+    IRequest found;
 
     public Error(Integer status, String message, ByteBuffer tid) {
         this.status = status;
@@ -57,6 +57,10 @@ public final class Error implements IResponse {
         return this.found;
     }
 
+    public ByteBuffer tid() {
+        return tid;
+    }
+    
     @Override
     public String toString() {
         return "Error [status=" + this.status + ", message=" + this.message + "]";

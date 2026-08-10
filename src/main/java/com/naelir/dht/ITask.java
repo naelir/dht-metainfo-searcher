@@ -5,5 +5,9 @@ public interface ITask extends Runnable {
     void run();
 
     boolean resolved();
+    
+    default boolean stop() {
+        return false;
+    }
 
 }

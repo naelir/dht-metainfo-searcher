@@ -7,6 +7,8 @@ import java.util.Queue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import io.netty.buffer.ByteBuf;
+
 import com.naelir.bt.ClientHandler;
 import com.naelir.bt.HandshakeDecoder;
 import com.naelir.bt.HandshakeEncoder;
@@ -90,8 +92,22 @@ public class UtpPeerSession {
     /**
      * Closes the embedded pipeline (fires {@code channelInactive} on
      * {@link ClientHandler}, giving it a chance to persist partial metadata).
+     * <p>
+     * Any {@link ByteBuf}s that were encoded and placed in the outbound queue but
+     * never consumed (e.g. the BT handshake produced during {@code channelActive}
+     * if the uTP peer never replied) are explicitly released here to prevent
+     * Netty's {@code ResourceLeakDetector} from reporting a leak.
      */
     public void close() {
+        // Drain and release any ByteBufs left in the outbound queue before
+        // closing so they are not garbage-collected without being released.
+        Queue<Object> outbound = this.embeddedChannel.outboundMessages();
+        Object msg;
+        while ((msg = outbound.poll()) != null) {
+            if (msg instanceof ByteBuf buf) {
+                buf.release();
+            }
+        }
         this.embeddedChannel.close();
     }
     // ── Lifecycle ─────────────────────────────────────────────────────────────

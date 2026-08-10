@@ -7,38 +7,38 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.utp.NettyUtpClient;
+import com.naelir.utp.UtpClient;
 
 public class GetPeersTask implements ITask {
-    private static final int QUERY_MAX_NODES = 2;
-    private static final int SAMPLE_QUERY_COUNT = 4;
     public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
     private Data data;
-    private NettyUtpClient client;
+    private UtpClient client;
 
-    public GetPeersTask(NettyUtpClient client, Data data) {
+    public GetPeersTask(UtpClient client, Data data) {
         this.client = client;
         this.data = data;
     }
 
     List<Node> closest(Sample sample, ByteBuffer wrap) {
-        if (sample.isCrap)
+        if (sample.skip)
             return Collections.emptyList();
         if (sample.checked == 0)
             return List.of(sample.from);
-        else if (sample.checked == 1)
-            return this.data.table.closest(wrap, 8);
-        else if (sample.checked > 1)
-            return sample.table.closest(wrap, 8);
+        else if (sample.checked < this.data.arguments.queryCount)
+            return this.data.table.closest(wrap, 4);
         else
             return Collections.emptyList();
     }
 
     @Override
     public boolean resolved() {
-        int size = this.data.samples.values().stream().filter(s -> s.checked < SAMPLE_QUERY_COUNT).toList().size();
+        int size = this.data.samples.values()
+                .stream()
+                .filter(s -> s.checked < this.data.arguments.queryCount)
+                .toList()
+                .size();
         logger.info("getPeers: {} samples left to check", size);
-        return this.data.samples.values().stream().allMatch(s -> s.checked >= SAMPLE_QUERY_COUNT);
+        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.queryCount);
     }
 
     @Override
@@ -53,20 +53,21 @@ public class GetPeersTask implements ITask {
                 }
                 byte[] array = Generator.toArray(sample.torrent.infoHash());
                 ByteBuffer wrap = ByteBuffer.wrap(array);
-                if (sample.checked < SAMPLE_QUERY_COUNT) {
-                    sample.checked++;
+                if (sample.checked < this.data.arguments.queryCount) {
                     if (sample.peers.isEmpty() == false) {
+                        sample.checked++;
                         logger.info("samples {} has peers, continue", sample.torrent.infoHash());
                         continue;
                     }
-                    if (sample.isCrap) {
+                    if (sample.skip) {
+                        sample.checked++;
                         logger.info("samples {} is asian crap, continue", sample.torrent.infoHash());
                         continue;
                     }
                     List<Node> closest = closest(sample, wrap);
-                    List<Node> sublist = sublist(closest, 2);
-                    logger.info("sample {} sending get peers to {}", sample.torrent.infoHash(), sublist);
-                    for (Node node : sublist) {
+                    sample.checked++;
+                    logger.info("sample {} sending get peers to {}", sample.torrent.infoHash(), closest.size());
+                    for (Node node : closest) {
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                         i++;

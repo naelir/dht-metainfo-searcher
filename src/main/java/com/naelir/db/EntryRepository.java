@@ -37,4 +37,6 @@ public interface EntryRepository {
      * @return {@code true} if an entry was actually removed.
      */
     boolean remove(String hash);
+
+    long updateMany(List<String> hashes);
 }

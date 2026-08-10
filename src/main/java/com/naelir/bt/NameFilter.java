@@ -12,12 +12,11 @@ public class NameFilter {
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
-    //
-    private static final List<String> KNOWN_PREFIXES = List.of("www.UIndex.org    -    ");
-
-    private static final List<String> XXX = List.of("xxx");
-    private static final Pattern TV = Pattern.compile("\\.S\\d+E\\d+\\.");
-    private static final Pattern MUSIC = Pattern.compile("\\([a-zA-Z]+\\d+\\)");
+    private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
+    private static final List<String> ANIME_KEYWORDS = List.of("-ToonsHub", "-VARYG", "-Tsundere-Raws");
+    private static final List<String> XXX = List.of("xxx", "jav");
+    public static final Pattern TV = Pattern.compile("\\.S\\d+E\\d+\\.");
+    private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
     private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
 
     public static Genre from(String name, List<MetaFile> list) {
@@ -26,15 +25,17 @@ public class NameFilter {
         String lower = name.toLowerCase();
         if (matchKeyword(lower, XXX))
             return Genre.XXX;
-        else if (TV.matcher(lower).find())
+        else if (matchKeyword(name, ANIME_KEYWORDS))
+            return Genre.ANIME;
+        else if (TV.matcher(name).find())
             return Genre.TV;
-        else if (MUSIC.matcher(lower).find())
+        else if (MUSIC.matcher(name).find())
             return Genre.MUSIC;
-        else if (lower.indexOf("ps5-") >= 0)
+        else if (lower.indexOf(".ps5-") >= 0 || lower.indexOf(".psx-") >= 0 || lower.indexOf(".ps4-") >= 0)
             return Genre.GAME_PLAYSTATION;
-        else if (lower.indexOf("nsw-") >= 0)
+        else if (lower.indexOf("_nsw-") >= 0)
             return Genre.GAME_NINTENDO;
-        else if (lower.indexOf("xbox360-") >= 0)
+        else if (lower.indexOf("_xbox360-") >= 0 || lower.indexOf("_xbox-") >= 0 || lower.indexOf("_xbox_") >= 0)
             return Genre.GAME_XBOX;
         else if (lower.indexOf("incl.key") >= 0)
             return Genre.SOFTWARE;
@@ -42,12 +43,32 @@ public class NameFilter {
             return Genre.MOVIE_VIDEO;
         else if (matchGameKeyword(list))
             return Genre.GAME_PC;
+        else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
+            return Genre.GAME_REPACK;
         return Genre.UNKNOWN;
     }
 
     public static boolean match(String name, boolean checkDash) {
-        for (String string : KNOWN_PREFIXES) {
-            name.replaceAll(string, "");
+        boolean isOk = VALID_NAMES.matcher(name).matches();
+        if (checkDash) {
+            boolean haveDash = name.indexOf("-") > 0;
+            return isOk && haveDash;
+        } else
+            return isOk;
+    }
+    
+
+
+    public static boolean fineMatch(String name, boolean checkDash) {
+        if (matchKeyword(name.toLowerCase(), XXX))
+            return false;
+        return match(name, checkDash);
+    }
+    
+    public static boolean fine(TorrentMeta meta, boolean checkDash) {
+        String name = meta.getName();
+        if (Genre.XXX.equals(meta.genre) || Genre.UNKNOWN.equals(meta.genre)) {
+            return false;
         }
         boolean isOk = VALID_NAMES.matcher(name).matches();
         if (checkDash) {
@@ -76,11 +97,15 @@ public class NameFilter {
     }
 
     static boolean matchGameKeyword(List<MetaFile> list) {
+        boolean hasIso = false;
+        boolean hasNfo = false;
         for (MetaFile e : list) {
-            if (e.path.contains(".iso"))
-                return true;
+            if (e.path.endsWith(".iso"))
+                hasIso = true;
+            if (e.path.endsWith(".nfo"))
+                hasNfo = true;
         }
-        return false;
+        return hasIso && hasNfo;
     }
 
     static boolean matchKeyword(String name, List<String> keys) {
@@ -91,5 +116,4 @@ public class NameFilter {
         }
         return false;
     }
-
 }

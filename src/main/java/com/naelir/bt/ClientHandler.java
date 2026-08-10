@@ -43,7 +43,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
     public ClientHandler(Data data, Torrent task) {
         this.data = data;
-        this.myself = data.getTcpmyself();
+        this.myself = data.tcpmyself;
         this.task = Objects.requireNonNull(task);
         this.metadata = new byte[0];
     }
@@ -83,9 +83,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
             }
             if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
-                TorrentMeta meta = new TorrentMeta("CRAP");
-                this.task.setMeta(meta);
-                this.data.fm.saveMeta(this.task.infoHash, meta);
                 logger.error("deny id {}", hr.peerID.substring(0, 3));
                 ctx.close();
             }
@@ -128,14 +125,19 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     void decode(boolean complete, byte[] addr, int port) {
         Optional<BencodedDictionary> decode = complete ? BDecoder.decode(this.metadata)
                 : TorrentMeta.parse(this.metadata);
-        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(task.infoHash, decode);
+        Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
             logger.info("resolved {}", meta.getName());
             if (this.task.meta() == null) {
-                this.data.fm.saveMeta(this.task.infoHash, meta);
                 this.task.setMeta(meta);
-                this.data.repo.insert(TorrentMeta.toEntry(this.task.infoHash, meta));
+                Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);
+                this.data.fileManager.create(entry);
+                boolean fine = NameFilter.fine(meta, true);
+                if (fine) {
+                    this.data.fileManager.createFine(entry);
+                    this.data.dbRepo.insert(entry);
+                }
             }
         } else {
             logger.error("metadata was invalid");

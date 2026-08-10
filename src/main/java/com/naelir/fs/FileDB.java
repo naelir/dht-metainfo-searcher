@@ -5,17 +5,18 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.naelir.bt.TorrentMeta;
-
+import com.naelir.bt.Entry;
 /**
  * Simple file-backed CRUD store.
  *
@@ -30,32 +31,24 @@ import com.naelir.bt.TorrentMeta;
  * {@code id} column is the unique key.
  */
 public class FileDB implements AutoCloseable {
+    public static final Logger logger = LogManager.getLogger(FileDB.class);
     private static final String SEP = "#";
     private static final String HEX_CHARS = "0123456789abcdef";
     private static final ObjectMapper MAPPER = new ObjectMapper();
     /** Base directory: ~/filedb/ */
-    private static final Path BASE_DIR = Path.of(System.getProperty("user.home")).resolve("filedb");
+    private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
+    private static final Path BASE_DIR = HOME.resolve("filedb");
 
     /** Escapes newlines and the separator character inside field values. */
     private static String escape(String value) {
         return value.replace("\\", "\\\\").replace("\n", "\\n").replace("\r", "\\r").replace(SEP, "\\" + SEP);
     }
 
-    private static FileRecord fromLine(String line) throws IOException {
-        int sep1 = line.indexOf(SEP);
-        if (sep1 < 0)
-            return null;
-        int sep2 = line.indexOf(SEP, sep1 + 1);
-        if (sep2 < 0)
-            return null;
-        String id = unescape(line.substring(0, sep1));
-        String name = unescape(line.substring(sep1 + 1, sep2));
-        TorrentMeta meta = MAPPER.readValue(line.substring(sep2 + 1), TorrentMeta.class);
-        return new FileRecord(id, name, meta);
-    }
-
     public static FileDB of() throws IOException {
         Files.createDirectories(BASE_DIR);
+        Path done = HOME.resolve("done.".concat(RandomStringUtils.randomAlphabetic(5)));
+
+        BufferedWriter mainwriter = Files.newBufferedWriter(done, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         Map<Path, BufferedWriter> writers = new HashMap<>();
         for (char c : HEX_CHARS.toCharArray()) {
             Path shard = shardPath(c);
@@ -64,7 +57,8 @@ public class FileDB implements AutoCloseable {
             }
             writers.put(shard, Files.newBufferedWriter(shard, java.nio.file.StandardOpenOption.APPEND));
         }
-        return new FileDB(writers);
+        Files.createDirectories(HOME);
+        return new FileDB(writers, mainwriter);
     }
 
     /** Returns the shard file for the given hex character (0-f). */
@@ -85,15 +79,20 @@ public class FileDB implements AutoCloseable {
             throw new IllegalArgumentException("id must start with a hex character (0-9, a-f), got: '" + id + "'");
         return shardPath(first);
     }
-    // -------------------------------------------------------------------------
-    // READ
-    // -------------------------------------------------------------------------
 
-    private static String toLine(FileRecord record) throws IOException {
-        String metaJson = MAPPER.writeValueAsString(record.getMeta());
-        return escape(record.getId()) + SEP + escape(record.getName()) + SEP + metaJson;
+    private static String toEntryLine(String hash, String json) throws IOException {
+        return escape(hash) + SEP + json;
     }
-
+    
+    private static Entry fromEntryLine(String line) throws IOException {
+        int sep1 = line.indexOf(SEP);
+        if (sep1 < 0)
+            return null;
+        String id = unescape(line.substring(0, sep1));
+        String other = unescape(line.substring(sep1 + 1, line.length()));
+        return MAPPER.readValue(other, Entry.class);
+    }
+    
     private static String unescape(String value) {
         StringBuilder sb = new StringBuilder();
         boolean escaped = false;
@@ -115,30 +114,17 @@ public class FileDB implements AutoCloseable {
         }
         return sb.toString();
     }
-    // -------------------------------------------------------------------------
-    // UPDATE
-    // -------------------------------------------------------------------------
 
-    private static void writeShard(Path shard, List<FileRecord> records) throws IOException {
-        Path tmp = shard.resolveSibling(shard.getFileName() + ".tmp");
-        try (
-                BufferedWriter writer = Files.newBufferedWriter(tmp)
-        ) {
-            for (FileRecord r : records) {
-                writer.write(toLine(r));
-                writer.newLine();
-            }
-        }
-        Files.move(tmp, shard, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
-    }
     // -------------------------------------------------------------------------
     // DELETE
     // -------------------------------------------------------------------------
 
     private Map<Path, BufferedWriter> writers;
+    private BufferedWriter mainwriter;
 
-    private FileDB(Map<Path, BufferedWriter> writers) {
+    private FileDB(Map<Path, BufferedWriter> writers, BufferedWriter mainwriter) {
         this.writers = writers;//
+        this.mainwriter = mainwriter;
     }
     // -------------------------------------------------------------------------
     // helpers
@@ -149,138 +135,120 @@ public class FileDB implements AutoCloseable {
         for (BufferedWriter bw : this.writers.values()) {
             bw.close();
         }
+        mainwriter.close();
     }
-
-    /**
-     * Appends a new record.
-     *
-     * @throws IllegalArgumentException if a record with the same id already exists
-     */
-    public void create(FileRecord record) throws IOException {
-        Optional<FileRecord> existing = get(record.getId());
-        if (existing.isPresent()) {
-            if (FileRecord.DEFAULT_NAME.equals(existing.get().getName())) {
-                update(record);
-            }
-            return;
-        }
-        Path shard = shardPathForId(record.getId());
-        BufferedWriter writer = this.writers.get(shard);
-        writer.write(toLine(record));
-        writer.newLine();
-    }
-
-    public void create(Set<FileRecord> records) throws IOException {
-        for (FileRecord fr : records) {
-            Path shard = shardPathForId(fr.getId());
+    
+    public void create(Entry fr) {
+        try {
+            Path shard = shardPathForId(fr.hash);
             BufferedWriter writer = this.writers.get(shard);
-            writer.write(toLine(fr));
+            String json = MAPPER.writeValueAsString(fr);
+
+            String entryLine = toEntryLine(fr.hash, json);
+            writer.write(entryLine);
             writer.newLine();
-            System.out.println(fr.hashCode());
+            writer.flush();
+        } catch (Exception e) {
+            logger.error("cannot save", e);
         }
     }
-
-    /**
-     * Deletes the record with the given id.
-     *
-     * @return {@code true} if the record was found and deleted, {@code false}
-     *         otherwise
-     */
-    public boolean delete(String id) throws IOException {
-        Path shard = shardPathForId(id);
-        List<FileRecord> shardRecords = readShard(shard);
-        boolean removed = shardRecords.removeIf(r -> r.getId().equals(id));
-        if (removed) {
-            writeShard(shard, shardRecords);
+    
+    public void createFine(Entry fr) {
+        try {
+            String json = MAPPER.writeValueAsString(fr);            
+            mainwriter.write(json);
+            mainwriter.newLine();
+            mainwriter.flush();
+        } catch (Exception e) {
+            logger.error("cannot save", e);
         }
-        return removed;
     }
-
-    /**
-     * Returns the record with the given id, or {@link Optional#empty()} if not
-     * found.
-     */
-    public Optional<FileRecord> get(String id) throws IOException {
-        Path shard = shardPathForId(id);
-        try (
-                BufferedReader reader = Files.newBufferedReader(shard)
-        ) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.isBlank()) {
-                    continue;
-                }
-                FileRecord record = fromLine(line);
-                if (record != null && record.getId().equals(id))
-                    return Optional.of(record);
-            }
-        }
-        return Optional.empty();
-    }
-
-    /**
-     * Returns all records in the file.
-     */
-    public List<FileRecord> getAll() throws IOException {
-        List<FileRecord> result = new ArrayList<>();
-        for (char c : HEX_CHARS.toCharArray()) {
-            try (
-                    BufferedReader reader = Files.newBufferedReader(shardPath(c))
-            ) {
+    
+    public List<Entry> getAll(String hash) {
+        List<Entry> result = new ArrayList<>();
+        int i = 0;
+        try {
+            List<BufferedReader> list = readers(hash);
+            for (BufferedReader reader : list) {
                 String line;
                 while ((line = reader.readLine()) != null) {
+                    i++;
                     if (line.isBlank()) {
                         continue;
                     }
-                    FileRecord record = fromLine(line);
+                    Entry record = fromEntryLine(line);
                     if (record != null) {
                         result.add(record);
                     }
                 }
+                reader.close();
             }
+        } catch (IOException e) {
+            logger.error("on line {}", i);
         }
+        
         return result;
     }
 
-    private List<FileRecord> readShard(Path shard) throws IOException {
-        List<FileRecord> result = new ArrayList<>();
+    private List<BufferedReader> readers(String c) throws IOException {
+        char first = c.charAt(0);
+        char second = c.charAt(1);
+        if (second > '8') {
+            if (first == 'f') {
+                return List.of(Files.newBufferedReader(shardPath(first)));
+            } else {
+                return List.of(Files.newBufferedReader(shardPath(first)), Files.newBufferedReader(shardPath(first++)));
+            }
+        } else {
+            if (first == '0') {
+                return List.of(Files.newBufferedReader(shardPath(first)));
+            } else {
+                return List.of(Files.newBufferedReader(shardPath(first)), Files.newBufferedReader(shardPath(first--)));
+            }
+        }
+    }
+
+    public void importHashNameCsv(String path) throws IOException {
+        Path from = HOME.resolve(path);
         try (
-                BufferedReader reader = Files.newBufferedReader(shard)
+                BufferedReader reader = Files.newBufferedReader(from);
+        ) {
+            String line;
+            int i = 0;
+            while ((line = reader.readLine()) != null) {
+                i++;
+                String[] split = line.split("#");
+                var entry = new Entry(split[1], split[0], 1, 0, 0, "NA");
+                if (i % 1000 == 0) {
+                    System.out.println(i);
+                }
+                create(entry);
+            }
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+    
+    public void importDone(String path) throws IOException {
+        Path from = HOME.resolve(path);
+        int i = 0;
+
+        try (
+                BufferedReader reader = Files.newBufferedReader(from);
         ) {
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.isBlank()) {
+                i++;
+                if (line.startsWith("{") == false) {
                     continue;
                 }
-                FileRecord record = fromLine(line);
-                if (record != null) {
-                    result.add(record);
-                }
+                Entry e = MAPPER.readValue(line, Entry.class);
+                create(e);
             }
+            System.out.println(i);
+        } catch (IOException e) {
+            logger.error("line {}", i, e);
         }
-        return result;
     }
 
-    /**
-     * Replaces the name of the record with the given id.
-     *
-     * @return {@code true} if the record was found and updated, {@code false}
-     *         otherwise
-     */
-    public boolean update(FileRecord updated) throws IOException {
-        Path shard = shardPathForId(updated.getId());
-        List<FileRecord> shardRecords = readShard(shard);
-        boolean found = false;
-        for (int i = 0; i < shardRecords.size(); i++) {
-            if (shardRecords.get(i).getId().equals(updated.getId())) {
-                shardRecords.set(i, updated);
-                found = true;
-                break;
-            }
-        }
-        if (found) {
-            writeShard(shard, shardRecords);
-        }
-        return found;
-    }
 }

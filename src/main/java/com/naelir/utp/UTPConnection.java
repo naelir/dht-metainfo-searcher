@@ -181,7 +181,8 @@ public class UTPConnection {
         try (
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream()
         ) {
-            for (Object o : out) {
+            Object o;
+            while ((o = out.poll()) != null) {
                 if (o instanceof ByteBuf buf) {
                     try {
                         if (buf.readableBytes() > 0) {
@@ -190,7 +191,7 @@ public class UTPConnection {
                             outputStream.write(bytes);
                         }
                     } finally {
-//                        buf.release();
+                        buf.release();
                     }
                 }
             }

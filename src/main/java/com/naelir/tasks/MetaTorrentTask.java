@@ -1,6 +1,7 @@
-package com.naelir.dht;
+package com.naelir.tasks;
 
 import com.naelir.bt.Torrent;
+import com.naelir.dht.Node;
 
 public class MetaTorrentTask {
     public final Node node;

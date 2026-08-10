@@ -26,6 +26,10 @@ public class AnnouncePeerResponse implements IResponse {
     public void decode(BencodedDictionary map) throws IOException, CircularReferenceException {
         this.tid = KRPCKeys.getTransaction(map);
         BencodedDictionary rsp = KRPCKeys.getResponse(map);
+
+        if (rsp == null) {
+            throw new IOException("Missing response dictionary");
+        }
         this.id = KRPCKeys.getId(rsp);
     }
 
