@@ -1,5 +1,7 @@
 package com.naelir.tasks;
 
+import java.util.List;
+
 import org.apache.commons.lang3.tuple.Pair;
 
 import com.naelir.dht.Data;
@@ -17,14 +19,10 @@ public class CreateScrapeHashesTask implements ITask {
     @Override
     public void run() {
         int step = data.arguments.scrapeStep;
-        for (Pair<String, String> pair : data.unresolved.values()) {
-            data.scrapeHashes.add(pair.getLeft());
-            step--;
-            if (step <= 0) {
-                break;
-            }
-        }
-        
+        int min = Math.min(step, data.unresolved.size());
+        List<Pair<String, String>> subList = data.unresolved.subList(0, min);
+        subList.forEach(pair -> data.scrapeHashes.add(pair.getLeft()));
+        data.unresolved.removeAll(subList);
     }
 
     @Override

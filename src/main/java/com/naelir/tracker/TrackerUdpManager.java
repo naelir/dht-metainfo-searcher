@@ -9,7 +9,6 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -180,12 +179,11 @@ public class TrackerUdpManager {
                     continue;
                 }
                 TorrentStats stats = resp.stats.get(i);
-                Pair<String, String> pair = data.unresolved.get(batch.get(i));
-                if (pair == null)
-                    continue;
                 logger.info("Scrape stats for {}: {}", batch.get(i), stats);
-                int peers = stats.seeders() + stats.leechers();
-                data.forUpdate.add(new ImmutablePair<>(pair.getKey(), new ImmutablePair<>(pair.getValue(), peers)));
+                int peers = stats.seeders() + stats.leechers()/* + stats.completed() */;
+                if (peers > 0) {
+                    data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
+                }
             }
             tc.completeBatch();
         }

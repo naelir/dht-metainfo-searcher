@@ -15,8 +15,7 @@ public class GetPeersRequest implements IRequest {
     String method = "get_peers";
     Node node;
 
-    public GetPeersRequest() {
-        // TODO Auto-generated constructor stub
+    public GetPeersRequest() {//
     }
 
     public GetPeersRequest(ByteBuffer id, ByteBuffer infoHash, Node node) {

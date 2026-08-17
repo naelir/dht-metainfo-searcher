@@ -17,6 +17,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.naelir.bt.Entry;
 import com.naelir.bt.NameFilter;
@@ -35,9 +36,66 @@ public class ThirdPartyFileManager {
     private static final Pattern AGO = Pattern.compile("found (.+?)<.+");
     private static final Pattern SIZE = Pattern.compile("([\\d\\.]+?)&nbsp;([MBGK]+)");
     private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
-    private static final Pattern LIME = Pattern.compile(
-            "<tr.+?><a href=\\\"http:\\/\\/itorrents.net\\/torrent\\/(.+?)\\.torrent\\?title=(.+?)\\\".+?<td class=\\\"tdnormal\\\">(.+?)<.+?<td class=\\\"tdnormal\\\">(.+?) ([KBMGbytes]+)<\\/td><td class=\"tdseed\">(.+?)<\\/td><td class=\"tdleech\">(\\d+)<\\/td>");
+    private static final Pattern UI = Pattern.compile("magnet:\\?xt=urn:btih:(.{40,40}).+torrent-link.*>(.+?)<\\/a><td class=sr-col-size>(.+?) ([GBKkM]+)");
 
+    private static final Pattern LIME = Pattern.compile(
+            "magnet:\\?xt=urn:btih:(.{40,40}).+torrent-link.+?>(.+?)<\\/a><td class=sr-col-size>(.+?) ([GBKkM]+)");
+
+    public void convertUiPages(String path) {
+        Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
+        Path from = HOME.resolve(path);
+        try (
+                BufferedReader reader = Files.newBufferedReader(from);
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            String line;
+            int i = 0;
+            writer.append("[");
+            while ((line = reader.readLine()) != null) {
+                i++;
+                if (i % 1000 == 0) {
+                    logger.info("processed {} lines", i);
+                }
+                String[] split = line.split("<tr>");
+                for (String s : split) {
+                    extracted(writer, mapper, s);
+                }
+                
+            }
+            writer.append("]");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+
+    void extracted(BufferedWriter writer, ObjectMapper mapper, String line)
+            throws IOException, JsonProcessingException {
+        Matcher matcher00 = UI.matcher(line);
+        while (matcher00.find()) {
+            String hash = matcher00.group(1).toUpperCase();
+            String name = matcher00.group(2).replace(" ", ".").concat("[ui]");
+            String sizeS = matcher00.group(3);
+            String suf = matcher00.group(4);
+            int multiplier = "KB".equals(suf) ? 1024
+                    : "MB".equals(suf) ? 1024 * 1024 : "GB".equals(suf) ? 1024 * 1024 * 1024 : 0;
+            long size = 0;
+            try {
+                size = (long) (Float.valueOf(sizeS) * multiplier);
+
+            } catch (NumberFormatException e) {
+                // TODO: handle exception
+            }
+            TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, Long.valueOf(size))));
+            Entry entry = TorrentMeta.toEntry(hash, meta);
+                writer.append(mapper.writeValueAsString(entry));
+            writer.append(",");
+            writer.newLine();
+            writer.flush();
+        }
+    }
+    
     public void convertLimePages(String path) {
         Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path toC = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
@@ -72,7 +130,7 @@ public class ThirdPartyFileManager {
                     long size = (long) (Float.valueOf(sizeS) * multiplier);
                     TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, Long.valueOf(size))));
                     Entry entry = TorrentMeta.toEntry(hash, meta);
-                    if (NameFilter.match(meta) && meta.getGenre().equals(Genre.XXX) == false) {
+                    if (NameFilter.match(name) && meta.getGenre().equals(Genre.XXX) == false) {
                         writer.append(mapper.writeValueAsString(entry));
                         writer.append(",");
                         writer.newLine();
@@ -128,7 +186,7 @@ public class ThirdPartyFileManager {
                             e2.setMeta(name);
                             list.add(e2);
                             Entry entry = TorrentMeta.toEntry(meta.hash, name);
-                            if (NameFilter.match(meta.name, true)) {
+                            if (NameFilter.match(meta.name)) {
                                 writer.append(mapper.writeValueAsString(entry));
                                 writer.append(",");
                                 writer.newLine();
@@ -169,7 +227,7 @@ public class ThirdPartyFileManager {
                             }
                             String hash = line.substring(20, 60);
                             String name = line.substring(64, line.length());
-                            if (NameFilter.TV.matcher(name).find() || date.matcher(name).find()) {
+                            if (NameFilter.TV_SERIES.matcher(name).find() || date.matcher(name).find()) {
                                 continue;
                             }
                             TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, 0L)));

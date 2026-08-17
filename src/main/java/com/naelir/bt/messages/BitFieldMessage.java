@@ -23,13 +23,8 @@ public class BitFieldMessage extends AbstractPeerWireMessage {
         byte[] name = new byte[this.length];
         buffer.readBytes(name);
         this.bitSet = BitSet.valueOf(name);
-    }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see java.lang.Object#toString()
-     */
+    } 
+    
     @Override
     public String toString() {
         return "BITFIELD";

@@ -99,15 +99,15 @@ public class ResponseResolver {
                 }
             }
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            logger.error(e.getMessage());
         }
         return Optional.empty();
     }
 
     private FindNodeResponse resolve(FindNodeRequest message, From from) {
         List<Node> nodes = this.data.table.closest(message.target);
-        logger.info("find node from {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
-                nodes.size());
+        logger.info("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
+               from, nodes.size());
         return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
     }
 
@@ -165,7 +165,7 @@ public class ResponseResolver {
                         data.fileManager.create(Entry.crap(hex));
                     }
                 }
-                logger.info("found {} peers for {}, denied {}", size, hex, denied);
+                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
                     if (IpRangeFilter.isDenied(node.ip) == false) {
                         sample.table.insert(node);
@@ -258,7 +258,7 @@ public class ResponseResolver {
                 boolean skip = this.data.torrents.containsKey(hash);
 
                 if (skip) {
-                    data.forUpdate.add(new ImmutablePair<>(hash, new ImmutablePair<>(torrent.meta().getName(), 1)));
+                    data.forUpdate.add(new ImmutablePair<>(hash, 1));
                     logger.info("hash {} already resolved as {}", hash, torrent.meta().getName());
                     i++;
                 } else {

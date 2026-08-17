@@ -7,27 +7,33 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
-
+ 
 public class NameFilter {
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
     private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
-    private static final List<String> ANIME_KEYWORDS = List.of("-ToonsHub", "-VARYG", "-Tsundere-Raws");
+    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws");
     private static final List<String> XXX = List.of("xxx", "jav");
-    public static final Pattern TV = Pattern.compile("\\.S\\d+E\\d+\\.");
+    private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
+    public static final Pattern TV_SERIES = Pattern.compile("\\.S\\d+E\\d+\\.");
+    public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
+    private static final Pattern GROUP = Pattern.compile("[\\d\\[\\]a-zA-Z]+");
+
     private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
     private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
 
     public static Genre from(String name, List<MetaFile> list) {
         if (name == null)
             return Genre.UNKNOWN;
-        String lower = name.toLowerCase();
+        String lower = StringUtils.lowerCase(name);
         if (matchKeyword(lower, XXX))
             return Genre.XXX;
-        else if (matchKeyword(name, ANIME_KEYWORDS))
+        else if (matchKeyword(lower, ANIME_KEYWORDS))
             return Genre.ANIME;
-        else if (TV.matcher(name).find())
+        else if (TV_SERIES.matcher(name).find())
+            return Genre.TVEP;
+        else if (TV_SEASON.matcher(name).find())
             return Genre.TV;
         else if (MUSIC.matcher(name).find())
             return Genre.MUSIC;
@@ -48,52 +54,32 @@ public class NameFilter {
         return Genre.UNKNOWN;
     }
 
-    public static boolean match(String name, boolean checkDash) {
+    public static boolean match(String name) {
         boolean isOk = VALID_NAMES.matcher(name).matches();
-        if (checkDash) {
-            boolean haveDash = name.indexOf("-") > 0;
-            return isOk && haveDash;
-        } else
-            return isOk;
+        if (isOk == false) {
+            return false;
+        }
+        boolean haveDash = name.indexOf("-") > 0;
+        if (haveDash == false) {
+            return false;
+        }
+        String group = name.substring(name.lastIndexOf("-") + 1, name.length()).replace(".mkv", "");
+
+        return GROUP.matcher(group).matches();
     }
-    
 
-
-    public static boolean fineMatch(String name, boolean checkDash) {
+    public static boolean fineMatch(String name) {
         if (matchKeyword(name.toLowerCase(), XXX))
             return false;
-        return match(name, checkDash);
+        return match(name);
     }
     
-    public static boolean fine(TorrentMeta meta, boolean checkDash) {
+    public static boolean fine(TorrentMeta meta) {
         String name = meta.getName();
-        if (Genre.XXX.equals(meta.genre) || Genre.UNKNOWN.equals(meta.genre)) {
+        if (DENIED_GENRES.contains(meta.genre)) {
             return false;
         }
-        boolean isOk = VALID_NAMES.matcher(name).matches();
-        if (checkDash) {
-            boolean haveDash = name.indexOf("-") > 0;
-            return isOk && haveDash;
-        } else
-            return isOk;
-    }
-
-    public static boolean match(TorrentMeta meta) {
-        if (StringUtils.isBlank(meta.getName()))
-            return false;
-        boolean nameMatch = match(meta.getName(), true);
-        boolean nfo = false;
-        for (MetaFile metaFile : meta.getList()) {
-            if (meta.genre.equals(Genre.TV) || meta.genre.equals(Genre.MOVIE_VIDEO)) {
-                nfo = true;
-                continue;
-            }
-            if (metaFile.path != null && metaFile.path.indexOf(".nfo") > 0) {
-                nfo = match(metaFile.path, false);
-                break;
-            }
-        }
-        return nameMatch && nfo;
+        return match(name);
     }
 
     static boolean matchGameKeyword(List<MetaFile> list) {

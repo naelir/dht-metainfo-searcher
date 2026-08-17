@@ -178,7 +178,6 @@ public class HttpsClient implements AutoCloseable {
         if (headers != null) {
             headers.forEach(request::addHeader);
         }
-//        request.addHeader("Authentication", createBasicAuthHeader(this.user, this.password));
         LOG.debug("Sending GET request to: {}", url);
         Header[] allHeaders = request.getAllHeaders();
         for (Header header : allHeaders) {

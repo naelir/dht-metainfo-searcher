@@ -19,6 +19,4 @@ public class IpRange {
     public String toString() {
         return "IpRange [representation=" + representation + ", country=" + country + "]";
     }
-    
-    
 }

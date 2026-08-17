@@ -1,27 +1,23 @@
 package com.naelir.tasks;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 
 public class WaitScrapeTask implements ITask {
-    public static final Logger logger = LogManager.getLogger(WaitScrapeTask.class);
-
-    private Data data;
     
-    public WaitScrapeTask(Data data) {
-        this.data = data;
-    }
+    int counter = 0;
 
     @Override
     public boolean resolved() {
-        return data.forUpdate.size() == data.scrapeHashes.size();
+        boolean b = counter >= 1;;
+        if (b) {
+            counter = 0;
+        }
+        return b;
     }
 
     @Override
     public void run() {
+        counter++;
     }
 
 }

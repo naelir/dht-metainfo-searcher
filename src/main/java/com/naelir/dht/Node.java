@@ -17,6 +17,7 @@ public class Node {
     private static final AtomicInteger COUNTER = new AtomicInteger();
 
     public static final Node EMPTY = new Node(new byte[] { 0, 0, 0, 0 }, 0, ByteBuffer.wrap(new byte[20]));
+    
     public static Node of(ByteBuffer compactInfo, int ipLength) {
         byte[] rawId = new byte[20];
         compactInfo.get(rawId);

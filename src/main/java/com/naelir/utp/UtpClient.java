@@ -291,7 +291,9 @@ public class UtpClient implements AutoCloseable {
                 // safeRelease so we never double-release.
                 logger.warn("writeUdp: failed to send {} byte(s) to {}:{}: {}", data.length, addr, port,
                         f.cause().getMessage());
-                ReferenceCountUtil.safeRelease(pkt);
+                if (pkt.refCnt() > 0) {
+                    ReferenceCountUtil.safeRelease(pkt);
+                }
             }
         });
     }
@@ -319,7 +321,10 @@ public class UtpClient implements AutoCloseable {
                                 if (!f.isSuccess()) {
                                     logger.warn("channelRead: failed to send uTP reply to {}:{}: {}", addr, port,
                                             f.cause().getMessage());
-                                    ReferenceCountUtil.safeRelease(reply);
+
+                                    if (reply.refCnt() > 0) {
+                                        ReferenceCountUtil.safeRelease(reply);
+                                    }
                                 }
                             });
                         });
@@ -331,8 +336,10 @@ public class UtpClient implements AutoCloseable {
                                 if (!f.isSuccess()) {
                                     logger.warn("channelRead: failed to send tracker reply to {}:{}: {}", addr, port,
                                             f.cause().getMessage());
-                                    ReferenceCountUtil.safeRelease(reply);
-                                }
+
+                                    if (reply.refCnt() > 0) {
+                                        ReferenceCountUtil.safeRelease(reply);
+                                    }                                }
                             });
                         });
                     } else {
@@ -343,8 +350,10 @@ public class UtpClient implements AutoCloseable {
                                 if (!f.isSuccess()) {
                                     logger.warn("channelRead: failed to send UDP reply to {}:{}: {}", addr, port,
                                             f.cause().getMessage());
-                                    ReferenceCountUtil.safeRelease(reply);
-                                }
+
+                                    if (reply.refCnt() > 0) {
+                                        ReferenceCountUtil.safeRelease(reply);
+                                    }                                }
                             });
                         });
                     }

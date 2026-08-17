@@ -93,8 +93,7 @@ public class TorrentMeta {
     public int count;
     public String hash;
     
-    public TorrentMeta() {
-        // TODO Auto-generated constructor stub
+    public TorrentMeta() {//
     }
 
 
@@ -146,7 +145,7 @@ public class TorrentMeta {
     }
 
     public enum Genre {
-        MOVIE_VIDEO("MOV"), TV("TV"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_REPACK("GAME_REPACK"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
+        MOVIE_VIDEO("MOV"), TV("TV"), TVEP("TVEP"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_REPACK("GAME_REPACK"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
         GAME_XBOX("XBOX"), SOFTWARE("APP"), UNKNOWN("NA"), XXX("XXX"), ANIME("ANIME");
 
         private String txt;
@@ -164,8 +163,7 @@ public class TorrentMeta {
         String path;
         long bytes;
         
-        public MetaFile() {
-            // TODO Auto-generated constructor stub
+        public MetaFile() {//
         }
 
         public MetaFile(String path, long bytes) {
@@ -189,14 +187,10 @@ public class TorrentMeta {
 
     public static Entry toEntry(String infoHash, TorrentMeta meta) {
         Genre genre = meta.genre;
-        boolean nfo = false;
         long size = 0L;
         for (MetaFile b : meta.list) {
-            if (b.path.contains(".nfo")) {
-                nfo = true;
-            }
             size += b.bytes;
         }
-        return new Entry(meta.getName(), infoHash, meta.count, meta.getFound(), size, genre.getTxt());
+        return new Entry(meta.getName(), infoHash, meta.count, meta.getFound(), size, genre.getTxt(), 0);
     }
 }

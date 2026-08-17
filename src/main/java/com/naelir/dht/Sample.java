@@ -30,8 +30,8 @@ public class Sample {
         this.peers.add(list);
     }
 
-    public Set<Node> peers() {
-        return this.peers;
+    public synchronized Set<Node> peers() {
+        return new HashSet<Node>(this.peers);
     }
 
     public Torrent torrent() {

@@ -42,6 +42,7 @@ public class Arguments {
         boolean scrape = false;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
+        int scheduleInterval = 5;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
             case "--continue-from":
@@ -53,6 +54,11 @@ public class Arguments {
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --bitspace-parts");
                 bitspaceParts = Integer.parseInt(args[++i]);
+                break;
+            case "--schedule-interval":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --schedule-interval");
+                scheduleInterval = Integer.parseInt(args[++i]);
                 break;
             case "--only-hashes":
                 onlyHashes = true;
@@ -126,6 +132,7 @@ public class Arguments {
                 .trackerPort(trackerPort)
                 .maxNodes(maxNodes)
                 .scrapeStep(scrapeStep)
+                .scheduleInterval(scheduleInterval)
                 .build();
     }
 
@@ -142,6 +149,8 @@ public class Arguments {
     public final int trackerPort;
     public final int scrapeStep;
     public final int maxNodes;
+    public final int scheduleInterval;
+    public final String scrapeFile;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -157,12 +166,20 @@ public class Arguments {
         this.trackerPort = builder.trackerPort;
         this.maxNodes = builder.maxNodes;
         this.scrapeStep = builder.scrapeStep;
+        this.scheduleInterval = builder.scheduleInterval;
+        this.scrapeFile = builder.scrapeFile;
     }
+    
 
     @Override
     public String toString() {
-        return "Arguments{bitspaceParts=" + this.bitspaceParts + "}";
+        return "Arguments [continueFrom=" + continueFrom + ", bitspaceParts=" + bitspaceParts + ", onlyHashes="
+                + onlyHashes + ", connectionString=" + connectionString + ", db=" + db + ", table=" + table
+                + ", queryCount=" + queryCount + ", minPeers=" + minPeers + ", scrape=" + scrape + ", trackerUrl="
+                + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep + ", maxNodes=" + maxNodes
+                + "]";
     }
+
 
     public static class Builder {
         private int bitspaceParts = 100;
@@ -178,12 +195,19 @@ public class Arguments {
         private int trackerPort;
         private int maxNodes = 300;
         private int scrapeStep = 5000;
+        private int scheduleInterval = 5;
+        private String scrapeFile;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
             return this;
         }
         
+        public Builder scheduleInterval(int scheduleInterval) {
+            this.scheduleInterval  = scheduleInterval;
+            return this;
+        }
+
         public Builder bitspaceParts(int bitspaceParts) {
             this.bitspaceParts = bitspaceParts;
             return this;
@@ -245,6 +269,11 @@ public class Arguments {
 
         public Builder trackerPort(int trackerPort) {
             this.trackerPort = trackerPort;
+            return this;
+        }
+
+        public Builder scrapeFile(String string) {
+            this.scrapeFile = string;
             return this;
         }
     }

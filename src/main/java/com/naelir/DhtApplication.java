@@ -6,9 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -37,6 +39,8 @@ import com.naelir.utp.UTPManager;
 import com.naelir.utp.UtpClient;
 import com.naelir.utp.UtpOnDataListener;
 
+import io.netty.util.concurrent.DefaultThreadFactory;
+
 public final class DhtApplication implements Runnable {
     static final Logger logger = logger();
 
@@ -59,8 +63,7 @@ public final class DhtApplication implements Runnable {
     }
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = new Arguments.Builder()
-                .build();
+        Arguments arguments = Arguments.parse(args);
         logger.info("Starting with {}", arguments);
         var application = new DhtApplication(arguments);
         new Thread(application, "dht-metainfo").start();
@@ -106,34 +109,44 @@ public final class DhtApplication implements Runnable {
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
             Data data = new Data(divide, tcpmyself, fm, this.arguments);
-            String myself = Generator.toHex(data.myself.array());
+            ByteBuffer startMyself = data.myself;
+            String myself = Generator.toHex(startMyself.array());
 
-            UnresolvedFileManager ufm = UnresolvedFileManager.of();
-            ufm.getAll().forEach(e -> data.unresolved.put(e.hash, new ImmutablePair<>(e.hash, e.name)));
-            fm.getAll(myself.toLowerCase()).forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
+            if (arguments.scrape == false) {
+                fm.getAll(myself.toLowerCase()).forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
+            } else {
+                UnresolvedFileManager ufm = UnresolvedFileManager.of();
+                data.unresolved.addAll(ufm.getAll());
+                logger.info("loaded {} unresolved", data.unresolved.size());
+            }
+
             UTPManager manager = new UTPManager();
             UtpOnDataListener utp = new UtpOnDataListener(manager);
             UdpOnDataListener udp = new UdpOnDataListener(data);
             TrackerOnDataListener tr = new TrackerOnDataListener(data);
+            ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor(new DefaultThreadFactory("scheduler"));
+
             try (
                     UtpClient utpClient = new UtpClient(utp, udp, tr, data);
                     BtTcpClient tcpClient = new BtTcpClient(data);
-                    NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient, this.semaphore)
             ) {
+                NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient);
                 utpClient.start();
-                maintainer.start();
+                executor.scheduleAtFixedRate(maintainer, 0, arguments.scheduleInterval, TimeUnit.SECONDS);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
-                utpClient.explore(data.myself, saved);
-                this.semaphore.acquire();
-                if (data.myself != null) {
-                    List<Node> nodes = data.table.closest(data.myself, 20);
-                    peersFm.saveCompactInfo(data.myself, nodes);
-                    logger.info("stopped with {}", Generator.toHex(data.myself.array()));
-                } else {
-                    logger.info("stopped at the end of the bitspace");
+                if (arguments.scrape == false) {
+                    utpClient.explore(startMyself, saved);
                 }
+                this.semaphore.acquire();
+                if (arguments.scrape == false) {
+                    List<Node> nodes = data.table.closest(startMyself, 20);
+                    peersFm.saveCompactInfo(startMyself, nodes);
+                }
+                logger.info("stopped with {}", Generator.toHex(startMyself.array()));
+
             } finally {
                 fm.close();
+                executor.shutdown();
             }
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);

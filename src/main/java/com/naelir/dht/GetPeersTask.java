@@ -45,7 +45,6 @@ public class GetPeersTask implements ITask {
     public void run() {
         try {
             int step = 20;
-            int i = 0;
             logger.info("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
             for (Sample sample : this.data.samples.values()) {
                 if (step <= 0) {
@@ -66,11 +65,10 @@ public class GetPeersTask implements ITask {
                     }
                     List<Node> closest = closest(sample, wrap);
                     sample.checked++;
-                    logger.info("sample {} sending get peers to {}", sample.torrent.infoHash(), closest.size());
+                    logger.debug("sample {} sending get peers to {}", sample.torrent.infoHash(), closest.size());
                     for (Node node : closest) {
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
-                        i++;
                     }
                 }
             }
@@ -79,10 +77,4 @@ public class GetPeersTask implements ITask {
         }
     }
 
-    private List<Node> sublist(List<Node> closest, int i) {
-        List<Node> list = closest.stream().filter(e -> e.have(Command.GET_PEER) == false).toList();
-        int size = list.size();
-        int n = Math.min(i, size);
-        return list.subList(0, n);
-    }
 }

@@ -28,7 +28,7 @@ public class TrackerConnection {
     private static final Logger logger = LogManager.getLogger(TrackerConnection.class);
 
     /** Max info-hashes per scrape request (spec limit ≈ 74). */
-    static final int BATCH_SIZE = 70;
+    static final int BATCH_SIZE = 50;
 
     /** Connection-id is valid for 1 minute after receipt (client-side rule). */
     private static final long CONNECTION_TTL_MS = 60_000L;

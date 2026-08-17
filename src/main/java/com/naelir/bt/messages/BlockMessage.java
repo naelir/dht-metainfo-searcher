@@ -27,11 +27,6 @@ public class BlockMessage extends AbstractPeerWireMessage {
         this.data = buffer.readBytes(buffer.readableBytes()).nioBuffer();
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "BLOCK [pieceIndex=" + this.pieceIndex + ", begin=" + this.begin + ", data=" + this.data + "]";

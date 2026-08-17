@@ -19,11 +19,6 @@ public class PortMessage extends AbstractPeerWireMessage {
         this.listenPort = buffer.readShort();
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "PORT [listenPort=" + this.listenPort + "]";

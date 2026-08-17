@@ -14,7 +14,6 @@ import org.apache.logging.log4j.Logger;
 
 public class IpRangeFilter {
     public static final String UNKNOWN = "Unknown";
-    public static final String DEFAULT = "default";
     public static final Logger logger = LogManager.getLogger(IpRangeFilter.class);
     public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
     public static final List<IpRange> RANGES_DENY = getDenyRanges();

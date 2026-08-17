@@ -2,7 +2,7 @@ package com.naelir.db;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 import org.bson.Document;
@@ -36,6 +36,7 @@ public class MongoEntryRepository implements EntryRepository {
     private void ensureIndexes() {
         collection.createIndex(Indexes.ascending("h"), new IndexOptions().unique(true));
         collection.createIndex(Indexes.ascending("n"));
+        collection.createIndex(Indexes.descending("p"));
     }
 
     // ...existing code...
@@ -101,6 +102,16 @@ public class MongoEntryRepository implements EntryRepository {
     
 
     @Override
+    public long updateMany(List<String> hashes, int newPeerCount) {
+        Bson filter = Filters.in("h", hashes);
+        UpdateOptions upsert = new UpdateOptions().upsert(false);
+        Map<String, ?> of = Map.of("se", System.currentTimeMillis(), "p", newPeerCount);
+        Bson update = new Document("$set", new Document(of));
+        UpdateResult result = collection.updateMany(filter, update, upsert);
+        return result.getMatchedCount();
+    }
+
+    @Override
     public long updateMany(List<String> hashes) {
         Bson filter = Filters.in("h", hashes);
         UpdateOptions upsert = new UpdateOptions().upsert(false);
@@ -108,7 +119,7 @@ public class MongoEntryRepository implements EntryRepository {
         UpdateResult result = collection.updateMany(filter, update, upsert);
         return result.getMatchedCount();
     }
-
+    
     @Override
     public Entry findByHash(String hash) {
         Document doc = collection.find(Filters.eq("h", hash)).first();
@@ -121,17 +132,14 @@ public class MongoEntryRepository implements EntryRepository {
         return deleted > 0;
     }
 
-    // -------------------------------------------------------------------------
-    // helpers
-    // -------------------------------------------------------------------------
-
     private static Document toDocument(Entry e) {
         return new Document("h", e.hash)
                 .append("n", e.name)
                 .append("g", e.genre)
                 .append("fc", e.fileCount)
                 .append("se", e.foundTime)
-                .append("sz", e.size);
+                .append("sz", e.size)
+                .append("p", e.peers);
     }
 
     private static Entry fromDocument(Document doc) {

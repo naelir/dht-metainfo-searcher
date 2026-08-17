@@ -23,13 +23,8 @@ public class CancelMessage extends AbstractPeerWireMessage {
         this.pieceIndex = buffer.readInt();
         this.begin = buffer.readInt();
         this.length = buffer.readInt();
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
+    } 
+    
     @Override
     public String toString() {
         return "CANCEL [pieceIndex=" + this.pieceIndex + ", begin=" + this.begin + ", length=" + this.length + "]";

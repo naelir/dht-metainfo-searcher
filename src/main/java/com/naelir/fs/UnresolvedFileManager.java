@@ -5,14 +5,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.naelir.bt.Entry;
 
 /**
  * Simple file-backed CRUD store.
@@ -29,7 +28,6 @@ import com.naelir.bt.Entry;
  */
 public class UnresolvedFileManager {
     public static final Logger logger = LogManager.getLogger(UnresolvedFileManager.class);
-    private static final ObjectMapper MAPPER = new ObjectMapper();
     private static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     private Path unresolved;
 
@@ -43,21 +41,21 @@ public class UnresolvedFileManager {
     }
     
     
-    public List<Entry> getAll() {
-        List<Entry> result = new LinkedList<Entry>();
+    public List<Pair<String, String>> getAll() {
+        List<Pair<String, String>> result = new ArrayList<Pair<String,String>>();
         int i = 0;
         try (BufferedReader reader = Files.newBufferedReader(unresolved)) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
-                if (line.isBlank()) {
+                if (line.isBlank() || line.length() < 40) {
                     continue;
                 }
-                Entry record = MAPPER.readValue(line, Entry.class);
-
-                if (record != null) {
-                    result.add(record);
-                }
+                int lastIndexOf = line.lastIndexOf(",");
+                String name = line.substring(0, lastIndexOf);
+                String hash = line.substring(lastIndexOf + 1);
+                result.add(new ImmutablePair<>(hash, name));
+                
             }
         } catch (IOException e) {
             logger.error("on line {}", i);

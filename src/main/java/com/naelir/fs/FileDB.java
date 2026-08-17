@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,7 +45,7 @@ public class FileDB implements AutoCloseable {
 
     public static FileDB of() throws IOException {
         Files.createDirectories(BASE_DIR);
-        Path done = HOME.resolve("done.".concat(RandomStringUtils.randomAlphabetic(5)));
+        Path done = HOME.resolve("done.txt");
 
         BufferedWriter mainwriter = Files.newBufferedWriter(done, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         Map<Path, BufferedWriter> writers = new HashMap<>();
@@ -65,9 +64,6 @@ public class FileDB implements AutoCloseable {
     private static Path shardPath(char hexChar) {
         return BASE_DIR.resolve(hexChar + ".txt");
     }
-    // -------------------------------------------------------------------------
-    // CREATE
-    // -------------------------------------------------------------------------
 
     /**
      * Returns the shard file for the given record id (based on its first hex
@@ -115,10 +111,6 @@ public class FileDB implements AutoCloseable {
         return sb.toString();
     }
 
-    // -------------------------------------------------------------------------
-    // DELETE
-    // -------------------------------------------------------------------------
-
     private Map<Path, BufferedWriter> writers;
     private BufferedWriter mainwriter;
 
@@ -126,9 +118,6 @@ public class FileDB implements AutoCloseable {
         this.writers = writers;//
         this.mainwriter = mainwriter;
     }
-    // -------------------------------------------------------------------------
-    // helpers
-    // -------------------------------------------------------------------------
 
     @Override
     public void close() throws Exception {
@@ -218,7 +207,7 @@ public class FileDB implements AutoCloseable {
             while ((line = reader.readLine()) != null) {
                 i++;
                 String[] split = line.split("#");
-                var entry = new Entry(split[1], split[0], 1, 0, 0, "NA");
+                var entry = new Entry(split[1], split[0], 1, 0, 0, "NA", 0);
                 if (i % 1000 == 0) {
                     System.out.println(i);
                 }

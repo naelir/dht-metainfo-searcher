@@ -1,8 +1,8 @@
 package com.naelir.dht;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Deque;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -38,8 +38,8 @@ public class Data {
     public final Arguments arguments;
     public final EntryRepository dbRepo;
     public final Deque<MetaTorrentTask> tcptasks;
-    public final Set<Pair<String, Pair<String, Integer>>> forUpdate;
-    public final Map<String, Pair<String, String>> unresolved;;
+    public final Set<Pair<String, Integer>> forUpdate;
+    public final List<Pair<String, String>> unresolved;;
     public final Set<String> scrapeHashes;
 
     public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileDB fm, Arguments arguments) {
@@ -49,7 +49,7 @@ public class Data {
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
         this.scrapeHashes = new HashSet<String>();
-        this.unresolved = new HashMap<>();
+        this.unresolved = new ArrayList<Pair<String,String>>();
         this.requestsSent = new ConcurrentHashMap<>();
         this.torrents = new ConcurrentHashMap<>();
         this.samples = new ConcurrentHashMap<>();
@@ -72,6 +72,12 @@ public class Data {
                         return 0;
                     }
 
+                    @Override
+                    public long updateMany(List<String> hashes) {
+                        // TODO Auto-generated method stub
+                        return 0;
+                    }
+                    
                     @Override
                     public List<Entry> findAll(int page, int pageSize) {
                         // TODO Auto-generated method stub
@@ -108,7 +114,7 @@ public class Data {
                         return false;
                     }
                     @Override
-                    public long updateMany(List<String> hashes) {
+                    public long updateMany(List<String> hashes, int newPeerCount) {
                         // TODO Auto-generated method stub
                         return 0;
                     }

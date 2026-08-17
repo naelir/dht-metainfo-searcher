@@ -39,11 +39,6 @@ public class HandshakeMessage implements PeerWireMessage {
         this.peerID = new String(pi);
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "HANDSHAKE [protocolStringLength=" + this.protocolStringLength + ", protocolString="

@@ -2,13 +2,12 @@ package com.naelir.bt;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,6 +22,7 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
+import com.naelir.dht.Sample;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -30,8 +30,6 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
-    public static final Path CACHE_FILE = Paths.get(System.getProperty("user.home"), "torrents.info");
-    public static final Path CRAP_FILE = Paths.get(System.getProperty("user.home"), "torrents.CRAP");
     private static final List<String> DENIED_PRE = List.of("-XT");
     private String myself;
     private Torrent task;
@@ -39,7 +37,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     byte[] metadata;
     volatile int piecesExpected;
     volatile int piecesReceived;
-    volatile private byte ut_metadata_code;
+    private volatile byte ut_metadata_code;
 
     public ClientHandler(Data data, Torrent task) {
         this.data = data;
@@ -82,8 +80,9 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             if (hr.isExtended() == false) {
                 ctx.close();
             }
-            if (hr.peerID != null && DENIED_PRE.contains(hr.peerID.substring(0, 3))) {
-                logger.error("deny id {}", hr.peerID.substring(0, 3));
+            String prefix = StringUtils.substring(hr.peerID, 0, 3);
+            if (hr.peerID != null && DENIED_PRE.contains(prefix)) {
+                logger.error("deny id {}", prefix);
                 ctx.close();
             }
         } else if (msg instanceof ExtendedMessageHandshake eh) {
@@ -128,13 +127,15 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
-            logger.info("resolved {}", meta.getName());
+            logger.info("resolved {} as {}", this.task.infoHash, meta.getName());
             if (this.task.meta() == null) {
                 this.task.setMeta(meta);
                 Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);
                 this.data.fileManager.create(entry);
-                boolean fine = NameFilter.fine(meta, true);
+                boolean fine = NameFilter.fine(meta);
                 if (fine) {
+                    Sample sample = this.data.samples.get(entry.hash);
+                    entry.peers = sample != null ? sample.peers().size() : 1;
                     this.data.fileManager.createFine(entry);
                     this.data.dbRepo.insert(entry);
                 }

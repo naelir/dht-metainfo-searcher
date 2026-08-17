@@ -5,11 +5,6 @@ public class UnchokeMessage extends AbstractPeerWireMessage {
         super(BtKeys.UNCHOKE_MESSAGE_ID);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "UNCHOKE []";
