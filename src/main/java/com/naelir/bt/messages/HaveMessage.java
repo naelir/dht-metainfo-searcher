@@ -19,11 +19,6 @@ public class HaveMessage extends AbstractPeerWireMessage {
         this.pieceIndex = buffer.readInt();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "HAVE [pieceIndex=" + this.pieceIndex + "]";

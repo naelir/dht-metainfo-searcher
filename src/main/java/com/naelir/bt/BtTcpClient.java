@@ -1,9 +1,9 @@
 package com.naelir.bt;
 
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -48,28 +48,26 @@ public class BtTcpClient implements AutoCloseable {
                     .option(ChannelOption.SO_KEEPALIVE, false)
                     .option(ChannelOption.SO_RCVBUF, 4096)
                     .option(ChannelOption.SO_SNDBUF, 4096)
-                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 500)
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 1000)
                     .handler(new ChannelHandlerInitializer(torrent, this.data))
-                    .connect(node.address(), node.port());
-            // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
-            connectFuture.awaitUninterruptibly();
-            InetAddress address = node.address();
-            String country = IpRangeFilter.getCountry(address.getAddress());
-            if (!connectFuture.isSuccess()) {
-                // connection refused, timed-out, etc. — no channel to close
-                logger.warn("Connection to {} {}:{} failed: {}", country, node.address(), node.port(),
-                        connectFuture.cause().getMessage());
-                return;
-            } else {
-                logger.warn("Connection to {} {}:{} succeeded", country, node.address(), node.port());
-            }
-            // blocks until channel is closed: either RawTorrentMetadata received,
-            // error in ClientHandler, or IdleStateHandler fires after 1s of silence
-            connectFuture.channel().closeFuture().sync();
+                    .connect(node.address(), node.port())
+                    .addListener(f -> {
+                        Pair<String, String> location = data.locationDb.location(node.ip());
+                        if (!f.isSuccess()) {
+                            // connection refused, timed-out, etc. — no channel to close
+                            logger.warn("Connection to {} {}:{} failed: {}", location.getRight(), node.address(), node.port(),
+                                    f.cause().getMessage());
+                            return;
+                        } else {
+                            logger.warn("Connection to {} {}:{} succeeded", location.getRight(), node.address(), node.port());
+                        }
+                    });
+            connectFuture.channel().closeFuture().addListener(f -> {
+                group.shutdownGracefully(0, 100, TimeUnit.MILLISECONDS);
+            });
         } finally {
             // default shutdownGracefully() quiet-period=2s / timeout=15s — far too long
             // when connect() is called in a tight loop for many peers
-            group.shutdownGracefully(0, 100, TimeUnit.MILLISECONDS).sync();
         }
     }
 

@@ -1,146 +1,158 @@
 package com.naelir;
 
 import java.math.BigInteger;
+import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.core.config.Configurator;
-import org.apache.logging.log4j.core.config.builder.api.AppenderComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilder;
-import org.apache.logging.log4j.core.config.builder.api.ConfigurationBuilderFactory;
-import org.apache.logging.log4j.core.config.builder.api.LayoutComponentBuilder;
-import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
-import com.naelir.bt.Torrent;
-import com.naelir.bt.TorrentMeta;
 import com.naelir.dht.Data;
+import com.naelir.dht.DhtResponseResolver;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.fs.FileDB;
+import com.naelir.fs.FileLocationDb;
+import com.naelir.fs.IFileDB;
+import com.naelir.fs.ILocationDb;
 import com.naelir.fs.SavedCompactInfoFileManager;
-import com.naelir.fs.UnresolvedFileManager;
 import com.naelir.tasks.NodeMaintainer;
+import com.naelir.tasks.TcpTorrentResolverTask;
+import com.naelir.tasks.UdpTorrentResolverTask;
 import com.naelir.tracker.TrackerOnDataListener;
+import com.naelir.tracker.TrackerUdpManager;
+import com.naelir.utp.InboundHandler;
 import com.naelir.utp.UTPManager;
 import com.naelir.utp.UtpClient;
 import com.naelir.utp.UtpOnDataListener;
 
-public final class DhtApplication implements Runnable {
-    static final Logger logger = logger();
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.IoHandlerFactory;
+import io.netty.channel.MultiThreadIoEventLoopGroup;
+import io.netty.channel.nio.NioIoHandler;
+import io.netty.channel.socket.nio.NioDatagramChannel;
+import io.netty.util.concurrent.DefaultThreadFactory;
 
-    static Logger logger() {
-        ConfigurationBuilder<BuiltConfiguration> builder = ConfigurationBuilderFactory.newConfigurationBuilder();
-        builder.setStatusLevel(Level.INFO);
-        LayoutComponentBuilder layout = builder.newLayout("PatternLayout")
-                .addAttribute("pattern", "%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n");
-        AppenderComponentBuilder console = builder.newAppender("Console", "CONSOLE").add(layout);
-        AppenderComponentBuilder file = builder.newAppender("LogFile", "FILE")
-                .addAttribute("fileName", "dht-logs.log")
-                .add(layout);
-        builder.add(console);
-        builder.add(file);
-        builder.add(builder.newRootLogger(Level.INFO)
-                .add(builder.newAppenderRef("Console"))
-                .add(builder.newAppenderRef("LogFile")));
-        Configurator.initialize(builder.build());
-        return LogManager.getLogger(DhtApplication.class);
-    }
+public final class DhtApplication implements Runnable {
+    static final Logger logger = LogManager.getLogger(DhtApplication.class);
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = new Arguments.Builder()
-                .build();
+        Arguments arguments = Arguments.parse(args);
         logger.info("Starting with {}", arguments);
-        var application = new DhtApplication(arguments);
-        new Thread(application, "dht-metainfo").start();
-        try (
-                Scanner name = new Scanner(System.in)
-        ) {
-            name.nextLine();
-        }
-        application.stop();
+
+        new DhtApplication(arguments).run();
     }
 
-    private Arguments arguments;
-    private final Semaphore semaphore = new Semaphore(0);
+    private final Arguments arguments;
+    private final Semaphore semaphore;
 
     public DhtApplication(Arguments args) {
         this.arguments = args;
-    }
-
-    Queue<ByteBuffer> divide(BigInteger from) {
-        List<ByteBuffer> divide = BitSpaceDivider.divide(this.arguments.bitspaceParts);
-        Queue<ByteBuffer> list = new LinkedList<>();
-        for (ByteBuffer udpmyself : divide) {
-            String hname = Generator.toHex(udpmyself.array());
-            if (from.compareTo(new BigInteger(1, udpmyself.array())) > 0) {
-                logger.info("skipping {}", hname);
-                continue;
-            }
-            list.add(udpmyself);
-        }
-        return list;
+        this.semaphore = new Semaphore(0);
     }
 
     @Override
     public void run() {
         try {
-            BigInteger from = this.arguments.continueFrom != null
-                    ? new BigInteger(1, Generator.toArray(this.arguments.continueFrom))
+            BigInteger to = this.arguments.to != null
+                    ? new BigInteger(1, Generator.toArray(this.arguments.to))
+                    : BigInteger.ONE.shiftLeft(160).subtract(BigInteger.ONE);
+            BigInteger from = this.arguments.from != null
+                    ? new BigInteger(1, Generator.toArray(this.arguments.from))
                     : BigInteger.ZERO;
-            Queue<ByteBuffer> divide = divide(from);
+            Queue<ByteBuffer> udpmyselfs = divide(from, to);
             String tcpmyself = Generator.generatePeerID();
-            FileDB fm = FileDB.of();
+            IFileDB fileDB = FileDB.of();
             
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
-            Data data = new Data(divide, tcpmyself, fm, this.arguments);
-            String myself = Generator.toHex(data.myself.array());
+            ILocationDb locationDb = FileLocationDb.INSTANCE;
+            Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, this.arguments);
 
-            UnresolvedFileManager ufm = UnresolvedFileManager.of();
-            ufm.getAll().forEach(e -> data.unresolved.put(e.hash, new ImmutablePair<>(e.hash, e.name)));
-            fm.getAll(myself.toLowerCase()).forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
-            UTPManager manager = new UTPManager();
-            UtpOnDataListener utp = new UtpOnDataListener(manager);
-            UdpOnDataListener udp = new UdpOnDataListener(data);
-            TrackerOnDataListener tr = new TrackerOnDataListener(data);
+            if (arguments.mode == 1) {
+                List<String> all = fileDB.scrape();
+                data.unresolved.addAll(all);
+                logger.info("loaded {} unresolved", all.size());
+            }
+
+            UTPManager utpManager = new UTPManager();
+            TrackerUdpManager trackerUdpManager = new TrackerUdpManager(data);
+            UtpOnDataListener utp = new UtpOnDataListener(utpManager);
+            DhtResponseResolver dht = new DhtResponseResolver(data);
+            UdpOnDataListener udp = new UdpOnDataListener(dht);
+            TrackerOnDataListener trackerUdp = new TrackerOnDataListener(trackerUdpManager);
+            ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor(new DefaultThreadFactory("scheduler"));
+            IoHandlerFactory newFactory = NioIoHandler.newFactory();
+            DefaultThreadFactory threadFactory = new DefaultThreadFactory("utp-client");
+            MultiThreadIoEventLoopGroup group = new MultiThreadIoEventLoopGroup(1, threadFactory, newFactory);
+            Bootstrap bootstrap = new Bootstrap()
+                    .group(group)
+                    .channel(NioDatagramChannel.class)
+                    .option(ChannelOption.SO_BROADCAST, false)
+                    .handler(new InboundHandler(utp, udp, trackerUdp));
+            // Bind to any available local port
+            var channel = bootstrap.bind(0).sync().channel();
+            
+            logger.info("udp channel bound to {}", channel.localAddress());
+            
             try (
-                    UtpClient utpClient = new UtpClient(utp, udp, tr, data);
+                    UtpClient utpClient = new UtpClient(channel, data, utpManager, trackerUdpManager);
                     BtTcpClient tcpClient = new BtTcpClient(data);
-                    NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient, this.semaphore)
             ) {
-                utpClient.start();
-                maintainer.start();
+                NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient);
+                UdpTorrentResolverTask resolverTask = new UdpTorrentResolverTask(utpClient, data);
+                TcpTorrentResolverTask tcpResolverTask = new TcpTorrentResolverTask(tcpClient, data);
+                
+                executor.scheduleAtFixedRate(utpClient::tick, UtpClient.TICK_INTERVAL_MS, UtpClient.TICK_INTERVAL_MS, TimeUnit.MILLISECONDS);
+                executor.scheduleAtFixedRate(maintainer, 0, arguments.scheduleInterval, TimeUnit.SECONDS);
+                executor.scheduleAtFixedRate(resolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
+                executor.scheduleAtFixedRate(tcpResolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
-                utpClient.explore(data.myself, saved);
-                this.semaphore.acquire();
-                if (data.myself != null) {
-                    List<Node> nodes = data.table.closest(data.myself, 20);
-                    peersFm.saveCompactInfo(data.myself, nodes);
-                    logger.info("stopped with {}", Generator.toHex(data.myself.array()));
-                } else {
-                    logger.info("stopped at the end of the bitspace");
+                if (arguments.mode != 1) {
+                    utpClient.explore(data.myself, saved);
                 }
+
+                Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                    logger.info("Received SIGTERM, shutting down");
+                    semaphore.release();
+
+                    if (arguments.mode != 1) {
+                        List<Node> nodes = data.table.closest(data.myself, 20);
+                        peersFm.saveCompactInfo(data.myself, nodes);
+                        logger.info("stopped with {}", Generator.toHex(data.myself.array()));
+                    }
+                }, "dht-shutdown"));
+                this.semaphore.acquire();
+
             } finally {
-                fm.close();
+                fileDB.close();
+                executor.shutdown();
+                group.shutdownGracefully();
             }
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);
         }
     }
 
-    void stop() {
-        this.semaphore.release();
+    Queue<ByteBuffer> divide(BigInteger from, BigInteger to) {
+        List<ByteBuffer> divide = BitSpaceDivider.divide(this.arguments.bitspaceParts);
+        return divide.stream()
+                .filter(
+                        e -> from.compareTo(new BigInteger(1, e.array())) <= 0 && to.compareTo(new BigInteger(1, e.array())) >= 0
+                 )
+                .collect(Collectors.toCollection(LinkedList::new));
     }
 }

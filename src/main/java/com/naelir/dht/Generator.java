@@ -80,12 +80,6 @@ public class Generator {
         }
         return data;
     }
-//
-//    static ByteBuffer getTid(int id) {
-//        id = id % Config.MAX_MESSAGE_ID;
-//        byte[] bytes = { (byte) (id & 0xFF), (byte) ((id & 0xFF00) >>> 8) };
-//        return ByteBuffer.wrap(bytes);
-//    }
 
     public static String toHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];

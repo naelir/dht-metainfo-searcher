@@ -1,26 +1,36 @@
 package com.naelir.dht;
 
 import java.nio.ByteBuffer;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.naelir.bt.Entry;
-import com.naelir.bt.IpRangeFilter;
+import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
+import com.naelir.fs.FileDB;
+import com.naelir.fs.IpBlocker;
+import com.naelir.tasks.Sample;
 
-public class ResponseResolver {
-    public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
+public class DhtResponseResolver {
+    public static final Logger logger = LogManager.getLogger(DhtResponseResolver.class);
     private Data data;
+    private Cache<String, Boolean> ipcache;
 
-    public ResponseResolver(Data data) {
+    public DhtResponseResolver(Data data) {
         this.data = data;
+        this.ipcache = CacheBuilder.newBuilder().expireAfterAccess(Duration.ofMinutes(1)).build();
     }
 
     private Object forAddress(From from) {
@@ -45,7 +55,7 @@ public class ResponseResolver {
     }
 
     private Object resolve(AnnouncePeerRequest message, From from) {
-        Node found = this.data.tokensSent.get(message.token);
+        Node found = this.data.tokensSent.getIfPresent(message.token);
         ByteBuffer hashed = Token.token(from.ip);
         if (found != null && message.token.equals(hashed)) {
             Integer remotePort = message.port;
@@ -58,7 +68,7 @@ public class ResponseResolver {
             if (previous != null) {
                 previous.peers().add(node);
             } else {
-                Torrent name = new Torrent(hex).addPeer(node);
+                Torrent name = new Torrent(hex).peer(node);
                 this.data.torrents.put(hex, name);
             }
             return new AnnouncePeerResponse(message.tid, this.data.myself, message);
@@ -81,8 +91,9 @@ public class ResponseResolver {
                 return resolve(decode, from);
             } else if (KRPCKeys.RESPONSE.equals(type)) {
                 ByteBuffer tid = KRPCKeys.getTransaction(map);
-                IRequest found = this.data.requestsSent.remove(tid);
+                IRequest found = this.data.requestsSent.getIfPresent(tid);
                 if (found != null) {
+                    this.data.requestsSent.invalidate(tid);
                     Object decode = CommandDecoder.decodeResponse(map, found);
                     logFrom(decode, from);
                     return resolve(decode, from);
@@ -90,8 +101,9 @@ public class ResponseResolver {
             } else {
                 ByteBuffer tid = KRPCKeys.getTransaction(map);
                 if (tid != null) {
-                    IRequest found = this.data.requestsSent.remove(tid);
+                    IRequest found = this.data.requestsSent.getIfPresent(tid);
                     if (found != null) {
+                        this.data.requestsSent.invalidate(tid);
                         Object decode = CommandDecoder.decodeError(map, found);
                         logFrom(decode, from);
                         return resolve(decode, from);
@@ -99,26 +111,43 @@ public class ResponseResolver {
                 }
             }
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            logger.error(e.getMessage());
         }
         return Optional.empty();
     }
 
-    private FindNodeResponse resolve(FindNodeRequest message, From from) {
-        List<Node> nodes = this.data.table.closest(message.target);
-        logger.info("find node from {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
-                nodes.size());
-        return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
+    private IResponse resolve(FindNodeRequest message, From from) {
+        String ip = Generator.ip(from.ip);
+        if (ipcache.getIfPresent(ip) != null) {
+            logger.debug("find node from {} will return error, scanners spam", from);
+            return new Error(201, "too many requests", message.tid);
+        } else {
+            ipcache.put(ip, Boolean.TRUE);
+            List<Node> nodes = this.data.table.closest(message.target);
+            logger.debug("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
+                   from, nodes.size());
+            return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
+        }
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         decode.request.node.put(Command.FIND_NODE_R);
-        for (Node node : decode.nodes) {
-            if (IpRangeFilter.isDenied(node.ip) == false || this.data.table.size() < 5) {
-                this.data.table.insert(node);
-            } else {
-                logger.debug("{} denied", node);
+        if (decode.request.target == data.myself) {
+            for (Node node : decode.nodes) {
+                Pair<String, String> location = data.locationDb.location(node.ip);
+                if (IpBlocker.denied(location) == false || this.data.table.size() < 5) {
+                    this.data.table.insert(node);
+                    node.setLocation(location);
+                } else {
+                    logger.debug("node {} from {} denied", node, location);
+                }
             }
+        } else {
+            String hex = Generator.toHex(decode.request.target.array());
+            Sample sample = data.samples.get(hex);
+            logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
+
+            decode.nodes.forEach(e -> sample.table().insert(e));
         }
         return Optional.empty();
     }
@@ -150,25 +179,32 @@ public class ResponseResolver {
             if (sample != null) {
                 int denied = 0;
                 for (Node node : decode.peers) {
-                    if (IpRangeFilter.isDenied(node.ip) == false) {
+                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    if (IpBlocker.denied(location) == false) {
                         sample.addPeer(node);
+                        node.setLocation(location);
                     } else {
                         denied++;
                     }
                 }
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
-                    sample.skip = true;
-                    // 1 is too low, can be a false positive, 2 is better
-                    if (size > 1) {
-                        logger.info("marking sample {} as crap due to too many denied peers", hex);
-                        data.fileManager.create(Entry.crap(hex));
+                    sample.skip(true);
+                    logger.debug("{} too many denied peers", hex);
+                    if (size == 1) {
+                        data.fileManager.insert(Entry.lowPeersNotEu(hex));
+                    } else {
+                        data.fileManager.insert(Entry.crap(hex));
                     }
                 }
-                logger.info("found {} peers for {}, denied {}", size, hex, denied);
+                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
-                    if (IpRangeFilter.isDenied(node.ip) == false) {
-                        sample.table.insert(node);
+                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    if (IpBlocker.denied(location) == false) {
+                        sample.table().insert(node);
+                        node.setLocation(location);
+                    } else {
+                        logger.debug("node {} from {} denied", node, location);
                     }
                 }
             }
@@ -188,7 +224,7 @@ public class ResponseResolver {
             byte[] encode = BEncoder.encode(r);
             return optional(encode);
         } else if (decode instanceof FindNodeRequest fnr) {
-            FindNodeResponse r = resolve(fnr, from);
+            IResponse r = resolve(fnr, from);
             logTo(r, from);
             byte[] encode = BEncoder.encode(r);
             return optional(encode);
@@ -245,7 +281,7 @@ public class ResponseResolver {
         int min = Math.min(20, values);
         List<String> list = new ArrayList<>(this.data.samples.values()).subList(0, min)
                 .stream()
-                .map(e -> e.torrent.infoHash())
+                .map(e -> e.torrent().infoHash())
                 .toList();
         return new SampleInfoHashesResponse(decode.tid, this.data.myself, 3600, nodes, min, list, decode);
     }
@@ -253,20 +289,40 @@ public class ResponseResolver {
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples.isEmpty() == false) {
             int i = 0;
+            int tooFar = 0;
             for (String hash : decode.samples) {
-                Torrent torrent = this.data.torrents.get(hash);
-                boolean skip = this.data.torrents.containsKey(hash);
-
-                if (skip) {
-                    data.forUpdate.add(new ImmutablePair<>(hash, new ImmutablePair<>(torrent.meta().getName(), 1)));
-                    logger.info("hash {} already resolved as {}", hash, torrent.meta().getName());
+                String value = this.data.fileManager.get(hash);
+                if (value != null) {
+                    if (isFine(value)) {
+                        data.forUpdate.add(new ImmutablePair<>(hash, 1));
+                    }
+                    logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
+                } else if (closeEnough(decode.request.node, hash)) {
+                    byte[] array = Generator.toArray(hash);
+                    List<Node> closest = data.table.closest(ByteBuffer.wrap(array), 2);
+                    this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                 } else {
-                    this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node, false));
+                    tooFar++;
+                    this.data.fileManager.insertUnresolved(hash);
                 }
             }
-            logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
+            logger.info("found {} samples from {}, resolved {}, too far {}", decode.samples.size(), from, i, tooFar);
             decode.request.node.put(Command.SAMPLE_R);
         }
+    }
+
+    private boolean isFine(String value) {
+        try {
+            Entry entry = FileDB.MAPPER.readValue(value, Entry.class);
+            return NameFilter.fineMatch(entry.name);
+        } catch (JsonProcessingException e) {
+            return false;
+        }
+    }
+
+    private boolean closeEnough(Node node, String hash) {
+        String id = Generator.toHex(node.id.array());
+        return id.substring(0, 4).equals(hash.substring(0, 4));
     }
 }

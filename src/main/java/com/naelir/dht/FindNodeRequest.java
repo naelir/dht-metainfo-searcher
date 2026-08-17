@@ -14,8 +14,7 @@ public class FindNodeRequest implements IRequest {
     ByteBuffer tid;
     Node node;
 
-    public FindNodeRequest() {
-        // TODO Auto-generated constructor stub
+    public FindNodeRequest() {//
     }
 
     public FindNodeRequest(ByteBuffer id, ByteBuffer target, Node node) {

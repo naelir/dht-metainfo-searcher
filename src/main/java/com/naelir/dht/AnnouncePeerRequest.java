@@ -19,8 +19,7 @@ public class AnnouncePeerRequest implements IRequest {
     ByteBuffer tid;
     Node node;
 
-    public AnnouncePeerRequest() {
-        // TODO Auto-generated constructor stub
+    public AnnouncePeerRequest() {//
     }
 
     public AnnouncePeerRequest(ByteBuffer id, ByteBuffer infoHash, ByteBuffer token, int port, Node node) {

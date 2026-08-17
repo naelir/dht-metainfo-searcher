@@ -1,0 +1,76 @@
+package com.naelir.tasks;
+
+import java.nio.ByteBuffer;
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.naelir.dht.Data;
+import com.naelir.dht.Generator;
+import com.naelir.dht.ITask;
+import com.naelir.dht.Node;
+import com.naelir.utp.UtpClient;
+
+public class GetPeersTask implements ITask {
+    public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
+    private Data data;
+    private UtpClient client;
+
+    public GetPeersTask(UtpClient client, Data data) {
+        this.client = client;
+        this.data = data;
+    }
+
+
+    @Override
+    public boolean resolved() {
+        int size = this.data.samples.values()
+                .stream()
+                .filter(s -> s.checked < this.data.arguments.getPeersDepth)
+                .toList()
+                .size();
+        if (size % 20 == 0) {
+            logger.info("getPeers: {} samples left to check", size);
+        }
+        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
+    }
+
+    @Override
+    public void run() {
+        try {
+            int step = data.arguments.hashesStep;
+            logger.debug("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
+            for (Sample sample : this.data.samples.values()) {
+                if (step <= 0) {
+                    break;
+                }
+                String infoHash = sample.torrent.infoHash();
+                byte[] array = Generator.toArray(infoHash);
+                ByteBuffer wrap = ByteBuffer.wrap(array);
+                if (sample.checked < this.data.arguments.getPeersDepth) {
+                    sample.checked++;
+                    if (sample.peers.size() >= 5) {
+                        logger.debug("samples {} has peers, continue", infoHash);
+                        continue;
+                    }
+                    if (sample.skip) {
+                        logger.debug("samples {} is skipped, continue", infoHash);
+                        continue;
+                    }
+                    List<Node> closest = sample.table.closest(sample.byteBuffer(), 1);
+                    for (Node node : closest) {
+                        ByteBuffer id = node.id();
+                        sample.table.remove(id);
+                        logger.info("{} {} {} time", infoHash, Generator.toHex(id.array()), sample.checked);
+                        this.client.sendGetPeers(this.data.myself, wrap, node);
+                        step--;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+
+}

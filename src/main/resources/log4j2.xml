@@ -7,7 +7,7 @@
         </Console>
         
         <File name           ="MyFile"
-              fileName       ="all.log"
+              fileName       ="all-${date:yyyy-MM-dd-HH-mm}.log"
               immediateFlush ="false"
               append         ="false">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>

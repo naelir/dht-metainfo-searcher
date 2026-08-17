@@ -6,8 +6,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.Torrent;
-import com.naelir.bt.TorrentMeta;
+import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
@@ -38,12 +37,35 @@ public class NextIdTask implements ITask {
             logger.warn("next id is {}", myself);
             List<Node> nodes = this.data.table.closest(nextId, 20);
             this.data.table = new RoutingTable();
-            nodes.forEach(e -> this.data.table.insert(e));
+            for (Node e : nodes) {
+                e.queries.clear();
+                this.data.table.insert(e);
+            }
+            if (data.arguments.getPeersDepth > 1) {
+                int i = 0;
+                int j = 0;
+                int k = 0;
+                int r = 0;
+                for (Sample sample : data.samples.values()) {
+                    if (sample.torrent.meta() != null) {
+                        r++;
+                    } if (sample.peers().size() <= 3 && sample.skip == false) {
+                        i++;
+                        data.fileManager.insert(Entry.lowPeers(sample.torrent.infoHash()));
+                    } else if (sample.skip) {
+                        j++;
+                    }  else {
+                        k++;  
+                        data.fileManager.insertUnresolved(sample.torrent.infoHash());
+                    }
+                }
+                logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
+            }
             this.data.samples.clear();
             this.data.torrents.clear();
-            data.fileManager
-                    .getAll(myself.toLowerCase())
-                    .forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
+            this.data.requestsSent.invalidateAll();
+            this.data.tokensSent.invalidateAll();
+            this.data.tokensReceived.invalidateAll();
         }
     }
     

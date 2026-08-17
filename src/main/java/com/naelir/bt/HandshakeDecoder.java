@@ -36,14 +36,13 @@ public class HandshakeDecoder extends ReplayingDecoder<com.naelir.bt.HandshakeDe
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         switch (state()) {
-        case HANDSHAKE: {
+        case HANDSHAKE -> {
             var data = new HandshakeMessage();
             data.read(in);
             out.add(data);
             this.checkpoint(State.NEXT);
-            break;
         }
-        case NEXT: {
+        case NEXT -> {
             int length = in.readInt();
             byte type = in.readByte();
             if (type == BtKeys.EXTENDED_MESSAGE_ID) {
@@ -64,10 +63,9 @@ public class HandshakeDecoder extends ReplayingDecoder<com.naelir.bt.HandshakeDe
                 message.read(in);
                 out.add(message);
             }
-            break;
         }
-        default:
-            break;
+        default -> {
+        }
         }
     }
 

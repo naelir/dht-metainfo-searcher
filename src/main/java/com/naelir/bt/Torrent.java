@@ -15,7 +15,6 @@ public class Torrent {
         return name;
     }
 
-    boolean active;
     String infoHash;
     TorrentMeta meta;
     Deque<Node> peers;
@@ -30,11 +29,7 @@ public class Torrent {
         this(infoHash, null);
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public Torrent addPeer(Node node) {
+    public Torrent peer(Node node) {
         this.peers.add(node);
         return this;
     }

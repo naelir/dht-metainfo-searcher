@@ -3,12 +3,20 @@ package com.naelir.utp;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.RemovalListener;
+import com.google.common.cache.RemovalNotification;
 
 /**
  * Java port of {@code Net::uTP::Manager} – multiplexes many uTP sessions over a
@@ -37,6 +45,7 @@ import java.util.Random;
  * </ul>
  */
 public class UTPManager {
+    public static final Logger logger = LogManager.getLogger(UTPManager.class);
     // ── Inner types ───────────────────────────────────────────────────────────
 
     /**
@@ -48,17 +57,78 @@ public class UTPManager {
         return addr.getAddress().getHostAddress();
     }
 
-    /** Active uTP sessions keyed by remote address + connection-id. */
-    private final Map<ConnectionKey, UTPConnection> connections = new HashMap<>();
+    /**
+     * How long a connection may sit without receiving any packet before it is
+     * forcibly evicted. Without this, connections that stall after a
+     * handshake (or a flood of bogus ST_SYN packets that are never followed
+     * up) would accumulate forever: {@link UTPConnection#tick} only closes a
+     * connection when it has *unacked outstanding data* that exceeds the
+     * retry limit, so an idle connection with an empty retransmit queue would
+     * otherwise never be removed — a genuine memory leak.
+     */
+    private static final long IDLE_TIMEOUT_SEC = 180L;
+
+    /**
+     * Hard upper bound on the number of concurrently tracked connections. Acts
+     * as a backstop against SYN-flood style attacks that create many
+     * {@link UTPConnection} instances faster than the idle timeout can reap
+     * them; Guava evicts least-recently-used entries once this is exceeded.
+     */
+    private static final long MAX_CONNECTIONS = 20_000L;
+
+    /**
+     * Active uTP sessions keyed by remote address + connection-id.
+     *
+     * <p>
+     * Backed by a Guava {@link Cache} instead of a plain
+     * {@code ConcurrentHashMap} so that stale/abandoned connections are bounded
+     * automatically:
+     * <ul>
+     * <li>{@code expireAfterAccess} reclaims connections that stop receiving
+     * traffic (idle peers, half-open handshakes, dropped sessions) without
+     * relying solely on the manual sweep in {@link #tick(double)}.</li>
+     * <li>{@code maximumSize} caps total memory use even under a sustained
+     * SYN-flood where new keys are created faster than they can go idle.</li>
+     * <li>The {@link RemovalListener} guarantees {@link UTPConnection#closeSession()}
+     * is always invoked, releasing any attached {@link UtpPeerSession} /
+     * Netty buffers, regardless of *why* the entry was removed (expiry, size
+     * eviction, or explicit invalidation).</li>
+     * </ul>
+     */
+    private final Cache<ConnectionKey, UTPConnection> connections = CacheBuilder.newBuilder()
+            .expireAfterAccess(Duration.ofSeconds(IDLE_TIMEOUT_SEC))
+            .maximumSize(MAX_CONNECTIONS)
+            .removalListener((RemovalListener<ConnectionKey, UTPConnection>) this::onRemoval)
+            .build();
     // ── Fields ────────────────────────────────────────────────────────────────
+
+    private void onRemoval(RemovalNotification<ConnectionKey, UTPConnection> notification) {
+        UTPConnection utp = notification.getValue();
+        if (utp != null) {
+            utp.closeSession();
+        }
+        if (logger.isDebugEnabled()) {
+            logger.debug("uTP connection " + notification.getKey() + " removed: " + notification.getCause());
+        }
+    }
 
     public UTPConnection findConnection(String ip, int port, int connId, int type) {
         ConnectionKey key = new ConnectionKey(ip, port, connId);
-        ConnectionKey lookup = key;
-        UTPConnection connection = this.connections.get(key);
+        UTPConnection connection = this.connections.getIfPresent(key);
         if (connection == null && type != UTPConnection.ST_SYN) {
-            lookup = new ConnectionKey(ip, port, (connId + 1) & 0xFFFF);
-            connection = this.connections.get(lookup);
+            // Depending on whether the cached entry was created as the
+            // *initiator* (stored under recvId) or as the *acceptor* of an
+            // incoming ST_SYN (stored under the peer's seed id, one less
+            // than our own recvId), the id actually carried by subsequent
+            // packets can be offset by +1 in either direction relative to
+            // the stored key. Try both to avoid spuriously losing the
+            // connection ("no connection found") right after the handshake.
+            ConnectionKey plusOne = new ConnectionKey(ip, port, (connId + 1) & 0xFFFF);
+            connection = this.connections.getIfPresent(plusOne);
+            if (connection == null) {
+                ConnectionKey minusOne = new ConnectionKey(ip, port, (connId - 1) & 0xFFFF);
+                connection = this.connections.getIfPresent(minusOne);
+            }
         }
         if (connection == null && type == UTPConnection.ST_SYN) {
             connection = new UTPConnection(null, connId, connId + 1);
@@ -70,7 +140,7 @@ public class UTPManager {
 
     /** Read-only snapshot of active connections. */
     public Map<ConnectionKey, UTPConnection> getConnections() {
-        return Collections.unmodifiableMap(this.connections);
+        return Collections.unmodifiableMap(this.connections.asMap());
     }
 
     /**
@@ -90,8 +160,9 @@ public class UTPManager {
      *         payload, or {@code null} if the datagram was invalid
      */
     public byte[] handlePacket(byte[] data, InetSocketAddress senderAddr) {
-        if (senderAddr == null || data == null || data.length < 20)
+        if (senderAddr == null || data == null || data.length < 20) {
             return null;
+        }
         String ip = unpackAddr(senderAddr);
         int port = senderAddr.getPort();
         if (ip == null)
@@ -107,7 +178,9 @@ public class UTPManager {
         if (connection != null) {
             UTPConnection.DecodeResult res = connection.decode(data);
             if ("CLOSED".equals(res.state())) {
-                this.connections.entrySet().removeIf(e -> e.getValue() == connection);
+                this.connections.asMap().values().removeIf(v -> v == connection);
+                logger.debug("{}: {}, {}/{} connection closed", ip, port, connection.connIdRecv, connection.connIdSend);
+                connection.closeSession();
             }
             return res.response();
         }
@@ -148,10 +221,19 @@ public class UTPManager {
      * @return list of packets that must be sent over UDP by the caller
      */
     public List<PendingPacket> tick(double delta) {
+        // Force Guava to process any pending expiration/size-based evictions
+        // (and fire the removalListener) even if no get()/put() happened on
+        // those particular entries recently.
+        this.connections.cleanUp();
         List<PendingPacket> toSend = new ArrayList<>();
-        for (ConnectionKey key : new ArrayList<>(this.connections.keySet())) {
-            UTPConnection utp = this.connections.get(key);
+        for (Map.Entry<ConnectionKey, UTPConnection> entry : new ArrayList<>(this.connections.asMap().entrySet())) {
+            ConnectionKey key = entry.getKey();
+            UTPConnection utp = entry.getValue();
             if (utp == null) {
+                continue;
+            }
+            if (utp.isIdle(IDLE_TIMEOUT_SEC)) {
+                this.connections.invalidate(key);
                 continue;
             }
             byte[] res = utp.tick(delta);
@@ -159,7 +241,7 @@ public class UTPManager {
                 toSend.add(new PendingPacket(key.ip(), key.port(), res));
             }
             if ("CLOSED".equals(utp.state)) {
-                this.connections.remove(key);
+                this.connections.invalidate(key);
             }
         }
         return toSend;

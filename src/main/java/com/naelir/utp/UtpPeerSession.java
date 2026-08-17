@@ -7,57 +7,16 @@ import java.util.Queue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import io.netty.buffer.ByteBuf;
-
 import com.naelir.bt.ClientHandler;
 import com.naelir.bt.HandshakeDecoder;
 import com.naelir.bt.HandshakeEncoder;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.embedded.EmbeddedChannel;
 
-/**
- * Bridges a single uTP connection to the BitTorrent peer-wire protocol
- * ({@link HandshakeDecoder} → {@link HandshakeEncoder} → {@link ClientHandler})
- * without requiring a real TCP channel.
- *
- * <h2>How it fits into the uTP pipeline</h2>
- *
- * <pre>
- *  UDP socket (NioDatagramChannel)
- *    └── InboundHandler
- *          └── UtpDataListener → UTPManager → UTPConnection
- *                emit("connected") ──► UtpPeerSession  (construction, triggers channelActive)
- *                emit("data",bytes) ──► UtpPeerSession.feed(bytes)
- *                emit("closed")     ──► UtpPeerSession.close()
- *
- *  UtpPeerSession
- *    ├── inbound:  feed(bytes) ──► EmbeddedChannel ──► HandshakeDecoder ──► ClientHandler
- *    └── outbound: ClientHandler.write(msg) ──► HandshakeEncoder ──► drainOutbound()
- *                        └── sender.accept(encodedBytes) ──► UTPConnection.sendData() ──► UDP
- * </pre>
- *
- * <h2>Why EmbeddedChannel works here</h2>
- * <ul>
- * <li>{@link HandshakeDecoder} is a
- * {@link io.netty.handler.codec.ReplayingDecoder}: it buffers bytes internally
- * across multiple {@link #feed} calls, so fragmented uTP DATA payloads are
- * reassembled exactly as TCP segments would be.</li>
- * <li>All outbound writes by {@link ClientHandler} are captured via
- * {@link EmbeddedChannel#readOutbound()} and forwarded to the {@code sender}
- * callback, which routes them through the live uTP connection.</li>
- * <li>{@link EmbeddedChannel} is created <em>after</em>
- * {@code UTPConnection.emit("connected")} so that {@code channelActive} – which
- * sends the {@link com.naelir.bt.messages.HandshakeMessage} – fires exactly
- * when the uTP session is ready.</li>
- * <li>{@code remoteAddress()} is overridden on the anonymous
- * {@link EmbeddedChannel} subclass so that every
- * {@code ctx.channel().remoteAddress()} call inside {@link ClientHandler}
- * returns the real peer address rather than {@code null}.</li>
- * </ul>
- */
 public class UtpPeerSession {
     public static final Logger logger = LogManager.getLogger(UtpPeerSession.class);
     private final EmbeddedChannel embeddedChannel;

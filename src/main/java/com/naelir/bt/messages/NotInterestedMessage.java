@@ -5,11 +5,6 @@ public class NotInterestedMessage extends AbstractPeerWireMessage {
         super(BtKeys.NOTINT_MESSAGE_ID);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "NOT_INTERESTED []";

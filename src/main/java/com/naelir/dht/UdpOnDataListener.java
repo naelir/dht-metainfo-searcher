@@ -10,10 +10,10 @@ import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 
 public class UdpOnDataListener {
     public static final Logger logger = LogManager.getLogger(UdpOnDataListener.class);
-    private ResponseResolver resolver;
+    private DhtResponseResolver resolver;
 
-    public UdpOnDataListener(Data data) {
-        this.resolver = new ResponseResolver(data);
+    public UdpOnDataListener(DhtResponseResolver resolver) {
+        this.resolver = resolver;
     }
 
     public Optional<byte[]> onData(byte[] buffer, InetAddress address, int port) {

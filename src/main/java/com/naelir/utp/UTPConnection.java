@@ -12,7 +12,9 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Random;
 import java.util.TreeMap;
-import java.util.logging.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import io.netty.buffer.ByteBuf;
 
@@ -42,7 +44,7 @@ import io.netty.buffer.ByteBuf;
  * </ul>
  */
 public class UTPConnection {
-    private static final Logger LOG = Logger.getLogger(UTPConnection.class.getName());
+    public static final Logger logger = LogManager.getLogger(UTPConnection.class);
     // ── Packet types ──────────────────────────────────────────────────────────
     public static final int ST_DATA = 0;
     public static final int ST_FIN = 1;
@@ -78,8 +80,8 @@ public class UTPConnection {
     }
     // ── Fields ────────────────────────────────────────────────────────────────
 
-    private final int connIdSend;
-    private final int connIdRecv;
+    final int connIdSend;
+    final int connIdRecv;
     String state = "NEW"; // NEW | CLOSED | SYN_SENT | SYN_RECV | CONNECTED | FIN_SENT | RESET
     private int seqNr;
     private int ackNr = 0;
@@ -101,6 +103,16 @@ public class UTPConnection {
     private double rtt = 0.0;
     private double rttVar = 0.8;
     private UtpPeerSession session;
+    /**
+     * Wall-clock time (seconds since epoch) of the last inbound packet or
+     * connection creation. Used by {@link UTPManager#tick(double)} to evict
+     * connections that never complete a handshake / never send a FIN or RESET
+     * and would otherwise sit in {@link UTPManager#connections} forever,
+     * causing an unbounded memory leak (e.g. SYN-flood or a peer that silently
+     * disappears mid-transfer without ever timing out via the retransmit
+     * queue, which only fires when there is outstanding unacked data).
+     */
+    private double lastActivity = nowSec();
     // ── Constructor ───────────────────────────────────────────────────────────
 
     public UTPConnection(UtpPeerSession session, int connIdSend, int connIdRecv) {
@@ -108,6 +120,33 @@ public class UTPConnection {
         this.connIdSend = connIdSend;
         this.connIdRecv = connIdRecv;
         this.seqNr = new Random().nextInt(65535);
+    }
+
+    /**
+     * Close the associated {@link UtpPeerSession} (if any), releasing any
+     * unreleased outbound {@link io.netty.buffer.ByteBuf}s and firing
+     * {@code channelInactive} on the BT pipeline.
+     * Safe to call even when no session is attached (e.g. server-side SYN
+     * connections created by {@link UTPManager#findConnection}).
+     */
+    public void closeSession() {
+        if (this.session != null) {
+            this.session.close();
+            this.session = null;
+        }
+    }
+
+    /**
+     * @param idleTimeoutSec how long a connection may go without any inbound
+     *                       traffic before it is considered dead.
+     * @return {@code true} if no packet has been received (and the connection
+     *         wasn't just created) for at least {@code idleTimeoutSec} seconds.
+     *         Connections in a terminal state are never reported idle here;
+     *         callers should check {@link #state} for {@code CLOSED}
+     *         separately.
+     */
+    public boolean isIdle(double idleTimeoutSec) {
+        return (nowSec() - this.lastActivity) > idleTimeoutSec;
     }
 
     /**
@@ -132,34 +171,6 @@ public class UTPConnection {
         }
         this.curWindow -= entry.data.length;
         this.outBuffer.remove(sn);
-    }
-
-    /**
-     * Build SACK extension bytes.
-     *
-     * <p>
-     * Mirrors Perl's {@code pack 'C C V'}: the 32-bit bitmask is packed
-     * <em>little-endian</em> (Perl format letter {@code V}). {@link #handleSack}
-     * reads the mask byte-by-byte so endianness is self-consistent within this
-     * implementation.
-     */
-    private byte[] buildSackExtension() {
-        if (this.inBuffer.isEmpty())
-            return new byte[0];
-        int base = (this.ackNr + 2) & 0xFFFF;
-        int mask = 0;
-        for (int sn : this.inBuffer.keySet()) {
-            int diff = (sn - base) & 0xFFFF;
-            if (diff < 32) {
-                mask |= (1 << diff);
-            }
-        }
-        // next_ext=0, len=4, bitmask as little-endian 32-bit (Perl 'V' format)
-        ByteBuffer bb = ByteBuffer.allocate(6).order(ByteOrder.LITTLE_ENDIAN);
-        bb.put((byte) 0); // next_ext
-        bb.put((byte) 4); // len
-        bb.putInt(mask);
-        return bb.array();
     }
 
     /**
@@ -209,6 +220,7 @@ public class UTPConnection {
      *         current state, and optional payload data; never {@code null}
      */
     public DecodeResult decode(byte[] data) {
+        this.lastActivity = nowSec();
         Header h = unpackHeader(data);
         if (h == null)
             return new DecodeResult(this.state, null);
@@ -220,7 +232,7 @@ public class UTPConnection {
             int nextExt = payload[pos] & 0xFF;
             int extLen = payload[pos + 1] & 0xFF;
             if (payload.length - pos < 2 + extLen) {
-                LOG.warning("Malformed uTP extension");
+                logger.warn("Malformed uTP extension");
                 break;
             }
             byte[] extData = Arrays.copyOfRange(payload, pos + 2, pos + 2 + extLen);
@@ -234,8 +246,7 @@ public class UTPConnection {
             payload = Arrays.copyOfRange(payload, pos, payload.length);
         }
         // ── LEDBAT congestion control ──────────────────────────────────────
-        long nowUs = nowMicros();
-        long delay = (nowUs - h.ts) & 0xFFFFFFFFL;
+        long delay = ((nowMicros() & 0xFFFFFFFFL) - h.ts) & 0xFFFFFFFFL;
         updateBaseDelay(delay);
         Long minDelay = minBaseDelay();
         if (minDelay != null) {
@@ -257,6 +268,7 @@ public class UTPConnection {
         // ── State machine ──────────────────────────────────────────────────
         switch (h.type) {
         case ST_SYN:
+            logger.debug("peer {}:{} sent SYN; sending STATE", this.connIdRecv, this.connIdSend);
             if ("NEW".equals(this.state)) {
                 this.state = "CONNECTED";
                 this.ackNr = h.seq;
@@ -264,6 +276,7 @@ public class UTPConnection {
             }
             break;
         case ST_STATE:
+            logger.debug("peer {}:{} sent STATE; sending STATE, ack={}", this.connIdRecv, this.connIdSend, h.ack);
             if ("SYN_SENT".equals(this.state)) {
                 // The spec says ST_STATE (and all packets with no payload) do NOT
                 // advance the sender's seq_nr. The accepting end therefore reuses
@@ -273,17 +286,27 @@ public class UTPConnection {
                 // This matches libutp's behaviour: ack_nr = pkt.seq_nr - 1.
                 this.ackNr = (h.seq - 1) & 0xFFFF;
                 this.state = "CONNECTED";
+            }
+            // During CONNECTED, ST_STATE is normally a pure ACK carrying no
+            // payload (h.ack already processed by the cumulative-ACK loop
+            // above). However, once the session has application data queued
+            // (e.g. our BT handshake becomes available only after the initial
+            // SYN/STATE exchange), we must still have a way to push it out -
+            // otherwise it sits in the queue forever because the peer may
+            // never send ST_DATA to trigger the other flush path, and simply
+            // times out / FINs the idle connection. Piggy-back any pending
+            // outbound bytes on our STATE reply here.
+            if ("CONNECTED".equals(this.state) && this.session != null) {
                 Queue<Object> out = this.session.out();
                 byte[] raw = data(out);
-                byte[] response = encode(raw);
-                return new DecodeResult(this.state, response);
+                if (raw.length > 0) {
+                    byte[] response = encode(raw);
+                    return new DecodeResult(this.state, response);
+                }
             }
-            // During CONNECTED, ST_STATE is a pure ACK carrying no payload.
-            // Only h.ack matters here (already processed in the cumulative-ACK
-            // loop above). Updating ackNr from h.seq would corrupt the receive
-            // sequence tracker because STATE seq_nrs do not advance the window.
             break;
         case ST_DATA: {
+            logger.debug("peer {}:{} sent DATA; ack={}", this.connIdRecv, this.connIdSend, h.ack);
             int sn = h.seq;
             byte[] deliveredData = new byte[0];
             if (sn == ((this.ackNr + 1) & 0xFFFF) || this.ackNr == 0) {
@@ -299,6 +322,13 @@ public class UTPConnection {
                 deliveredData = dataOut.toByteArray();
             } else if (((sn - this.ackNr) & 0xFFFF) < 0x8000 && sn != this.ackNr) {
                 this.inBuffer.put(sn, payload); // buffer out-of-order segment
+                logger.debug("out of order packet");
+            }
+            if (this.session == null) {
+                // No BT session attached (e.g. server-side connection we never
+                // accept). Still ACK the data so the remote doesn't keep
+                // retransmitting, but there is nothing to feed/drain.
+                return new DecodeResult(this.state, packHeader(ST_STATE));
             }
             this.session.in(deliveredData);
             Queue<Object> out = this.session.out();
@@ -308,9 +338,11 @@ public class UTPConnection {
             return new DecodeResult(this.state, merge);
         }
         case ST_RESET:
+            logger.debug("peer {}:{} sent RESET; closing connection", this.connIdRecv, this.connIdSend);
             this.state = "CLOSED";
             break;
         case ST_FIN:
+            logger.debug("peer {}:{} sent FIN; closing connection", this.connIdRecv, this.connIdSend);
             this.state = "CLOSED";
             return new DecodeResult(this.state, packHeader(ST_STATE));
         }
@@ -486,6 +518,8 @@ public class UTPConnection {
             this.baseDelays.remove(0);
         }
     }
+    
+    
     // ── Time helpers ──────────────────────────────────────────────────────────
 
     /**

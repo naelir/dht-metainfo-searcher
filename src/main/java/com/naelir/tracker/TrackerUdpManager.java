@@ -6,15 +6,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
 import com.naelir.dht.From;
+import com.naelir.dht.Node;
+import com.naelir.tasks.MetaTorrentTask;
+import com.naelir.tasks.Sample;
 import com.naelir.tracker.ScrapeResponse.TorrentStats;
 
 /**
@@ -106,12 +108,10 @@ public class TrackerUdpManager {
      * @param port        tracker UDP port
      * @return encoded {@link ConnectRequest} bytes ready for sending
      */
-    public byte[] newConnection(Set<String> hashes, String hostAddress, int port) {
-        TrackerConnection tc = new TrackerConnection(hostAddress, port, hashes);
+    public byte[] newConnection(TrackerConnection tc) {
         connections.put(tc.transactionId(), tc);
-        logger.info("Initiating tracker session {}:{} for {} hashes in {} batch(es)",
-                hostAddress, port, hashes.size(),
-                (int) Math.ceil((double) hashes.size() / TrackerConnection.BATCH_SIZE));
+        logger.info("Initiating tracker session {}:{}",
+                tc.hostAddress, tc.port);
         return tc.connect();
     }
 
@@ -140,13 +140,33 @@ public class TrackerUdpManager {
             logger.info("Session {} has no hashes to scrape – done", tc);
             return Optional.empty();
         }
-
-        return Optional.of(tc.buildNextScrapeRequest());
+        
+        return Optional.of(tc.buildNextRequest());
     }
 
     protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
-        logger.debug("Tracker → {} from {}", resp, from);
-        return Optional.empty();
+        logger.info("Tracker → {} from {}", resp, from);
+        
+        AnnounceTrackerConnection tc = (AnnounceTrackerConnection) connections.get(resp.transactionId);
+        if (tc == null) {
+            logger.warn("Received scrape response with unknown transactionId={} from {}", resp.transactionId, from);
+            return Optional.empty();
+        }
+        
+        String currentHash = tc.getCurrentHash();
+        
+        Sample sample = data.samples.get(currentHash);
+        resp.peers.forEach(peer -> 
+                {
+                    Node peers = new Node(peer.address().getAddress(), peer.port());
+                    Torrent torrent = sample.torrent();
+                    MetaTorrentTask e = new MetaTorrentTask(peers, torrent);
+                    data.tcptasks.offer(e);
+                }
+        );
+
+       
+        return Optional.of(tc.buildNextRequest());
     }
 
     /**
@@ -164,7 +184,7 @@ public class TrackerUdpManager {
      * </ol>
      */
     protected Optional<byte[]> onScrapeResponse(ScrapeResponse resp, From from) {
-        TrackerConnection tc = connections.get(resp.transactionId);
+        ScrapeTrackerConnection tc = (ScrapeTrackerConnection) connections.get(resp.transactionId);
         if (tc == null) {
             logger.warn("Received scrape response with unknown transactionId={} from {}",
                     resp.transactionId, from);
@@ -180,12 +200,11 @@ public class TrackerUdpManager {
                     continue;
                 }
                 TorrentStats stats = resp.stats.get(i);
-                Pair<String, String> pair = data.unresolved.get(batch.get(i));
-                if (pair == null)
-                    continue;
                 logger.info("Scrape stats for {}: {}", batch.get(i), stats);
-                int peers = stats.seeders() + stats.leechers();
-                data.forUpdate.add(new ImmutablePair<>(pair.getKey(), new ImmutablePair<>(pair.getValue(), peers)));
+                int peers = stats.seeders() + stats.leechers()/* + stats.completed() */;
+                if (peers > 0) {
+                    data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
+                }
             }
             tc.completeBatch();
         }
@@ -205,7 +224,7 @@ public class TrackerUdpManager {
             return Optional.of(tc.connect());
         }
 
-        return Optional.of(tc.buildNextScrapeRequest());
+        return Optional.of(tc.buildNextRequest());
     }
 
     protected Optional<byte[]> onErrorResponse(ErrorResponse resp, From from) {

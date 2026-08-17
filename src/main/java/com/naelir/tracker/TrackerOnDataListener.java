@@ -7,8 +7,6 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Data;
-
 /**
  * Network-layer relay for incoming UDP tracker datagrams (BEP-15).
  *
@@ -19,8 +17,8 @@ public class TrackerOnDataListener {
     public static final Logger logger = LogManager.getLogger(TrackerOnDataListener.class);
     private final TrackerUdpManager trackerUdpManager;
 
-    public TrackerOnDataListener(Data data) {
-        this.trackerUdpManager = new TrackerUdpManager(data);
+    public TrackerOnDataListener(TrackerUdpManager trackerUdpManager) {
+        this.trackerUdpManager = trackerUdpManager;
     }
 
     public TrackerUdpManager getTrackerUdpManager() {

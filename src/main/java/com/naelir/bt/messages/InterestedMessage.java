@@ -5,11 +5,6 @@ public class InterestedMessage extends AbstractPeerWireMessage {
         super(BtKeys.INT_MESSAGE_ID);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return "INTERESTED []";

@@ -7,8 +7,30 @@ import com.naelir.bt.TorrentMeta.Genre;
 
 public class Entry {
     
+    private static final String ANY_HASH = "0000000000000000000000000000000000000000";
+    
+    public static Entry empty() {
+        return new Entry("empty", ANY_HASH, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+    
     public static Entry crap(String hash) {
-        return new Entry("chinese_korean_crap", hash, 0, 0, 0, Genre.UNKNOWN.name());
+        return new Entry("chinese_korean_crap", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry notEu(String hash) {
+        return new Entry("not_eu", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry lowPeers(String hash) {
+        return new Entry("low_peers", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry unresolved(String hash) {
+        return new Entry("unresolved", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry lowPeersNotEu(String hash) {
+        return new Entry("low_peers_?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
     
     @JsonProperty("n")
@@ -30,16 +52,19 @@ public class Entry {
     @JsonProperty("g")
     public String genre;
     
+    @JsonProperty("p")
+    public int peers;
+    
     public Entry() {}
 
-    public Entry(String name, String hash, int fileCount, long foundTime, long size, String genre) {
-        super();
+    public Entry(String name, String hash, int fileCount, long foundTime, long size, String genre, int peers) {
         this.name = name;
         this.hash = hash;
         this.fileCount = fileCount;
         this.foundTime = foundTime;
         this.size = size;
         this.genre = genre;
+        this.peers = peers;
     }
 
     @Override

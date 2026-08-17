@@ -1,7 +1,7 @@
 package com.naelir.tasks;
 
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,18 +23,18 @@ public class TrackerFindPeersTask implements ITask {
 
     @Override
     public boolean resolved() {
-        return true;
+        return data.udptasks.isEmpty();
     }
 
     @Override
     public void run() {
         try {
-            Set<String> collect = data.samples.values().stream()
-                    .map(e -> e.torrent().infoHash())
-                    .collect(Collectors.toSet());
-            logger.info("tracker {} scrape: hashes {}", data.arguments.trackerUrl, collect.size());
-            this.client.scrape(collect, data.arguments.trackerUrl, data.arguments.trackerPort);
-
+            Set<String> set = new HashSet<String>(data.samples.keySet());
+            if (set.isEmpty()) {
+                logger.info("No samples to find peers for");
+                return;
+            }
+            this.client.obtainPeers(set, data.arguments.trackerUrl, data.arguments.trackerPort);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

@@ -8,27 +8,25 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BtTcpClient;
-import com.naelir.bt.IpRangeFilter;
+import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 
-public class TcpTorrentResolverTask implements ITask {
+public class TcpTorrentResolverTask implements Runnable {
     private static final Logger logger = LogManager.getLogger(TcpTorrentResolverTask.class);
-    private final Deque<MetaTorrentTask> tasks;
     private BtTcpClient client;
+    private Data data;
 
-    public TcpTorrentResolverTask(BtTcpClient client, Deque<MetaTorrentTask> tasks) {
+    public TcpTorrentResolverTask(BtTcpClient client, Data data) {
         this.client = client;
-        this.tasks = tasks;
-    }
-
-    @Override
-    public boolean resolved() {
-        return this.tasks.isEmpty();
+        this.data = data;
     }
 
     @Override
     public void run() {
         try {
+            if (data.tcptasks.isEmpty()) {
+                return;
+            }
             int step = 5;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
@@ -38,12 +36,11 @@ public class TcpTorrentResolverTask implements ITask {
                 }
                 list.add(task);
             }
-            int size = this.tasks.size();
-            logger.info("tasks left {}", size);
+            int size = this.data.tcptasks.size();
+            if (size % 10 == 0 && size > 0) {
+                logger.info("tasks left {}", size);
+            }
             for (MetaTorrentTask task : list) {
-                if (IpRangeFilter.isAllowed(task.node.ip()) == false) {
-                    continue;
-                }
                 String hex = task.torrent.infoHash();
                 logger.info("resolving torrent {} from {}, {}", hex, task.node.address(), task.node.port());
                 this.client.connect(task.torrent, task.node);
@@ -55,7 +52,7 @@ public class TcpTorrentResolverTask implements ITask {
 
     MetaTorrentTask get() {
         while (true) {
-            MetaTorrentTask pollLast = this.tasks.pollLast();
+            MetaTorrentTask pollLast = this.data.tcptasks.pollLast();
             if (pollLast == null || pollLast.torrent.meta() == null)
                 return pollLast;
         }
