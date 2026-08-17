@@ -254,12 +254,10 @@ public class ResponseResolver {
         if (decode.samples.isEmpty() == false) {
             int i = 0;
             for (String hash : decode.samples) {
-                Torrent torrent = this.data.torrents.get(hash);
-                boolean skip = this.data.torrents.containsKey(hash);
-
-                if (skip) {
+                String name = this.data.fileManager.get(hash);
+                if (name != null) {
                     data.forUpdate.add(new ImmutablePair<>(hash, 1));
-                    logger.info("hash {} already resolved as {}", hash, torrent.meta().getName());
+                    logger.info("hash {} already resolved as {}", hash, name);
                     i++;
                 } else {
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node, false));

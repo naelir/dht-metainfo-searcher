@@ -6,8 +6,6 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.Torrent;
-import com.naelir.bt.TorrentMeta;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
@@ -41,9 +39,6 @@ public class NextIdTask implements ITask {
             nodes.forEach(e -> this.data.table.insert(e));
             this.data.samples.clear();
             this.data.torrents.clear();
-            data.fileManager
-                    .getAll(myself.toLowerCase())
-                    .forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
         }
     }
     
