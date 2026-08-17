@@ -29,12 +29,13 @@ public class TrackerFindPeersTask implements ITask {
     @Override
     public void run() {
         try {
-            Set<String> collect = data.samples.values().stream()
+            Set<String> collect = data.samples
+                    .values()
+                    .stream()
                     .map(e -> e.torrent().infoHash())
                     .collect(Collectors.toSet());
             logger.info("tracker {} scrape: hashes {}", data.arguments.trackerUrl, collect.size());
             this.client.scrape(collect, data.arguments.trackerUrl, data.arguments.trackerPort);
-
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

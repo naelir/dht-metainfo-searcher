@@ -13,12 +13,13 @@ public class NameFilter {
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
     private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
-    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws");
-    private static final List<String> XXX = List.of("xxx", "jav");
+    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime", "-uranime");
+    private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
     public static final Pattern TV_SERIES = Pattern.compile("\\.S\\d+E\\d+\\.");
     public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
-    private static final Pattern GROUP = Pattern.compile("[\\d\\[\\]a-zA-Z]+");
+    // do not allow group to start with DL, because it is not the real group name, but a part of WEB-DL
+    private static final Pattern GROUP = Pattern.compile("(?!DL)[\\d\\[\\]a-zA-Z]+");
 
     private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
     private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");

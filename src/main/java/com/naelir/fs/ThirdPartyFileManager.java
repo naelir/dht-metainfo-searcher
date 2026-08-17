@@ -37,10 +37,45 @@ public class ThirdPartyFileManager {
     private static final Pattern SIZE = Pattern.compile("([\\d\\.]+?)&nbsp;([MBGK]+)");
     private static final Pattern HASH_NAME = Pattern.compile("urn:btih:(.{40}).+?dn=(.+?)&");
     private static final Pattern UI = Pattern.compile("magnet:\\?xt=urn:btih:(.{40,40}).+torrent-link.*>(.+?)<\\/a><td class=sr-col-size>(.+?) ([GBKkM]+)");
+    private static final Pattern NEKO = Pattern.compile("\\\"title\\\":\\\"(.+?)\\\",\\\"infohash\\\":\\\"(.{40,40}).+?filesize\\\":\\\"(\\d+)");
 
     private static final Pattern LIME = Pattern.compile(
             "magnet:\\?xt=urn:btih:(.{40,40}).+torrent-link.+?>(.+?)<\\/a><td class=sr-col-size>(.+?) ([GBKkM]+)");
 
+    public static void main(String[] args) throws IOException {
+        new ThirdPartyFileManager().convertNPages("all");
+        
+    }
+
+    public void convertNPages(String path) {
+        Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
+        Path from = HOME.resolve(path);
+        try (
+                BufferedReader reader = Files.newBufferedReader(from);
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            String line;
+            int i = 0;
+            writer.append("[");
+            while ((line = reader.readLine()) != null) {
+                i++;
+                if (i % 1000 == 0) {
+                    logger.info("processed {} lines", i);
+                }
+                String[] split = line.split("<tr>");
+                for (String s : split) {
+                    extracted0(writer, mapper, s);
+                }
+                
+            }
+            writer.append("]");
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        }
+    }
+    
     public void convertUiPages(String path) {
         Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path from = HOME.resolve(path);
@@ -67,6 +102,30 @@ public class ThirdPartyFileManager {
             writer.append("]");
         } catch (IOException e) {
             logger.error(e.getMessage(), e);
+        }
+    }
+
+
+    void extracted0(BufferedWriter writer, ObjectMapper mapper, String line)
+            throws IOException, JsonProcessingException {
+        Matcher matcher00 = NEKO.matcher(line);
+        while (matcher00.find()) {
+            String hash = matcher00.group(2).toUpperCase();
+            String name = matcher00.group(1).replace(" ", ".").concat("-ToonsHub.mkv");
+            String sizeS = matcher00.group(3);
+            long size = 0;
+            try {
+                size = (long) (Float.valueOf(sizeS) * 1);
+
+            } catch (NumberFormatException e) {
+                // TODO: handle exception
+            }
+            TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, Long.valueOf(size))));
+            Entry entry = TorrentMeta.toEntry(hash, meta);
+                writer.append(mapper.writeValueAsString(entry));
+            writer.append(",");
+            writer.newLine();
+            writer.flush();
         }
     }
 
@@ -181,11 +240,12 @@ public class ThirdPartyFileManager {
                             }
                             MetaFile me = new MetaFile(meta.name, meta.size);
                             TorrentMeta name = new TorrentMeta(meta.hash, meta.name, List.of(me));
+                            name.found = 0;
                             name.count = meta.filesCount;
                             Torrent e2 = new Torrent(meta.hash);
                             e2.setMeta(name);
                             list.add(e2);
-                            Entry entry = TorrentMeta.toEntry(meta.hash, name);
+                            Entry entry = TorrentMeta.toEntry(meta.hash.toUpperCase(), name);
                             if (NameFilter.match(meta.name)) {
                                 writer.append(mapper.writeValueAsString(entry));
                                 writer.append(",");

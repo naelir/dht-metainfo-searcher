@@ -49,15 +49,18 @@ public class TorrentMeta {
                         BencodedDictionary file = (BencodedDictionary) e;
                         BencodedInteger length = (BencodedInteger) file.get(BtKeys.LENGTH);
                         BencodedList path = (BencodedList) file.get(BtKeys.PATH);
+                        StringBuilder sb = new StringBuilder();
                         for (BencodedObject p : path) {
+                            sb.append("/");
                             BencodedByteSequence pp = (BencodedByteSequence) p;
                             String filePath = pp.toUTF8String();
                             if (".pad".equals(filePath)) {
                                 // ignore BEP0049
-                                break;
+                                continue;
                             }
-                            list.add(new MetaFile(filePath, length.getValue()));
+                            sb.append(filePath);
                         }
+                        list.add(new MetaFile(sb.toString(), length.getValue()));
                     }
                     String utf8String = name.toUTF8String();
                     return Optional.of(new TorrentMeta(hash, utf8String, list));

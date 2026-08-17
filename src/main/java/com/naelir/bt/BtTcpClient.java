@@ -1,9 +1,9 @@
 package com.naelir.bt;
 
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -53,15 +53,14 @@ public class BtTcpClient implements AutoCloseable {
                     .connect(node.address(), node.port());
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
-            InetAddress address = node.address();
-            String country = IpRangeFilter.getCountry(address.getAddress());
+            Pair<String, String> location = data.locationDb.location(node.ip());
             if (!connectFuture.isSuccess()) {
                 // connection refused, timed-out, etc. — no channel to close
-                logger.warn("Connection to {} {}:{} failed: {}", country, node.address(), node.port(),
+                logger.warn("Connection to {} {}:{} failed: {}", location.getRight(), node.address(), node.port(),
                         connectFuture.cause().getMessage());
                 return;
             } else {
-                logger.warn("Connection to {} {}:{} succeeded", country, node.address(), node.port());
+                logger.warn("Connection to {} {}:{} succeeded", location.getRight(), node.address(), node.port());
             }
             // blocks until channel is closed: either RawTorrentMetadata received,
             // error in ClientHandler, or IdleStateHandler fires after 1s of silence

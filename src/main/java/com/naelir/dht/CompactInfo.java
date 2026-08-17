@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+
 public class CompactInfo {
     static byte[] compact(byte[] nodeId, byte[] ip, int port) {
         ByteBuffer cibb = ByteBuffer.allocate(nodeId.length + ip.length + 2);

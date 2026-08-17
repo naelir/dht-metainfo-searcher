@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BtTcpClient;
-import com.naelir.bt.IpRangeFilter;
 import com.naelir.dht.ITask;
 
 public class TcpTorrentResolverTask implements ITask {
@@ -41,9 +40,6 @@ public class TcpTorrentResolverTask implements ITask {
             int size = this.tasks.size();
             logger.info("tasks left {}", size);
             for (MetaTorrentTask task : list) {
-                if (IpRangeFilter.isAllowed(task.node.ip()) == false) {
-                    continue;
-                }
                 String hex = task.torrent.infoHash();
                 logger.info("resolving torrent {} from {}, {}", hex, task.node.address(), task.node.port());
                 this.client.connect(task.torrent, task.node);

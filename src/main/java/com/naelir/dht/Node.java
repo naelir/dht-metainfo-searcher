@@ -9,6 +9,7 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -36,7 +37,8 @@ public class Node {
     ByteBuffer id;
     private int c;
     public Queue<Command> queries;
-
+    public Pair<String, String> location;
+    
     public Node(byte[] ip, int port) {
         this(ip, port, Generator.generateRandomID());
     }
@@ -48,6 +50,13 @@ public class Node {
         this.tid = 1;
         this.c = COUNTER.incrementAndGet();
         this.queries = new LinkedList<>();
+    }
+    
+    public void setLocation(Pair<String, String> location) {
+        this.location = location;
+    }
+    public Pair<String, String> getLocation() {
+        return location;
     }
 
     public byte[] ip() {

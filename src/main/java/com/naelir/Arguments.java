@@ -7,8 +7,9 @@ public class Arguments {
     /**
      * Parses command-line arguments.
      * <ul>
+     * <li>{@code --help} – print available options and exit</li>
      * <li>{@code --bitspace-parts <int>} – number of bit-space partitions to
-     * explore (default: 100)</li>
+     * explore (default: 200)</li>
      * <li>{@code --continue-from <String>} – hash to continue from (default:
      * null)</li>
      * <li>{@code --only-hashes} – only collect hashes, skip metadata resolution
@@ -17,12 +18,17 @@ public class Arguments {
      * (default: null)</li>
      * <li>{@code --db <String>} – database name (default: null)</li>
      * <li>{@code --table <String>} – table name (default: null)</li>
-     * <li>{@code --query-count <int>} – number of queries to perform per hash
+     * <li>{@code --get-peers-depth <int>} – number of get-peers queries per hash
      * (default: 1)</li>
      * <li>{@code --min-peers <int>} – minimum number of peers required before
      * resolving metadata (default: 1)</li>
+     * <li>{@code --max-nodes <int>} – maximum number of DHT nodes (default: 200)</li>
+     * <li>{@code --schedule-interval <int>} – crawl schedule interval in seconds
+     * (default: 5)</li>
      * <li>{@code --scrape} – enable scraping of peer counts from trackers
      * (default: false)</li>
+     * <li>{@code --scrape-step <int>} – number of hashes between scrape calls
+     * (default: 5000)</li>
      * <li>{@code --tracker-url <String>} – tracker host address (default:
      * null)</li>
      * <li>{@code --tracker-port <int>} – tracker port (default: 0)</li>
@@ -30,21 +36,45 @@ public class Arguments {
      */
     public static Arguments parse(String[] args) {
         String from = null;
-        int bitspaceParts = 100;
+        int bitspaceParts = 200;
         boolean onlyHashes = false;
         String connectionString = null;
         String db = null;
         String table = null;
-        int queryCount = 1;
+        int getPeerDepth = 3;
         int minPeers = 1;
-        int maxNodes = 600;
-        int scrapeStep = 5000;
+        int maxNodes = 200;
+        int scrapeStep = 2000;
+        int hashesStep = 10;
         boolean scrape = false;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
         int scheduleInterval = 5;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
+            case "--help":
+                System.out.println(
+                    "Usage: dht-metainfo-searcher [OPTIONS]\n" +
+                    "\n" +
+                    "Options:\n" +
+                    "  --bitspace-parts <int>        Number of bit-space partitions to explore (default: 100)\n" +
+                    "  --continue-from <hash>        Hash to continue crawling from (default: none)\n" +
+                    "  --only-hashes                 Only collect hashes, skip metadata resolution (default: false)\n" +
+                    "  --connection-string <string>  Database connection string\n" +
+                    "  --db <string>                 Database name\n" +
+                    "  --table <string>              Table name\n" +
+                    "  --get-peers-depth <int>       Number of get-peers queries per hash (default: 1)\n" +
+                    "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
+                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 400)\n" +
+                    "  --schedule-interval <int>     Schedule interval in seconds (default: 2)\n" +
+                    "  --scrape                      Enable scraping of peer counts from trackers (default: false)\n" +
+                    "  --scrape-step <int>           Number of hashes between scrape calls (default: 2000)\n" +
+                    "  --tracker-url <host>          Tracker host address\n" +
+                    "  --tracker-port <int>          Tracker port (default: 0)\n" +
+                    "  --help                        Show this help message and exit\n"
+                );
+                System.exit(0);
+                break;
             case "--continue-from":
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --continue-from");
@@ -78,10 +108,10 @@ public class Arguments {
                     throw new IllegalArgumentException("Missing value for --table");
                 table = args[++i];
                 break;
-            case "--query-count":
+            case "--get-peers-depth":
                 if (i + 1 >= args.length)
-                    throw new IllegalArgumentException("Missing value for --query-count");
-                queryCount = Integer.parseInt(args[++i]);
+                    throw new IllegalArgumentException("Missing value for --get-peers-depth");
+                getPeerDepth = Integer.parseInt(args[++i]);
                 break;
             case "--min-peers":
                 if (i + 1 >= args.length)
@@ -92,6 +122,11 @@ public class Arguments {
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --max-nodes");
                 maxNodes = Integer.parseInt(args[++i]);
+                break;
+            case "--hashes-step":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --hashes-step");
+                hashesStep = Integer.parseInt(args[++i]);
                 break;
             case "--scrape":
                 scrape = true;
@@ -125,7 +160,7 @@ public class Arguments {
                 .connectionString(connectionString)
                 .db(db)
                 .table(table)
-                .queryCount(queryCount)
+                .getPeersDepth(getPeerDepth)
                 .minPeers(minPeers)
                 .scrape(scrape)
                 .trackerUrl(trackerUrl)
@@ -133,6 +168,7 @@ public class Arguments {
                 .maxNodes(maxNodes)
                 .scrapeStep(scrapeStep)
                 .scheduleInterval(scheduleInterval)
+                .hashesStep(hashesStep)
                 .build();
     }
 
@@ -142,7 +178,7 @@ public class Arguments {
     public final String connectionString;
     public final String db;
     public final String table;
-    public final int queryCount;
+    public final int getPeersDepth;
     public final int minPeers;
     public final boolean scrape;
     public final InetAddress trackerUrl;
@@ -151,6 +187,7 @@ public class Arguments {
     public final int maxNodes;
     public final int scheduleInterval;
     public final String scrapeFile;
+    public final int hashesStep;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -159,7 +196,7 @@ public class Arguments {
         this.connectionString = builder.connectionString;
         this.db = builder.db;
         this.table = builder.table;
-        this.queryCount = builder.queryCount;
+        this.getPeersDepth = builder.getPeersDepth;
         this.minPeers = builder.minPeers;
         this.scrape = builder.scrape;
         this.trackerUrl = builder.trackerUrl;
@@ -168,6 +205,7 @@ public class Arguments {
         this.scrapeStep = builder.scrapeStep;
         this.scheduleInterval = builder.scheduleInterval;
         this.scrapeFile = builder.scrapeFile;
+        this.hashesStep = builder.hashesStep;
     }
     
 
@@ -175,34 +213,40 @@ public class Arguments {
     public String toString() {
         return "Arguments [continueFrom=" + continueFrom + ", bitspaceParts=" + bitspaceParts + ", onlyHashes="
                 + onlyHashes + ", connectionString=" + connectionString + ", db=" + db + ", table=" + table
-                + ", queryCount=" + queryCount + ", minPeers=" + minPeers + ", scrape=" + scrape + ", trackerUrl="
+                + ", queryCount=" + getPeersDepth + ", minPeers=" + minPeers + ", scrape=" + scrape + ", trackerUrl="
                 + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep + ", maxNodes=" + maxNodes
                 + "]";
     }
 
 
     public static class Builder {
-        private int bitspaceParts = 100;
+        private int bitspaceParts = 200;
         private String continueFrom;
         private boolean onlyHashes;
         private String connectionString;
         private String db;
         private String table;
-        private int queryCount = 1;
+        private int getPeersDepth = 1;
         private int minPeers = 1;
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;
-        private int maxNodes = 300;
-        private int scrapeStep = 5000;
-        private int scheduleInterval = 5;
+        private int maxNodes = 200;
+        private int scrapeStep = 2000;
+        private int scheduleInterval = 2;
         private String scrapeFile;
+        private int hashesStep = 3;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
             return this;
         }
         
+        public Builder hashesStep(int hashesStep) {
+            this.hashesStep   = hashesStep;
+            return this;
+        }
+
         public Builder scheduleInterval(int scheduleInterval) {
             this.scheduleInterval  = scheduleInterval;
             return this;
@@ -247,8 +291,8 @@ public class Arguments {
             return this;
         }
 
-        public Builder queryCount(int queryCount) {
-            this.queryCount = queryCount;
+        public Builder getPeersDepth(int queryCount) {
+            this.getPeersDepth = queryCount;
             return this;
         }
 

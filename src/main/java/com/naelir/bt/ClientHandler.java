@@ -22,7 +22,7 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
-import com.naelir.dht.Sample;
+import com.naelir.tasks.Sample;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -127,7 +127,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
-            logger.info("resolved {} as {}", this.task.infoHash, meta.getName());
+            logger.info("resolved {} as {} from {}", this.task.infoHash, meta.getName(), data.locationDb.location(addr));
             if (this.task.meta() == null) {
                 this.task.setMeta(meta);
                 Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);

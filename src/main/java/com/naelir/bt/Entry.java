@@ -7,8 +7,22 @@ import com.naelir.bt.TorrentMeta.Genre;
 
 public class Entry {
     
+    private static final String ANY_HASH = "0000000000000000000000000000000000000000";
+    
+    public static Entry empty() {
+        return new Entry("empty", ANY_HASH, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+    
     public static Entry crap(String hash) {
         return new Entry("chinese_korean_crap", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry notEu(String hash) {
+        return new Entry("not_eu", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+
+    public static Entry lowPeers(String hash) {
+        return new Entry("low_peers", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
     
     @JsonProperty("n")

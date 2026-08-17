@@ -23,14 +23,14 @@ import org.apache.logging.log4j.core.config.builder.impl.BuiltConfiguration;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
-import com.naelir.bt.Torrent;
-import com.naelir.bt.TorrentMeta;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.fs.FileDB;
+import com.naelir.fs.FileLocationDb;
+import com.naelir.fs.ILocationDb;
 import com.naelir.fs.SavedCompactInfoFileManager;
 import com.naelir.fs.UnresolvedFileManager;
 import com.naelir.tasks.NodeMaintainer;
@@ -108,13 +108,11 @@ public final class DhtApplication implements Runnable {
             
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
-            Data data = new Data(divide, tcpmyself, fm, this.arguments);
+            ILocationDb locationDb = FileLocationDb.INSTANCE;
+            Data data = new Data(divide, tcpmyself, fm, locationDb, this.arguments);
             ByteBuffer startMyself = data.myself;
-            String myself = Generator.toHex(startMyself.array());
 
-            if (arguments.scrape == false) {
-                fm.getAll(myself.toLowerCase()).forEach(e -> data.torrents.put(e.hash, new Torrent(e.hash, new TorrentMeta(e.hash, e.name))));
-            } else {
+            if (arguments.scrape) {
                 UnresolvedFileManager ufm = UnresolvedFileManager.of();
                 data.unresolved.addAll(ufm.getAll());
                 logger.info("loaded {} unresolved", data.unresolved.size());
