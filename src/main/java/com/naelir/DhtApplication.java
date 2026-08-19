@@ -29,6 +29,8 @@ import com.naelir.dht.Node;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.fs.FileDB;
+import com.naelir.fs.FileLocationDb;
+import com.naelir.fs.ILocationDb;
 import com.naelir.fs.SavedCompactInfoFileManager;
 import com.naelir.fs.UnresolvedFileManager;
 import com.naelir.tasks.NodeMaintainer;
@@ -106,7 +108,8 @@ public final class DhtApplication implements Runnable {
             
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
-            Data data = new Data(divide, tcpmyself, fm, this.arguments);
+            ILocationDb locationDb = FileLocationDb.INSTANCE;
+            Data data = new Data(divide, tcpmyself, fm, locationDb, this.arguments);
             ByteBuffer startMyself = data.myself;
 
             if (arguments.scrape) {

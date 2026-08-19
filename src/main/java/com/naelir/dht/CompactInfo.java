@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.apache.commons.lang3.tuple.Pair;
+
+import com.naelir.fs.FileLocationDb;
+
 public class CompactInfo {
     static byte[] compact(byte[] nodeId, byte[] ip, int port) {
         ByteBuffer cibb = ByteBuffer.allocate(nodeId.length + ip.length + 2);
@@ -87,7 +91,8 @@ public class CompactInfo {
         info.get(portBytes);
         ByteBuffer id = ByteBuffer.wrap(idBytes);
         int port = ((portBytes[0] & 0xFF) << 8) | (portBytes[1] & 0xFF);
-        return new Node(ip, port, id);
+        Pair<String, String> location = FileLocationDb.INSTANCE.location(ip);
+        return new Node(ip, port, id, location);
     }
 
     public static List<Node> expandNodes(ByteBuffer info) {
@@ -104,7 +109,8 @@ public class CompactInfo {
             info.get(portBytes);
             ByteBuffer id = ByteBuffer.wrap(idBytes);
             int port = ((portBytes[0] & 0xFF) << 8) | (portBytes[1] & 0xFF);
-            list.add(new Node(ip, port, id));
+            Pair<String, String> location = FileLocationDb.INSTANCE.location(ip);
+            list.add(new Node(ip, port, id, location));
         }
         return list;
     }
@@ -115,7 +121,8 @@ public class CompactInfo {
         byte[] peerPortBA = new byte[2];
         buffer.get(peerPortBA);
         int port = ((peerPortBA[0] & 0xFF) << 8) | (peerPortBA[1] & 0xFF);
-        return new Node(peerIPBA, port, ByteBuffer.allocate(0));
+        Pair<String, String> location = FileLocationDb.INSTANCE.location(peerIPBA);
+        return new Node(peerIPBA, port, ByteBuffer.allocate(0), location);
     }
 
     public static List<Node> expandPeers(List<ByteBuffer> info) {

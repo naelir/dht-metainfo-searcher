@@ -9,6 +9,7 @@ import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
  
 public class NameFilter {
+    private static final String DL = "DL";
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
@@ -65,7 +66,7 @@ public class NameFilter {
         }
         String group = name.substring(name.lastIndexOf("-") + 1, name.length()).replace(".mkv", "");
 
-        return GROUP.matcher(group).matches();
+        return group.startsWith(DL) == false && GROUP.matcher(group).matches();
     }
 
     public static boolean fineMatch(String name) {

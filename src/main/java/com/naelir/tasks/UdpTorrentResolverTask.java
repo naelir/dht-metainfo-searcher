@@ -1,35 +1,36 @@
 package com.naelir.tasks;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.IpRangeFilter;
+import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.utp.UtpClient;
 
 public class UdpTorrentResolverTask implements ITask {
     private static final Logger logger = LogManager.getLogger(UdpTorrentResolverTask.class);
-    private final Queue<MetaTorrentTask> tasks;
     private UtpClient client;
+    private Data data;
 
-    public UdpTorrentResolverTask(UtpClient client, Queue<MetaTorrentTask> tasks) {
+    public UdpTorrentResolverTask(UtpClient client, Data data) {
         this.client = client;
-        this.tasks = tasks;
+        this.data = data;
     }
 
     @Override
     public boolean resolved() {
-        return this.tasks.isEmpty();
+        return this.data.udptasks.isEmpty();
     }
 
     @Override
     public void run() {
         try {
-            int step = 5;
+            int step = data.arguments.hashesStep;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
                 MetaTorrentTask task = get();
@@ -38,14 +39,13 @@ public class UdpTorrentResolverTask implements ITask {
                 }
                 list.add(task);
             }
-            int size = this.tasks.size();
+            int size = this.data.udptasks.size();
             logger.info("tasks left {}", size);
             for (MetaTorrentTask task : list) {
-                if (IpRangeFilter.isAllowed(task.node.ip()) == false) {
-                    continue;
-                }
                 String hex = task.torrent.infoHash();
-                logger.info("resolving torrent {} from {}, {}", hex, task.node.address(), task.node.port());
+                InetAddress address = task.node.address();
+                Pair<String, String> location = task.node.location();
+                logger.info("resolving torrent {} from country {}, {}, {}", hex, location.getRight(), address, task.node.port());
                 this.client.connectPeer(task.torrent, task.node);
             }
         } catch (Exception e) {
@@ -56,7 +56,7 @@ public class UdpTorrentResolverTask implements ITask {
 
     MetaTorrentTask get() {
         while (true) {
-            MetaTorrentTask pollLast = this.tasks.poll();
+            MetaTorrentTask pollLast = this.data.udptasks.poll();
             if (pollLast == null || pollLast.torrent.meta() == null)
                 return pollLast;
         }

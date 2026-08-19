@@ -12,20 +12,12 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+@SuppressWarnings("unused")
 public class IpRangeFilter {
-    public static final String UNKNOWN = "Unknown";
-    public static final Logger logger = LogManager.getLogger(IpRangeFilter.class);
-    public static final List<IpRange> RANGES_ALLOW = getAllowRanges();
-    public static final List<IpRange> RANGES_DENY = getDenyRanges();
-
-    public static IpRange findRange(byte[] ip, List<IpRange> ranges) {
-        BigInteger address = toBigInteger(ip);
-        for (IpRange ipRange : ranges) {
-            if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
-                return ipRange;
-        }
-        return null;
-    }
+    private static final String UNKNOWN = "Unknown";
+    private static final Logger logger = LogManager.getLogger(IpRangeFilter.class);
+    private static final List<IpRange> RANGES_ALLOW = getAllowRanges();
+    private static final List<IpRange> RANGES_DENY = getDenyRanges();
 
     private static List<IpRange> getAllowRanges() {
         List<IpRange> list = new ArrayList<>();
@@ -53,7 +45,7 @@ public class IpRangeFilter {
         return list;
     }
 
-    public static String getCountry(byte[] ip) {
+    private static String getCountry(byte[] ip) {
         BigInteger address = toBigInteger(ip);
         for (IpRange ipRange : RANGES_ALLOW) {
             if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
@@ -88,7 +80,7 @@ public class IpRangeFilter {
         return list;
     }
 
-    public static boolean isAllowed(byte[] ip) {
+    private static boolean isAllowed(byte[] ip) {
         BigInteger address = toBigInteger(ip);
         for (IpRange ipRange : RANGES_ALLOW) {
             if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)
@@ -97,7 +89,7 @@ public class IpRangeFilter {
         return RANGES_ALLOW.isEmpty();
     }
 
-    public static boolean isDenied(byte[] ip) {
+    private static boolean isDenied(byte[] ip) {
         BigInteger address = toBigInteger(ip);
         for (IpRange ipRange : RANGES_DENY) {
             if (address.compareTo(ipRange.from) >= 0 && address.compareTo(ipRange.to) <= 0)

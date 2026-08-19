@@ -3,7 +3,7 @@ package com.naelir.tasks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.IpRangeFilter;
+import com.naelir.bt.Entry;
 import com.naelir.dht.Command;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
@@ -30,10 +30,15 @@ public class CreateMetaTask implements ITask {
                 if (sample.peers().size() < data.arguments.minPeers) {
                     continue;
                 }
+                if (sample.peers().isEmpty()) {
+                    String hex = sample.torrent.infoHash();
+                    logger.info("marking sample {} as low peers", hex);
+                    data.fileManager.create(Entry.lowPeers(hex));
+                }
                 for (Node peer : sample.peers()) {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
-                        if (IpRangeFilter.isAllowed(peer.ip())) {
+                        if (data.locationDb.allowed(peer)) {
                             this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent()));
 //                            this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
                         }

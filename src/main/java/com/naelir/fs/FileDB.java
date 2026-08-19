@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -46,55 +44,6 @@ public class FileDB implements AutoCloseable {
 
     private static final String HEX_CHARS = "0123456789abcdef";
 
-    /**
-     * Migrates records from 16 legacy single-char shard files ({@code 0.txt} …
-     * {@code f.txt}) into the current 3-char prefix shard files.
-     *
-     * <p>For each source file a cache of up to 256 writers (one per distinct
-     * 3-char prefix encountered) is kept open during the processing of that
-     * file, then flushed and closed before moving to the next source file.
-     */
-    public static void migrate() throws IOException {
-        Files.createDirectories(BASE_DIR);
-        for (char c : HEX_CHARS.toCharArray()) {
-            Path src = BASE_DIR.resolve(c + ".txt");
-            if (!Files.exists(src)) {
-                logger.info("migrate: source file not found, skipping: {}", src);
-                continue;
-            }
-            logger.info("migrate: processing {}", src);
-            Map<String, BufferedWriter> cache = new HashMap<>(256);
-            try (BufferedReader reader = Files.newBufferedReader(src)) {
-                String line;
-                int count = 0;
-                while ((line = reader.readLine()) != null) {
-                    if (line.isBlank()) continue;
-                    int sep = line.indexOf(SEP);
-                    if (sep < 0) continue;
-                    String hash = line.substring(0, sep);
-                    if (hash.length() < SHARD_PREFIX_LEN) continue;
-                    String prefix = hash.substring(0, SHARD_PREFIX_LEN).toUpperCase();
-                    BufferedWriter writer = cache.computeIfAbsent(prefix, p -> {
-                        try {
-                            return Files.newBufferedWriter(shardPath(p),
-                                    java.nio.file.StandardOpenOption.APPEND,
-                                    java.nio.file.StandardOpenOption.CREATE);
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-                    writer.write(line);
-                    writer.newLine();
-                    count++;
-                }
-                logger.info("migrate: {} records migrated from {}", count, src);
-            } finally {
-                for (BufferedWriter bw : cache.values()) {
-                    try { bw.close(); } catch (IOException e) { logger.error("migrate: error closing writer", e); }
-                }
-            }
-        }
-    }
 
     /** Returns the shard file for the given prefix string (first {@value #SHARD_PREFIX_LEN} chars of hash, uppercase). */
     private static Path shardPath(String prefix) {

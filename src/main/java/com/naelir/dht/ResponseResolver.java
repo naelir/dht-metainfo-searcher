@@ -7,12 +7,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.Entry;
-import com.naelir.bt.IpRangeFilter;
+import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
 import com.naelir.tasks.Sample;
 
@@ -53,7 +54,8 @@ public class ResponseResolver {
             if (message.implied != null && message.implied > 0) {
                 remotePort = from.port;
             }
-            Node node = new Node(from.ip, remotePort, message.id);
+            Pair<String, String> location = data.locationDb.location(from.ip);
+            Node node = new Node(from.ip, remotePort, message.id, location);
             String hex = Generator.toHex(message.infoHash.array());
             Torrent previous = this.data.torrents.get(hex);
             if (previous != null) {
@@ -113,25 +115,12 @@ public class ResponseResolver {
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        
-        if (decode.request.node.have(Command.SAMPLE_FN)) {
-            for (Sample sample : data.samples.values()) {
-                if (sample.from == decode.request.node) {
-                    for (Node node : decode.nodes) {
-                        sample.table().insert(node);
-                    }
-                    logger.info("inserted {} nodes for {}", decode.nodes.size(), sample.torrent().infoHash());
-                    break;
-                }
-            }
-        } else {
-            decode.request.node.put(Command.FIND_NODE_R);
-            for (Node node : decode.nodes) {
-                if (IpRangeFilter.isDenied(node.ip) == false || this.data.table.size() < 5) {
-                    this.data.table.insert(node);
-                } else {
-                    logger.debug("{} denied", node);
-                }
+        decode.request.node.put(Command.FIND_NODE_R);
+        for (Node node : decode.nodes) {
+            if (data.locationDb.denied(node) == false || this.data.table.size() < 5) {
+                this.data.table.insert(node);
+            } else {
+                logger.debug("{} denied", node);
             }
         }
         return Optional.empty();
@@ -142,7 +131,8 @@ public class ResponseResolver {
         ByteBuffer infoHash = message.infoHash;
         String hex = Generator.toHex(infoHash.array());
         Torrent torrent = this.data.torrents.get(hex);
-        this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id));
+        Pair<String, String> location = data.locationDb.location(from.ip);
+        this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id, location));
         List<Node> nodes = this.data.table.closest(infoHash);
         if (torrent != null) {
             List<Node> peers = new ArrayList<>(torrent.peers());
@@ -164,7 +154,7 @@ public class ResponseResolver {
             if (sample != null) {
                 int denied = 0;
                 for (Node node : decode.peers) {
-                    if (node.denied() == false) {
+                    if (data.locationDb.denied(node) == false) {
                         sample.addPeer(node);
                     } else {
                         denied++;
@@ -181,7 +171,7 @@ public class ResponseResolver {
                 }
                 logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
-                    if (node.denied() == false) {
+                    if (data.locationDb.denied(node) == false) {
                         sample.table().insert(node);
                     }
                 }
@@ -271,7 +261,9 @@ public class ResponseResolver {
             for (String hash : decode.samples) {
                 String name = this.data.fileManager.get(hash);
                 if (name != null) {
-                    data.forUpdate.add(new ImmutablePair<>(hash, 1));
+                    if (NameFilter.fineMatch(name)) {
+                        data.forUpdate.add(new ImmutablePair<>(hash, 1));
+                    }
                     logger.info("hash {} already resolved as {}", hash, name);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {

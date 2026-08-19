@@ -27,24 +27,24 @@ public class GetPeersTask implements ITask {
         if (sample.skip)
             return Collections.emptyList();
         else
-            return sample.table.closest(sample.byteBuffer(), 1);
+            return sample.table.closest(sample.byteBuffer(), 2);
     }
 
     @Override
     public boolean resolved() {
         int size = this.data.samples.values()
                 .stream()
-                .filter(s -> s.checked < this.data.arguments.queryCount)
+                .filter(s -> s.checked < this.data.arguments.getPeersDepth)
                 .toList()
                 .size();
         logger.info("getPeers: {} samples left to check", size);
-        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.queryCount);
+        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
     }
 
     @Override
     public void run() {
         try {
-            int step = 10;
+            int step = data.arguments.hashesStep;
             logger.info("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
             for (Sample sample : this.data.samples.values()) {
                 if (step <= 0) {
@@ -52,24 +52,22 @@ public class GetPeersTask implements ITask {
                 }
                 byte[] array = Generator.toArray(sample.torrent.infoHash());
                 ByteBuffer wrap = ByteBuffer.wrap(array);
-                if (sample.checked < this.data.arguments.queryCount) {
+                if (sample.checked < this.data.arguments.getPeersDepth) {
+                    sample.checked++;
                     if (sample.peers.isEmpty() == false) {
-                        sample.checked++;
                         logger.info("samples {} has peers, continue", sample.torrent.infoHash());
                         continue;
                     }
                     if (sample.skip) {
-                        sample.checked++;
-                        logger.info("samples {} is asian crap, continue", sample.torrent.infoHash());
+                        logger.info("samples {} is skipped, continue", sample.torrent.infoHash());
                         continue;
                     }
                     List<Node> closest = closest(sample);
-                    sample.checked++;
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
+                        // remove the sample from the table to avoid querying the same node again
                         sample.table().remove(id);
-                        logger.info("sample {} getting peers from {} {} time", sample.torrent.infoHash(),
-                                Generator.toHex(id.array()), sample.checked);
+                        logger.info("sample {} getting peers from {} {} time", sample.torrent.infoHash(), Generator.toHex(id.array()), sample.checked);
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                     }

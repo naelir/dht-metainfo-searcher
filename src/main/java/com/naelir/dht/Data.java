@@ -20,6 +20,7 @@ import com.naelir.bt.Torrent;
 import com.naelir.db.EntryRepository;
 import com.naelir.db.MongoEntryRepository;
 import com.naelir.fs.FileDB;
+import com.naelir.fs.ILocationDb;
 import com.naelir.tasks.MetaTorrentTask;
 import com.naelir.tasks.Sample;
 
@@ -42,9 +43,11 @@ public class Data {
     public final Set<Pair<String, Integer>> forUpdate;
     public final List<Pair<String, String>> unresolved;;
     public final Set<String> scrapeHashes;
+    public final ILocationDb locationDb;
 
-    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileDB fm, Arguments arguments) {
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, FileDB fm, ILocationDb locationDb, Arguments arguments) {
         this.udpIds = udpIds;
+        this.locationDb = locationDb;
         this.arguments = arguments;
         this.dbRepo = getRepo();
         this.myself = udpIds.poll();

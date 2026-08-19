@@ -27,15 +27,13 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new UpdateSeenTorrentsTask(data));
-//            tasks.offer(new TerminateScrapeTask(data));
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
-//            tasks.offer(new SampleRoutingTableTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
-            UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.udptasks);
+            UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data);
 //            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
             tasks.offer(new ITask() {
                 @Override
