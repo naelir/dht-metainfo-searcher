@@ -22,7 +22,7 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
-import com.naelir.dht.Sample;
+import com.naelir.tasks.Sample;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;

@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BtTcpClient;
 import com.naelir.dht.Data;
-import com.naelir.dht.GetPeersTask;
 import com.naelir.dht.ITask;
 import com.naelir.utp.UtpClient;
 
@@ -33,6 +32,7 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
+//            tasks.offer(new SampleRoutingTableTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data.udptasks);

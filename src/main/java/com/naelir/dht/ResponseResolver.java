@@ -14,6 +14,7 @@ import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.Entry;
 import com.naelir.bt.IpRangeFilter;
 import com.naelir.bt.Torrent;
+import com.naelir.tasks.Sample;
 
 public class ResponseResolver {
     public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
@@ -112,12 +113,25 @@ public class ResponseResolver {
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
-        decode.request.node.put(Command.FIND_NODE_R);
-        for (Node node : decode.nodes) {
-            if (IpRangeFilter.isDenied(node.ip) == false || this.data.table.size() < 5) {
-                this.data.table.insert(node);
-            } else {
-                logger.debug("{} denied", node);
+        
+        if (decode.request.node.have(Command.SAMPLE_FN)) {
+            for (Sample sample : data.samples.values()) {
+                if (sample.from == decode.request.node) {
+                    for (Node node : decode.nodes) {
+                        sample.table().insert(node);
+                    }
+                    logger.info("inserted {} nodes for {}", decode.nodes.size(), sample.torrent().infoHash());
+                    break;
+                }
+            }
+        } else {
+            decode.request.node.put(Command.FIND_NODE_R);
+            for (Node node : decode.nodes) {
+                if (IpRangeFilter.isDenied(node.ip) == false || this.data.table.size() < 5) {
+                    this.data.table.insert(node);
+                } else {
+                    logger.debug("{} denied", node);
+                }
             }
         }
         return Optional.empty();
@@ -150,7 +164,7 @@ public class ResponseResolver {
             if (sample != null) {
                 int denied = 0;
                 for (Node node : decode.peers) {
-                    if (IpRangeFilter.isDenied(node.ip) == false) {
+                    if (node.denied() == false) {
                         sample.addPeer(node);
                     } else {
                         denied++;
@@ -158,7 +172,7 @@ public class ResponseResolver {
                 }
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
-                    sample.skip = true;
+                    sample.skip(true);
                     // 1 is too low, can be a false positive, 2 is better
                     if (size > 1) {
                         logger.info("marking sample {} as crap due to too many denied peers", hex);
@@ -167,8 +181,8 @@ public class ResponseResolver {
                 }
                 logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
-                    if (IpRangeFilter.isDenied(node.ip) == false) {
-                        sample.table.insert(node);
+                    if (node.denied() == false) {
+                        sample.table().insert(node);
                     }
                 }
             }
@@ -245,7 +259,7 @@ public class ResponseResolver {
         int min = Math.min(20, values);
         List<String> list = new ArrayList<>(this.data.samples.values()).subList(0, min)
                 .stream()
-                .map(e -> e.torrent.infoHash())
+                .map(e -> e.torrent().infoHash())
                 .toList();
         return new SampleInfoHashesResponse(decode.tid, this.data.myself, 3600, nodes, min, list, decode);
     }
@@ -253,18 +267,26 @@ public class ResponseResolver {
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples.isEmpty() == false) {
             int i = 0;
+            int tooFar = 0;
             for (String hash : decode.samples) {
                 String name = this.data.fileManager.get(hash);
                 if (name != null) {
                     data.forUpdate.add(new ImmutablePair<>(hash, 1));
                     logger.info("hash {} already resolved as {}", hash, name);
                     i++;
-                } else {
+                } else if (closeEnough(decode.request.node, hash)) {
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node, false));
+                } else {
+                    tooFar++;
                 }
             }
-            logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
+            logger.info("found {} samples from {}, resolved {}, too far {}", decode.samples.size(), from, i, tooFar);
             decode.request.node.put(Command.SAMPLE_R);
         }
+    }
+
+    private boolean closeEnough(Node node, String hash) {
+        String id = Generator.toHex(node.id.array());
+        return id.substring(0, 3).equals(hash.substring(0, 3));
     }
 }

@@ -8,7 +8,6 @@ import com.naelir.dht.Command;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
-import com.naelir.dht.Sample;
 
 public class CreateMetaTask implements ITask {
     public static final Logger logger = LogManager.getLogger(CreateMetaTask.class);

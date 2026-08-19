@@ -12,6 +12,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.IpRangeFilter;
+
 public class Node {
     public static final Logger logger = LogManager.getLogger(Node.class);
     private static final AtomicInteger COUNTER = new AtomicInteger();
@@ -48,6 +50,14 @@ public class Node {
         this.tid = 1;
         this.c = COUNTER.incrementAndGet();
         this.queries = new LinkedList<>();
+    }
+    
+    public boolean denied() {
+        return IpRangeFilter.isDenied(ip);
+    }
+    
+    public boolean allowed() {
+        return IpRangeFilter.isAllowed(ip);
     }
 
     public byte[] ip() {

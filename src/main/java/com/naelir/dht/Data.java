@@ -21,6 +21,7 @@ import com.naelir.db.EntryRepository;
 import com.naelir.db.MongoEntryRepository;
 import com.naelir.fs.FileDB;
 import com.naelir.tasks.MetaTorrentTask;
+import com.naelir.tasks.Sample;
 
 public class Data {
     public ByteBuffer myself;
