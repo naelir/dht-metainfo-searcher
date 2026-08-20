@@ -65,8 +65,8 @@ public class Arguments {
                     "  --table <string>              Table name\n" +
                     "  --get-peers-depth <int>       Number of get-peers queries per hash (default: 1)\n" +
                     "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
-                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 600)\n" +
-                    "  --schedule-interval <int>     Schedule interval in seconds (default: 5)\n" +
+                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 400)\n" +
+                    "  --schedule-interval <int>     Schedule interval in seconds (default: 2)\n" +
                     "  --scrape                      Enable scraping of peer counts from trackers (default: false)\n" +
                     "  --scrape-step <int>           Number of hashes between scrape calls (default: 2000)\n" +
                     "  --tracker-url <host>          Tracker host address\n" +
