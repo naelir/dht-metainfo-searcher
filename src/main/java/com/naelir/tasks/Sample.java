@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.naelir.bt.Torrent;
-import com.naelir.dht.Command;
 import com.naelir.dht.Generator;
 import com.naelir.dht.Node;
 import com.naelir.dht.RoutingTable;
@@ -15,8 +14,7 @@ public class Sample {
     RoutingTable table;
     Set<Node> peers;
     int checked;
-    public final Node from;
-
+    final Node from;
     boolean skip;
 
     public Sample(Torrent torrent, Node from, boolean skip) {
@@ -41,7 +39,7 @@ public class Sample {
     }
 
     public synchronized Set<Node> peers() {
-        return new HashSet<Node>(this.peers);
+        return new HashSet<>(this.peers);
     }
 
     public Torrent torrent() {
@@ -50,19 +48,6 @@ public class Sample {
 
     public synchronized void removePeer(Node node) {
         this.peers.remove(node);
-    }
-    
-    public boolean isResolved() {
-        return torrent.meta() != null;
-    }
-    
-    public boolean isEmpty() {
-        return (checked > 5 && peers.size() == 0);
-    }
-    
-    
-    public boolean isPing() {
-        return peers.stream().allMatch(n -> n.have(Command.PING));
     }
 
     public void skip(boolean b) {

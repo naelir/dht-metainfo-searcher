@@ -9,7 +9,6 @@ import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
  
 public class NameFilter {
-    private static final String DL = "DL";
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
@@ -19,7 +18,8 @@ public class NameFilter {
     private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
     public static final Pattern TV_SERIES = Pattern.compile("\\.S\\d+E\\d+\\.");
     public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
-    private static final Pattern GROUP = Pattern.compile("[\\d\\[\\]a-zA-Z]+");
+    // do not allow group to start with DL, because it is not the real group name, but a part of WEB-DL
+    private static final Pattern GROUP = Pattern.compile("(?!DL)[\\d\\[\\]a-zA-Z]+");
 
     private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
     private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
@@ -66,7 +66,7 @@ public class NameFilter {
         }
         String group = name.substring(name.lastIndexOf("-") + 1, name.length()).replace(".mkv", "");
 
-        return /* group.startsWith(DL) == false && */ GROUP.matcher(group).matches();
+        return GROUP.matcher(group).matches();
     }
 
     public static boolean fineMatch(String name) {

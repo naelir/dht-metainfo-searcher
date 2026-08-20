@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.apache.commons.lang3.tuple.Pair;
-
-import com.naelir.fs.FileLocationDb;
 
 public class CompactInfo {
     static byte[] compact(byte[] nodeId, byte[] ip, int port) {

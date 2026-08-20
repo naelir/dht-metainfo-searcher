@@ -31,7 +31,6 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
-//            tasks.offer(new SampleFindNodeTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data);

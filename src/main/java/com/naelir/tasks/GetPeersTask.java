@@ -65,8 +65,6 @@ public class GetPeersTask implements ITask {
                     List<Node> closest = closest(sample);
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
-                        // remove the sample from the table to avoid querying the same node again
-                        sample.table().remove(id);
                         logger.info("sample {} getting peers from {} {} time", sample.torrent.infoHash(), Generator.toHex(id.array()), sample.checked);
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;

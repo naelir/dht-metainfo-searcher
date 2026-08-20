@@ -274,9 +274,9 @@ public class ResponseResolver {
             for (String hash : decode.samples) {
                 String name = this.data.fileManager.get(hash);
                 if (name != null) {
-//                    if (NameFilter.fineMatch(name)) {
+                    if (NameFilter.fineMatch(name)) {
                         data.forUpdate.add(new ImmutablePair<>(hash, 1));
-//                    }
+                    }
                     logger.info("hash {} already resolved as {}", hash, name);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {

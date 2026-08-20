@@ -4,7 +4,6 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,8 +43,7 @@ public class UdpTorrentResolverTask implements ITask {
             for (MetaTorrentTask task : list) {
                 String hex = task.torrent.infoHash();
                 InetAddress address = task.node.address();
-                Pair<String, String> location = task.node.location;
-                logger.info("resolving torrent {} from country {}, {}, {}", hex, location.getRight(), address, task.node.port());
+                logger.info("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
                 this.client.connectPeer(task.torrent, task.node);
             }
         } catch (Exception e) {

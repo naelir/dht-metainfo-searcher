@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
@@ -14,7 +12,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.dht.Generator;
-import com.naelir.dht.Node;
 
 public class FileLocationDb implements ILocationDb {
     private static final Logger logger = LogManager.getLogger(FileLocationDb.class);
@@ -50,7 +47,7 @@ public class FileLocationDb implements ILocationDb {
                 int prefixLen = Integer.parseInt(cidr.substring(slash + 1));
                 long mask = prefixLen == 0 ? 0L : (0xFFFFFFFFL << (32 - prefixLen)) & 0xFFFFFFFFL;
                 if ((ipLong & mask) == (networkAddr & mask)) {
-                    return new ImmutablePair<String, String>(parts[2].trim(), parts[4].trim());
+                    return new ImmutablePair<String, String>(parts[2].trim(), parts[5].trim());
                 }
             }
         } catch (IOException e) {

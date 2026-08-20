@@ -1,6 +1,5 @@
 package com.naelir.bt;
 
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
@@ -54,7 +53,6 @@ public class BtTcpClient implements AutoCloseable {
                     .connect(node.address(), node.port());
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
-            InetAddress address = node.address();
             Pair<String, String> location = data.locationDb.location(node.ip());
             if (!connectFuture.isSuccess()) {
                 // connection refused, timed-out, etc. — no channel to close
