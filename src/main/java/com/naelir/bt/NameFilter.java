@@ -13,7 +13,7 @@ public class NameFilter {
             "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
             "dvd9", "bgaudio");
     private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
-    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws");
+    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime", "-uranime");
     private static final List<String> XXX = List.of("xxx", "jav");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
     public static final Pattern TV_SERIES = Pattern.compile("\\.S\\d+E\\d+\\.");

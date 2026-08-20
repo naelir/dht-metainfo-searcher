@@ -226,16 +226,16 @@ public class Arguments {
         private String connectionString;
         private String db;
         private String table;
-        private int getPeersDepth = 3;
+        private int getPeersDepth = 1;
         private int minPeers = 1;
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;
         private int maxNodes = 400;
         private int scrapeStep = 2000;
-        private int scheduleInterval = 5;
+        private int scheduleInterval = 2;
         private String scrapeFile;
-        private int hashesStep = 10;
+        private int hashesStep = 3;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
