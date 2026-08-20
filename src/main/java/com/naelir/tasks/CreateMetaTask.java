@@ -1,5 +1,6 @@
 package com.naelir.tasks;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,18 +31,13 @@ public class CreateMetaTask implements ITask {
                 if (sample.peers().size() < data.arguments.minPeers) {
                     continue;
                 }
-                if (sample.peers().isEmpty()) {
-                    String hex = sample.torrent.infoHash();
-                    logger.info("marking sample {} as low peers", hex);
-                    data.fileManager.create(Entry.lowPeers(hex));
-                }
+
                 for (Node peer : sample.peers()) {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
-                        if (data.locationDb.allowed(peer)) {
-                            this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent()));
+                        this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent()));
 //                            this.data.tcptasks.offer(new MetaTorrentTask(peer, sample.torrent));
-                        }
+
                     }
                 }
             }

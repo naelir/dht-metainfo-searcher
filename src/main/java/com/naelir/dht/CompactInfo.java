@@ -91,8 +91,7 @@ public class CompactInfo {
         info.get(portBytes);
         ByteBuffer id = ByteBuffer.wrap(idBytes);
         int port = ((portBytes[0] & 0xFF) << 8) | (portBytes[1] & 0xFF);
-        Pair<String, String> location = FileLocationDb.INSTANCE.location(ip);
-        return new Node(ip, port, id, location);
+        return new Node(ip, port, id);
     }
 
     public static List<Node> expandNodes(ByteBuffer info) {
@@ -109,8 +108,7 @@ public class CompactInfo {
             info.get(portBytes);
             ByteBuffer id = ByteBuffer.wrap(idBytes);
             int port = ((portBytes[0] & 0xFF) << 8) | (portBytes[1] & 0xFF);
-            Pair<String, String> location = FileLocationDb.INSTANCE.location(ip);
-            list.add(new Node(ip, port, id, location));
+            list.add(new Node(ip, port, id));
         }
         return list;
     }
@@ -121,8 +119,7 @@ public class CompactInfo {
         byte[] peerPortBA = new byte[2];
         buffer.get(peerPortBA);
         int port = ((peerPortBA[0] & 0xFF) << 8) | (peerPortBA[1] & 0xFF);
-        Pair<String, String> location = FileLocationDb.INSTANCE.location(peerIPBA);
-        return new Node(peerIPBA, port, ByteBuffer.allocate(0), location);
+        return new Node(peerIPBA, port, ByteBuffer.allocate(0));
     }
 
     public static List<Node> expandPeers(List<ByteBuffer> info) {

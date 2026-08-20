@@ -55,7 +55,7 @@ public class BtTcpClient implements AutoCloseable {
             // awaitUninterruptibly avoids spurious wakeups breaking the connect wait
             connectFuture.awaitUninterruptibly();
             InetAddress address = node.address();
-            Pair<String, String> location = node.location();
+            Pair<String, String> location = data.locationDb.location(node.ip());
             if (!connectFuture.isSuccess()) {
                 // connection refused, timed-out, etc. — no channel to close
                 logger.warn("Connection to {} {}:{} failed: {}", location.getRight(), node.address(), node.port(),

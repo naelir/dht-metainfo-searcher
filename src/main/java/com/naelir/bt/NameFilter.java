@@ -66,7 +66,7 @@ public class NameFilter {
         }
         String group = name.substring(name.lastIndexOf("-") + 1, name.length()).replace(".mkv", "");
 
-        return group.startsWith(DL) == false && GROUP.matcher(group).matches();
+        return /* group.startsWith(DL) == false && */ GROUP.matcher(group).matches();
     }
 
     public static boolean fineMatch(String name) {

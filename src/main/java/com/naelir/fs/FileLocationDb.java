@@ -23,8 +23,6 @@ public class FileLocationDb implements ILocationDb {
     private static final Path BASE_DIR = HOME.resolve("locationdb");
     private static final String SEP = ",";
 
-    private static final List<String> DENIED = Arrays.asList("AS", "OC", "NA", "SA", "AF");
-    private static final List<String> ALLOWED = Arrays.asList("EU");
 
     public static final ILocationDb INSTANCE = new FileLocationDb();
     
@@ -34,8 +32,10 @@ public class FileLocationDb implements ILocationDb {
         long ipLong = ipToLong(ipAddr);
         String prefix1 = ipAddr.substring(0, ipAddr.indexOf("."));
         Path shard = shardPath(prefix1);
-        if (!Files.exists(shard))
-            return null;
+        if (!Files.exists(shard)) {
+            logger.info("cannot geolocate ip {}, internal one", ipAddr);
+            return ImmutablePair.of("LOCAL", "LOCAL");
+        }
         try (BufferedReader reader = Files.newBufferedReader(shard)) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -56,7 +56,9 @@ public class FileLocationDb implements ILocationDb {
         } catch (IOException e) {
             logger.error("cannot determine country for ip {}", ipAddr, e);
         }
-        return null;
+        logger.info("ip {} cannot be geolocated", ipAddr);
+
+        return ImmutablePair.of("LOCAL", "LOCAL");
     }
 
     private static long ipToLong(String ipAddr) {
@@ -70,27 +72,6 @@ public class FileLocationDb implements ILocationDb {
 
     private static Path shardPath(String prefix) {
         return BASE_DIR.resolve(prefix.toUpperCase() + ".txt");
-    }
-    
-
-    @Override
-    public boolean denied(Pair<String, String> location) {
-        return DENIED.contains(location.getLeft());
-    }
-
-    @Override
-    public boolean allowed(Pair<String, String> location) {
-        return ALLOWED.contains(location.getLeft());
-    }
-    
-    @Override
-    public boolean allowed(Node node) {
-        return allowed(location(node.ip()));
-    }
-
-    @Override
-    public boolean denied(Node node) {
-        return denied(location(node.ip()));
     }
     
 }

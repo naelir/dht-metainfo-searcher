@@ -127,7 +127,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
-            logger.info("resolved {} as {}", this.task.infoHash, meta.getName());
+            logger.info("resolved {} as {} from {}", this.task.infoHash, meta.getName(), data.locationDb.location(addr));
             if (this.task.meta() == null) {
                 this.task.setMeta(meta);
                 Entry entry = TorrentMeta.toEntry(this.task.infoHash, meta);

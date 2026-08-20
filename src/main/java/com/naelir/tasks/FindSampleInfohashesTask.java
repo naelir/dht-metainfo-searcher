@@ -24,18 +24,7 @@ public class FindSampleInfohashesTask implements ITask {
 
     @Override
     public boolean resolved() {
-        boolean allMatch = this.data.table.nodes().stream().allMatch(e -> e.have(Command.SAMPLE));
-        if (allMatch) {
-            List<Node> delete = this.data.table.nodes()
-                    .stream()
-                    .filter(e -> e.have(Command.SAMPLE_R) == false)
-                    .toList();
-            delete.forEach(e -> this.data.table.remove(e.id()));
-        } else {
-            List<Node> list = this.data.table.nodes().stream().filter(e -> e.have(Command.SAMPLE) == false).toList();
-            logger.info("nodes to check for samples: {}", list.size());
-        }
-        return allMatch;
+        return this.data.table.nodes().stream().allMatch(e -> e.have(Command.SAMPLE));
     }
 
     @Override

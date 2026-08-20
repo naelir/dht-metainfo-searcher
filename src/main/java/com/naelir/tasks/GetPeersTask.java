@@ -55,11 +55,11 @@ public class GetPeersTask implements ITask {
                 if (sample.checked < this.data.arguments.getPeersDepth) {
                     sample.checked++;
                     if (sample.peers.isEmpty() == false) {
-                        logger.info("samples {} has peers, continue", sample.torrent.infoHash());
+                        logger.debug("samples {} has peers, continue", sample.torrent.infoHash());
                         continue;
                     }
                     if (sample.skip) {
-                        logger.info("samples {} is skipped, continue", sample.torrent.infoHash());
+                        logger.debug("samples {} is skipped, continue", sample.torrent.infoHash());
                         continue;
                     }
                     List<Node> closest = closest(sample);

@@ -18,7 +18,7 @@ public class Node {
     public static final Logger logger = LogManager.getLogger(Node.class);
     private static final AtomicInteger COUNTER = new AtomicInteger();
 
-    public static final Node EMPTY = new Node(new byte[] { 0, 0, 0, 0 }, 0, ByteBuffer.wrap(new byte[20]), ImmutablePair.nullPair());
+    public static final Node EMPTY = new Node(new byte[] { 0, 0, 0, 0 }, 0, ByteBuffer.wrap(new byte[20]));
     
     public static Node of(ByteBuffer compactInfo, int ipLength) {
         byte[] rawId = new byte[20];
@@ -29,7 +29,7 @@ public class Node {
         compactInfo.get(rawPort);
         ByteBuffer id = ByteBuffer.wrap(rawId);
         int port = ((rawPort[0] & 0xFF) << 8) | (rawPort[1] & 0xFF);
-        return new Node(rawIp, port, id, ImmutablePair.nullPair());
+        return new Node(rawIp, port, id);
     }
 
     int tid;
@@ -38,23 +38,26 @@ public class Node {
     ByteBuffer id;
     private int c;
     public Queue<Command> queries;
-    private Pair<String, String> location;
 
+    public Pair<String, String> location;
+    
     public Node(byte[] ip, int port) {
-        this(ip, port, Generator.generateRandomID(), ImmutablePair.nullPair());
+        this(ip, port, Generator.generateRandomID());
     }
 
-    public Node(byte[] ip, int port, ByteBuffer id, Pair<String, String> location) {
+    public Node(byte[] ip, int port, ByteBuffer id) {
         this.ip = ip;
         this.port = port;
         this.id = id;
-        this.location = location;
         this.tid = 1;
         this.c = COUNTER.incrementAndGet();
         this.queries = new LinkedList<>();
     }
     
-    public Pair<String, String> location() {
+    public void setLocation(Pair<String, String> location) {
+        this.location = location;
+    }
+    public Pair<String, String> getLocation() {
         return location;
     }
 

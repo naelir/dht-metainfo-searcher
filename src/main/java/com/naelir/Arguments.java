@@ -42,7 +42,7 @@ public class Arguments {
         String db = null;
         String table = null;
         int getPeerDepth = 3;
-        int minPeers = 0;
+        int minPeers = 1;
         int maxNodes = 400;
         int scrapeStep = 2000;
         int hashesStep = 10;
@@ -227,7 +227,7 @@ public class Arguments {
         private String db;
         private String table;
         private int getPeersDepth = 3;
-        private int minPeers = 0;
+        private int minPeers = 1;
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;

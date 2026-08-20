@@ -15,6 +15,7 @@ import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.Entry;
 import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
+import com.naelir.fs.IpBlocker;
 import com.naelir.tasks.Sample;
 
 public class ResponseResolver {
@@ -54,8 +55,7 @@ public class ResponseResolver {
             if (message.implied != null && message.implied > 0) {
                 remotePort = from.port;
             }
-            Pair<String, String> location = data.locationDb.location(from.ip);
-            Node node = new Node(from.ip, remotePort, message.id, location);
+            Node node = new Node(from.ip, remotePort, message.id);
             String hex = Generator.toHex(message.infoHash.array());
             Torrent previous = this.data.torrents.get(hex);
             if (previous != null) {
@@ -116,12 +116,20 @@ public class ResponseResolver {
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         decode.request.node.put(Command.FIND_NODE_R);
-        for (Node node : decode.nodes) {
-            if (data.locationDb.denied(node) == false || this.data.table.size() < 5) {
-                this.data.table.insert(node);
-            } else {
-                logger.debug("{} denied", node);
+        if (decode.request.target == data.myself) {
+            for (Node node : decode.nodes) {
+                Pair<String, String> location = data.locationDb.location(node.ip);
+                if (IpBlocker.denied(location) == false || this.data.table.size() < 5) {
+                    this.data.table.insert(node);
+                    node.setLocation(location);
+                } else {
+                    logger.debug("node {} from {} denied", node, location);
+                }
             }
+        } else {
+            String hex = Generator.toHex(decode.request.target.array());
+            Sample sample = data.samples.get(hex);
+            decode.nodes.forEach(e -> sample.table().insert(e));
         }
         return Optional.empty();
     }
@@ -131,8 +139,7 @@ public class ResponseResolver {
         ByteBuffer infoHash = message.infoHash;
         String hex = Generator.toHex(infoHash.array());
         Torrent torrent = this.data.torrents.get(hex);
-        Pair<String, String> location = data.locationDb.location(from.ip);
-        this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id, location));
+        this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id));
         List<Node> nodes = this.data.table.closest(infoHash);
         if (torrent != null) {
             List<Node> peers = new ArrayList<>(torrent.peers());
@@ -154,8 +161,10 @@ public class ResponseResolver {
             if (sample != null) {
                 int denied = 0;
                 for (Node node : decode.peers) {
-                    if (data.locationDb.denied(node) == false) {
+                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    if (IpBlocker.denied(location) == false) {
                         sample.addPeer(node);
+                        node.setLocation(location);
                     } else {
                         denied++;
                     }
@@ -165,14 +174,18 @@ public class ResponseResolver {
                     sample.skip(true);
                     // 1 is too low, can be a false positive, 2 is better
                     if (size > 1) {
-                        logger.info("marking sample {} as crap due to too many denied peers", hex);
+                        logger.info("{} too many denied peers", hex);
                         data.fileManager.create(Entry.crap(hex));
                     }
                 }
-                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
+                logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
-                    if (data.locationDb.denied(node) == false) {
+                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    if (IpBlocker.denied(location) == false) {
                         sample.table().insert(node);
+                        node.setLocation(location);
+                    } else {
+                        logger.debug("node {} from {} denied", node, location);
                     }
                 }
             }
@@ -261,9 +274,9 @@ public class ResponseResolver {
             for (String hash : decode.samples) {
                 String name = this.data.fileManager.get(hash);
                 if (name != null) {
-                    if (NameFilter.fineMatch(name)) {
+//                    if (NameFilter.fineMatch(name)) {
                         data.forUpdate.add(new ImmutablePair<>(hash, 1));
-                    }
+//                    }
                     logger.info("hash {} already resolved as {}", hash, name);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {

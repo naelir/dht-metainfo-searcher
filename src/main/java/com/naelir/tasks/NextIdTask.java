@@ -36,7 +36,10 @@ public class NextIdTask implements ITask {
             logger.warn("next id is {}", myself);
             List<Node> nodes = this.data.table.closest(nextId, 20);
             this.data.table = new RoutingTable();
-            nodes.forEach(e -> this.data.table.insert(e));
+            nodes.forEach(e -> {
+                e.queries.clear();
+                this.data.table.insert(e);
+            });
             this.data.samples.clear();
             this.data.torrents.clear();
         }
