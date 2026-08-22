@@ -37,7 +37,7 @@ public class FindNodeTask implements ITask {
             logger.info("nodes in the routing table {}", nodes.size());
             int i = 0;
             for (Node node : nodes) {
-                if (step < 0) {
+                if (step <= 0) {
                     break;
                 }
                 if (node.have(Command.FIND_NODE) == false) {

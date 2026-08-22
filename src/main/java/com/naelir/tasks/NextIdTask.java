@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
@@ -36,10 +37,20 @@ public class NextIdTask implements ITask {
             logger.warn("next id is {}", myself);
             List<Node> nodes = this.data.table.closest(nextId, 20);
             this.data.table = new RoutingTable();
-            nodes.forEach(e -> {
+            for (Node e : nodes) {
                 e.queries.clear();
                 this.data.table.insert(e);
-            });
+            }
+            if (data.arguments.getPeersDepth > 1) {
+                int i = 0;
+                for (Sample node : data.samples.values()) {
+                    if (node.peers().isEmpty()) {
+                        i++;
+                        data.fileManager.create(Entry.lowPeers(node.torrent.infoHash()));
+                    }
+                }
+                logger.info("{} samples denied as low peers", i);
+            }
             this.data.samples.clear();
             this.data.torrents.clear();
         }

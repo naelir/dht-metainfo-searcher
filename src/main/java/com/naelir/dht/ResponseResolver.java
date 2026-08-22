@@ -162,7 +162,7 @@ public class ResponseResolver {
                 int denied = 0;
                 for (Node node : decode.peers) {
                     Pair<String, String> location = data.locationDb.location(node.ip);
-                    if (IpBlocker.denied(location) == false) {
+                    if (IpBlocker.allowed(location)) {
                         sample.addPeer(node);
                         node.setLocation(location);
                     } else {
@@ -274,9 +274,7 @@ public class ResponseResolver {
             for (String hash : decode.samples) {
                 String name = this.data.fileManager.get(hash);
                 if (name != null) {
-                    if (NameFilter.fineMatch(name)) {
-                        data.forUpdate.add(new ImmutablePair<>(hash, 1));
-                    }
+                    data.forUpdate.add(new ImmutablePair<>(hash, 1));
                     logger.info("hash {} already resolved as {}", hash, name);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
