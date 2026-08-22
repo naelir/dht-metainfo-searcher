@@ -13,7 +13,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.naelir.bt.Entry;
-import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
 import com.naelir.fs.IpBlocker;
 import com.naelir.tasks.Sample;
@@ -172,11 +171,8 @@ public class ResponseResolver {
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip(true);
-                    // 1 is too low, can be a false positive, 2 is better
-                    if (size > 1) {
-                        logger.info("{} too many denied peers", hex);
-                        data.fileManager.create(Entry.crap(hex));
-                    }
+                    logger.info("{} too many denied peers", hex);
+                    data.fileManager.create(Entry.crap(hex));
                 }
                 logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {

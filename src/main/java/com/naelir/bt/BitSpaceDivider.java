@@ -33,7 +33,6 @@ public class BitSpaceDivider {
             keys.add(ByteBuffer.wrap(to160BitBytes(current)));
             current = current.add(step);
         }
-        keys.add(ByteBuffer.wrap(to160BitBytes(keySpace.subtract(current))));
         return keys;
     }
 

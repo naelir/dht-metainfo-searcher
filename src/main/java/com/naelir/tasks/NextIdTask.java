@@ -43,10 +43,10 @@ public class NextIdTask implements ITask {
             }
             if (data.arguments.getPeersDepth > 1) {
                 int i = 0;
-                for (Sample node : data.samples.values()) {
-                    if (node.peers().isEmpty()) {
+                for (Sample sample : data.samples.values()) {
+                    if (sample.peers().isEmpty() && sample.skip == false) {
                         i++;
-                        data.fileManager.create(Entry.lowPeers(node.torrent.infoHash()));
+                        data.fileManager.create(Entry.lowPeers(sample.torrent.infoHash()));
                     }
                 }
                 logger.info("{} samples denied as low peers", i);
