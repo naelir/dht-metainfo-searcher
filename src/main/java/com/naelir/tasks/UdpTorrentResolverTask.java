@@ -29,7 +29,8 @@ public class UdpTorrentResolverTask implements ITask {
     @Override
     public void run() {
         try {
-            int step = data.arguments.hashesStep;
+            int x = data.arguments.scheduleInterval / data.arguments.hashesStep;
+            int step = x > 0 ? x : 1;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
                 MetaTorrentTask task = get();

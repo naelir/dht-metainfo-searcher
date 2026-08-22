@@ -127,6 +127,7 @@ public class Data {
 
     public ByteBuffer nextId() {
         this.myself = this.udpIds.poll();
+        this.udpIds.offer(myself);
         return this.myself;
     }
 }
