@@ -1,6 +1,7 @@
 package com.naelir.dht;
 
 import java.nio.ByteBuffer;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,6 +13,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.fs.IpBlocker;
@@ -20,9 +23,11 @@ import com.naelir.tasks.Sample;
 public class ResponseResolver {
     public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
     private Data data;
+    private Cache<String, Boolean> ipcache;
 
     public ResponseResolver(Data data) {
         this.data = data;
+        this.ipcache = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(1)).build();
     }
 
     private Object forAddress(From from) {
@@ -106,11 +111,18 @@ public class ResponseResolver {
         return Optional.empty();
     }
 
-    private FindNodeResponse resolve(FindNodeRequest message, From from) {
-        List<Node> nodes = this.data.table.closest(message.target);
-        logger.info("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
-               from, nodes.size());
-        return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
+    private IResponse resolve(FindNodeRequest message, From from) {
+        String ip = Generator.ip(from.ip);
+        if (ipcache.getIfPresent(ip) != null) {
+            logger.info("find node from {} will return error, scanners spam", from);
+            return new Error(201, "too many requests", message.tid);
+        } else {
+            ipcache.put(ip, Boolean.TRUE);
+            List<Node> nodes = this.data.table.closest(message.target);
+            logger.info("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
+                   from, nodes.size());
+            return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
+        }
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
@@ -201,7 +213,7 @@ public class ResponseResolver {
             byte[] encode = BEncoder.encode(r);
             return optional(encode);
         } else if (decode instanceof FindNodeRequest fnr) {
-            FindNodeResponse r = resolve(fnr, from);
+            IResponse r = resolve(fnr, from);
             logTo(r, from);
             byte[] encode = BEncoder.encode(r);
             return optional(encode);
