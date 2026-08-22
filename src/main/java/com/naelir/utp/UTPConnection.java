@@ -111,6 +111,20 @@ public class UTPConnection {
     }
 
     /**
+     * Close the associated {@link UtpPeerSession} (if any), releasing any
+     * unreleased outbound {@link io.netty.buffer.ByteBuf}s and firing
+     * {@code channelInactive} on the BT pipeline.
+     * Safe to call even when no session is attached (e.g. server-side SYN
+     * connections created by {@link UTPManager#findConnection}).
+     */
+    public void closeSession() {
+        if (this.session != null) {
+            this.session.close();
+            this.session = null;
+        }
+    }
+
+    /**
      * ACK a single packet: update RTT/RTO, shrink curWindow, remove from outBuffer.
      */
     private void ackPacket(int sn) {

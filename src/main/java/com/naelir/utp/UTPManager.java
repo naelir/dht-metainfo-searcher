@@ -108,6 +108,7 @@ public class UTPManager {
             UTPConnection.DecodeResult res = connection.decode(data);
             if ("CLOSED".equals(res.state())) {
                 this.connections.entrySet().removeIf(e -> e.getValue() == connection);
+                connection.closeSession();
             }
             return res.response();
         }
@@ -160,6 +161,7 @@ public class UTPManager {
             }
             if ("CLOSED".equals(utp.state)) {
                 this.connections.remove(key);
+                utp.closeSession();
             }
         }
         return toSend;
