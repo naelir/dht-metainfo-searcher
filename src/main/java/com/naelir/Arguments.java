@@ -9,7 +9,7 @@ public class Arguments {
      * <ul>
      * <li>{@code --help} – print available options and exit</li>
      * <li>{@code --bitspace-parts <int>} – number of bit-space partitions to
-     * explore (default: 100)</li>
+     * explore (default: 200)</li>
      * <li>{@code --continue-from <String>} – hash to continue from (default:
      * null)</li>
      * <li>{@code --only-hashes} – only collect hashes, skip metadata resolution
@@ -22,7 +22,7 @@ public class Arguments {
      * (default: 1)</li>
      * <li>{@code --min-peers <int>} – minimum number of peers required before
      * resolving metadata (default: 1)</li>
-     * <li>{@code --max-nodes <int>} – maximum number of DHT nodes (default: 600)</li>
+     * <li>{@code --max-nodes <int>} – maximum number of DHT nodes (default: 200)</li>
      * <li>{@code --schedule-interval <int>} – crawl schedule interval in seconds
      * (default: 5)</li>
      * <li>{@code --scrape} – enable scraping of peer counts from trackers
@@ -36,14 +36,14 @@ public class Arguments {
      */
     public static Arguments parse(String[] args) {
         String from = null;
-        int bitspaceParts = 100;
+        int bitspaceParts = 200;
         boolean onlyHashes = false;
         String connectionString = null;
         String db = null;
         String table = null;
         int getPeerDepth = 3;
         int minPeers = 1;
-        int maxNodes = 400;
+        int maxNodes = 200;
         int scrapeStep = 2000;
         int hashesStep = 10;
         boolean scrape = false;
@@ -220,7 +220,7 @@ public class Arguments {
 
 
     public static class Builder {
-        private int bitspaceParts = 100;
+        private int bitspaceParts = 200;
         private String continueFrom;
         private boolean onlyHashes;
         private String connectionString;
@@ -231,7 +231,7 @@ public class Arguments {
         private boolean scrape;
         private InetAddress trackerUrl;
         private int trackerPort;
-        private int maxNodes = 400;
+        private int maxNodes = 200;
         private int scrapeStep = 2000;
         private int scheduleInterval = 2;
         private String scrapeFile;

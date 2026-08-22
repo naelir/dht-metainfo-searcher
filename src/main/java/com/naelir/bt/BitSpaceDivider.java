@@ -5,6 +5,8 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.naelir.dht.Generator;
+
 public class BitSpaceDivider {
     /**
      * Generates {@code n} (even) keys that equally divide the 160-bit Kademlia key
@@ -20,22 +22,26 @@ public class BitSpaceDivider {
      * @throws IllegalArgumentException if {@code n} is not positive or not even
      */
     public static List<ByteBuffer> divide(int n) {
-        if (n <= 0 || n % 2 != 0)
-            throw new IllegalArgumentException("n must be a positive even number, got: " + n);
+        if (n <= 0)
+            throw new IllegalArgumentException("n must be a positive number, got: " + n);
         // 2^160 — the size of the full Kademlia key space
         BigInteger keySpace = BigInteger.ONE.shiftLeft(160);
         // Arithmetic step between consecutive keys; equal XOR-distance on the number
         // line
         BigInteger step = keySpace.divide(BigInteger.valueOf(n));
         List<ByteBuffer> keys = new ArrayList<>(n);
-        BigInteger current = BigInteger.valueOf(17); // start from somewhere to avoid the all-zero key;
+        BigInteger current = BigInteger.ONE; 
         for (int i = 0; i < n; i++) {
-            keys.add(ByteBuffer.wrap(to160BitBytes(current)));
             current = current.add(step);
+            keys.add(ByteBuffer.wrap(to160BitBytes(current)));
         }
+
         return keys;
     }
 
+    public static void main(String[] args) {
+        divide(200).forEach(bb -> System.out.println(Generator.toHex(bb.array())));
+    }
     /**
      * Converts a non-negative {@link BigInteger} to a fixed-length 20-byte
      * (160-bit) big-endian byte array, padding with leading zeroes as necessary.
