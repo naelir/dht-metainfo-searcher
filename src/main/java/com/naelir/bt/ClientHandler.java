@@ -82,7 +82,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             }
             String prefix = StringUtils.substring(hr.peerID, 0, 3);
             if (hr.peerID != null && DENIED_PRE.contains(prefix)) {
-                logger.error("deny id {}", prefix);
+                logger.debug("deny id {}", prefix);
                 ctx.close();
             }
         } else if (msg instanceof ExtendedMessageHandshake eh) {
@@ -108,8 +108,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
                 return;
             }
-            System.arraycopy(r.meta, 0, this.metadata, r.msg.piece * TorrentMetadataResponse.METADATA_PIECE_SIZE,
-                    r.meta.length);
+            System.arraycopy(r.meta, 0, this.metadata, r.msg.piece * TorrentMetadataResponse.METADATA_PIECE_SIZE, r.meta.length);
             this.piecesReceived++;
             logger.debug("piece {} received from expected {}", this.piecesReceived, this.piecesExpected);
             if (this.piecesReceived == this.piecesExpected) {
@@ -122,8 +121,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     }
 
     void decode(boolean complete, byte[] addr, int port) {
-        Optional<BencodedDictionary> decode = complete ? BDecoder.decode(this.metadata)
-                : TorrentMeta.parse(this.metadata);
+        Optional<BencodedDictionary> decode = complete ? BDecoder.decode(this.metadata) : TorrentMeta.parse(this.metadata);
         Optional<TorrentMeta> torrentMeta = TorrentMeta.of(this.task.infoHash, decode);
         if (torrentMeta.isPresent()) {
             TorrentMeta meta = torrentMeta.get();
@@ -141,7 +139,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
                 }
             }
         } else {
-            logger.error("metadata was invalid");
+            logger.error("found invalid metadata");
             if (logger.isDebugEnabled()) {
                 logger.debug(Arrays.toString(this.metadata));
             }

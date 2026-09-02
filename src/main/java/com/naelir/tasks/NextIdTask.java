@@ -45,17 +45,20 @@ public class NextIdTask implements ITask {
                 int i = 0;
                 int j = 0;
                 int k = 0;
+                int r = 0;
                 for (Sample sample : data.samples.values()) {
                     if (sample.peers().isEmpty() && sample.skip == false) {
                         i++;
                         data.fileManager.create(Entry.lowPeers(sample.torrent.infoHash()));
                     } else if (sample.skip) {
                         j++;
+                    } else if (sample.torrent.meta() != null) {
+                        r++;
                     } else {
                         k++;
                     }
                 }
-                logger.info("samples; low peers {}, crap {}, other {}", i, j, k);
+                logger.info("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
             }
             this.data.samples.clear();
             this.data.torrents.clear();

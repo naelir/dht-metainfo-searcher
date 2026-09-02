@@ -5,10 +5,10 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Java port of {@code Net::uTP::Manager} – multiplexes many uTP sessions over a
@@ -49,7 +49,7 @@ public class UTPManager {
     }
 
     /** Active uTP sessions keyed by remote address + connection-id. */
-    private final Map<ConnectionKey, UTPConnection> connections = new HashMap<>();
+    private final Map<ConnectionKey, UTPConnection> connections = new ConcurrentHashMap<>();
     // ── Fields ────────────────────────────────────────────────────────────────
 
     public UTPConnection findConnection(String ip, int port, int connId, int type) {

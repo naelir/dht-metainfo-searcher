@@ -4,52 +4,23 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 public class Arguments {
-    /**
-     * Parses command-line arguments.
-     * <ul>
-     * <li>{@code --help} – print available options and exit</li>
-     * <li>{@code --bitspace-parts <int>} – number of bit-space partitions to
-     * explore (default: 200)</li>
-     * <li>{@code --continue-from <String>} – hash to continue from (default:
-     * null)</li>
-     * <li>{@code --only-hashes} – only collect hashes, skip metadata resolution
-     * (default: false)</li>
-     * <li>{@code --connection-string <String>} – database connection string
-     * (default: null)</li>
-     * <li>{@code --db <String>} – database name (default: null)</li>
-     * <li>{@code --table <String>} – table name (default: null)</li>
-     * <li>{@code --get-peers-depth <int>} – number of get-peers queries per hash
-     * (default: 1)</li>
-     * <li>{@code --min-peers <int>} – minimum number of peers required before
-     * resolving metadata (default: 1)</li>
-     * <li>{@code --max-nodes <int>} – maximum number of DHT nodes (default: 200)</li>
-     * <li>{@code --schedule-interval <int>} – crawl schedule interval in seconds
-     * (default: 5)</li>
-     * <li>{@code --scrape} – enable scraping of peer counts from trackers
-     * (default: false)</li>
-     * <li>{@code --scrape-step <int>} – number of hashes between scrape calls
-     * (default: 5000)</li>
-     * <li>{@code --tracker-url <String>} – tracker host address (default:
-     * null)</li>
-     * <li>{@code --tracker-port <int>} – tracker port (default: 0)</li>
-     * </ul>
-     */
+    
     public static Arguments parse(String[] args) {
         String from = null;
+        String to = null;
         int bitspaceParts = 200;
-        boolean onlyHashes = false;
         String connectionString = null;
         String db = null;
         String table = null;
-        int getPeerDepth = 3;
+        int getPeerDepth = 2;
         int minPeers = 1;
         int maxNodes = 200;
         int scrapeStep = 2000;
-        int hashesStep = 10;
+        int hashesStep = 5;
         boolean scrape = false;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
-        int scheduleInterval = 5;
+        int scheduleInterval = 2;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
             case "--help":
@@ -57,15 +28,16 @@ public class Arguments {
                     "Usage: dht-metainfo-searcher [OPTIONS]\n" +
                     "\n" +
                     "Options:\n" +
-                    "  --bitspace-parts <int>        Number of bit-space partitions to explore (default: 100)\n" +
-                    "  --continue-from <hash>        Hash to continue crawling from (default: none)\n" +
-                    "  --only-hashes                 Only collect hashes, skip metadata resolution (default: false)\n" +
+                    "  --bitspace-parts <int>        Number of bit-space partitions to explore (default: 200)\n" +
+                    "  --from <hash>                 Hash to continue crawling from (default: none)\n" +
+                    "  --to <hash>                   Hash to end crawling to (default: none)\n" +
                     "  --connection-string <string>  Database connection string\n" +
                     "  --db <string>                 Database name\n" +
                     "  --table <string>              Table name\n" +
-                    "  --get-peers-depth <int>       Number of get-peers queries per hash (default: 1)\n" +
+                    "  --get-peers-depth <int>       Number of get-peers depth per hash (default: 2)\n" +
+                    "  --hashes-step <int>           Number of hashes to send get-peers at once (default: 5)\n" +
                     "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
-                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 400)\n" +
+                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 200)\n" +
                     "  --schedule-interval <int>     Schedule interval in seconds (default: 2)\n" +
                     "  --scrape                      Enable scraping of peer counts from trackers (default: false)\n" +
                     "  --scrape-step <int>           Number of hashes between scrape calls (default: 2000)\n" +
@@ -75,10 +47,15 @@ public class Arguments {
                 );
                 System.exit(0);
                 break;
-            case "--continue-from":
+            case "--from":
                 if (i + 1 >= args.length)
-                    throw new IllegalArgumentException("Missing value for --continue-from");
+                    throw new IllegalArgumentException("Missing value for --from");
                 from = args[++i];
+                break;
+            case "--to":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --to");
+                to = args[++i];
                 break;
             case "--bitspace-parts":
                 if (i + 1 >= args.length)
@@ -89,9 +66,6 @@ public class Arguments {
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --schedule-interval");
                 scheduleInterval = Integer.parseInt(args[++i]);
-                break;
-            case "--only-hashes":
-                onlyHashes = true;
                 break;
             case "--connection-string":
                 if (i + 1 >= args.length)
@@ -156,7 +130,7 @@ public class Arguments {
         }
         return new Builder().bitspaceParts(bitspaceParts)
                 .continueFrom(from)
-                .onlyHashes(onlyHashes)
+                .continueTo(to)
                 .connectionString(connectionString)
                 .db(db)
                 .table(table)
@@ -172,7 +146,7 @@ public class Arguments {
                 .build();
     }
 
-    public final String continueFrom;
+    public final String from;
     public final int bitspaceParts;
     public final boolean onlyHashes;
     public final String connectionString;
@@ -188,10 +162,12 @@ public class Arguments {
     public final int scheduleInterval;
     public final String scrapeFile;
     public final int hashesStep;
+    public final String to;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
-        this.continueFrom = builder.continueFrom;
+        this.from = builder.from;
+        this.to = builder.to;
         this.onlyHashes = builder.onlyHashes;
         this.connectionString = builder.connectionString;
         this.db = builder.db;
@@ -211,7 +187,7 @@ public class Arguments {
 
     @Override
     public String toString() {
-        return "Arguments [continueFrom=" + continueFrom + ", bitspaceParts=" + bitspaceParts + ", onlyHashes="
+        return "Arguments [continueFrom=" + from + ", bitspaceParts=" + bitspaceParts + ", onlyHashes="
                 + onlyHashes + ", connectionString=" + connectionString + ", db=" + db + ", table=" + table
                 + ", queryCount=" + getPeersDepth + ", minPeers=" + minPeers + ", scrape=" + scrape + ", trackerUrl="
                 + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep + ", maxNodes=" + maxNodes
@@ -221,12 +197,12 @@ public class Arguments {
 
     public static class Builder {
         private int bitspaceParts = 200;
-        private String continueFrom;
+        private String from;
         private boolean onlyHashes;
         private String connectionString;
         private String db;
         private String table;
-        private int getPeersDepth = 1;
+        private int getPeersDepth = 2;
         private int minPeers = 1;
         private boolean scrape;
         private InetAddress trackerUrl;
@@ -235,13 +211,19 @@ public class Arguments {
         private int scrapeStep = 2000;
         private int scheduleInterval = 2;
         private String scrapeFile;
-        private int hashesStep = 3;
+        private int hashesStep = 5;
+        private String to;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
             return this;
         }
         
+        public Builder continueTo(String to) {
+            this.to = to;
+            return this;
+        }
+
         public Builder hashesStep(int hashesStep) {
             this.hashesStep   = hashesStep;
             return this;
@@ -272,7 +254,7 @@ public class Arguments {
         }
 
         public Builder continueFrom(String continueFrom) {
-            this.continueFrom = continueFrom;
+            this.from = continueFrom;
             return this;
         }
 

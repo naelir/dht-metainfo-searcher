@@ -1,17 +1,14 @@
 package com.naelir.tasks;
 
 import java.net.InetAddress;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.dht.Data;
-import com.naelir.dht.ITask;
 import com.naelir.utp.UtpClient;
 
-public class UdpTorrentResolverTask implements ITask {
+public class UdpTorrentResolverTask implements Runnable {
     private static final Logger logger = LogManager.getLogger(UdpTorrentResolverTask.class);
     private UtpClient client;
     private Data data;
@@ -22,30 +19,21 @@ public class UdpTorrentResolverTask implements ITask {
     }
 
     @Override
-    public boolean resolved() {
-        return this.data.udptasks.isEmpty();
-    }
-
-    @Override
     public void run() {
         try {
-            int step = 2;
-            List<MetaTorrentTask> list = new ArrayList<>(step);
-            for (int i = 0; i < step; i++) {
-                MetaTorrentTask task = get();
-                if (task == null) {
-                    continue;
-                }
-                list.add(task);
+            MetaTorrentTask task = get();
+            if (task == null) {
+                return;
             }
             int size = this.data.udptasks.size();
-            logger.info("tasks left {}", size);
-            for (MetaTorrentTask task : list) {
-                String hex = task.torrent.infoHash();
-                InetAddress address = task.node.address();
-                logger.info("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
-                this.client.connectPeer(task.torrent, task.node);
+            if (size % 10 == 0) {
+                logger.info("tasks left {}", size);
             }
+            String hex = task.torrent.infoHash();
+            InetAddress address = task.node.address();
+            logger.info("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
+            this.client.connectPeer(task.torrent, task.node);
+            
         } catch (Exception e) {
             logger.error("Unexpected error resolving torrent", e);
         }

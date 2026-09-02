@@ -6,7 +6,6 @@ import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,24 +24,16 @@ import com.naelir.dht.Node;
 import com.naelir.dht.PingRequest;
 import com.naelir.dht.SampleInfoHashesRequest;
 import com.naelir.dht.Token;
-import com.naelir.dht.UdpOnDataListener;
-import com.naelir.tracker.TrackerOnDataListener;
 import com.naelir.tracker.TrackerUdpManager;
 
-import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.DatagramPacket;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import io.netty.util.ReferenceCountUtil;
-import io.netty.util.concurrent.DefaultThreadFactory;
  
 /**
  * A Netty-based UDP client that mirrors {@link UtpClient} but uses Netty's
@@ -55,7 +46,7 @@ import io.netty.util.concurrent.DefaultThreadFactory;
  * task submitted to the Netty event loop so that no extra thread is needed.
  */
 public class UtpClient implements AutoCloseable {
-    private static final long TICK_INTERVAL_MS = 500;
+    public static final long TICK_INTERVAL_MS = 500;
     public static final Logger logger = LogManager.getLogger(UtpClient.class);
 
     /**
@@ -92,24 +83,20 @@ public class UtpClient implements AutoCloseable {
                 && type <= UTPConnection.ST_SYN; // type in { 0, 1, 2, 3, 4 }
     }
 
-    private final UtpOnDataListener listener;
-    private final EventLoopGroup group;
     private volatile Channel channel;
-    private UdpOnDataListener udp;
     private Data data;
-    private TrackerOnDataListener trackerListener;
-
-    public UtpClient(UtpOnDataListener utp, UdpOnDataListener udp, TrackerOnDataListener tracker, Data data) {
-        this.listener = utp;
-        this.udp = udp;
+    private UTPManager utpManager;
+    private TrackerUdpManager trackerUdpManager;
+    
+    public UtpClient(Channel channel, Data data, UTPManager utpManager, TrackerUdpManager trackerUdpManager) {
         this.data = data;
-        this.trackerListener = tracker;
-        this.group = new NioEventLoopGroup(1, new DefaultThreadFactory("utp-client"));
+        this.channel = channel;
+        this.utpManager = utpManager;
+        this.trackerUdpManager = trackerUdpManager;
     }
 
     @Override
-    public void close() {
-        this.group.shutdownGracefully();
+    public void close() {//
     }
 
     /**
@@ -135,10 +122,9 @@ public class UtpClient implements AutoCloseable {
      */
     public void connectPeer(Torrent torrent, InetAddress addr, int port) throws Exception {
         String ip = addr.getHostAddress();
-        UTPManager manager = this.listener.getUtpManager();
         InetSocketAddress remote = new InetSocketAddress(addr, port);
         UtpPeerSession session = new UtpPeerSession(this.data, torrent, remote);
-        UTPConnection connection = manager.newConnection(session, ip, port);
+        UTPConnection connection = utpManager.newConnection(session, ip, port);
         // Send the uTP SYN to start the handshake.
         byte[] syn = connection.connect();
         if (syn != null && syn.length > 0) {
@@ -151,7 +137,6 @@ public class UtpClient implements AutoCloseable {
     }
 
     public void scrape(Set<String> hashes, InetAddress addr, int port) throws Exception {
-        TrackerUdpManager trackerUdpManager = this.trackerListener.getTrackerUdpManager();
         byte[] encode = trackerUdpManager.newConnection(hashes, addr.getHostAddress(), port);
         if (encode != null && encode.length > 0) {
             writeUdp(encode, addr, port);
@@ -191,8 +176,7 @@ public class UtpClient implements AutoCloseable {
     }
 
     private void logTo(Object decode, From from) {
-        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Generator.inet(from.ip),
-                from.port);
+        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Generator.inet(from.ip), from.port);
     }
 
     void send(IRequest request, InetAddress addr, int port) throws Exception {
@@ -237,29 +221,9 @@ public class UtpClient implements AutoCloseable {
         send(r, node.address(), node.port());
     }
 
-    /**
-     * Binds the UDP channel to an ephemeral local port and starts the UTP tick task
-     * on the Netty event loop.
-     */
-    public void start() throws Exception {
-        Bootstrap bootstrap = new Bootstrap().group(this.group)
-                .channel(NioDatagramChannel.class)
-                .option(ChannelOption.SO_BROADCAST, false)
-                .handler(new InboundHandler());
-        // Bind to any available local port
-        this.channel = bootstrap.bind(0).sync().channel();
-        logger.info("NettyUtpClient bound to {}", this.channel.localAddress());
-        // Schedule the recurring UTP retransmit tick inside the event loop
-        this.group.scheduleAtFixedRate(this::tick, TICK_INTERVAL_MS, TICK_INTERVAL_MS, TimeUnit.MILLISECONDS);
-    }
-
-    /**
-     * Drives UTP retransmit timers and forwards any resulting packets onto the
-     * wire. Runs periodically on the Netty event loop.
-     */
-    private void tick() {
+    public void tick() {
         double deltaSeconds = TICK_INTERVAL_MS / 1000.0;
-        List<UTPManager.PendingPacket> pending = this.listener.getUtpManager().tick(deltaSeconds);
+        List<UTPManager.PendingPacket> pending = utpManager.tick(deltaSeconds);
         for (UTPManager.PendingPacket pp : pending) {
             try {
                 InetAddress tickAddr = InetAddress.getByName(pp.ip());
@@ -270,10 +234,6 @@ public class UtpClient implements AutoCloseable {
         }
     }
 
-    /**
-     * Wraps raw bytes in a Netty {@link DatagramPacket} and sends them through the
-     * Netty channel.
-     */
     private void writeUdp(byte[] data, InetAddress addr, int port) {
         if (this.channel == null || !this.channel.isActive()) {
             // Channel is gone (remote side dropped the connection). Do NOT allocate
@@ -289,83 +249,11 @@ public class UtpClient implements AutoCloseable {
                 // on failure, but if the channel closed between the isActive() guard and
                 // the actual write, Netty may not have taken ownership. Defend with
                 // safeRelease so we never double-release.
-                logger.warn("writeUdp: failed to send {} byte(s) to {}:{}: {}", data.length, addr, port,
-                        f.cause().getMessage());
+                logger.warn("writeUdp: failed to send {} byte(s) to {}:{}: {}", data.length, addr, port, f.cause().getMessage());
                 if (pkt.refCnt() > 0) {
                     ReferenceCountUtil.safeRelease(pkt);
                 }
             }
         });
-    }
-
-    /**
-     * Receives incoming {@link DatagramPacket}s from the Netty pipeline, delegates
-     * to {@link UtpOnDataListener#onData} when the payload is a valid uTP datagram,
-     * and writes any response back to the sender.
-     */
-    private class InboundHandler extends ChannelInboundHandlerAdapter {
-        @Override
-        public void channelRead(ChannelHandlerContext ctx, Object msg) {
-            if (msg instanceof DatagramPacket pkt) {
-                try {
-                    InetSocketAddress sender = pkt.sender();
-                    InetAddress addr = sender.getAddress();
-                    int port = sender.getPort();
-                    byte[] data = new byte[pkt.content().readableBytes()];
-                    pkt.content().readBytes(data);
-                    if (isUtpPacket(data)) {
-                        UtpClient.this.listener.onData(data, addr, port).ifPresent(response -> {
-                            ByteBuf respBuf = Unpooled.wrappedBuffer(response);
-                            DatagramPacket reply = new DatagramPacket(respBuf, sender);
-                            ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
-                                if (!f.isSuccess()) {
-                                    logger.warn("channelRead: failed to send uTP reply to {}:{}: {}", addr, port,
-                                            f.cause().getMessage());
-
-                                    if (reply.refCnt() > 0) {
-                                        ReferenceCountUtil.safeRelease(reply);
-                                    }
-                                }
-                            });
-                        });
-                    } else if (TrackerOnDataListener.isTrackerPacket(data)) {
-                        UtpClient.this.trackerListener.onData(data, addr, port).ifPresent(response -> {
-                            ByteBuf respBuf = Unpooled.wrappedBuffer(response);
-                            DatagramPacket reply = new DatagramPacket(respBuf, sender);
-                            ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
-                                if (!f.isSuccess()) {
-                                    logger.warn("channelRead: failed to send tracker reply to {}:{}: {}", addr, port,
-                                            f.cause().getMessage());
-
-                                    if (reply.refCnt() > 0) {
-                                        ReferenceCountUtil.safeRelease(reply);
-                                    }                                }
-                            });
-                        });
-                    } else {
-                        UtpClient.this.udp.onData(data, addr, port).ifPresent(response -> {
-                            ByteBuf respBuf = Unpooled.wrappedBuffer(response);
-                            DatagramPacket reply = new DatagramPacket(respBuf, sender);
-                            ctx.writeAndFlush(reply).addListener((ChannelFuture f) -> {
-                                if (!f.isSuccess()) {
-                                    logger.warn("channelRead: failed to send UDP reply to {}:{}: {}", addr, port,
-                                            f.cause().getMessage());
-
-                                    if (reply.refCnt() > 0) {
-                                        ReferenceCountUtil.safeRelease(reply);
-                                    }                                }
-                            });
-                        });
-                    }
-                } finally {
-                    pkt.release();
-                }
-            }
-        }
-
-        @Override
-        public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-            logger.error("NettyUtpClient inbound error: {}", cause.getMessage());
-        }
     }
 }

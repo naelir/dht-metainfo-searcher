@@ -39,8 +39,6 @@ public class MongoEntryRepository implements EntryRepository {
         collection.createIndex(Indexes.descending("p"));
     }
 
-    // ...existing code...
-
     @Override
     public List<Entry> findByName(String pattern) {
         if (pattern == null || pattern.trim().length() < 3)

@@ -5,8 +5,6 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.naelir.dht.Generator;
-
 public class BitSpaceDivider {
     /**
      * Generates {@code n} (even) keys that equally divide the 160-bit Kademlia key
@@ -39,9 +37,6 @@ public class BitSpaceDivider {
         return keys;
     }
 
-    public static void main(String[] args) {
-        divide(200).forEach(bb -> System.out.println(Generator.toHex(bb.array())));
-    }
     /**
      * Converts a non-negative {@link BigInteger} to a fixed-length 20-byte
      * (160-bit) big-endian byte array, padding with leading zeroes as necessary.

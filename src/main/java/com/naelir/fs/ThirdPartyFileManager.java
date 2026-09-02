@@ -42,11 +42,6 @@ public class ThirdPartyFileManager {
     private static final Pattern LIME = Pattern.compile(
             "magnet:\\?xt=urn:btih:(.{40,40}).+torrent-link.+?>(.+?)<\\/a><td class=sr-col-size>(.+?) ([GBKkM]+)");
 
-    public static void main(String[] args) throws IOException {
-        new ThirdPartyFileManager().convertNPages("all");
-        
-    }
-
     public void convertNPages(String path) {
         Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path from = HOME.resolve(path);

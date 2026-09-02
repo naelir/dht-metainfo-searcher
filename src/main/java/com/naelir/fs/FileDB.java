@@ -42,9 +42,6 @@ public class FileDB implements AutoCloseable {
         return new FileDB(mainwriter);
     }
 
-    private static final String HEX_CHARS = "0123456789abcdef";
-
-
     /** Returns the shard file for the given prefix string (first {@value #SHARD_PREFIX_LEN} chars of hash, uppercase). */
     private static Path shardPath(String prefix) {
         return BASE_DIR.resolve(prefix.toUpperCase() + ".txt");
@@ -61,15 +58,6 @@ public class FileDB implements AutoCloseable {
 
     private static String toEntryLine(String hash, String json) throws IOException {
         return hash + SEP + json;
-    }
-    
-    private static Entry fromEntryLine(String line) throws IOException {
-        int sep1 = line.indexOf(SEP);
-        if (sep1 < 0)
-            return null;
-        String id = line.substring(0, sep1);
-        String other = line.substring(sep1 + 1, line.length());
-        return MAPPER.readValue(other, Entry.class);
     }
 
     private BufferedWriter mainwriter;

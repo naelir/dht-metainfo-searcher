@@ -20,7 +20,6 @@ public class FileLocationDb implements ILocationDb {
     private static final Path BASE_DIR = HOME.resolve("locationdb");
     private static final String SEP = ",";
 
-
     public static final ILocationDb INSTANCE = new FileLocationDb();
     
     @Override

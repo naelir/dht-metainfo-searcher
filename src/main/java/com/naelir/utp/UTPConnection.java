@@ -149,34 +149,6 @@ public class UTPConnection {
     }
 
     /**
-     * Build SACK extension bytes.
-     *
-     * <p>
-     * Mirrors Perl's {@code pack 'C C V'}: the 32-bit bitmask is packed
-     * <em>little-endian</em> (Perl format letter {@code V}). {@link #handleSack}
-     * reads the mask byte-by-byte so endianness is self-consistent within this
-     * implementation.
-     */
-    private byte[] buildSackExtension() {
-        if (this.inBuffer.isEmpty())
-            return new byte[0];
-        int base = (this.ackNr + 2) & 0xFFFF;
-        int mask = 0;
-        for (int sn : this.inBuffer.keySet()) {
-            int diff = (sn - base) & 0xFFFF;
-            if (diff < 32) {
-                mask |= (1 << diff);
-            }
-        }
-        // next_ext=0, len=4, bitmask as little-endian 32-bit (Perl 'V' format)
-        ByteBuffer bb = ByteBuffer.allocate(6).order(ByteOrder.LITTLE_ENDIAN);
-        bb.put((byte) 0); // next_ext
-        bb.put((byte) 4); // len
-        bb.putInt(mask);
-        return bb.array();
-    }
-
-    /**
      * Initiate a connection (client side).
      *
      * @return raw SYN packet bytes to send over UDP
@@ -248,8 +220,7 @@ public class UTPConnection {
             payload = Arrays.copyOfRange(payload, pos, payload.length);
         }
         // ── LEDBAT congestion control ──────────────────────────────────────
-        long nowUs = nowMicros();
-        long delay = (nowUs - h.ts) & 0xFFFFFFFFL;
+        long delay = ((nowMicros() & 0xFFFFFFFFL) - h.ts) & 0xFFFFFFFFL;
         updateBaseDelay(delay);
         Long minDelay = minBaseDelay();
         if (minDelay != null) {

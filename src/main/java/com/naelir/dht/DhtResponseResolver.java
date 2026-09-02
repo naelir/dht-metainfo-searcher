@@ -23,12 +23,12 @@ import com.naelir.fs.FileDB;
 import com.naelir.fs.IpBlocker;
 import com.naelir.tasks.Sample;
 
-public class ResponseResolver {
-    public static final Logger logger = LogManager.getLogger(ResponseResolver.class);
+public class DhtResponseResolver {
+    public static final Logger logger = LogManager.getLogger(DhtResponseResolver.class);
     private Data data;
     private Cache<String, Boolean> ipcache;
 
-    public ResponseResolver(Data data) {
+    public DhtResponseResolver(Data data) {
         this.data = data;
         this.ipcache = CacheBuilder.newBuilder().expireAfterAccess(Duration.ofMinutes(1)).build();
     }
@@ -143,6 +143,8 @@ public class ResponseResolver {
         } else {
             String hex = Generator.toHex(decode.request.target.array());
             Sample sample = data.samples.get(hex);
+            logger.info("receiving {} nodes for hash {}", decode.nodes.size(), hex);
+
             decode.nodes.forEach(e -> sample.table().insert(e));
         }
         return Optional.empty();
@@ -187,7 +189,11 @@ public class ResponseResolver {
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip(true);
                     logger.info("{} too many denied peers", hex);
-                    data.fileManager.create(Entry.crap(hex));
+                    if (size == 1) {
+                        data.fileManager.create(Entry.lowPeersNotEu(hex));
+                    } else {
+                        data.fileManager.create(Entry.crap(hex));
+                    }
                 }
                 logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {

@@ -17,12 +17,7 @@ public class NodeMaintainer implements Runnable {
     public static NodeMaintainer of(Data data, UtpClient client, BtTcpClient tcp)
             throws Exception {
         Queue<ITask> tasks = new LinkedList<>();
-        if (data.arguments.onlyHashes) {
-            tasks.offer(new FindNodeTask(client, data));
-            tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
-            tasks.offer(new NextIdTask(data));
-        } else if (data.arguments.scrape) {
+        if (data.arguments.scrape) {
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
@@ -30,23 +25,20 @@ public class NodeMaintainer implements Runnable {
         } else {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
+//            tasks.offer(new UpdateSeenNoPeersTorrentsTask(data));
+//            tasks.offer(new PopulateSampleTableTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
-            UdpTorrentResolverTask trt = new UdpTorrentResolverTask(client, data);
-//            TcpTorrentResolverTask ttrt = new TcpTorrentResolverTask(tcp, data.tcptasks);
             tasks.offer(new ITask() {
                 @Override
                 public boolean resolved() {
-                    return gpt.resolved() && trt.resolved();// && ttrt.resolved();
+                    return gpt.resolved();
                 }
 
                 @Override
                 public void run() {
                     gpt.run();
                     ct.run();
-                    trt.run();
-                    //ttrt.run();
                 }
             });
             tasks.offer(new NextIdTask(data));

@@ -27,7 +27,7 @@ public class GetPeersTask implements ITask {
         if (sample.skip)
             return Collections.emptyList();
         else
-            return sample.table.closest(sample.byteBuffer(), 2);
+            return sample.table.closest(sample.byteBuffer(), 1);
     }
 
     @Override
@@ -50,22 +50,24 @@ public class GetPeersTask implements ITask {
                 if (step <= 0) {
                     break;
                 }
-                byte[] array = Generator.toArray(sample.torrent.infoHash());
+                String infoHash = sample.torrent.infoHash();
+                byte[] array = Generator.toArray(infoHash);
                 ByteBuffer wrap = ByteBuffer.wrap(array);
                 if (sample.checked < this.data.arguments.getPeersDepth) {
                     sample.checked++;
                     if (sample.peers.isEmpty() == false) {
-                        logger.debug("samples {} has peers, continue", sample.torrent.infoHash());
+                        logger.debug("samples {} has peers, continue", infoHash);
                         continue;
                     }
                     if (sample.skip) {
-                        logger.debug("samples {} is skipped, continue", sample.torrent.infoHash());
+                        logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
                     List<Node> closest = closest(sample);
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
-                        logger.info("sample {} getting peers from {} {} time", sample.torrent.infoHash(), Generator.toHex(id.array()), sample.checked);
+                        sample.table.remove(id);
+                        logger.info("sample {} getting peers from {} {} time, in table {}", infoHash, Generator.toHex(id.array()), sample.checked, sample.table.size());
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                     }
