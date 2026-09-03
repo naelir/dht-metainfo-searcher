@@ -29,7 +29,7 @@ public class FileLocationDb implements ILocationDb {
         String prefix1 = ipAddr.substring(0, ipAddr.indexOf("."));
         Path shard = shardPath(prefix1);
         if (!Files.exists(shard)) {
-            logger.info("cannot geolocate ip {}, internal one", ipAddr);
+            logger.debug("cannot geolocate ip {}, internal one", ipAddr);
             return ImmutablePair.of("LOCAL", "LOCAL");
         }
         try (BufferedReader reader = Files.newBufferedReader(shard)) {
@@ -52,7 +52,7 @@ public class FileLocationDb implements ILocationDb {
         } catch (IOException e) {
             logger.error("cannot determine country for ip {}", ipAddr, e);
         }
-        logger.info("ip {} cannot be geolocated", ipAddr);
+        logger.debug("ip {} cannot be geolocated", ipAddr);
 
         return ImmutablePair.of("LOCAL", "LOCAL");
     }

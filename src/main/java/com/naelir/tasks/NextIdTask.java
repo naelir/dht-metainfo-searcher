@@ -58,7 +58,7 @@ public class NextIdTask implements ITask {
                         k++;
                     }
                 }
-                logger.info("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
+                logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
             }
             this.data.samples.clear();
             this.data.torrents.clear();

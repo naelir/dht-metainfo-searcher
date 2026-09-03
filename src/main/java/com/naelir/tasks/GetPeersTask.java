@@ -37,7 +37,7 @@ public class GetPeersTask implements ITask {
                 .filter(s -> s.checked < this.data.arguments.getPeersDepth)
                 .toList()
                 .size();
-        logger.info("getPeers: {} samples left to check", size);
+        logger.debug("getPeers: {} samples left to check", size);
         return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
     }
 
@@ -45,7 +45,7 @@ public class GetPeersTask implements ITask {
     public void run() {
         try {
             int step = data.arguments.hashesStep;
-            logger.info("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
+            logger.debug("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
             for (Sample sample : this.data.samples.values()) {
                 if (step <= 0) {
                     break;
@@ -67,7 +67,7 @@ public class GetPeersTask implements ITask {
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
                         sample.table.remove(id);
-                        logger.info("sample {} getting peers from {} {} time, in table {}", infoHash, Generator.toHex(id.array()), sample.checked, sample.table.size());
+                        logger.debug("sample {} getting peers from {} {} time, in table {}", infoHash, Generator.toHex(id.array()), sample.checked, sample.table.size());
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                     }

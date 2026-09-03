@@ -27,11 +27,11 @@ public class UdpTorrentResolverTask implements Runnable {
             }
             int size = this.data.udptasks.size();
             if (size % 10 == 0) {
-                logger.info("tasks left {}", size);
+                logger.debug("tasks left {}", size);
             }
             String hex = task.torrent.infoHash();
             InetAddress address = task.node.address();
-            logger.info("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
+            logger.debug("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
             this.client.connectPeer(task.torrent, task.node);
             
         } catch (Exception e) {

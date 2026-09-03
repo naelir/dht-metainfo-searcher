@@ -24,7 +24,9 @@ public class CreateMetaTask implements ITask {
     @Override
     public void run() {
         try {
-            logger.info("createMetaTasks run on {} samples", this.data.samples.size());
+            if (logger.isDebugEnabled()) {
+                logger.debug("createMetaTasks run on {} samples", this.data.samples.size());
+            }
             for (Sample sample : this.data.samples.values()) {
                 if (sample.peers().size() < data.arguments.minPeers) {
                     continue;

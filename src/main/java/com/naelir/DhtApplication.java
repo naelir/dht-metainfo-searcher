@@ -2,10 +2,11 @@ package com.naelir;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.Scanner;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Semaphore;
@@ -53,37 +54,14 @@ import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import io.netty.util.concurrent.DefaultThreadFactory;
 
-public final class DhtApplication implements Runnable, AutoCloseable {
-    static final Logger logger = logger();
-
-    static Logger logger() {
-        ConfigurationBuilder<BuiltConfiguration> builder = ConfigurationBuilderFactory.newConfigurationBuilder();
-        builder.setStatusLevel(Level.INFO);
-        LayoutComponentBuilder layout = builder.newLayout("PatternLayout")
-                .addAttribute("pattern", "%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n");
-        AppenderComponentBuilder console = builder.newAppender("Console", "CONSOLE").add(layout);
-        AppenderComponentBuilder file = builder.newAppender("LogFile", "FILE")
-                .addAttribute("fileName", "dht-logs.log")
-                .add(layout);
-        builder.add(console);
-        builder.add(file);
-        builder.add(builder.newRootLogger(Level.INFO)
-                .add(builder.newAppenderRef("Console"))
-                .add(builder.newAppenderRef("LogFile")));
-        Configurator.initialize(builder.build());
-        return LogManager.getLogger(DhtApplication.class);
-    }
+public final class DhtApplication implements Runnable {
+    static final Logger logger = LogManager.getLogger(DhtApplication.class);
 
     public static void main(String[] args) throws Exception {
         Arguments arguments = Arguments.parse(args);
         logger.info("Starting with {}", arguments);
-        try (
-                var application = new DhtApplication(arguments);
-                var scanner = new Scanner(System.in)
-        ) {
-            new Thread(application, "dht-metainfo").start();
-            scanner.nextLine();
-        }
+
+        new DhtApplication(arguments).run();
     }
 
     private final Arguments arguments;
@@ -153,12 +131,18 @@ public final class DhtApplication implements Runnable, AutoCloseable {
                 if (arguments.scrape == false) {
                     utpClient.explore(data.myself, saved);
                 }
+
+                Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                    logger.info("Received SIGTERM, shutting down");
+                    semaphore.release();
+
+                    if (arguments.scrape == false) {
+                        List<Node> nodes = data.table.closest(data.myself, 20);
+                        peersFm.saveCompactInfo(data.myself, nodes);
+                        logger.info("stopped with {}", Generator.toHex(data.myself.array()));
+                    }
+                }, "dht-shutdown"));
                 this.semaphore.acquire();
-                if (arguments.scrape == false) {
-                    List<Node> nodes = data.table.closest(data.myself, 20);
-                    peersFm.saveCompactInfo(data.myself, nodes);
-                    logger.info("stopped with {}", Generator.toHex(data.myself.array()));
-                }
 
             } finally {
                 fileDB.close();
@@ -168,10 +152,6 @@ public final class DhtApplication implements Runnable, AutoCloseable {
         } catch (Exception e2) {
             logger.error(e2.getMessage(), e2);
         }
-    }
-
-    public void close() {
-        this.semaphore.release();
     }
 
     Queue<ByteBuffer> divide(BigInteger from, BigInteger to) {

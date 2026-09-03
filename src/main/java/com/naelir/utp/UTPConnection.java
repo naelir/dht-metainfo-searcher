@@ -258,6 +258,11 @@ public class UTPConnection {
                 // This matches libutp's behaviour: ack_nr = pkt.seq_nr - 1.
                 this.ackNr = (h.seq - 1) & 0xFFFF;
                 this.state = "CONNECTED";
+                if (this.session == null) {
+                    // No BT session attached (e.g. server-side connection we never
+                    // accept). Nothing to feed/drain; just ack the state change.
+                    return new DecodeResult(this.state, null);
+                }
                 Queue<Object> out = this.session.out();
                 byte[] raw = data(out);
                 byte[] response = encode(raw);
@@ -284,6 +289,12 @@ public class UTPConnection {
                 deliveredData = dataOut.toByteArray();
             } else if (((sn - this.ackNr) & 0xFFFF) < 0x8000 && sn != this.ackNr) {
                 this.inBuffer.put(sn, payload); // buffer out-of-order segment
+            }
+            if (this.session == null) {
+                // No BT session attached (e.g. server-side connection we never
+                // accept). Still ACK the data so the remote doesn't keep
+                // retransmitting, but there is nothing to feed/drain.
+                return new DecodeResult(this.state, packHeader(ST_STATE));
             }
             this.session.in(deliveredData);
             Queue<Object> out = this.session.out();

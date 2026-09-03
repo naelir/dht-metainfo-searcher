@@ -117,12 +117,12 @@ public class DhtResponseResolver {
     private IResponse resolve(FindNodeRequest message, From from) {
         String ip = Generator.ip(from.ip);
         if (ipcache.getIfPresent(ip) != null) {
-            logger.info("find node from {} will return error, scanners spam", from);
+            logger.debug("find node from {} will return error, scanners spam", from);
             return new Error(201, "too many requests", message.tid);
         } else {
             ipcache.put(ip, Boolean.TRUE);
             List<Node> nodes = this.data.table.closest(message.target);
-            logger.info("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
+            logger.debug("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
                    from, nodes.size());
             return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
         }
@@ -143,7 +143,7 @@ public class DhtResponseResolver {
         } else {
             String hex = Generator.toHex(decode.request.target.array());
             Sample sample = data.samples.get(hex);
-            logger.info("receiving {} nodes for hash {}", decode.nodes.size(), hex);
+            logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
 
             decode.nodes.forEach(e -> sample.table().insert(e));
         }
@@ -188,14 +188,14 @@ public class DhtResponseResolver {
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip(true);
-                    logger.info("{} too many denied peers", hex);
+                    logger.debug("{} too many denied peers", hex);
                     if (size == 1) {
                         data.fileManager.create(Entry.lowPeersNotEu(hex));
                     } else {
                         data.fileManager.create(Entry.crap(hex));
                     }
                 }
-                logger.info("found {} peers for {}, denied {}", size, hex, denied);
+                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
                     Pair<String, String> location = data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
@@ -294,7 +294,7 @@ public class DhtResponseResolver {
                     if (isFine(value)) {
                         data.forUpdate.add(new ImmutablePair<>(hash, 1));
                     }
-                    logger.info("hash {} already resolved as {}", hash, value);
+                    logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), decode.request.node, false));

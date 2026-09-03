@@ -2,6 +2,7 @@ package com.naelir.utp;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
+import java.util.concurrent.atomic.AtomicLong;
 
 import com.naelir.dht.UdpOnDataListener;
 import com.naelir.tracker.TrackerOnDataListener;
@@ -24,6 +25,7 @@ public class InboundHandler extends ChannelInboundHandlerAdapter {
     private UtpOnDataListener utp;
     private UdpOnDataListener udp;
     private TrackerOnDataListener tracker;
+    private final AtomicLong packetCount = new AtomicLong();
 
     public InboundHandler(UtpOnDataListener utp, UdpOnDataListener udp, TrackerOnDataListener tracker) {
         this.utp = utp;
@@ -34,6 +36,10 @@ public class InboundHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         if (msg instanceof DatagramPacket pkt) {
+            long count = this.packetCount.incrementAndGet();
+            if (count % 1000 == 0) {
+                UtpClient.logger.info("Processed {} datagram packets", count);
+            }
             try {
                 InetSocketAddress sender = pkt.sender();
                 InetAddress addr = sender.getAddress();
