@@ -55,11 +55,13 @@ public class NextIdTask implements ITask {
                     } else if (sample.torrent.meta() != null) {
                         r++;
                     } else {
-                        k++;
+                        k++;  
+                        data.fileManager.createUnresolved(Entry.unresolved(sample.torrent.infoHash()));
                     }
                 }
                 logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
             }
+            logger.warn("udp tasks left {}", data.udptasks.size());
             this.data.samples.clear();
             this.data.torrents.clear();
         }

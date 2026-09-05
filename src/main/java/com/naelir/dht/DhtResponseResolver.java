@@ -195,7 +195,7 @@ public class DhtResponseResolver {
                         data.fileManager.create(Entry.crap(hex));
                     }
                 }
-                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
+                logger.info("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
                     Pair<String, String> location = data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {

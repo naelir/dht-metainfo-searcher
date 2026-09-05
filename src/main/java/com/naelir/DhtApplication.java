@@ -126,7 +126,7 @@ public final class DhtApplication implements Runnable {
                 
                 executor.scheduleAtFixedRate(utpClient::tick, UtpClient.TICK_INTERVAL_MS, UtpClient.TICK_INTERVAL_MS, TimeUnit.MILLISECONDS);
                 executor.scheduleAtFixedRate(maintainer, 0, arguments.scheduleInterval, TimeUnit.SECONDS);
-                executor.scheduleAtFixedRate(resolverTask, 0, 500, TimeUnit.MILLISECONDS);
+                executor.scheduleAtFixedRate(resolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
                 if (arguments.scrape == false) {
                     utpClient.explore(data.myself, saved);

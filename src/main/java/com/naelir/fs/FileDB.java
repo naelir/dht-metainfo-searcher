@@ -38,8 +38,10 @@ public class FileDB implements AutoCloseable {
         Files.createDirectories(BASE_DIR);
         Files.createDirectories(HOME);
         Path done = HOME.resolve("done.txt");
-        BufferedWriter mainwriter = Files.newBufferedWriter(done, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
-        return new FileDB(mainwriter);
+        Path undone = HOME.resolve("undone.txt");
+        BufferedWriter dr = Files.newBufferedWriter(done, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
+        BufferedWriter udr = Files.newBufferedWriter(undone, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
+        return new FileDB(dr, udr);
     }
 
     /** Returns the shard file for the given prefix string (first {@value #SHARD_PREFIX_LEN} chars of hash, uppercase). */
@@ -60,15 +62,18 @@ public class FileDB implements AutoCloseable {
         return hash + SEP + json;
     }
 
-    private BufferedWriter mainwriter;
+    private BufferedWriter doneWriter;
+    private BufferedWriter undoneWriter;
 
-    private FileDB(BufferedWriter mainwriter) {
-        this.mainwriter = mainwriter;
+    private FileDB(BufferedWriter dr, BufferedWriter udr) {
+        this.doneWriter = dr;
+        undoneWriter = udr;
     }
 
     @Override
     public void close() throws Exception {
-        mainwriter.close();
+        doneWriter.close();
+        undoneWriter.close();
     }
     
     public void create(Entry fr) {
@@ -89,9 +94,20 @@ public class FileDB implements AutoCloseable {
     public void createFine(Entry fr) {
         try {
             String json = MAPPER.writeValueAsString(fr);            
-            mainwriter.write(json);
-            mainwriter.newLine();
-            mainwriter.flush();
+            doneWriter.write(json);
+            doneWriter.newLine();
+            doneWriter.flush();
+        } catch (Exception e) {
+            logger.error("cannot save", e);
+        }
+    }
+    
+    public void createUnresolved(Entry fr) {
+        try {
+            String json = MAPPER.writeValueAsString(fr);            
+            undoneWriter.write(json);
+            undoneWriter.newLine();
+            undoneWriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);
         }

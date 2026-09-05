@@ -9,6 +9,7 @@ public class Arguments {
         String from = null;
         String to = null;
         int bitspaceParts = 200;
+        int resolverMillis = 500;
         String connectionString = null;
         String db = null;
         String table = null;
@@ -61,6 +62,12 @@ public class Arguments {
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --bitspace-parts");
                 bitspaceParts = Integer.parseInt(args[++i]);
+                break;
+
+            case "--resolver-millis":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --resolver-millis");
+                resolverMillis = Integer.parseInt(args[++i]);
                 break;
             case "--schedule-interval":
                 if (i + 1 >= args.length)
@@ -143,6 +150,7 @@ public class Arguments {
                 .scrapeStep(scrapeStep)
                 .scheduleInterval(scheduleInterval)
                 .hashesStep(hashesStep)
+                .resolverMillis(resolverMillis)
                 .build();
     }
 
@@ -163,6 +171,7 @@ public class Arguments {
     public final String scrapeFile;
     public final int hashesStep;
     public final String to;
+    public final int resolverMillis;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -182,6 +191,7 @@ public class Arguments {
         this.scheduleInterval = builder.scheduleInterval;
         this.scrapeFile = builder.scrapeFile;
         this.hashesStep = builder.hashesStep;
+        this.resolverMillis = builder.resolverMillis;
     }
     
 
@@ -213,12 +223,18 @@ public class Arguments {
         private String scrapeFile;
         private int hashesStep = 5;
         private String to;
+        private int resolverMillis = 500;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
             return this;
         }
         
+        public Builder resolverMillis(int resolverMillis) {
+            this.resolverMillis  = resolverMillis;
+            return this;
+        }
+
         public Builder continueTo(String to) {
             this.to = to;
             return this;
