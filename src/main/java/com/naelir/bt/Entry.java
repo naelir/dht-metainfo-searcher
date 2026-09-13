@@ -32,6 +32,10 @@ public class Entry {
     public static Entry lowPeersNotEu(String hash) {
         return new Entry("low_peers_?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
+
+    public static Entry ru(String hash) {
+        return new Entry("ru?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
     
     @JsonProperty("n")
     public String name;

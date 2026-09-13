@@ -30,8 +30,8 @@ public class GetPeersTask implements ITask {
                 .filter(s -> s.checked < this.data.arguments.getPeersDepth)
                 .toList()
                 .size();
-        if (size % 20 == 0) {
-            logger.info("getPeers: {} samples left to check", size);
+        if (size % 10 == 0) {
+            logger.info("{} samples left to check", size);
         }
         return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
     }
@@ -40,7 +40,7 @@ public class GetPeersTask implements ITask {
     public void run() {
         try {
             int step = data.arguments.hashesStep;
-            logger.debug("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
+            logger.debug("samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
             for (Sample sample : this.data.samples.values()) {
                 if (step <= 0) {
                     break;

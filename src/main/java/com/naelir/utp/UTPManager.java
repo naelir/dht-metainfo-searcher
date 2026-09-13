@@ -66,7 +66,7 @@ public class UTPManager {
      * retry limit, so an idle connection with an empty retransmit queue would
      * otherwise never be removed — a genuine memory leak.
      */
-    private static final long IDLE_TIMEOUT_SEC = 180L;
+    private static final long IDLE_TIMEOUT_SEC = 30L;
 
     /**
      * Hard upper bound on the number of concurrently tracked connections. Acts

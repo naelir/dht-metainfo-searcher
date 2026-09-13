@@ -11,7 +11,6 @@ public class IpBlocker {
     private static final List<String> ALLOWED = Arrays.asList("EU");
     
     private static final List<String> DENIED_EXCEPTIONS = Arrays.asList("Türkiye");
-    private static final List<String> DENIED_ADDITIONS = Arrays.asList("Türkiye");
 
 
     public static boolean denied(Pair<String, String> location) {
@@ -20,6 +19,10 @@ public class IpBlocker {
 
     public static boolean allowed(Pair<String, String> location) {
         return ALLOWED.contains(location.getLeft());
+    }
+
+    public static boolean ru(Pair<String, String> location) {
+        return "Russia".equals(location.getRight());
     }
 
 }

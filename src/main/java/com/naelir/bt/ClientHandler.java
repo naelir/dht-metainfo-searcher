@@ -22,6 +22,8 @@ import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
 import com.naelir.dht.Generator;
+import com.naelir.dht.Node;
+import com.naelir.tasks.MetaTorrentTask;
 import com.naelir.tasks.Sample;
 
 import io.netty.channel.Channel;
@@ -64,6 +66,11 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         logger.debug("channel {} closed", channel);
         if (this.piecesReceived > 0 && this.piecesReceived < this.piecesExpected) {
             decode(false, addr, port);
+        }
+        if (task.meta() == null && this.metadata.length > 0 && task.retry == false) {
+            task.retry(true);
+            logger.info("task {} will be retried over tcp {}", task.infoHash, channel.getClass().getSimpleName());
+            data.tcptasks.add(new MetaTorrentTask(new Node(address.getAddress(), port), task));
         }
     }
 

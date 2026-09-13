@@ -18,6 +18,7 @@ public class Torrent {
     String infoHash;
     TorrentMeta meta;
     Deque<Node> peers;
+    boolean retry;
     
     public Torrent(String infoHash, TorrentMeta meta) {
         this.infoHash = infoHash;
@@ -71,5 +72,10 @@ public class Torrent {
     @Override
     public String toString() {
         return "Torrent [infoHash=" + this.infoHash + ", peers=" + this.peers + ", meta=" + this.meta + "]";
+    }
+
+    public void retry(boolean b) {
+        this.retry = b;
+        
     }
 }

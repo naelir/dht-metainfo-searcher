@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.dht.Data;
+import com.naelir.fs.IpBlocker;
 import com.naelir.utp.UtpClient;
 
 public class UdpTorrentResolverTask implements Runnable {
@@ -26,15 +27,15 @@ public class UdpTorrentResolverTask implements Runnable {
                 return;
             }
             int size = this.data.udptasks.size();
-            if (size % 10 == 0) {
+            if (size > 0 && size % 10 == 0) {
                 logger.info("tasks left {}", size);
             }
             String hex = task.torrent.infoHash();
-            InetAddress address = task.node.address();
             if (task.node.location != null) {
-                logger.debug("resolving torrent {} from country {}, {}, {}", hex, task.node.location.getRight(), address, task.node.port());
+                logger.info("{} from {}", hex, task.node.location.getRight());
             }
             this.client.connectPeer(task.torrent, task.node);
+            
             
         } catch (Exception e) {
             logger.error("Unexpected error resolving torrent", e);
