@@ -50,16 +50,23 @@ public class UpdateSeenTorrentsTask implements ITask {
 
         List<String> list100 = this.data.forUpdate
                 .stream()
-                .filter(e -> e.getValue() > 10 && e.getValue() <= 100)
+                .filter(e -> e.getValue() > 50 && e.getValue() <= 100)
                 .map(e -> e.getKey())
                 .toList();
+
+        List<String> list250 = this.data.forUpdate
+                .stream()
+                .filter(e -> e.getValue() > 100 && e.getValue() <= 250)
+                .map(e -> e.getKey())
+                .toList();
+
 
         List<String> list500 = this.data.forUpdate
                 .stream()
-                .filter(e -> e.getValue() > 100 && e.getValue() <= 500)
+                .filter(e -> e.getValue() > 250 && e.getValue() <= 500)
                 .map(e -> e.getKey())
                 .toList();
-
+        
         List<String> list1000 = this.data.forUpdate
                 .stream()
                 .filter(e -> e.getValue() > 500)
@@ -67,32 +74,37 @@ public class UpdateSeenTorrentsTask implements ITask {
                 .toList();
         logger.info("updating {} seen torrents /under 3 peers/", list3.size());
         if (list3.isEmpty() == false) {
-            data.dbRepo.updateMany(list3, 3);
+            data.dbRepo.updateMany(list3, 2);
         }
 
         logger.info("updating {} seen torrents /under 10 peers/", list10.size());
         if (list10.isEmpty() == false) {
-            data.dbRepo.updateMany(list10, 10);
+            data.dbRepo.updateMany(list10, 7);
         }
         logger.info("updating {} seen torrents /under 20 peers/", list25.size());
         if (list25.isEmpty() == false) {
-            data.dbRepo.updateMany(list25, 25);
+            data.dbRepo.updateMany(list25, 17);
         }
         logger.info("updating {} seen torrents /under 50 peers/", list50.size());
         if (list50.isEmpty() == false) {
-            data.dbRepo.updateMany(list50, 50);
+            data.dbRepo.updateMany(list50, 37);
         }
         logger.info("updating {} seen torrents /under 100 peers/", list100.size());
         if (list100.isEmpty() == false) {
-            data.dbRepo.updateMany(list100, 100);
+            data.dbRepo.updateMany(list100, 75);
         }
+        logger.info("updating {} seen torrents /under 250 peers/", list500.size());
+        if (list250.isEmpty() == false) {
+            data.dbRepo.updateMany(list500, 175);
+        }
+        
         logger.info("updating {} seen torrents /under 500 peers/", list500.size());
         if (list500.isEmpty() == false) {
-            data.dbRepo.updateMany(list500, 500);
+            data.dbRepo.updateMany(list500, 400);
         }
-        logger.info("updating {} seen torrents /over 1000 peers/", list1000.size());
+        logger.info("updating {} seen torrents /over 500 peers/", list1000.size());
         if (list1000.isEmpty() == false) {
-            data.dbRepo.updateMany(list1000, 1000);
+            data.dbRepo.updateMany(list1000, 600);
         }
         data.forUpdate.clear();
         data.scrapeHashes.clear();

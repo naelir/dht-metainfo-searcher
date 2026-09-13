@@ -30,10 +30,7 @@ public class ReadSampleInfohashesTask implements ITask {
     public void run() {
         try {
             String hex = Generator.toHex(data.myself.array()).substring(0, 2);
-            List<String> searchable = data.fileManager.unresolved()
-                    .stream()
-                    .filter(e -> e.substring(0, 2).equals(hex))
-                    .toList();
+            List<String> searchable = data.fileManager.unresolved(hex);
             int i = 0;
             for (String key : searchable) {
                 String found = data.fileManager.get(key);

@@ -1,7 +1,6 @@
 package com.naelir;
 
 import java.math.BigInteger;
-import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
@@ -82,8 +81,8 @@ public final class DhtApplication implements Runnable {
             ILocationDb locationDb = FileLocationDb.INSTANCE;
             Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, this.arguments);
 
-            if (arguments.mode == 1) {
-                List<String> all = fileDB.scrape();
+            if (arguments.mode == 1 || arguments.mode == 5) {
+                List<String> all = fileDB.readScrape(arguments.scrapeIn);
                 data.unresolved.addAll(all);
                 logger.info("loaded {} unresolved", all.size());
             }
@@ -139,6 +138,7 @@ public final class DhtApplication implements Runnable {
 
             } finally {
                 fileDB.close();
+                data.dbRepo.close();
                 executor.shutdown();
                 group.shutdownGracefully();
             }

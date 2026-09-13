@@ -4,7 +4,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 public class Arguments {
-    
+
     public static Arguments parse(String[] args) {
         String from = null;
         String to = null;
@@ -13,6 +13,8 @@ public class Arguments {
         String connectionString = null;
         String db = null;
         String table = null;
+        String scrapeOut = null;
+        String scrapeIn = null;
         int getPeerDepth = 2;
         int minPeers = 1;
         int maxNodes = 200;
@@ -90,6 +92,17 @@ public class Arguments {
                     throw new IllegalArgumentException("Missing value for --table");
                 table = args[++i];
                 break;
+            case "--scrape-file-in":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --table");
+                scrapeIn = args[++i];
+                break;
+
+            case "--scrape-file-out":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --table");
+                scrapeOut = args[++i];
+                break;
             case "--get-peers-depth":
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --get-peers-depth");
@@ -154,6 +167,8 @@ public class Arguments {
                 .scheduleInterval(scheduleInterval)
                 .hashesStep(hashesStep)
                 .resolverMillis(resolverMillis)
+                .scrapeIn(scrapeIn)
+                .scrapeOut(scrapeOut)
                 .build();
     }
 
@@ -175,6 +190,8 @@ public class Arguments {
     public final int hashesStep;
     public final String to;
     public final int resolverMillis;
+    public final String scrapeIn;
+    public final String scrapeOut;
 
     private Arguments(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -195,6 +212,8 @@ public class Arguments {
         this.scrapeFile = builder.scrapeFile;
         this.hashesStep = builder.hashesStep;
         this.resolverMillis = builder.resolverMillis;
+        this.scrapeIn = builder.scrapeIn;
+        this.scrapeOut = builder.scrapeOut;
     }
     
 
@@ -227,12 +246,24 @@ public class Arguments {
         private int hashesStep = 5;
         private String to;
         private int resolverMillis = 500;
+        private String scrapeIn;
+        private String scrapeOut;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
             return this;
         }
         
+        public Builder scrapeIn(String scrapeIn) {
+            this.scrapeIn = scrapeIn;
+            return this;
+        }
+        
+        public Builder scrapeOut(String scrapeOut) {
+            this.scrapeOut = scrapeOut;
+            return this;
+        }
+
         public Builder resolverMillis(int resolverMillis) {
             this.resolverMillis  = resolverMillis;
             return this;

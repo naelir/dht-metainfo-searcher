@@ -4,10 +4,12 @@ import java.nio.ByteBuffer;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,10 +35,24 @@ public class DhtResponseResolver {
         this.ipcache = CacheBuilder.newBuilder().expireAfterAccess(Duration.ofMinutes(1)).build();
     }
 
+    private boolean closeEnough(Node node, String hash) {
+        String id = Generator.toHex(node.id.array());
+        return id.substring(0, 4).equals(hash.substring(0, 4));
+    }
+
     private Object forAddress(From from) {
         if (from.ip == null || from.ip.length != 4)
             return "0.0.0.0";
         return (from.ip[0] & 0xFF) + "." + (from.ip[1] & 0xFF) + "." + (from.ip[2] & 0xFF) + "." + (from.ip[3] & 0xFF);
+    }
+
+    private boolean isFine(String value) {
+        try {
+            Entry entry = FileDB.MAPPER.readValue(value, Entry.class);
+            return NameFilter.fineMatch(entry.name);
+        } catch (JsonProcessingException e) {
+            return false;
+        }
     }
 
     private void logFrom(Object decode, From from) {
@@ -118,23 +134,23 @@ public class DhtResponseResolver {
 
     private IResponse resolve(FindNodeRequest message, From from) {
         String ip = Generator.ip(from.ip);
-        if (ipcache.getIfPresent(ip) != null) {
+        if (this.ipcache.getIfPresent(ip) != null) {
             logger.debug("find node from {} will return error, scanners spam", from);
             return new Error(201, "too many requests", message.tid);
         } else {
-            ipcache.put(ip, Boolean.TRUE);
+            this.ipcache.put(ip, Boolean.TRUE);
             List<Node> nodes = this.data.table.closest(message.target);
-            logger.debug("find node from {} {} resolved, returning {} close nodes", Generator.toHex(message.target.array()),
-                   from, nodes.size());
+            logger.debug("find node from {} {} resolved, returning {} close nodes",
+                    Generator.toHex(message.target.array()), from, nodes.size());
             return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
         }
     }
 
     private Optional<byte[]> resolve(FindNodeResponse decode, From from) {
         decode.request.node.put(Command.FIND_NODE_R);
-        if (decode.request.target == data.myself) {
+        if (decode.request.target == this.data.myself) {
             for (Node node : decode.nodes) {
-                Pair<String, String> location = data.locationDb.location(node.ip);
+                Pair<String, String> location = this.data.locationDb.location(node.ip);
                 if (IpBlocker.denied(location) == false || this.data.table.size() < 5) {
                     this.data.table.insert(node);
                     node.setLocation(location);
@@ -144,9 +160,8 @@ public class DhtResponseResolver {
             }
         } else {
             String hex = Generator.toHex(decode.request.target.array());
-            Sample sample = data.samples.get(hex);
+            Sample sample = this.data.samples.get(hex);
             logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
-
             decode.nodes.forEach(e -> sample.table().insert(e));
         }
         return Optional.empty();
@@ -178,28 +193,27 @@ public class DhtResponseResolver {
             Sample sample = this.data.samples.get(hex);
             if (sample != null) {
                 int denied = 0;
+                Set<String> set = new HashSet<>(decode.peers.size());
                 for (Node node : decode.peers) {
-                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
                         sample.addPeer(node);
                         node.setLocation(location);
                     } else {
                         denied++;
+                        set.add(location.getRight());
                     }
                 }
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip(true);
                     logger.debug("{} too many denied peers", hex);
-                    if (size == 1) {
-                        data.fileManager.insert(Entry.lowPeersNotEu(hex));
-                    } else {
-                        data.fileManager.insert(Entry.crap(hex));
-                    }
+                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
+                    this.data.fileManager.insert(Entry.ban(lowerCase, hex));
                 }
                 logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
-                    Pair<String, String> location = data.locationDb.location(node.ip);
+                    Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
                         sample.table().insert(node);
                         node.setLocation(location);
@@ -291,16 +305,13 @@ public class DhtResponseResolver {
             int i = 0;
             int tooFar = 0;
             for (String hash : decode.samples) {
-                String value = this.data.fileManager.get(hash);
+                String value = this.data.arguments.mode != 4 ? this.data.fileManager.get(hash) : null;
                 if (value != null) {
-                    if (isFine(value)) {
-                        data.forUpdate.add(new ImmutablePair<>(hash, 1));
-                    }
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
                     byte[] array = Generator.toArray(hash);
-                    List<Node> closest = data.table.closest(ByteBuffer.wrap(array), 2);
+                    List<Node> closest = this.data.table.closest(ByteBuffer.wrap(array), 2);
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                 } else {
                     tooFar++;
@@ -310,19 +321,5 @@ public class DhtResponseResolver {
             logger.info("found {} samples from {}, resolved {}, too far {}", decode.samples.size(), from, i, tooFar);
             decode.request.node.put(Command.SAMPLE_R);
         }
-    }
-
-    private boolean isFine(String value) {
-        try {
-            Entry entry = FileDB.MAPPER.readValue(value, Entry.class);
-            return NameFilter.fineMatch(entry.name);
-        } catch (JsonProcessingException e) {
-            return false;
-        }
-    }
-
-    private boolean closeEnough(Node node, String hash) {
-        String id = Generator.toHex(node.id.array());
-        return id.substring(0, 4).equals(hash.substring(0, 4));
     }
 }

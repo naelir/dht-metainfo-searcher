@@ -1,7 +1,9 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map.Entry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,12 +18,13 @@ public class GetPeersTask implements ITask {
     public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
     private Data data;
     private UtpClient client;
+    List<Node> prev;
 
     public GetPeersTask(UtpClient client, Data data) {
         this.client = client;
         this.data = data;
+        this.prev = new ArrayList<>();
     }
-
 
     @Override
     public boolean resolved() {
@@ -30,8 +33,8 @@ public class GetPeersTask implements ITask {
                 .filter(s -> s.checked < this.data.arguments.getPeersDepth)
                 .toList()
                 .size();
-        if (size % 20 == 0) {
-            logger.info("getPeers: {} samples left to check", size);
+        if (size % 10 == 0) {
+            logger.info("{} samples left to check", size);
         }
         return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
     }
@@ -39,18 +42,19 @@ public class GetPeersTask implements ITask {
     @Override
     public void run() {
         try {
-            int step = data.arguments.hashesStep;
-            logger.debug("getPeers: samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
-            for (Sample sample : this.data.samples.values()) {
+            int step = this.data.arguments.hashesStep;
+            logger.debug("samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
+            for (Entry<String, Sample> e : this.data.samples.entrySet()) {
                 if (step <= 0) {
                     break;
                 }
+                Sample sample = e.getValue();
                 String infoHash = sample.torrent.infoHash();
                 byte[] array = Generator.toArray(infoHash);
                 ByteBuffer wrap = ByteBuffer.wrap(array);
                 if (sample.checked < this.data.arguments.getPeersDepth) {
                     sample.checked++;
-                    if (sample.peers.size() >= 5) {
+                    if (sample.peers.isEmpty() == false) {
                         logger.debug("samples {} has peers, continue", infoHash);
                         continue;
                     }
@@ -58,7 +62,10 @@ public class GetPeersTask implements ITask {
                         logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
+                    this.prev.forEach(c -> sample.table.insert(c));
                     List<Node> closest = sample.table.closest(sample.byteBuffer(), 1);
+                    this.prev.clear();
+                    this.prev.addAll(closest);
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
                         sample.table.remove(id);
@@ -66,11 +73,12 @@ public class GetPeersTask implements ITask {
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                     }
+                } else {
+                    sample.table.clear();
                 }
             }
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
     }
-
 }

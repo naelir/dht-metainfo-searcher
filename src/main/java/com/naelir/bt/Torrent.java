@@ -7,26 +7,15 @@ import java.util.Objects;
 import com.naelir.dht.Node;
 
 public class Torrent {
-    public static final Torrent EMPTY = new Torrent("0");
-
-    public static Torrent empty(String hash) {
-        Torrent name = new Torrent(hash);
-        name.meta = new TorrentMeta(hash);
-        return name;
-    }
-
+    
     String infoHash;
     TorrentMeta meta;
     Deque<Node> peers;
-    
-    public Torrent(String infoHash, TorrentMeta meta) {
-        this.infoHash = infoHash;
-        this.peers = new ArrayDeque<>(20);
-        this.meta = meta;
-    }
+    boolean retry;
     
     public Torrent(String infoHash) {
-        this(infoHash, null);
+        this.infoHash = infoHash;
+        this.peers = new ArrayDeque<>(20);
     }
 
     public Torrent peer(Node node) {
@@ -65,11 +54,15 @@ public class Torrent {
 
     public void setMeta(TorrentMeta meta) {
         this.meta = meta;
-        this.peers.clear();
     }
 
     @Override
     public String toString() {
         return "Torrent [infoHash=" + this.infoHash + ", peers=" + this.peers + ", meta=" + this.meta + "]";
+    }
+
+    public void retry(boolean b) {
+        this.retry = b;
+        
     }
 }

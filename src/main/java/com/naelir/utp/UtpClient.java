@@ -237,8 +237,8 @@ public class UtpClient implements AutoCloseable {
     }
 
     public void tick() {
-        double deltaSeconds = TICK_INTERVAL_MS / 1000.0;
-        List<UTPManager.PendingPacket> pending = utpManager.tick(deltaSeconds);
+//        double deltaSeconds = TICK_INTERVAL_MS / 1000.0;
+        List<UTPManager.PendingPacket> pending = utpManager.tick();
         for (UTPManager.PendingPacket pp : pending) {
             try {
                 InetAddress tickAddr = InetAddress.getByName(pp.ip());

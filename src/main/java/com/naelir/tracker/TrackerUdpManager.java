@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -145,7 +146,6 @@ public class TrackerUdpManager {
     }
 
     protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
-        logger.info("Tracker → {} from {}", resp, from);
         
         AnnounceTrackerConnection tc = (AnnounceTrackerConnection) connections.get(resp.transactionId);
         if (tc == null) {
@@ -156,12 +156,20 @@ public class TrackerUdpManager {
         String currentHash = tc.getCurrentHash();
         
         Sample sample = data.samples.get(currentHash);
+        if (sample == null) {
+            return Optional.empty();
+        }
+        logger.info("found {} peers for {}", resp.peers.size(), currentHash);
+
         resp.peers.forEach(peer -> 
                 {
-                    Node peers = new Node(peer.address().getAddress(), peer.port());
+                    byte[] ip = peer.address().getAddress();
+                    Node node = new Node(ip, peer.port());
+                    Pair<String, String> location = data.locationDb.location(ip);
+                    node.setLocation(location);
                     Torrent torrent = sample.torrent();
-                    MetaTorrentTask e = new MetaTorrentTask(peers, torrent);
-                    data.tcptasks.offer(e);
+                    MetaTorrentTask e = new MetaTorrentTask(node, torrent);
+                    data.udptasks.offer(e);
                 }
         );
 
@@ -202,7 +210,7 @@ public class TrackerUdpManager {
                 TorrentStats stats = resp.stats.get(i);
                 logger.info("Scrape stats for {}: {}", batch.get(i), stats);
                 int peers = stats.seeders() + stats.leechers()/* + stats.completed() */;
-                if (peers > 0) {
+                if (peers > 0 || data.arguments.mode == 5) {
                     data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
                 }
             }

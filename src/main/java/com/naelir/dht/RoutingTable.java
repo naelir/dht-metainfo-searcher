@@ -84,6 +84,10 @@ public final class RoutingTable {
         return Collections.unmodifiableList(this.buckets);
     }
 
+    public synchronized void clear() {
+        buckets.forEach(e -> e.nodes.clear());
+    }
+    
     public synchronized List<Node> closest(ByteBuffer targetId) {
         return closest(targetId, RoutingBucket.CAPACITY);
     }

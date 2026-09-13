@@ -24,13 +24,20 @@ import com.naelir.bt.Entry;
 
 public class MongoEntryRepository implements EntryRepository {
 
+    private final MongoClient client;
     private final MongoCollection<Document> collection;
 
     public MongoEntryRepository(String connectionString, String dbName, String collectionName) {
-        MongoClient client = MongoClients.create(connectionString);
+        this.client = MongoClients.create(connectionString);
         MongoDatabase database = client.getDatabase(dbName);
         this.collection = database.getCollection(collectionName);
         ensureIndexes();
+    }
+
+    /** Releases the underlying connection pool and background threads. */
+    @Override
+    public void close() {
+        client.close();
     }
 
     private void ensureIndexes() {

@@ -3,12 +3,14 @@ package com.naelir.dht;
 import java.nio.ByteBuffer;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -30,7 +32,6 @@ import com.naelir.tasks.Sample;
 public class Data {
     public ByteBuffer myself;
     public RoutingTable table;
-    
     public final Cache<ByteBuffer, IRequest> requestsSent;
     public final Map<String, Torrent> torrents;
     public final Map<String, Sample> samples;
@@ -55,7 +56,7 @@ public class Data {
         this.dbRepo = getRepo();
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
-        this.scrapeHashes = new HashSet<String>();
+        this.scrapeHashes = new HashSet<>();
         this.unresolved = new ArrayList<>();
         // These maps are keyed by transaction id / token and only ever removed
         // when a matching response/announce arrives. Requests that never get a
@@ -65,7 +66,7 @@ public class Data {
         // Guava caches with a time based expiry bound their size automatically.
         this.requestsSent = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(2)).build();
         this.torrents = new ConcurrentHashMap<>();
-        this.samples = new ConcurrentHashMap<>();
+        this.samples = Collections.synchronizedMap(new TreeMap<>());
         this.tokensSent = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(10)).build();
         this.tokensReceived = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(10)).build();
         this.table = new RoutingTable();
@@ -80,55 +81,51 @@ public class Data {
                 ? new MongoEntryRepository(this.arguments.connectionString, this.arguments.db, this.arguments.table)
                 : new EntryRepository() {
                     @Override
+                    public void close() throws Exception {
+                    }
+
+                    @Override
                     public long count() {
-                        // TODO Auto-generated method stub
                         return 0;
                     }
 
                     @Override
-                    public long updateMany(List<String> hashes) {
-                        // TODO Auto-generated method stub
-                        return 0;
-                    }
-                    
-                    @Override
                     public List<Entry> findAll(int page, int pageSize) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public Entry findByHash(String hash) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public List<Entry> findByName(String pattern) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public Entry insert(Entry entry) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public boolean remove(String hash) {
-                        // TODO Auto-generated method stub
                         return false;
                     }
 
                     @Override
                     public boolean update(Entry entry) {
-                        // TODO Auto-generated method stub
                         return false;
                     }
+
+                    @Override
+                    public long updateMany(List<String> hashes) {
+                        return 0;
+                    }
+
                     @Override
                     public long updateMany(List<String> hashes, int newPeerCount) {
-                        // TODO Auto-generated method stub
                         return 0;
                     }
                 };
@@ -136,7 +133,7 @@ public class Data {
 
     public ByteBuffer nextId() {
         this.myself = this.udpIds.poll();
-        this.udpIds.offer(myself);
+        this.udpIds.offer(this.myself);
         return this.myself;
     }
 }

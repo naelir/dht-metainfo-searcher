@@ -66,7 +66,7 @@ public class UTPManager {
      * retry limit, so an idle connection with an empty retransmit queue would
      * otherwise never be removed — a genuine memory leak.
      */
-    private static final long IDLE_TIMEOUT_SEC = 180L;
+    private static final long IDLE_TIMEOUT_SEC = 30L;
 
     /**
      * Hard upper bound on the number of concurrently tracked connections. Acts
@@ -220,7 +220,7 @@ public class UTPManager {
      *              {@link UTPConnection#tick})
      * @return list of packets that must be sent over UDP by the caller
      */
-    public List<PendingPacket> tick(double delta) {
+    public List<PendingPacket> tick() {
         // Force Guava to process any pending expiration/size-based evictions
         // (and fire the removalListener) even if no get()/put() happened on
         // those particular entries recently.
@@ -236,7 +236,7 @@ public class UTPManager {
                 this.connections.invalidate(key);
                 continue;
             }
-            byte[] res = utp.tick(delta);
+            byte[] res = utp.tick();
             if (res != null && res.length > 0) {
                 toSend.add(new PendingPacket(key.ip(), key.port(), res));
             }

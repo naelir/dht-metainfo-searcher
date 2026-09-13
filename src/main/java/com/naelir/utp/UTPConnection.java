@@ -458,12 +458,10 @@ public class UTPConnection {
     /**
      * Drive the retransmission timer. Call periodically (e.g. every 500 ms).
      *
-     * @param delta elapsed seconds since last tick (kept for API parity; not used
-     *              internally)
      * @return packet bytes to retransmit, or a RESET packet if the retry limit is
      *         exceeded (empty array means nothing to resend right now)
      */
-    public byte[] tick(double delta) {
+    public byte[] tick() {
         double now = nowSec();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         for (int sn : new ArrayList<>(this.outBuffer.keySet())) {

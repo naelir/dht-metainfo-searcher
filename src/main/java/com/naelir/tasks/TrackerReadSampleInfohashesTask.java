@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
+import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
 
 public class TrackerReadSampleInfohashesTask implements ITask {
@@ -15,11 +16,8 @@ public class TrackerReadSampleInfohashesTask implements ITask {
 
     private Data data;
 
-    private List<String> searchable;
-
     public TrackerReadSampleInfohashesTask(Data data) {
         this.data = data;
-        this.searchable = data.fileManager.unresolved();
     }
 
     @Override
@@ -30,9 +28,10 @@ public class TrackerReadSampleInfohashesTask implements ITask {
     @Override
     public void run() {
         try {
-            int min = Math.min(20, searchable.size());
-            var subList = searchable.subList(0, min);
-            for (String key : subList) {
+
+            String hex = Generator.toHex(data.myself.array()).substring(0, 2);
+            List<String> searchable = data.fileManager.unresolved(hex);
+            for (String key : searchable) {
                 String found = data.fileManager.get(key);
                 if (found != null) {
                     continue;
@@ -40,7 +39,6 @@ public class TrackerReadSampleInfohashesTask implements ITask {
                 Sample value = new Sample(new Torrent(key), Collections.emptyList(), false);
                 data.samples.putIfAbsent(key, value);
             }
-            searchable.removeAll(subList);
 
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

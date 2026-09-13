@@ -10,16 +10,16 @@ public class IpBlocker {
     private static final List<String> DENIED = Arrays.asList("AS", "AF", "LOCAL", "OC");
     private static final List<String> ALLOWED = Arrays.asList("EU");
     
-    private static final List<String> DENIED_EXCEPTIONS = Arrays.asList("Türkiye");
-    private static final List<String> DENIED_ADDITIONS = Arrays.asList("Türkiye");
+    private static final List<String> DENIED_EXCEPTIONS = Arrays.asList("TR", "AU");
+    private static final List<String> DENIED_ADDITIONS = Arrays.asList("RU");
 
 
     public static boolean denied(Pair<String, String> location) {
-        return DENIED.contains(location.getLeft()) && DENIED_EXCEPTIONS.contains(location.getRight()) == false;
+        return DENIED_EXCEPTIONS.contains(location.getRight()) == false
+                && (DENIED.contains(location.getLeft()) || DENIED_ADDITIONS.contains(location.getRight()));
     }
 
     public static boolean allowed(Pair<String, String> location) {
         return ALLOWED.contains(location.getLeft());
     }
-
 }

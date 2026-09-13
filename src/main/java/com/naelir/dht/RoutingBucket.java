@@ -21,7 +21,7 @@ final class RoutingBucket {
     final BigInteger min;
     /** Exclusive upper bound of the ID range covered by this bucket. */
     final BigInteger max;
-    private final List<Node> nodes;
+    final List<Node> nodes;
 
     RoutingBucket(BigInteger min, BigInteger max) {
         this.min = min;

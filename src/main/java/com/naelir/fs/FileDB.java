@@ -8,8 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -37,6 +38,7 @@ public class FileDB implements IFileDB {
     /** Base directory: ~/filedb/ */
     static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     static final Path BASE_DIR = HOME.resolve("filedb");
+    static final Path UNRESOLVED = HOME.resolve("unresolved");
 
     public static void push(String file) {
         Path path = HOME.resolve(file);
@@ -61,8 +63,10 @@ public class FileDB implements IFileDB {
         Files.createDirectories(BASE_DIR);
         Files.createDirectories(HOME);
         Path fine = HOME.resolve("fine.txt");
-        Path failtoresolve = HOME.resolve("unresolved.txt");
-        Path resolved = HOME.resolve("resolved.txt");
+        String other = "unresolved.txt.".concat(RandomStringUtils.randomAlphanumeric(8));
+        Path failtoresolve = HOME.resolve(other);
+        String r = "resolved.txt".concat(RandomStringUtils.randomAlphanumeric(8));
+        Path resolved = HOME.resolve(r);
         BufferedWriter fw = Files.newBufferedWriter(fine, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         BufferedWriter ftrw = Files.newBufferedWriter(failtoresolve, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         BufferedWriter rw = Files.newBufferedWriter(resolved, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
@@ -141,7 +145,7 @@ public class FileDB implements IFileDB {
     public void insertUnresolved(String hash) {
         try {
             unresolvedWriter.write(hash);
-            unresolvedWriter.newLine();
+            unresolvedWriter.write("\n");
             unresolvedWriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);
@@ -169,10 +173,10 @@ public class FileDB implements IFileDB {
     }
     
     @Override
-    public List<String> scrape() {
+    public List<String> readScrape(String path) {
         List<String> result = new ArrayList<>();
         int i = 0;
-        try (BufferedReader reader = Files.newBufferedReader(HOME.resolve("scrape.txt"))) {
+        try (BufferedReader reader = Files.newBufferedReader(UNRESOLVED.resolve(path))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
@@ -188,16 +192,41 @@ public class FileDB implements IFileDB {
         return result;
     }
     
+
     @Override
-    public List<String> unresolved() {
+    public void writeScrape(String path, Set<Pair<String, Integer>> set) {
+        try (
+                BufferedWriter writer = Files.newBufferedWriter(UNRESOLVED.resolve(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
+                BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path.concat(".0")), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
+        ) {
+            for (Pair<String, Integer> e : set) {
+                if (e.getValue() == 0) {
+                    writer0.append(e.getKey());
+                    writer0.append("#");
+                    writer0.append(e.getValue().toString());
+                    writer0.append("\n");
+                } else {
+                    writer.append(e.getKey());
+                    writer.append("#");
+                    writer.append(e.getValue().toString());
+                    writer.append("\n");
+                }
+            }
+        } catch (IOException e) {
+            logger.error("error when writing scrapes", e);
+        }
+    }
+    
+    @Override
+    public List<String> unresolved(String path0) {
         List<String> result = new ArrayList<>();
         int i = 0;
-        Path path = HOME.resolve("unresolved.txt");
+        Path path = UNRESOLVED.resolve(path0);
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
-                result.add(line);
+                result.add(line.substring(0, 40));
             }
         } catch (IOException e) {
             logger.error("on line {}", i);

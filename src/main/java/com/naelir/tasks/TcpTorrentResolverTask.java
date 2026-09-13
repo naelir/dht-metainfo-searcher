@@ -27,7 +27,7 @@ public class TcpTorrentResolverTask implements Runnable {
             if (data.tcptasks.isEmpty()) {
                 return;
             }
-            int step = 5;
+            int step = 1;
             List<MetaTorrentTask> list = new ArrayList<>(step);
             for (int i = 0; i < step; i++) {
                 MetaTorrentTask task = get();
