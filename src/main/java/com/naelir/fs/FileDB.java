@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
@@ -61,8 +62,10 @@ public class FileDB implements IFileDB {
         Files.createDirectories(BASE_DIR);
         Files.createDirectories(HOME);
         Path fine = HOME.resolve("fine.txt");
-        Path failtoresolve = HOME.resolve("unresolved.txt");
-        Path resolved = HOME.resolve("resolved.txt");
+        String other = "unresolved.txt.".concat(RandomStringUtils.randomAlphanumeric(8));
+        Path failtoresolve = HOME.resolve(other);
+        String r = "resolved.txt".concat(RandomStringUtils.randomAlphanumeric(8));
+        Path resolved = HOME.resolve(r);
         BufferedWriter fw = Files.newBufferedWriter(fine, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         BufferedWriter ftrw = Files.newBufferedWriter(failtoresolve, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
         BufferedWriter rw = Files.newBufferedWriter(resolved, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);

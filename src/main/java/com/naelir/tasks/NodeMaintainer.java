@@ -65,6 +65,10 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new TrackerFindPeersTask(client, data));
             tasks.offer(new WaitAnnounceTask(data));
             tasks.offer(new CleanAnnounceTask(data));
+        }  else if (data.arguments.mode == 4) {// collect only hashes
+            tasks.offer(new FindNodeTask(client, data));
+            tasks.offer(new FindSampleInfohashesTask(client, data));
+            tasks.offer(new NextIdTask(data));
         } 
         return new NodeMaintainer(tasks, data, rotate);
     }

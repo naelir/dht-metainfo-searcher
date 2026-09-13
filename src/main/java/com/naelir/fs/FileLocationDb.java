@@ -46,7 +46,7 @@ public class FileLocationDb implements ILocationDb {
                 int prefixLen = Integer.parseInt(cidr.substring(slash + 1));
                 long mask = prefixLen == 0 ? 0L : (0xFFFFFFFFL << (32 - prefixLen)) & 0xFFFFFFFFL;
                 if ((ipLong & mask) == (networkAddr & mask)) {
-                    return new ImmutablePair<String, String>(parts[2].trim(), parts[5].trim());
+                    return new ImmutablePair<String, String>(parts[2].trim(), parts[4].trim());
                 }
             }
         } catch (IOException e) {

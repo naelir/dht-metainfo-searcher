@@ -14,7 +14,11 @@ public class Entry {
     }
     
     public static Entry crap(String hash) {
-        return new Entry("chinese_korean_crap", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("chinese_korean_ru", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    }
+    
+    public static Entry ban(String name, String hash) {
+        return new Entry(name, hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
 
     public static Entry notEu(String hash) {
@@ -31,10 +35,6 @@ public class Entry {
 
     public static Entry lowPeersNotEu(String hash) {
         return new Entry("low_peers_?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-
-    public static Entry ru(String hash) {
-        return new Entry("ru?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
     
     @JsonProperty("n")

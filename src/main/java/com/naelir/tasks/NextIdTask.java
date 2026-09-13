@@ -60,6 +60,10 @@ public class NextIdTask implements ITask {
                     }
                 }
                 logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
+            } else {
+                for (Sample sample : data.samples.values()) {
+                    data.fileManager.insertUnresolved(sample.torrent.infoHash());
+                }
             }
             this.data.samples.clear();
             this.data.torrents.clear();

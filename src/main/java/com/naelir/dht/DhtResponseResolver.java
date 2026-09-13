@@ -4,9 +4,12 @@ import java.nio.ByteBuffer;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
@@ -178,6 +181,7 @@ public class DhtResponseResolver {
             Sample sample = this.data.samples.get(hex);
             if (sample != null) {
                 int denied = 0;
+                Set<String> set = new HashSet<String>(decode.peers.size());
                 for (Node node : decode.peers) {
                     Pair<String, String> location = data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
@@ -185,17 +189,15 @@ public class DhtResponseResolver {
                         node.setLocation(location);
                     } else {
                         denied++;
+                        set.add(location.getRight());
                     }
                 }
                 int size = decode.peers.size();
                 if (size > 0 && denied * 100 / size >= 75) {
                     sample.skip(true);
                     logger.debug("{} too many denied peers", hex);
-                    if (size == 1) {
-                        data.fileManager.insert(Entry.lowPeersNotEu(hex));
-                    } else {
-                        data.fileManager.insert(Entry.crap(hex));
-                    }
+                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
+                    data.fileManager.insert(Entry.ban(lowerCase, hex));
                 }
                 logger.debug("found {} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
@@ -241,7 +243,7 @@ public class DhtResponseResolver {
         } else
             return Optional.empty();
     }
-
+    
     private Optional<byte[]> resolve(IResponse decode, From from) {
         if (decode instanceof AnnouncePeerResponse apr) {
             resolve(apr, from);
