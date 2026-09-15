@@ -69,7 +69,12 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new NextIdTask(data));
-        } 
+        }  else if (data.arguments.mode == 5) { //scrape unresolved
+            tasks.offer(new CreateScrapeHashesTask(data));
+            tasks.offer(new ScrapeTask(client, data));
+            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new SaveScrapedTorrentsTask(data));
+        }
         return new NodeMaintainer(tasks, data, rotate);
     }
 

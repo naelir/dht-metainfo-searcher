@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
@@ -172,10 +173,10 @@ public class FileDB implements IFileDB {
     }
     
     @Override
-    public List<String> scrape() {
+    public List<String> readScrape(String path) {
         List<String> result = new ArrayList<>();
         int i = 0;
-        try (BufferedReader reader = Files.newBufferedReader(HOME.resolve("scrape.txt"))) {
+        try (BufferedReader reader = Files.newBufferedReader(HOME.resolve(path))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
@@ -189,6 +190,21 @@ public class FileDB implements IFileDB {
         }
 
         return result;
+    }
+    
+
+    @Override
+    public void writeScrape(String path, Set<Pair<String, Integer>> set) {
+        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)) {
+            for (Pair<String, Integer> e : set) {
+                writer.append(e.getKey());
+                writer.append(",");
+                writer.append(e.getValue().toString());
+                writer.flush();
+            }
+        } catch (IOException e) {
+            logger.error("error when writing scrapes", e);
+        }
     }
     
     @Override

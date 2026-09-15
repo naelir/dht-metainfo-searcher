@@ -82,8 +82,8 @@ public final class DhtApplication implements Runnable {
             ILocationDb locationDb = FileLocationDb.INSTANCE;
             Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, this.arguments);
 
-            if (arguments.mode == 1) {
-                List<String> all = fileDB.scrape();
+            if (arguments.mode == 1 || arguments.mode == 5) {
+                List<String> all = fileDB.readScrape(arguments.scrapeIn);
                 data.unresolved.addAll(all);
                 logger.info("loaded {} unresolved", all.size());
             }
