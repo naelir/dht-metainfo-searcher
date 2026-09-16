@@ -293,7 +293,7 @@ public class DhtResponseResolver {
             int i = 0;
             int tooFar = 0;
             for (String hash : decode.samples) {
-                String value = this.data.fileManager.get(hash);
+                String value = data.arguments.mode != 4 ? this.data.fileManager.get(hash) : null;
                 if (value != null) {
                     if (isFine(value)) {
                         data.forUpdate.add(new ImmutablePair<>(hash, 1));
