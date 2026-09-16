@@ -1,7 +1,6 @@
 package com.naelir;
 
 import java.math.BigInteger;
-import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
@@ -139,6 +138,7 @@ public final class DhtApplication implements Runnable {
 
             } finally {
                 fileDB.close();
+                data.dbRepo.close();
                 executor.shutdown();
                 group.shutdownGracefully();
             }

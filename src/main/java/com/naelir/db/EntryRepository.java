@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.naelir.bt.Entry;
 
-public interface EntryRepository {
+public interface EntryRepository extends AutoCloseable {
     List<Entry> findAll(int page, int pageSize);
     long count();
     Entry findByHash(String hash);

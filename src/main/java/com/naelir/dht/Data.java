@@ -81,55 +81,50 @@ public class Data {
                 : new EntryRepository() {
                     @Override
                     public long count() {
-                        // TODO Auto-generated method stub
                         return 0;
                     }
 
                     @Override
                     public long updateMany(List<String> hashes) {
-                        // TODO Auto-generated method stub
                         return 0;
                     }
                     
                     @Override
                     public List<Entry> findAll(int page, int pageSize) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public Entry findByHash(String hash) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public List<Entry> findByName(String pattern) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public Entry insert(Entry entry) {
-                        // TODO Auto-generated method stub
                         return null;
                     }
 
                     @Override
                     public boolean remove(String hash) {
-                        // TODO Auto-generated method stub
                         return false;
                     }
 
                     @Override
                     public boolean update(Entry entry) {
-                        // TODO Auto-generated method stub
                         return false;
                     }
                     @Override
                     public long updateMany(List<String> hashes, int newPeerCount) {
-                        // TODO Auto-generated method stub
                         return 0;
+                    }
+
+                    @Override
+                    public void close() throws Exception {
                     }
                 };
     }
