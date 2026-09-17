@@ -202,7 +202,7 @@ public class TrackerUdpManager {
                 TorrentStats stats = resp.stats.get(i);
                 logger.info("Scrape stats for {}: {}", batch.get(i), stats);
                 int peers = stats.seeders() + stats.leechers()/* + stats.completed() */;
-                if (peers > 0) {
+                if (peers > 0 || data.arguments.mode == 5) {
                     data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
                 }
             }

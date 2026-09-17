@@ -199,7 +199,7 @@ public class FileDB implements IFileDB {
                 writer.append(e.getKey());
                 writer.append(",");
                 writer.append(e.getValue().toString());
-                writer.flush();
+                writer.append("\n");
             }
         } catch (IOException e) {
             logger.error("error when writing scrapes", e);
