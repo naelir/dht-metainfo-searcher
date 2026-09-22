@@ -37,7 +37,7 @@ public class DhtResponseResolver {
 
     private boolean closeEnough(Node node, String hash) {
         String id = Generator.toHex(node.id.array());
-        return id.substring(0, 4).equals(hash.substring(0, 4));
+        return id.substring(0, 2).equals(hash.substring(0, 2));
     }
 
     private Object forAddress(From from) {
