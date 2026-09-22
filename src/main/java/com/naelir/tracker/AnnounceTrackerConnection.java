@@ -22,6 +22,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
     private final byte[] peerId;
     private String currentHash;
     private Map<String, Sample> samples;
+    boolean stopped;
 
     public AnnounceTrackerConnection(String hostAddress, int port, Set<String> hashes, byte[] peerId,
             Map<String, Sample> samples) {
@@ -64,6 +65,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
     }
 
     protected byte[] stop() {
+        this.stopped = true;
         byte[] infoHash = Generator.toArray(this.currentHash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.STOPPED, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);

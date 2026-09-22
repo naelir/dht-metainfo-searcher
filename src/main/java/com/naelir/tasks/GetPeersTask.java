@@ -1,7 +1,6 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -19,12 +18,12 @@ public class GetPeersTask implements ITask {
     public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
     private Data data;
     private UtpClient client;
-    List<Node> prev;
+//    List<Node> prev;
 
     public GetPeersTask(UtpClient client, Data data) {
         this.client = client;
         this.data = data;
-        this.prev = new ArrayList<>();
+//        this.prev = new ArrayList<>();
     }
 
     @Override
@@ -67,10 +66,10 @@ public class GetPeersTask implements ITask {
                         logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
-                    this.prev.forEach(c -> sample.table.insert(c));
+//                    this.prev.forEach(c -> sample.table.insert(c));
                     List<Node> closest = sample.table.closest(sample.byteBuffer(), 1);
-                    this.prev.clear();
-                    this.prev.addAll(closest);
+//                    this.prev.clear();
+//                    this.prev.addAll(closest);
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
                         sample.table.remove(id);

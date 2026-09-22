@@ -120,7 +120,7 @@ public class TrackerUdpManager {
         }
         String currentHash = tc.getCurrentHash();
         Sample sample = this.data.samples.get(currentHash);
-        if (sample == null)
+        if (sample == null || tc.stopped)
             return Optional.empty();
         logger.info("found {} peers for {}", resp.peers.size(), currentHash);
         resp.peers.forEach(peer -> {
@@ -132,7 +132,7 @@ public class TrackerUdpManager {
             MetaTorrentTask e = new MetaTorrentTask(node, torrent);
             this.data.udptasks.offer(e);
         });
-        return Optional.of(tc.buildNextRequest());
+        return Optional.of(tc.stop());
     }
 
     protected Optional<byte[]> onConnectRequest(ConnectRequest req, From from) {
