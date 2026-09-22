@@ -29,7 +29,7 @@ public class CreateMetaTask implements ITask {
                 logger.debug("createMetaTasks run on {} samples", this.data.samples.size());
             }
             for (Sample sample : this.data.samples.values()) {
-                if (sample.peers().size() < data.arguments.minPeers) {
+                if (sample.peers().size() < this.data.arguments.minPeers) {
                     continue;
                 }
                 for (Node peer : sample.peers()) {

@@ -23,32 +23,19 @@ import com.naelir.tracker.ScrapeResponse.TorrentStats;
 /**
  * Core logic for the BitTorrent UDP tracker protocol (BEP-15).
  *
- * <p>Manages a set of {@link TrackerConnection} sessions, each of which may
- * cover an arbitrarily large number of info-hashes split into batches of at
- * most 74 (the spec limit).  When the 1-minute connection-id TTL expires
- * mid-session the manager automatically issues a new connect handshake and
- * resumes scraping from the last completed batch.
+ * <p>
+ * Manages a set of {@link TrackerConnection} sessions, each of which may cover
+ * an arbitrarily large number of info-hashes split into batches of at most 74
+ * (the spec limit). When the 1-minute connection-id TTL expires mid-session the
+ * manager automatically issues a new connect handshake and resumes scraping
+ * from the last completed batch.
  *
- * <p>{@link TrackerOnDataListener} acts as a thin relay that forwards every
+ * <p>
+ * {@link TrackerOnDataListener} acts as a thin relay that forwards every
  * incoming datagram here via {@link #handlePacket}.
  */
 public class TrackerUdpManager {
     public static final Logger logger = LogManager.getLogger(TrackerUdpManager.class);
-
-    private final Data data;
-
-    /**
-     * Live sessions keyed by the <em>current</em> transaction ID of each
-     * {@link TrackerConnection}.  The key is updated whenever
-     * {@link TrackerConnection#reconnect()} is called.
-     */
-    private final Map<Integer, TrackerConnection> connections = new HashMap<>();
-
-    public TrackerUdpManager(Data data) {
-        this.data = data;
-    }
-
-    // ── static helper ────────────────────────────────────────────────────────
 
     public static boolean isTrackerPacket(byte[] data) {
         if (data == null || data.length < 4)
@@ -59,6 +46,18 @@ public class TrackerUdpManager {
         return action >= 0 && action <= 3 && data[0] == 0x00;
     }
 
+    private final Data data;
+    /**
+     * Live sessions keyed by the <em>current</em> transaction ID of each
+     * {@link TrackerConnection}. The key is updated whenever
+     * {@link TrackerConnection#reconnect()} is called.
+     */
+    private final Map<Integer, TrackerConnection> connections = new HashMap<>();
+    // ── static helper ────────────────────────────────────────────────────────
+
+    public TrackerUdpManager(Data data) {
+        this.data = data;
+    }
     // ── entry point ──────────────────────────────────────────────────────────
 
     /**
@@ -73,22 +72,20 @@ public class TrackerUdpManager {
         try {
             if (ConnectRequest.matches(buffer))
                 return onConnectRequest(ConnectRequest.decode(buffer), from).orElse(null);
-
             if (buffer.length < 4) {
                 logger.warn("Tracker packet from {} too short ({} bytes)", from, buffer.length);
                 return null;
             }
-
             int action = ByteBuffer.wrap(buffer, 0, 4).getInt();
             Optional<byte[]> result = switch (action) {
-                case 0 -> onConnectResponse(ConnectResponse.decode(buffer), from);
-                case 1 -> onAnnounceResponse(AnnounceResponse.decode(buffer), from);
-                case 2 -> onScrapeResponse(ScrapeResponse.decode(buffer), from);
-                case 3 -> onErrorResponse(ErrorResponse.decode(buffer), from);
-                default -> {
-                    logger.warn("Unknown tracker action {} from {}", action, from);
-                    yield Optional.empty();
-                }
+            case 0 -> onConnectResponse(ConnectResponse.decode(buffer), from);
+            case 1 -> onAnnounceResponse(AnnounceResponse.decode(buffer), from);
+            case 2 -> onScrapeResponse(ScrapeResponse.decode(buffer), from);
+            case 3 -> onErrorResponse(ErrorResponse.decode(buffer), from);
+            default -> {
+                logger.warn("Unknown tracker action {} from {}", action, from);
+                yield Optional.empty();
+            }
             };
             return result.orElse(null);
         } catch (Exception e) {
@@ -96,12 +93,11 @@ public class TrackerUdpManager {
             return null;
         }
     }
-
     // ── session factory ──────────────────────────────────────────────────────
 
     /**
      * Creates a new {@link TrackerConnection} for the given tracker and registers
-     * it.  Returns the encoded connect-request bytes that must be sent to the
+     * it. Returns the encoded connect-request bytes that must be sent to the
      * tracker to start the handshake.
      *
      * @param hashes      info-hashes to scrape (any size; batched automatically)
@@ -110,13 +106,34 @@ public class TrackerUdpManager {
      * @return encoded {@link ConnectRequest} bytes ready for sending
      */
     public byte[] newConnection(TrackerConnection tc) {
-        connections.put(tc.transactionId(), tc);
-        logger.info("Initiating tracker session {}:{}",
-                tc.hostAddress, tc.port);
+        this.connections.put(tc.transactionId(), tc);
+        logger.info("Initiating tracker session {}:{}", tc.hostAddress, tc.port);
         return tc.connect();
     }
-
     // ── handlers ─────────────────────────────────────────────────────────────
+
+    protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
+        AnnounceTrackerConnection tc = (AnnounceTrackerConnection) this.connections.get(resp.transactionId);
+        if (tc == null) {
+            logger.warn("Received scrape response with unknown transactionId={} from {}", resp.transactionId, from);
+            return Optional.empty();
+        }
+        String currentHash = tc.getCurrentHash();
+        Sample sample = this.data.samples.get(currentHash);
+        if (sample == null)
+            return Optional.empty();
+        logger.info("found {} peers for {}", resp.peers.size(), currentHash);
+        resp.peers.forEach(peer -> {
+            byte[] ip = peer.address().getAddress();
+            Node node = new Node(ip, peer.port());
+            Pair<String, String> location = this.data.locationDb.location(ip);
+            node.setLocation(location);
+            Torrent torrent = sample.torrent();
+            MetaTorrentTask e = new MetaTorrentTask(node, torrent);
+            this.data.udptasks.offer(e);
+        });
+        return Optional.of(tc.buildNextRequest());
+    }
 
     protected Optional<byte[]> onConnectRequest(ConnectRequest req, From from) {
         logger.debug("Tracker ← {} from {}", req, from);
@@ -124,81 +141,48 @@ public class TrackerUdpManager {
     }
 
     /**
-     * A tracker has replied to our connect request.
-     * Store the connection-id and fire the first scrape batch.
+     * A tracker has replied to our connect request. Store the connection-id and
+     * fire the first scrape batch.
      */
     protected Optional<byte[]> onConnectResponse(ConnectResponse resp, From from) {
-        TrackerConnection tc = connections.get(resp.transactionId);
+        TrackerConnection tc = this.connections.get(resp.transactionId);
         if (tc == null) {
-            logger.warn("Received connect response with unknown transactionId={} from {}",
-                    resp.transactionId, from);
+            logger.warn("Received connect response with unknown transactionId={} from {}", resp.transactionId, from);
             return Optional.empty();
         }
-
         tc.onConnected(resp.connectionId);
-
         if (!tc.hasMoreBatches()) {
             logger.info("Session {} has no hashes to scrape – done", tc);
             return Optional.empty();
         }
-        
         return Optional.of(tc.buildNextRequest());
     }
 
-    protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
-        
-        AnnounceTrackerConnection tc = (AnnounceTrackerConnection) connections.get(resp.transactionId);
-        if (tc == null) {
-            logger.warn("Received scrape response with unknown transactionId={} from {}", resp.transactionId, from);
-            return Optional.empty();
-        }
-        
-        String currentHash = tc.getCurrentHash();
-        
-        Sample sample = data.samples.get(currentHash);
-        if (sample == null) {
-            return Optional.empty();
-        }
-        logger.info("found {} peers for {}", resp.peers.size(), currentHash);
-
-        resp.peers.forEach(peer -> 
-                {
-                    byte[] ip = peer.address().getAddress();
-                    Node node = new Node(ip, peer.port());
-                    Pair<String, String> location = data.locationDb.location(ip);
-                    node.setLocation(location);
-                    Torrent torrent = sample.torrent();
-                    MetaTorrentTask e = new MetaTorrentTask(node, torrent);
-                    data.udptasks.offer(e);
-                }
-        );
-
-       
-        return Optional.of(tc.buildNextRequest());
+    protected Optional<byte[]> onErrorResponse(ErrorResponse resp, From from) {
+        logger.warn("Tracker error from {}: {}", from, resp.message);
+        return Optional.empty();
     }
 
     /**
      * A tracker has replied to a scrape request.
      * <ol>
-     *   <li>Match stats to the pending batch and update torrent activity.</li>
-     *   <li>Mark the batch complete.</li>
-     *   <li>If more batches remain:
-     *     <ul>
-     *       <li>Connection still valid → send the next scrape immediately.</li>
-     *       <li>Connection expired → reconnect; the new connect request is returned
-     *           and the caller sends it back to the tracker.</li>
-     *     </ul>
-     *   </li>
+     * <li>Match stats to the pending batch and update torrent activity.</li>
+     * <li>Mark the batch complete.</li>
+     * <li>If more batches remain:
+     * <ul>
+     * <li>Connection still valid → send the next scrape immediately.</li>
+     * <li>Connection expired → reconnect; the new connect request is returned and
+     * the caller sends it back to the tracker.</li>
+     * </ul>
+     * </li>
      * </ol>
      */
     protected Optional<byte[]> onScrapeResponse(ScrapeResponse resp, From from) {
-        ScrapeTrackerConnection tc = (ScrapeTrackerConnection) connections.get(resp.transactionId);
+        ScrapeTrackerConnection tc = (ScrapeTrackerConnection) this.connections.get(resp.transactionId);
         if (tc == null) {
-            logger.warn("Received scrape response with unknown transactionId={} from {}",
-                    resp.transactionId, from);
+            logger.warn("Received scrape response with unknown transactionId={} from {}", resp.transactionId, from);
             return Optional.empty();
         }
-
         // Process stats for the current in-flight batch.
         if (tc.isBatchPending()) {
             List<String> batch = tc.currentBatch();
@@ -210,33 +194,25 @@ public class TrackerUdpManager {
                 TorrentStats stats = resp.stats.get(i);
                 logger.info("Scrape stats for {}: {}", batch.get(i), stats);
                 int peers = stats.seeders() + stats.leechers()/* + stats.completed() */;
-                if (peers > 0 || data.arguments.mode == 5) {
-                    data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
+                if (peers > 0 || this.data.arguments.mode == 5) {
+                    this.data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
                 }
             }
             tc.completeBatch();
         }
-
         if (!tc.hasMoreBatches()) {
             logger.info("Session {} fully scraped – all batches complete", tc);
-            connections.remove(resp.transactionId);
+            this.connections.remove(resp.transactionId);
             return Optional.empty();
         }
-
         // More batches remain – check connection validity before scraping.
         if (tc.isConnectionExpired()) {
             logger.info("Connection ID expired mid-session for {} – reconnecting", tc);
-            connections.remove(resp.transactionId);
+            this.connections.remove(resp.transactionId);
             tc.reconnect();
-            connections.put(tc.transactionId(), tc);
+            this.connections.put(tc.transactionId(), tc);
             return Optional.of(tc.connect());
         }
-
         return Optional.of(tc.buildNextRequest());
-    }
-
-    protected Optional<byte[]> onErrorResponse(ErrorResponse resp, From from) {
-        logger.warn("Tracker error from {}: {}", from, resp.message);
-        return Optional.empty();
     }
 }

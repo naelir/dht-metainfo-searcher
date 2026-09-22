@@ -4,6 +4,7 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -54,6 +55,10 @@ public class GetPeersTask implements ITask {
                 ByteBuffer wrap = ByteBuffer.wrap(array);
                 if (sample.checked < this.data.arguments.getPeersDepth) {
                     sample.checked++;
+                    if (sample.checked == 1 && this.data.arguments.trackerUrl != null) {
+                        this.client.obtainPeers(Set.of(infoHash), this.data.arguments.trackerUrl,
+                                this.data.arguments.trackerPort);
+                    }
                     if (sample.peers.isEmpty() == false) {
                         logger.debug("samples {} has peers, continue", infoHash);
                         continue;
