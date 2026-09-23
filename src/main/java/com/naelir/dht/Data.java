@@ -32,6 +32,7 @@ import com.naelir.tasks.Sample;
 public class Data {
     public ByteBuffer myself;
     public RoutingTable table;
+    
     public final Cache<ByteBuffer, IRequest> requestsSent;
     public final Map<String, Torrent> torrents;
     public final Map<String, Sample> samples;
@@ -51,11 +52,12 @@ public class Data {
 
     public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, Arguments arguments) {
         this.udpIds = udpIds;
-        this.locationDb = locationDb;
-        this.arguments = arguments;
-        this.dbRepo = getRepo();
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
+        this.locationDb = locationDb;
+        this.arguments = arguments;
+        this.fileManager = fm;
+        this.dbRepo = getRepo();
         this.scrapeHashes = new HashSet<>();
         this.unresolved = new ArrayList<>();
         // These maps are keyed by transaction id / token and only ever removed
@@ -72,7 +74,6 @@ public class Data {
         this.table = new RoutingTable();
         this.udptasks = new LinkedBlockingQueue<>(5000);
         this.tcptasks = new LinkedBlockingDeque<>(5000);
-        this.fileManager = fm;
         this.forUpdate = new HashSet<>();
     }
 
@@ -135,5 +136,17 @@ public class Data {
         this.myself = this.udpIds.poll();
         this.udpIds.offer(this.myself);
         return this.myself;
+    }
+    
+    public void clear() {
+        scrapeHashes.clear();
+        unresolved.clear();
+        requestsSent.invalidateAll();
+        tokensSent.invalidateAll();
+        tokensReceived.invalidateAll();
+        torrents.clear();
+        samples.clear();
+        forUpdate.clear();
+        table.clear();
     }
 }

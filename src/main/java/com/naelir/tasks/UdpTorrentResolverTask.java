@@ -34,10 +34,6 @@ public class UdpTorrentResolverTask implements Runnable {
             if (size > 0 && size % 10 == 0) {
                 logger.info("tasks left {}", size);
             }
-            String hex = task.torrent.infoHash();
-            if (task.node.location != null) {
-                logger.info("{} from {}", hex, task.node.location.getRight());
-            }
             this.client.connectPeer(task.torrent, task.node);
         } catch (Exception e) {
             logger.error("Unexpected error resolving torrent", e);

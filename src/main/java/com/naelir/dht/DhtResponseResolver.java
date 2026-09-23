@@ -14,14 +14,11 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.naelir.bt.Entry;
-import com.naelir.bt.NameFilter;
 import com.naelir.bt.Torrent;
-import com.naelir.fs.FileDB;
 import com.naelir.fs.IpBlocker;
 import com.naelir.tasks.Sample;
 
@@ -45,16 +42,7 @@ public class DhtResponseResolver {
             return "0.0.0.0";
         return (from.ip[0] & 0xFF) + "." + (from.ip[1] & 0xFF) + "." + (from.ip[2] & 0xFF) + "." + (from.ip[3] & 0xFF);
     }
-
-    private boolean isFine(String value) {
-        try {
-            Entry entry = FileDB.MAPPER.readValue(value, Entry.class);
-            return NameFilter.fineMatch(entry.name);
-        } catch (JsonProcessingException e) {
-            return false;
-        }
-    }
-
+    
     private void logFrom(Object decode, From from) {
         logger.debug("{}, from {}, port {}", decode, forAddress(from), from.port);
     }
@@ -153,7 +141,6 @@ public class DhtResponseResolver {
                 Pair<String, String> location = this.data.locationDb.location(node.ip);
                 if (IpBlocker.denied(location) == false || this.data.table.size() < 5) {
                     this.data.table.insert(node);
-                    node.setLocation(location);
                 } else {
                     logger.debug("node {} from {} denied", node, location);
                 }
@@ -198,7 +185,6 @@ public class DhtResponseResolver {
                     Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
                         sample.addPeer(node);
-                        node.setLocation(location);
                     } else {
                         denied++;
                         set.add(location.getRight());
@@ -216,7 +202,6 @@ public class DhtResponseResolver {
                     Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
                         sample.table().insert(node);
-                        node.setLocation(location);
                     } else {
                         logger.debug("node {} from {} denied", node, location);
                     }

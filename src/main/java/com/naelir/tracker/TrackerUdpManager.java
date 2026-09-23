@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -126,8 +125,6 @@ public class TrackerUdpManager {
         resp.peers.forEach(peer -> {
             byte[] ip = peer.address().getAddress();
             Node node = new Node(ip, peer.port());
-            Pair<String, String> location = this.data.locationDb.location(ip);
-            node.setLocation(location);
             Torrent torrent = sample.torrent();
             MetaTorrentTask e = new MetaTorrentTask(node, torrent);
             this.data.udptasks.offer(e);

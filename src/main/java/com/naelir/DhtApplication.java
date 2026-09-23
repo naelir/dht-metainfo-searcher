@@ -114,15 +114,16 @@ public final class DhtApplication implements Runnable {
                 NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient);
                 UdpTorrentResolverTask resolverTask = new UdpTorrentResolverTask(utpClient, data);
                 TcpTorrentResolverTask tcpResolverTask = new TcpTorrentResolverTask(tcpClient, data);
+                List<Node> saved = SavedCompactInfo.nodes(compactInfo);
+                if (arguments.mode != 1) {
+                    utpClient.explore(data.myself, saved);
+                }
                 
                 executor.scheduleAtFixedRate(utpClient::tick, UtpClient.TICK_INTERVAL_MS, UtpClient.TICK_INTERVAL_MS, TimeUnit.MILLISECONDS);
                 executor.scheduleAtFixedRate(maintainer, 0, arguments.scheduleInterval, TimeUnit.SECONDS);
                 executor.scheduleAtFixedRate(resolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
                 executor.scheduleAtFixedRate(tcpResolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
-                List<Node> saved = SavedCompactInfo.nodes(compactInfo);
-                if (arguments.mode != 1) {
-                    utpClient.explore(data.myself, saved);
-                }
+
 
                 Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                     logger.info("Received SIGTERM, shutting down");

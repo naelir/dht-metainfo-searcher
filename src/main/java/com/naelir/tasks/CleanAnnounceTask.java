@@ -18,7 +18,7 @@ public class CleanAnnounceTask implements ITask {
 
     @Override
     public void run() {
-        this.data.samples.clear();
+        this.data.clear();
     }
 
 }

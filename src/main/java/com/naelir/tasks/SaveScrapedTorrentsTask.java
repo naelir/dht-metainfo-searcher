@@ -24,6 +24,6 @@ public class SaveScrapedTorrentsTask implements ITask {
     public void run() {
         data.fileManager.writeScrape(data.arguments.scrapeOut, data.forUpdate);
         data.forUpdate.forEach(e -> data.scrapeHashes.remove(e.getKey()));
-        data.forUpdate.clear();
+        data.clear();
     }
 }
