@@ -17,7 +17,7 @@ public class NodeMaintainer implements Runnable {
     public static NodeMaintainer of(Data data, UtpClient client, BtTcpClient tcp) throws Exception {
         Queue<ITask> tasks = new LinkedList<>();
         boolean rotate = true;
-        if (data.arguments.mode == 0) {// normal search rotation
+        if (data.config.mode == 0) {// normal search rotation
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             GetPeersTask gpt = new GetPeersTask(client, data);
@@ -35,12 +35,12 @@ public class NodeMaintainer implements Runnable {
                 }
             });
             tasks.offer(new NextIdTask(data));
-        } else if (data.arguments.mode == 1) { // scrape
+        } else if (data.config.mode == 1) { // scrape
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new UpdateSeenTorrentsTask(data));
-        } else if (data.arguments.mode == 2) {// resolve predefined list of hashes
+        } else if (data.config.mode == 2) {// resolve predefined list of hashes
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new ReadSampleInfohashesTask(data));
             GetPeersTask gpt = new GetPeersTask(client, data);
@@ -58,17 +58,17 @@ public class NodeMaintainer implements Runnable {
                 }
             });
             tasks.offer(new NextIdTask(data));
-        } else if (data.arguments.mode == 3) {// resolve peers via tracker
+        } else if (data.config.mode == 3) {// resolve peers via tracker
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new TrackerReadSampleInfohashesTask(data));
             tasks.offer(new TrackerFindPeersTask(client, data));
             tasks.offer(new WaitAnnounceTask(data));
             tasks.offer(new CleanAnnounceTask(data));
-        } else if (data.arguments.mode == 4) {// collect only hashes
+        } else if (data.config.mode == 4) {// collect only hashes
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new NextIdTask(data));
-        } else if (data.arguments.mode == 5) { // scrape unresolved
+        } else if (data.config.mode == 5) { // scrape unresolved
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());

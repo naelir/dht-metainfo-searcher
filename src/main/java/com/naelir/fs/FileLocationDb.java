@@ -11,7 +11,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 
 public class FileLocationDb implements ILocationDb {
     private static final Logger logger = LogManager.getLogger(FileLocationDb.class);
@@ -24,7 +24,7 @@ public class FileLocationDb implements ILocationDb {
     
     @Override
     public Pair<String, String> location(byte[] ip) {
-        String ipAddr = Generator.ip(ip);
+        String ipAddr = Converter.ip(ip);
         long ipLong = ipToLong(ipAddr);
         String prefix1 = ipAddr.substring(0, ipAddr.indexOf("."));
         Path shard = shardPath(prefix1);

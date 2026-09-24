@@ -41,37 +41,34 @@ public class BtTcpClient implements AutoCloseable {
 
     public void connect(Torrent torrent, Node node) throws InterruptedException, UnknownHostException {
         var group = new MultiThreadIoEventLoopGroup(1, new DefaultThreadFactory("bt"), NioIoHandler.newFactory());
-        try {
-            Bootstrap bootstrap = new Bootstrap();
-            ChannelFuture connectFuture = bootstrap.group(group)
-                    .channel(NioSocketChannel.class)
-                    .option(ChannelOption.SO_KEEPALIVE, false)
-                    .option(ChannelOption.SO_RCVBUF, 4096)
-                    .option(ChannelOption.SO_SNDBUF, 4096)
-                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
-                    .handler(new ChannelHandlerInitializer(torrent, this.data))
-                    .connect(node.address(), node.port())
-                    .addListener(f -> {
-                        Pair<String, String> location = data.locationDb.location(node.ip());
-                        if (!f.isSuccess()) {
-                            // connection refused, timed-out, etc. — no channel to close
-                            logger.warn("Connection to {} {}:{} failed: {}", location.getRight(), node.address(), node.port(),
-                                    f.cause().getMessage());
-                            return;
-                        } else {
-                            logger.warn("Connection to {} {}:{} succeeded", location.getRight(), node.address(), node.port());
-                        }
-                    });
-            connectFuture.channel().closeFuture().addListener(f -> {
-                group.shutdownGracefully(0, 100, TimeUnit.MILLISECONDS);
-            });
-        } finally {
-            // default shutdownGracefully() quiet-period=2s / timeout=15s — far too long
-            // when connect() is called in a tight loop for many peers
-        }
+        Bootstrap bootstrap = new Bootstrap();
+        bootstrap.group(group)
+                .channel(NioSocketChannel.class)
+                .option(ChannelOption.SO_KEEPALIVE, false)
+                .option(ChannelOption.SO_RCVBUF, 4096)
+                .option(ChannelOption.SO_SNDBUF, 4096)
+                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
+                .handler(new ChannelHandlerInitializer(torrent, this.data))
+                .connect(node.address(), node.port())
+                .addListener(f -> {
+                    Pair<String, String> location = data.locationDb.location(node.ip());
+                    if (!f.isSuccess()) {
+                        // connection refused, timed-out, etc. — no channel to close
+                        logger.warn("Connection to {} {}:{} failed: {}", location.getRight(), node.address(), node.port(),
+                                f.cause().getMessage());
+                        return;
+                    } else {
+                        logger.warn("Connection to {} {}:{} succeeded", location.getRight(), node.address(), node.port());
+                    }
+                })
+                .channel()
+                .closeFuture()
+                .addListener(f -> {
+                    group.shutdownGracefully(0, 100, TimeUnit.MILLISECONDS);
+                });
     }
 
-    private static final class ChannelHandlerInitializer extends ChannelInitializer<SocketChannel> {
+    static final class ChannelHandlerInitializer extends ChannelInitializer<SocketChannel> {
         private Torrent task;
         private Data data;
 
@@ -91,7 +88,7 @@ public class BtTcpClient implements AutoCloseable {
         }
     }
 
-    static class IdleChannelHandler extends ChannelDuplexHandler {
+    static final class IdleChannelHandler extends ChannelDuplexHandler {
         @Override
         public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
             if (evt instanceof IdleStateEvent) {

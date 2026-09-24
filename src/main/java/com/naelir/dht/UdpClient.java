@@ -89,7 +89,7 @@ public class UdpClient implements Runnable, AutoCloseable {
     }
 
     private void logTo(Object decode, From from) {
-        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Generator.inet(from.ip),
+        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Converter.inet(from.ip),
                 from.port);
     }
 

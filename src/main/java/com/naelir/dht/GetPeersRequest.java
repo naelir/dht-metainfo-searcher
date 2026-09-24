@@ -63,7 +63,7 @@ public class GetPeersRequest implements IRequest {
 
     @Override
     public String toString() {
-        return "GetPeersRequest [id=" + Generator.toHex(this.id.array()) + ", infoHash="
-                + Generator.toHex(this.infoHash.array()) + "]";
+        return "GetPeersRequest [id=" + Converter.toHex(this.id.array()) + ", infoHash="
+                + Converter.toHex(this.infoHash.array()) + "]";
     }
 }

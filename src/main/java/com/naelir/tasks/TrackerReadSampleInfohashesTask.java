@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.ITask;
 
 public class TrackerReadSampleInfohashesTask implements ITask {
@@ -29,7 +29,7 @@ public class TrackerReadSampleInfohashesTask implements ITask {
     public void run() {
         try {
 
-            String hex = Generator.toHex(data.myself.array()).substring(0, 2);
+            String hex = Converter.toHex(data.myself.array()).substring(0, 2);
             List<String> searchable = data.fileManager.unresolved(hex);
             for (String key : searchable) {
                 String found = data.fileManager.get(key);

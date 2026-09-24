@@ -30,7 +30,7 @@ public class FindSampleInfohashesTask implements ITask {
     public void run() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            int step = data.arguments.hashesStep;
+            int step = data.config.hashesStep;
             for (Node node : nodes) {
                 if (step < 0) {
                     break;

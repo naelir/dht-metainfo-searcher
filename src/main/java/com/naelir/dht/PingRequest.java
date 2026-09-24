@@ -60,6 +60,6 @@ public class PingRequest implements IRequest {
 
     @Override
     public String toString() {
-        return "PingRequest [id=" + Generator.toHex(this.id.array()) + "]";
+        return "PingRequest [id=" + Converter.toHex(this.id.array()) + "]";
     }
 }

@@ -23,7 +23,7 @@ public class FindNodeTask implements ITask {
 
     @Override
     public boolean resolved() {
-        return this.data.table.nodes().size() >= this.data.arguments.maxNodes;
+        return this.data.table.nodes().size() >= this.data.config.maxNodes;
         
     }
 
@@ -31,7 +31,7 @@ public class FindNodeTask implements ITask {
     public void run() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            int step = data.arguments.hashesStep;
+            int step = data.config.hashesStep;
             logger.info("nodes in the routing table {}", nodes.size());
             int i = 0;
             for (Node node : nodes) {

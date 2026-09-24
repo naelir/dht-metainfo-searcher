@@ -5,8 +5,6 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.naelir.dht.Generator;
-
 public class BitSpaceDivider {
     /**
      * Generates {@code n} (even) keys that equally divide the 160-bit Kademlia key

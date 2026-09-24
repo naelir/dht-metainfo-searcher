@@ -33,7 +33,7 @@ public class DhtResponseResolver {
     }
 
     private boolean closeEnough(Node node, String hash) {
-        String id = Generator.toHex(node.id.array());
+        String id = Converter.toHex(node.id.array());
         return id.substring(0, 2).equals(hash.substring(0, 2));
     }
 
@@ -42,7 +42,7 @@ public class DhtResponseResolver {
             return "0.0.0.0";
         return (from.ip[0] & 0xFF) + "." + (from.ip[1] & 0xFF) + "." + (from.ip[2] & 0xFF) + "." + (from.ip[3] & 0xFF);
     }
-    
+
     private void logFrom(Object decode, From from) {
         logger.debug("{}, from {}, port {}", decode, forAddress(from), from.port);
     }
@@ -67,7 +67,7 @@ public class DhtResponseResolver {
                 remotePort = from.port;
             }
             Node node = new Node(from.ip, remotePort, message.id);
-            String hex = Generator.toHex(message.infoHash.array());
+            String hex = Converter.toHex(message.infoHash.array());
             Torrent previous = this.data.torrents.get(hex);
             if (previous != null) {
                 previous.peers().add(node);
@@ -121,7 +121,7 @@ public class DhtResponseResolver {
     }
 
     private IResponse resolve(FindNodeRequest message, From from) {
-        String ip = Generator.ip(from.ip);
+        String ip = Converter.ip(from.ip);
         if (this.ipcache.getIfPresent(ip) != null) {
             logger.debug("find node from {} will return error, scanners spam", from);
             return new Error(201, "too many requests", message.tid);
@@ -129,7 +129,7 @@ public class DhtResponseResolver {
             this.ipcache.put(ip, Boolean.TRUE);
             List<Node> nodes = this.data.table.closest(message.target);
             logger.debug("find node from {} {} resolved, returning {} close nodes",
-                    Generator.toHex(message.target.array()), from, nodes.size());
+                    Converter.toHex(message.target.array()), from, nodes.size());
             return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
         }
     }
@@ -146,7 +146,7 @@ public class DhtResponseResolver {
                 }
             }
         } else {
-            String hex = Generator.toHex(decode.request.target.array());
+            String hex = Converter.toHex(decode.request.target.array());
             Sample sample = this.data.samples.get(hex);
             logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
             decode.nodes.forEach(e -> sample.table().insert(e));
@@ -157,7 +157,7 @@ public class DhtResponseResolver {
     private Object resolve(GetPeersRequest message, From from) {
         Token token = new Token(from.ip);
         ByteBuffer infoHash = message.infoHash;
-        String hex = Generator.toHex(infoHash.array());
+        String hex = Converter.toHex(infoHash.array());
         Torrent torrent = this.data.torrents.get(hex);
         this.data.tokensSent.put(token.value, new Node(from.ip, from.port, message.id));
         List<Node> nodes = this.data.table.closest(infoHash);
@@ -176,7 +176,7 @@ public class DhtResponseResolver {
                 this.data.tokensReceived.put(decode.token, gpr.node);
             }
             gpr.node.put(Command.GET_PEER_R);
-            String hex = Generator.toHex(gpr.infoHash.array());
+            String hex = Converter.toHex(gpr.infoHash.array());
             Sample sample = this.data.samples.get(hex);
             if (sample != null) {
                 int denied = 0;
@@ -197,7 +197,7 @@ public class DhtResponseResolver {
                     String lowerCase = StringUtils.join(set, "-").toLowerCase();
                     this.data.fileManager.insert(Entry.ban(lowerCase, hex));
                 }
-                logger.debug("found {} peers for {}, denied {}", size, hex, denied);
+                logger.debug("{} peers for {}, denied {}", size, hex, denied);
                 for (Node node : decode.nodes) {
                     Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
@@ -290,12 +290,12 @@ public class DhtResponseResolver {
             int i = 0;
             int tooFar = 0;
             for (String hash : decode.samples) {
-                String value = this.data.arguments.mode != 4 ? this.data.fileManager.get(hash) : null;
+                String value = this.data.config.mode != 4 ? this.data.fileManager.get(hash) : null;
                 if (value != null) {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
-                    byte[] array = Generator.toArray(hash);
+                    byte[] array = Converter.toArray(hash);
                     List<Node> closest = this.data.table.closest(ByteBuffer.wrap(array), 2);
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                 } else {

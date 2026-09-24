@@ -26,7 +26,7 @@ public class ScrapeTask implements ITask {
     @Override
     public void run() {
         try {
-            this.client.scrape(data.scrapeHashes, data.arguments.trackerUrl, data.arguments.trackerPort);
+            this.client.scrape(data.scrapeHashes, data.config.trackerUrl, data.config.trackerPort);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

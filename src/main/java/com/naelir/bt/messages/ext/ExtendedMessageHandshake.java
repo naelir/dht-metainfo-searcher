@@ -7,7 +7,7 @@ import com.github.cdefgah.bencoder4j.model.BencodedDictionary;
 import com.github.cdefgah.bencoder4j.model.BencodedInteger;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.BEncoder;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 
 public class ExtendedMessageHandshake extends ExtendedPeerWireMessage {
     public int ut_metadata = 1;
@@ -36,7 +36,7 @@ public class ExtendedMessageHandshake extends ExtendedPeerWireMessage {
 //        parent.put("p", new BencodedInteger(this.port));
         parent.put("reqq", new BencodedInteger(250));
         parent.put("v", new BencodedByteSequence(this.version));
-        parent.put("yourip", new BencodedByteSequence(Generator.toHex(this.yourip)));
+        parent.put("yourip", new BencodedByteSequence(Converter.toHex(this.yourip)));
         return BEncoder.bytes(parent);
     }
 

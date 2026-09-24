@@ -3,9 +3,9 @@ package com.naelir;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class Arguments {
+public class Config {
 
-    public static Arguments parse(String[] args) {
+    public static Config parse(String[] args) {
         String from = null;
         String to = null;
         int bitspaceParts = 200;
@@ -15,7 +15,7 @@ public class Arguments {
         String table = null;
         String scrapeOut = null;
         String scrapeIn = null;
-        int getPeerDepth = 2;
+        int getPeerDepth = 5;
         int minPeers = 1;
         int maxNodes = 200;
         int scrapeStep = 2000;
@@ -23,7 +23,7 @@ public class Arguments {
         int mode = 0;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
-        int scheduleInterval = 2;
+        int scheduleInterval = 3;
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
             case "--help":
@@ -37,13 +37,13 @@ public class Arguments {
                     "  --connection-string <string>  Database connection string\n" +
                     "  --db <string>                 Database name\n" +
                     "  --table <string>              Table name\n" +
-                    "  --get-peers-depth <int>       Number of get-peers depth per hash (default: 2)\n" +
+                    "  --get-peers-depth <int>       Number of get-peers depth per hash (default: 5)\n" +
                     "  --hashes-step <int>           Number of hashes to send get-peers at once (default: 5)\n" +
                     "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
                     "  --max-nodes <int>             Maximum number of DHT nodes (default: 200)\n" +
                     "  --mode <int>                  Operating mode (default: 0) 0 - search iteratively over bitspace, 1 - scrape, 2 - search predefined hashes\n" +
                     "  --resolver-millis <int>       Milliseconds to wait for metadata resolution (default: 500)\n" +
-                    "  --schedule-interval <int>     Schedule interval in seconds (default: 2)\n" +
+                    "  --schedule-interval <int>     Schedule interval in seconds (default: 3)\n" +
                     "  --scrape-step <int>           Number of hashes between scrape calls (default: 2000)\n" +
                     "  --tracker-url <host>          Tracker host address\n" +
                     "  --tracker-port <int>          Tracker port (default: 0)\n" +
@@ -174,7 +174,6 @@ public class Arguments {
 
     public final String from;
     public final int bitspaceParts;
-    public final boolean onlyHashes;
     public final String connectionString;
     public final String db;
     public final String table;
@@ -190,14 +189,24 @@ public class Arguments {
     public final int hashesStep;
     public final String to;
     public final int resolverMillis;
+    
+    @Override
+    public String toString() {
+        return "Config [bitspaceParts=" + bitspaceParts + ", maxNodes=" + maxNodes + ", hashesStep=" + hashesStep
+                + ", mode=" + mode + ", resolverMillis=" + resolverMillis + ", connectionString=" + connectionString
+                + ", db=" + db + ", table=" + table + ", getPeersDepth=" + getPeersDepth + ", minPeers=" + minPeers
+                + ", trackerUrl=" + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep
+                + ", scheduleInterval=" + scheduleInterval + ", scrapeFile=" + scrapeFile + ", from=" + from + ", to="
+                + to + ", scrapeIn=" + scrapeIn + ", scrapeOut=" + scrapeOut + "]";
+    }
+
     public final String scrapeIn;
     public final String scrapeOut;
 
-    private Arguments(Builder builder) {
+    private Config(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
         this.from = builder.from;
         this.to = builder.to;
-        this.onlyHashes = builder.onlyHashes;
         this.connectionString = builder.connectionString;
         this.db = builder.db;
         this.table = builder.table;
@@ -216,16 +225,6 @@ public class Arguments {
         this.scrapeOut = builder.scrapeOut;
     }
     
-
-    @Override
-    public String toString() {
-        return "Arguments [continueFrom=" + from + ", bitspaceParts=" + bitspaceParts + ", onlyHashes="
-                + onlyHashes + ", connectionString=" + connectionString + ", db=" + db + ", table=" + table
-                + ", queryCount=" + getPeersDepth + ", minPeers=" + minPeers + ", trackerUrl="
-                + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep + ", maxNodes=" + maxNodes
-                + "]";
-    }
-
 
     public static class Builder {
         private int bitspaceParts = 200;
@@ -294,8 +293,8 @@ public class Arguments {
             return this;
         }
 
-        public Arguments build() {
-            return new Arguments(this);
+        public Config build() {
+            return new Config(this);
         }
 
         public Builder connectionString(String connectionString) {

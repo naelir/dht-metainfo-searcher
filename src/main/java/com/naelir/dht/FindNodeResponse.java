@@ -61,6 +61,6 @@ public class FindNodeResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "FindNodeResponse [id=" + Generator.toHex(this.id.array()) + ", nodes=" + this.nodes.size() + "]";
+        return "FindNodeResponse [id=" + Converter.toHex(this.id.array()) + ", nodes=" + this.nodes.size() + "]";
     }
 }

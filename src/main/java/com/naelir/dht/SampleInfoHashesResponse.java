@@ -90,7 +90,7 @@ public class SampleInfoHashesResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "SampleInfoHashesResponse [id=" + Generator.toHex(this.id.array()) + ", interval=" + this.interval
+        return "SampleInfoHashesResponse [id=" + Converter.toHex(this.id.array()) + ", interval=" + this.interval
                 + ", nodes=" + this.nodes.size() + ", num=" + this.num + ", samples=" + this.samples + "]";
     }
 }

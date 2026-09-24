@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
 
@@ -28,7 +28,7 @@ public class NextIdTask implements ITask {
     @Override
     public void run() {
         this.nextId = this.data.nextId();
-        String myself = Generator.toHex(this.nextId.array());
+        String myself = Converter.toHex(this.nextId.array());
         logger.warn("next id is {}", myself);
         int i = 0;
         int j = 0;
@@ -41,11 +41,12 @@ public class NextIdTask implements ITask {
                 j++;
             } else {
                 k++;
-                this.data.fileManager.insertUnresolved(sample.torrent.infoHash());
+                String infoHash = sample.torrent.infoHash();
+                logger.info("not resolved {}, peers {}", infoHash, sample.peers.size());
+                this.data.fileManager.insertUnresolved(infoHash);
             }
         }
         logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
-
         List<Node> nodes = this.data.table.closest(this.nextId, 20);
         this.data.clear();
         for (Node e : nodes) {

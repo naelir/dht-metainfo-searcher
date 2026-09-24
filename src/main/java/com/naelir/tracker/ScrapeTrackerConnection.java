@@ -6,7 +6,7 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 
 /**
  * Represents an ongoing UDP tracker session for a given tracker host.
@@ -108,7 +108,7 @@ public class ScrapeTrackerConnection extends TrackerConnection {
 
         byte[][] hashBytes = new byte[batch.size()][];
         for (int i = 0; i < batch.size(); i++) {
-            hashBytes[i] = Generator.toArray(batch.get(i));
+            hashBytes[i] = Converter.toArray(batch.get(i));
         }
 
         pendingBatchStart = batchStart;

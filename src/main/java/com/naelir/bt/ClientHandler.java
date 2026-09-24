@@ -21,7 +21,7 @@ import com.naelir.bt.messages.ext.TorrentMetadataResponse;
 import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Node;
 import com.naelir.tasks.MetaTorrentTask;
 import com.naelir.tasks.Sample;
@@ -51,7 +51,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
-        byte[] hex = Generator.toArray(this.task.infoHash);
+        byte[] hex = Converter.toArray(this.task.infoHash);
         channel.writeAndFlush(new HandshakeMessage(hex, this.myself));
     }
 

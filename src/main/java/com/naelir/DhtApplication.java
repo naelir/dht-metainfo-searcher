@@ -18,7 +18,7 @@ import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
 import com.naelir.dht.Data;
 import com.naelir.dht.DhtResponseResolver;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Node;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.dht.UdpOnDataListener;
@@ -49,16 +49,16 @@ public final class DhtApplication implements Runnable {
     static final Logger logger = LogManager.getLogger(DhtApplication.class);
 
     public static void main(String[] args) throws Exception {
-        Arguments arguments = Arguments.parse(args);
+        Config arguments = Config.parse(args);
         logger.info("Starting with {}", arguments);
 
         new DhtApplication(arguments).run();
     }
 
-    private final Arguments arguments;
+    private final Config arguments;
     private final Semaphore semaphore;
 
-    public DhtApplication(Arguments args) {
+    public DhtApplication(Config args) {
         this.arguments = args;
         this.semaphore = new Semaphore(0);
     }
@@ -67,13 +67,13 @@ public final class DhtApplication implements Runnable {
     public void run() {
         try {
             BigInteger to = this.arguments.to != null
-                    ? new BigInteger(1, Generator.toArray(this.arguments.to))
+                    ? new BigInteger(1, Converter.toArray(this.arguments.to))
                     : BigInteger.ONE.shiftLeft(160).subtract(BigInteger.ONE);
             BigInteger from = this.arguments.from != null
-                    ? new BigInteger(1, Generator.toArray(this.arguments.from))
+                    ? new BigInteger(1, Converter.toArray(this.arguments.from))
                     : BigInteger.ZERO;
             Queue<ByteBuffer> udpmyselfs = divide(from, to);
-            String tcpmyself = Generator.generatePeerID();
+            String tcpmyself = Converter.generatePeerID();
             IFileDB fileDB = FileDB.of();
             
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
@@ -132,7 +132,7 @@ public final class DhtApplication implements Runnable {
                     if (arguments.mode != 1) {
                         List<Node> nodes = data.table.closest(data.myself, 20);
                         peersFm.saveCompactInfo(data.myself, nodes);
-                        logger.info("stopped with {}", Generator.toHex(data.myself.array()));
+                        logger.info("stopped with {}", Converter.toHex(data.myself.array()));
                     }
                 }, "dht-shutdown"));
                 this.semaphore.acquire();

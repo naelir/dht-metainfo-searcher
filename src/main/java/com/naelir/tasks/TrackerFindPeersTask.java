@@ -34,7 +34,7 @@ public class TrackerFindPeersTask implements ITask {
                 logger.info("No samples to find peers for");
                 return;
             }
-            this.client.obtainPeers(set, data.arguments.trackerUrl, data.arguments.trackerPort);
+            this.client.obtainPeers(set, data.config.trackerUrl, data.config.trackerPort);
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

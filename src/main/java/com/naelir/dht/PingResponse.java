@@ -52,6 +52,6 @@ public class PingResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "PingResponse [id=" + Generator.toHex(this.id.array()) + "]";
+        return "PingResponse [id=" + Converter.toHex(this.id.array()) + "]";
     }
 }

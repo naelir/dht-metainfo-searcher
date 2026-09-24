@@ -38,7 +38,7 @@ public class Node {
     public Queue<Command> queries;
     
     public Node(byte[] ip, int port) {
-        this(ip, port, Generator.generateRandomID());
+        this(ip, port, Converter.generateRandomID());
     }
 
     public Node(byte[] ip, int port, ByteBuffer id) {
@@ -60,7 +60,7 @@ public class Node {
     }
     
     public String hash() {
-        return Generator.toHex(id.array());
+        return Converter.toHex(id.array());
     }
     
     public InetAddress address() {
@@ -114,6 +114,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node [id=" + this.c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port;
+        return "Node [id=" + this.c + ", ip=" + Converter.ip(this.ip) + ", port=" + this.port;
     }
 }

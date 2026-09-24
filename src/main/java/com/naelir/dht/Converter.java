@@ -8,14 +8,16 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
+import java.util.random.RandomGenerator;
+import java.util.random.RandomGeneratorFactory;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-public class Generator {
+public class Converter {
     // imitate something
     private static final String NAME = "-SZ1000-";
     static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+    private static final RandomGenerator RNG = RandomGeneratorFactory.of("L64X128MixRandom").create();
 
     public static byte[] client(byte[] peerId) {
         return Arrays.copyOfRange(peerId, 0, 8);
@@ -34,13 +36,12 @@ public class Generator {
     }
 
     public static String generatePeerID() {
-        String randomAlphanumeric = RandomStringUtils.randomAlphanumeric(12);
-        return NAME.concat(randomAlphanumeric);
+        return NAME.concat(RandomStringUtils.randomAlphanumeric(12));
     }
 
     public static byte[] generateRandomByteID() {
         byte[] nid = new byte[20];
-        new Random().nextBytes(nid);
+        RNG.nextBytes(nid);
         return nid;
     }
 
@@ -85,8 +86,8 @@ public class Generator {
         char[] hexChars = new char[bytes.length * 2];
         for (int j = 0; j < bytes.length; j++) {
             int v = bytes[j] & 0xFF;
-            hexChars[j * 2] = Generator.HEX_ARRAY[v >>> 4];
-            hexChars[j * 2 + 1] = Generator.HEX_ARRAY[v & 0x0F];
+            hexChars[j * 2] = Converter.HEX_ARRAY[v >>> 4];
+            hexChars[j * 2 + 1] = Converter.HEX_ARRAY[v & 0x0F];
         }
         return new String(hexChars);
     }

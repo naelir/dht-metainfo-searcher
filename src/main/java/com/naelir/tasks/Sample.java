@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.naelir.bt.Torrent;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Node;
 import com.naelir.dht.RoutingTable;
 
@@ -30,7 +30,7 @@ public class Sample {
     }
     
     public ByteBuffer byteBuffer() {
-        return ByteBuffer.wrap(Generator.toArray(torrent.infoHash()));
+        return ByteBuffer.wrap(Converter.toArray(torrent.infoHash()));
     }
     
     public synchronized void addPeer(Node list) {

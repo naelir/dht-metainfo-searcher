@@ -19,7 +19,7 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.naelir.Arguments;
+import com.naelir.Config;
 import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.db.EntryRepository;
@@ -42,7 +42,7 @@ public class Data {
     public final String tcpmyself;
     public final IFileDB fileManager;
     public final Queue<ByteBuffer> udpIds;
-    public final Arguments arguments;
+    public final Config config;
     public final EntryRepository dbRepo;
     public final Deque<MetaTorrentTask> tcptasks;
     public final Set<Pair<String, Integer>> forUpdate;
@@ -50,12 +50,12 @@ public class Data {
     public final Set<String> scrapeHashes;
     public final ILocationDb locationDb;
 
-    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, Arguments arguments) {
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, Config arguments) {
         this.udpIds = udpIds;
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
         this.locationDb = locationDb;
-        this.arguments = arguments;
+        this.config = arguments;
         this.fileManager = fm;
         this.dbRepo = getRepo();
         this.scrapeHashes = new HashSet<>();
@@ -78,8 +78,8 @@ public class Data {
     }
 
     EntryRepository getRepo() {
-        return this.arguments.connectionString != null
-                ? new MongoEntryRepository(this.arguments.connectionString, this.arguments.db, this.arguments.table)
+        return this.config.connectionString != null
+                ? new MongoEntryRepository(this.config.connectionString, this.config.db, this.config.table)
                 : new EntryRepository() {
                     @Override
                     public void close() throws Exception {

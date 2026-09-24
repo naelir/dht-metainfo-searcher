@@ -3,7 +3,7 @@ package com.naelir.tracker;
 import java.util.Map;
 import java.util.Set;
 
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.tasks.Sample;
 
 /**
@@ -49,7 +49,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
             return new byte[0];
         }
         sample.check();
-        byte[] infoHash = Generator.toArray(this.currentHash);
+        byte[] infoHash = Converter.toArray(this.currentHash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.NONE, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);
         return request.encode();
@@ -66,7 +66,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
 
     protected byte[] stop() {
         this.stopped = true;
-        byte[] infoHash = Generator.toArray(this.currentHash);
+        byte[] infoHash = Converter.toArray(this.currentHash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.STOPPED, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);
         return request.encode();

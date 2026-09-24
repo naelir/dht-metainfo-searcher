@@ -86,7 +86,7 @@ public class GetPeersResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "GetPeersResponse [id=" + Generator.toHex(this.id.array()) + ", peers=" + this.peers.size() + ", nodes="
+        return "GetPeersResponse [id=" + Converter.toHex(this.id.array()) + ", peers=" + this.peers.size() + ", nodes="
                 + this.nodes.size() + "]";
     }
 }

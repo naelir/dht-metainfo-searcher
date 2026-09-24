@@ -21,7 +21,7 @@ public class CompactInfo {
             return ByteBuffer.allocate(0);
         ByteBuffer hashes = ByteBuffer.allocate(20 * samples.size());
         for (String sample : samples) {
-            hashes.put(Generator.toArray(sample));
+            hashes.put(Converter.toArray(sample));
         }
         return hashes;
     }
@@ -74,7 +74,7 @@ public class CompactInfo {
         for (int i = 0; i < count; i++) {
             byte[] idBytes = new byte[20];
             info.get(idBytes);
-            list.add(Generator.toHex(idBytes));
+            list.add(Converter.toHex(idBytes));
         }
         return list;
     }

@@ -17,25 +17,12 @@ import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.naelir.bt.Entry;
-/**
- * Simple file-backed CRUD store.
- *
- * <p>
- * The backing file is a CSV with {@code #} as separator and three columns:
- *
- * <pre>
- *   id#name#meta
- * </pre>
- *
- * {@code meta} is serialized as a JSON string value using Jackson. The
- * {@code id} column is the unique key.
- */
+
 public class FileDB implements IFileDB {
     public static final Logger logger = LogManager.getLogger(FileDB.class);
     private static final String SEP = "#";
     private static final int SHARD_PREFIX_LEN = 3;
     public static final ObjectMapper MAPPER = new ObjectMapper();
-    /** Base directory: ~/filedb/ */
     static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     static final Path BASE_DIR = HOME.resolve("filedb");
     static final Path UNRESOLVED = HOME.resolve("unresolved");

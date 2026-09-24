@@ -18,7 +18,7 @@ public class CreateScrapeHashesTask implements ITask {
 
     @Override
     public void run() {
-        int step = data.arguments.scrapeStep;
+        int step = data.config.scrapeStep;
         int min = Math.min(step, data.unresolved.size());
         List<String> subList = data.unresolved.subList(0, min);
         data.scrapeHashes.addAll(subList);

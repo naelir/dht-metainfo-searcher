@@ -3,13 +3,12 @@ package com.naelir.tasks;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.Set;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
 import com.naelir.utp.UtpClient;
@@ -28,19 +27,19 @@ public class GetPeersTask implements ITask {
     public boolean resolved() {
         int size = this.data.samples.values()
                 .stream()
-                .filter(s -> s.checked < this.data.arguments.getPeersDepth)
+                .filter(s -> s.checked < this.data.config.getPeersDepth)
                 .toList()
                 .size();
         if (size % 10 == 0) {
             logger.info("{} samples left to check", size);
         }
-        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.arguments.getPeersDepth);
+        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.config.getPeersDepth);
     }
 
     @Override
     public void run() {
         try {
-            int step = this.data.arguments.hashesStep;
+            int step = this.data.config.hashesStep;
             logger.debug("samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
             for (Entry<String, Sample> e : this.data.samples.entrySet()) {
                 if (step <= 0) {
@@ -48,14 +47,10 @@ public class GetPeersTask implements ITask {
                 }
                 Sample sample = e.getValue();
                 String infoHash = sample.torrent.infoHash();
-                byte[] array = Generator.toArray(infoHash);
+                byte[] array = Converter.toArray(infoHash);
                 ByteBuffer wrap = ByteBuffer.wrap(array);
-                if (sample.checked < this.data.arguments.getPeersDepth) {
+                if (sample.checked < this.data.config.getPeersDepth) {
                     sample.checked++;
-                    if (sample.checked == 1 && this.data.arguments.trackerUrl != null) {
-                        this.client.obtainPeers(Set.of(infoHash), this.data.arguments.trackerUrl,
-                                this.data.arguments.trackerPort);
-                    }
                     if (sample.peers.isEmpty() == false) {
                         logger.debug("samples {} has peers, continue", infoHash);
                         continue;
@@ -65,11 +60,10 @@ public class GetPeersTask implements ITask {
                         continue;
                     }
                     List<Node> closest = sample.table.closest(sample.byteBuffer(), 1);
-
                     for (Node node : closest) {
                         ByteBuffer id = node.id();
                         sample.table.remove(id);
-                        logger.info("{} {} {} time", infoHash, Generator.toHex(id.array()), sample.checked);
+                        logger.info("{} {} {} time", infoHash, Converter.toHex(id.array()), sample.checked);
                         this.client.sendGetPeers(this.data.myself, wrap, node);
                         step--;
                     }

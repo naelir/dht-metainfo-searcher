@@ -62,7 +62,7 @@ public class FindNodeRequest implements IRequest {
 
     @Override
     public String toString() {
-        return "FindNodeRequest [id=" + Generator.toHex(this.id.array()) + ", target="
-                + Generator.toHex(this.target.array()) + "]";
+        return "FindNodeRequest [id=" + Converter.toHex(this.id.array()) + ", target="
+                + Converter.toHex(this.target.array()) + "]";
     }
 }

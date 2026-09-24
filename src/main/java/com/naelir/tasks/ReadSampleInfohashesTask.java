@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
+import com.naelir.dht.Converter;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
 
@@ -29,7 +29,7 @@ public class ReadSampleInfohashesTask implements ITask {
     @Override
     public void run() {
         try {
-            String hex = Generator.toHex(data.myself.array()).substring(0, 2);
+            String hex = Converter.toHex(data.myself.array()).substring(0, 2);
             List<String> searchable = data.fileManager.unresolved(hex);
             int i = 0;
             for (String key : searchable) {
@@ -38,7 +38,7 @@ public class ReadSampleInfohashesTask implements ITask {
                     i++;
                     continue;
                 }
-                byte[] array = Generator.toArray(key);
+                byte[] array = Converter.toArray(key);
 
                 List<Node> closest = data.table.closest(ByteBuffer.wrap(array), 2);
                 Sample value = new Sample(new Torrent(key), closest, false);
