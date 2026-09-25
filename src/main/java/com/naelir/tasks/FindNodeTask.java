@@ -15,7 +15,8 @@ public class FindNodeTask implements ITask {
     public static final Logger logger = LogManager.getLogger(FindNodeTask.class);
     private Data data;
     private UtpClient client;
-    
+    boolean exit;
+
     public FindNodeTask(UtpClient client, Data data) {
         this.client = client;
         this.data = data;
@@ -23,15 +24,18 @@ public class FindNodeTask implements ITask {
 
     @Override
     public boolean resolved() {
-        return this.data.table.nodes().size() >= this.data.config.maxNodes;
-        
+        if (this.exit) {
+            this.exit = false;
+            return true;
+        } else
+            return this.data.table.nodes().size() >= this.data.config.maxNodes;
     }
 
     @Override
     public void run() {
         try {
             Collection<Node> nodes = this.data.table.nodes();
-            int step = data.config.hashesStep;
+            int step = this.data.config.hashesStep;
             logger.info("nodes in the routing table {}", nodes.size());
             int i = 0;
             for (Node node : nodes) {
@@ -43,6 +47,9 @@ public class FindNodeTask implements ITask {
                     step--;
                     this.client.sendFindNode(this.data.myself, this.data.myself, node);
                 }
+            }
+            if (i == 0 && nodes.size() > 0) {
+                this.exit = true;
             }
             logger.info("findNodes: to {} nodes", i);
         } catch (Exception e) {

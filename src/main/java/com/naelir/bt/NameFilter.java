@@ -23,7 +23,7 @@ public class NameFilter {
     // but a part of WEB-DL
     private static final Pattern GROUP = Pattern.compile("(?!DL)[\\d\\[\\]a-zA-Z]+");
     private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
-    private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
+    private static final Pattern VALID_NAMES = Pattern.compile("[\\dA-Z][\\[\\]\\-_()\\.\\da-zA-Z]+");
 
     public static boolean fine(TorrentMeta meta) {
         String name = meta.getName();

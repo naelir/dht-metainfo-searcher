@@ -145,12 +145,13 @@ public class DhtResponseResolver {
                     logger.debug("node {} from {} denied", node, location);
                 }
             }
-        } else {
-            String hex = Converter.toHex(decode.request.target.array());
-            Sample sample = this.data.samples.get(hex);
-            logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
-            decode.nodes.forEach(e -> sample.table().insert(e));
         }
+//        else {
+//            String hex = Converter.toHex(decode.request.target.array());
+//            Sample sample = this.data.samples.get(hex);
+//            logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
+//            decode.nodes.forEach(e -> sample.table().insert(e));
+//        }
         return Optional.empty();
     }
 
@@ -201,7 +202,7 @@ public class DhtResponseResolver {
                 for (Node node : decode.nodes) {
                     Pair<String, String> location = this.data.locationDb.location(node.ip);
                     if (IpBlocker.denied(location) == false) {
-                        sample.table().insert(node);
+                        this.data.table.insert(node);
                     } else {
                         logger.debug("node {} from {} denied", node, location);
                     }
@@ -295,8 +296,8 @@ public class DhtResponseResolver {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
-                    byte[] array = Converter.toArray(hash);
-                    List<Node> closest = this.data.table.closest(ByteBuffer.wrap(array), 2);
+                    // byte[] array = Converter.toArray(hash);
+                    List<Node> closest = Collections.emptyList(); // this.data.table.closest(ByteBuffer.wrap(array), 2);
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                 } else {
                     tooFar++;

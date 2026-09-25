@@ -40,7 +40,8 @@ public class GetPeersTask implements ITask {
     public void run() {
         try {
             int step = this.data.config.hashesStep;
-            logger.debug("samples {}, in routing table {}", this.data.samples.size(), this.data.table.size());
+            int size = this.data.table.size();
+            logger.info("samples {}, in routing table {}", this.data.samples.size(), size);
             for (Entry<String, Sample> e : this.data.samples.entrySet()) {
                 if (step <= 0) {
                     break;
@@ -59,20 +60,36 @@ public class GetPeersTask implements ITask {
                         logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
-                    List<Node> closest = sample.table.closest(sample.byteBuffer(), 1);
-                    for (Node node : closest) {
-                        ByteBuffer id = node.id();
-                        sample.table.remove(id);
+                    List<Node> closest = this.data.table.closest(sample.byteBuffer(), 4);
+                    Node selected = select(sample, closest);
+                    ByteBuffer id = selected.id();
+                    if (sample.checked == this.data.config.getPeersDepth) {
                         logger.info("{} {} {} time", infoHash, Converter.toHex(id.array()), sample.checked);
-                        this.client.sendGetPeers(this.data.myself, wrap, node);
-                        step--;
+                        // clean up
+                        int t = size / 10;
+                        List<Node> q = this.data.table.closest(com.naelir.bt.Entry.FIRST_HASH, t);
+                        for (Node node : q) {
+                            this.data.table.remove(node.id());
+                        }
                     }
+                    this.client.sendGetPeers(this.data.myself, wrap, selected);
+                    step--;
                 } else {
-                    sample.table.clear();
+//                    sample.table.clear();
                 }
             }
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
+    }
+
+    private Node select(Sample sample, List<Node> closest) {
+        for (Node node : closest) {
+            if (sample.asked(node) == false) {
+                sample.addAsked(node);
+                return node;
+            }
+        }
+        return closest.iterator().next();
     }
 }

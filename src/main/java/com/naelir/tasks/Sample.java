@@ -8,53 +8,60 @@ import java.util.Set;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Converter;
 import com.naelir.dht.Node;
-import com.naelir.dht.RoutingTable;
 
 public class Sample {
     Torrent torrent;
-    RoutingTable table;
+//    RoutingTable table;
+    Set<Node> asked;
     Set<Node> peers;
     int checked;
     boolean skip;
 
     public Sample(Torrent torrent, List<Node> ask, boolean skip) {
         this.torrent = torrent;
-        this.table = new RoutingTable();
+//        this.table = new RoutingTable();
         this.peers = new HashSet<>();
+        this.asked = new HashSet<>(4);
         this.skip = skip;
-        ask.forEach(e -> this.table.insert(e));
+//        ask.forEach(e -> this.table.insert(e));
     }
-    
-    public boolean skip() {
-        return skip;
+
+    public synchronized void addAsked(Node n) {
+        this.asked.add(n);
     }
-    
-    public ByteBuffer byteBuffer() {
-        return ByteBuffer.wrap(Converter.toArray(torrent.infoHash()));
-    }
-    
+
     public synchronized void addPeer(Node list) {
         this.peers.add(list);
+    }
+
+    public synchronized boolean asked(Node node) {
+        return this.asked.contains(node);
+    }
+
+    public ByteBuffer byteBuffer() {
+        return ByteBuffer.wrap(Converter.toArray(this.torrent.infoHash()));
+    }
+
+    public void check() {
+        this.checked++;
     }
 
     public synchronized Set<Node> peers() {
         return new HashSet<>(this.peers);
     }
 
-    public Torrent torrent() {
-        return this.torrent;
+    public boolean skip() {
+        return this.skip;
     }
 
     public void skip(boolean b) {
         this.skip = b;
-        
     }
+//    public RoutingTable table() {
+//        return this.table;
+//    }
 
-    public RoutingTable table() {
-        return table;
-    }
-    
-    public void check() {
-        checked++;
+    public Torrent torrent() {
+        return this.torrent;
     }
 }

@@ -6,8 +6,9 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Data;
+import com.naelir.bt.Entry;
 import com.naelir.dht.Converter;
+import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
 
@@ -35,13 +36,16 @@ public class NextIdTask implements ITask {
         int k = 0;
         int r = 0;
         for (Sample sample : this.data.samples.values()) {
+            String infoHash = sample.torrent.infoHash();
             if (sample.torrent.meta() != null) {
                 r++;
             } else if (sample.skip) {
                 j++;
+            } else if (sample.peers.size() <= 1) {
+                i++;
+                this.data.fileManager.insert(Entry.lowPeers(infoHash));
             } else {
                 k++;
-                String infoHash = sample.torrent.infoHash();
                 logger.info("not resolved {}, peers {}", infoHash, sample.peers.size());
                 this.data.fileManager.insertUnresolved(infoHash);
             }
