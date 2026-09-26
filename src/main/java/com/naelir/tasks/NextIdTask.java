@@ -41,8 +41,10 @@ public class NextIdTask implements ITask {
                 r++;
             } else if (sample.skip) {
                 j++;
+                logger.info("skip {}, peers {}", infoHash, sample.peers.size());
             } else if (sample.peers.size() <= 1) {
                 i++;
+                logger.info("low {}, peers {}", infoHash, sample.peers.size());
                 this.data.fileManager.insert(Entry.lowPeers(infoHash));
             } else {
                 k++;
