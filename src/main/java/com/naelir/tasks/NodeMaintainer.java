@@ -73,6 +73,22 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new SaveScrapedTorrentsTask(data));
+        } else if (data.config.mode == 6) { // just ban
+            tasks.offer(new FindNodeTask(client, data));
+            tasks.offer(new FindSampleInfohashesTask(client, data));
+            GetPeersTask gpt = new GetPeersTask(client, data);
+            tasks.offer(new ITask() {
+                @Override
+                public boolean resolved() {
+                    return gpt.resolved();
+                }
+
+                @Override
+                public void run() {
+                    gpt.run();
+                }
+            });
+            tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, rotate);
     }
