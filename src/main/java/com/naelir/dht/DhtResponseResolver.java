@@ -132,8 +132,8 @@ public class DhtResponseResolver {
     private IResponse resolve(FindNodeRequest message, From from) {
         String ip = Converter.ip(from.ip);
         if (this.ipcache.getIfPresent(ip) != null) {
-            logger.debug("find node from {} will return error, scanners spam", from);
-            return new Error(201, "too many requests", message.tid);
+            logger.info("scanners spam {}", from);
+            return null;
         } else {
             this.ipcache.put(ip, Boolean.TRUE);
             List<Node> nodes = this.data.table.closest(message.target);

@@ -54,7 +54,6 @@ public class GetPeersTask implements ITask {
                 logger.info("samples {}, in routing table {}", ss, this.data.table.size());
             }
             int step = this.data.config.hashesStep;
-
             for (Entry<String, Sample> e : this.data.samples.entrySet()) {
                 if (step <= 0) {
                     break;
@@ -76,9 +75,6 @@ public class GetPeersTask implements ITask {
                     List<Node> closest = this.data.table.closest(sample.byteBuffer(), 5);
                     Node selected = select(sample, closest);
                     ByteBuffer id = selected.id();
-                    if (sample.checked == this.data.config.getPeersDepth) {
-                        logger.info("{} {} {} time", infoHash, Converter.toHex(id.array()), sample.checked);
-                    }
                     this.client.sendGetPeers(this.data.myself, wrap, selected);
                     step--;
                 }
