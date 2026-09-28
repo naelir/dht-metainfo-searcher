@@ -72,6 +72,34 @@ public class ThirdPartyFileManager {
         }
     }
     
+    public void convertEtPages(String path) {
+        Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
+        Path from = HOME.resolve(path);
+        int i = 0;
+
+        try (
+                BufferedReader reader = Files.newBufferedReader(from);
+                BufferedWriter writer = Files.newBufferedWriter(to, StandardOpenOption.CREATE,
+                        StandardOpenOption.APPEND);
+        ) {
+            ObjectMapper mapper = new ObjectMapper();
+            String line;
+//            writer.append("[");
+            while ((line = reader.readLine()) != null) {
+                i++;
+                if (i % 1000 == 0) {
+                    logger.info("processed {} lines", i);
+                }
+                extracted1(writer, mapper, line);
+                
+                
+            }
+//            writer.append("]");
+        } catch (Exception e) {
+            logger.error(i, e);
+        }
+    }
+    
     public void convertUiPages(String path) {
         Path to = HOME.resolve(RandomStringUtils.randomAlphabetic(10));
         Path from = HOME.resolve(path);
@@ -123,6 +151,41 @@ public class ThirdPartyFileManager {
             writer.newLine();
             writer.flush();
         }
+    }
+    
+
+
+
+    void extracted1(BufferedWriter writer, ObjectMapper mapper, String line)
+            throws IOException, JsonProcessingException {
+        String[] split = line.split(",");
+        String hash = split[0].toUpperCase();
+        String name = URLDecoder.decode(split[1]);
+        
+        String[] anObject = split[2].split(" ");
+        String sizeS = anObject[0];
+        String suf = anObject[1];
+        int multiplier = "KB".equals(suf) ? 1024
+                : "MB".equals(suf) ? 1024 * 1024 : "GB".equals(suf) ? 1024 * 1024 * 1024 : 0;
+        long size = 0;
+        try {
+            size = (long) (Float.valueOf(sizeS) * multiplier);
+
+        } catch (NumberFormatException e) {
+            // TODO: handle exception
+        }
+        
+        TorrentMeta meta = new TorrentMeta(hash, name, List.of(new MetaFile(name, Long.valueOf(size))));
+
+        Entry entry = TorrentMeta.toEntry(hash, meta);
+        entry.foundTime = 0;
+        writer.append(entry.hash);
+        writer.append("#");
+        writer.append(mapper.writeValueAsString(entry));
+//        writer.append(",");
+        writer.newLine();
+        writer.flush();
+        
     }
 
     void extracted(BufferedWriter writer, ObjectMapper mapper, String line)

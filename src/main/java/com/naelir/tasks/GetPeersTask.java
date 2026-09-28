@@ -54,6 +54,7 @@ public class GetPeersTask implements ITask {
                 logger.info("samples {}, in routing table {}", ss, this.data.table.size());
             }
             int step = this.data.config.hashesStep;
+
             for (Entry<String, Sample> e : this.data.samples.entrySet()) {
                 if (step <= 0) {
                     break;

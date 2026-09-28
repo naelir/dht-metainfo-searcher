@@ -20,10 +20,8 @@ import com.naelir.bt.messages.ext.ExtendedMessageHandshake;
 import com.naelir.bt.messages.ext.TorrentMetadataResponse;
 import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
-import com.naelir.dht.Data;
 import com.naelir.dht.Converter;
-import com.naelir.dht.Node;
-import com.naelir.tasks.MetaTorrentTask;
+import com.naelir.dht.Data;
 import com.naelir.tasks.Sample;
 
 import io.netty.channel.Channel;
@@ -67,16 +65,15 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         if (this.piecesReceived > 0 && this.piecesReceived < this.piecesExpected) {
             decode(false, addr, port);
         }
-        if (task.meta() == null && this.metadata.length > 0 && task.retry == false) {
-            task.retry(true);
-            logger.info("task {} will be retried over tcp {}", task.infoHash, channel.getClass().getSimpleName());
-            data.tcptasks.add(new MetaTorrentTask(new Node(address.getAddress(), port), task));
-        }
+//        if (task.meta() == null && this.metadata.length > 0 && task.retry == false) {
+//            task.retry(true);
+//            logger.info("task {} will be retried over tcp {}", task.infoHash, channel.getClass().getSimpleName());
+//            data.tcptasks.add(new MetaTorrentTask(new Node(address.getAddress(), port), task));
+//        }
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.debug("received {}", msg.getClass().getSimpleName());
         Channel channel = ctx.channel();
         InetSocketAddress remoteAddress = (InetSocketAddress) channel.remoteAddress();
         int port = remoteAddress.getPort();

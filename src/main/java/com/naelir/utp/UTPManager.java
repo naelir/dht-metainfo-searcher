@@ -66,7 +66,7 @@ public class UTPManager {
      * retry limit, so an idle connection with an empty retransmit queue would
      * otherwise never be removed — a genuine memory leak.
      */
-    private static final long IDLE_TIMEOUT_SEC = 30L;
+    private static final long IDLE_TIMEOUT_SEC = 60L;
 
     /**
      * Hard upper bound on the number of concurrently tracked connections. Acts
@@ -74,7 +74,7 @@ public class UTPManager {
      * {@link UTPConnection} instances faster than the idle timeout can reap
      * them; Guava evicts least-recently-used entries once this is exceeded.
      */
-    private static final long MAX_CONNECTIONS = 20_000L;
+    private static final long MAX_CONNECTIONS = 200L;
 
     /**
      * Active uTP sessions keyed by remote address + connection-id.
@@ -96,21 +96,17 @@ public class UTPManager {
      * </ul>
      */
     private final Cache<ConnectionKey, UTPConnection> connections = CacheBuilder.newBuilder()
-            .expireAfterAccess(Duration.ofSeconds(IDLE_TIMEOUT_SEC))
+            .expireAfterWrite(Duration.ofSeconds(IDLE_TIMEOUT_SEC))
             .maximumSize(MAX_CONNECTIONS)
-            .removalListener((RemovalListener<ConnectionKey, UTPConnection>) this::onRemoval)
-            .build();
-    // ── Fields ────────────────────────────────────────────────────────────────
-
-    private void onRemoval(RemovalNotification<ConnectionKey, UTPConnection> notification) {
-        UTPConnection utp = notification.getValue();
-        if (utp != null) {
-            utp.closeSession();
-        }
-        if (logger.isDebugEnabled()) {
-            logger.debug("uTP connection " + notification.getKey() + " removed: " + notification.getCause());
-        }
-    }
+            .removalListener((RemovalNotification<ConnectionKey, UTPConnection> n) -> {
+                UTPConnection utp = n.getValue();
+                if (utp != null) {
+                    utp.closeSession();
+                }
+                if (logger.isDebugEnabled()) {
+                    logger.debug("uTP connection " + n.getKey() + " removed: " + n.getCause());
+                }
+            }).build();
 
     public UTPConnection findConnection(String ip, int port, int connId, int type) {
         ConnectionKey key = new ConnectionKey(ip, port, connId);
@@ -179,7 +175,6 @@ public class UTPManager {
             UTPConnection.DecodeResult res = connection.decode(data);
             if ("CLOSED".equals(res.state())) {
                 this.connections.asMap().values().removeIf(v -> v == connection);
-                logger.debug("{}: {}, {}/{} connection closed", ip, port, connection.connIdRecv, connection.connIdSend);
                 connection.closeSession();
             }
             return res.response();
@@ -221,19 +216,11 @@ public class UTPManager {
      * @return list of packets that must be sent over UDP by the caller
      */
     public List<PendingPacket> tick() {
-        // Force Guava to process any pending expiration/size-based evictions
-        // (and fire the removalListener) even if no get()/put() happened on
-        // those particular entries recently.
-        this.connections.cleanUp();
         List<PendingPacket> toSend = new ArrayList<>();
         for (Map.Entry<ConnectionKey, UTPConnection> entry : new ArrayList<>(this.connections.asMap().entrySet())) {
             ConnectionKey key = entry.getKey();
             UTPConnection utp = entry.getValue();
             if (utp == null) {
-                continue;
-            }
-            if (utp.isIdle(IDLE_TIMEOUT_SEC)) {
-                this.connections.invalidate(key);
                 continue;
             }
             byte[] res = utp.tick();

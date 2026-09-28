@@ -14,10 +14,10 @@ import com.naelir.bt.Torrent;
 import com.naelir.dht.AnnouncePeerRequest;
 import com.naelir.dht.BEncoder;
 import com.naelir.dht.Command;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.FindNodeRequest;
 import com.naelir.dht.From;
-import com.naelir.dht.Converter;
 import com.naelir.dht.GetPeersRequest;
 import com.naelir.dht.IRequest;
 import com.naelir.dht.Node;
@@ -191,6 +191,9 @@ public class UtpClient implements AutoCloseable {
     }
 
     private void logTo(Object decode, From from) {
+        if (logger.isDebugEnabled() == false) {
+            return;
+        }
         logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Converter.inet(from.ip), from.port);
     }
 

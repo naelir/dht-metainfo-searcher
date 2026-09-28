@@ -10,14 +10,15 @@ import com.naelir.bt.TorrentMeta.MetaFile;
 
 public class NameFilter {
     private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
-            "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "hdts", "hdtv", "dvdr", "dvd5", "dvd9", "bgaudio");
+            "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "hdts", "hdtv", "dvdr", "dvd5",
+            "dvd9", "bgaudio");
     private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
     private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
             "-uranime");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
     private static final List<String> INVALID = List.of("torrent");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
-    public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+\\.");
+    public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+[\\.\\-]");
     public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
     // do not allow group to start with DL, because it is not the real group name,
     // but a part of WEB-DL

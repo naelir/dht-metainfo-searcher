@@ -87,6 +87,8 @@ public class UpdateSeenTorrentsTask implements ITask {
         if (list1000.isEmpty() == false) {
             this.data.dbRepo.updateMany(list1000, 600);
         }
-        this.data.clear();
+
+        this.data.forUpdate.clear();
+        this.data.scrapeHashes.clear();
     }
 }

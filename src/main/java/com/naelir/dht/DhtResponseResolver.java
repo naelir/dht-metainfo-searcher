@@ -44,10 +44,19 @@ public class DhtResponseResolver {
     }
 
     private void logFrom(Object decode, From from) {
+        if (logger.isDebugEnabled() == false) {
+            return;
+        }
         logger.debug("{}, from {}, port {}", decode, forAddress(from), from.port);
     }
 
     private void logTo(Object decode, From from) {
+        if (decode instanceof Error error) {
+            logger.error("error {}", error);
+        }
+        if (logger.isDebugEnabled() == false) {
+            return;
+        }
         logger.debug("{}, to {}, port {}", decode, forAddress(from), from.port);
     }
 
@@ -128,8 +137,9 @@ public class DhtResponseResolver {
         } else {
             this.ipcache.put(ip, Boolean.TRUE);
             List<Node> nodes = this.data.table.closest(message.target);
-            logger.debug("find node from {} {} resolved, returning {} close nodes",
-                    Converter.toHex(message.target.array()), from, nodes.size());
+            if (logger.isDebugEnabled()) {
+                logger.debug("find node from {} {} resolved, returning {} close nodes", Converter.toHex(message.target.array()), from, nodes.size());
+            }
             return new FindNodeResponse(message.tid, this.data.myself, nodes, message);
         }
     }
@@ -146,12 +156,6 @@ public class DhtResponseResolver {
                 }
             }
         }
-//        else {
-//            String hex = Converter.toHex(decode.request.target.array());
-//            Sample sample = this.data.samples.get(hex);
-//            logger.debug("receiving {} nodes for hash {}", decode.nodes.size(), hex);
-//            decode.nodes.forEach(e -> sample.table().insert(e));
-//        }
         return Optional.empty();
     }
 
@@ -296,7 +300,6 @@ public class DhtResponseResolver {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                 } else if (closeEnough(decode.request.node, hash)) {
-                    // byte[] array = Converter.toArray(hash);
                     List<Node> closest = Collections.emptyList(); // this.data.table.closest(ByteBuffer.wrap(array), 2);
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                 } else {

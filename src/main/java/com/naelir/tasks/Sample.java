@@ -11,7 +11,6 @@ import com.naelir.dht.Node;
 
 public class Sample {
     Torrent torrent;
-//    RoutingTable table;
     Set<Node> asked;
     Set<Node> peers;
     int checked;
@@ -19,17 +18,15 @@ public class Sample {
 
     public Sample(Torrent torrent, List<Node> ask, boolean skip) {
         this.torrent = torrent;
-//        this.table = new RoutingTable();
         this.peers = new HashSet<>();
         this.asked = new HashSet<>(4);
         this.skip = skip;
-//        ask.forEach(e -> this.table.insert(e));
     }
 
     public synchronized void addAsked(Node n) {
         this.asked.add(n);
     }
-
+    
     public synchronized void addPeer(Node list) {
         this.peers.add(list);
     }
