@@ -38,6 +38,7 @@ import com.naelir.utp.UtpClient;
 import com.naelir.utp.UtpOnDataListener;
 
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.IoHandlerFactory;
 import io.netty.channel.MultiThreadIoEventLoopGroup;
@@ -97,10 +98,21 @@ public final class DhtApplication implements Runnable {
             IoHandlerFactory newFactory = NioIoHandler.newFactory();
             DefaultThreadFactory threadFactory = new DefaultThreadFactory("utp-client");
             MultiThreadIoEventLoopGroup group = new MultiThreadIoEventLoopGroup(1, threadFactory, newFactory);
+            PooledByteBufAllocator customPooledAllocator = new PooledByteBufAllocator(
+                    false,       // preferDirect (use out-of-heap memory)
+                    4,          // nHeapArena (number of heap arenas)
+                    4,          // nDirectArena (number of direct arenas)
+                    8192,       // pageSize
+                    6,         // maxOrder
+                    1,          // smallCacheSize
+                    1,           // normalCacheSize,
+                    true
+                );
             Bootstrap bootstrap = new Bootstrap()
                     .group(group)
                     .channel(NioDatagramChannel.class)
                     .option(ChannelOption.SO_BROADCAST, false)
+                    .option(ChannelOption.ALLOCATOR, customPooledAllocator)
                     .handler(new InboundHandler(utp, udp, trackerUdp));
             // Bind to any available local port
             var channel = bootstrap.bind(0).sync().channel();

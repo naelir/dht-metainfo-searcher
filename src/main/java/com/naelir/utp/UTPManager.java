@@ -56,7 +56,7 @@ public class UTPManager {
      * connection with an empty retransmit queue would otherwise never be removed —
      * a genuine memory leak.
      */
-    private static final long IDLE_TIMEOUT_SEC = 60L;
+    private static final long IDLE_TIMEOUT_SEC = 45L;
     /**
      * Hard upper bound on the number of concurrently tracked connections. Acts as a
      * backstop against SYN-flood style attacks that create many
@@ -232,9 +232,6 @@ public class UTPManager {
             byte[] res = utp.tick();
             if (res != null && res.length > 0) {
                 toSend.add(new PendingPacket(key.ip(), key.port(), res));
-            }
-            if ("CLOSED".equals(utp.state)) {
-                this.connections.invalidate(key);
             }
         }
         return toSend;
