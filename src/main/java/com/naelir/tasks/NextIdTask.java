@@ -30,7 +30,6 @@ public class NextIdTask implements ITask {
     public void run() {
         this.nextId = this.data.nextId();
         String myself = Converter.toHex(this.nextId.array());
-        logger.warn("next id is {}", myself);
         int i = 0;
         int j = 0;
         int k = 0;
@@ -39,20 +38,23 @@ public class NextIdTask implements ITask {
             String infoHash = sample.torrent.infoHash();
             if (sample.torrent.meta() != null) {
                 r++;
-            } else if (sample.skip) {
-                j++;
-                logger.info("skip {}, peers {}", infoHash, sample.peers.size());
-            } else if (sample.peers.size() <= 1) {
-                i++;
-                logger.info("low {}, peers {}", infoHash, sample.peers.size());
-                this.data.fileManager.insert(Entry.lowPeers(infoHash));
             } else {
-                k++;
-                logger.info("not resolved {}, peers {}", infoHash, sample.peers.size());
-                this.data.fileManager.insertUnresolved(infoHash);
+                int size = sample.peers.size();
+                if (sample.skip) {
+                    j++;
+                    logger.debug("skip {}, peers {}", infoHash, size);
+                } else if (size <= 1) {
+                    i++;
+                    logger.debug("low {}, peers {}", infoHash, size);
+                    this.data.fileManager.insert(Entry.lowPeers(infoHash));
+                } else {
+                    k++;
+                    logger.debug("not resolved {}, peers {}", infoHash, size);
+                    this.data.fileManager.insertUnresolved(infoHash);
+                }
             }
         }
-        logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
+        logger.info("next id is {}, low peers {}, crap {}, resolved {}, not {}", myself, i, j, r, k);
         List<Node> nodes = this.data.table.closest(this.nextId, 20);
         this.data.clear();
         for (Node e : nodes) {

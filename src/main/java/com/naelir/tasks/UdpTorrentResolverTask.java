@@ -32,7 +32,7 @@ public class UdpTorrentResolverTask implements Runnable {
                 return;
             int size = this.data.udptasks.size();
             if (size > 0 && size % 10 == 0) {
-                logger.info("tasks left {}", size);
+                logger.debug("tasks left {}", size);
             }
             this.client.connectPeer(task.torrent, task.node);
         } catch (Exception e) {
