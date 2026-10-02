@@ -66,11 +66,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         if (this.piecesReceived > 0 && this.piecesReceived < this.piecesExpected) {
             decode(false, addr, port);
         }
-//        if (task.meta() == null && this.metadata.length > 0 && task.retry == false) {
-//            task.retry(true);
-//            logger.info("task {} will be retried over tcp {}", task.infoHash, channel.getClass().getSimpleName());
-//            data.tcptasks.add(new MetaTorrentTask(new Node(address.getAddress(), port), task));
-//        }
     }
 
     @Override
@@ -94,7 +89,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             channel.write(new ExtendedMessageHandshake(addr));
             channel.flush();
             logger.debug("peer {} responded: {}", eh.version, eh);
-            if (eh.metadata_size == 0 || eh.metadata_size > MAX_ALLOWED_META_SIZE) {
+            if (eh.metadata_size <= 0 || eh.metadata_size > MAX_ALLOWED_META_SIZE) {
                 logger.warn("will close peer {} metadata size {}", eh.version, eh.metadata_size);
                 ctx.close();
             }

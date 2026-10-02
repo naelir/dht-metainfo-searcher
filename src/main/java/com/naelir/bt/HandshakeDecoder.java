@@ -46,6 +46,11 @@ public class HandshakeDecoder extends ReplayingDecoder<com.naelir.bt.HandshakeDe
         case NEXT -> {
             int length = in.readInt();
             byte type = in.readByte();
+            if (length < 0 || length > ClientHandler.MAX_ALLOWED_META_SIZE) {
+                logger.warn("will close message size {}", length);
+                ctx.close();
+                return;
+            }
             if (type == BtKeys.EXTENDED_MESSAGE_ID) {
                 byte messageId = in.readByte();
                 byte[] data = new byte[length - 2];
