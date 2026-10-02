@@ -30,6 +30,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
+    static final int MAX_ALLOWED_META_SIZE = 512 * 1024;
     private static final List<String> DENIED_PRE = List.of("-XT");
     private String myself;
     private Torrent task;
@@ -93,7 +94,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             channel.write(new ExtendedMessageHandshake(addr));
             channel.flush();
             logger.debug("peer {} responded: {}", eh.version, eh);
-            if (eh.metadata_size == 0) {
+            if (eh.metadata_size == 0 || eh.metadata_size > MAX_ALLOWED_META_SIZE) {
                 logger.warn("will close peer {} metadata size {}", eh.version, eh.metadata_size);
                 ctx.close();
             }

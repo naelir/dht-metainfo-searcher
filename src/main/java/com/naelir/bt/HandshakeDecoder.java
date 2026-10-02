@@ -28,7 +28,6 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ReplayingDecoder;
 
 public class HandshakeDecoder extends ReplayingDecoder<com.naelir.bt.HandshakeDecoder.State> {
-    private static final int MAX_ALLOWED_META_SIZE = 512 * 1024;
     public static final Logger logger = LogManager.getLogger(HandshakeDecoder.class);
 
     public HandshakeDecoder() {
@@ -47,10 +46,6 @@ public class HandshakeDecoder extends ReplayingDecoder<com.naelir.bt.HandshakeDe
         case NEXT -> {
             int length = in.readInt();
             byte type = in.readByte();
-            if (length > MAX_ALLOWED_META_SIZE) {
-                logger.warn("meta size too large {}", length);
-                throw new IOException("meta size too large");
-            }
             if (type == BtKeys.EXTENDED_MESSAGE_ID) {
                 byte messageId = in.readByte();
                 byte[] data = new byte[length - 2];

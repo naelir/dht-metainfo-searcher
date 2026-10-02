@@ -40,7 +40,6 @@ public final class RoutingTable {
      * binary search can locate the correct bucket in O(log n).
      */
     private final List<RoutingBucket> buckets;
-//    private Map<String, Node> nodes;
 
     /**
      * Creates a new, empty routing table.
@@ -51,11 +50,7 @@ public final class RoutingTable {
         this.buckets = new ArrayList<>();
         // Start with one bucket covering [0, 2^160).
         this.buckets.add(new RoutingBucket(BigInteger.ZERO, MAX_ID));
-//        this.nodes = new ConcurrentHashMap<>();
     }
-    // -------------------------------------------------------------------------
-    // Public API
-    // -------------------------------------------------------------------------
 
     /**
      * Locates the index of the bucket whose range contains {@code nodeId} using
@@ -85,7 +80,8 @@ public final class RoutingTable {
     }
 
     public synchronized void clear() {
-        buckets.forEach(e -> e.nodes.clear());
+        this.buckets.clear();
+        this.buckets.add(new RoutingBucket(BigInteger.ZERO, MAX_ID));
     }
     
     public synchronized List<Node> closest(ByteBuffer targetId) {
@@ -139,18 +135,6 @@ public final class RoutingTable {
         int limit = Math.min(candidates.size(), max);
         return Collections.unmodifiableList(candidates.subList(0, limit));
     }
-//    public Node getNode(ByteBuffer id) {
-//        String hex = Generator.toHex(id.array());
-//        return this.nodes.get(hex);
-//    }
-//
-//    public Node getNode(From from) {
-//        for (Node node : this.nodes.values()) {
-//            if (Arrays.equals(node.ip, from.ip) && node.port == from.port)
-//                return node;
-//        }
-//        return null;
-//    }
 
     /**
      * Attempts to insert {@code node} into the routing table.
@@ -175,16 +159,6 @@ public final class RoutingTable {
             // Loop: re-evaluate which (now smaller) bucket the node belongs to.
         }
     }
-//    public synchronized void insertNode(Node node) {
-//        String hex = Generator.toHex(node.id.array());
-//        if (insert(node)) {
-//            this.nodes.put(hex, node);
-//        }
-//    }
-//
-//    public Collection<Node> nodes() {
-//        return Collections.unmodifiableCollection(this.nodes.values());
-//    }
 
     public Set<Node> nodes() {
         return this.buckets.stream().flatMap(e -> e.nodes().stream()).collect(Collectors.toSet());
@@ -200,24 +174,7 @@ public final class RoutingTable {
         int idx = bucketIndexFor(id);
         return this.buckets.get(idx).remove(nodeId);
     }
-//    public void removeAll(Collection<Node> expired) {
-//        for (Node node : expired) {
-//            removeNode(node.id);
-//        }
-//    }
-//
-//    public boolean removeNode(ByteBuffer nodeId) {
-//        String hex = Generator.toHex(nodeId.array());
-//        if (remove(nodeId)) {
-//            this.nodes.remove(hex);
-//            return true;
-//        }
-//        return false;
-//    }
-    // -------------------------------------------------------------------------
-    // Internal helpers
-    // -------------------------------------------------------------------------
-
+    
     /** Returns the total number of nodes held across all buckets. */
     public int size() {
         int total = 0;
