@@ -20,6 +20,11 @@ public class NodeMaintainer implements Runnable {
         if (data.config.mode == 0) {// normal search rotation
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
+            tasks.offer(new ScrapeSamplesTask(data));
+            tasks.offer(new ScrapeTask(client, data));
+            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new FilterSamplesTask(data));
+
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             tasks.offer(new ITask() {
@@ -58,12 +63,6 @@ public class NodeMaintainer implements Runnable {
                 }
             });
             tasks.offer(new NextIdTask(data));
-        } else if (data.config.mode == 3) {// resolve peers via tracker
-            tasks.offer(new FindNodeTask(client, data));
-            tasks.offer(new TrackerReadSampleInfohashesTask(data));
-            tasks.offer(new TrackerFindPeersTask(client, data));
-            tasks.offer(new WaitAnnounceTask(data));
-            tasks.offer(new CleanAnnounceTask(data));
         } else if (data.config.mode == 4) {// collect only hashes
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));

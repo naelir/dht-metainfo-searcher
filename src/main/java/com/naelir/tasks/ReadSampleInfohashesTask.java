@@ -1,6 +1,7 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -14,7 +15,6 @@ import com.naelir.dht.Node;
 
 public class ReadSampleInfohashesTask implements ITask {
     public static final Logger logger = LogManager.getLogger(ReadSampleInfohashesTask.class);
-
     private Data data;
 
     public ReadSampleInfohashesTask(Data data) {
@@ -29,25 +29,11 @@ public class ReadSampleInfohashesTask implements ITask {
     @Override
     public void run() {
         try {
-            String hex = Converter.toHex(data.myself.array()).substring(0, 2);
-            List<String> searchable = data.fileManager.unresolved(hex);
-            int i = 0;
+            List<String> searchable = data.fileManager.unresolved("xaxa");
             for (String key : searchable) {
-                String found = data.fileManager.get(key);
-                if (found != null) {
-                    i++;
-                    continue;
-                }
-                byte[] array = Converter.toArray(key);
-
-                List<Node> closest = data.table.closest(ByteBuffer.wrap(array), 2);
-                Sample value = new Sample(new Torrent(key), closest, false);
-                if (closest.isEmpty() == false) {
-                    data.samples.putIfAbsent(key, value);                    
-                }
+                Sample value = new Sample(new Torrent(key), Collections.emptyList(), false);
+                data.samples.putIfAbsent(key, value);
             }
-            logger.info("filter {} hashes, resolved {}, prefix {}", searchable.size(), i, hex);
-
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

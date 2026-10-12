@@ -64,7 +64,7 @@ public class GetPeersTask implements ITask {
                 ByteBuffer wrap = ByteBuffer.wrap(array);
                 if (sample.checked < this.data.config.getPeersDepth) {
                     sample.checked++;
-                    if (sample.peers.size() >= 3) {
+                    if (sample.peers.size() >= 10) {
                         logger.debug("samples {} has peers, continue", infoHash);
                         continue;
                     }
@@ -72,7 +72,7 @@ public class GetPeersTask implements ITask {
                         logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
-                    List<Node> closest = this.data.table.closest(sample.byteBuffer(), 5);
+                    List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
                     Node selected = select(sample, closest);
                     ByteBuffer id = selected.id();
                     this.client.sendGetPeers(this.data.myself, wrap, selected);

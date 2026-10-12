@@ -30,7 +30,6 @@ public class NextIdTask implements ITask {
     public void run() {
         this.nextId = this.data.nextId();
         String myself = Converter.toHex(this.nextId.array());
-        int i = 0;
         int j = 0;
         int k = 0;
         int r = 0;
@@ -43,10 +42,6 @@ public class NextIdTask implements ITask {
                 if (sample.skip) {
                     j++;
                     logger.debug("skip {}, peers {}", infoHash, size);
-                } else if (size <= 1) {
-                    i++;
-                    logger.debug("low {}, peers {}", infoHash, size);
-                    this.data.fileManager.insert(Entry.lowPeers(infoHash));
                 } else {
                     k++;
                     logger.debug("not resolved {}, peers {}", infoHash, size);
@@ -54,7 +49,7 @@ public class NextIdTask implements ITask {
                 }
             }
         }
-        logger.info("next id is {}, low peers {}, crap {}, resolved {}, not {}", myself, i, j, r, k);
+        logger.info("next id is {}, crap {}, resolved {}, not {}", myself, j, r, k);
         List<Node> nodes = this.data.table.closest(this.nextId, 20);
         this.data.clear();
         for (Node e : nodes) {

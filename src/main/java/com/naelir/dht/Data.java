@@ -140,7 +140,7 @@ public class Data {
     
     public void clear() {
         scrapeHashes.clear();
-        unresolved.clear();
+//        unresolved.clear();
         requestsSent.invalidateAll();
         tokensSent.invalidateAll();
         tokensReceived.invalidateAll();

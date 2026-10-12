@@ -27,8 +27,8 @@ public class Entry {
         return new Entry("low_peers", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
 
-    public static Entry lowPeersNotEu(String hash) {
-        return new Entry("low_peers_?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    public static Entry lowTrackerPeers(String hash) {
+        return new Entry("lpeerst", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
 
     public static Entry notEu(String hash) {
