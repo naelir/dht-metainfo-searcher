@@ -194,6 +194,9 @@ public class TrackerUdpManager {
                 if (peers > 0 || this.data.config.mode == 5) {
                     this.data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
                 }
+                if (peers == 0) {
+                    this.data.forRemoval.add(new ImmutablePair<>(batch.get(i), peers));
+                }
             }
             tc.completeBatch();
         }

@@ -46,6 +46,7 @@ public class Data {
     public final EntryRepository dbRepo;
     public final Deque<MetaTorrentTask> tcptasks;
     public final Set<Pair<String, Integer>> forUpdate;
+    public final Set<Pair<String, Integer>> forRemoval;
     public final List<String> unresolved;
     public final Set<String> scrapeHashes;
     public final ILocationDb locationDb;
@@ -75,6 +76,7 @@ public class Data {
         this.udptasks = new LinkedBlockingQueue<>(5000);
         this.tcptasks = new LinkedBlockingDeque<>(5000);
         this.forUpdate = new HashSet<>();
+        this.forRemoval = new HashSet<>();
     }
 
     EntryRepository getRepo() {
@@ -140,13 +142,13 @@ public class Data {
     
     public void clear() {
         scrapeHashes.clear();
-//        unresolved.clear();
         requestsSent.invalidateAll();
         tokensSent.invalidateAll();
         tokensReceived.invalidateAll();
         torrents.clear();
         samples.clear();
         forUpdate.clear();
+        forRemoval.clear();
         table.clear();
     }
 }
