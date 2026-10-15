@@ -74,7 +74,6 @@ public class GetPeersTask implements ITask {
                     }
                     List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
                     Node selected = select(sample, closest);
-                    ByteBuffer id = selected.id();
                     this.client.sendGetPeers(this.data.myself, wrap, selected);
                     step--;
                 }

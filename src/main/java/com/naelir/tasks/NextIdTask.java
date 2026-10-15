@@ -6,7 +6,6 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.Entry;
 import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;

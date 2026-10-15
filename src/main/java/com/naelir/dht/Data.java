@@ -20,10 +20,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.naelir.Config;
-import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.db.EntryRepository;
-import com.naelir.db.MongoEntryRepository;
 import com.naelir.fs.IFileDB;
 import com.naelir.fs.ILocationDb;
 import com.naelir.tasks.MetaTorrentTask;
@@ -31,7 +29,7 @@ import com.naelir.tasks.Sample;
 
 public class Data {
     public ByteBuffer myself;
-    public RoutingTable table;
+    public final RoutingTable table;
     
     public final Cache<ByteBuffer, IRequest> requestsSent;
     public final Map<String, Torrent> torrents;
@@ -51,14 +49,14 @@ public class Data {
     public final Set<String> scrapeHashes;
     public final ILocationDb locationDb;
 
-    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, Config arguments) {
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, EntryRepository repo, Config arguments) {
         this.udpIds = udpIds;
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
         this.locationDb = locationDb;
         this.config = arguments;
         this.fileManager = fm;
-        this.dbRepo = getRepo();
+        this.dbRepo = repo;
         this.scrapeHashes = new HashSet<>();
         this.unresolved = new ArrayList<>();
         // These maps are keyed by transaction id / token and only ever removed
@@ -77,61 +75,6 @@ public class Data {
         this.tcptasks = new LinkedBlockingDeque<>(5000);
         this.forUpdate = new HashSet<>();
         this.forRemoval = new HashSet<>();
-    }
-
-    EntryRepository getRepo() {
-        return this.config.connectionString != null
-                ? new MongoEntryRepository(this.config.connectionString, this.config.db, this.config.table)
-                : new EntryRepository() {
-                    @Override
-                    public void close() throws Exception {
-                    }
-
-                    @Override
-                    public long count() {
-                        return 0;
-                    }
-
-                    @Override
-                    public List<Entry> findAll(int page, int pageSize) {
-                        return null;
-                    }
-
-                    @Override
-                    public Entry findByHash(String hash) {
-                        return null;
-                    }
-
-                    @Override
-                    public List<Entry> findByName(String pattern) {
-                        return null;
-                    }
-
-                    @Override
-                    public Entry insert(Entry entry) {
-                        return null;
-                    }
-
-                    @Override
-                    public boolean remove(String hash) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean update(Entry entry) {
-                        return false;
-                    }
-
-                    @Override
-                    public long updateMany(List<String> hashes) {
-                        return 0;
-                    }
-
-                    @Override
-                    public long updateMany(List<String> hashes, int newPeerCount) {
-                        return 0;
-                    }
-                };
     }
 
     public ByteBuffer nextId() {

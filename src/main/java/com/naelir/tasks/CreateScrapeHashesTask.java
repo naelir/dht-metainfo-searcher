@@ -2,8 +2,6 @@ package com.naelir.tasks;
 
 import java.util.List;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 

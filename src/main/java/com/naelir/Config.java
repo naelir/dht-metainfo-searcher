@@ -38,12 +38,15 @@ public class Config {
                     "  --connection-string <string>  Database connection string\n" +
                     "  --db <string>                 Database name\n" +
                     "  --table <string>              Table name\n" +
+                    "  --unresolved-file-in <path>   File with unresolved hashes to read in (default: none)\n" +
+                    "  --scrape-file-in <path>       File with scrape results to read in (default: none)\n" +
+                    "  --scrape-file-out <path>      File to write scrape results to (default: none)\n" +
                     "  --get-peers-depth <int>       Number of get-peers depth per hash (default: 5)\n" +
                     "  --hashes-step <int>           Number of hashes to send get-peers at once (default: 5)\n" +
                     "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
                     "  --max-nodes <int>             Maximum number of DHT nodes (default: 200)\n" +
                     "  --mode <int>                  Operating mode (default: 0) 0 - search iteratively over bitspace, 1 - scrape, 2 - search predefined hashes\n" +
-                    "  --resolver-millis <int>       Milliseconds to wait for metadata resolution (default: 500)\n" +
+                    "  --resolver-millis <int>       wait in milliseconds before submitting new utp connection task (default: 500)\n" +
                     "  --schedule-interval <int>     Schedule interval in seconds (default: 3)\n" +
                     "  --scrape-step <int>           Number of hashes between scrape calls (default: 2000)\n" +
                     "  --tracker-url <host>          Tracker host address\n" +
@@ -239,7 +242,6 @@ public class Config {
         public String unresolvedFile;
         private int bitspaceParts = 200;
         private String from;
-        private boolean onlyHashes;
         private String connectionString;
         private String db;
         private String table;
@@ -324,11 +326,6 @@ public class Config {
 
         public Builder db(String db) {
             this.db = db;
-            return this;
-        }
-
-        public Builder onlyHashes(boolean onlyHashes) {
-            this.onlyHashes = onlyHashes;
             return this;
         }
 

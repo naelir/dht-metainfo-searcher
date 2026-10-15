@@ -1,6 +1,5 @@
 package com.naelir.tasks;
 
-import java.nio.ByteBuffer;
 import java.util.Collections;
 import java.util.List;
 
@@ -9,9 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
-import com.naelir.dht.Converter;
 import com.naelir.dht.ITask;
-import com.naelir.dht.Node;
 
 public class ReadSampleInfohashesTask implements ITask {
     public static final Logger logger = LogManager.getLogger(ReadSampleInfohashesTask.class);

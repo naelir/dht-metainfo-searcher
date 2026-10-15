@@ -16,9 +16,12 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
+import com.naelir.db.EntryRepository;
+import com.naelir.db.MongoEntryRepository;
+import com.naelir.db.NullEntryRepository;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.DhtResponseResolver;
-import com.naelir.dht.Converter;
 import com.naelir.dht.Node;
 import com.naelir.dht.SavedCompactInfo;
 import com.naelir.dht.UdpOnDataListener;
@@ -80,7 +83,10 @@ public final class DhtApplication implements Runnable {
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();
             ILocationDb locationDb = FileLocationDb.INSTANCE;
-            Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, this.arguments);
+            EntryRepository repo = arguments.connectionString != null
+                    ? new MongoEntryRepository(arguments.connectionString, arguments.db, arguments.table)
+                    : new NullEntryRepository();
+            Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, repo, this.arguments);
 
             if (arguments.mode == 1 || arguments.mode == 5) {
                 List<String> all = fileDB.readScrape(arguments.scrapeIn);

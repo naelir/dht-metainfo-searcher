@@ -74,10 +74,6 @@ public class FileDB implements IFileDB {
         return id.substring(0, SHARD_PREFIX_LEN).toUpperCase();
     }
 
-    private static String toEntryLine(String hash, String json) throws IOException {
-        return hash + SEP + json;
-    }
-
     private BufferedWriter fineWriter;
     private BufferedWriter unresolvedWriter;
     private BufferedWriter resolvedWriter;
