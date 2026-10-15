@@ -63,6 +63,7 @@ public class NodeMaintainer implements Runnable {
                 }
             });
             tasks.offer(new NextIdTask(data));
+            rotate = false;
         } else if (data.config.mode == 4) {// collect only hashes
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));

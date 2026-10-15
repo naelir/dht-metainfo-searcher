@@ -1,7 +1,5 @@
 package com.naelir.tasks;
 
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,13 +23,12 @@ public class FilterSamplesTask implements ITask {
     @Override
     public void run() {
         logger.info("samples before {}", data.samples.size());
-        this.data.forUpdate.stream()
-                .filter(e -> e.getValue() < 3)
+        this.data.forRemoval.stream()
                 .forEach(e -> {
                     data.samples.remove(e.getKey());
                     data.fileManager.insert(Entry.lowTrackerPeers(e.getKey()));
                 });
-        this.data.forUpdate.clear();
+        this.data.forRemoval.clear();
         this.data.scrapeHashes.clear();
         logger.info("samples after {}", data.samples.size());
 
