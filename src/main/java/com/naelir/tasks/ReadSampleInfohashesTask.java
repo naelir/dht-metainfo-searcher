@@ -29,7 +29,7 @@ public class ReadSampleInfohashesTask implements ITask {
     @Override
     public void run() {
         try {
-            List<String> searchable = data.fileManager.unresolved("xaxa");
+            List<String> searchable = data.fileManager.unresolved(data.config.unresolvedFile);
             for (String key : searchable) {
                 Sample value = new Sample(new Torrent(key), Collections.emptyList(), false);
                 data.samples.putIfAbsent(key, value);

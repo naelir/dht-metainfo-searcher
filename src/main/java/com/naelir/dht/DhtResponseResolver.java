@@ -132,7 +132,7 @@ public class DhtResponseResolver {
     private IResponse resolve(FindNodeRequest message, From from) {
         String ip = Converter.ip(from.ip);
         if (this.ipcache.getIfPresent(ip) != null) {
-            logger.info("scanners spam {}", from);
+            logger.debug("scanners spam {}", from);
             return null;
         } else {
             this.ipcache.put(ip, Boolean.TRUE);
