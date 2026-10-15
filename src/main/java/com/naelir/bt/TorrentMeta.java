@@ -194,6 +194,10 @@ public class TorrentMeta {
         for (MetaFile b : meta.list) {
             size += b.bytes;
         }
-        return new Entry(meta.getName(), infoHash, meta.count, meta.getFound(), size, genre.getTxt(), 0);
+        String name = meta.getName();
+        if (name.indexOf(',') >= 0) {
+            name = name.replace(',', '_');
+        }
+        return new Entry(name, infoHash, meta.count, meta.getFound(), size, genre.getTxt(), 0);
     }
 }

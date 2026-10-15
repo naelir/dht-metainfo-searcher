@@ -20,7 +20,7 @@ import com.naelir.bt.Entry;
 
 public class FileDB implements IFileDB {
     public static final Logger logger = LogManager.getLogger(FileDB.class);
-    private static final String SEP = "#";
+    private static final String SEP = ",";
     private static final int SHARD_PREFIX_LEN = 3;
     public static final ObjectMapper MAPPER = new ObjectMapper();
     static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
@@ -101,12 +101,11 @@ public class FileDB implements IFileDB {
             String prefix = shardPrefixForId(fr.hash);
             Path shard = shardPath(prefix);
             try (BufferedWriter writer = Files.newBufferedWriter(shard, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)) {
-                String json = MAPPER.writeValueAsString(fr);
-                String entryLine = toEntryLine(fr.hash, json);
-                writer.write(entryLine);
+                String line = fr.toLine();
+                writer.write(line);
                 writer.newLine();
                 
-                resolvedWriter.write(entryLine);
+                resolvedWriter.write(line);
                 resolvedWriter.newLine();
                 resolvedWriter.flush();
             }
@@ -119,8 +118,7 @@ public class FileDB implements IFileDB {
     @Override
     public void fine(Entry fr) {
         try {
-            String json = MAPPER.writeValueAsString(fr);            
-            fineWriter.write(json);
+            fineWriter.write(fr.toLine());
             fineWriter.newLine();
             fineWriter.flush();
         } catch (Exception e) {
@@ -183,20 +181,12 @@ public class FileDB implements IFileDB {
     @Override
     public void writeScrape(String path, Set<Pair<String, Integer>> set) {
         try (
-                BufferedWriter writer = Files.newBufferedWriter(UNRESOLVED.resolve(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
                 BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path.concat(".0")), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
         ) {
             for (Pair<String, Integer> e : set) {
                 if (e.getValue() == 0) {
-                    writer0.append(e.getKey());
-                    writer0.append("#");
-                    writer0.append(e.getValue().toString());
+                    writer0.append(Entry.lowPeers(e.getKey()).toLine());
                     writer0.append("\n");
-                } else {
-                    writer.append(e.getKey());
-                    writer.append("#");
-                    writer.append(e.getValue().toString());
-                    writer.append("\n");
                 }
             }
         } catch (IOException e) {

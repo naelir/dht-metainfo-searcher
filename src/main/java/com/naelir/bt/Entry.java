@@ -16,27 +16,11 @@ public class Entry {
     }
 
     public static Entry crap(String hash) {
-        return new Entry("chinese_korean_ru", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-
-    public static Entry empty() {
-        return new Entry("empty", ANY_HASH, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("c", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
 
     public static Entry lowPeers(String hash) {
-        return new Entry("low_peers", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-
-    public static Entry lowTrackerPeers(String hash) {
-        return new Entry("lpeerst", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-
-    public static Entry notEu(String hash) {
-        return new Entry("not_eu", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-
-    public static Entry unresolved(String hash) {
-        return new Entry("unresolved", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("l", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
     }
 
     @JsonProperty("n")
@@ -83,5 +67,9 @@ public class Entry {
     @Override
     public int hashCode() {
         return Objects.hash(this.hash);
+    }
+    
+    public String toLine() {
+        return String.format("%s,%s,%d,%d,%s", hash, name, fileCount, size, genre);
     }
 }
