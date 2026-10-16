@@ -12,15 +12,15 @@ public class Entry {
     public static final ByteBuffer FIRST_HASH = ByteBuffer.wrap(Converter.toArray(ANY_HASH));
 
     public static Entry ban(String name, String hash) {
-        return new Entry(name, hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry(name, hash, 0, 0, 0, Genre.NA.name(), 0);
     }
 
     public static Entry crap(String hash) {
-        return new Entry("c", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("c", hash, 0, 0, 0, Genre.NA.name(), 0);
     }
 
     public static Entry lowPeers(String hash) {
-        return new Entry("l", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("l", hash, 0, 0, 0, Genre.NA.getTxt(), 0);
     }
 
     @JsonProperty("n")
@@ -70,6 +70,7 @@ public class Entry {
     }
     
     public String toLine() {
-        return String.format("%s,%s,%d,%d,%s", hash, name, fileCount, size, genre);
+        String n = name.contains(",") ? name.replace(",", "_") : name;
+        return String.format("%s,%s,%d,%d,%s", hash, n, fileCount, size, genre);
     }
 }

@@ -11,12 +11,10 @@ public class IpBlocker {
     private static final List<String> ALLOWED = Arrays.asList("EU");
     
     private static final List<String> DENIED_EXCEPTIONS = Arrays.asList("TR", "AU");
-    private static final List<String> DENIED_ADDITIONS = Arrays.asList("RU");
 
 
     public static boolean denied(Pair<String, String> location) {
-        return DENIED_EXCEPTIONS.contains(location.getRight()) == false
-                && (DENIED.contains(location.getLeft()) || DENIED_ADDITIONS.contains(location.getRight()));
+        return DENIED_EXCEPTIONS.contains(location.getRight()) == false && (DENIED.contains(location.getLeft()));
     }
 
     public static boolean allowed(Pair<String, String> location) {

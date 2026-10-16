@@ -17,7 +17,7 @@ public class NameFilter {
             "-uranime", "-yurasuka", "-crucible");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
     private static final List<String> INVALID = List.of("torrent");
-    private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
+    private static final List<Genre> DENIED_GENRES = List.of(Genre.NA, Genre.XXX, Genre.TVEP);
     public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+[\\.\\-]");
     public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
     // do not allow group to start with DL, because it is not the real group name,
@@ -41,12 +41,12 @@ public class NameFilter {
 
     public static Genre from(String name, List<MetaFile> list) {
         if (name == null)
-            return Genre.UNKNOWN;
+            return Genre.NA;
         String lower = StringUtils.lowerCase(name);
         if (matchKeyword(lower, XXX))
             return Genre.XXX;
         else if (matchKeyword(lower, INVALID))
-            return Genre.UNKNOWN;
+            return Genre.NA;
         else if (matchKeyword(lower, ANIME_KEYWORDS))
             return Genre.ANIME;
         else if (TV_SERIES.matcher(name).find())
@@ -70,7 +70,7 @@ public class NameFilter {
             return Genre.GAME_PC;
         else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
             return Genre.GAME_REPACK;
-        return Genre.UNKNOWN;
+        return Genre.NA;
     }
 
     public static boolean match(String name) {
