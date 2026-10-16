@@ -14,7 +14,7 @@ public class NameFilter {
             "dvd9", "bgaudio");
     private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
     private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
-            "-uranime", "-yurasuka", "-crucible");
+            "-uranime", "-yurasuka", "-crucible", "-iahd");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
     private static final List<String> INVALID = List.of("torrent");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.NA, Genre.XXX, Genre.TVEP);
