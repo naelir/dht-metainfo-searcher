@@ -16,8 +16,10 @@ public class NameFilter {
     private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
             "-uranime", "-yurasuka", "-crucible", "-iahd");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
-    private static final List<String> INVALID = List.of("torrent");
+
+    private static final List<String> INVALID = List.of("torrent", "new-team", "hq-video", "hellywood");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.NA, Genre.XXX, Genre.TVEP);
+
     public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+[\\.\\-]");
     public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
     // do not allow group to start with DL, because it is not the real group name,
