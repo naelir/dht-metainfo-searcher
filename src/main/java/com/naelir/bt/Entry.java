@@ -23,6 +23,16 @@ public class Entry {
         return new Entry("l", hash, 0, 0, 0, Genre.NA.getTxt(), 0);
     }
 
+    public static String toLine(Entry e) {
+        String n = e.name.contains(",") ? e.name.replace(",", "_") : e.name;
+        return String.format("%s,%s,%d,%d,%s", e.hash, e.name, e.fileCount, e.size, e.genre);
+    }
+
+    public static Entry fromLine(String e) {
+        String[] split = e.split(",");
+        return new Entry(split[1], split[0], Integer.parseInt(split[2]), 0, Long.parseLong(split[3]), split[4], 0);
+    }
+
     @JsonProperty("n")
     public String name;
     @JsonProperty("h")
@@ -67,10 +77,5 @@ public class Entry {
     @Override
     public int hashCode() {
         return Objects.hash(this.hash);
-    }
-    
-    public String toLine() {
-        String n = name.contains(",") ? name.replace(",", "_") : name;
-        return String.format("%s,%s,%d,%d,%s", hash, n, fileCount, size, genre);
     }
 }

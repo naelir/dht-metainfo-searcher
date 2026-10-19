@@ -1,7 +1,6 @@
 package com.naelir.tasks;
 
-import java.util.Set;
-
+import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 
@@ -16,8 +15,8 @@ public class ScrapeSamplesTask implements ITask {
 
     @Override
     public void run() {
-        Set<String> keySet = data.samples.keySet();
-        data.scrapeHashes.addAll(keySet);
+        data.samples.keySet()
+                .forEach(e -> data.scrapeHashes.add(Entry.lowPeers(e)));
     }
 
     @Override

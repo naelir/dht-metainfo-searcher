@@ -6,12 +6,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -97,7 +95,7 @@ public class FileDB implements IFileDB {
             String prefix = shardPrefixForId(fr.hash);
             Path shard = shardPath(prefix);
             try (BufferedWriter writer = Files.newBufferedWriter(shard, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)) {
-                String line = fr.toLine();
+                String line = Entry.toLine(fr);
                 writer.write(line);
                 writer.newLine();
                 
@@ -114,7 +112,7 @@ public class FileDB implements IFileDB {
     @Override
     public void fine(Entry fr) {
         try {
-            fineWriter.write(fr.toLine());
+            fineWriter.write(Entry.toLine(fr));
             fineWriter.newLine();
             fineWriter.flush();
         } catch (Exception e) {
@@ -154,34 +152,30 @@ public class FileDB implements IFileDB {
     }
     
     @Override
-    public List<String> readScrape(String path) {
-        List<String> result = new ArrayList<>();
+    public Set<Entry> readScrape(String path) {
+        Set<Entry> result = new HashSet<>();
         int i = 0;
         try (BufferedReader reader = Files.newBufferedReader(UNRESOLVED.resolve(path))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
-                if (line.isBlank() || line.length() < 40) {
-                    continue;
-                }
-                result.add(line);                
+                result.add(Entry.fromLine(line));                
             }
         } catch (IOException e) {
             logger.error("on line {}", i);
         }
-
         return result;
     }
     
 
     @Override
-    public void writeScrape(String path, Set<Pair<String, Integer>> set) {
+    public void writeScrape(String path, Set<Entry> set) {
         try (
-                BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path.concat(".0")), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
+                BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
         ) {
-            for (Pair<String, Integer> e : set) {
-                if (e.getValue() == 0) {
-                    writer0.append(Entry.lowPeers(e.getKey()).toLine());
+            for (Entry e : set) {
+                if (e.peers == 0) {
+                    writer0.append(Entry.toLine(e));
                     writer0.append("\n");
                 }
             }
@@ -189,22 +183,5 @@ public class FileDB implements IFileDB {
             logger.error("error when writing scrapes", e);
         }
     }
-    
-    @Override
-    public List<String> unresolved(String path0) {
-        List<String> result = new ArrayList<>();
-        int i = 0;
-        Path path = UNRESOLVED.resolve(path0);
-        try (BufferedReader reader = Files.newBufferedReader(path)) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                i++;
-                result.add(line.substring(0, 40));
-            }
-        } catch (IOException e) {
-            logger.error("on line {}", i);
-        }
 
-        return result;
-    }
 }

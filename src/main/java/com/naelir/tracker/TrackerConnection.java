@@ -8,6 +8,8 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
+
 /**
  * Represents an ongoing UDP tracker session for a given tracker host.
  *
@@ -42,12 +44,12 @@ public class TrackerConnection {
 
     // ── scrape state ─────────────────────────────────────────────────────────
     /** All hashes that still need stats (the ones we haven't sent yet + pending). */
-    protected final List<String> allHashes;
+    protected final List<Entry> allHashes;
 
 
     // ─────────────────────────────────────────────────────────────────────────
 
-    public TrackerConnection(String hostAddress, int port, Set<String> hashes) {
+    public TrackerConnection(String hostAddress, int port, Set<Entry> hashes) {
         this.hostAddress = hostAddress;
         this.port        = port;
         this.allHashes   = new ArrayList<>(hashes);

@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Data;
 import com.naelir.dht.From;
@@ -117,8 +117,8 @@ public class TrackerUdpManager {
             logger.warn("Received scrape response with unknown transactionId={} from {}", resp.transactionId, from);
             return Optional.empty();
         }
-        String currentHash = tc.getCurrentHash();
-        Sample sample = this.data.samples.get(currentHash);
+        Entry currentHash = tc.getCurrentHash();
+        Sample sample = this.data.samples.get(currentHash.hash);
         if (sample == null || tc.stopped)
             return Optional.empty();
         logger.info("found {} peers for {}", resp.peers.size(), currentHash);
@@ -182,7 +182,7 @@ public class TrackerUdpManager {
         }
         // Process stats for the current in-flight batch.
         if (tc.isBatchPending()) {
-            List<String> batch = tc.currentBatch();
+            List<Entry> batch = tc.currentBatch();
             for (int i = 0; i < batch.size(); i++) {
                 if (i >= resp.stats.size()) {
                     logger.warn("Scrape response missing stats at index {} for hash {}", i, batch.get(i));
@@ -191,11 +191,12 @@ public class TrackerUdpManager {
                 TorrentStats stats = resp.stats.get(i);
                 logger.debug("Scrape stats for {}: {}", batch.get(i), stats);
                 int peers = stats.seeders();// + stats.leechers()/* + stats.completed() */;
-                if (peers > 0 || this.data.config.mode == 5) {
-                    this.data.forUpdate.add(new ImmutablePair<>(batch.get(i), peers));
-                }
-                if (peers == 0) {
-                    this.data.forRemoval.add(new ImmutablePair<>(batch.get(i), peers));
+                var entry = batch.get(i);
+                entry.peers = peers;
+                if (peers > 0) {
+                    this.data.forUpdate.add(entry);
+                } else {
+                    this.data.forRemoval.add(entry);
                 }
             }
             tc.completeBatch();

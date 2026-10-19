@@ -24,36 +24,36 @@ public class UpdateSeenTorrentsTask implements ITask {
     @Override
     public void run() {
         List<String> list3 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 0 && e.getValue() <= 3)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 0 && e.peers <= 3)
+                .map(e -> e.hash)
                 .toList();
         List<String> list10 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 3 && e.getValue() <= 10)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 3 && e.peers <= 10)
+                .map(e -> e.hash)
                 .toList();
         List<String> list25 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 10 && e.getValue() <= 25)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 10 && e.peers <= 25)
+                .map(e -> e.hash)
                 .toList();
         List<String> list50 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 25 && e.getValue() <= 50)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 25 && e.peers <= 50)
+                .map(e -> e.hash)
                 .toList();
         List<String> list100 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 50 && e.getValue() <= 100)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 50 && e.peers <= 100)
+                .map(e -> e.hash)
                 .toList();
         List<String> list250 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 100 && e.getValue() <= 250)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 100 && e.peers <= 250)
+                .map(e -> e.hash)
                 .toList();
         List<String> list500 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 250 && e.getValue() <= 500)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 250 && e.peers <= 500)
+                .map(e -> e.hash)
                 .toList();
         List<String> list1000 = this.data.forUpdate.stream()
-                .filter(e -> e.getValue() > 500)
-                .map(e -> e.getKey())
+                .filter(e -> e.peers > 500)
+                .map(e -> e.hash)
                 .toList();
         logger.info("updating {} seen torrents /under 3 peers/", list3.size());
         if (list3.isEmpty() == false) {

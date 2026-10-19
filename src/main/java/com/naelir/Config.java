@@ -15,7 +15,6 @@ public class Config {
         String table = null;
         String scrapeOut = null;
         String scrapeIn = null;
-        String unresolvedIn = null;
         int getPeerDepth = 5;
         int minPeers = 1;
         int maxNodes = 200;
@@ -96,11 +95,6 @@ public class Config {
                     throw new IllegalArgumentException("Missing value for --table");
                 table = args[++i];
                 break;
-            case "--unresolved-file-in":
-                if (i + 1 >= args.length)
-                    throw new IllegalArgumentException("Missing value for --table");
-                unresolvedIn = args[++i];
-                break;
             case "--scrape-file-in":
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --table");
@@ -178,7 +172,6 @@ public class Config {
                 .resolverMillis(resolverMillis)
                 .scrapeIn(scrapeIn)
                 .scrapeOut(scrapeOut)
-                .unresolvedIn(unresolvedIn)
                 .build();
     }
 
@@ -196,7 +189,6 @@ public class Config {
     public final int maxNodes;
     public final int scheduleInterval;
     public final String scrapeFile;
-    public final String unresolvedFile;
     public final int hashesStep;
     public final String to;
     public final int resolverMillis;
@@ -234,12 +226,10 @@ public class Config {
         this.resolverMillis = builder.resolverMillis;
         this.scrapeIn = builder.scrapeIn;
         this.scrapeOut = builder.scrapeOut;
-        this.unresolvedFile = builder.unresolvedFile;
     }
     
 
     public static class Builder {
-        public String unresolvedFile;
         private int bitspaceParts = 200;
         private String from;
         private String connectionString;
@@ -267,11 +257,6 @@ public class Config {
         
         public Builder scrapeIn(String scrapeIn) {
             this.scrapeIn = scrapeIn;
-            return this;
-        }
-        
-        public Builder unresolvedIn(String scrapeIn) {
-            this.unresolvedFile = scrapeIn;
             return this;
         }
         

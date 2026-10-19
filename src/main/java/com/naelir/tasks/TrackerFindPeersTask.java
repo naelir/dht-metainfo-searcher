@@ -2,10 +2,12 @@ package com.naelir.tasks;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.utp.UtpClient;
@@ -29,7 +31,10 @@ public class TrackerFindPeersTask implements ITask {
     @Override
     public void run() {
         try {
-            Set<String> set = new HashSet<String>(data.samples.keySet());
+            Set<Entry> set = data.samples.keySet()
+                    .stream()
+                    .map(e -> Entry.lowPeers(e))
+                    .collect(Collectors.toCollection(HashSet::new));
             if (set.isEmpty()) {
                 logger.info("No samples to find peers for");
                 return;

@@ -6,7 +6,7 @@ import com.naelir.dht.ITask;
 public class WaitAnnounceTask implements ITask {
      
     private Data data;
-    int i = 5;
+    int i = 7;
 
     public WaitAnnounceTask(Data data) {
         this.data = data;
@@ -14,7 +14,7 @@ public class WaitAnnounceTask implements ITask {
     
     @Override
     public boolean resolved() {
-        return data.tcptasks.isEmpty() && i <= 0;
+        return i <= 0;
     }
 
     @Override

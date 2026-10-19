@@ -295,7 +295,7 @@ public class DhtResponseResolver {
             int i = 0;
             int tooFar = 0;
             for (String hash : decode.samples) {
-                String value = this.data.config.mode != 4 ? this.data.fileManager.get(hash) : null;
+                String value = this.data.fileManager.get(hash);
                 if (value != null) {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;

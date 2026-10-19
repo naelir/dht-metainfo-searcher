@@ -10,6 +10,7 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.AnnouncePeerRequest;
 import com.naelir.dht.BEncoder;
@@ -179,7 +180,7 @@ public class UtpClient implements AutoCloseable {
                 from.port);
     }
 
-    public void obtainPeers(Set<String> list, InetAddress addr, int port) throws Exception {
+    public void obtainPeers(Set<Entry> list, InetAddress addr, int port) throws Exception {
         TrackerConnection tc = new AnnounceTrackerConnection(addr.getHostAddress(), port, list,
                 this.data.myself.array(), this.data.samples);
         byte[] encode = this.trackerUdpManager.newConnection(tc);
@@ -188,7 +189,7 @@ public class UtpClient implements AutoCloseable {
         }
     }
 
-    public void scrape(Set<String> hashes, InetAddress addr, int port) throws Exception {
+    public void scrape(Set<Entry> hashes, InetAddress addr, int port) throws Exception {
         TrackerConnection tc = new ScrapeTrackerConnection(addr.getHostAddress(), port, hashes);
         byte[] encode = this.trackerUdpManager.newConnection(tc);
         if (encode != null && encode.length > 0) {

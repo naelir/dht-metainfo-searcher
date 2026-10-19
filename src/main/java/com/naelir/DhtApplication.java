@@ -5,6 +5,7 @@ import java.nio.ByteBuffer;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Set;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.Semaphore;
@@ -16,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BitSpaceDivider;
 import com.naelir.bt.BtTcpClient;
+import com.naelir.bt.Entry;
 import com.naelir.db.EntryRepository;
 import com.naelir.db.MongoEntryRepository;
 import com.naelir.db.NullEntryRepository;
@@ -88,8 +90,8 @@ public final class DhtApplication implements Runnable {
                     : new NullEntryRepository();
             Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, repo, this.arguments);
 
-            if (arguments.mode == 1 || arguments.mode == 5) {
-                List<String> all = fileDB.readScrape(arguments.scrapeIn);
+            if (arguments.mode > 0) {
+                Set<Entry> all = fileDB.readScrape(arguments.scrapeIn);
                 data.unresolved.addAll(all);
                 logger.info("loaded {} unresolved", all.size());
             }
@@ -147,7 +149,7 @@ public final class DhtApplication implements Runnable {
                     logger.info("Received SIGTERM, shutting down");
                     semaphore.release();
 
-                    if (arguments.mode != 1) {
+                    if (arguments.mode == 0) {
                         List<Node> nodes = data.table.closest(data.myself, 20);
                         peersFm.saveCompactInfo(data.myself, nodes);
                         logger.info("stopped with {}", Converter.toHex(data.myself.array()));

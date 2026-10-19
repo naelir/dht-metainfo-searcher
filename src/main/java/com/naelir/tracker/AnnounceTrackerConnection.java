@@ -3,6 +3,7 @@ package com.naelir.tracker;
 import java.util.Map;
 import java.util.Set;
 
+import com.naelir.bt.Entry;
 import com.naelir.dht.Converter;
 import com.naelir.tasks.Sample;
 
@@ -20,11 +21,11 @@ public class AnnounceTrackerConnection extends TrackerConnection {
     private static final int DEFAULT_NUM_WANT = 10;
     /** 20-byte peer id used for every announce issued by this connection. */
     private final byte[] peerId;
-    private String currentHash;
+    private Entry currentHash;
     private Map<String, Sample> samples;
     boolean stopped;
 
-    public AnnounceTrackerConnection(String hostAddress, int port, Set<String> hashes, byte[] peerId,
+    public AnnounceTrackerConnection(String hostAddress, int port, Set<Entry> hashes, byte[] peerId,
             Map<String, Sample> samples) {
         super(hostAddress, port, hashes);
         this.peerId = peerId;
@@ -49,13 +50,13 @@ public class AnnounceTrackerConnection extends TrackerConnection {
             return new byte[0];
         }
         sample.check();
-        byte[] infoHash = Converter.toArray(this.currentHash);
+        byte[] infoHash = Converter.toArray(this.currentHash.hash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.NONE, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);
         return request.encode();
     }
 
-    public String getCurrentHash() {
+    public Entry getCurrentHash() {
         return this.currentHash;
     }
 
@@ -66,7 +67,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
 
     protected byte[] stop() {
         this.stopped = true;
-        byte[] infoHash = Converter.toArray(this.currentHash);
+        byte[] infoHash = Converter.toArray(this.currentHash.hash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.STOPPED, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);
         return request.encode();

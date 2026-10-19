@@ -15,11 +15,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.naelir.Config;
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.db.EntryRepository;
 import com.naelir.fs.IFileDB;
@@ -43,10 +42,10 @@ public class Data {
     public final Config config;
     public final EntryRepository dbRepo;
     public final Deque<MetaTorrentTask> tcptasks;
-    public final Set<Pair<String, Integer>> forUpdate;
-    public final Set<Pair<String, Integer>> forRemoval;
-    public final List<String> unresolved;
-    public final Set<String> scrapeHashes;
+    public final Set<Entry> forUpdate;
+    public final Set<Entry> forRemoval;
+    public final List<Entry> unresolved;
+    public final Set<Entry> scrapeHashes;
     public final ILocationDb locationDb;
 
     public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, EntryRepository repo, Config arguments) {

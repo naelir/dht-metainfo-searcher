@@ -2,6 +2,7 @@ package com.naelir.tasks;
 
 import java.util.List;
 
+import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 
@@ -18,7 +19,7 @@ public class CreateScrapeHashesTask implements ITask {
     public void run() {
         int step = data.config.scrapeStep;
         int min = Math.min(step, data.unresolved.size());
-        List<String> subList = data.unresolved.subList(0, min);
+        List<Entry> subList = data.unresolved.subList(0, min);
         data.scrapeHashes.addAll(subList);
         data.unresolved.removeAll(subList);
     }

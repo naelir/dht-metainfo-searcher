@@ -45,50 +45,11 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new UpdateSeenTorrentsTask(data));
-        } else if (data.config.mode == 2) {// resolve predefined list of hashes
-            tasks.offer(new FindNodeTask(client, data));
-            tasks.offer(new ReadSampleInfohashesTask(data));
-            GetPeersTask gpt = new GetPeersTask(client, data);
-            CreateMetaTask ct = new CreateMetaTask(data);
-            tasks.offer(new ITask() {
-                @Override
-                public boolean resolved() {
-                    return gpt.resolved();
-                }
-
-                @Override
-                public void run() {
-                    gpt.run();
-                    ct.run();
-                }
-            });
-            tasks.offer(new NextIdTask(data));
-            rotate = false;
-        } else if (data.config.mode == 4) {// collect only hashes
-            tasks.offer(new FindNodeTask(client, data));
-            tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new NextIdTask(data));
-        } else if (data.config.mode == 5) { // scrape unresolved
+        } else if (data.config.mode == 2) { // scrape unresolved
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new SaveScrapedTorrentsTask(data));
-        } else if (data.config.mode == 6) { // just ban
-            tasks.offer(new FindNodeTask(client, data));
-            tasks.offer(new FindSampleInfohashesTask(client, data));
-            GetPeersTask gpt = new GetPeersTask(client, data);
-            tasks.offer(new ITask() {
-                @Override
-                public boolean resolved() {
-                    return gpt.resolved();
-                }
-
-                @Override
-                public void run() {
-                    gpt.run();
-                }
-            });
-            tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, rotate);
     }

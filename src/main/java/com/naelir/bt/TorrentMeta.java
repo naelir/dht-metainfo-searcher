@@ -110,10 +110,12 @@ public class TorrentMeta {
     
     public TorrentMeta(String hash, String name, List<MetaFile> list) {
         this.hash = hash;
-        this.name = name;
         this.list = list;
-        this.found = System.currentTimeMillis();
         this.genre = NameFilter.from(name, list);
+
+        this.name = Genre.GAME_REPACK == this.genre ? name.replaceAll(" ", "-") : name;
+
+        this.found = System.currentTimeMillis();
         this.count = list.size();
     }
 

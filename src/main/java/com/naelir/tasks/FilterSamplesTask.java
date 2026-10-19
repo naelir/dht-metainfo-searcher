@@ -25,8 +25,8 @@ public class FilterSamplesTask implements ITask {
         logger.info("samples before {}", data.samples.size());
         this.data.forRemoval.stream()
                 .forEach(e -> {
-                    data.samples.remove(e.getKey());
-                    data.fileManager.insert(Entry.lowPeers(e.getKey()));
+                    data.samples.remove(e.hash);
+                    data.fileManager.insert(Entry.lowPeers(e.hash));
                 });
         this.data.forRemoval.clear();
         this.data.scrapeHashes.clear();
