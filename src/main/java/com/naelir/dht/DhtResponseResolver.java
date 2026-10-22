@@ -196,7 +196,7 @@ public class DhtResponseResolver {
                     }
                 }
                 int size = decode.peers.size();
-                if (size > 0 && denied * 100 / size >= 75) {
+                if (size > 1 && denied * 100 / size >= 80) {
                     sample.skip(true);
                     logger.debug("{} too many denied peers", hex);
                     String lowerCase = StringUtils.join(set, "-").toLowerCase();

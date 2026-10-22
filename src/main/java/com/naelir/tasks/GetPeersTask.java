@@ -59,10 +59,8 @@ public class GetPeersTask implements ITask {
                     break;
                 }
                 Sample sample = e.getValue();
-                String infoHash = sample.torrent.infoHash();
-                byte[] array = Converter.toArray(infoHash);
-                ByteBuffer wrap = ByteBuffer.wrap(array);
                 if (sample.checked < this.data.config.getPeersDepth) {
+                    String infoHash = sample.torrent.infoHash();
                     sample.checked++;
                     if (sample.peers.size() >= 10) {
                         logger.debug("samples {} has peers, continue", infoHash);
@@ -72,6 +70,8 @@ public class GetPeersTask implements ITask {
                         logger.debug("samples {} is skipped, continue", infoHash);
                         continue;
                     }
+                    byte[] array = Converter.toArray(infoHash);
+                    ByteBuffer wrap = ByteBuffer.wrap(array);
                     List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
                     Node selected = select(sample, closest);
                     this.client.sendGetPeers(this.data.myself, wrap, selected);

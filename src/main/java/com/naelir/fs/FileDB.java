@@ -161,7 +161,7 @@ public class FileDB implements IFileDB {
                 i++;
                 result.add(Entry.fromLine(line));                
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("on line {}", i);
         }
         return result;
