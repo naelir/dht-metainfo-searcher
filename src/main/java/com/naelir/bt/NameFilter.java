@@ -16,6 +16,13 @@ public class NameFilter {
     private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
             "-uranime", "-yurasuka", "-crucible", "-iahd");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
+    
+    private static final List<String> OS = List.of("ubuntu", "debian", "archlinux", "fedora", "centos", "mint", "kali",
+            "manjaro", "suse", "opensuse", "gentoo", "slackware", "alpine", "raspbian", "zorin", "popos",
+            "elementaryos", "aerynos", "endeavouros", "garuda", "deepin", "nixos", "solus", "kaos", "rebornos",
+            "archlabs", "bunsenlabs", "crux", "dragonfly bsd", "gobolinux", "kde neon", "lubuntu", "mageia", "nitrux",
+            "pclinuxos", "almalinux", "anduinos", "freebsd", "openbsd", "netbsd", "reactos", "geckolinux", "ghostbsd",
+            "nitrux", "tuxedo", "openindiana", "smartos", "trueos", "ghostbsd", "midnightbsd", "nomadbsd");
 
     private static final List<String> INVALID = List.of("torrent", "new-team", "hq-video", "hellywood", "dual-lat", "dvdrip-lat");
     private static final List<Genre> DENIED_GENRES = List.of(Genre.NA, Genre.XXX, Genre.TVEP);
@@ -72,6 +79,9 @@ public class NameFilter {
             return Genre.GAME_PC;
         else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
             return Genre.GAME_REPACK;
+        else if (lower.endsWith(".iso") && matchKeyword(lower, OS)) {
+            return Genre.OS;
+        }
         return Genre.NA;
     }
 
