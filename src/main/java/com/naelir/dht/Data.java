@@ -47,6 +47,7 @@ public class Data {
     public final List<Entry> unresolved;
     public final Set<Entry> scrapeHashes;
     public final ILocationDb locationDb;
+    public final Stats stats;
 
     public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, EntryRepository repo, Config arguments) {
         this.udpIds = udpIds;
@@ -74,6 +75,7 @@ public class Data {
         this.tcptasks = new LinkedBlockingDeque<>(5000);
         this.forUpdate = new HashSet<>();
         this.forRemoval = new HashSet<>();
+        this.stats = new Stats();
     }
 
     public ByteBuffer nextId() {
@@ -92,5 +94,6 @@ public class Data {
         forUpdate.clear();
         forRemoval.clear();
         table.clear();
+        stats.clear();
     }
 }

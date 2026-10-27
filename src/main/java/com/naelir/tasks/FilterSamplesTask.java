@@ -22,6 +22,7 @@ public class FilterSamplesTask implements ITask {
 
     @Override
     public void run() {
+        data.stats.log();
         logger.info("samples before {}", data.samples.size());
         this.data.forRemoval.stream()
                 .forEach(e -> {

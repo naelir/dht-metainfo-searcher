@@ -295,16 +295,21 @@ public class DhtResponseResolver {
             int i = 0;
             int tooFar = 0;
             for (String hash : decode.samples) {
+                data.stats.received.incrementAndGet();
+
                 String value = this.data.fileManager.get(hash);
                 if (value != null) {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
+                    data.stats.resolved.incrementAndGet();
                 } else if (closeEnough(decode.request.node, hash)) {
                     List<Node> closest = Collections.emptyList(); // this.data.table.closest(ByteBuffer.wrap(array), 2);
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
+                    data.stats.searchable.incrementAndGet();
                 } else {
                     tooFar++;
                     this.data.fileManager.insertUnresolved(hash);
+                    data.stats.tooFar.incrementAndGet();
                 }
             }
             logger.info("found {} samples from {}, resolved {}, too far {}", decode.samples.size(), from, i, tooFar);
