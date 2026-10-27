@@ -50,6 +50,14 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new ScrapeTask(client, data));
             tasks.offer(new WaitScrapeTask());
             tasks.offer(new SaveScrapedTorrentsTask(data));
+        } else if (data.config.mode == 3) { // ban old torrents 
+            tasks.offer(new FindNodeTask(client, data));
+            tasks.offer(new FindSampleInfohashesTask(client, data));
+            tasks.offer(new ScrapeSamplesTask(data));
+            tasks.offer(new ScrapeTask(client, data));
+            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new FilterSamplesTask(data));
+            tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, rotate);
     }
