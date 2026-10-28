@@ -1,11 +1,15 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
@@ -38,9 +42,13 @@ public class NextIdTask implements ITask {
                 r++;
             } else {
                 int size = sample.peers.size();
-                if (sample.skip) {
-                    j++;
+                List<String> list = sample.deniedLocations();
+                if (size * 2 < list.size()) {
                     logger.debug("skip {}, peers {}", infoHash, size);
+                    Set<String> set = new HashSet<String>(list);
+                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
+                    this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
+                    j++;
                 } else {
                     k++;
                     logger.debug("not resolved {}, peers {}", infoHash, size);

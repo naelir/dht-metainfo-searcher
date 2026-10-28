@@ -1,6 +1,7 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -13,14 +14,14 @@ public class Sample {
     Torrent torrent;
     Set<Node> asked;
     Set<Node> peers;
+    List<String> deniedLocations;
     int checked;
-    boolean skip;
 
     public Sample(Torrent torrent, List<Node> ask, boolean skip) {
         this.torrent = torrent;
         this.peers = new HashSet<>();
+        this.deniedLocations = new ArrayList<>(5);
         this.asked = new HashSet<>(4);
-        this.skip = skip;
     }
 
     public synchronized void addAsked(Node n) {
@@ -29,6 +30,11 @@ public class Sample {
     
     public synchronized void addPeer(Node list) {
         this.peers.add(list);
+    }
+
+    
+    public synchronized void addDeniedLocations(String location) {
+        this.deniedLocations.add(location);
     }
 
     public synchronized boolean asked(Node node) {
@@ -46,18 +52,11 @@ public class Sample {
     public synchronized Set<Node> peers() {
         return new HashSet<>(this.peers);
     }
-
-    public boolean skip() {
-        return this.skip;
+    
+    public synchronized List<String> deniedLocations() {
+        return deniedLocations;
     }
-
-    public void skip(boolean b) {
-        this.skip = b;
-    }
-//    public RoutingTable table() {
-//        return this.table;
-//    }
-
+    
     public Torrent torrent() {
         return this.torrent;
     }
