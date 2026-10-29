@@ -269,7 +269,6 @@ public class DhtResponseResolver {
     private void resolve(SampleInfoHashesResponse decode, From from) {//
         if (decode.samples.isEmpty() == false) {
             int i = 0;
-            int tooFar = 0;
             for (String hash : decode.samples) {
                 data.stats.received.incrementAndGet();
 
@@ -278,17 +277,13 @@ public class DhtResponseResolver {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;
                     data.stats.resolved.incrementAndGet();
-                } else if (closeEnough(decode.request.node, hash)) {
-                    List<Node> closest = Collections.emptyList(); // this.data.table.closest(ByteBuffer.wrap(array), 2);
+                } else {
+                    List<Node> closest = Collections.emptyList();
                     this.data.samples.computeIfAbsent(hash, k -> new Sample(new Torrent(k), closest, false));
                     data.stats.searchable.incrementAndGet();
-                } else {
-                    tooFar++;
-                    this.data.fileManager.insertUnresolved(hash);
-                    data.stats.tooFar.incrementAndGet();
                 }
             }
-            logger.info("found {} samples from {}, resolved {}, too far {}", decode.samples.size(), from, i, tooFar);
+            logger.info("found {} samples from {}, resolved {}", decode.samples.size(), from, i);
             decode.request.node.put(Command.SAMPLE_R);
         }
     }
