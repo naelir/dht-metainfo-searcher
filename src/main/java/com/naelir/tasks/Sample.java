@@ -15,7 +15,7 @@ public class Sample {
     Set<Node> asked;
     Set<Node> peers;
     List<String> deniedLocations;
-    int checked;
+//    int checked;
 
     public Sample(Torrent torrent, List<Node> ask, boolean skip) {
         this.torrent = torrent;
@@ -45,9 +45,9 @@ public class Sample {
         return ByteBuffer.wrap(Converter.toArray(this.torrent.infoHash()));
     }
 
-    public void check() {
-        this.checked++;
-    }
+//    public void check() {
+//        this.checked++;
+//    }
 
     public synchronized Set<Node> peers() {
         return new HashSet<>(this.peers);

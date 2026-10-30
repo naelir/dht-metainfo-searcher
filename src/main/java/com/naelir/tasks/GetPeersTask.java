@@ -2,7 +2,6 @@ package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
 import java.util.List;
-import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.logging.log4j.LogManager;
@@ -27,49 +26,41 @@ public class GetPeersTask implements ITask {
 
     @Override
     public boolean resolved() {
-        int size = this.data.samples.values()
-                .stream()
-                .filter(s -> s.checked < this.data.config.getPeersDepth)
-                .toList()
-                .size();
-        if (size % 10 == 0) {
-            logger.info("{} samples left to check", size);
+        int size = this.data.queue.size();
+        if (size % 50 == 0) {
+            logger.info("{} tasks left to check", size);
         }
-        return this.data.samples.values().stream().allMatch(s -> s.checked >= this.data.config.getPeersDepth);
+        return this.data.queue.isEmpty();
     }
 
     @Override
     public void run() {
         try {
-            int get = this.cleanMarker.incrementAndGet();
-            if (get % 50 == 0) {
-                int size = this.data.table.size();
-                int ss = this.data.samples.size();
-                logger.info("samples {}, in routing table {}", ss, size);
-                int t = size / 2;
-                List<Node> q = this.data.table.closest(com.naelir.bt.Entry.FIRST_HASH, t);
-                for (Node node : q) {
-                    this.data.table.remove(node.id());
-                }
-                logger.info("samples {}, in routing table {}", ss, this.data.table.size());
-            }
-            int step = this.data.config.hashesStep;
-            for (Entry<String, Sample> e : this.data.samples.entrySet()) {
-                if (step <= 0) {
+//            int get = this.cleanMarker.incrementAndGet();
+//            if (get % 50 == 0) {
+//                int size = this.data.table.size();
+//                int ss = this.data.samples.size();
+//                logger.info("samples {}, in routing table {}", ss, size);
+//                int t = size / 2;
+//                List<Node> q = this.data.table.closest(com.naelir.bt.Entry.FIRST_HASH, t);
+//                for (Node node : q) {
+//                    this.data.table.remove(node.id());
+//                }
+//                logger.info("samples {}, in routing table {}", ss, this.data.table.size());
+//            }
+            for (int step = this.data.config.hashesStep; step > 0; step--) {
+                Sample sample = this.data.queue.poll();
+                if (sample == null || sample.torrent().meta() != null) {
                     break;
                 }
-                Sample sample = e.getValue();
-                if (sample.checked < this.data.config.getPeersDepth) {
-                    String infoHash = sample.torrent.infoHash();
-                    sample.checked++;
-                    byte[] array = Converter.toArray(infoHash);
-                    ByteBuffer wrap = ByteBuffer.wrap(array);
-                    List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
-                    Node selected = select(sample, closest);
-                    this.client.sendGetPeers(this.data.myself, wrap, selected);
-                    step--;
-                }
+                String infoHash = sample.torrent.infoHash();
+                byte[] array = Converter.toArray(infoHash);
+                ByteBuffer wrap = ByteBuffer.wrap(array);
+                List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
+                Node selected = select(sample, closest);
+                this.client.sendGetPeers(this.data.myself, wrap, selected);
             }
+            
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }

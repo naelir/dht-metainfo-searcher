@@ -49,7 +49,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
             TrackerUdpManager.logger.error("{}, all {}", this.samples.keySet(), this.allHashes);
             return new byte[0];
         }
-        sample.check();
+//        sample.check();
         byte[] infoHash = Converter.toArray(this.currentHash.hash);
         AnnounceRequest request = new AnnounceRequest(this.connectionId, this.transactionId, infoHash, this.peerId, 0L,
                 0L, 0L, AnnounceRequest.Event.NONE, 0, 0, DEFAULT_NUM_WANT, DEFAULT_PORT);

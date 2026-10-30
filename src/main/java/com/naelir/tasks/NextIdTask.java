@@ -43,16 +43,17 @@ public class NextIdTask implements ITask {
             } else {
                 int size = sample.peers.size();
                 List<String> list = sample.deniedLocations();
-                if (size * 2 < list.size()) {
-                    logger.debug("skip {}, peers {}", infoHash, size);
-                    Set<String> set = new HashSet<String>(list);
-                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
-                    this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
+                if (size == 0) {
+                    if (list.size() > 0) {
+                        Set<String> set = new HashSet<>(list);
+                        String lowerCase = StringUtils.join(set, "-").toLowerCase();
+                        this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
+                    } else {
+                        this.data.fileManager.insert(Entry.lowPeers(infoHash));
+                    }
                     j++;
                 } else {
                     k++;
-                    logger.debug("not resolved {}, peers {}", infoHash, size);
-                    this.data.fileManager.insertUnresolved(infoHash);
                 }
             }
         }

@@ -33,6 +33,7 @@ public class Data {
     public final Cache<ByteBuffer, IRequest> requestsSent;
     public final Map<String, Torrent> torrents;
     public final Map<String, Sample> samples;
+    public final Queue<Sample> queue;
     public final Queue<MetaTorrentTask> udptasks;
     public final Cache<ByteBuffer, Node> tokensSent;
     public final Cache<ByteBuffer, Node> tokensReceived;
@@ -72,6 +73,7 @@ public class Data {
         this.tokensReceived = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(10)).build();
         this.table = new RoutingTable();
         this.udptasks = new LinkedBlockingQueue<>(5000);
+        this.queue = new LinkedBlockingQueue<>(5000);
         this.tcptasks = new LinkedBlockingDeque<>(5000);
         this.forUpdate = new HashSet<>();
         this.forRemoval = new HashSet<>();
@@ -95,5 +97,6 @@ public class Data {
         forRemoval.clear();
         table.clear();
         stats.clear();
+        queue.clear();
     }
 }
