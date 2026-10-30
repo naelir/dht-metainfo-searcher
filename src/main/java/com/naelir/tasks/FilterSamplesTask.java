@@ -34,7 +34,7 @@ public class FilterSamplesTask implements ITask {
         logger.info("samples after {}", data.samples.size());
 
         int pd = this.data.config.getPeersDepth;
-        for (int i = pd; i < 0; i--) {
+        for (int i = pd; i > 0; i--) {
             for (Sample sample : this.data.samples.values()) {
                 this.data.queue.offer(sample);
             }

@@ -43,14 +43,10 @@ public class NextIdTask implements ITask {
             } else {
                 int size = sample.peers.size();
                 List<String> list = sample.deniedLocations();
-                if (size == 0) {
-                    if (list.size() > 0) {
-                        Set<String> set = new HashSet<>(list);
-                        String lowerCase = StringUtils.join(set, "-").toLowerCase();
-                        this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
-                    } else {
-                        this.data.fileManager.insert(Entry.lowPeers(infoHash));
-                    }
+                if (size == 0 && list.size() > 0) {
+                    Set<String> set = new HashSet<>(list);
+                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
+                    this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
                     j++;
                 } else {
                     k++;

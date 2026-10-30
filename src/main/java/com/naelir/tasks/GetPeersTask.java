@@ -27,7 +27,7 @@ public class GetPeersTask implements ITask {
     @Override
     public boolean resolved() {
         int size = this.data.queue.size();
-        if (size % 50 == 0) {
+        if (size % 10 == 0) {
             logger.info("{} tasks left to check", size);
         }
         return this.data.queue.isEmpty();
@@ -36,21 +36,9 @@ public class GetPeersTask implements ITask {
     @Override
     public void run() {
         try {
-//            int get = this.cleanMarker.incrementAndGet();
-//            if (get % 50 == 0) {
-//                int size = this.data.table.size();
-//                int ss = this.data.samples.size();
-//                logger.info("samples {}, in routing table {}", ss, size);
-//                int t = size / 2;
-//                List<Node> q = this.data.table.closest(com.naelir.bt.Entry.FIRST_HASH, t);
-//                for (Node node : q) {
-//                    this.data.table.remove(node.id());
-//                }
-//                logger.info("samples {}, in routing table {}", ss, this.data.table.size());
-//            }
             for (int step = this.data.config.hashesStep; step > 0; step--) {
-                Sample sample = this.data.queue.poll();
-                if (sample == null || sample.torrent().meta() != null) {
+                Sample sample = get();
+                if (sample == null) {
                     break;
                 }
                 String infoHash = sample.torrent.infoHash();
@@ -63,6 +51,14 @@ public class GetPeersTask implements ITask {
             
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
+        }
+    }
+    
+    Sample get() {
+        while (true) {
+            Sample pollLast = this.data.queue.poll();
+            if (pollLast == null || pollLast.torrent.meta() == null)
+                return pollLast;
         }
     }
 
