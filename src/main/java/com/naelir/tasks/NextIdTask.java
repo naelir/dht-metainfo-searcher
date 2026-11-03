@@ -1,15 +1,11 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.Entry;
 import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
@@ -37,21 +33,14 @@ public class NextIdTask implements ITask {
         int k = 0;
         int r = 0;
         for (Sample sample : this.data.samples.values()) {
-            String infoHash = sample.torrent.infoHash();
             if (sample.torrent.meta() != null) {
                 r++;
+            } else if (sample.skip) {
+                j++;
             } else {
-                int size = sample.peers.size();
-                List<String> list = sample.deniedLocations();
-                if (size == 0 && list.size() > 0) {
-                    Set<String> set = new HashSet<>(list);
-                    String lowerCase = StringUtils.join(set, "-").toLowerCase();
-                    this.data.fileManager.insert(Entry.ban(lowerCase, infoHash));
-                    j++;
-                } else {
-                    k++;
-                }
+                k++;
             }
+            logger.info("{}", sample);
         }
         logger.info("next id is {}, crap {}, resolved {}, not {}", myself, j, r, k);
         List<Node> nodes = this.data.table.closest(this.nextId, 20);

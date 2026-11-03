@@ -19,7 +19,7 @@ public class GetPeersResponse implements IResponse {
     ByteBuffer token;
     ByteBuffer tid;
     List<Node> peers = Collections.emptyList();
-    IRequest request;
+    GetPeersRequest request;
     List<Node> nodes = Collections.emptyList();
 
     public GetPeersResponse(ByteBuffer tid, ByteBuffer myself, ByteBuffer token, List<Node> nodes, List<Node> peers,
@@ -33,7 +33,7 @@ public class GetPeersResponse implements IResponse {
     }
 
     public GetPeersResponse(IRequest request) {
-        this.request = request;
+        this.request = (GetPeersRequest) request;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class GetPeersResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "GetPeersResponse [id=" + Converter.toHex(this.id.array()) + ", peers=" + this.peers.size() + ", nodes="
+        return "GetPeersResponse [from=" + Converter.toHex(this.id.array()) + "for=" + Converter.toHex(this.request.infoHash.array()) + ", peers=" + this.peers.size() + ", nodes="
                 + this.nodes.size() + "]";
     }
 }

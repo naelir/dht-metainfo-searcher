@@ -29,6 +29,10 @@ public class FilterSamplesTask implements ITask {
                     data.samples.remove(e.hash);
                     data.fileManager.insert(Entry.lowPeers(e.hash));
                 });
+        this.data.samples.entrySet().removeIf(e -> {
+            logger.info("filtering sample {} with {} seeders", e.getKey(), e.getValue().seeders);
+            return e.getValue().seeders < data.config.minPeers;
+        });
         this.data.forRemoval.clear();
         this.data.scrapeHashes.clear();
         logger.info("samples after {}", data.samples.size());

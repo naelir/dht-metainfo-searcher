@@ -142,7 +142,7 @@ public final class DhtApplication implements Runnable {
                 executor.scheduleAtFixedRate(utpClient::tick, UtpClient.TICK_INTERVAL_MS, UtpClient.TICK_INTERVAL_MS, TimeUnit.MILLISECONDS);
                 executor.scheduleAtFixedRate(maintainer, 0, arguments.scheduleInterval, TimeUnit.SECONDS);
                 executor.scheduleAtFixedRate(resolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
-                executor.scheduleAtFixedRate(tcpResolverTask, 0, arguments.resolverMillis, TimeUnit.MILLISECONDS);
+                executor.scheduleAtFixedRate(tcpResolverTask, 0, 1000, TimeUnit.MILLISECONDS);
 
 
                 Runtime.getRuntime().addShutdownHook(new Thread(() -> {

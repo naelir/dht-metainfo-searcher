@@ -112,8 +112,12 @@ public class Node {
         this.queries.add(command);
     }
 
+    public boolean applicable() {
+        return this.queries.isEmpty() || have(Command.GET_PEER_R) || have(Command.SAMPLE_R);
+    }
+    
     @Override
     public String toString() {
-        return "Node [id=" + this.c + ", ip=" + Converter.ip(this.ip) + ", port=" + this.port;
+        return "Node [id=" + this.c + ", ip=" + Converter.ip(this.ip) + ", port=" + this.port + ", applicable=" + applicable() + "]";
     }
 }

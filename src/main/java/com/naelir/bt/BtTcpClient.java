@@ -47,7 +47,7 @@ public class BtTcpClient implements AutoCloseable {
                 .option(ChannelOption.SO_KEEPALIVE, false)
                 .option(ChannelOption.SO_RCVBUF, 4096)
                 .option(ChannelOption.SO_SNDBUF, 4096)
-                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
+                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 2000)
                 .handler(new ChannelHandlerInitializer(torrent, this.data))
                 .connect(node.address(), node.port())
                 .addListener(f -> {

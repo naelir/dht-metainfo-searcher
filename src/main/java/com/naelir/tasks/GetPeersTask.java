@@ -44,7 +44,7 @@ public class GetPeersTask implements ITask {
                 String infoHash = sample.torrent.infoHash();
                 byte[] array = Converter.toArray(infoHash);
                 ByteBuffer wrap = ByteBuffer.wrap(array);
-                List<Node> closest = this.data.table.closest(sample.byteBuffer(), 8);
+                List<Node> closest = this.data.table.closest(sample.byteBuffer(), 10);
                 Node selected = select(sample, closest);
                 this.client.sendGetPeers(this.data.myself, wrap, selected);
             }
@@ -57,6 +57,9 @@ public class GetPeersTask implements ITask {
     Sample get() {
         while (true) {
             Sample pollLast = this.data.queue.poll();
+            if (pollLast != null && pollLast.skip) {
+                continue;
+            }
             if (pollLast == null || pollLast.torrent.meta() == null)
                 return pollLast;
         }
@@ -64,7 +67,7 @@ public class GetPeersTask implements ITask {
 
     private Node select(Sample sample, List<Node> closest) {
         for (Node node : closest) {
-            if (sample.asked(node) == false) {
+            if (node.applicable() && sample.asked(node) == false) {
                 sample.addAsked(node);
                 return node;
             }
