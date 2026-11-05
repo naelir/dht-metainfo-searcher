@@ -193,7 +193,7 @@ public class TrackerUdpManager {
                 int peers = stats.seeders();// + stats.leechers()/* + stats.completed() */;
                 var entry = batch.get(i);
                 entry.peers = peers;
-                if (peers > 0) {
+                if (peers >= data.config.minPeers) {
                     this.data.forUpdate.add(entry);
                     this.data.samples.get(entry.hash).seeders = peers;
                 } else {

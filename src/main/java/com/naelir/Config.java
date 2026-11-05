@@ -8,18 +8,18 @@ public class Config {
     public static Config parse(String[] args) {
         String from = null;
         String to = null;
-        int bitspaceParts = 200;
+        int bitspaceParts = 256;
         int resolverMillis = 500;
         String connectionString = null;
         String db = null;
         String table = null;
         String scrapeOut = null;
         String scrapeIn = null;
-        int getPeerDepth = 5;
+        int getPeerDepth = 3;
         int minPeers = 1;
         int maxNodes = 200;
-        int scrapeStep = 2000;
-        int hashesStep = 5;
+        int scrapeStep = 5000;
+        int hashesStep = 10;
         int mode = 0;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
@@ -230,21 +230,21 @@ public class Config {
     
 
     public static class Builder {
-        private int bitspaceParts = 200;
+        private int bitspaceParts = 256;
         private String from;
         private String connectionString;
         private String db;
         private String table;
-        private int getPeersDepth = 2;
+        private int getPeersDepth = 3;
         private int minPeers = 1;
         private int mode = 0;
         private InetAddress trackerUrl;
         private int trackerPort;
         private int maxNodes = 200;
-        private int scrapeStep = 2000;
-        private int scheduleInterval = 2;
+        private int scrapeStep = 5000;
+        private int scheduleInterval = 3;
         private String scrapeFile;
-        private int hashesStep = 5;
+        private int hashesStep = 10;
         private String to;
         private int resolverMillis = 500;
         private String scrapeIn;
