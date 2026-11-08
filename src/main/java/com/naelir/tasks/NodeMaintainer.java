@@ -22,7 +22,7 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new ScrapeSamplesTask(data));
             tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new WaitScrapeTask(data));
             tasks.offer(new FilterSamplesTask(data));
 
             GetPeersTask gpt = new GetPeersTask(client, data);
@@ -43,19 +43,19 @@ public class NodeMaintainer implements Runnable {
         } else if (data.config.mode == 1) { // scrape
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new WaitScrapeTask(data));
             tasks.offer(new UpdateSeenTorrentsTask(data));
         } else if (data.config.mode == 2) { // scrape unresolved
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new WaitScrapeTask(data));
             tasks.offer(new SaveScrapedTorrentsTask(data));
         } else if (data.config.mode == 3) { // ban old torrents 
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new ScrapeSamplesTask(data));
             tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask());
+            tasks.offer(new WaitScrapeTask(data));
             tasks.offer(new FilterSamplesTask(data));
             tasks.offer(new NextIdTask(data));
         }

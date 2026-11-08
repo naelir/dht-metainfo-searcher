@@ -124,7 +124,7 @@ public class FileDB implements IFileDB {
     public void insertUnresolved(String hash) {
         try {
             unresolvedWriter.write(hash);
-            unresolvedWriter.write("\n");
+            unresolvedWriter.newLine();
             unresolvedWriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);
@@ -170,16 +170,15 @@ public class FileDB implements IFileDB {
 
     @Override
     public void writeScrape(String path, Set<Entry> set) {
-        try (
-                BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
-        ) {
-            for (Entry e : set) {
-                if (e.peers == 0) {
-                    writer0.append(Entry.toLine(e));
-                    writer0.append("\n");
-                }
+        try {
+            Set<Entry> copyOf = Set.copyOf(set);
+            for (Entry e : copyOf) {
+                unresolvedWriter.append(Entry.toLine(e));
+                unresolvedWriter.newLine();
             }
-        } catch (IOException e) {
+            unresolvedWriter.flush();
+
+        } catch (Exception e) {
             logger.error("error when writing scrapes", e);
         }
     }

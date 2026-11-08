@@ -195,7 +195,9 @@ public class TrackerUdpManager {
                 entry.peers = peers;
                 if (peers >= data.config.minPeers) {
                     this.data.forUpdate.add(entry);
-                    this.data.samples.get(entry.hash).seeders = peers;
+                    if (data.config.mode == 0) {
+                        this.data.samples.get(entry.hash).seeders = peers;
+                    }
                 } else {
                     this.data.forRemoval.add(entry);
                 }

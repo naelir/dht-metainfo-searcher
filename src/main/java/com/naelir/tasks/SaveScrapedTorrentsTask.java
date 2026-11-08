@@ -1,5 +1,8 @@
 package com.naelir.tasks;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -25,6 +28,8 @@ public class SaveScrapedTorrentsTask implements ITask {
         data.fileManager.writeScrape(data.config.scrapeOut, data.forRemoval);
         data.forRemoval.forEach(e -> data.scrapeHashes.remove(e));
         data.forUpdate.forEach(e -> data.scrapeHashes.remove(e));
-        data.clear();
+        data.forUpdate.clear();
+        data.forRemoval.clear();
     }
 }
+;

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
@@ -45,7 +46,7 @@ public class Data {
     public final Deque<MetaTorrentTask> tcptasks;
     public final Set<Entry> forUpdate;
     public final Set<Entry> forRemoval;
-    public final List<Entry> unresolved;
+    public final Queue<Entry> unresolved;
     public final Set<Entry> scrapeHashes;
     public final ILocationDb locationDb;
     public final Stats stats;
@@ -59,7 +60,7 @@ public class Data {
         this.fileManager = fm;
         this.dbRepo = repo;
         this.scrapeHashes = new HashSet<>();
-        this.unresolved = new ArrayList<>();
+        this.unresolved = new LinkedList<>();
         // These maps are keyed by transaction id / token and only ever removed
         // when a matching response/announce arrives. Requests that never get a
         // response (dropped UDP packets, offline nodes, DHT spam, etc.) used to

@@ -29,8 +29,12 @@ public class Entry {
     }
 
     public static Entry fromLine(String e) {
-        String[] split = e.split(",");
-        return new Entry(split[1], split[0], Integer.parseInt(split[2]), 0, Long.parseLong(split[3]), split[4], 0);
+        if (e.length() == 40) {
+            return lowPeers(e);
+        } else {
+            String[] split = e.split(",");
+            return new Entry(split[1], split[0], Integer.parseInt(split[2]), 0, Long.parseLong(split[3]), split[4], 0);
+        }
     }
 
     @JsonProperty("n")

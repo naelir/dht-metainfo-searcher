@@ -26,8 +26,8 @@ public class ScrapeTask implements ITask {
     @Override
     public void run() {
         try {
-            if (data.config.trackerUrl == null) {
-                logger.warn("Tracker URL is not set, skipping scrape task.");
+            if (data.config.trackerUrl == null || data.scrapeHashes.isEmpty()) {
+                logger.warn("skipping scrape task.");
                 return;
             }
             this.client.scrape(data.scrapeHashes, data.config.trackerUrl, data.config.trackerPort);
