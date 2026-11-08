@@ -160,7 +160,7 @@ public final class RoutingTable {
         }
     }
 
-    public Set<Node> nodes() {
+    public synchronized Set<Node> nodes() {
         return this.buckets.stream().flatMap(e -> e.nodes().stream()).collect(Collectors.toSet());
     }
 
@@ -176,7 +176,7 @@ public final class RoutingTable {
     }
     
     /** Returns the total number of nodes held across all buckets. */
-    public int size() {
+    public synchronized int size() {
         int total = 0;
         for (RoutingBucket b : this.buckets) {
             total += b.size();

@@ -79,13 +79,18 @@ public class NodeMaintainer implements Runnable {
         if (this.data.udptasks.size() > 10)
             return;
         if (this.currentTask != null) {
-            this.currentTask.run();
-            if (this.currentTask.resolved()) {
-                if (this.rotate) {
-                    this.tasks.offer(this.currentTask);
+            try {
+                this.currentTask.run();
+                if (this.currentTask.resolved()) {
+                    if (this.rotate) {
+                        this.tasks.offer(this.currentTask);
+                    }
+                    logger.info("task {} resolved", this.currentTask.getClass().getSimpleName());
+                    this.currentTask = this.tasks.poll();
                 }
-                logger.info("task {} resolved", this.currentTask.getClass().getSimpleName());
-                this.currentTask = this.tasks.poll();
+            } catch (Exception e) {
+                logger.error("task {} failed, will retry next tick: {}",
+                        this.currentTask.getClass().getSimpleName(), e.getMessage(), e);
             }
         }
     }
