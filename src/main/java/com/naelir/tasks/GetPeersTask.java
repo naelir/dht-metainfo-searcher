@@ -2,7 +2,6 @@ package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +16,6 @@ public class GetPeersTask implements ITask {
     public static final Logger logger = LogManager.getLogger(GetPeersTask.class);
     private Data data;
     private UtpClient client;
-    private AtomicInteger cleanMarker = new AtomicInteger(1);
 
     public GetPeersTask(UtpClient client, Data data) {
         this.client = client;

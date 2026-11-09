@@ -1,8 +1,5 @@
 package com.naelir.tasks;
 
-import java.util.List;
-
-import com.naelir.bt.Entry;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 

@@ -25,7 +25,7 @@ public class Entry {
 
     public static String toLine(Entry e) {
         String n = e.name.contains(",") ? e.name.replace(",", "_") : e.name;
-        return String.format("%s,%s,%d,%d,%s", e.hash, e.name, e.fileCount, e.size, e.genre);
+        return String.format("%s,%s,%d,%d,%s", e.hash, n, e.fileCount, e.size, e.genre);
     }
 
     public static Entry fromLine(String e) {

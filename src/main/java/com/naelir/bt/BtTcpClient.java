@@ -19,6 +19,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.ChannelPipeline;
+import io.netty.channel.IoHandlerFactory;
 import io.netty.channel.MultiThreadIoEventLoopGroup;
 import io.netty.channel.nio.NioIoHandler;
 import io.netty.channel.socket.SocketChannel;
@@ -29,6 +30,9 @@ import io.netty.util.concurrent.DefaultThreadFactory;
 
 public class BtTcpClient implements AutoCloseable {
     public static final Logger logger = LogManager.getLogger(BtTcpClient.class);
+    private static final DefaultThreadFactory THREAD_FACTORY = new DefaultThreadFactory("bt");
+    private static final IoHandlerFactory IO_HANDLER_FACTORY = NioIoHandler.newFactory();
+    
     private Data data;
 
     public BtTcpClient(Data data) {
@@ -40,7 +44,7 @@ public class BtTcpClient implements AutoCloseable {
     }
 
     public void connect(Torrent torrent, Node node) throws InterruptedException, UnknownHostException {
-        var group = new MultiThreadIoEventLoopGroup(1, new DefaultThreadFactory("bt"), NioIoHandler.newFactory());
+        var group = new MultiThreadIoEventLoopGroup(1, THREAD_FACTORY, IO_HANDLER_FACTORY);
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.group(group)
                 .channel(NioSocketChannel.class)
