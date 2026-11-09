@@ -44,7 +44,7 @@ public class AnnounceTrackerConnection extends TrackerConnection {
         if (this.allHashes.isEmpty())
             return new byte[0];
         this.currentHash = this.allHashes.remove(0);
-        Sample sample = this.samples.get(this.currentHash);
+        Sample sample = this.samples.get(this.currentHash.hash);
         if (sample == null) {
             TrackerUdpManager.logger.error("{}, all {}", this.samples.keySet(), this.allHashes);
             return new byte[0];
