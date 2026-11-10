@@ -16,6 +16,7 @@ public class NameFilter {
     private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
             "-uranime", "-yurasuka", "-crucible", "-iahd");
     private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
+    private static final List<String> EBOOK = List.of(".pdf", ".epub", ".mobi", ".azw3", ".djvu", ".fb2", ".lit", ".lrf", ".pdb", ".prc", ".rtf", ".txt");
     
     private static final List<String> OS = List.of("ubuntu", "debian", "archlinux", "fedora", "centos", "mint", "kali",
             "manjaro", "suse", "opensuse", "gentoo", "slackware", "alpine", "raspbian", "zorin", "popos",
@@ -79,8 +80,10 @@ public class NameFilter {
             return Genre.GAME_PC;
         else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
             return Genre.GAME_REPACK;
-        else if (lower.endsWith(".iso") && matchKeyword(lower, OS)) {
+        else if (lower.endsWith(".iso") && matchKeyword(lower, OS))
             return Genre.OS;
+        else if (matchKeyword(lower, EBOOK)) {
+            return Genre.EBOOK;
         }
         return Genre.NA;
     }
