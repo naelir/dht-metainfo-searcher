@@ -17,5 +17,5 @@ public interface IFileDB extends AutoCloseable {
 
     Set<Entry> readScrape(String path);
 
-    void writeScrape(String path, Set<Entry> set);
+    void writeScrape(Set<Entry> set);
 }

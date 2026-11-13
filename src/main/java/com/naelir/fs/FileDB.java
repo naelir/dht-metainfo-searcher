@@ -169,7 +169,7 @@ public class FileDB implements IFileDB {
     
 
     @Override
-    public void writeScrape(String path, Set<Entry> set) {
+    public void writeScrape(Set<Entry> set) {
         try {
             Set<Entry> copyOf = Set.copyOf(set);
             for (Entry e : copyOf) {

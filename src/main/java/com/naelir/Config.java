@@ -9,17 +9,16 @@ public class Config {
         String from = null;
         String to = null;
         int bitspaceParts = 256;
-        int resolverMillis = 500;
+        int resolverMillis = 300;
         String connectionString = null;
         String db = null;
         String table = null;
-        String scrapeOut = null;
         String scrapeIn = null;
         int getPeerDepth = 3;
         int minPeers = 1;
-        int maxNodes = 200;
+        int maxNodes = 400;
         int scrapeStep = 5000;
-        int hashesStep = 10;
+        int hashesStep = 20;
         int mode = 0;
         InetAddress trackerUrl = null;
         int trackerPort = 0;
@@ -100,12 +99,6 @@ public class Config {
                     throw new IllegalArgumentException("Missing value for --table");
                 scrapeIn = args[++i];
                 break;
-
-            case "--scrape-file-out":
-                if (i + 1 >= args.length)
-                    throw new IllegalArgumentException("Missing value for --table");
-                scrapeOut = args[++i];
-                break;
             case "--get-peers-depth":
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --get-peers-depth");
@@ -171,7 +164,6 @@ public class Config {
                 .hashesStep(hashesStep)
                 .resolverMillis(resolverMillis)
                 .scrapeIn(scrapeIn)
-                .scrapeOut(scrapeOut)
                 .build();
     }
 
@@ -188,7 +180,6 @@ public class Config {
     public final int scrapeStep;
     public final int maxNodes;
     public final int scheduleInterval;
-    public final String scrapeFile;
     public final int hashesStep;
     public final String to;
     public final int resolverMillis;
@@ -199,12 +190,11 @@ public class Config {
                 + ", mode=" + mode + ", resolverMillis=" + resolverMillis + ", connectionString=" + connectionString
                 + ", db=" + db + ", table=" + table + ", getPeersDepth=" + getPeersDepth + ", minPeers=" + minPeers
                 + ", trackerUrl=" + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep
-                + ", scheduleInterval=" + scheduleInterval + ", scrapeFile=" + scrapeFile + ", from=" + from + ", to="
-                + to + ", scrapeIn=" + scrapeIn + ", scrapeOut=" + scrapeOut + "]";
+                + ", scheduleInterval=" + scheduleInterval + ", from=" + from + ", to="
+                + to + ", scrapeIn=" + scrapeIn + "]";
     }
 
     public final String scrapeIn;
-    public final String scrapeOut;
 
     private Config(Builder builder) {
         this.bitspaceParts = builder.bitspaceParts;
@@ -221,11 +211,9 @@ public class Config {
         this.maxNodes = builder.maxNodes;
         this.scrapeStep = builder.scrapeStep;
         this.scheduleInterval = builder.scheduleInterval;
-        this.scrapeFile = builder.scrapeFile;
         this.hashesStep = builder.hashesStep;
         this.resolverMillis = builder.resolverMillis;
         this.scrapeIn = builder.scrapeIn;
-        this.scrapeOut = builder.scrapeOut;
     }
     
 
@@ -243,12 +231,10 @@ public class Config {
         private int maxNodes = 200;
         private int scrapeStep = 5000;
         private int scheduleInterval = 3;
-        private String scrapeFile;
         private int hashesStep = 10;
         private String to;
         private int resolverMillis = 500;
         private String scrapeIn;
-        private String scrapeOut;
         
         public Builder scrapeStep(int scrapeStep) {
             this.scrapeStep = scrapeStep;
@@ -257,11 +243,6 @@ public class Config {
         
         public Builder scrapeIn(String scrapeIn) {
             this.scrapeIn = scrapeIn;
-            return this;
-        }
-        
-        public Builder scrapeOut(String scrapeOut) {
-            this.scrapeOut = scrapeOut;
             return this;
         }
 
@@ -341,11 +322,6 @@ public class Config {
 
         public Builder trackerPort(int trackerPort) {
             this.trackerPort = trackerPort;
-            return this;
-        }
-
-        public Builder scrapeFile(String string) {
-            this.scrapeFile = string;
             return this;
         }
     }
