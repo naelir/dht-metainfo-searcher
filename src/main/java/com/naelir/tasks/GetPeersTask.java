@@ -65,7 +65,7 @@ public class GetPeersTask implements ITask {
 
     private Node select(Sample sample, List<Node> closest) {
         for (Node node : closest) {
-            if (node.applicable() && sample.asked(node) == false) {
+            if (/* node.applicable() && */sample.asked(node) == false) {
                 sample.addAsked(node);
                 return node;
             }
