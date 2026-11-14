@@ -89,11 +89,12 @@ public final class DhtApplication implements Runnable {
                     ? new MongoEntryRepository(arguments.connectionString, arguments.db, arguments.table)
                     : new NullEntryRepository();
             Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, repo, this.arguments);
+            boolean crawl = arguments.mode < 1 && arguments.mode > 2;
 
-            if (arguments.mode > 0) {
+            if (crawl == false && arguments.scrapeIn != null) {
                 Set<Entry> all = fileDB.readScrape(arguments.scrapeIn);
-                data.unresolved.addAll(all);
-                logger.info("loaded {} unresolved", all.size());
+                data.forScrape.addAll(all);
+                logger.info("loaded {} hashes for scrape", all.size());
             }
 
             UTPManager utpManager = new UTPManager();
@@ -135,7 +136,7 @@ public final class DhtApplication implements Runnable {
                 UdpTorrentResolverTask resolverTask = new UdpTorrentResolverTask(utpClient, data);
                 TcpTorrentResolverTask tcpResolverTask = new TcpTorrentResolverTask(tcpClient, data);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
-                if (arguments.mode != 1) {
+                if (crawl) {
                     utpClient.explore(data.myself, saved);
                 }
                 
@@ -149,7 +150,7 @@ public final class DhtApplication implements Runnable {
                     logger.info("Received SIGTERM, shutting down");
                     semaphore.release();
 
-                    if (arguments.mode == 0) {
+                    if (crawl) {
                         List<Node> nodes = data.table.closest(data.myself, 20);
                         peersFm.saveCompactInfo(data.myself, nodes);
                         logger.info("stopped with {}", Converter.toHex(data.myself.array()));

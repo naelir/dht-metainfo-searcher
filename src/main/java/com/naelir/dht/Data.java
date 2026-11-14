@@ -44,7 +44,7 @@ public class Data {
     public final Deque<MetaTorrentTask> tcptasks;
     public final Set<Entry> forUpdate;
     public final Set<Entry> forRemoval;
-    public final Queue<Entry> unresolved;
+    public final Queue<Entry> forScrape;
     public final Set<Entry> scrapeHashes;
     public final ILocationDb locationDb;
     public final Stats stats;
@@ -58,7 +58,7 @@ public class Data {
         this.fileManager = fm;
         this.dbRepo = repo;
         this.scrapeHashes = new HashSet<>();
-        this.unresolved = new LinkedList<>();
+        this.forScrape = new LinkedList<>();
         // These maps are keyed by transaction id / token and only ever removed
         // when a matching response/announce arrives. Requests that never get a
         // response (dropped UDP packets, offline nodes, DHT spam, etc.) used to
