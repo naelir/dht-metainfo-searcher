@@ -183,4 +183,22 @@ public class FileDB implements IFileDB {
         }
     }
 
+    @Override
+    public Set<Entry> readResolved(String name) {
+        Set<Entry> result = new HashSet<>();
+        int i = 0;
+        try (BufferedReader reader = Files.newBufferedReader(BASE_DIR.resolve(name.concat(".txt")))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                i++;
+                Entry fromLine = Entry.fromLine(line);
+                result.remove(fromLine);
+                result.add(fromLine);                
+            }
+        } catch (Exception e) {
+            logger.error("on line {}", i);
+        }
+        return result;
+    }
+
 }

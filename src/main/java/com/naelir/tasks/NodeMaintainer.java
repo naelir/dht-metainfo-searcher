@@ -58,6 +58,25 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new WaitScrapeTask(data));
             tasks.offer(new FilterSamplesTask(data));
             tasks.offer(new NextIdTask(data));
+        } else if (data.config.mode == 4) {// rotate old torrents
+            tasks.offer(new FindNodeTask(client, data));
+            tasks.offer(new LoadLowPeersHashesTask(data));
+
+            GetPeersTask gpt = new GetPeersTask(client, data);
+            CreateMetaTask ct = new CreateMetaTask(data);
+            tasks.offer(new ITask() {
+                @Override
+                public boolean resolved() {
+                    return gpt.resolved();
+                }
+
+                @Override
+                public void run() {
+                    gpt.run();
+                    ct.run();
+                }
+            });
+            tasks.offer(new NextIdTask(data));
         }
         return new NodeMaintainer(tasks, data, rotate);
     }

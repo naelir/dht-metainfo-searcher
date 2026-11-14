@@ -18,4 +18,6 @@ public interface IFileDB extends AutoCloseable {
     Set<Entry> readScrape(String path);
 
     void writeScrape(Set<Entry> set);
+
+    Set<Entry> readResolved(String substring);
 }
