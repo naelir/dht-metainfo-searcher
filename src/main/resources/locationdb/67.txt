@@ -1,0 +1,2149 @@
+67.0.0.0/12,6252001,nan,North America,US,United States,0,0
+67.16.0.0/18,6252001,nan,North America,US,United States,0,0
+67.16.64.0/19,6252001,nan,North America,US,United States,0,0
+67.16.96.0/23,6252001,nan,North America,US,United States,0,0
+67.16.98.0/24,6252001,nan,North America,US,United States,0,0
+67.16.99.0/25,6252001,nan,North America,US,United States,0,0
+67.16.99.128/26,6252001,nan,North America,US,United States,0,0
+67.16.99.192/27,6252001,nan,North America,US,United States,0,0
+67.16.99.224/29,6252001,nan,North America,US,United States,0,0
+67.16.99.232/32,6252001,nan,North America,US,United States,0,0
+67.16.99.233/32,2635167,EU,Europe,GB,United Kingdom,0,0
+67.16.99.234/31,6252001,nan,North America,US,United States,0,0
+67.16.99.236/30,6252001,nan,North America,US,United States,0,0
+67.16.99.240/28,6252001,nan,North America,US,United States,0,0
+67.16.100.0/22,6252001,nan,North America,US,United States,0,0
+67.16.104.0/21,6252001,nan,North America,US,United States,0,0
+67.16.112.0/20,6252001,nan,North America,US,United States,0,0
+67.16.128.0/22,6252001,nan,North America,US,United States,0,0
+67.16.132.0/24,6252001,nan,North America,US,United States,0,0
+67.16.133.0/25,6252001,nan,North America,US,United States,0,0
+67.16.133.128/26,6252001,nan,North America,US,United States,0,0
+67.16.133.192/28,6252001,nan,North America,US,United States,0,0
+67.16.133.208/32,6252001,nan,North America,US,United States,0,0
+67.16.133.209/32,2921044,EU,Europe,DE,Germany,0,0
+67.16.133.210/31,6252001,nan,North America,US,United States,0,0
+67.16.133.212/30,6252001,nan,North America,US,United States,0,0
+67.16.133.216/29,6252001,nan,North America,US,United States,0,0
+67.16.133.224/27,6252001,nan,North America,US,United States,0,0
+67.16.134.0/23,6252001,nan,North America,US,United States,0,0
+67.16.136.0/21,6252001,nan,North America,US,United States,0,0
+67.16.144.0/20,6252001,nan,North America,US,United States,0,0
+67.16.160.0/19,6252001,nan,North America,US,United States,0,0
+67.16.192.0/18,6252001,nan,North America,US,United States,0,0
+67.17.0.0/17,6252001,nan,North America,US,United States,0,0
+67.17.128.0/19,6252001,nan,North America,US,United States,0,0
+67.17.160.0/26,6252001,nan,North America,US,United States,0,0
+67.17.160.64/27,6252001,nan,North America,US,United States,0,0
+67.17.160.96/29,6252001,nan,North America,US,United States,0,0
+67.17.160.104/30,660013,EU,Europe,FI,Finland,0,0
+67.17.160.108/30,6252001,nan,North America,US,United States,0,0
+67.17.160.112/28,6252001,nan,North America,US,United States,0,0
+67.17.160.128/25,6252001,nan,North America,US,United States,0,0
+67.17.161.0/24,6252001,nan,North America,US,United States,0,0
+67.17.162.0/23,6252001,nan,North America,US,United States,0,0
+67.17.164.0/22,6252001,nan,North America,US,United States,0,0
+67.17.168.0/21,6252001,nan,North America,US,United States,0,0
+67.17.176.0/20,6252001,nan,North America,US,United States,0,0
+67.17.192.0/23,6252001,nan,North America,US,United States,0,0
+67.17.194.0/28,6252001,nan,North America,US,United States,0,0
+67.17.194.16/29,6252001,nan,North America,US,United States,0,0
+67.17.194.24/30,6252001,nan,North America,US,United States,0,0
+67.17.194.28/31,6252001,nan,North America,US,United States,0,0
+67.17.194.30/32,2635167,EU,Europe,GB,United Kingdom,0,0
+67.17.194.31/32,6252001,nan,North America,US,United States,0,0
+67.17.194.32/27,6252001,nan,North America,US,United States,0,0
+67.17.194.64/26,6252001,nan,North America,US,United States,0,0
+67.17.194.128/25,6252001,nan,North America,US,United States,0,0
+67.17.195.0/24,6252001,nan,North America,US,United States,0,0
+67.17.196.0/25,6252001,nan,North America,US,United States,0,0
+67.17.196.128/27,6252001,nan,North America,US,United States,0,0
+67.17.196.160/30,2635167,EU,Europe,GB,United Kingdom,0,0
+67.17.196.164/30,6252001,nan,North America,US,United States,0,0
+67.17.196.168/29,6252001,nan,North America,US,United States,0,0
+67.17.196.176/28,6252001,nan,North America,US,United States,0,0
+67.17.196.192/26,6252001,nan,North America,US,United States,0,0
+67.17.197.0/24,6252001,nan,North America,US,United States,0,0
+67.17.198.0/23,6252001,nan,North America,US,United States,0,0
+67.17.200.0/21,6252001,nan,North America,US,United States,0,0
+67.17.208.0/20,6252001,nan,North America,US,United States,0,0
+67.17.224.0/19,6252001,nan,North America,US,United States,0,0
+67.18.0.0/16,6252001,nan,North America,US,United States,0,0
+67.19.0.0/16,1819730,AS,Asia,HK,Hong Kong,0,0
+67.20.0.0/16,6252001,nan,North America,US,United States,0,0
+67.21.0.0/18,6252001,nan,North America,US,United States,0,0
+67.21.64.0/19,6252001,nan,North America,US,United States,0,0
+67.21.96.0/20,6251999,nan,North America,CA,Canada,0,0
+67.21.112.0/20,6252001,nan,North America,US,United States,0,0
+67.21.128.0/20,6252001,nan,North America,US,United States,0,0
+67.21.144.0/20,6251999,nan,North America,CA,Canada,0,0
+67.21.160.0/19,6252001,nan,North America,US,United States,0,0
+67.21.192.0/18,6251999,nan,North America,CA,Canada,0,0
+67.22.0.0/19,6252001,nan,North America,US,United States,0,0
+67.22.32.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+67.22.48.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+67.22.56.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+67.22.60.0/22,6252001,nan,North America,US,United States,0,0
+67.22.64.0/19,6251999,nan,North America,CA,Canada,0,0
+67.22.96.0/20,6252001,nan,North America,US,United States,0,0
+67.22.112.0/21,6252001,nan,North America,US,United States,0,0
+67.22.120.0/21,6251999,nan,North America,CA,Canada,0,0
+67.22.128.0/20,6251999,nan,North America,CA,Canada,0,0
+67.22.144.0/20,6252001,nan,North America,US,United States,0,0
+67.22.160.0/19,6252001,nan,North America,US,United States,0,0
+67.22.192.0/19,6252001,nan,North America,US,United States,0,0
+67.22.224.0/20,6251999,nan,North America,CA,Canada,0,0
+67.22.240.0/20,6252001,nan,North America,US,United States,0,0
+67.23.0.0/16,6252001,nan,North America,US,United States,0,0
+67.24.0.0/13,6252001,nan,North America,US,United States,0,0
+67.32.0.0/13,6252001,nan,North America,US,United States,0,0
+67.40.0.0/15,6252001,nan,North America,US,United States,0,0
+67.42.0.0/16,6252001,nan,North America,US,United States,0,0
+67.43.0.0/18,6252001,nan,North America,US,United States,0,0
+67.43.64.0/20,6252001,nan,North America,US,United States,0,0
+67.43.80.0/22,6252001,nan,North America,US,United States,0,0
+67.43.84.0/24,6252001,nan,North America,US,United States,0,0
+67.43.85.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.43.86.0/24,6252001,nan,North America,US,United States,0,0
+67.43.87.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.43.88.0/21,6252001,nan,North America,US,United States,0,0
+67.43.96.0/19,6252001,nan,North America,US,United States,0,0
+67.43.128.0/20,6251999,nan,North America,CA,Canada,0,0
+67.43.144.0/20,6252001,nan,North America,US,United States,0,0
+67.43.160.0/19,6252001,nan,North America,US,United States,0,0
+67.43.192.0/19,6252001,nan,North America,US,United States,0,0
+67.43.224.0/20,6251999,nan,North America,CA,Canada,0,0
+67.43.240.0/20,6252001,nan,North America,US,United States,0,0
+67.44.0.0/14,6252001,nan,North America,US,United States,0,0
+67.48.0.0/14,6252001,nan,North America,US,United States,0,0
+67.52.0.0/15,6252001,nan,North America,US,United States,0,0
+67.54.0.0/17,6252001,nan,North America,US,United States,0,0
+67.54.128.0/18,6252001,nan,North America,US,United States,0,0
+67.54.192.0/24,6252001,nan,North America,US,United States,0,0
+67.54.193.0/27,1861060,AS,Asia,JP,Japan,0,0
+67.54.193.32/27,587116,AS,Asia,AZ,Azerbaijan,0,0
+67.54.193.64/27,6252001,nan,North America,US,United States,0,0
+67.54.193.96/28,102358,AS,Asia,SA,Saudi Arabia,0,0
+67.54.193.112/28,1227603,AS,Asia,LK,Sri Lanka,0,0
+67.54.193.128/27,6252001,nan,North America,US,United States,0,0
+67.54.193.160/28,2077456,OC,Oceania,AU,Australia,0,0
+67.54.193.176/28,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.54.193.192/27,3895114,SA,South America,CL,Chile,0,0
+67.54.193.224/28,6251999,nan,North America,CA,Canada,0,0
+67.54.193.240/28,6252001,nan,North America,US,United States,0,0
+67.54.194.0/23,6252001,nan,North America,US,United States,0,0
+67.54.196.0/22,6252001,nan,North America,US,United States,0,0
+67.54.200.0/21,6252001,nan,North America,US,United States,0,0
+67.54.208.0/20,6252001,nan,North America,US,United States,0,0
+67.54.224.0/19,6252001,nan,North America,US,United States,0,0
+67.55.0.0/18,6251999,nan,North America,CA,Canada,0,0
+67.55.64.0/18,6252001,nan,North America,US,United States,0,0
+67.55.128.0/17,6252001,nan,North America,US,United States,0,0
+67.56.0.0/15,6252001,nan,North America,US,United States,0,0
+67.58.0.0/18,6252001,nan,North America,US,United States,0,0
+67.58.64.0/19,6252001,nan,North America,US,United States,0,0
+67.58.96.0/21,6252001,nan,North America,US,United States,0,0
+67.58.104.0/22,6252001,nan,North America,US,United States,0,0
+67.58.108.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+67.58.112.0/20,6252001,nan,North America,US,United States,0,0
+67.58.128.0/18,6252001,nan,North America,US,United States,0,0
+67.58.192.0/19,6251999,nan,North America,CA,Canada,0,0
+67.58.224.0/19,6252001,nan,North America,US,United States,0,0
+67.59.0.0/18,6252001,nan,North America,US,United States,0,0
+67.59.64.0/20,6252001,nan,North America,US,United States,0,0
+67.59.80.0/23,6252001,nan,North America,US,United States,0,0
+67.59.82.0/24,6252001,nan,North America,US,United States,0,0
+67.59.83.0/25,6252001,nan,North America,US,United States,0,0
+67.59.83.128/27,6252001,nan,North America,US,United States,0,0
+67.59.83.160/29,6252001,nan,North America,US,United States,0,0
+67.59.83.168/30,6252001,nan,North America,US,United States,0,0
+67.59.83.172/31,6252001,nan,North America,US,United States,0,0
+67.59.83.175/32,6252001,nan,North America,US,United States,0,0
+67.59.83.176/28,6252001,nan,North America,US,United States,0,0
+67.59.83.192/26,6252001,nan,North America,US,United States,0,0
+67.59.84.0/22,6252001,nan,North America,US,United States,0,0
+67.59.88.0/21,6252001,nan,North America,US,United States,0,0
+67.59.96.0/19,6252001,nan,North America,US,United States,0,0
+67.59.128.0/17,6252001,nan,North America,US,United States,0,0
+67.60.0.0/15,6252001,nan,North America,US,United States,0,0
+67.62.0.0/16,6252001,nan,North America,US,United States,0,0
+67.63.0.0/19,6252001,nan,North America,US,United States,0,0
+67.63.32.0/20,6252001,nan,North America,US,United States,0,0
+67.63.48.0/21,6252001,nan,North America,US,United States,0,0
+67.63.56.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+67.63.60.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+67.63.61.0/24,6252001,nan,North America,US,United States,0,0
+67.63.62.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+67.63.64.0/18,6252001,nan,North America,US,United States,0,0
+67.63.128.0/17,6252001,nan,North America,US,United States,0,0
+67.64.0.0/14,6252001,nan,North America,US,United States,0,0
+67.68.0.0/15,6251999,nan,North America,CA,Canada,0,0
+67.70.0.0/16,6251999,nan,North America,CA,Canada,0,0
+67.71.0.0/17,6251999,nan,North America,CA,Canada,0,0
+67.71.128.0/18,6251999,nan,North America,CA,Canada,0,0
+67.71.192.0/21,6251999,nan,North America,CA,Canada,0,0
+67.71.200.0/22,6251999,nan,North America,CA,Canada,0,0
+67.71.204.0/23,6251999,nan,North America,CA,Canada,0,0
+67.71.206.0/24,6251999,nan,North America,CA,Canada,0,0
+67.71.207.0/24,6252001,nan,North America,US,United States,0,0
+67.71.208.0/20,6251999,nan,North America,CA,Canada,0,0
+67.71.224.0/19,6251999,nan,North America,CA,Canada,0,0
+67.72.0.0/16,6252001,nan,North America,US,United States,0,0
+67.73.0.0/17,6252001,nan,North America,US,United States,0,0
+67.73.128.0/21,6252001,nan,North America,US,United States,0,0
+67.73.136.0/21,3865483,SA,South America,AR,Argentina,0,0
+67.73.144.0/21,3469034,SA,South America,BR,Brazil,0,0
+67.73.152.0/21,3686110,SA,South America,CO,Colombia,0,0
+67.73.160.0/21,3658394,SA,South America,EC,Ecuador,0,0
+67.73.168.0/21,3932488,SA,South America,PE,Peru,0,0
+67.73.176.0/22,3895114,SA,South America,CL,Chile,0,0
+67.73.180.0/22,3625428,SA,South America,VE,Venezuela,0,0
+67.73.184.0/21,3686110,SA,South America,CO,Colombia,0,0
+67.73.192.0/19,6252001,nan,North America,US,United States,0,0
+67.73.224.0/20,3686110,SA,South America,CO,Colombia,0,0
+67.73.240.0/21,3686110,SA,South America,CO,Colombia,0,0
+67.73.248.0/22,3686110,SA,South America,CO,Colombia,0,0
+67.73.252.0/23,3686110,SA,South America,CO,Colombia,0,0
+67.73.254.0/23,3624060,nan,North America,CR,Costa Rica,0,0
+67.74.0.0/15,6252001,nan,North America,US,United States,0,0
+67.76.0.0/14,6252001,nan,North America,US,United States,0,0
+67.80.0.0/14,6252001,nan,North America,US,United States,0,0
+67.84.0.0/18,6252001,nan,North America,US,United States,0,0
+67.84.64.0/19,6252001,nan,North America,US,United States,0,0
+67.84.96.0/21,6252001,nan,North America,US,United States,0,0
+67.84.104.0/25,6252001,nan,North America,US,United States,0,0
+67.84.104.128/27,6252001,nan,North America,US,United States,0,0
+67.84.104.160/28,6252001,nan,North America,US,United States,0,0
+67.84.104.176/31,6252001,nan,North America,US,United States,0,0
+67.84.104.179/32,6252001,nan,North America,US,United States,0,0
+67.84.104.180/30,6252001,nan,North America,US,United States,0,0
+67.84.104.184/29,6252001,nan,North America,US,United States,0,0
+67.84.104.192/26,6252001,nan,North America,US,United States,0,0
+67.84.105.0/24,6252001,nan,North America,US,United States,0,0
+67.84.106.0/23,6252001,nan,North America,US,United States,0,0
+67.84.108.0/22,6252001,nan,North America,US,United States,0,0
+67.84.112.0/20,6252001,nan,North America,US,United States,0,0
+67.84.128.0/17,6252001,nan,North America,US,United States,0,0
+67.85.0.0/16,6252001,nan,North America,US,United States,0,0
+67.86.0.0/16,6252001,nan,North America,US,United States,0,0
+67.87.0.0/22,6252001,nan,North America,US,United States,0,0
+67.87.4.0/23,6252001,nan,North America,US,United States,0,0
+67.87.6.0/24,6252001,nan,North America,US,United States,0,0
+67.87.7.0/25,6252001,nan,North America,US,United States,0,0
+67.87.7.128/28,6252001,nan,North America,US,United States,0,0
+67.87.7.144/29,6252001,nan,North America,US,United States,0,0
+67.87.7.152/30,6252001,nan,North America,US,United States,0,0
+67.87.7.156/31,6252001,nan,North America,US,United States,0,0
+67.87.7.159/32,6252001,nan,North America,US,United States,0,0
+67.87.7.160/27,6252001,nan,North America,US,United States,0,0
+67.87.7.192/26,6252001,nan,North America,US,United States,0,0
+67.87.8.0/21,6252001,nan,North America,US,United States,0,0
+67.87.16.0/20,6252001,nan,North America,US,United States,0,0
+67.87.32.0/19,6252001,nan,North America,US,United States,0,0
+67.87.64.0/18,6252001,nan,North America,US,United States,0,0
+67.87.128.0/17,6252001,nan,North America,US,United States,0,0
+67.88.0.0/13,6252001,nan,North America,US,United States,0,0
+67.96.0.0/15,6252001,nan,North America,US,United States,0,0
+67.98.0.0/17,6252001,nan,North America,US,United States,0,0
+67.98.128.0/20,6252001,nan,North America,US,United States,0,0
+67.98.144.0/21,6252001,nan,North America,US,United States,0,0
+67.98.152.0/22,6252001,nan,North America,US,United States,0,0
+67.98.156.0/24,3017382,EU,Europe,FR,France,0,0
+67.98.157.0/24,6252001,nan,North America,US,United States,0,0
+67.98.158.0/23,6252001,nan,North America,US,United States,0,0
+67.98.160.0/21,4043988,OC,Oceania,GU,Guam,0,0
+67.98.168.0/21,6252001,nan,North America,US,United States,0,0
+67.98.176.0/20,6252001,nan,North America,US,United States,0,0
+67.98.192.0/18,6252001,nan,North America,US,United States,0,0
+67.99.0.0/16,6252001,nan,North America,US,United States,0,0
+67.100.0.0/16,6252001,nan,North America,US,United States,0,0
+67.101.0.0/19,6252001,nan,North America,US,United States,0,0
+67.101.32.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+67.101.64.0/18,6252001,nan,North America,US,United States,0,0
+67.101.128.0/20,6252001,nan,North America,US,United States,0,0
+67.101.144.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+67.101.160.0/19,6252001,nan,North America,US,United States,0,0
+67.101.192.0/18,6252001,nan,North America,US,United States,0,0
+67.102.0.0/22,6252001,nan,North America,US,United States,0,0
+67.102.4.0/23,1643084,AS,Asia,ID,Indonesia,0,0
+67.102.6.0/24,6252001,nan,North America,US,United States,0,0
+67.102.7.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+67.102.8.0/22,1643084,AS,Asia,ID,Indonesia,0,0
+67.102.12.0/22,1562822,AS,Asia,VN,Vietnam,0,0
+67.102.16.0/23,798544,EU,Europe,PL,Poland,0,0
+67.102.18.0/23,2921044,EU,Europe,DE,Germany,0,0
+67.102.20.0/22,6252001,nan,North America,US,United States,0,0
+67.102.24.0/22,2921044,EU,Europe,DE,Germany,0,0
+67.102.28.0/23,2921044,EU,Europe,DE,Germany,0,0
+67.102.30.0/23,2782113,EU,Europe,AT,Austria,0,0
+67.102.32.0/19,6252001,nan,North America,US,United States,0,0
+67.102.64.0/18,6252001,nan,North America,US,United States,0,0
+67.102.128.0/19,6252001,nan,North America,US,United States,0,0
+67.102.160.0/23,798544,EU,Europe,PL,Poland,0,0
+67.102.162.0/23,2921044,EU,Europe,DE,Germany,0,0
+67.102.164.0/23,1269750,AS,Asia,IN,India,0,0
+67.102.166.0/23,798544,EU,Europe,PL,Poland,0,0
+67.102.168.0/23,2921044,EU,Europe,DE,Germany,0,0
+67.102.170.0/23,3017382,EU,Europe,FR,France,0,0
+67.102.172.0/22,6252001,nan,North America,US,United States,0,0
+67.102.176.0/23,1880251,AS,Asia,SG,Singapore,0,0
+67.102.178.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.102.179.0/24,6252001,nan,North America,US,United States,0,0
+67.102.180.0/24,6252001,nan,North America,US,United States,0,0
+67.102.181.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.102.182.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.102.183.0/24,6252001,nan,North America,US,United States,0,0
+67.102.184.0/22,6252001,nan,North America,US,United States,0,0
+67.102.188.0/24,6252001,nan,North America,US,United States,0,0
+67.102.189.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+67.102.190.0/23,6252001,nan,North America,US,United States,0,0
+67.102.192.0/19,6252001,nan,North America,US,United States,0,0
+67.102.224.0/20,6252001,nan,North America,US,United States,0,0
+67.102.240.0/23,1605651,AS,Asia,TH,Thailand,0,0
+67.102.242.0/23,1168579,AS,Asia,PK,Pakistan,0,0
+67.102.244.0/22,1605651,AS,Asia,TH,Thailand,0,0
+67.102.248.0/21,6252001,nan,North America,US,United States,0,0
+67.103.0.0/17,6252001,nan,North America,US,United States,0,0
+67.103.128.0/19,6252001,nan,North America,US,United States,0,0
+67.103.160.0/20,6252001,nan,North America,US,United States,0,0
+67.103.176.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+67.103.192.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.103.193.0/24,6252001,nan,North America,US,United States,0,0
+67.103.194.0/23,6252001,nan,North America,US,United States,0,0
+67.103.196.0/22,6252001,nan,North America,US,United States,0,0
+67.103.200.0/21,6252001,nan,North America,US,United States,0,0
+67.103.208.0/20,6252001,nan,North America,US,United States,0,0
+67.103.224.0/19,6252001,nan,North America,US,United States,0,0
+67.104.0.0/24,3175395,EU,Europe,IT,Italy,0,0
+67.104.1.0/24,6252001,nan,North America,US,United States,0,0
+67.104.2.0/23,6252001,nan,North America,US,United States,0,0
+67.104.4.0/22,6252001,nan,North America,US,United States,0,0
+67.104.8.0/21,6252001,nan,North America,US,United States,0,0
+67.104.16.0/20,6252001,nan,North America,US,United States,0,0
+67.104.32.0/19,6252001,nan,North America,US,United States,0,0
+67.104.64.0/18,6252001,nan,North America,US,United States,0,0
+67.104.128.0/17,6252001,nan,North America,US,United States,0,0
+67.105.0.0/16,6252001,nan,North America,US,United States,0,0
+67.106.0.0/15,6252001,nan,North America,US,United States,0,0
+67.108.0.0/14,6252001,nan,North America,US,United States,0,0
+67.112.0.0/12,6252001,nan,North America,US,United States,0,0
+67.128.0.0/13,6252001,nan,North America,US,United States,0,0
+67.136.0.0/14,6252001,nan,North America,US,United States,0,0
+67.140.0.0/15,6252001,nan,North America,US,United States,0,0
+67.142.0.0/17,6252001,nan,North America,US,United States,0,0
+67.142.128.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.0/25,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.128/28,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.144/29,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.152/30,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.156/32,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.157/32,6252001,nan,North America,US,United States,0,0
+67.142.129.158/31,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.160/27,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.129.192/26,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.130.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.132.0/22,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.136.0/21,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.144.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.145.0/24,6252001,nan,North America,US,United States,0,0
+67.142.146.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.148.0/22,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.152.0/21,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.0/29,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.8/30,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.12/32,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.13/32,6252001,nan,North America,US,United States,0,0
+67.142.160.14/31,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.16/28,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.32/27,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.64/26,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.160.128/25,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.161.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.162.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.0/28,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.16/32,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.17/32,6252001,nan,North America,US,United States,0,0
+67.142.164.18/31,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.20/30,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.24/29,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.32/27,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.64/26,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.164.128/25,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.165.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.166.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.168.0/22,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.172.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.0/28,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.16/31,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.18/31,6252001,nan,North America,US,United States,0,0
+67.142.173.20/30,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.24/29,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.32/27,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.64/26,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.173.128/25,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.174.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.176.0/23,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.0/28,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.16/32,6252001,nan,North America,US,United States,0,0
+67.142.178.17/32,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.18/31,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.20/30,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.24/29,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.32/27,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.64/26,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.178.128/25,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.179.0/24,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.180.0/22,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.184.0/21,4566966,nan,North America,PR,Puerto Rico,0,0
+67.142.192.0/18,6252001,nan,North America,US,United States,0,0
+67.143.0.0/16,6252001,nan,North America,US,United States,0,0
+67.144.0.0/14,6252001,nan,North America,US,United States,0,0
+67.148.0.0/19,6252001,nan,North America,US,United States,0,0
+67.148.32.0/20,6252001,nan,North America,US,United States,0,0
+67.148.48.0/24,6252001,nan,North America,US,United States,0,0
+67.148.49.0/29,6252001,nan,North America,US,United States,0,0
+67.148.49.8/29,2963597,EU,Europe,IE,Ireland,0,0
+67.148.49.16/28,6252001,nan,North America,US,United States,0,0
+67.148.49.32/27,6252001,nan,North America,US,United States,0,0
+67.148.49.64/27,6252001,nan,North America,US,United States,0,0
+67.148.49.96/27,2635167,EU,Europe,GB,United Kingdom,0,0
+67.148.49.128/28,6252001,nan,North America,US,United States,0,0
+67.148.49.144/29,2963597,EU,Europe,IE,Ireland,0,0
+67.148.49.152/29,6252001,nan,North America,US,United States,0,0
+67.148.49.160/28,6252001,nan,North America,US,United States,0,0
+67.148.49.176/28,2635167,EU,Europe,GB,United Kingdom,0,0
+67.148.49.192/26,6252001,nan,North America,US,United States,0,0
+67.148.50.0/23,6252001,nan,North America,US,United States,0,0
+67.148.52.0/22,6252001,nan,North America,US,United States,0,0
+67.148.56.0/21,6252001,nan,North America,US,United States,0,0
+67.148.64.0/23,6252001,nan,North America,US,United States,0,0
+67.148.66.0/25,6252001,nan,North America,US,United States,0,0
+67.148.66.128/26,6252001,nan,North America,US,United States,0,0
+67.148.66.192/29,2750405,EU,Europe,NL,The Netherlands,0,0
+67.148.66.200/29,2963597,EU,Europe,IE,Ireland,0,0
+67.148.66.208/28,6252001,nan,North America,US,United States,0,0
+67.148.66.224/27,6252001,nan,North America,US,United States,0,0
+67.148.67.0/24,6252001,nan,North America,US,United States,0,0
+67.148.68.0/22,6252001,nan,North America,US,United States,0,0
+67.148.72.0/21,6252001,nan,North America,US,United States,0,0
+67.148.80.0/20,6252001,nan,North America,US,United States,0,0
+67.148.96.0/19,6252001,nan,North America,US,United States,0,0
+67.148.128.0/17,6252001,nan,North America,US,United States,0,0
+67.149.0.0/16,6252001,nan,North America,US,United States,0,0
+67.150.0.0/15,6252001,nan,North America,US,United States,0,0
+67.152.0.0/14,6252001,nan,North America,US,United States,0,0
+67.156.0.0/15,6252001,nan,North America,US,United States,0,0
+67.158.0.0/19,6252001,nan,North America,US,United States,0,0
+67.158.32.0/20,6252001,nan,North America,US,United States,0,0
+67.158.48.0/23,6252001,nan,North America,US,United States,0,0
+67.158.50.0/24,6251999,nan,North America,CA,Canada,0,0
+67.158.51.0/24,6252001,nan,North America,US,United States,0,0
+67.158.52.0/24,1269750,AS,Asia,IN,India,0,0
+67.158.53.0/24,6252001,nan,North America,US,United States,0,0
+67.158.54.0/23,6252001,nan,North America,US,United States,0,0
+67.158.56.0/22,6252001,nan,North America,US,United States,0,0
+67.158.60.0/24,6252001,nan,North America,US,United States,0,0
+67.158.61.0/24,6251999,nan,North America,CA,Canada,0,0
+67.158.62.0/24,2963597,EU,Europe,IE,Ireland,0,0
+67.158.63.0/24,6252001,nan,North America,US,United States,0,0
+67.158.64.0/20,6251999,nan,North America,CA,Canada,0,0
+67.158.80.0/20,6252001,nan,North America,US,United States,0,0
+67.158.96.0/19,6252001,nan,North America,US,United States,0,0
+67.158.128.0/17,6252001,nan,North America,US,United States,0,0
+67.159.0.0/20,6252001,nan,North America,US,United States,0,0
+67.159.16.0/24,6252001,nan,North America,US,United States,0,0
+67.159.17.0/24,2782113,EU,Europe,AT,Austria,0,0
+67.159.18.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+67.159.19.0/24,6252001,nan,North America,US,United States,0,0
+67.159.20.0/22,6252001,nan,North America,US,United States,0,0
+67.159.24.0/22,6252001,nan,North America,US,United States,0,0
+67.159.28.0/24,798544,EU,Europe,PL,Poland,0,0
+67.159.29.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+67.159.30.0/23,6252001,nan,North America,US,United States,0,0
+67.159.32.0/23,3469034,SA,South America,BR,Brazil,0,0
+67.159.34.0/23,6252001,nan,North America,US,United States,0,0
+67.159.36.0/22,6252001,nan,North America,US,United States,0,0
+67.159.40.0/21,6252001,nan,North America,US,United States,0,0
+67.159.48.0/22,6252001,nan,North America,US,United States,0,0
+67.159.52.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.159.53.0/24,6252001,nan,North America,US,United States,0,0
+67.159.54.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.159.55.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.159.56.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.159.57.0/24,1861060,AS,Asia,JP,Japan,0,0
+67.159.58.0/23,6252001,nan,North America,US,United States,0,0
+67.159.60.0/22,6252001,nan,North America,US,United States,0,0
+67.159.64.0/18,6252001,nan,North America,US,United States,0,0
+67.159.128.0/18,6252001,nan,North America,US,United States,0,0
+67.159.192.0/22,6252001,nan,North America,US,United States,0,0
+67.159.196.0/23,6252001,nan,North America,US,United States,0,0
+67.159.198.0/24,6252001,nan,North America,US,United States,0,0
+67.159.199.0/24,3580239,nan,North America,GD,Grenada,0,0
+67.159.200.0/21,6252001,nan,North America,US,United States,0,0
+67.159.208.0/20,3017382,EU,Europe,FR,France,0,0
+67.159.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+67.160.0.0/13,6252001,nan,North America,US,United States,0,0
+67.168.0.0/16,6252001,nan,North America,US,United States,0,0
+67.169.0.0/20,6252001,nan,North America,US,United States,0,0
+67.169.16.0/24,6252001,nan,North America,US,United States,0,0
+67.169.17.0/26,6252001,nan,North America,US,United States,0,0
+67.169.17.64/27,6252001,nan,North America,US,United States,0,0
+67.169.17.96/29,6252001,nan,North America,US,United States,0,0
+67.169.17.105/32,6252001,nan,North America,US,United States,0,0
+67.169.17.106/31,6252001,nan,North America,US,United States,0,0
+67.169.17.108/30,6252001,nan,North America,US,United States,0,0
+67.169.17.112/28,6252001,nan,North America,US,United States,0,0
+67.169.17.128/25,6252001,nan,North America,US,United States,0,0
+67.169.18.0/23,6252001,nan,North America,US,United States,0,0
+67.169.20.0/22,6252001,nan,North America,US,United States,0,0
+67.169.24.0/21,6252001,nan,North America,US,United States,0,0
+67.169.32.0/19,6252001,nan,North America,US,United States,0,0
+67.169.64.0/21,6252001,nan,North America,US,United States,0,0
+67.169.72.0/24,6252001,nan,North America,US,United States,0,0
+67.169.73.0/25,6252001,nan,North America,US,United States,0,0
+67.169.73.128/27,6252001,nan,North America,US,United States,0,0
+67.169.73.160/28,6252001,nan,North America,US,United States,0,0
+67.169.73.176/32,6252001,nan,North America,US,United States,0,0
+67.169.73.178/31,6252001,nan,North America,US,United States,0,0
+67.169.73.180/30,6252001,nan,North America,US,United States,0,0
+67.169.73.184/29,6252001,nan,North America,US,United States,0,0
+67.169.73.192/26,6252001,nan,North America,US,United States,0,0
+67.169.74.0/23,6252001,nan,North America,US,United States,0,0
+67.169.76.0/22,6252001,nan,North America,US,United States,0,0
+67.169.80.0/20,6252001,nan,North America,US,United States,0,0
+67.169.96.0/19,6252001,nan,North America,US,United States,0,0
+67.169.128.0/20,6252001,nan,North America,US,United States,0,0
+67.169.144.0/21,6252001,nan,North America,US,United States,0,0
+67.169.152.0/23,6252001,nan,North America,US,United States,0,0
+67.169.154.0/25,6252001,nan,North America,US,United States,0,0
+67.169.154.129/32,6252001,nan,North America,US,United States,0,0
+67.169.154.130/31,6252001,nan,North America,US,United States,0,0
+67.169.154.132/30,6252001,nan,North America,US,United States,0,0
+67.169.154.136/29,6252001,nan,North America,US,United States,0,0
+67.169.154.144/28,6252001,nan,North America,US,United States,0,0
+67.169.154.160/27,6252001,nan,North America,US,United States,0,0
+67.169.154.192/26,6252001,nan,North America,US,United States,0,0
+67.169.155.0/24,6252001,nan,North America,US,United States,0,0
+67.169.156.0/22,6252001,nan,North America,US,United States,0,0
+67.169.160.0/19,6252001,nan,North America,US,United States,0,0
+67.169.192.0/18,6252001,nan,North America,US,United States,0,0
+67.170.0.0/17,6252001,nan,North America,US,United States,0,0
+67.170.128.0/21,6252001,nan,North America,US,United States,0,0
+67.170.136.0/27,6252001,nan,North America,US,United States,0,0
+67.170.136.32/28,6252001,nan,North America,US,United States,0,0
+67.170.136.48/30,6252001,nan,North America,US,United States,0,0
+67.170.136.52/31,6252001,nan,North America,US,United States,0,0
+67.170.136.55/32,6252001,nan,North America,US,United States,0,0
+67.170.136.56/29,6252001,nan,North America,US,United States,0,0
+67.170.136.64/26,6252001,nan,North America,US,United States,0,0
+67.170.136.128/25,6252001,nan,North America,US,United States,0,0
+67.170.137.0/24,6252001,nan,North America,US,United States,0,0
+67.170.138.0/23,6252001,nan,North America,US,United States,0,0
+67.170.140.0/22,6252001,nan,North America,US,United States,0,0
+67.170.144.0/20,6252001,nan,North America,US,United States,0,0
+67.170.160.0/19,6252001,nan,North America,US,United States,0,0
+67.170.192.0/18,6252001,nan,North America,US,United States,0,0
+67.171.0.0/17,6252001,nan,North America,US,United States,0,0
+67.171.128.0/18,6252001,nan,North America,US,United States,0,0
+67.171.192.0/20,6252001,nan,North America,US,United States,0,0
+67.171.208.0/22,6252001,nan,North America,US,United States,0,0
+67.171.212.0/25,6252001,nan,North America,US,United States,0,0
+67.171.212.128/26,6252001,nan,North America,US,United States,0,0
+67.171.212.192/27,6252001,nan,North America,US,United States,0,0
+67.171.212.224/28,6252001,nan,North America,US,United States,0,0
+67.171.212.240/29,6252001,nan,North America,US,United States,0,0
+67.171.212.248/31,6252001,nan,North America,US,United States,0,0
+67.171.212.250/32,6252001,nan,North America,US,United States,0,0
+67.171.212.252/30,6252001,nan,North America,US,United States,0,0
+67.171.213.0/24,6252001,nan,North America,US,United States,0,0
+67.171.214.0/23,6252001,nan,North America,US,United States,0,0
+67.171.216.0/21,6252001,nan,North America,US,United States,0,0
+67.171.224.0/19,6252001,nan,North America,US,United States,0,0
+67.172.0.0/15,6252001,nan,North America,US,United States,0,0
+67.174.0.0/17,6252001,nan,North America,US,United States,0,0
+67.174.128.0/18,6252001,nan,North America,US,United States,0,0
+67.174.192.0/23,6252001,nan,North America,US,United States,0,0
+67.174.194.0/24,6252001,nan,North America,US,United States,0,0
+67.174.195.0/27,6252001,nan,North America,US,United States,0,0
+67.174.195.32/28,6252001,nan,North America,US,United States,0,0
+67.174.195.48/30,6252001,nan,North America,US,United States,0,0
+67.174.195.52/31,6252001,nan,North America,US,United States,0,0
+67.174.195.54/32,6252001,nan,North America,US,United States,0,0
+67.174.195.56/29,6252001,nan,North America,US,United States,0,0
+67.174.195.64/26,6252001,nan,North America,US,United States,0,0
+67.174.195.128/25,6252001,nan,North America,US,United States,0,0
+67.174.196.0/22,6252001,nan,North America,US,United States,0,0
+67.174.200.0/21,6252001,nan,North America,US,United States,0,0
+67.174.208.0/20,6252001,nan,North America,US,United States,0,0
+67.174.224.0/19,6252001,nan,North America,US,United States,0,0
+67.175.0.0/16,6252001,nan,North America,US,United States,0,0
+67.176.0.0/19,6252001,nan,North America,US,United States,0,0
+67.176.32.0/21,6252001,nan,North America,US,United States,0,0
+67.176.40.0/23,6252001,nan,North America,US,United States,0,0
+67.176.42.0/24,6252001,nan,North America,US,United States,0,0
+67.176.43.0/29,6252001,nan,North America,US,United States,0,0
+67.176.43.8/30,6252001,nan,North America,US,United States,0,0
+67.176.43.12/32,6252001,nan,North America,US,United States,0,0
+67.176.43.14/31,6252001,nan,North America,US,United States,0,0
+67.176.43.16/28,6252001,nan,North America,US,United States,0,0
+67.176.43.32/27,6252001,nan,North America,US,United States,0,0
+67.176.43.64/26,6252001,nan,North America,US,United States,0,0
+67.176.43.128/25,6252001,nan,North America,US,United States,0,0
+67.176.44.0/22,6252001,nan,North America,US,United States,0,0
+67.176.48.0/20,6252001,nan,North America,US,United States,0,0
+67.176.64.0/18,6252001,nan,North America,US,United States,0,0
+67.176.128.0/17,6252001,nan,North America,US,United States,0,0
+67.177.0.0/17,6252001,nan,North America,US,United States,0,0
+67.177.128.0/18,6252001,nan,North America,US,United States,0,0
+67.177.192.0/19,6252001,nan,North America,US,United States,0,0
+67.177.224.0/20,6252001,nan,North America,US,United States,0,0
+67.177.240.0/21,6252001,nan,North America,US,United States,0,0
+67.177.248.0/23,6252001,nan,North America,US,United States,0,0
+67.177.250.0/24,6252001,nan,North America,US,United States,0,0
+67.177.251.0/25,6252001,nan,North America,US,United States,0,0
+67.177.251.128/26,6252001,nan,North America,US,United States,0,0
+67.177.251.192/27,6252001,nan,North America,US,United States,0,0
+67.177.251.224/29,6252001,nan,North America,US,United States,0,0
+67.177.251.232/31,6252001,nan,North America,US,United States,0,0
+67.177.251.234/32,6252001,nan,North America,US,United States,0,0
+67.177.251.236/30,6252001,nan,North America,US,United States,0,0
+67.177.251.240/28,6252001,nan,North America,US,United States,0,0
+67.177.252.0/22,6252001,nan,North America,US,United States,0,0
+67.178.0.0/15,6252001,nan,North America,US,United States,0,0
+67.180.0.0/20,6252001,nan,North America,US,United States,0,0
+67.180.16.0/24,6252001,nan,North America,US,United States,0,0
+67.180.17.0/25,6252001,nan,North America,US,United States,0,0
+67.180.17.128/27,6252001,nan,North America,US,United States,0,0
+67.180.17.160/28,6252001,nan,North America,US,United States,0,0
+67.180.17.176/29,6252001,nan,North America,US,United States,0,0
+67.180.17.184/31,6252001,nan,North America,US,United States,0,0
+67.180.17.187/32,6252001,nan,North America,US,United States,0,0
+67.180.17.188/30,6252001,nan,North America,US,United States,0,0
+67.180.17.192/26,6252001,nan,North America,US,United States,0,0
+67.180.18.0/23,6252001,nan,North America,US,United States,0,0
+67.180.20.0/22,6252001,nan,North America,US,United States,0,0
+67.180.24.0/21,6252001,nan,North America,US,United States,0,0
+67.180.32.0/19,6252001,nan,North America,US,United States,0,0
+67.180.64.0/18,6252001,nan,North America,US,United States,0,0
+67.180.128.0/17,6252001,nan,North America,US,United States,0,0
+67.181.0.0/18,6252001,nan,North America,US,United States,0,0
+67.181.64.0/19,6252001,nan,North America,US,United States,0,0
+67.181.96.0/20,6252001,nan,North America,US,United States,0,0
+67.181.112.0/21,6252001,nan,North America,US,United States,0,0
+67.181.120.0/28,6252001,nan,North America,US,United States,0,0
+67.181.120.16/30,6252001,nan,North America,US,United States,0,0
+67.181.120.21/32,6252001,nan,North America,US,United States,0,0
+67.181.120.22/31,6252001,nan,North America,US,United States,0,0
+67.181.120.24/29,6252001,nan,North America,US,United States,0,0
+67.181.120.32/27,6252001,nan,North America,US,United States,0,0
+67.181.120.64/26,6252001,nan,North America,US,United States,0,0
+67.181.120.128/25,6252001,nan,North America,US,United States,0,0
+67.181.121.0/24,6252001,nan,North America,US,United States,0,0
+67.181.122.0/23,6252001,nan,North America,US,United States,0,0
+67.181.124.0/22,6252001,nan,North America,US,United States,0,0
+67.181.128.0/17,6252001,nan,North America,US,United States,0,0
+67.182.0.0/15,6252001,nan,North America,US,United States,0,0
+67.184.0.0/15,6252001,nan,North America,US,United States,0,0
+67.186.0.0/16,6252001,nan,North America,US,United States,0,0
+67.187.0.0/18,6252001,nan,North America,US,United States,0,0
+67.187.64.0/19,6252001,nan,North America,US,United States,0,0
+67.187.96.0/21,6252001,nan,North America,US,United States,0,0
+67.187.104.0/22,6252001,nan,North America,US,United States,0,0
+67.187.108.0/25,6252001,nan,North America,US,United States,0,0
+67.187.108.128/28,6252001,nan,North America,US,United States,0,0
+67.187.108.144/30,6252001,nan,North America,US,United States,0,0
+67.187.108.148/31,6252001,nan,North America,US,United States,0,0
+67.187.108.151/32,6252001,nan,North America,US,United States,0,0
+67.187.108.152/29,6252001,nan,North America,US,United States,0,0
+67.187.108.160/27,6252001,nan,North America,US,United States,0,0
+67.187.108.192/26,6252001,nan,North America,US,United States,0,0
+67.187.109.0/24,6252001,nan,North America,US,United States,0,0
+67.187.110.0/23,6252001,nan,North America,US,United States,0,0
+67.187.112.0/20,6252001,nan,North America,US,United States,0,0
+67.187.128.0/17,6252001,nan,North America,US,United States,0,0
+67.188.0.0/14,6252001,nan,North America,US,United States,0,0
+67.192.0.0/16,6252001,nan,North America,US,United States,0,0
+67.193.0.0/16,6251999,nan,North America,CA,Canada,0,0
+67.194.0.0/15,6252001,nan,North America,US,United States,0,0
+67.196.0.0/15,6252001,nan,North America,US,United States,0,0
+67.198.0.0/17,6252001,nan,North America,US,United States,0,0
+67.198.128.0/20,6252001,nan,North America,US,United States,0,0
+67.198.144.0/22,6252001,nan,North America,US,United States,0,0
+67.198.148.0/23,6252001,nan,North America,US,United States,0,0
+67.198.150.0/26,6252001,nan,North America,US,United States,0,0
+67.198.150.64/28,6252001,nan,North America,US,United States,0,0
+67.198.150.80/29,6252001,nan,North America,US,United States,0,0
+67.198.150.88/30,6252001,nan,North America,US,United States,0,0
+67.198.150.92/32,6252001,nan,North America,US,United States,0,0
+67.198.150.93/32,1819730,AS,Asia,HK,Hong Kong,0,0
+67.198.150.94/31,6252001,nan,North America,US,United States,0,0
+67.198.150.96/27,6252001,nan,North America,US,United States,0,0
+67.198.150.128/25,6252001,nan,North America,US,United States,0,0
+67.198.151.0/24,6252001,nan,North America,US,United States,0,0
+67.198.152.0/21,6252001,nan,North America,US,United States,0,0
+67.198.160.0/19,6252001,nan,North America,US,United States,0,0
+67.198.192.0/18,6252001,nan,North America,US,United States,0,0
+67.199.0.0/17,6252001,nan,North America,US,United States,0,0
+67.199.128.0/22,6252001,nan,North America,US,United States,0,0
+67.199.132.0/23,6252001,nan,North America,US,United States,0,0
+67.199.134.0/24,6252001,nan,North America,US,United States,0,0
+67.199.135.0/25,6252001,nan,North America,US,United States,0,0
+67.199.135.128/26,6252001,nan,North America,US,United States,0,0
+67.199.135.192/27,6252001,nan,North America,US,United States,0,0
+67.199.135.224/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.135.240/28,6252001,nan,North America,US,United States,0,0
+67.199.136.0/26,6252001,nan,North America,US,United States,0,0
+67.199.136.64/29,6252001,nan,North America,US,United States,0,0
+67.199.136.72/30,6252001,nan,North America,US,United States,0,0
+67.199.136.76/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.136.80/28,6252001,nan,North America,US,United States,0,0
+67.199.136.96/27,6252001,nan,North America,US,United States,0,0
+67.199.136.128/25,6252001,nan,North America,US,United States,0,0
+67.199.137.0/24,6252001,nan,North America,US,United States,0,0
+67.199.138.0/24,6252001,nan,North America,US,United States,0,0
+67.199.139.0/25,6252001,nan,North America,US,United States,0,0
+67.199.139.128/26,6252001,nan,North America,US,United States,0,0
+67.199.139.192/27,6252001,nan,North America,US,United States,0,0
+67.199.139.224/29,6252001,nan,North America,US,United States,0,0
+67.199.139.232/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.139.240/28,6252001,nan,North America,US,United States,0,0
+67.199.140.0/27,6252001,nan,North America,US,United States,0,0
+67.199.140.32/28,6252001,nan,North America,US,United States,0,0
+67.199.140.48/30,6252001,nan,North America,US,United States,0,0
+67.199.140.52/31,6252001,nan,North America,US,United States,0,0
+67.199.140.54/32,298795,AS,Asia,TR,Türkiye,0,0
+67.199.140.55/32,6252001,nan,North America,US,United States,0,0
+67.199.140.56/29,6252001,nan,North America,US,United States,0,0
+67.199.140.64/26,6252001,nan,North America,US,United States,0,0
+67.199.140.128/27,6252001,nan,North America,US,United States,0,0
+67.199.140.160/29,6252001,nan,North America,US,United States,0,0
+67.199.140.168/30,6252001,nan,North America,US,United States,0,0
+67.199.140.172/31,6252001,nan,North America,US,United States,0,0
+67.199.140.174/32,298795,AS,Asia,TR,Türkiye,0,0
+67.199.140.175/32,6252001,nan,North America,US,United States,0,0
+67.199.140.176/28,6252001,nan,North America,US,United States,0,0
+67.199.140.192/29,6252001,nan,North America,US,United States,0,0
+67.199.140.200/31,6252001,nan,North America,US,United States,0,0
+67.199.140.202/32,1861060,AS,Asia,JP,Japan,0,0
+67.199.140.203/32,6252001,nan,North America,US,United States,0,0
+67.199.140.204/30,6252001,nan,North America,US,United States,0,0
+67.199.140.208/28,6252001,nan,North America,US,United States,0,0
+67.199.140.224/27,6252001,nan,North America,US,United States,0,0
+67.199.141.0/26,6252001,nan,North America,US,United States,0,0
+67.199.141.64/31,6252001,nan,North America,US,United States,0,0
+67.199.141.66/32,298795,AS,Asia,TR,Türkiye,0,0
+67.199.141.67/32,6252001,nan,North America,US,United States,0,0
+67.199.141.68/30,6252001,nan,North America,US,United States,0,0
+67.199.141.72/29,6252001,nan,North America,US,United States,0,0
+67.199.141.80/28,6252001,nan,North America,US,United States,0,0
+67.199.141.96/27,6252001,nan,North America,US,United States,0,0
+67.199.141.128/25,6252001,nan,North America,US,United States,0,0
+67.199.142.0/25,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.142.128/25,6252001,nan,North America,US,United States,0,0
+67.199.143.0/24,6252001,nan,North America,US,United States,0,0
+67.199.144.0/25,2077456,OC,Oceania,AU,Australia,0,0
+67.199.144.128/25,1861060,AS,Asia,JP,Japan,0,0
+67.199.145.0/24,6252001,nan,North America,US,United States,0,0
+67.199.146.0/23,6252001,nan,North America,US,United States,0,0
+67.199.148.0/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.24/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.148.28/30,1861060,AS,Asia,JP,Japan,0,0
+67.199.148.32/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+67.199.148.36/30,6252001,nan,North America,US,United States,0,0
+67.199.148.40/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.148.44/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.148.48/28,1835841,AS,Asia,KR,South Korea,0,0
+67.199.148.64/29,6252001,nan,North America,US,United States,0,0
+67.199.148.72/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.148.80/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.148.88/29,6252001,nan,North America,US,United States,0,0
+67.199.148.96/30,2623032,EU,Europe,DK,Denmark,0,0
+67.199.148.100/30,1861060,AS,Asia,JP,Japan,0,0
+67.199.148.104/29,2635167,EU,Europe,GB,United Kingdom,0,0
+67.199.148.112/29,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.199.148.120/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.148.128/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.144/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.148.152/29,6252001,nan,North America,US,United States,0,0
+67.199.148.160/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.184/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.148.192/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.208/29,6252001,nan,North America,US,United States,0,0
+67.199.148.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.224/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.148.232/30,1861060,AS,Asia,JP,Japan,0,0
+67.199.148.236/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.148.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.148.248/29,6252001,nan,North America,US,United States,0,0
+67.199.149.0/27,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.149.32/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.48/28,1861060,AS,Asia,JP,Japan,0,0
+67.199.149.64/26,2077456,OC,Oceania,AU,Australia,0,0
+67.199.149.128/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.136/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.149.144/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.152/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.149.156/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.160/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.168/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.149.176/28,1861060,AS,Asia,JP,Japan,0,0
+67.199.149.192/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.149.200/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.208/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.149.212/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.149.224/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.149.232/29,6252001,nan,North America,US,United States,0,0
+67.199.149.240/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.149.244/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.149.248/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.150.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.199.151.0/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.151.8/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.151.16/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.151.24/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.151.32/27,1880251,AS,Asia,SG,Singapore,0,0
+67.199.151.64/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.151.72/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.151.80/30,1861060,AS,Asia,JP,Japan,0,0
+67.199.151.84/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.151.88/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.151.96/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.151.104/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.151.112/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.151.116/32,298795,AS,Asia,TR,Türkiye,0,0
+67.199.151.117/32,6252001,nan,North America,US,United States,0,0
+67.199.151.118/31,6252001,nan,North America,US,United States,0,0
+67.199.151.120/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.151.128/26,1880251,AS,Asia,SG,Singapore,0,0
+67.199.151.192/26,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.0/30,6252001,nan,North America,US,United States,0,0
+67.199.152.4/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.152.8/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.16/28,2077456,OC,Oceania,AU,Australia,0,0
+67.199.152.32/28,2077456,OC,Oceania,AU,Australia,0,0
+67.199.152.48/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.56/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.152.64/29,6252001,nan,North America,US,United States,0,0
+67.199.152.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.152.80/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.88/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.152.96/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.152.100/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.152.104/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.112/28,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.128/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.136/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.152.144/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.152.152/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.160/28,1814991,AS,Asia,CN,China,0,0
+67.199.152.176/29,1668284,AS,Asia,TW,Taiwan,0,0
+67.199.152.184/29,1835841,AS,Asia,KR,South Korea,0,0
+67.199.152.192/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.152.200/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.152.208/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.152.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.152.224/27,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.0/30,6252001,nan,North America,US,United States,0,0
+67.199.153.4/30,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.8/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.16/28,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.32/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.40/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.153.48/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.64/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.80/29,3017382,EU,Europe,FR,France,0,0
+67.199.153.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.96/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.104/29,6252001,nan,North America,US,United States,0,0
+67.199.153.112/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.153.120/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.128/28,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.144/28,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.160/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.168/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.176/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.192/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.196/30,6252001,nan,North America,US,United States,0,0
+67.199.153.200/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.153.208/29,2802361,EU,Europe,BE,Belgium,0,0
+67.199.153.216/30,6252001,nan,North America,US,United States,0,0
+67.199.153.220/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.153.224/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.232/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.236/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.153.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.153.248/29,6252001,nan,North America,US,United States,0,0
+67.199.154.0/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.154.8/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.16/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.24/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.154.32/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.154.40/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.199.154.48/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.154.56/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.64/29,6252001,nan,North America,US,United States,0,0
+67.199.154.72/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.80/28,6252001,nan,North America,US,United States,0,0
+67.199.154.96/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.104/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.112/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.116/30,1694008,AS,Asia,PH,Philippines,0,0
+67.199.154.120/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.154.128/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.154.136/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.144/28,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.160/30,2635167,EU,Europe,GB,United Kingdom,0,0
+67.199.154.164/30,6252001,nan,North America,US,United States,0,0
+67.199.154.168/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.176/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.192/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.154.200/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.208/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.216/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.154.224/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.228/31,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.230/31,298795,AS,Asia,TR,Türkiye,0,0
+67.199.154.232/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.154.240/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.154.244/30,2623032,EU,Europe,DK,Denmark,0,0
+67.199.154.248/29,1814991,AS,Asia,CN,China,0,0
+67.199.155.0/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.155.16/28,6252001,nan,North America,US,United States,0,0
+67.199.155.32/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.155.40/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.155.48/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.155.64/28,6252001,nan,North America,US,United States,0,0
+67.199.155.80/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.155.88/29,6252001,nan,North America,US,United States,0,0
+67.199.155.96/27,6252001,nan,North America,US,United States,0,0
+67.199.155.128/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.155.136/29,6252001,nan,North America,US,United States,0,0
+67.199.155.144/29,1835841,AS,Asia,KR,South Korea,0,0
+67.199.155.152/29,6252001,nan,North America,US,United States,0,0
+67.199.155.160/28,6252001,nan,North America,US,United States,0,0
+67.199.155.176/29,6252001,nan,North America,US,United States,0,0
+67.199.155.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.155.192/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.155.200/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.155.208/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.155.216/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.155.224/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.155.232/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.155.236/30,6252001,nan,North America,US,United States,0,0
+67.199.155.240/28,6252001,nan,North America,US,United States,0,0
+67.199.156.0/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.156.8/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.156.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.156.24/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.156.32/27,6252001,nan,North America,US,United States,0,0
+67.199.156.64/29,1814991,AS,Asia,CN,China,0,0
+67.199.156.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.156.80/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.156.88/29,6252001,nan,North America,US,United States,0,0
+67.199.156.96/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.156.104/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.156.112/28,1269750,AS,Asia,IN,India,0,0
+67.199.156.128/29,6252001,nan,North America,US,United States,0,0
+67.199.156.136/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.156.144/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.156.160/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.156.168/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.156.176/28,1694008,AS,Asia,PH,Philippines,0,0
+67.199.156.192/28,1694008,AS,Asia,PH,Philippines,0,0
+67.199.156.208/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.156.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.156.224/28,298795,AS,Asia,TR,Türkiye,0,0
+67.199.156.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.156.248/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.157.0/30,3017382,EU,Europe,FR,France,0,0
+67.199.157.4/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.157.8/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.157.16/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.157.24/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+67.199.157.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+67.199.157.32/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.157.40/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.157.44/30,6252001,nan,North America,US,United States,0,0
+67.199.157.48/28,2077456,OC,Oceania,AU,Australia,0,0
+67.199.157.64/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.157.72/29,6252001,nan,North America,US,United States,0,0
+67.199.157.80/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.157.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.157.96/29,1269750,AS,Asia,IN,India,0,0
+67.199.157.104/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.157.112/29,6252001,nan,North America,US,United States,0,0
+67.199.157.120/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.128/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.157.136/29,3017382,EU,Europe,FR,France,0,0
+67.199.157.144/29,1814991,AS,Asia,CN,China,0,0
+67.199.157.152/29,6252001,nan,North America,US,United States,0,0
+67.199.157.160/29,1835841,AS,Asia,KR,South Korea,0,0
+67.199.157.168/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.176/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.192/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.208/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.157.216/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.224/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.157.240/29,1269750,AS,Asia,IN,India,0,0
+67.199.157.248/29,298795,AS,Asia,TR,Türkiye,0,0
+67.199.158.0/25,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.158.128/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.158.136/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.158.140/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.158.144/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.158.160/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.158.164/30,1814991,AS,Asia,CN,China,0,0
+67.199.158.168/30,2077456,OC,Oceania,AU,Australia,0,0
+67.199.158.172/31,6252001,nan,North America,US,United States,0,0
+67.199.158.174/31,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.158.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.158.184/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.158.192/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.158.196/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.158.200/29,6252001,nan,North America,US,United States,0,0
+67.199.158.208/30,298795,AS,Asia,TR,Türkiye,0,0
+67.199.158.212/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.158.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.158.224/29,6252001,nan,North America,US,United States,0,0
+67.199.158.232/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.158.240/28,1880251,AS,Asia,SG,Singapore,0,0
+67.199.159.0/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.159.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.159.16/29,1282588,AS,Asia,IO,British Indian Ocean Territory,0,0
+67.199.159.24/29,6252001,nan,North America,US,United States,0,0
+67.199.159.32/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.199.159.36/30,6252001,nan,North America,US,United States,0,0
+67.199.159.40/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.159.48/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.64/28,6252001,nan,North America,US,United States,0,0
+67.199.159.80/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.84/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.159.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.199.159.96/27,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.128/30,1880251,AS,Asia,SG,Singapore,0,0
+67.199.159.132/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.136/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.199.159.144/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.160/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.199.159.176/29,2077456,OC,Oceania,AU,Australia,0,0
+67.199.159.184/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.159.192/27,1861060,AS,Asia,JP,Japan,0,0
+67.199.159.224/30,1814991,AS,Asia,CN,China,0,0
+67.199.159.228/30,2635167,EU,Europe,GB,United Kingdom,0,0
+67.199.159.232/29,1694008,AS,Asia,PH,Philippines,0,0
+67.199.159.240/29,1880251,AS,Asia,SG,Singapore,0,0
+67.199.159.248/29,2635167,EU,Europe,GB,United Kingdom,0,0
+67.199.160.0/19,6252001,nan,North America,US,United States,0,0
+67.199.192.0/19,6252001,nan,North America,US,United States,0,0
+67.199.224.0/23,6252001,nan,North America,US,United States,0,0
+67.199.226.0/24,6252001,nan,North America,US,United States,0,0
+67.199.227.0/24,6251999,nan,North America,CA,Canada,0,0
+67.199.228.0/22,6252001,nan,North America,US,United States,0,0
+67.199.232.0/21,6252001,nan,North America,US,United States,0,0
+67.199.240.0/20,6252001,nan,North America,US,United States,0,0
+67.200.0.0/19,6252001,nan,North America,US,United States,0,0
+67.200.32.0/20,6252001,nan,North America,US,United States,0,0
+67.200.48.0/24,6251999,nan,North America,CA,Canada,0,0
+67.200.49.0/24,6252001,nan,North America,US,United States,0,0
+67.200.50.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+67.200.52.0/23,6252001,nan,North America,US,United States,0,0
+67.200.54.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+67.200.56.0/21,6252001,nan,North America,US,United States,0,0
+67.200.64.0/20,6252001,nan,North America,US,United States,0,0
+67.200.80.0/21,6252001,nan,North America,US,United States,0,0
+67.200.88.0/23,6252001,nan,North America,US,United States,0,0
+67.200.90.0/24,6251999,nan,North America,CA,Canada,0,0
+67.200.91.0/24,6252001,nan,North America,US,United States,0,0
+67.200.92.0/22,6252001,nan,North America,US,United States,0,0
+67.200.96.0/23,6252001,nan,North America,US,United States,0,0
+67.200.98.0/24,6251999,nan,North America,CA,Canada,0,0
+67.200.99.0/24,6252001,nan,North America,US,United States,0,0
+67.200.100.0/23,6252001,nan,North America,US,United States,0,0
+67.200.102.0/24,6251999,nan,North America,CA,Canada,0,0
+67.200.103.0/24,6252001,nan,North America,US,United States,0,0
+67.200.104.0/21,6252001,nan,North America,US,United States,0,0
+67.200.112.0/20,6252001,nan,North America,US,United States,0,0
+67.200.128.0/17,6252001,nan,North America,US,United States,0,0
+67.201.0.0/17,6252001,nan,North America,US,United States,0,0
+67.201.128.0/18,6251999,nan,North America,CA,Canada,0,0
+67.201.192.0/18,6252001,nan,North America,US,United States,0,0
+67.202.0.0/17,6252001,nan,North America,US,United States,0,0
+67.202.128.0/19,6252001,nan,North America,US,United States,0,0
+67.202.160.0/20,6251999,nan,North America,CA,Canada,0,0
+67.202.176.0/20,6252001,nan,North America,US,United States,0,0
+67.202.192.0/19,6252001,nan,North America,US,United States,0,0
+67.202.224.0/21,6252001,nan,North America,US,United States,0,0
+67.202.232.0/24,1269750,AS,Asia,IN,India,0,0
+67.202.233.0/24,6252001,nan,North America,US,United States,0,0
+67.202.234.0/23,6252001,nan,North America,US,United States,0,0
+67.202.236.0/22,6252001,nan,North America,US,United States,0,0
+67.202.240.0/20,6251999,nan,North America,CA,Canada,0,0
+67.203.0.0/17,6252001,nan,North America,US,United States,0,0
+67.203.128.0/18,6252001,nan,North America,US,United States,0,0
+67.203.192.0/18,4566966,nan,North America,PR,Puerto Rico,0,0
+67.204.0.0/17,6252001,nan,North America,US,United States,0,0
+67.204.128.0/19,6252001,nan,North America,US,United States,0,0
+67.204.160.0/20,6252001,nan,North America,US,United States,0,0
+67.204.176.0/22,6252001,nan,North America,US,United States,0,0
+67.204.180.0/24,6252001,nan,North America,US,United States,0,0
+67.204.181.0/30,6252001,nan,North America,US,United States,0,0
+67.204.181.5/32,6252001,nan,North America,US,United States,0,0
+67.204.181.6/31,6252001,nan,North America,US,United States,0,0
+67.204.181.8/29,6252001,nan,North America,US,United States,0,0
+67.204.181.16/28,6252001,nan,North America,US,United States,0,0
+67.204.181.32/27,6252001,nan,North America,US,United States,0,0
+67.204.181.64/26,6252001,nan,North America,US,United States,0,0
+67.204.181.128/25,6252001,nan,North America,US,United States,0,0
+67.204.182.0/23,6252001,nan,North America,US,United States,0,0
+67.204.184.0/21,6252001,nan,North America,US,United States,0,0
+67.204.192.0/18,6251999,nan,North America,CA,Canada,0,0
+67.205.0.0/18,6252001,nan,North America,US,United States,0,0
+67.205.64.0/18,6251999,nan,North America,CA,Canada,0,0
+67.205.128.0/17,6252001,nan,North America,US,United States,0,0
+67.206.0.0/17,6252001,nan,North America,US,United States,0,0
+67.206.128.0/19,6252001,nan,North America,US,United States,0,0
+67.206.160.0/20,6252001,nan,North America,US,United States,0,0
+67.206.176.0/21,6252001,nan,North America,US,United States,0,0
+67.206.184.0/23,6252001,nan,North America,US,United States,0,0
+67.206.186.0/23,6252001,nan,North America,US,United States,0,0
+67.206.188.0/22,6252001,nan,North America,US,United States,0,0
+67.206.192.0/18,4566966,nan,North America,PR,Puerto Rico,0,0
+67.207.0.0/18,6252001,nan,North America,US,United States,0,0
+67.207.64.0/22,6252001,nan,North America,US,United States,0,0
+67.207.68.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+67.207.72.0/21,2921044,EU,Europe,DE,Germany,0,0
+67.207.80.0/20,6252001,nan,North America,US,United States,0,0
+67.207.96.0/19,6252001,nan,North America,US,United States,0,0
+67.207.128.0/17,6252001,nan,North America,US,United States,0,0
+67.208.0.0/19,6251999,nan,North America,CA,Canada,0,0
+67.208.32.0/20,6252001,nan,North America,US,United States,0,0
+67.208.48.0/24,6252001,nan,North America,US,United States,0,0
+67.208.49.0/26,6252001,nan,North America,US,United States,0,0
+67.208.49.64/27,6252001,nan,North America,US,United States,0,0
+67.208.49.96/28,6252001,nan,North America,US,United States,0,0
+67.208.49.112/29,6252001,nan,North America,US,United States,0,0
+67.208.49.121/32,6252001,nan,North America,US,United States,0,0
+67.208.49.122/31,6252001,nan,North America,US,United States,0,0
+67.208.49.124/30,6252001,nan,North America,US,United States,0,0
+67.208.49.128/25,6252001,nan,North America,US,United States,0,0
+67.208.50.0/23,6252001,nan,North America,US,United States,0,0
+67.208.52.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+67.208.56.0/21,6252001,nan,North America,US,United States,0,0
+67.208.64.0/18,6252001,nan,North America,US,United States,0,0
+67.208.128.0/17,6252001,nan,North America,US,United States,0,0
+67.209.0.0/19,6252001,nan,North America,US,United States,0,0
+67.209.32.0/21,6251999,nan,North America,CA,Canada,0,0
+67.209.40.0/21,6252001,nan,North America,US,United States,0,0
+67.209.48.0/22,6252001,nan,North America,US,United States,0,0
+67.209.52.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.209.53.0/24,6252001,nan,North America,US,United States,0,0
+67.209.54.0/23,1880251,AS,Asia,SG,Singapore,0,0
+67.209.56.0/21,6252001,nan,North America,US,United States,0,0
+67.209.64.0/19,6252001,nan,North America,US,United States,0,0
+67.209.96.0/20,6252001,nan,North America,US,United States,0,0
+67.209.112.0/23,6252001,nan,North America,US,United States,0,0
+67.209.114.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+67.209.116.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+67.209.117.0/24,6252001,nan,North America,US,United States,0,0
+67.209.118.0/23,6252001,nan,North America,US,United States,0,0
+67.209.120.0/21,1880251,AS,Asia,SG,Singapore,0,0
+67.209.128.0/19,1522867,AS,Asia,KZ,Kazakhstan,0,0
+67.209.160.0/20,3577718,nan,North America,VG,British Virgin Islands,0,0
+67.209.176.0/20,6252001,nan,North America,US,United States,0,0
+67.209.192.0/18,6252001,nan,North America,US,United States,0,0
+67.210.0.0/18,6252001,nan,North America,US,United States,0,0
+67.210.64.0/19,6252001,nan,North America,US,United States,0,0
+67.210.96.0/22,6252001,nan,North America,US,United States,0,0
+67.210.100.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+67.210.101.0/24,6252001,nan,North America,US,United States,0,0
+67.210.102.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.210.103.0/24,6251999,nan,North America,CA,Canada,0,0
+67.210.104.0/23,6252001,nan,North America,US,United States,0,0
+67.210.106.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+67.210.107.0/24,289688,AS,Asia,QA,Qatar,0,0
+67.210.108.0/22,6252001,nan,North America,US,United States,0,0
+67.210.112.0/21,6252001,nan,North America,US,United States,0,0
+67.210.120.0/22,6252001,nan,North America,US,United States,0,0
+67.210.124.0/23,1269750,AS,Asia,IN,India,0,0
+67.210.126.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+67.210.127.0/24,1269750,AS,Asia,IN,India,0,0
+67.210.128.0/20,6251999,nan,North America,CA,Canada,0,0
+67.210.144.0/20,6252001,nan,North America,US,United States,0,0
+67.210.160.0/20,6251999,nan,North America,CA,Canada,0,0
+67.210.176.0/20,6252001,nan,North America,US,United States,0,0
+67.210.192.0/20,6252001,nan,North America,US,United States,0,0
+67.210.208.0/20,6251999,nan,North America,CA,Canada,0,0
+67.210.224.0/19,6252001,nan,North America,US,United States,0,0
+67.211.0.0/18,6252001,nan,North America,US,United States,0,0
+67.211.64.0/20,1819730,AS,Asia,HK,Hong Kong,0,0
+67.211.80.0/20,6252001,nan,North America,US,United States,0,0
+67.211.96.0/23,6252001,nan,North America,US,United States,0,0
+67.211.98.0/24,6251999,nan,North America,CA,Canada,0,0
+67.211.99.0/24,6252001,nan,North America,US,United States,0,0
+67.211.100.0/23,6252001,nan,North America,US,United States,0,0
+67.211.102.0/24,6252001,nan,North America,US,United States,0,0
+67.211.103.0/25,6251999,nan,North America,CA,Canada,0,0
+67.211.103.128/25,6252001,nan,North America,US,United States,0,0
+67.211.104.0/22,6252001,nan,North America,US,United States,0,0
+67.211.108.0/24,6252001,nan,North America,US,United States,0,0
+67.211.109.0/24,3175395,EU,Europe,IT,Italy,0,0
+67.211.110.0/24,6252001,nan,North America,US,United States,0,0
+67.211.111.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.211.112.0/20,6251999,nan,North America,CA,Canada,0,0
+67.211.128.0/18,6252001,nan,North America,US,United States,0,0
+67.211.192.0/19,6252001,nan,North America,US,United States,0,0
+67.211.224.0/20,6252001,nan,North America,US,United States,0,0
+67.211.240.0/20,4796775,nan,North America,VI,U.S. Virgin Islands,0,0
+67.212.0.0/18,6252001,nan,North America,US,United States,0,0
+67.212.64.0/19,6251999,nan,North America,CA,Canada,0,0
+67.212.96.0/19,6252001,nan,North America,US,United States,0,0
+67.212.128.0/17,6252001,nan,North America,US,United States,0,0
+67.213.0.0/18,6252001,nan,North America,US,United States,0,0
+67.213.64.0/19,6251999,nan,North America,CA,Canada,0,0
+67.213.96.0/20,6251999,nan,North America,CA,Canada,0,0
+67.213.112.0/24,6252001,nan,North America,US,United States,0,0
+67.213.113.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.213.114.0/24,3469034,SA,South America,BR,Brazil,0,0
+67.213.115.0/24,6252001,nan,North America,US,United States,0,0
+67.213.116.0/24,6252001,nan,North America,US,United States,0,0
+67.213.117.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.213.118.0/23,6252001,nan,North America,US,United States,0,0
+67.213.120.0/24,6252001,nan,North America,US,United States,0,0
+67.213.121.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.213.122.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.213.123.0/24,1861060,AS,Asia,JP,Japan,0,0
+67.213.124.0/24,6252001,nan,North America,US,United States,0,0
+67.213.125.0/24,2077456,OC,Oceania,AU,Australia,0,0
+67.213.126.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.213.127.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+67.213.128.0/21,6252001,nan,North America,US,United States,0,0
+67.213.136.0/22,6252001,nan,North America,US,United States,0,0
+67.213.140.0/22,2077456,OC,Oceania,AU,Australia,0,0
+67.213.144.0/21,3489940,nan,North America,JM,Jamaica,0,0
+67.213.152.0/24,3489940,nan,North America,JM,Jamaica,0,0
+67.213.153.0/24,3573511,nan,North America,AI,Anguilla,0,0
+67.213.154.0/23,3580718,nan,North America,KY,Cayman Islands,0,0
+67.213.156.0/24,3489940,nan,North America,JM,Jamaica,0,0
+67.213.157.0/24,3580718,nan,North America,KY,Cayman Islands,0,0
+67.213.158.0/24,3575174,nan,North America,KN,Saint Kitts and Nevis,0,0
+67.213.159.0/24,3580718,nan,North America,KY,Cayman Islands,0,0
+67.213.160.0/20,6252001,nan,North America,US,United States,0,0
+67.213.176.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+67.213.177.0/24,6252001,nan,North America,US,United States,0,0
+67.213.178.0/23,6252001,nan,North America,US,United States,0,0
+67.213.180.0/22,6252001,nan,North America,US,United States,0,0
+67.213.184.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.213.185.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.213.186.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.213.187.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.213.188.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.213.189.0/24,6252001,nan,North America,US,United States,0,0
+67.213.190.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.213.191.0/24,6252001,nan,North America,US,United States,0,0
+67.213.192.0/18,6252001,nan,North America,US,United States,0,0
+67.214.0.0/16,6252001,nan,North America,US,United States,0,0
+67.215.0.0/20,6251999,nan,North America,CA,Canada,0,0
+67.215.16.0/20,6252001,nan,North America,US,United States,0,0
+67.215.32.0/20,6252001,nan,North America,US,United States,0,0
+67.215.48.0/20,6251999,nan,North America,CA,Canada,0,0
+67.215.64.0/21,6252001,nan,North America,US,United States,0,0
+67.215.72.0/22,6252001,nan,North America,US,United States,0,0
+67.215.76.0/24,6252001,nan,North America,US,United States,0,0
+67.215.77.0/25,6252001,nan,North America,US,United States,0,0
+67.215.77.128/26,6252001,nan,North America,US,United States,0,0
+67.215.77.192/27,6252001,nan,North America,US,United States,0,0
+67.215.77.224/28,6252001,nan,North America,US,United States,0,0
+67.215.77.240/32,6252001,nan,North America,US,United States,0,0
+67.215.77.241/32,3996063,nan,North America,MX,Mexico,0,0
+67.215.77.242/31,6252001,nan,North America,US,United States,0,0
+67.215.77.244/30,6252001,nan,North America,US,United States,0,0
+67.215.77.248/29,6252001,nan,North America,US,United States,0,0
+67.215.78.0/24,6252001,nan,North America,US,United States,0,0
+67.215.79.0/31,6252001,nan,North America,US,United States,0,0
+67.215.79.2/31,1210997,AS,Asia,BD,Bangladesh,0,0
+67.215.79.4/31,1210997,AS,Asia,BD,Bangladesh,0,0
+67.215.79.6/32,1210997,AS,Asia,BD,Bangladesh,0,0
+67.215.79.7/32,6252001,nan,North America,US,United States,0,0
+67.215.79.8/29,6252001,nan,North America,US,United States,0,0
+67.215.79.16/28,6252001,nan,North America,US,United States,0,0
+67.215.79.32/28,6252001,nan,North America,US,United States,0,0
+67.215.79.48/30,6252001,nan,North America,US,United States,0,0
+67.215.79.52/31,783754,EU,Europe,AL,Albania,0,0
+67.215.79.54/31,3573511,nan,North America,AI,Anguilla,0,0
+67.215.79.56/29,6252001,nan,North America,US,United States,0,0
+67.215.79.64/26,6252001,nan,North America,US,United States,0,0
+67.215.79.128/25,6252001,nan,North America,US,United States,0,0
+67.215.80.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.215.81.0/24,6252001,nan,North America,US,United States,0,0
+67.215.82.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+67.215.83.0/24,2077456,OC,Oceania,AU,Australia,0,0
+67.215.84.0/23,6251999,nan,North America,CA,Canada,0,0
+67.215.86.0/24,953987,AF,Africa,ZA,South Africa,0,0
+67.215.87.0/24,6252001,nan,North America,US,United States,0,0
+67.215.88.0/23,6252001,nan,North America,US,United States,0,0
+67.215.90.0/27,6252001,nan,North America,US,United States,0,0
+67.215.90.32/32,6252001,nan,North America,US,United States,0,0
+67.215.90.33/32,1694008,AS,Asia,PH,Philippines,0,0
+67.215.90.34/31,6252001,nan,North America,US,United States,0,0
+67.215.90.36/30,6252001,nan,North America,US,United States,0,0
+67.215.90.40/29,6252001,nan,North America,US,United States,0,0
+67.215.90.48/28,6252001,nan,North America,US,United States,0,0
+67.215.90.64/26,6252001,nan,North America,US,United States,0,0
+67.215.90.128/25,6252001,nan,North America,US,United States,0,0
+67.215.91.0/24,6252001,nan,North America,US,United States,0,0
+67.215.92.0/22,6252001,nan,North America,US,United States,0,0
+67.215.96.0/21,4566966,nan,North America,PR,Puerto Rico,0,0
+67.215.104.0/22,4566966,nan,North America,PR,Puerto Rico,0,0
+67.215.108.0/22,6252001,nan,North America,US,United States,0,0
+67.215.112.0/20,2186224,OC,Oceania,NZ,New Zealand,0,0
+67.215.128.0/19,6251999,nan,North America,CA,Canada,0,0
+67.215.160.0/19,6252001,nan,North America,US,United States,0,0
+67.215.192.0/20,6251999,nan,North America,CA,Canada,0,0
+67.215.208.0/20,6252001,nan,North America,US,United States,0,0
+67.215.224.0/23,6252001,nan,North America,US,United States,0,0
+67.215.226.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+67.215.227.0/24,6252001,nan,North America,US,United States,0,0
+67.215.228.0/22,6252001,nan,North America,US,United States,0,0
+67.215.232.0/21,6252001,nan,North America,US,United States,0,0
+67.215.240.0/20,6252001,nan,North America,US,United States,0,0
+67.216.0.0/20,6252001,nan,North America,US,United States,0,0
+67.216.16.0/21,6252001,nan,North America,US,United States,0,0
+67.216.24.0/22,1643084,AS,Asia,ID,Indonesia,0,0
+67.216.28.0/22,6252001,nan,North America,US,United States,0,0
+67.216.32.0/19,6251999,nan,North America,CA,Canada,0,0
+67.216.64.0/18,6252001,nan,North America,US,United States,0,0
+67.216.128.0/18,6252001,nan,North America,US,United States,0,0
+67.216.192.0/19,6252001,nan,North America,US,United States,0,0
+67.216.224.0/19,6252001,nan,North America,US,United States,0,0
+67.217.0.0/18,6252001,nan,North America,US,United States,0,0
+67.217.64.0/21,6252001,nan,North America,US,United States,0,0
+67.217.72.0/23,6252001,nan,North America,US,United States,0,0
+67.217.74.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.217.75.0/24,6252001,nan,North America,US,United States,0,0
+67.217.76.0/22,6252001,nan,North America,US,United States,0,0
+67.217.80.0/23,6252001,nan,North America,US,United States,0,0
+67.217.82.0/24,6252001,nan,North America,US,United States,0,0
+67.217.83.0/24,1269750,AS,Asia,IN,India,0,0
+67.217.84.0/22,6252001,nan,North America,US,United States,0,0
+67.217.88.0/22,6252001,nan,North America,US,United States,0,0
+67.217.92.0/24,6252001,nan,North America,US,United States,0,0
+67.217.93.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.217.94.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.217.95.0/24,6252001,nan,North America,US,United States,0,0
+67.217.96.0/19,6252001,nan,North America,US,United States,0,0
+67.217.128.0/18,6252001,nan,North America,US,United States,0,0
+67.217.192.0/19,6252001,nan,North America,US,United States,0,0
+67.217.224.0/22,6252001,nan,North America,US,United States,0,0
+67.217.228.0/24,6252001,nan,North America,US,United States,0,0
+67.217.229.0/24,1269750,AS,Asia,IN,India,0,0
+67.217.230.0/23,6252001,nan,North America,US,United States,0,0
+67.217.232.0/21,6251999,nan,North America,CA,Canada,0,0
+67.217.240.0/21,6252001,nan,North America,US,United States,0,0
+67.217.248.0/22,6252001,nan,North America,US,United States,0,0
+67.217.252.0/23,6252001,nan,North America,US,United States,0,0
+67.217.254.0/23,6252001,nan,North America,US,United States,0,0
+67.218.0.0/19,6252001,nan,North America,US,United States,0,0
+67.218.32.0/20,6252001,nan,North America,US,United States,0,0
+67.218.48.0/20,5880801,OC,Oceania,AS,American Samoa,0,0
+67.218.64.0/18,6252001,nan,North America,US,United States,0,0
+67.218.128.0/19,6252001,nan,North America,US,United States,0,0
+67.218.160.0/19,6252001,nan,North America,US,United States,0,0
+67.218.192.0/20,6252001,nan,North America,US,United States,0,0
+67.218.208.0/21,6252001,nan,North America,US,United States,0,0
+67.218.216.0/24,6252001,nan,North America,US,United States,0,0
+67.218.217.0/24,6251999,nan,North America,CA,Canada,0,0
+67.218.218.0/23,6252001,nan,North America,US,United States,0,0
+67.218.220.0/23,6252001,nan,North America,US,United States,0,0
+67.218.222.0/24,6252001,nan,North America,US,United States,0,0
+67.218.223.0/24,6251999,nan,North America,CA,Canada,0,0
+67.218.224.0/19,2510769,EU,Europe,ES,Spain,0,0
+67.219.0.0/18,6252001,nan,North America,US,United States,0,0
+67.219.64.0/19,6252001,nan,North America,US,United States,0,0
+67.219.96.0/20,2077456,OC,Oceania,AU,Australia,0,0
+67.219.112.0/20,6252001,nan,North America,US,United States,0,0
+67.219.128.0/21,6252001,nan,North America,US,United States,0,0
+67.219.136.0/23,6251999,nan,North America,CA,Canada,0,0
+67.219.138.0/24,6251999,nan,North America,CA,Canada,0,0
+67.219.139.0/24,6252001,nan,North America,US,United States,0,0
+67.219.140.0/24,6252001,nan,North America,US,United States,0,0
+67.219.141.0/24,6252001,nan,North America,US,United States,0,0
+67.219.142.0/23,6252001,nan,North America,US,United States,0,0
+67.219.144.0/20,6252001,nan,North America,US,United States,0,0
+67.219.160.0/20,6252001,nan,North America,US,United States,0,0
+67.219.176.0/21,6252001,nan,North America,US,United States,0,0
+67.219.184.0/22,6252001,nan,North America,US,United States,0,0
+67.219.188.0/24,6252001,nan,North America,US,United States,0,0
+67.219.189.0/24,6251999,nan,North America,CA,Canada,0,0
+67.219.190.0/23,6251999,nan,North America,CA,Canada,0,0
+67.219.192.0/19,6252001,nan,North America,US,United States,0,0
+67.219.224.0/23,6252001,nan,North America,US,United States,0,0
+67.219.226.0/24,6252001,nan,North America,US,United States,0,0
+67.219.227.0/25,6252001,nan,North America,US,United States,0,0
+67.219.227.128/26,6252001,nan,North America,US,United States,0,0
+67.219.227.192/28,6252001,nan,North America,US,United States,0,0
+67.219.227.208/29,6252001,nan,North America,US,United States,0,0
+67.219.227.216/30,6252001,nan,North America,US,United States,0,0
+67.219.227.220/32,6252001,nan,North America,US,United States,0,0
+67.219.227.222/31,6252001,nan,North America,US,United States,0,0
+67.219.227.224/27,6252001,nan,North America,US,United States,0,0
+67.219.228.0/22,6252001,nan,North America,US,United States,0,0
+67.219.232.0/21,6252001,nan,North America,US,United States,0,0
+67.219.240.0/20,6252001,nan,North America,US,United States,0,0
+67.220.0.0/19,6252001,nan,North America,US,United States,0,0
+67.220.32.0/20,6251999,nan,North America,CA,Canada,0,0
+67.220.48.0/20,6252001,nan,North America,US,United States,0,0
+67.220.64.0/23,6252001,nan,North America,US,United States,0,0
+67.220.66.0/24,2510769,EU,Europe,ES,Spain,0,0
+67.220.67.0/24,6252001,nan,North America,US,United States,0,0
+67.220.68.0/22,6252001,nan,North America,US,United States,0,0
+67.220.72.0/21,6252001,nan,North America,US,United States,0,0
+67.220.80.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+67.220.81.0/24,6252001,nan,North America,US,United States,0,0
+67.220.82.0/24,2921044,EU,Europe,DE,Germany,0,0
+67.220.83.0/24,6252001,nan,North America,US,United States,0,0
+67.220.84.0/22,6252001,nan,North America,US,United States,0,0
+67.220.88.0/22,6252001,nan,North America,US,United States,0,0
+67.220.92.0/23,6252001,nan,North America,US,United States,0,0
+67.220.94.0/24,6251999,nan,North America,CA,Canada,0,0
+67.220.95.0/24,6252001,nan,North America,US,United States,0,0
+67.220.96.0/19,6252001,nan,North America,US,United States,0,0
+67.220.128.0/25,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.128/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.160/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.184/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.188/31,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.190/32,298795,AS,Asia,TR,Türkiye,0,0
+67.220.128.191/32,1880251,AS,Asia,SG,Singapore,0,0
+67.220.128.192/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.0/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.129.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.24/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.32/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.40/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.48/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.56/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.129.64/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.129.80/28,3175395,EU,Europe,IT,Italy,0,0
+67.220.129.96/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.129.104/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.108/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.129.112/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.120/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.129.128/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.129.136/29,1814991,AS,Asia,CN,China,0,0
+67.220.129.144/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.129.152/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.160/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.168/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.184/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.129.192/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.129.200/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.208/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.129.216/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.129.224/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.129.232/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.129.240/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.130.0/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.130.8/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.16/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.32/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.40/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.130.48/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.64/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.72/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.130.76/30,1269750,AS,Asia,IN,India,0,0
+67.220.130.80/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.88/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.96/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.104/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.130.112/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.120/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.130.124/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.128/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.130.132/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.136/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.130.144/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.152/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.160/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.168/29,1269750,AS,Asia,IN,India,0,0
+67.220.130.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.184/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.130.192/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.196/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.130.200/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.208/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.212/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.130.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.224/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.240/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.130.248/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.131.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.0/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.132.8/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.16/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.24/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.132.32/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.48/28,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.132.64/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.96/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.132.104/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.112/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.132.120/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.128/27,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.160/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.168/29,1269750,AS,Asia,IN,India,0,0
+67.220.132.176/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.192/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.132.200/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.132.208/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.132.224/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.132.232/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.132.240/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.0/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.32/27,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.64/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.133.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.80/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.133.96/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.112/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.133.120/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.124/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.133.128/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.133.132/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.136/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.140/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.133.144/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.160/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.176/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.133.184/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.133.188/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.192/28,2077456,OC,Oceania,AU,Australia,0,0
+67.220.133.208/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.133.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.133.224/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.133.232/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.133.240/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.133.248/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.134.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.0/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.16/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.24/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.32/29,1269750,AS,Asia,IN,India,0,0
+67.220.135.40/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.48/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.56/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.135.64/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.135.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.80/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.135.96/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.128/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.135.136/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.144/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.160/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.176/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.135.184/29,1269750,AS,Asia,IN,India,0,0
+67.220.135.192/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.208/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.135.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.224/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.135.232/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.135.240/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.0/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.8/29,1269750,AS,Asia,IN,India,0,0
+67.220.136.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.136.24/29,1269750,AS,Asia,IN,India,0,0
+67.220.136.32/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.136.40/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.48/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.56/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.136.64/28,1835841,AS,Asia,KR,South Korea,0,0
+67.220.136.80/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.96/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.136.104/29,1269750,AS,Asia,IN,India,0,0
+67.220.136.112/28,1269750,AS,Asia,IN,India,0,0
+67.220.136.128/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.136.136/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.136.144/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.136.152/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.136.160/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.136.168/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.136.176/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.136.184/29,1269750,AS,Asia,IN,India,0,0
+67.220.136.192/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.136.200/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.136.208/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.136.216/29,6252001,nan,North America,US,United States,0,0
+67.220.136.224/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.136.240/29,1269750,AS,Asia,IN,India,0,0
+67.220.136.248/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.137.0/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.137.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.137.16/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.137.20/30,1668284,AS,Asia,TW,Taiwan,0,0
+67.220.137.24/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.137.32/28,1694008,AS,Asia,PH,Philippines,0,0
+67.220.137.48/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.64/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.137.72/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.80/30,1835841,AS,Asia,KR,South Korea,0,0
+67.220.137.84/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.96/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.104/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.137.112/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.137.120/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.128/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.136/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.137.144/28,1814991,AS,Asia,CN,China,0,0
+67.220.137.160/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.137.168/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.137.176/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.137.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.137.192/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.200/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.137.208/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.137.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.137.224/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.137.232/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.137.240/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.138.0/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.138.8/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.16/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.32/29,1269750,AS,Asia,IN,India,0,0
+67.220.138.40/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.48/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.138.56/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.138.64/29,1269750,AS,Asia,IN,India,0,0
+67.220.138.72/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.80/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.96/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.112/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.120/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.138.128/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.132/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.138.136/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.138.144/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.138.152/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.138.160/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.138.168/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.138.176/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.192/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.138.208/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.138.224/29,1668284,AS,Asia,TW,Taiwan,0,0
+67.220.138.232/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.138.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.138.248/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.0/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.8/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.139.16/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.139.24/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.32/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.139.40/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.48/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.56/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.64/29,1269750,AS,Asia,IN,India,0,0
+67.220.139.72/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.80/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.88/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.96/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.104/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.112/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.128/29,6252001,nan,North America,US,United States,0,0
+67.220.139.136/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.144/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.148/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.152/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.160/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.168/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.172/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.176/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.139.192/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.208/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.139.216/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.224/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.139.232/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.139.240/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.139.248/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.140.0/30,1694008,AS,Asia,PH,Philippines,0,0
+67.220.140.4/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.140.8/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.16/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.24/29,1269750,AS,Asia,IN,India,0,0
+67.220.140.32/28,1269750,AS,Asia,IN,India,0,0
+67.220.140.48/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.56/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.140.64/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.140.80/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.140.88/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.140.96/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.140.104/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.112/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.140.120/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.140.128/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.140.136/29,1269750,AS,Asia,IN,India,0,0
+67.220.140.144/28,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.140.160/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.168/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.140.172/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.176/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.180/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.140.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.140.192/27,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.224/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.140.240/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.140.248/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.141.0/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.141.8/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.141.16/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.141.32/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.141.48/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.141.56/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.141.64/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.141.80/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.141.88/29,1269750,AS,Asia,IN,India,0,0
+67.220.141.96/28,1694008,AS,Asia,PH,Philippines,0,0
+67.220.141.112/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.141.128/28,6252001,nan,North America,US,United States,0,0
+67.220.141.144/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.141.160/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.141.168/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.141.176/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.141.192/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.141.208/28,1269750,AS,Asia,IN,India,0,0
+67.220.141.224/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.141.240/28,2077456,OC,Oceania,AU,Australia,0,0
+67.220.142.0/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.16/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.24/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.32/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.48/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.56/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.142.64/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.142.72/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.80/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.96/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.112/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.120/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.142.128/28,1694008,AS,Asia,PH,Philippines,0,0
+67.220.142.144/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.142.152/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.160/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.176/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.184/29,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.220.142.192/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.200/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.142.208/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.142.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.224/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.142.228/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.142.232/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.142.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.142.248/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.143.0/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.143.16/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.143.24/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.143.32/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.143.48/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.143.64/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.143.128/25,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.0/28,1694008,AS,Asia,PH,Philippines,0,0
+67.220.144.16/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.144.24/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.144.32/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.64/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.96/28,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.144.112/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.144.120/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.144.128/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.136/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.144.144/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.144.152/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.160/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.144.168/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.176/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.144.192/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.200/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.144.208/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.144.216/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.144.224/29,6252001,nan,North America,US,United States,0,0
+67.220.144.232/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.144.240/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.145.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.0/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.146.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.24/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.146.32/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.146.40/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.48/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.146.64/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.146.80/30,2077456,OC,Oceania,AU,Australia,0,0
+67.220.146.84/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.88/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.96/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.146.104/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.146.112/30,1269750,AS,Asia,IN,India,0,0
+67.220.146.116/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.120/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.146.128/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.136/29,1269750,AS,Asia,IN,India,0,0
+67.220.146.144/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.160/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.146.192/26,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.220.147.0/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.147.8/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.147.16/30,1269750,AS,Asia,IN,India,0,0
+67.220.147.20/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.24/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.147.32/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.40/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.147.48/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.147.56/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.64/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.147.72/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.147.76/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.80/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.147.88/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.92/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.147.96/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.112/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.116/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.147.120/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.147.128/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.147.136/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.147.144/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.160/28,1694008,AS,Asia,PH,Philippines,0,0
+67.220.147.176/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.192/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.147.208/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.224/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.228/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.147.232/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.240/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.244/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.147.248/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.147.252/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.148.0/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.148.4/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.148.8/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.148.16/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.148.32/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.148.64/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.148.128/25,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.149.0/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.64/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.72/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.76/30,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.149.80/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.84/30,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.149.88/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.96/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.128/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.192/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.208/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.149.212/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.149.224/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.150.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.0/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.16/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.24/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.28/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.151.32/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.64/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.151.128/25,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.0/29,1269750,AS,Asia,IN,India,0,0
+67.220.152.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.152.16/29,1269750,AS,Asia,IN,India,0,0
+67.220.152.24/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.152.32/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.40/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.152.48/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.152.56/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.64/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.72/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.152.80/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.152.88/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.96/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.112/30,2077456,OC,Oceania,AU,Australia,0,0
+67.220.152.116/30,1269750,AS,Asia,IN,India,0,0
+67.220.152.120/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.152.128/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.136/29,6252001,nan,North America,US,United States,0,0
+67.220.152.144/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.152/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.160/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.152.168/29,1269750,AS,Asia,IN,India,0,0
+67.220.152.176/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.184/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.152.192/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.152.208/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.152.216/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.224/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.152.240/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.152.248/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.153.0/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.153.8/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.16/29,1668284,AS,Asia,TW,Taiwan,0,0
+67.220.153.24/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.32/29,1668284,AS,Asia,TW,Taiwan,0,0
+67.220.153.40/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.153.48/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.56/29,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.220.153.64/27,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.220.153.96/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.153.104/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.153.112/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.128/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.153.136/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.153.144/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.153.152/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.153.160/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.176/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.153.184/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.153.192/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.153.200/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.153.208/28,290557,AS,Asia,AE,United Arab Emirates,0,0
+67.220.153.224/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.153.232/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.153.240/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.153.248/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.154.0/26,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.64/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.154.72/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.154.80/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.154.88/29,6252001,nan,North America,US,United States,0,0
+67.220.154.96/29,6252001,nan,North America,US,United States,0,0
+67.220.154.104/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.154.112/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.154.120/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.154.124/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.128/27,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.160/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.154.168/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.154.176/29,1694008,AS,Asia,PH,Philippines,0,0
+67.220.154.184/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.192/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.154.200/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.154.208/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.224/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.154.232/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.154.240/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.154.248/30,1861060,AS,Asia,JP,Japan,0,0
+67.220.154.252/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.155.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.0/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.156.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.156.16/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.156.32/28,1861060,AS,Asia,JP,Japan,0,0
+67.220.156.48/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.56/29,1269750,AS,Asia,IN,India,0,0
+67.220.156.64/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.156.68/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.72/29,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.156.80/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.88/29,2750405,EU,Europe,NL,The Netherlands,0,0
+67.220.156.96/29,1861060,AS,Asia,JP,Japan,0,0
+67.220.156.104/30,298795,AS,Asia,TR,Türkiye,0,0
+67.220.156.108/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.112/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.128/28,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.156.144/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.156.152/29,1269750,AS,Asia,IN,India,0,0
+67.220.156.160/29,1269750,AS,Asia,IN,India,0,0
+67.220.156.168/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.176/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.192/28,2077456,OC,Oceania,AU,Australia,0,0
+67.220.156.208/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.156.216/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.224/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.156.232/29,2635167,EU,Europe,GB,United Kingdom,0,0
+67.220.156.240/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.248/30,1880251,AS,Asia,SG,Singapore,0,0
+67.220.156.252/30,1733045,AS,Asia,MY,Malaysia,0,0
+67.220.157.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.0/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.158.8/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.16/29,1269750,AS,Asia,IN,India,0,0
+67.220.158.24/29,1814991,AS,Asia,CN,China,0,0
+67.220.158.32/29,1562822,AS,Asia,VN,Vietnam,0,0
+67.220.158.40/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.48/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.158.56/29,1269750,AS,Asia,IN,India,0,0
+67.220.158.64/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.158.72/29,2077456,OC,Oceania,AU,Australia,0,0
+67.220.158.80/30,1819730,AS,Asia,HK,Hong Kong,0,0
+67.220.158.84/30,1835841,AS,Asia,KR,South Korea,0,0
+67.220.158.88/29,1835841,AS,Asia,KR,South Korea,0,0
+67.220.158.96/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.158.112/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.158.120/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.128/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.136/29,1269750,AS,Asia,IN,India,0,0
+67.220.158.144/28,1269750,AS,Asia,IN,India,0,0
+67.220.158.160/28,1269750,AS,Asia,IN,India,0,0
+67.220.158.176/28,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.158.192/29,1643084,AS,Asia,ID,Indonesia,0,0
+67.220.158.200/29,1880251,AS,Asia,SG,Singapore,0,0
+67.220.158.208/29,1605651,AS,Asia,TH,Thailand,0,0
+67.220.158.216/29,298795,AS,Asia,TR,Türkiye,0,0
+67.220.158.224/28,298795,AS,Asia,TR,Türkiye,0,0
+67.220.158.240/28,1880251,AS,Asia,SG,Singapore,0,0
+67.220.159.0/24,1880251,AS,Asia,SG,Singapore,0,0
+67.220.160.0/20,6252001,nan,North America,US,United States,0,0
+67.220.176.0/23,6252001,nan,North America,US,United States,0,0
+67.220.178.0/23,6251999,nan,North America,CA,Canada,0,0
+67.220.180.0/22,6252001,nan,North America,US,United States,0,0
+67.220.184.0/21,6252001,nan,North America,US,United States,0,0
+67.220.192.0/19,6252001,nan,North America,US,United States,0,0
+67.220.224.0/20,2963597,EU,Europe,IE,Ireland,0,0
+67.220.240.0/20,6252001,nan,North America,US,United States,0,0
+67.221.0.0/19,6252001,nan,North America,US,United States,0,0
+67.221.32.0/20,6252001,nan,North America,US,United States,0,0
+67.221.48.0/20,6251999,nan,North America,CA,Canada,0,0
+67.221.64.0/18,6252001,nan,North America,US,United States,0,0
+67.221.128.0/20,6252001,nan,North America,US,United States,0,0
+67.221.144.0/20,6251999,nan,North America,CA,Canada,0,0
+67.221.160.0/19,6252001,nan,North America,US,United States,0,0
+67.221.192.0/19,6252001,nan,North America,US,United States,0,0
+67.221.224.0/20,6252001,nan,North America,US,United States,0,0
+67.221.240.0/21,6252001,nan,North America,US,United States,0,0
+67.221.248.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+67.221.250.0/24,6252001,nan,North America,US,United States,0,0
+67.221.251.0/24,6251999,nan,North America,CA,Canada,0,0
+67.221.252.0/22,6252001,nan,North America,US,United States,0,0
+67.222.0.0/16,6252001,nan,North America,US,United States,0,0
+67.223.0.0/20,6252001,nan,North America,US,United States,0,0
+67.223.16.0/21,6252001,nan,North America,US,United States,0,0
+67.223.24.0/24,6252001,nan,North America,US,United States,0,0
+67.223.25.0/26,6252001,nan,North America,US,United States,0,0
+67.223.25.64/29,6252001,nan,North America,US,United States,0,0
+67.223.25.72/30,6252001,nan,North America,US,United States,0,0
+67.223.25.76/32,6252001,nan,North America,US,United States,0,0
+67.223.25.78/31,6252001,nan,North America,US,United States,0,0
+67.223.25.80/28,6252001,nan,North America,US,United States,0,0
+67.223.25.96/27,6252001,nan,North America,US,United States,0,0
+67.223.25.128/25,6252001,nan,North America,US,United States,0,0
+67.223.26.0/23,6252001,nan,North America,US,United States,0,0
+67.223.28.0/22,6252001,nan,North America,US,United States,0,0
+67.223.32.0/19,6252001,nan,North America,US,United States,0,0
+67.223.64.0/19,6251999,nan,North America,CA,Canada,0,0
+67.223.96.0/20,6251999,nan,North America,CA,Canada,0,0
+67.223.112.0/20,6252001,nan,North America,US,United States,0,0
+67.223.128.0/19,6251999,nan,North America,CA,Canada,0,0
+67.223.160.0/19,6252001,nan,North America,US,United States,0,0
+67.223.192.0/18,6252001,nan,North America,US,United States,0,0
+67.224.0.0/18,6252001,nan,North America,US,United States,0,0
+67.224.64.0/20,6252001,nan,North America,US,United States,0,0
+67.224.80.0/20,6251999,nan,North America,CA,Canada,0,0
+67.224.96.0/21,6252001,nan,North America,US,United States,0,0
+67.224.104.0/23,6251999,nan,North America,CA,Canada,0,0
+67.224.106.0/24,6251999,nan,North America,CA,Canada,0,0
+67.224.107.0/24,6252001,nan,North America,US,United States,0,0
+67.224.108.0/22,6251999,nan,North America,CA,Canada,0,0
+67.224.112.0/20,6252001,nan,North America,US,United States,0,0
+67.224.128.0/17,4566966,nan,North America,PR,Puerto Rico,0,0
+67.225.0.0/17,6251999,nan,North America,CA,Canada,0,0
+67.225.128.0/17,6252001,nan,North America,US,United States,0,0
+67.226.0.0/17,6252001,nan,North America,US,United States,0,0
+67.226.128.0/18,6251999,nan,North America,CA,Canada,0,0
+67.226.192.0/20,6251999,nan,North America,CA,Canada,0,0
+67.226.208.0/22,6252001,nan,North America,US,United States,0,0
+67.226.212.0/22,6251999,nan,North America,CA,Canada,0,0
+67.226.216.0/23,6252001,nan,North America,US,United States,0,0
+67.226.218.0/24,6251999,nan,North America,CA,Canada,0,0
+67.226.219.0/24,6252001,nan,North America,US,United States,0,0
+67.226.220.0/23,6252001,nan,North America,US,United States,0,0
+67.226.222.0/24,6252001,nan,North America,US,United States,0,0
+67.226.223.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+67.226.224.0/19,6251999,nan,North America,CA,Canada,0,0
+67.227.0.0/20,6252001,nan,North America,US,United States,0,0
+67.227.16.0/21,6252001,nan,North America,US,United States,0,0
+67.227.24.0/23,6251999,nan,North America,CA,Canada,0,0
+67.227.26.0/24,6252001,nan,North America,US,United States,0,0
+67.227.27.0/24,6251999,nan,North America,CA,Canada,0,0
+67.227.28.0/23,6251999,nan,North America,CA,Canada,0,0
+67.227.30.0/23,6252001,nan,North America,US,United States,0,0
+67.227.32.0/21,6252001,nan,North America,US,United States,0,0
+67.227.40.0/24,6252001,nan,North America,US,United States,0,0
+67.227.41.0/24,6251999,nan,North America,CA,Canada,0,0
+67.227.42.0/23,6252001,nan,North America,US,United States,0,0
+67.227.44.0/24,6252001,nan,North America,US,United States,0,0
+67.227.45.0/24,6251999,nan,North America,CA,Canada,0,0
+67.227.46.0/23,6252001,nan,North America,US,United States,0,0
+67.227.48.0/20,6252001,nan,North America,US,United States,0,0
+67.227.64.0/22,6252001,nan,North America,US,United States,0,0
+67.227.68.0/23,6252001,nan,North America,US,United States,0,0
+67.227.70.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+67.227.71.0/24,6252001,nan,North America,US,United States,0,0
+67.227.72.0/22,6252001,nan,North America,US,United States,0,0
+67.227.76.0/23,6252001,nan,North America,US,United States,0,0
+67.227.78.0/24,1861060,AS,Asia,JP,Japan,0,0
+67.227.79.0/24,6251999,nan,North America,CA,Canada,0,0
+67.227.80.0/20,6252001,nan,North America,US,United States,0,0
+67.227.96.0/24,2782113,EU,Europe,AT,Austria,0,0
+67.227.97.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+67.227.98.0/23,6252001,nan,North America,US,United States,0,0
+67.227.100.0/22,6252001,nan,North America,US,United States,0,0
+67.227.104.0/23,3996063,nan,North America,MX,Mexico,0,0
+67.227.106.0/23,6252001,nan,North America,US,United States,0,0
+67.227.108.0/23,6252001,nan,North America,US,United States,0,0
+67.227.110.0/24,6252001,nan,North America,US,United States,0,0
+67.227.111.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+67.227.112.0/20,6252001,nan,North America,US,United States,0,0
+67.227.128.0/17,6252001,nan,North America,US,United States,0,0
+67.228.0.0/15,6252001,nan,North America,US,United States,0,0
+67.230.0.0/19,6252001,nan,North America,US,United States,0,0
+67.230.32.0/19,3489940,nan,North America,JM,Jamaica,0,0
+67.230.64.0/20,3489940,nan,North America,JM,Jamaica,0,0
+67.230.80.0/20,4566966,nan,North America,PR,Puerto Rico,0,0
+67.230.96.0/20,6252001,nan,North America,US,United States,0,0
+67.230.112.0/20,4566966,nan,North America,PR,Puerto Rico,0,0
+67.230.128.0/19,6251999,nan,North America,CA,Canada,0,0
+67.230.160.0/19,6252001,nan,North America,US,United States,0,0
+67.230.192.0/18,6252001,nan,North America,US,United States,0,0
+67.231.0.0/20,6252001,nan,North America,US,United States,0,0
+67.231.16.0/20,6251999,nan,North America,CA,Canada,0,0
+67.231.32.0/19,6252001,nan,North America,US,United States,0,0
+67.231.64.0/18,6252001,nan,North America,US,United States,0,0
+67.231.128.0/20,6252001,nan,North America,US,United States,0,0
+67.231.144.0/22,6252001,nan,North America,US,United States,0,0
+67.231.148.0/23,6252001,nan,North America,US,United States,0,0
+67.231.150.0/24,6252001,nan,North America,US,United States,0,0
+67.231.151.0/25,6252001,nan,North America,US,United States,0,0
+67.231.151.128/26,6252001,nan,North America,US,United States,0,0
+67.231.151.192/27,6252001,nan,North America,US,United States,0,0
+67.231.151.224/28,6252001,nan,North America,US,United States,0,0
+67.231.151.240/30,6251999,nan,North America,CA,Canada,0,0
+67.231.151.244/30,6252001,nan,North America,US,United States,0,0
+67.231.151.248/29,6252001,nan,North America,US,United States,0,0
+67.231.152.0/22,6252001,nan,North America,US,United States,0,0
+67.231.156.0/23,6252001,nan,North America,US,United States,0,0
+67.231.158.0/26,6252001,nan,North America,US,United States,0,0
+67.231.158.64/27,6252001,nan,North America,US,United States,0,0
+67.231.158.96/28,6252001,nan,North America,US,United States,0,0
+67.231.158.112/29,6252001,nan,North America,US,United States,0,0
+67.231.158.120/30,6252001,nan,North America,US,United States,0,0
+67.231.158.124/32,6252001,nan,North America,US,United States,0,0
+67.231.158.125/32,6251999,nan,North America,CA,Canada,0,0
+67.231.158.126/32,6251999,nan,North America,CA,Canada,0,0
+67.231.158.127/32,6252001,nan,North America,US,United States,0,0
+67.231.158.128/25,6252001,nan,North America,US,United States,0,0
+67.231.159.0/24,6252001,nan,North America,US,United States,0,0
+67.231.160.0/20,6252001,nan,North America,US,United States,0,0
+67.231.176.0/20,3175395,EU,Europe,IT,Italy,0,0
+67.231.192.0/20,6252001,nan,North America,US,United States,0,0
+67.231.208.0/20,6251999,nan,North America,CA,Canada,0,0
+67.231.224.0/19,6252001,nan,North America,US,United States,0,0
+67.232.0.0/13,6252001,nan,North America,US,United States,0,0
+67.240.0.0/12,6252001,nan,North America,US,United States,0,0

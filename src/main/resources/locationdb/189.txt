@@ -1,0 +1,2198 @@
+189.0.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.1.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.1.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.1.160.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.1.164.0/24,1861060,AS,Asia,JP,Japan,0,0
+189.1.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.1.166.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.1.168.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.1.169.0/24,6252001,nan,North America,US,United States,0,0
+189.1.170.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.1.171.0/24,2921044,EU,Europe,DE,Germany,0,0
+189.1.172.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.1.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.1.192.0/18,1819730,AS,Asia,HK,Hong Kong,0,0
+189.2.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.4.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.8.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.8.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.8.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.8.112.0/21,3865483,SA,South America,AR,Argentina,0,0
+189.8.120.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.8.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.9.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.10.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.10.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.10.48.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+189.10.56.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.10.57.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+189.10.58.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+189.10.60.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+189.10.64.0/22,6252001,nan,North America,US,United States,0,0
+189.10.68.0/23,6252001,nan,North America,US,United States,0,0
+189.10.70.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.10.72.0/23,6252001,nan,North America,US,United States,0,0
+189.10.74.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.10.76.0/24,6252001,nan,North America,US,United States,0,0
+189.10.77.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.10.78.0/23,6252001,nan,North America,US,United States,0,0
+189.10.80.0/20,6252001,nan,North America,US,United States,0,0
+189.10.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.10.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.10.128.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.10.144.0/23,6252001,nan,North America,US,United States,0,0
+189.10.146.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.10.148.0/23,6252001,nan,North America,US,United States,0,0
+189.10.150.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.10.151.0/24,6252001,nan,North America,US,United States,0,0
+189.10.152.0/22,6252001,nan,North America,US,United States,0,0
+189.10.156.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.10.157.0/24,6252001,nan,North America,US,United States,0,0
+189.10.158.0/23,6252001,nan,North America,US,United States,0,0
+189.10.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.10.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.10.208.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.10.210.0/23,6252001,nan,North America,US,United States,0,0
+189.10.212.0/22,6252001,nan,North America,US,United States,0,0
+189.10.216.0/23,6252001,nan,North America,US,United States,0,0
+189.10.218.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.10.220.0/24,6252001,nan,North America,US,United States,0,0
+189.10.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.10.222.0/23,6252001,nan,North America,US,United States,0,0
+189.10.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.11.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.11.64.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.11.80.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.11.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.11.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.11.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.11.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.11.176.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.11.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.12.0.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.1.0/24,6252001,nan,North America,US,United States,0,0
+189.12.2.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.3.0/24,6252001,nan,North America,US,United States,0,0
+189.12.4.0/24,6252001,nan,North America,US,United States,0,0
+189.12.5.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.6.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.8.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.11.0/24,6252001,nan,North America,US,United States,0,0
+189.12.12.0/24,6252001,nan,North America,US,United States,0,0
+189.12.13.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.14.0/23,6252001,nan,North America,US,United States,0,0
+189.12.16.0/24,6252001,nan,North America,US,United States,0,0
+189.12.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.18.0/23,6252001,nan,North America,US,United States,0,0
+189.12.20.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.21.0/24,6252001,nan,North America,US,United States,0,0
+189.12.22.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.23.0/24,6252001,nan,North America,US,United States,0,0
+189.12.24.0/23,6252001,nan,North America,US,United States,0,0
+189.12.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.27.0/24,6252001,nan,North America,US,United States,0,0
+189.12.28.0/22,6252001,nan,North America,US,United States,0,0
+189.12.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.12.48.0/22,6252001,nan,North America,US,United States,0,0
+189.12.52.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.54.0/23,6252001,nan,North America,US,United States,0,0
+189.12.56.0/22,6252001,nan,North America,US,United States,0,0
+189.12.60.0/23,6252001,nan,North America,US,United States,0,0
+189.12.62.0/24,6252001,nan,North America,US,United States,0,0
+189.12.63.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.64.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.12.80.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.12.96.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.12.97.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.98.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.12.100.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.12.104.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.12.112.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.12.120.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.12.124.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.12.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.126.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.12.128.0/18,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.12.192.0/20,3017382,EU,Europe,FR,France,0,0
+189.12.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.12.224.0/22,6252001,nan,North America,US,United States,0,0
+189.12.228.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.12.230.0/24,1880251,AS,Asia,SG,Singapore,0,0
+189.12.231.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.232.0/24,1880251,AS,Asia,SG,Singapore,0,0
+189.12.233.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.234.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.12.236.0/24,1880251,AS,Asia,SG,Singapore,0,0
+189.12.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.238.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.240.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.242.0/24,1880251,AS,Asia,SG,Singapore,0,0
+189.12.243.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.12.244.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.12.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.12.248.0/21,1880251,AS,Asia,SG,Singapore,0,0
+189.13.0.0/22,6252001,nan,North America,US,United States,0,0
+189.13.4.0/23,6252001,nan,North America,US,United States,0,0
+189.13.6.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.7.0/24,6252001,nan,North America,US,United States,0,0
+189.13.8.0/23,6252001,nan,North America,US,United States,0,0
+189.13.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.11.0/24,6252001,nan,North America,US,United States,0,0
+189.13.12.0/23,6252001,nan,North America,US,United States,0,0
+189.13.14.0/24,6252001,nan,North America,US,United States,0,0
+189.13.15.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.16.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.17.0/24,6252001,nan,North America,US,United States,0,0
+189.13.18.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.20.0/23,6252001,nan,North America,US,United States,0,0
+189.13.22.0/24,6252001,nan,North America,US,United States,0,0
+189.13.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.24.0/22,6252001,nan,North America,US,United States,0,0
+189.13.28.0/23,6252001,nan,North America,US,United States,0,0
+189.13.30.0/24,6252001,nan,North America,US,United States,0,0
+189.13.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.32.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.13.40.0/22,6252001,nan,North America,US,United States,0,0
+189.13.44.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.45.0/24,6252001,nan,North America,US,United States,0,0
+189.13.46.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.48.0/23,6252001,nan,North America,US,United States,0,0
+189.13.50.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.52.0/22,6252001,nan,North America,US,United States,0,0
+189.13.56.0/22,6252001,nan,North America,US,United States,0,0
+189.13.60.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.61.0/24,6252001,nan,North America,US,United States,0,0
+189.13.62.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.63.0/24,6252001,nan,North America,US,United States,0,0
+189.13.64.0/24,6252001,nan,North America,US,United States,0,0
+189.13.65.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.66.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.68.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.69.0/24,6252001,nan,North America,US,United States,0,0
+189.13.70.0/23,6252001,nan,North America,US,United States,0,0
+189.13.72.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.73.0/24,6252001,nan,North America,US,United States,0,0
+189.13.74.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.76.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.77.0/24,6252001,nan,North America,US,United States,0,0
+189.13.78.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.80.0/24,6252001,nan,North America,US,United States,0,0
+189.13.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.82.0/23,6252001,nan,North America,US,United States,0,0
+189.13.84.0/22,6252001,nan,North America,US,United States,0,0
+189.13.88.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.89.0/24,6252001,nan,North America,US,United States,0,0
+189.13.90.0/24,6252001,nan,North America,US,United States,0,0
+189.13.91.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.92.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.94.0/23,6252001,nan,North America,US,United States,0,0
+189.13.96.0/24,6252001,nan,North America,US,United States,0,0
+189.13.97.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.98.0/23,6252001,nan,North America,US,United States,0,0
+189.13.100.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.101.0/24,6252001,nan,North America,US,United States,0,0
+189.13.102.0/23,6252001,nan,North America,US,United States,0,0
+189.13.104.0/23,6252001,nan,North America,US,United States,0,0
+189.13.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.107.0/24,6252001,nan,North America,US,United States,0,0
+189.13.108.0/23,6252001,nan,North America,US,United States,0,0
+189.13.110.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.111.0/24,6252001,nan,North America,US,United States,0,0
+189.13.112.0/24,6252001,nan,North America,US,United States,0,0
+189.13.113.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.114.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.116.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.13.120.0/24,6252001,nan,North America,US,United States,0,0
+189.13.121.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.122.0/24,6252001,nan,North America,US,United States,0,0
+189.13.123.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.124.0/24,6252001,nan,North America,US,United States,0,0
+189.13.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.126.0/23,6252001,nan,North America,US,United States,0,0
+189.13.128.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.130.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.131.0/24,6252001,nan,North America,US,United States,0,0
+189.13.132.0/24,6252001,nan,North America,US,United States,0,0
+189.13.133.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.134.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.135.0/24,6252001,nan,North America,US,United States,0,0
+189.13.136.0/22,6252001,nan,North America,US,United States,0,0
+189.13.140.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.142.0/23,6252001,nan,North America,US,United States,0,0
+189.13.144.0/22,6252001,nan,North America,US,United States,0,0
+189.13.148.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.149.0/24,6252001,nan,North America,US,United States,0,0
+189.13.150.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.152.0/22,6252001,nan,North America,US,United States,0,0
+189.13.156.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.158.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.159.0/24,6252001,nan,North America,US,United States,0,0
+189.13.160.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.162.0/23,6252001,nan,North America,US,United States,0,0
+189.13.164.0/23,6252001,nan,North America,US,United States,0,0
+189.13.166.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.168.0/23,6252001,nan,North America,US,United States,0,0
+189.13.170.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.171.0/24,6252001,nan,North America,US,United States,0,0
+189.13.172.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.174.0/23,6252001,nan,North America,US,United States,0,0
+189.13.176.0/23,6252001,nan,North America,US,United States,0,0
+189.13.178.0/24,6252001,nan,North America,US,United States,0,0
+189.13.179.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.180.0/23,6252001,nan,North America,US,United States,0,0
+189.13.182.0/24,6252001,nan,North America,US,United States,0,0
+189.13.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.184.0/23,6252001,nan,North America,US,United States,0,0
+189.13.186.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.187.0/24,6252001,nan,North America,US,United States,0,0
+189.13.188.0/22,6252001,nan,North America,US,United States,0,0
+189.13.192.0/23,6252001,nan,North America,US,United States,0,0
+189.13.194.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.195.0/24,6252001,nan,North America,US,United States,0,0
+189.13.196.0/22,6252001,nan,North America,US,United States,0,0
+189.13.200.0/22,6252001,nan,North America,US,United States,0,0
+189.13.204.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.205.0/24,6252001,nan,North America,US,United States,0,0
+189.13.206.0/23,6252001,nan,North America,US,United States,0,0
+189.13.208.0/22,6252001,nan,North America,US,United States,0,0
+189.13.212.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.213.0/24,6252001,nan,North America,US,United States,0,0
+189.13.214.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.215.0/24,6252001,nan,North America,US,United States,0,0
+189.13.216.0/23,6252001,nan,North America,US,United States,0,0
+189.13.218.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.219.0/24,6252001,nan,North America,US,United States,0,0
+189.13.220.0/23,6252001,nan,North America,US,United States,0,0
+189.13.222.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.223.0/24,6252001,nan,North America,US,United States,0,0
+189.13.224.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.13.228.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.230.0/23,6252001,nan,North America,US,United States,0,0
+189.13.232.0/23,6252001,nan,North America,US,United States,0,0
+189.13.234.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.13.236.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.237.0/24,6252001,nan,North America,US,United States,0,0
+189.13.238.0/23,6252001,nan,North America,US,United States,0,0
+189.13.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.241.0/24,6252001,nan,North America,US,United States,0,0
+189.13.242.0/23,6252001,nan,North America,US,United States,0,0
+189.13.244.0/24,6252001,nan,North America,US,United States,0,0
+189.13.245.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.246.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.13.247.0/24,6252001,nan,North America,US,United States,0,0
+189.13.248.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.14.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.15.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.15.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.15.192.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.15.200.0/24,2921044,EU,Europe,DE,Germany,0,0
+189.15.201.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.15.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.15.204.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.15.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.15.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.16.0.0/13,3469034,SA,South America,BR,Brazil,0,0
+189.24.0.0/19,597427,EU,Europe,LT,Lithuania,0,0
+189.24.32.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.24.36.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.24.37.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.24.38.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.24.40.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.24.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.24.64.0/19,1819730,AS,Asia,HK,Hong Kong,0,0
+189.24.96.0/20,2921044,EU,Europe,DE,Germany,0,0
+189.24.112.0/22,2921044,EU,Europe,DE,Germany,0,0
+189.24.116.0/23,2921044,EU,Europe,DE,Germany,0,0
+189.24.118.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+189.24.120.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+189.24.128.0/17,6252001,nan,North America,US,United States,0,0
+189.25.0.0/18,6252001,nan,North America,US,United States,0,0
+189.25.64.0/24,6252001,nan,North America,US,United States,0,0
+189.25.65.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.25.66.0/23,6252001,nan,North America,US,United States,0,0
+189.25.68.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+189.25.69.0/24,3996063,nan,North America,MX,Mexico,0,0
+189.25.70.0/23,6252001,nan,North America,US,United States,0,0
+189.25.72.0/21,6252001,nan,North America,US,United States,0,0
+189.25.80.0/20,6252001,nan,North America,US,United States,0,0
+189.25.96.0/24,6252001,nan,North America,US,United States,0,0
+189.25.97.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.25.98.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+189.25.99.0/24,6251999,nan,North America,CA,Canada,0,0
+189.25.100.0/24,3017382,EU,Europe,FR,France,0,0
+189.25.101.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.25.102.0/23,6252001,nan,North America,US,United States,0,0
+189.25.104.0/21,6252001,nan,North America,US,United States,0,0
+189.25.112.0/20,6252001,nan,North America,US,United States,0,0
+189.25.128.0/17,6252001,nan,North America,US,United States,0,0
+189.26.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.28.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.28.64.0/19,3923057,SA,South America,BO,Bolivia,0,0
+189.28.96.0/19,1605651,AS,Asia,TH,Thailand,0,0
+189.28.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.29.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.30.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.30.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.30.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.30.64.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.66.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.68.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.69.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.70.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.71.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.72.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.73.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.74.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.76.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.77.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.78.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.80.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.84.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.86.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.88.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.92.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.94.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.96.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.98.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.99.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.100.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.101.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.102.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.104.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.112.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.116.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.118.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.120.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.30.122.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.124.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.126.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.30.127.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.30.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.30.160.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.30.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.30.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.31.0.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.2.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.3.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.4.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.6.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.8.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.9.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.10.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.12.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.16.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.31.18.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.19.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.20.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.21.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.22.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.24.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.31.32.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.33.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.31.34.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.31.36.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.31.40.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.31.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.31.64.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.31.80.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.31.96.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.31.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.31.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.31.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.31.208.0/23,6252001,nan,North America,US,United States,0,0
+189.31.210.0/24,6252001,nan,North America,US,United States,0,0
+189.31.211.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.212.0/23,6252001,nan,North America,US,United States,0,0
+189.31.214.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.215.0/24,6252001,nan,North America,US,United States,0,0
+189.31.216.0/23,6252001,nan,North America,US,United States,0,0
+189.31.218.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.219.0/24,6252001,nan,North America,US,United States,0,0
+189.31.220.0/24,6252001,nan,North America,US,United States,0,0
+189.31.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.222.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.31.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.225.0/24,6252001,nan,North America,US,United States,0,0
+189.31.226.0/23,6252001,nan,North America,US,United States,0,0
+189.31.228.0/22,6252001,nan,North America,US,United States,0,0
+189.31.232.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.233.0/24,6252001,nan,North America,US,United States,0,0
+189.31.234.0/24,6252001,nan,North America,US,United States,0,0
+189.31.235.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.236.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.31.238.0/24,6252001,nan,North America,US,United States,0,0
+189.31.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.240.0/24,6252001,nan,North America,US,United States,0,0
+189.31.241.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.243.0/24,6252001,nan,North America,US,United States,0,0
+189.31.244.0/23,6252001,nan,North America,US,United States,0,0
+189.31.246.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.247.0/24,6252001,nan,North America,US,United States,0,0
+189.31.248.0/23,6252001,nan,North America,US,United States,0,0
+189.31.250.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.31.251.0/24,6252001,nan,North America,US,United States,0,0
+189.31.252.0/23,6252001,nan,North America,US,United States,0,0
+189.31.254.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.32.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.36.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.36.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.36.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.36.224.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.36.240.0/22,3996063,nan,North America,MX,Mexico,0,0
+189.36.244.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.36.248.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.37.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.38.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.40.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.44.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.45.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.45.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.45.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.45.176.0/22,3865483,SA,South America,AR,Argentina,0,0
+189.45.180.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.45.184.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.45.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.45.224.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.45.240.0/23,3895114,SA,South America,CL,Chile,0,0
+189.45.242.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.45.244.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.45.248.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.46.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.48.0.0/24,6252001,nan,North America,US,United States,0,0
+189.48.1.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.2.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.4.0/24,6252001,nan,North America,US,United States,0,0
+189.48.5.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.6.0/24,6252001,nan,North America,US,United States,0,0
+189.48.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.8.0/22,6252001,nan,North America,US,United States,0,0
+189.48.12.0/23,6252001,nan,North America,US,United States,0,0
+189.48.14.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.16.0/23,6252001,nan,North America,US,United States,0,0
+189.48.18.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.20.0/23,6252001,nan,North America,US,United States,0,0
+189.48.22.0/24,6252001,nan,North America,US,United States,0,0
+189.48.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.24.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.25.0/24,6252001,nan,North America,US,United States,0,0
+189.48.26.0/23,6252001,nan,North America,US,United States,0,0
+189.48.28.0/23,6252001,nan,North America,US,United States,0,0
+189.48.30.0/24,6252001,nan,North America,US,United States,0,0
+189.48.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.32.0/24,6252001,nan,North America,US,United States,0,0
+189.48.33.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.34.0/23,6252001,nan,North America,US,United States,0,0
+189.48.36.0/24,6252001,nan,North America,US,United States,0,0
+189.48.37.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.38.0/23,6252001,nan,North America,US,United States,0,0
+189.48.40.0/22,6252001,nan,North America,US,United States,0,0
+189.48.44.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.46.0/23,6252001,nan,North America,US,United States,0,0
+189.48.48.0/24,6252001,nan,North America,US,United States,0,0
+189.48.49.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.50.0/23,6252001,nan,North America,US,United States,0,0
+189.48.52.0/24,6252001,nan,North America,US,United States,0,0
+189.48.53.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.54.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.56.0/22,6252001,nan,North America,US,United States,0,0
+189.48.60.0/23,6252001,nan,North America,US,United States,0,0
+189.48.62.0/24,6252001,nan,North America,US,United States,0,0
+189.48.63.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.64.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.65.0/24,6252001,nan,North America,US,United States,0,0
+189.48.66.0/23,6252001,nan,North America,US,United States,0,0
+189.48.68.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.69.0/24,6252001,nan,North America,US,United States,0,0
+189.48.70.0/24,6252001,nan,North America,US,United States,0,0
+189.48.71.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.72.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.48.76.0/23,6252001,nan,North America,US,United States,0,0
+189.48.78.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.79.0/24,6252001,nan,North America,US,United States,0,0
+189.48.80.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.81.0/24,6252001,nan,North America,US,United States,0,0
+189.48.82.0/24,6252001,nan,North America,US,United States,0,0
+189.48.83.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.84.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.86.0/24,6252001,nan,North America,US,United States,0,0
+189.48.87.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.88.0/22,6252001,nan,North America,US,United States,0,0
+189.48.92.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.94.0/23,6252001,nan,North America,US,United States,0,0
+189.48.96.0/22,6252001,nan,North America,US,United States,0,0
+189.48.100.0/23,6252001,nan,North America,US,United States,0,0
+189.48.102.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.104.0/23,6252001,nan,North America,US,United States,0,0
+189.48.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.107.0/24,6252001,nan,North America,US,United States,0,0
+189.48.108.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.109.0/24,6252001,nan,North America,US,United States,0,0
+189.48.110.0/23,6252001,nan,North America,US,United States,0,0
+189.48.112.0/23,6252001,nan,North America,US,United States,0,0
+189.48.114.0/24,6252001,nan,North America,US,United States,0,0
+189.48.115.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.116.0/22,6252001,nan,North America,US,United States,0,0
+189.48.120.0/24,6252001,nan,North America,US,United States,0,0
+189.48.121.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.122.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.124.0/24,6252001,nan,North America,US,United States,0,0
+189.48.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.126.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.128.0/24,6252001,nan,North America,US,United States,0,0
+189.48.129.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.130.0/24,6252001,nan,North America,US,United States,0,0
+189.48.131.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.132.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.134.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.135.0/24,6252001,nan,North America,US,United States,0,0
+189.48.136.0/24,6252001,nan,North America,US,United States,0,0
+189.48.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.138.0/23,6252001,nan,North America,US,United States,0,0
+189.48.140.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.141.0/24,6252001,nan,North America,US,United States,0,0
+189.48.142.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.143.0/24,6252001,nan,North America,US,United States,0,0
+189.48.144.0/22,6252001,nan,North America,US,United States,0,0
+189.48.148.0/24,6252001,nan,North America,US,United States,0,0
+189.48.149.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.150.0/23,6252001,nan,North America,US,United States,0,0
+189.48.152.0/24,6252001,nan,North America,US,United States,0,0
+189.48.153.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.154.0/23,6252001,nan,North America,US,United States,0,0
+189.48.156.0/24,6252001,nan,North America,US,United States,0,0
+189.48.157.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.158.0/23,6252001,nan,North America,US,United States,0,0
+189.48.160.0/23,6252001,nan,North America,US,United States,0,0
+189.48.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.163.0/24,6252001,nan,North America,US,United States,0,0
+189.48.164.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.48.168.0/23,6252001,nan,North America,US,United States,0,0
+189.48.170.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.171.0/24,6252001,nan,North America,US,United States,0,0
+189.48.172.0/23,6252001,nan,North America,US,United States,0,0
+189.48.174.0/24,6252001,nan,North America,US,United States,0,0
+189.48.175.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.176.0/24,6252001,nan,North America,US,United States,0,0
+189.48.177.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.178.0/23,6252001,nan,North America,US,United States,0,0
+189.48.180.0/24,6252001,nan,North America,US,United States,0,0
+189.48.181.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.182.0/24,6252001,nan,North America,US,United States,0,0
+189.48.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.184.0/23,6252001,nan,North America,US,United States,0,0
+189.48.186.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.188.0/22,6252001,nan,North America,US,United States,0,0
+189.48.192.0/22,6252001,nan,North America,US,United States,0,0
+189.48.196.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.48.200.0/23,6252001,nan,North America,US,United States,0,0
+189.48.202.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.203.0/24,6252001,nan,North America,US,United States,0,0
+189.48.204.0/22,6252001,nan,North America,US,United States,0,0
+189.48.208.0/24,6252001,nan,North America,US,United States,0,0
+189.48.209.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.210.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.212.0/24,6252001,nan,North America,US,United States,0,0
+189.48.213.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.214.0/23,6252001,nan,North America,US,United States,0,0
+189.48.216.0/21,6252001,nan,North America,US,United States,0,0
+189.48.224.0/22,6252001,nan,North America,US,United States,0,0
+189.48.228.0/24,6252001,nan,North America,US,United States,0,0
+189.48.229.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.230.0/23,6252001,nan,North America,US,United States,0,0
+189.48.232.0/23,6252001,nan,North America,US,United States,0,0
+189.48.234.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.235.0/24,6252001,nan,North America,US,United States,0,0
+189.48.236.0/24,6252001,nan,North America,US,United States,0,0
+189.48.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.238.0/23,6252001,nan,North America,US,United States,0,0
+189.48.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.241.0/24,6252001,nan,North America,US,United States,0,0
+189.48.242.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.48.244.0/23,6252001,nan,North America,US,United States,0,0
+189.48.246.0/24,6252001,nan,North America,US,United States,0,0
+189.48.247.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.248.0/22,6252001,nan,North America,US,United States,0,0
+189.48.252.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.253.0/24,6252001,nan,North America,US,United States,0,0
+189.48.254.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.48.255.0/24,6252001,nan,North America,US,United States,0,0
+189.49.0.0/18,6252001,nan,North America,US,United States,0,0
+189.49.64.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.49.80.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.49.88.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.49.92.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.49.94.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.49.95.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.96.0/19,597427,EU,Europe,LT,Lithuania,0,0
+189.49.128.0/24,6252001,nan,North America,US,United States,0,0
+189.49.129.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.130.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.132.0/24,6252001,nan,North America,US,United States,0,0
+189.49.133.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.134.0/23,6252001,nan,North America,US,United States,0,0
+189.49.136.0/22,6252001,nan,North America,US,United States,0,0
+189.49.140.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.141.0/24,6252001,nan,North America,US,United States,0,0
+189.49.142.0/23,6252001,nan,North America,US,United States,0,0
+189.49.144.0/22,6252001,nan,North America,US,United States,0,0
+189.49.148.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.150.0/23,6252001,nan,North America,US,United States,0,0
+189.49.152.0/23,6252001,nan,North America,US,United States,0,0
+189.49.154.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.155.0/24,6252001,nan,North America,US,United States,0,0
+189.49.156.0/22,6252001,nan,North America,US,United States,0,0
+189.49.160.0/24,6252001,nan,North America,US,United States,0,0
+189.49.161.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.162.0/24,6252001,nan,North America,US,United States,0,0
+189.49.163.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.164.0/24,6252001,nan,North America,US,United States,0,0
+189.49.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.166.0/23,6252001,nan,North America,US,United States,0,0
+189.49.168.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.170.0/24,6252001,nan,North America,US,United States,0,0
+189.49.171.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.172.0/22,6252001,nan,North America,US,United States,0,0
+189.49.176.0/22,6252001,nan,North America,US,United States,0,0
+189.49.180.0/24,6252001,nan,North America,US,United States,0,0
+189.49.181.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.182.0/24,6252001,nan,North America,US,United States,0,0
+189.49.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.184.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.185.0/24,6252001,nan,North America,US,United States,0,0
+189.49.186.0/24,6252001,nan,North America,US,United States,0,0
+189.49.187.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.188.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.49.192.0/23,6252001,nan,North America,US,United States,0,0
+189.49.194.0/24,6252001,nan,North America,US,United States,0,0
+189.49.195.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.196.0/24,6252001,nan,North America,US,United States,0,0
+189.49.197.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.198.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.199.0/24,6252001,nan,North America,US,United States,0,0
+189.49.200.0/24,6252001,nan,North America,US,United States,0,0
+189.49.201.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.204.0/22,6252001,nan,North America,US,United States,0,0
+189.49.208.0/21,6252001,nan,North America,US,United States,0,0
+189.49.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.217.0/24,6252001,nan,North America,US,United States,0,0
+189.49.218.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.220.0/23,6252001,nan,North America,US,United States,0,0
+189.49.222.0/24,6252001,nan,North America,US,United States,0,0
+189.49.223.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.224.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.227.0/24,6252001,nan,North America,US,United States,0,0
+189.49.228.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.230.0/23,6252001,nan,North America,US,United States,0,0
+189.49.232.0/23,6252001,nan,North America,US,United States,0,0
+189.49.234.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.235.0/24,6252001,nan,North America,US,United States,0,0
+189.49.236.0/24,6252001,nan,North America,US,United States,0,0
+189.49.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.238.0/23,6252001,nan,North America,US,United States,0,0
+189.49.240.0/23,6252001,nan,North America,US,United States,0,0
+189.49.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.243.0/24,6252001,nan,North America,US,United States,0,0
+189.49.244.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.49.248.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.250.0/24,6252001,nan,North America,US,United States,0,0
+189.49.251.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.49.252.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.49.254.0/24,6252001,nan,North America,US,United States,0,0
+189.49.255.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.50.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.50.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.50.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.50.208.0/23,3686110,SA,South America,CO,Colombia,0,0
+189.50.210.0/24,3686110,SA,South America,CO,Colombia,0,0
+189.50.211.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.50.212.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.50.216.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.50.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.51.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.51.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.51.160.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.51.168.0/21,3996063,nan,North America,MX,Mexico,0,0
+189.51.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.51.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.52.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.56.0.0/13,3469034,SA,South America,BR,Brazil,0,0
+189.64.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.68.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.70.0.0/22,6252001,nan,North America,US,United States,0,0
+189.70.4.0/23,6252001,nan,North America,US,United States,0,0
+189.70.6.0/24,6252001,nan,North America,US,United States,0,0
+189.70.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.8.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.70.12.0/22,6252001,nan,North America,US,United States,0,0
+189.70.16.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.18.0/23,6252001,nan,North America,US,United States,0,0
+189.70.20.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.22.0/24,6252001,nan,North America,US,United States,0,0
+189.70.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.24.0/24,6252001,nan,North America,US,United States,0,0
+189.70.25.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.26.0/24,6252001,nan,North America,US,United States,0,0
+189.70.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.28.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.30.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.31.0/24,6252001,nan,North America,US,United States,0,0
+189.70.32.0/23,6252001,nan,North America,US,United States,0,0
+189.70.34.0/24,6252001,nan,North America,US,United States,0,0
+189.70.35.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.36.0/23,6252001,nan,North America,US,United States,0,0
+189.70.38.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.39.0/24,6252001,nan,North America,US,United States,0,0
+189.70.40.0/23,6252001,nan,North America,US,United States,0,0
+189.70.42.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.44.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.45.0/24,6252001,nan,North America,US,United States,0,0
+189.70.46.0/23,6252001,nan,North America,US,United States,0,0
+189.70.48.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.70.52.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.53.0/24,6252001,nan,North America,US,United States,0,0
+189.70.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.55.0/24,6252001,nan,North America,US,United States,0,0
+189.70.56.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.58.0/23,6252001,nan,North America,US,United States,0,0
+189.70.60.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.70.64.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.65.0/24,6252001,nan,North America,US,United States,0,0
+189.70.66.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.67.0/24,6252001,nan,North America,US,United States,0,0
+189.70.68.0/24,6252001,nan,North America,US,United States,0,0
+189.70.69.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.70.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.72.0/24,6252001,nan,North America,US,United States,0,0
+189.70.73.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.74.0/23,6252001,nan,North America,US,United States,0,0
+189.70.76.0/22,6252001,nan,North America,US,United States,0,0
+189.70.80.0/24,6252001,nan,North America,US,United States,0,0
+189.70.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.82.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.83.0/24,6252001,nan,North America,US,United States,0,0
+189.70.84.0/22,6252001,nan,North America,US,United States,0,0
+189.70.88.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.90.0/23,6252001,nan,North America,US,United States,0,0
+189.70.92.0/22,6252001,nan,North America,US,United States,0,0
+189.70.96.0/23,6252001,nan,North America,US,United States,0,0
+189.70.98.0/24,6252001,nan,North America,US,United States,0,0
+189.70.99.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.100.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.101.0/24,6252001,nan,North America,US,United States,0,0
+189.70.102.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.104.0/24,6252001,nan,North America,US,United States,0,0
+189.70.105.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.107.0/24,6252001,nan,North America,US,United States,0,0
+189.70.108.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.110.0/23,6252001,nan,North America,US,United States,0,0
+189.70.112.0/22,6252001,nan,North America,US,United States,0,0
+189.70.116.0/24,6252001,nan,North America,US,United States,0,0
+189.70.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.118.0/24,6252001,nan,North America,US,United States,0,0
+189.70.119.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.120.0/22,6252001,nan,North America,US,United States,0,0
+189.70.124.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.126.0/23,6252001,nan,North America,US,United States,0,0
+189.70.128.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.129.0/24,6252001,nan,North America,US,United States,0,0
+189.70.130.0/23,6252001,nan,North America,US,United States,0,0
+189.70.132.0/24,6252001,nan,North America,US,United States,0,0
+189.70.133.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.134.0/24,6252001,nan,North America,US,United States,0,0
+189.70.135.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.136.0/24,6252001,nan,North America,US,United States,0,0
+189.70.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.138.0/24,6252001,nan,North America,US,United States,0,0
+189.70.139.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.140.0/22,6252001,nan,North America,US,United States,0,0
+189.70.144.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.70.148.0/22,6252001,nan,North America,US,United States,0,0
+189.70.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.153.0/24,6252001,nan,North America,US,United States,0,0
+189.70.154.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.155.0/24,6252001,nan,North America,US,United States,0,0
+189.70.156.0/24,6252001,nan,North America,US,United States,0,0
+189.70.157.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.158.0/24,6252001,nan,North America,US,United States,0,0
+189.70.159.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.160.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.70.164.0/22,6252001,nan,North America,US,United States,0,0
+189.70.168.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.169.0/24,6252001,nan,North America,US,United States,0,0
+189.70.170.0/23,6252001,nan,North America,US,United States,0,0
+189.70.172.0/22,6252001,nan,North America,US,United States,0,0
+189.70.176.0/21,6252001,nan,North America,US,United States,0,0
+189.70.184.0/23,6252001,nan,North America,US,United States,0,0
+189.70.186.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.188.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.190.0/23,6252001,nan,North America,US,United States,0,0
+189.70.192.0/21,6252001,nan,North America,US,United States,0,0
+189.70.200.0/23,6252001,nan,North America,US,United States,0,0
+189.70.202.0/24,6252001,nan,North America,US,United States,0,0
+189.70.203.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.204.0/22,6252001,nan,North America,US,United States,0,0
+189.70.208.0/23,6252001,nan,North America,US,United States,0,0
+189.70.210.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.211.0/24,6252001,nan,North America,US,United States,0,0
+189.70.212.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.213.0/24,6252001,nan,North America,US,United States,0,0
+189.70.214.0/23,6252001,nan,North America,US,United States,0,0
+189.70.216.0/23,6252001,nan,North America,US,United States,0,0
+189.70.218.0/24,6252001,nan,North America,US,United States,0,0
+189.70.219.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.220.0/24,6252001,nan,North America,US,United States,0,0
+189.70.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.222.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.224.0/22,6252001,nan,North America,US,United States,0,0
+189.70.228.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.229.0/24,6252001,nan,North America,US,United States,0,0
+189.70.230.0/24,6252001,nan,North America,US,United States,0,0
+189.70.231.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.232.0/24,6252001,nan,North America,US,United States,0,0
+189.70.233.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.234.0/24,6252001,nan,North America,US,United States,0,0
+189.70.235.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.236.0/23,6252001,nan,North America,US,United States,0,0
+189.70.238.0/24,6252001,nan,North America,US,United States,0,0
+189.70.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.240.0/23,6252001,nan,North America,US,United States,0,0
+189.70.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.243.0/24,6252001,nan,North America,US,United States,0,0
+189.70.244.0/23,6252001,nan,North America,US,United States,0,0
+189.70.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.70.248.0/23,6252001,nan,North America,US,United States,0,0
+189.70.250.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.251.0/24,6252001,nan,North America,US,United States,0,0
+189.70.252.0/23,6252001,nan,North America,US,United States,0,0
+189.70.254.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.70.255.0/24,6252001,nan,North America,US,United States,0,0
+189.71.0.0/24,6252001,nan,North America,US,United States,0,0
+189.71.1.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.2.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.3.0/24,6252001,nan,North America,US,United States,0,0
+189.71.4.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.5.0/24,6252001,nan,North America,US,United States,0,0
+189.71.6.0/23,6252001,nan,North America,US,United States,0,0
+189.71.8.0/23,6252001,nan,North America,US,United States,0,0
+189.71.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.11.0/24,6252001,nan,North America,US,United States,0,0
+189.71.12.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.13.0/24,6252001,nan,North America,US,United States,0,0
+189.71.14.0/24,6252001,nan,North America,US,United States,0,0
+189.71.15.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.16.0/24,6252001,nan,North America,US,United States,0,0
+189.71.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.18.0/24,6252001,nan,North America,US,United States,0,0
+189.71.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.20.0/24,6252001,nan,North America,US,United States,0,0
+189.71.21.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.22.0/23,6252001,nan,North America,US,United States,0,0
+189.71.24.0/23,6252001,nan,North America,US,United States,0,0
+189.71.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.27.0/24,6252001,nan,North America,US,United States,0,0
+189.71.28.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.29.0/24,6252001,nan,North America,US,United States,0,0
+189.71.30.0/24,6252001,nan,North America,US,United States,0,0
+189.71.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.32.0/24,6252001,nan,North America,US,United States,0,0
+189.71.33.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.34.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.35.0/24,6252001,nan,North America,US,United States,0,0
+189.71.36.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.37.0/24,6252001,nan,North America,US,United States,0,0
+189.71.38.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.39.0/24,6252001,nan,North America,US,United States,0,0
+189.71.40.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.41.0/24,6252001,nan,North America,US,United States,0,0
+189.71.42.0/23,6252001,nan,North America,US,United States,0,0
+189.71.44.0/22,6252001,nan,North America,US,United States,0,0
+189.71.48.0/23,6252001,nan,North America,US,United States,0,0
+189.71.50.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.52.0/22,6252001,nan,North America,US,United States,0,0
+189.71.56.0/23,6252001,nan,North America,US,United States,0,0
+189.71.58.0/24,6252001,nan,North America,US,United States,0,0
+189.71.59.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.60.0/24,6252001,nan,North America,US,United States,0,0
+189.71.61.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.62.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.64.0/23,6252001,nan,North America,US,United States,0,0
+189.71.66.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.68.0/24,6252001,nan,North America,US,United States,0,0
+189.71.69.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.70.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.71.0/24,6252001,nan,North America,US,United States,0,0
+189.71.72.0/22,6252001,nan,North America,US,United States,0,0
+189.71.76.0/24,6252001,nan,North America,US,United States,0,0
+189.71.77.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.78.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.79.0/24,6252001,nan,North America,US,United States,0,0
+189.71.80.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.82.0/23,6252001,nan,North America,US,United States,0,0
+189.71.84.0/24,6252001,nan,North America,US,United States,0,0
+189.71.85.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.86.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.88.0/24,6252001,nan,North America,US,United States,0,0
+189.71.89.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.90.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.91.0/24,6252001,nan,North America,US,United States,0,0
+189.71.92.0/23,6252001,nan,North America,US,United States,0,0
+189.71.94.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.96.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.98.0/24,6252001,nan,North America,US,United States,0,0
+189.71.99.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.100.0/23,6252001,nan,North America,US,United States,0,0
+189.71.102.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.103.0/24,6252001,nan,North America,US,United States,0,0
+189.71.104.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.106.0/24,6252001,nan,North America,US,United States,0,0
+189.71.107.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.108.0/24,6252001,nan,North America,US,United States,0,0
+189.71.109.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.110.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.111.0/24,6252001,nan,North America,US,United States,0,0
+189.71.112.0/24,6252001,nan,North America,US,United States,0,0
+189.71.113.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.114.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.116.0/23,6252001,nan,North America,US,United States,0,0
+189.71.118.0/24,6252001,nan,North America,US,United States,0,0
+189.71.119.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.120.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.122.0/23,6252001,nan,North America,US,United States,0,0
+189.71.124.0/23,6252001,nan,North America,US,United States,0,0
+189.71.126.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.127.0/24,6252001,nan,North America,US,United States,0,0
+189.71.128.0/22,6252001,nan,North America,US,United States,0,0
+189.71.132.0/23,6252001,nan,North America,US,United States,0,0
+189.71.134.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.136.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.137.0/24,6252001,nan,North America,US,United States,0,0
+189.71.138.0/24,6252001,nan,North America,US,United States,0,0
+189.71.139.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.140.0/23,6252001,nan,North America,US,United States,0,0
+189.71.142.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.144.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.146.0/24,6252001,nan,North America,US,United States,0,0
+189.71.147.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.148.0/23,6252001,nan,North America,US,United States,0,0
+189.71.150.0/24,6252001,nan,North America,US,United States,0,0
+189.71.151.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.152.0/22,6252001,nan,North America,US,United States,0,0
+189.71.156.0/24,6252001,nan,North America,US,United States,0,0
+189.71.157.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.158.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.160.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.163.0/24,6252001,nan,North America,US,United States,0,0
+189.71.164.0/24,6252001,nan,North America,US,United States,0,0
+189.71.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.166.0/23,6252001,nan,North America,US,United States,0,0
+189.71.168.0/23,6252001,nan,North America,US,United States,0,0
+189.71.170.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.172.0/22,6252001,nan,North America,US,United States,0,0
+189.71.176.0/22,6252001,nan,North America,US,United States,0,0
+189.71.180.0/23,6252001,nan,North America,US,United States,0,0
+189.71.182.0/24,6252001,nan,North America,US,United States,0,0
+189.71.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.184.0/23,6252001,nan,North America,US,United States,0,0
+189.71.186.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.187.0/24,6252001,nan,North America,US,United States,0,0
+189.71.188.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.190.0/23,6252001,nan,North America,US,United States,0,0
+189.71.192.0/22,6252001,nan,North America,US,United States,0,0
+189.71.196.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.197.0/24,6252001,nan,North America,US,United States,0,0
+189.71.198.0/24,6252001,nan,North America,US,United States,0,0
+189.71.199.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.200.0/23,6252001,nan,North America,US,United States,0,0
+189.71.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.204.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.205.0/24,6252001,nan,North America,US,United States,0,0
+189.71.206.0/24,6252001,nan,North America,US,United States,0,0
+189.71.207.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.208.0/24,6252001,nan,North America,US,United States,0,0
+189.71.209.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.210.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.212.0/24,6252001,nan,North America,US,United States,0,0
+189.71.213.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.214.0/23,6252001,nan,North America,US,United States,0,0
+189.71.216.0/24,6252001,nan,North America,US,United States,0,0
+189.71.217.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.218.0/23,6252001,nan,North America,US,United States,0,0
+189.71.220.0/22,6252001,nan,North America,US,United States,0,0
+189.71.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.225.0/24,6252001,nan,North America,US,United States,0,0
+189.71.226.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.228.0/23,6252001,nan,North America,US,United States,0,0
+189.71.230.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.71.232.0/24,6252001,nan,North America,US,United States,0,0
+189.71.233.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.234.0/23,6252001,nan,North America,US,United States,0,0
+189.71.236.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.237.0/24,6252001,nan,North America,US,United States,0,0
+189.71.238.0/23,6252001,nan,North America,US,United States,0,0
+189.71.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.241.0/24,6252001,nan,North America,US,United States,0,0
+189.71.242.0/23,6252001,nan,North America,US,United States,0,0
+189.71.244.0/22,6252001,nan,North America,US,United States,0,0
+189.71.248.0/22,6252001,nan,North America,US,United States,0,0
+189.71.252.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.71.253.0/24,6252001,nan,North America,US,United States,0,0
+189.71.254.0/23,6252001,nan,North America,US,United States,0,0
+189.72.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.72.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.72.96.0/20,6252001,nan,North America,US,United States,0,0
+189.72.112.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.72.114.0/23,6252001,nan,North America,US,United States,0,0
+189.72.116.0/23,6252001,nan,North America,US,United States,0,0
+189.72.118.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.72.119.0/24,6252001,nan,North America,US,United States,0,0
+189.72.120.0/23,6252001,nan,North America,US,United States,0,0
+189.72.122.0/24,6252001,nan,North America,US,United States,0,0
+189.72.123.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.72.124.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.72.125.0/24,6252001,nan,North America,US,United States,0,0
+189.72.126.0/24,6252001,nan,North America,US,United States,0,0
+189.72.127.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.72.128.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.72.144.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.72.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.72.176.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.72.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.72.224.0/20,6252001,nan,North America,US,United States,0,0
+189.72.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.0.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.16.0/23,6252001,nan,North America,US,United States,0,0
+189.73.18.0/24,6252001,nan,North America,US,United States,0,0
+189.73.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.20.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.73.22.0/24,6252001,nan,North America,US,United States,0,0
+189.73.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.24.0/22,6252001,nan,North America,US,United States,0,0
+189.73.28.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.73.32.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.73.40.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.73.41.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.42.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.43.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.73.44.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.73.46.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+189.73.47.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.64.0/19,6252001,nan,North America,US,United States,0,0
+189.73.96.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.73.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.128.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.73.136.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.73.140.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.73.142.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.73.143.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.73.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.160.0/19,6252001,nan,North America,US,United States,0,0
+189.73.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.73.208.0/20,6252001,nan,North America,US,United States,0,0
+189.73.224.0/20,597427,EU,Europe,LT,Lithuania,0,0
+189.73.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.74.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.74.32.0/19,6252001,nan,North America,US,United States,0,0
+189.74.64.0/20,6252001,nan,North America,US,United States,0,0
+189.74.80.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.74.96.0/21,1512440,AS,Asia,UZ,Uzbekistan,0,0
+189.74.104.0/23,2017370,EU,Europe,RU,Russia,0,0
+189.74.106.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.107.0/24,294640,AS,Asia,IL,Israel,0,0
+189.74.108.0/24,2921044,EU,Europe,DE,Germany,0,0
+189.74.109.0/24,6290252,EU,Europe,RS,Serbia,0,0
+189.74.110.0/23,6290252,EU,Europe,RS,Serbia,0,0
+189.74.112.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.113.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+189.74.114.0/23,2017370,EU,Europe,RU,Russia,0,0
+189.74.116.0/23,2017370,EU,Europe,RU,Russia,0,0
+189.74.118.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.119.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+189.74.120.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+189.74.121.0/24,2921044,EU,Europe,DE,Germany,0,0
+189.74.122.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.123.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+189.74.124.0/24,630336,EU,Europe,BY,Belarus,0,0
+189.74.125.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.126.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.74.127.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+189.74.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.74.192.0/19,6252001,nan,North America,US,United States,0,0
+189.74.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.75.0.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.4.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.6.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.75.8.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.16.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.75.32.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.75.36.0/24,597427,EU,Europe,LT,Lithuania,0,0
+189.75.37.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.75.38.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.75.40.0/21,597427,EU,Europe,LT,Lithuania,0,0
+189.75.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.75.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.75.128.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.75.144.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.152.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.156.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.75.158.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+189.75.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.75.176.0/20,6252001,nan,North America,US,United States,0,0
+189.75.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.75.224.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.75.240.0/20,6252001,nan,North America,US,United States,0,0
+189.76.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.80.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.81.0.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.2.0/23,6252001,nan,North America,US,United States,0,0
+189.81.4.0/22,6252001,nan,North America,US,United States,0,0
+189.81.8.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.81.10.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.12.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.14.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.16.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.18.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.20.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.81.24.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.26.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.28.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.30.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.32.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.34.0/23,6252001,nan,North America,US,United States,0,0
+189.81.36.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.38.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.40.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.42.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+189.81.44.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.46.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.48.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.50.0/23,798549,EU,Europe,RO,Romania,0,0
+189.81.52.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.54.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.56.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.58.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.60.0/22,798544,EU,Europe,PL,Poland,0,0
+189.81.64.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.81.66.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.68.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.70.0/23,6252001,nan,North America,US,United States,0,0
+189.81.72.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.81.74.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.76.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.81.78.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.80.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.82.0/23,2802361,EU,Europe,BE,Belgium,0,0
+189.81.84.0/22,3686110,SA,South America,CO,Colombia,0,0
+189.81.88.0/21,3686110,SA,South America,CO,Colombia,0,0
+189.81.96.0/22,3686110,SA,South America,CO,Colombia,0,0
+189.81.100.0/22,1861060,AS,Asia,JP,Japan,0,0
+189.81.104.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.106.0/23,6252001,nan,North America,US,United States,0,0
+189.81.108.0/23,6252001,nan,North America,US,United States,0,0
+189.81.110.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.112.0/23,6252001,nan,North America,US,United States,0,0
+189.81.114.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.116.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.118.0/23,6252001,nan,North America,US,United States,0,0
+189.81.120.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.122.0/23,6252001,nan,North America,US,United States,0,0
+189.81.124.0/22,1861060,AS,Asia,JP,Japan,0,0
+189.81.128.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.130.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.132.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.134.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.136.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.138.0/24,298795,AS,Asia,TR,Türkiye,0,0
+189.81.139.0/24,690791,EU,Europe,UA,Ukraine,0,0
+189.81.140.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.142.0/23,6252001,nan,North America,US,United States,0,0
+189.81.144.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.146.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.148.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.150.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.152.0/23,6252001,nan,North America,US,United States,0,0
+189.81.154.0/24,2782113,EU,Europe,AT,Austria,0,0
+189.81.155.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+189.81.156.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.158.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.81.160.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.162.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.164.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.81.166.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.168.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.170.0/23,6252001,nan,North America,US,United States,0,0
+189.81.172.0/24,3144096,EU,Europe,NO,Norway,0,0
+189.81.173.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+189.81.174.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.176.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.178.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.180.0/22,798544,EU,Europe,PL,Poland,0,0
+189.81.184.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.186.0/23,6252001,nan,North America,US,United States,0,0
+189.81.188.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.190.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+189.81.191.0/26,3077311,EU,Europe,CZ,Czechia,0,0
+189.81.191.64/26,6252001,nan,North America,US,United States,0,0
+189.81.191.128/25,6252001,nan,North America,US,United States,0,0
+189.81.192.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.194.0/23,6252001,nan,North America,US,United States,0,0
+189.81.196.0/23,3017382,EU,Europe,FR,France,0,0
+189.81.198.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.200.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.202.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.204.0/22,6252001,nan,North America,US,United States,0,0
+189.81.208.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+189.81.210.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.212.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.214.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.216.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.218.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.220.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.222.0/23,6252001,nan,North America,US,United States,0,0
+189.81.224.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.81.226.0/23,6252001,nan,North America,US,United States,0,0
+189.81.228.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.230.0/23,6252001,nan,North America,US,United States,0,0
+189.81.232.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.81.234.0/23,6252001,nan,North America,US,United States,0,0
+189.81.236.0/22,1861060,AS,Asia,JP,Japan,0,0
+189.81.240.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.81.242.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.244.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+189.81.246.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.248.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.81.250.0/23,798544,EU,Europe,PL,Poland,0,0
+189.81.252.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+189.81.254.0/23,798544,EU,Europe,PL,Poland,0,0
+189.82.0.0/22,6252001,nan,North America,US,United States,0,0
+189.82.4.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.5.0/24,6252001,nan,North America,US,United States,0,0
+189.82.6.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.8.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.9.0/24,6252001,nan,North America,US,United States,0,0
+189.82.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.11.0/24,6252001,nan,North America,US,United States,0,0
+189.82.12.0/24,6252001,nan,North America,US,United States,0,0
+189.82.13.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.14.0/23,6252001,nan,North America,US,United States,0,0
+189.82.16.0/22,6252001,nan,North America,US,United States,0,0
+189.82.20.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.22.0/23,6252001,nan,North America,US,United States,0,0
+189.82.24.0/24,6252001,nan,North America,US,United States,0,0
+189.82.25.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.26.0/23,6252001,nan,North America,US,United States,0,0
+189.82.28.0/22,6252001,nan,North America,US,United States,0,0
+189.82.32.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.33.0/24,6252001,nan,North America,US,United States,0,0
+189.82.34.0/23,6252001,nan,North America,US,United States,0,0
+189.82.36.0/23,6252001,nan,North America,US,United States,0,0
+189.82.38.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.40.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.42.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.43.0/24,6252001,nan,North America,US,United States,0,0
+189.82.44.0/24,6252001,nan,North America,US,United States,0,0
+189.82.45.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.46.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.48.0/23,6252001,nan,North America,US,United States,0,0
+189.82.50.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.52.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.54.0/24,6252001,nan,North America,US,United States,0,0
+189.82.55.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.56.0/23,6252001,nan,North America,US,United States,0,0
+189.82.58.0/24,6252001,nan,North America,US,United States,0,0
+189.82.59.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.60.0/24,6252001,nan,North America,US,United States,0,0
+189.82.61.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.62.0/23,6252001,nan,North America,US,United States,0,0
+189.82.64.0/21,6252001,nan,North America,US,United States,0,0
+189.82.72.0/22,6252001,nan,North America,US,United States,0,0
+189.82.76.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.77.0/24,6252001,nan,North America,US,United States,0,0
+189.82.78.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.79.0/24,6252001,nan,North America,US,United States,0,0
+189.82.80.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.82.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.83.0/24,6252001,nan,North America,US,United States,0,0
+189.82.84.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.82.88.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.82.92.0/23,6252001,nan,North America,US,United States,0,0
+189.82.94.0/24,6252001,nan,North America,US,United States,0,0
+189.82.95.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.96.0/23,6252001,nan,North America,US,United States,0,0
+189.82.98.0/24,6252001,nan,North America,US,United States,0,0
+189.82.99.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.100.0/23,6252001,nan,North America,US,United States,0,0
+189.82.102.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.104.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.105.0/24,6252001,nan,North America,US,United States,0,0
+189.82.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.107.0/24,6252001,nan,North America,US,United States,0,0
+189.82.108.0/23,6252001,nan,North America,US,United States,0,0
+189.82.110.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.111.0/24,6252001,nan,North America,US,United States,0,0
+189.82.112.0/22,6252001,nan,North America,US,United States,0,0
+189.82.116.0/24,6252001,nan,North America,US,United States,0,0
+189.82.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.118.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.120.0/23,6252001,nan,North America,US,United States,0,0
+189.82.122.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.123.0/24,6252001,nan,North America,US,United States,0,0
+189.82.124.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.125.0/24,6252001,nan,North America,US,United States,0,0
+189.82.126.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.128.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.130.0/24,6252001,nan,North America,US,United States,0,0
+189.82.131.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.132.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.82.136.0/24,6252001,nan,North America,US,United States,0,0
+189.82.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.138.0/24,6252001,nan,North America,US,United States,0,0
+189.82.139.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.140.0/23,6252001,nan,North America,US,United States,0,0
+189.82.142.0/24,6252001,nan,North America,US,United States,0,0
+189.82.143.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.144.0/24,6252001,nan,North America,US,United States,0,0
+189.82.145.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.146.0/23,6252001,nan,North America,US,United States,0,0
+189.82.148.0/24,6252001,nan,North America,US,United States,0,0
+189.82.149.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.150.0/23,6252001,nan,North America,US,United States,0,0
+189.82.152.0/24,6252001,nan,North America,US,United States,0,0
+189.82.153.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.154.0/23,6252001,nan,North America,US,United States,0,0
+189.82.156.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.157.0/24,6252001,nan,North America,US,United States,0,0
+189.82.158.0/23,6252001,nan,North America,US,United States,0,0
+189.82.160.0/23,6252001,nan,North America,US,United States,0,0
+189.82.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.163.0/24,6252001,nan,North America,US,United States,0,0
+189.82.164.0/24,6252001,nan,North America,US,United States,0,0
+189.82.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.166.0/24,6252001,nan,North America,US,United States,0,0
+189.82.167.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.168.0/23,6252001,nan,North America,US,United States,0,0
+189.82.170.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.171.0/24,6252001,nan,North America,US,United States,0,0
+189.82.172.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.82.176.0/24,6252001,nan,North America,US,United States,0,0
+189.82.177.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.178.0/24,6252001,nan,North America,US,United States,0,0
+189.82.179.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.180.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.181.0/24,6252001,nan,North America,US,United States,0,0
+189.82.182.0/23,6252001,nan,North America,US,United States,0,0
+189.82.184.0/23,6252001,nan,North America,US,United States,0,0
+189.82.186.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.188.0/24,6252001,nan,North America,US,United States,0,0
+189.82.189.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.190.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.192.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.194.0/24,6252001,nan,North America,US,United States,0,0
+189.82.195.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.196.0/24,6252001,nan,North America,US,United States,0,0
+189.82.197.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.198.0/23,6252001,nan,North America,US,United States,0,0
+189.82.200.0/24,6252001,nan,North America,US,United States,0,0
+189.82.201.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.204.0/23,6252001,nan,North America,US,United States,0,0
+189.82.206.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.208.0/21,6252001,nan,North America,US,United States,0,0
+189.82.216.0/23,6252001,nan,North America,US,United States,0,0
+189.82.218.0/24,6252001,nan,North America,US,United States,0,0
+189.82.219.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.220.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.221.0/24,6252001,nan,North America,US,United States,0,0
+189.82.222.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.225.0/24,6252001,nan,North America,US,United States,0,0
+189.82.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.227.0/24,6252001,nan,North America,US,United States,0,0
+189.82.228.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.229.0/24,6252001,nan,North America,US,United States,0,0
+189.82.230.0/23,6252001,nan,North America,US,United States,0,0
+189.82.232.0/23,6252001,nan,North America,US,United States,0,0
+189.82.234.0/24,6252001,nan,North America,US,United States,0,0
+189.82.235.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.236.0/23,6252001,nan,North America,US,United States,0,0
+189.82.238.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.241.0/24,6252001,nan,North America,US,United States,0,0
+189.82.242.0/23,6252001,nan,North America,US,United States,0,0
+189.82.244.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.82.246.0/24,6252001,nan,North America,US,United States,0,0
+189.82.247.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.248.0/23,6252001,nan,North America,US,United States,0,0
+189.82.250.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.251.0/24,6252001,nan,North America,US,United States,0,0
+189.82.252.0/24,6252001,nan,North America,US,United States,0,0
+189.82.253.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.82.254.0/23,6252001,nan,North America,US,United States,0,0
+189.83.0.0/22,6252001,nan,North America,US,United States,0,0
+189.83.4.0/24,6252001,nan,North America,US,United States,0,0
+189.83.5.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.6.0/24,6252001,nan,North America,US,United States,0,0
+189.83.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.8.0/22,6252001,nan,North America,US,United States,0,0
+189.83.12.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.83.16.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.18.0/24,6252001,nan,North America,US,United States,0,0
+189.83.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.20.0/22,6252001,nan,North America,US,United States,0,0
+189.83.24.0/23,6252001,nan,North America,US,United States,0,0
+189.83.26.0/24,6252001,nan,North America,US,United States,0,0
+189.83.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.28.0/23,6252001,nan,North America,US,United States,0,0
+189.83.30.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.31.0/24,6252001,nan,North America,US,United States,0,0
+189.83.32.0/22,6252001,nan,North America,US,United States,0,0
+189.83.36.0/23,6252001,nan,North America,US,United States,0,0
+189.83.38.0/24,6252001,nan,North America,US,United States,0,0
+189.83.39.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.40.0/23,6252001,nan,North America,US,United States,0,0
+189.83.42.0/24,6252001,nan,North America,US,United States,0,0
+189.83.43.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.44.0/24,6252001,nan,North America,US,United States,0,0
+189.83.45.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.46.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.48.0/22,6252001,nan,North America,US,United States,0,0
+189.83.52.0/23,6252001,nan,North America,US,United States,0,0
+189.83.54.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.56.0/22,6252001,nan,North America,US,United States,0,0
+189.83.60.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.62.0/23,6252001,nan,North America,US,United States,0,0
+189.83.64.0/22,6252001,nan,North America,US,United States,0,0
+189.83.68.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.69.0/24,6252001,nan,North America,US,United States,0,0
+189.83.70.0/23,6252001,nan,North America,US,United States,0,0
+189.83.72.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.73.0/24,6252001,nan,North America,US,United States,0,0
+189.83.74.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.75.0/24,6252001,nan,North America,US,United States,0,0
+189.83.76.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.77.0/24,6252001,nan,North America,US,United States,0,0
+189.83.78.0/23,6252001,nan,North America,US,United States,0,0
+189.83.80.0/24,6252001,nan,North America,US,United States,0,0
+189.83.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.82.0/23,6252001,nan,North America,US,United States,0,0
+189.83.84.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.85.0/24,6252001,nan,North America,US,United States,0,0
+189.83.86.0/23,6252001,nan,North America,US,United States,0,0
+189.83.88.0/23,6252001,nan,North America,US,United States,0,0
+189.83.90.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.91.0/24,6252001,nan,North America,US,United States,0,0
+189.83.92.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.93.0/24,6252001,nan,North America,US,United States,0,0
+189.83.94.0/23,6252001,nan,North America,US,United States,0,0
+189.83.96.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.97.0/24,6252001,nan,North America,US,United States,0,0
+189.83.98.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.99.0/24,6252001,nan,North America,US,United States,0,0
+189.83.100.0/24,6252001,nan,North America,US,United States,0,0
+189.83.101.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.102.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.103.0/24,6252001,nan,North America,US,United States,0,0
+189.83.104.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.105.0/24,6252001,nan,North America,US,United States,0,0
+189.83.106.0/23,6252001,nan,North America,US,United States,0,0
+189.83.108.0/22,6252001,nan,North America,US,United States,0,0
+189.83.112.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.113.0/24,6252001,nan,North America,US,United States,0,0
+189.83.114.0/23,6252001,nan,North America,US,United States,0,0
+189.83.116.0/22,6252001,nan,North America,US,United States,0,0
+189.83.120.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.122.0/23,6252001,nan,North America,US,United States,0,0
+189.83.124.0/22,6252001,nan,North America,US,United States,0,0
+189.83.128.0/24,6252001,nan,North America,US,United States,0,0
+189.83.129.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.130.0/24,6252001,nan,North America,US,United States,0,0
+189.83.131.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.132.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.133.0/24,6252001,nan,North America,US,United States,0,0
+189.83.134.0/24,6252001,nan,North America,US,United States,0,0
+189.83.135.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.136.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.137.0/24,6252001,nan,North America,US,United States,0,0
+189.83.138.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.139.0/24,6252001,nan,North America,US,United States,0,0
+189.83.140.0/22,6252001,nan,North America,US,United States,0,0
+189.83.144.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.83.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.153.0/24,6252001,nan,North America,US,United States,0,0
+189.83.154.0/23,6252001,nan,North America,US,United States,0,0
+189.83.156.0/24,6252001,nan,North America,US,United States,0,0
+189.83.157.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.158.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.159.0/24,6252001,nan,North America,US,United States,0,0
+189.83.160.0/23,6252001,nan,North America,US,United States,0,0
+189.83.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.163.0/24,6252001,nan,North America,US,United States,0,0
+189.83.164.0/22,6252001,nan,North America,US,United States,0,0
+189.83.168.0/22,6252001,nan,North America,US,United States,0,0
+189.83.172.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.173.0/24,6252001,nan,North America,US,United States,0,0
+189.83.174.0/23,6252001,nan,North America,US,United States,0,0
+189.83.176.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.177.0/24,6252001,nan,North America,US,United States,0,0
+189.83.178.0/23,6252001,nan,North America,US,United States,0,0
+189.83.180.0/23,6252001,nan,North America,US,United States,0,0
+189.83.182.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.183.0/24,6252001,nan,North America,US,United States,0,0
+189.83.184.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.186.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.187.0/24,6252001,nan,North America,US,United States,0,0
+189.83.188.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.190.0/23,6252001,nan,North America,US,United States,0,0
+189.83.192.0/24,6252001,nan,North America,US,United States,0,0
+189.83.193.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.194.0/24,6252001,nan,North America,US,United States,0,0
+189.83.195.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.196.0/24,6252001,nan,North America,US,United States,0,0
+189.83.197.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.198.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.199.0/24,6252001,nan,North America,US,United States,0,0
+189.83.200.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.202.0/23,6252001,nan,North America,US,United States,0,0
+189.83.204.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.205.0/24,6252001,nan,North America,US,United States,0,0
+189.83.206.0/23,6252001,nan,North America,US,United States,0,0
+189.83.208.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.209.0/24,6252001,nan,North America,US,United States,0,0
+189.83.210.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.211.0/24,6252001,nan,North America,US,United States,0,0
+189.83.212.0/22,6252001,nan,North America,US,United States,0,0
+189.83.216.0/23,6252001,nan,North America,US,United States,0,0
+189.83.218.0/24,6252001,nan,North America,US,United States,0,0
+189.83.219.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.220.0/22,6252001,nan,North America,US,United States,0,0
+189.83.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.225.0/24,6252001,nan,North America,US,United States,0,0
+189.83.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.227.0/24,6252001,nan,North America,US,United States,0,0
+189.83.228.0/23,6252001,nan,North America,US,United States,0,0
+189.83.230.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.231.0/24,6252001,nan,North America,US,United States,0,0
+189.83.232.0/24,6252001,nan,North America,US,United States,0,0
+189.83.233.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.234.0/23,6252001,nan,North America,US,United States,0,0
+189.83.236.0/22,6252001,nan,North America,US,United States,0,0
+189.83.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.241.0/24,6252001,nan,North America,US,United States,0,0
+189.83.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.243.0/24,6252001,nan,North America,US,United States,0,0
+189.83.244.0/23,6252001,nan,North America,US,United States,0,0
+189.83.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.248.0/23,6252001,nan,North America,US,United States,0,0
+189.83.250.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.83.252.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.83.253.0/24,6252001,nan,North America,US,United States,0,0
+189.83.254.0/24,6252001,nan,North America,US,United States,0,0
+189.83.255.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.84.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.84.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.84.48.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.84.56.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.84.60.0/23,3895114,SA,South America,CL,Chile,0,0
+189.84.62.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.84.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.84.96.0/24,3585968,nan,North America,SV,El Salvador,0,0
+189.84.97.0/24,3595528,nan,North America,GT,Guatemala,0,0
+189.84.98.0/24,3595528,nan,North America,GT,Guatemala,0,0
+189.84.99.0/24,3585968,nan,North America,SV,El Salvador,0,0
+189.84.100.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.84.104.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.84.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.84.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.85.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.85.32.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.85.36.0/22,3996063,nan,North America,MX,Mexico,0,0
+189.85.40.0/22,3686110,SA,South America,CO,Colombia,0,0
+189.85.44.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.85.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.85.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.85.96.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.85.100.0/22,3996063,nan,North America,MX,Mexico,0,0
+189.85.104.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.85.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.85.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.86.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.88.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+189.90.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.90.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.90.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.90.224.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.90.228.0/22,3865483,SA,South America,AR,Argentina,0,0
+189.90.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.90.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.91.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.92.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.96.0.0/13,3469034,SA,South America,BR,Brazil,0,0
+189.104.0.0/23,6251999,nan,North America,CA,Canada,0,0
+189.104.2.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.4.0/22,6252001,nan,North America,US,United States,0,0
+189.104.8.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.10.0/23,6251999,nan,North America,CA,Canada,0,0
+189.104.12.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.14.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.16.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.18.0/23,6252001,nan,North America,US,United States,0,0
+189.104.20.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.22.0/23,6252001,nan,North America,US,United States,0,0
+189.104.24.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.26.0/24,458258,EU,Europe,LV,Latvia,0,0
+189.104.27.0/24,3194884,EU,Europe,ME,Montenegro,0,0
+189.104.28.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.104.32.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.34.0/23,6252001,nan,North America,US,United States,0,0
+189.104.36.0/23,6252001,nan,North America,US,United States,0,0
+189.104.38.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.40.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.42.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.44.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.46.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.48.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.50.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.52.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.54.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.56.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.58.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.60.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.62.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.64.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.66.0/23,6252001,nan,North America,US,United States,0,0
+189.104.68.0/23,6252001,nan,North America,US,United States,0,0
+189.104.70.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.72.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.104.76.0/24,6290252,EU,Europe,RS,Serbia,0,0
+189.104.77.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.104.78.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.80.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.82.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.84.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.86.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.88.0/24,2017370,EU,Europe,RU,Russia,0,0
+189.104.89.0/24,719819,EU,Europe,HU,Hungary,0,0
+189.104.90.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.92.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.94.0/23,6252001,nan,North America,US,United States,0,0
+189.104.96.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.98.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.100.0/23,6251999,nan,North America,CA,Canada,0,0
+189.104.102.0/23,6252001,nan,North America,US,United States,0,0
+189.104.104.0/22,6252001,nan,North America,US,United States,0,0
+189.104.108.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.110.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.112.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.114.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.116.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.118.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.120.0/22,2661886,EU,Europe,SE,Sweden,0,0
+189.104.124.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.126.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.128.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.104.130.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.132.0/22,6252001,nan,North America,US,United States,0,0
+189.104.136.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.138.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.140.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.104.142.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.144.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.146.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.148.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.150.0/23,6252001,nan,North America,US,United States,0,0
+189.104.152.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.154.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.156.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.158.0/23,6252001,nan,North America,US,United States,0,0
+189.104.160.0/22,798544,EU,Europe,PL,Poland,0,0
+189.104.164.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.166.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.168.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.170.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.172.0/22,6252001,nan,North America,US,United States,0,0
+189.104.176.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.178.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.180.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.182.0/23,2661886,EU,Europe,SE,Sweden,0,0
+189.104.184.0/23,1880251,AS,Asia,SG,Singapore,0,0
+189.104.186.0/23,798544,EU,Europe,PL,Poland,0,0
+189.104.188.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.104.192.0/22,2077456,OC,Oceania,AU,Australia,0,0
+189.104.196.0/23,6252001,nan,North America,US,United States,0,0
+189.104.198.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.200.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.104.202.0/23,6252001,nan,North America,US,United States,0,0
+189.104.204.0/23,6252001,nan,North America,US,United States,0,0
+189.104.206.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.208.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.210.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.212.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.214.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.216.0/24,1655842,AS,Asia,LA,Laos,0,0
+189.104.217.0/28,2328926,AF,Africa,NG,Nigeria,0,0
+189.104.217.16/28,6252001,nan,North America,US,United States,0,0
+189.104.217.32/27,6252001,nan,North America,US,United States,0,0
+189.104.217.64/26,719819,EU,Europe,HU,Hungary,0,0
+189.104.217.128/26,3144096,EU,Europe,NO,Norway,0,0
+189.104.217.192/26,597427,EU,Europe,LT,Lithuania,0,0
+189.104.218.0/23,6252001,nan,North America,US,United States,0,0
+189.104.220.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.222.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.224.0/22,798544,EU,Europe,PL,Poland,0,0
+189.104.228.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.230.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.232.0/23,3996063,nan,North America,MX,Mexico,0,0
+189.104.234.0/23,3017382,EU,Europe,FR,France,0,0
+189.104.236.0/23,597427,EU,Europe,LT,Lithuania,0,0
+189.104.238.0/23,1861060,AS,Asia,JP,Japan,0,0
+189.104.240.0/23,6252001,nan,North America,US,United States,0,0
+189.104.242.0/23,2077456,OC,Oceania,AU,Australia,0,0
+189.104.244.0/22,1861060,AS,Asia,JP,Japan,0,0
+189.104.248.0/22,597427,EU,Europe,LT,Lithuania,0,0
+189.104.252.0/23,6252001,nan,North America,US,United States,0,0
+189.104.254.0/23,2264397,EU,Europe,PT,Portugal,0,0
+189.105.0.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.105.16.0/24,6252001,nan,North America,US,United States,0,0
+189.105.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.18.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.20.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.21.0/24,6252001,nan,North America,US,United States,0,0
+189.105.22.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.23.0/24,6252001,nan,North America,US,United States,0,0
+189.105.24.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.25.0/24,6252001,nan,North America,US,United States,0,0
+189.105.26.0/23,6252001,nan,North America,US,United States,0,0
+189.105.28.0/22,6252001,nan,North America,US,United States,0,0
+189.105.32.0/19,597427,EU,Europe,LT,Lithuania,0,0
+189.105.64.0/18,1819730,AS,Asia,HK,Hong Kong,0,0
+189.105.128.0/23,6252001,nan,North America,US,United States,0,0
+189.105.130.0/24,6252001,nan,North America,US,United States,0,0
+189.105.131.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.132.0/22,6252001,nan,North America,US,United States,0,0
+189.105.136.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.137.0/24,6252001,nan,North America,US,United States,0,0
+189.105.138.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.140.0/23,6252001,nan,North America,US,United States,0,0
+189.105.142.0/24,6252001,nan,North America,US,United States,0,0
+189.105.143.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.144.0/23,6252001,nan,North America,US,United States,0,0
+189.105.146.0/24,6252001,nan,North America,US,United States,0,0
+189.105.147.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.148.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.105.152.0/23,6252001,nan,North America,US,United States,0,0
+189.105.154.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.156.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.157.0/24,6252001,nan,North America,US,United States,0,0
+189.105.158.0/23,6252001,nan,North America,US,United States,0,0
+189.105.160.0/23,6252001,nan,North America,US,United States,0,0
+189.105.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.163.0/24,6252001,nan,North America,US,United States,0,0
+189.105.164.0/24,6252001,nan,North America,US,United States,0,0
+189.105.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.166.0/23,6252001,nan,North America,US,United States,0,0
+189.105.168.0/23,6252001,nan,North America,US,United States,0,0
+189.105.170.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.171.0/24,6252001,nan,North America,US,United States,0,0
+189.105.172.0/24,6252001,nan,North America,US,United States,0,0
+189.105.173.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.174.0/23,6252001,nan,North America,US,United States,0,0
+189.105.176.0/23,6252001,nan,North America,US,United States,0,0
+189.105.178.0/24,6252001,nan,North America,US,United States,0,0
+189.105.179.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.180.0/24,6252001,nan,North America,US,United States,0,0
+189.105.181.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.182.0/24,6252001,nan,North America,US,United States,0,0
+189.105.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.184.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.186.0/23,6252001,nan,North America,US,United States,0,0
+189.105.188.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.190.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.191.0/24,6252001,nan,North America,US,United States,0,0
+189.105.192.0/22,6252001,nan,North America,US,United States,0,0
+189.105.196.0/23,6252001,nan,North America,US,United States,0,0
+189.105.198.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.199.0/24,6252001,nan,North America,US,United States,0,0
+189.105.200.0/21,6252001,nan,North America,US,United States,0,0
+189.105.208.0/23,6252001,nan,North America,US,United States,0,0
+189.105.210.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.211.0/24,6252001,nan,North America,US,United States,0,0
+189.105.212.0/23,6252001,nan,North America,US,United States,0,0
+189.105.214.0/24,6252001,nan,North America,US,United States,0,0
+189.105.215.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.217.0/24,6252001,nan,North America,US,United States,0,0
+189.105.218.0/23,6252001,nan,North America,US,United States,0,0
+189.105.220.0/24,6252001,nan,North America,US,United States,0,0
+189.105.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.222.0/23,6252001,nan,North America,US,United States,0,0
+189.105.224.0/24,6252001,nan,North America,US,United States,0,0
+189.105.225.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.226.0/24,6252001,nan,North America,US,United States,0,0
+189.105.227.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.228.0/23,6252001,nan,North America,US,United States,0,0
+189.105.230.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.232.0/22,6252001,nan,North America,US,United States,0,0
+189.105.236.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.105.240.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.242.0/24,6252001,nan,North America,US,United States,0,0
+189.105.243.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.244.0/23,6252001,nan,North America,US,United States,0,0
+189.105.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.248.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.105.250.0/24,6252001,nan,North America,US,United States,0,0
+189.105.251.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.105.252.0/22,6252001,nan,North America,US,United States,0,0
+189.106.0.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.106.8.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.9.0/24,6252001,nan,North America,US,United States,0,0
+189.106.10.0/24,6252001,nan,North America,US,United States,0,0
+189.106.11.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.12.0/24,6252001,nan,North America,US,United States,0,0
+189.106.13.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.14.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.15.0/24,6252001,nan,North America,US,United States,0,0
+189.106.16.0/21,6252001,nan,North America,US,United States,0,0
+189.106.24.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.26.0/24,6252001,nan,North America,US,United States,0,0
+189.106.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.28.0/23,6252001,nan,North America,US,United States,0,0
+189.106.30.0/24,6252001,nan,North America,US,United States,0,0
+189.106.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.32.0/24,6252001,nan,North America,US,United States,0,0
+189.106.33.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.34.0/23,6252001,nan,North America,US,United States,0,0
+189.106.36.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.37.0/24,6252001,nan,North America,US,United States,0,0
+189.106.38.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.39.0/24,6252001,nan,North America,US,United States,0,0
+189.106.40.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.42.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.43.0/24,6252001,nan,North America,US,United States,0,0
+189.106.44.0/22,6252001,nan,North America,US,United States,0,0
+189.106.48.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.50.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.51.0/24,6252001,nan,North America,US,United States,0,0
+189.106.52.0/24,6252001,nan,North America,US,United States,0,0
+189.106.53.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.55.0/24,6252001,nan,North America,US,United States,0,0
+189.106.56.0/24,6252001,nan,North America,US,United States,0,0
+189.106.57.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.58.0/23,6252001,nan,North America,US,United States,0,0
+189.106.60.0/24,6252001,nan,North America,US,United States,0,0
+189.106.61.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.62.0/23,6252001,nan,North America,US,United States,0,0
+189.106.64.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.66.0/24,6252001,nan,North America,US,United States,0,0
+189.106.67.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.68.0/22,6252001,nan,North America,US,United States,0,0
+189.106.72.0/22,6252001,nan,North America,US,United States,0,0
+189.106.76.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.106.80.0/23,6252001,nan,North America,US,United States,0,0
+189.106.82.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.83.0/24,6252001,nan,North America,US,United States,0,0
+189.106.84.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.86.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.87.0/24,6252001,nan,North America,US,United States,0,0
+189.106.88.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.89.0/24,6252001,nan,North America,US,United States,0,0
+189.106.90.0/23,6252001,nan,North America,US,United States,0,0
+189.106.92.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.106.96.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.97.0/24,6252001,nan,North America,US,United States,0,0
+189.106.98.0/24,6252001,nan,North America,US,United States,0,0
+189.106.99.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.100.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.102.0/24,6252001,nan,North America,US,United States,0,0
+189.106.103.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.104.0/21,6252001,nan,North America,US,United States,0,0
+189.106.112.0/21,6252001,nan,North America,US,United States,0,0
+189.106.120.0/24,6252001,nan,North America,US,United States,0,0
+189.106.121.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.122.0/23,6252001,nan,North America,US,United States,0,0
+189.106.124.0/23,6252001,nan,North America,US,United States,0,0
+189.106.126.0/24,6252001,nan,North America,US,United States,0,0
+189.106.127.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.128.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.130.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.131.0/24,6252001,nan,North America,US,United States,0,0
+189.106.132.0/24,6252001,nan,North America,US,United States,0,0
+189.106.133.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.134.0/23,6252001,nan,North America,US,United States,0,0
+189.106.136.0/23,6252001,nan,North America,US,United States,0,0
+189.106.138.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.139.0/24,6252001,nan,North America,US,United States,0,0
+189.106.140.0/23,6252001,nan,North America,US,United States,0,0
+189.106.142.0/24,6252001,nan,North America,US,United States,0,0
+189.106.143.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.144.0/22,6252001,nan,North America,US,United States,0,0
+189.106.148.0/23,6252001,nan,North America,US,United States,0,0
+189.106.150.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.152.0/23,6252001,nan,North America,US,United States,0,0
+189.106.154.0/24,6252001,nan,North America,US,United States,0,0
+189.106.155.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.156.0/22,6252001,nan,North America,US,United States,0,0
+189.106.160.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.162.0/23,6252001,nan,North America,US,United States,0,0
+189.106.164.0/24,6252001,nan,North America,US,United States,0,0
+189.106.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.166.0/24,6252001,nan,North America,US,United States,0,0
+189.106.167.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.168.0/24,6252001,nan,North America,US,United States,0,0
+189.106.169.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.170.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.172.0/24,6252001,nan,North America,US,United States,0,0
+189.106.173.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.174.0/24,6252001,nan,North America,US,United States,0,0
+189.106.175.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.176.0/22,6252001,nan,North America,US,United States,0,0
+189.106.180.0/23,6252001,nan,North America,US,United States,0,0
+189.106.182.0/24,6252001,nan,North America,US,United States,0,0
+189.106.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.184.0/23,6252001,nan,North America,US,United States,0,0
+189.106.186.0/24,6252001,nan,North America,US,United States,0,0
+189.106.187.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.188.0/22,6252001,nan,North America,US,United States,0,0
+189.106.192.0/20,6252001,nan,North America,US,United States,0,0
+189.106.208.0/22,6252001,nan,North America,US,United States,0,0
+189.106.212.0/24,6252001,nan,North America,US,United States,0,0
+189.106.213.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.214.0/23,6252001,nan,North America,US,United States,0,0
+189.106.216.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.218.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.219.0/24,6252001,nan,North America,US,United States,0,0
+189.106.220.0/23,6252001,nan,North America,US,United States,0,0
+189.106.222.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.223.0/24,6252001,nan,North America,US,United States,0,0
+189.106.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.225.0/24,6252001,nan,North America,US,United States,0,0
+189.106.226.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.106.228.0/22,6252001,nan,North America,US,United States,0,0
+189.106.232.0/23,6252001,nan,North America,US,United States,0,0
+189.106.234.0/24,6252001,nan,North America,US,United States,0,0
+189.106.235.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.236.0/23,6252001,nan,North America,US,United States,0,0
+189.106.238.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.239.0/24,6252001,nan,North America,US,United States,0,0
+189.106.240.0/22,6252001,nan,North America,US,United States,0,0
+189.106.244.0/23,6252001,nan,North America,US,United States,0,0
+189.106.246.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.247.0/24,6252001,nan,North America,US,United States,0,0
+189.106.248.0/22,6252001,nan,North America,US,United States,0,0
+189.106.252.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.253.0/24,6252001,nan,North America,US,United States,0,0
+189.106.254.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.106.255.0/24,6252001,nan,North America,US,United States,0,0
+189.107.0.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.107.4.0/22,6252001,nan,North America,US,United States,0,0
+189.107.8.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.9.0/24,6252001,nan,North America,US,United States,0,0
+189.107.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.11.0/24,6252001,nan,North America,US,United States,0,0
+189.107.12.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.13.0/24,6252001,nan,North America,US,United States,0,0
+189.107.14.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.16.0/22,6252001,nan,North America,US,United States,0,0
+189.107.20.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.22.0/23,6252001,nan,North America,US,United States,0,0
+189.107.24.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.26.0/24,6252001,nan,North America,US,United States,0,0
+189.107.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.28.0/23,6252001,nan,North America,US,United States,0,0
+189.107.30.0/24,6252001,nan,North America,US,United States,0,0
+189.107.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.32.0/21,6252001,nan,North America,US,United States,0,0
+189.107.40.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.41.0/24,6252001,nan,North America,US,United States,0,0
+189.107.42.0/24,6252001,nan,North America,US,United States,0,0
+189.107.43.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.44.0/22,6252001,nan,North America,US,United States,0,0
+189.107.48.0/24,6252001,nan,North America,US,United States,0,0
+189.107.49.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.50.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.52.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.53.0/24,6252001,nan,North America,US,United States,0,0
+189.107.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.55.0/24,6252001,nan,North America,US,United States,0,0
+189.107.56.0/23,6252001,nan,North America,US,United States,0,0
+189.107.58.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.59.0/24,6252001,nan,North America,US,United States,0,0
+189.107.60.0/24,6252001,nan,North America,US,United States,0,0
+189.107.61.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.62.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.63.0/24,6252001,nan,North America,US,United States,0,0
+189.107.64.0/24,6252001,nan,North America,US,United States,0,0
+189.107.65.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.66.0/24,6252001,nan,North America,US,United States,0,0
+189.107.67.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.68.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.69.0/24,6252001,nan,North America,US,United States,0,0
+189.107.70.0/23,6252001,nan,North America,US,United States,0,0
+189.107.72.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.73.0/24,6252001,nan,North America,US,United States,0,0
+189.107.74.0/23,6252001,nan,North America,US,United States,0,0
+189.107.76.0/24,6252001,nan,North America,US,United States,0,0
+189.107.77.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.78.0/24,6252001,nan,North America,US,United States,0,0
+189.107.79.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.80.0/21,6252001,nan,North America,US,United States,0,0
+189.107.88.0/23,6252001,nan,North America,US,United States,0,0
+189.107.90.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.91.0/24,6252001,nan,North America,US,United States,0,0
+189.107.92.0/23,6252001,nan,North America,US,United States,0,0
+189.107.94.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.95.0/24,6252001,nan,North America,US,United States,0,0
+189.107.96.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.98.0/23,6252001,nan,North America,US,United States,0,0
+189.107.100.0/24,6252001,nan,North America,US,United States,0,0
+189.107.101.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.102.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.103.0/24,6252001,nan,North America,US,United States,0,0
+189.107.104.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.106.0/23,6252001,nan,North America,US,United States,0,0
+189.107.108.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.109.0/24,6252001,nan,North America,US,United States,0,0
+189.107.110.0/24,6252001,nan,North America,US,United States,0,0
+189.107.111.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.112.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.114.0/24,6252001,nan,North America,US,United States,0,0
+189.107.115.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.116.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.118.0/23,6252001,nan,North America,US,United States,0,0
+189.107.120.0/21,6252001,nan,North America,US,United States,0,0
+189.107.128.0/23,6252001,nan,North America,US,United States,0,0
+189.107.130.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.131.0/24,6252001,nan,North America,US,United States,0,0
+189.107.132.0/22,6252001,nan,North America,US,United States,0,0
+189.107.136.0/25,3469034,SA,South America,BR,Brazil,0,0
+189.107.136.128/25,6252001,nan,North America,US,United States,0,0
+189.107.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.138.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.139.0/24,6252001,nan,North America,US,United States,0,0
+189.107.140.0/23,6252001,nan,North America,US,United States,0,0
+189.107.142.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.144.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.146.0/23,6252001,nan,North America,US,United States,0,0
+189.107.148.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.107.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.153.0/24,6252001,nan,North America,US,United States,0,0
+189.107.154.0/23,6252001,nan,North America,US,United States,0,0
+189.107.156.0/23,6252001,nan,North America,US,United States,0,0
+189.107.158.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.159.0/24,6252001,nan,North America,US,United States,0,0
+189.107.160.0/23,6252001,nan,North America,US,United States,0,0
+189.107.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.163.0/24,6252001,nan,North America,US,United States,0,0
+189.107.164.0/23,6252001,nan,North America,US,United States,0,0
+189.107.166.0/24,6252001,nan,North America,US,United States,0,0
+189.107.167.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.168.0/21,6252001,nan,North America,US,United States,0,0
+189.107.176.0/24,6252001,nan,North America,US,United States,0,0
+189.107.177.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.178.0/24,6252001,nan,North America,US,United States,0,0
+189.107.179.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.180.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.182.0/23,6252001,nan,North America,US,United States,0,0
+189.107.184.0/23,6252001,nan,North America,US,United States,0,0
+189.107.186.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.187.0/24,6252001,nan,North America,US,United States,0,0
+189.107.188.0/22,6252001,nan,North America,US,United States,0,0
+189.107.192.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.194.0/24,6252001,nan,North America,US,United States,0,0
+189.107.195.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.196.0/23,6252001,nan,North America,US,United States,0,0
+189.107.198.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.199.0/24,6252001,nan,North America,US,United States,0,0
+189.107.200.0/22,6252001,nan,North America,US,United States,0,0
+189.107.204.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.206.0/24,6252001,nan,North America,US,United States,0,0
+189.107.207.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.208.0/23,6252001,nan,North America,US,United States,0,0
+189.107.210.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.211.0/24,6252001,nan,North America,US,United States,0,0
+189.107.212.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.213.0/24,6252001,nan,North America,US,United States,0,0
+189.107.214.0/23,6252001,nan,North America,US,United States,0,0
+189.107.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.217.0/24,6252001,nan,North America,US,United States,0,0
+189.107.218.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.220.0/24,6252001,nan,North America,US,United States,0,0
+189.107.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.222.0/23,6252001,nan,North America,US,United States,0,0
+189.107.224.0/24,6252001,nan,North America,US,United States,0,0
+189.107.225.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.226.0/23,6252001,nan,North America,US,United States,0,0
+189.107.228.0/24,6252001,nan,North America,US,United States,0,0
+189.107.229.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.230.0/23,6252001,nan,North America,US,United States,0,0
+189.107.232.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.107.234.0/23,6252001,nan,North America,US,United States,0,0
+189.107.236.0/24,6252001,nan,North America,US,United States,0,0
+189.107.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.238.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.239.0/24,6252001,nan,North America,US,United States,0,0
+189.107.240.0/23,6252001,nan,North America,US,United States,0,0
+189.107.242.0/24,6252001,nan,North America,US,United States,0,0
+189.107.243.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.244.0/24,6252001,nan,North America,US,United States,0,0
+189.107.245.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.246.0/24,3469034,SA,South America,BR,Brazil,0,0
+189.107.247.0/24,6252001,nan,North America,US,United States,0,0
+189.107.248.0/21,6252001,nan,North America,US,United States,0,0
+189.108.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.112.0.0/13,3469034,SA,South America,BR,Brazil,0,0
+189.120.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+189.124.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+189.125.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.125.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.125.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.125.224.0/21,3996063,nan,North America,MX,Mexico,0,0
+189.125.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.125.240.0/21,3996063,nan,North America,MX,Mexico,0,0
+189.125.248.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.126.0.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.126.8.0/23,3895114,SA,South America,CL,Chile,0,0
+189.126.10.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.126.12.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.126.16.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.126.32.0/19,3469034,SA,South America,BR,Brazil,0,0
+189.126.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.126.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.127.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+189.127.128.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.127.136.0/23,3895114,SA,South America,CL,Chile,0,0
+189.127.138.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.127.140.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.127.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.127.160.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.127.164.0/23,3469034,SA,South America,BR,Brazil,0,0
+189.127.166.0/23,3625428,SA,South America,VE,Venezuela,0,0
+189.127.168.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.127.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.127.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+189.128.0.0/10,3996063,nan,North America,MX,Mexico,0,0
+189.192.0.0/13,3996063,nan,North America,MX,Mexico,0,0
+189.200.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+189.201.0.0/17,3996063,nan,North America,MX,Mexico,0,0
+189.201.128.0/18,3996063,nan,North America,MX,Mexico,0,0
+189.201.192.0/22,3996063,nan,North America,MX,Mexico,0,0
+189.201.196.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.201.200.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.201.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+189.201.224.0/21,3996063,nan,North America,MX,Mexico,0,0
+189.201.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+189.201.240.0/21,3996063,nan,North America,MX,Mexico,0,0
+189.201.248.0/22,3469034,SA,South America,BR,Brazil,0,0
+189.201.252.0/22,3996063,nan,North America,MX,Mexico,0,0
+189.202.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+189.204.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+189.208.0.0/12,3996063,nan,North America,MX,Mexico,0,0
+189.224.0.0/11,3996063,nan,North America,MX,Mexico,0,0

@@ -1,0 +1,83 @@
+56.0.0.0/13,6252001,nan,North America,US,United States,0,0
+56.8.0.0/15,6252001,nan,North America,US,United States,0,0
+56.10.0.0/15,1880251,AS,Asia,SG,Singapore,0,0
+56.12.0.0/14,6252001,nan,North America,US,United States,0,0
+56.16.0.0/12,6252001,nan,North America,US,United States,0,0
+56.32.0.0/15,6252001,nan,North America,US,United States,0,0
+56.34.0.0/18,6252001,nan,North America,US,United States,0,0
+56.34.64.0/21,6252001,nan,North America,US,United States,0,0
+56.34.72.0/22,6251999,nan,North America,CA,Canada,0,0
+56.34.76.0/22,6252001,nan,North America,US,United States,0,0
+56.34.80.0/20,6252001,nan,North America,US,United States,0,0
+56.34.96.0/19,6252001,nan,North America,US,United States,0,0
+56.34.128.0/17,6252001,nan,North America,US,United States,0,0
+56.35.0.0/16,6252001,nan,North America,US,United States,0,0
+56.36.0.0/14,6252001,nan,North America,US,United States,0,0
+56.40.0.0/13,6252001,nan,North America,US,United States,0,0
+56.48.0.0/12,6252001,nan,North America,US,United States,0,0
+56.64.0.0/14,6252001,nan,North America,US,United States,0,0
+56.68.0.0/17,1733045,AS,Asia,MY,Malaysia,0,0
+56.68.128.0/17,6252001,nan,North America,US,United States,0,0
+56.69.0.0/16,1733045,AS,Asia,MY,Malaysia,0,0
+56.70.0.0/16,1733045,AS,Asia,MY,Malaysia,0,0
+56.71.0.0/16,6252001,nan,North America,US,United States,0,0
+56.72.0.0/13,6252001,nan,North America,US,United States,0,0
+56.80.0.0/12,6252001,nan,North America,US,United States,0,0
+56.96.0.0/12,6252001,nan,North America,US,United States,0,0
+56.112.0.0/16,6251999,nan,North America,CA,Canada,0,0
+56.113.0.0/16,6252001,nan,North America,US,United States,0,0
+56.114.0.0/15,6252001,nan,North America,US,United States,0,0
+56.116.0.0/14,6252001,nan,North America,US,United States,0,0
+56.120.0.0/15,6252001,nan,North America,US,United States,0,0
+56.122.0.0/18,6252001,nan,North America,US,United States,0,0
+56.122.64.0/20,6252001,nan,North America,US,United States,0,0
+56.122.80.0/21,6252001,nan,North America,US,United States,0,0
+56.122.88.0/27,6252001,nan,North America,US,United States,0,0
+56.122.88.32/28,6252001,nan,North America,US,United States,0,0
+56.122.88.48/31,6252001,nan,North America,US,United States,0,0
+56.122.88.50/32,6252001,nan,North America,US,United States,0,0
+56.122.88.51/32,1269750,AS,Asia,IN,India,0,0
+56.122.88.52/30,6252001,nan,North America,US,United States,0,0
+56.122.88.56/29,6252001,nan,North America,US,United States,0,0
+56.122.88.64/26,6252001,nan,North America,US,United States,0,0
+56.122.88.128/25,6252001,nan,North America,US,United States,0,0
+56.122.89.0/24,6252001,nan,North America,US,United States,0,0
+56.122.90.0/23,6252001,nan,North America,US,United States,0,0
+56.122.92.0/22,6252001,nan,North America,US,United States,0,0
+56.122.96.0/19,6252001,nan,North America,US,United States,0,0
+56.122.128.0/17,6252001,nan,North America,US,United States,0,0
+56.123.0.0/16,6252001,nan,North America,US,United States,0,0
+56.124.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+56.124.128.0/17,6252001,nan,North America,US,United States,0,0
+56.125.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+56.126.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+56.128.0.0/12,6252001,nan,North America,US,United States,0,0
+56.144.0.0/13,6252001,nan,North America,US,United States,0,0
+56.152.0.0/15,6252001,nan,North America,US,United States,0,0
+56.154.0.0/18,6252001,nan,North America,US,United States,0,0
+56.154.64.0/21,6252001,nan,North America,US,United States,0,0
+56.154.72.0/22,6252001,nan,North America,US,United States,0,0
+56.154.76.0/24,6252001,nan,North America,US,United States,0,0
+56.154.77.0/25,6252001,nan,North America,US,United States,0,0
+56.154.77.128/29,6252001,nan,North America,US,United States,0,0
+56.154.77.136/30,6252001,nan,North America,US,United States,0,0
+56.154.77.140/31,6252001,nan,North America,US,United States,0,0
+56.154.77.142/32,6252001,nan,North America,US,United States,0,0
+56.154.77.143/32,2750405,EU,Europe,NL,The Netherlands,0,0
+56.154.77.144/28,6252001,nan,North America,US,United States,0,0
+56.154.77.160/27,6252001,nan,North America,US,United States,0,0
+56.154.77.192/26,6252001,nan,North America,US,United States,0,0
+56.154.78.0/23,6252001,nan,North America,US,United States,0,0
+56.154.80.0/20,6252001,nan,North America,US,United States,0,0
+56.154.96.0/19,6252001,nan,North America,US,United States,0,0
+56.154.128.0/17,6252001,nan,North America,US,United States,0,0
+56.155.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+56.156.0.0/14,6252001,nan,North America,US,United States,0,0
+56.160.0.0/11,6252001,nan,North America,US,United States,0,0
+56.192.0.0/11,6252001,nan,North America,US,United States,0,0
+56.224.0.0/14,6252001,nan,North America,US,United States,0,0
+56.228.0.0/16,2661886,EU,Europe,SE,Sweden,0,0
+56.229.0.0/16,6252001,nan,North America,US,United States,0,0
+56.230.0.0/15,6252001,nan,North America,US,United States,0,0
+56.232.0.0/13,6252001,nan,North America,US,United States,0,0
+56.240.0.0/12,6252001,nan,North America,US,United States,0,0

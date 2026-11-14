@@ -1,0 +1,20 @@
+22.0.0.0/11,6252001,nan,North America,US,United States,0,0
+22.32.0.0/12,6252001,nan,North America,US,United States,0,0
+22.48.0.0/15,6252001,nan,North America,US,United States,0,0
+22.50.0.0/18,6252001,nan,North America,US,United States,0,0
+22.50.64.0/20,6252001,nan,North America,US,United States,0,0
+22.50.80.0/21,6252001,nan,North America,US,United States,0,0
+22.50.88.0/25,6252001,nan,North America,US,United States,0,0
+22.50.88.128/26,6252001,nan,North America,US,United States,0,0
+22.50.88.192/27,2077456,OC,Oceania,AU,Australia,0,0
+22.50.88.224/27,6252001,nan,North America,US,United States,0,0
+22.50.89.0/24,6252001,nan,North America,US,United States,0,0
+22.50.90.0/23,6252001,nan,North America,US,United States,0,0
+22.50.92.0/22,6252001,nan,North America,US,United States,0,0
+22.50.96.0/19,6252001,nan,North America,US,United States,0,0
+22.50.128.0/17,6252001,nan,North America,US,United States,0,0
+22.51.0.0/16,6252001,nan,North America,US,United States,0,0
+22.52.0.0/14,6252001,nan,North America,US,United States,0,0
+22.56.0.0/13,6252001,nan,North America,US,United States,0,0
+22.64.0.0/10,6252001,nan,North America,US,United States,0,0
+22.128.0.0/9,6252001,nan,North America,US,United States,0,0

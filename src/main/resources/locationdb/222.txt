@@ -1,0 +1,125 @@
+222.0.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+222.1.0.0/24,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.0/26,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.64/27,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.96/29,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.104/31,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.106/32,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.107/32,1814991,AS,Asia,CN,China,0,0
+222.1.1.108/30,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.112/28,1861060,AS,Asia,JP,Japan,0,0
+222.1.1.128/25,1861060,AS,Asia,JP,Japan,0,0
+222.1.2.0/23,1861060,AS,Asia,JP,Japan,0,0
+222.1.4.0/22,1861060,AS,Asia,JP,Japan,0,0
+222.1.8.0/21,1861060,AS,Asia,JP,Japan,0,0
+222.1.16.0/20,1861060,AS,Asia,JP,Japan,0,0
+222.1.32.0/19,1861060,AS,Asia,JP,Japan,0,0
+222.1.64.0/18,1861060,AS,Asia,JP,Japan,0,0
+222.1.128.0/17,1861060,AS,Asia,JP,Japan,0,0
+222.2.0.0/15,1861060,AS,Asia,JP,Japan,0,0
+222.4.0.0/14,1861060,AS,Asia,JP,Japan,0,0
+222.8.0.0/13,1861060,AS,Asia,JP,Japan,0,0
+222.16.0.0/12,1814991,AS,Asia,CN,China,0,0
+222.32.0.0/11,1814991,AS,Asia,CN,China,0,0
+222.64.0.0/11,1814991,AS,Asia,CN,China,0,0
+222.96.0.0/12,1835841,AS,Asia,KR,South Korea,0,0
+222.112.0.0/13,1835841,AS,Asia,KR,South Korea,0,0
+222.120.0.0/15,1835841,AS,Asia,KR,South Korea,0,0
+222.122.0.0/16,1835841,AS,Asia,KR,South Korea,0,0
+222.123.0.0/16,1605651,AS,Asia,TH,Thailand,0,0
+222.124.0.0/16,1643084,AS,Asia,ID,Indonesia,0,0
+222.125.0.0/16,1814991,AS,Asia,CN,China,0,0
+222.126.0.0/17,1694008,AS,Asia,PH,Philippines,0,0
+222.126.128.0/17,1814991,AS,Asia,CN,China,0,0
+222.127.0.0/16,1694008,AS,Asia,PH,Philippines,0,0
+222.128.0.0/12,1814991,AS,Asia,CN,China,0,0
+222.144.0.0/13,1861060,AS,Asia,JP,Japan,0,0
+222.152.0.0/14,2186224,OC,Oceania,NZ,New Zealand,0,0
+222.156.0.0/15,1668284,AS,Asia,TW,Taiwan,0,0
+222.158.0.0/15,1861060,AS,Asia,JP,Japan,0,0
+222.160.0.0/14,1814991,AS,Asia,CN,China,0,0
+222.164.0.0/16,1880251,AS,Asia,SG,Singapore,0,0
+222.165.0.0/17,1880251,AS,Asia,SG,Singapore,0,0
+222.165.128.0/18,1227603,AS,Asia,LK,Sri Lanka,0,0
+222.165.192.0/18,1643084,AS,Asia,ID,Indonesia,0,0
+222.166.0.0/16,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.0.0/19,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.32.0/22,1880251,AS,Asia,SG,Singapore,0,0
+222.167.36.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.40.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.48.0/20,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.64.0/19,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.96.0/19,6252001,nan,North America,US,United States,0,0
+222.167.128.0/18,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.192.0/24,719819,EU,Europe,HU,Hungary,0,0
+222.167.193.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+222.167.194.0/23,6252001,nan,North America,US,United States,0,0
+222.167.196.0/23,6252001,nan,North America,US,United States,0,0
+222.167.198.0/24,6252001,nan,North America,US,United States,0,0
+222.167.199.0/24,597427,EU,Europe,LT,Lithuania,0,0
+222.167.200.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.208.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+222.167.209.0/24,6252001,nan,North America,US,United States,0,0
+222.167.210.0/24,6252001,nan,North America,US,United States,0,0
+222.167.211.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+222.167.212.0/24,6252001,nan,North America,US,United States,0,0
+222.167.213.0/24,1835841,AS,Asia,KR,South Korea,0,0
+222.167.214.0/23,6252001,nan,North America,US,United States,0,0
+222.167.216.0/22,6252001,nan,North America,US,United States,0,0
+222.167.220.0/24,6252001,nan,North America,US,United States,0,0
+222.167.221.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.222.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+222.167.223.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+222.167.224.0/22,6252001,nan,North America,US,United States,0,0
+222.167.228.0/24,6252001,nan,North America,US,United States,0,0
+222.167.229.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+222.167.230.0/23,6252001,nan,North America,US,United States,0,0
+222.167.232.0/23,6252001,nan,North America,US,United States,0,0
+222.167.234.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+222.167.235.0/24,6252001,nan,North America,US,United States,0,0
+222.167.236.0/23,6252001,nan,North America,US,United States,0,0
+222.167.238.0/24,6252001,nan,North America,US,United States,0,0
+222.167.239.0/24,2077456,OC,Oceania,AU,Australia,0,0
+222.167.240.0/24,1694008,AS,Asia,PH,Philippines,0,0
+222.167.241.0/24,2921044,EU,Europe,DE,Germany,0,0
+222.167.242.0/23,6252001,nan,North America,US,United States,0,0
+222.167.244.0/23,6252001,nan,North America,US,United States,0,0
+222.167.246.0/24,798544,EU,Europe,PL,Poland,0,0
+222.167.247.0/24,6252001,nan,North America,US,United States,0,0
+222.167.248.0/24,6252001,nan,North America,US,United States,0,0
+222.167.249.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+222.167.250.0/23,6252001,nan,North America,US,United States,0,0
+222.167.252.0/26,6252001,nan,North America,US,United States,0,0
+222.167.252.64/27,6252001,nan,North America,US,United States,0,0
+222.167.252.96/29,6252001,nan,North America,US,United States,0,0
+222.167.252.104/30,6252001,nan,North America,US,United States,0,0
+222.167.252.108/32,6252001,nan,North America,US,United States,0,0
+222.167.252.109/32,2921044,EU,Europe,DE,Germany,0,0
+222.167.252.110/32,2921044,EU,Europe,DE,Germany,0,0
+222.167.252.111/32,6252001,nan,North America,US,United States,0,0
+222.167.252.112/28,6252001,nan,North America,US,United States,0,0
+222.167.252.128/25,6252001,nan,North America,US,United States,0,0
+222.167.253.0/24,6252001,nan,North America,US,United States,0,0
+222.167.254.0/23,6252001,nan,North America,US,United States,0,0
+222.168.0.0/13,1814991,AS,Asia,CN,China,0,0
+222.176.0.0/12,1814991,AS,Asia,CN,China,0,0
+222.192.0.0/11,1814991,AS,Asia,CN,China,0,0
+222.224.0.0/14,1861060,AS,Asia,JP,Japan,0,0
+222.228.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+222.229.0.0/18,1861060,AS,Asia,JP,Japan,0,0
+222.229.64.0/20,1861060,AS,Asia,JP,Japan,0,0
+222.229.80.0/21,1643084,AS,Asia,ID,Indonesia,0,0
+222.229.88.0/21,2077456,OC,Oceania,AU,Australia,0,0
+222.229.96.0/19,1861060,AS,Asia,JP,Japan,0,0
+222.229.128.0/17,1861060,AS,Asia,JP,Japan,0,0
+222.230.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+222.231.0.0/18,1835841,AS,Asia,KR,South Korea,0,0
+222.231.64.0/18,1861060,AS,Asia,JP,Japan,0,0
+222.231.128.0/17,1861060,AS,Asia,JP,Japan,0,0
+222.232.0.0/13,1835841,AS,Asia,KR,South Korea,0,0
+222.240.0.0/13,1814991,AS,Asia,CN,China,0,0
+222.248.0.0/15,1814991,AS,Asia,CN,China,0,0
+222.250.0.0/16,1668284,AS,Asia,TW,Taiwan,0,0
+222.251.0.0/17,1668284,AS,Asia,TW,Taiwan,0,0
+222.251.128.0/17,1835841,AS,Asia,KR,South Korea,0,0
+222.252.0.0/14,1562822,AS,Asia,VN,Vietnam,0,0

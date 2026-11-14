@@ -1,0 +1,2425 @@
+34.0.0.0/20,1269750,AS,Asia,IN,India,0,0
+34.0.16.0/20,2077456,OC,Oceania,AU,Australia,0,0
+34.0.32.0/20,6251999,nan,North America,CA,Canada,0,0
+34.0.48.0/20,3895114,SA,South America,CL,Chile,0,0
+34.0.64.0/19,294640,AS,Asia,IL,Israel,0,0
+34.0.96.0/19,1835841,AS,Asia,KR,South Korea,0,0
+34.0.128.0/19,6252001,nan,North America,US,United States,0,0
+34.0.160.0/19,3175395,EU,Europe,IT,Italy,0,0
+34.0.192.0/19,2510769,EU,Europe,ES,Spain,0,0
+34.0.224.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.0.225.0/24,6252001,nan,North America,US,United States,0,0
+34.0.226.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.0.227.0/24,1269750,AS,Asia,IN,India,0,0
+34.0.228.0/22,6252001,nan,North America,US,United States,0,0
+34.0.232.0/21,6252001,nan,North America,US,United States,0,0
+34.0.240.0/20,798544,EU,Europe,PL,Poland,0,0
+34.1.0.0/20,3017382,EU,Europe,FR,France,0,0
+34.1.16.0/20,6252001,nan,North America,US,United States,0,0
+34.1.32.0/20,289688,AS,Asia,QA,Qatar,0,0
+34.1.48.0/20,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.1.64.0/18,6252001,nan,North America,US,United States,0,0
+34.1.128.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.1.144.0/20,3175395,EU,Europe,IT,Italy,0,0
+34.1.160.0/20,2921044,EU,Europe,DE,Germany,0,0
+34.1.176.0/20,2077456,OC,Oceania,AU,Australia,0,0
+34.1.192.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.1.208.0/20,953987,AF,Africa,ZA,South Africa,0,0
+34.1.224.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+34.2.0.0/20,3996063,nan,North America,MX,Mexico,0,0
+34.2.16.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.2.32.0/20,6252001,nan,North America,US,United States,0,0
+34.2.48.0/20,2661886,EU,Europe,SE,Sweden,0,0
+34.2.64.0/19,6252001,nan,North America,US,United States,0,0
+34.2.96.0/20,2921044,EU,Europe,DE,Germany,0,0
+34.2.112.0/20,6252001,nan,North America,US,United States,0,0
+34.2.128.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.3.0.0/19,6252001,nan,North America,US,United States,0,0
+34.3.32.0/20,1605651,AS,Asia,TH,Thailand,0,0
+34.3.48.0/20,6252001,nan,North America,US,United States,0,0
+34.3.64.0/20,6252001,nan,North America,US,United States,0,0
+34.3.80.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+34.3.96.0/19,6252001,nan,North America,US,United States,0,0
+34.3.128.0/17,6252001,nan,North America,US,United States,0,0
+34.4.0.0/20,6252001,nan,North America,US,United States,0,0
+34.4.16.0/21,6252001,nan,North America,US,United States,0,0
+34.4.24.0/22,1269750,AS,Asia,IN,India,0,0
+34.4.28.0/22,6252001,nan,North America,US,United States,0,0
+34.4.32.0/20,6252001,nan,North America,US,United States,0,0
+34.4.48.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+34.4.64.0/20,798544,EU,Europe,PL,Poland,0,0
+34.4.80.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+34.4.96.0/19,6252001,nan,North America,US,United States,0,0
+34.4.128.0/18,1835841,AS,Asia,KR,South Korea,0,0
+34.4.192.0/18,6252001,nan,North America,US,United States,0,0
+34.5.0.0/16,6252001,nan,North America,US,United States,0,0
+34.6.0.0/15,2750405,EU,Europe,NL,The Netherlands,0,0
+34.8.0.0/14,6252001,nan,North America,US,United States,0,0
+34.12.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+34.13.0.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+34.13.64.0/18,6252001,nan,North America,US,United States,0,0
+34.13.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.14.0.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.14.128.0/18,1269750,AS,Asia,IN,India,0,0
+34.14.192.0/19,1269750,AS,Asia,IN,India,0,0
+34.14.224.0/19,6252001,nan,North America,US,United States,0,0
+34.15.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.15.128.0/17,1605651,AS,Asia,TH,Thailand,0,0
+34.16.0.0/16,6252001,nan,North America,US,United States,0,0
+34.17.0.0/16,3175395,EU,Europe,IT,Italy,0,0
+34.18.0.0/16,289688,AS,Asia,QA,Qatar,0,0
+34.19.0.0/17,6252001,nan,North America,US,United States,0,0
+34.19.128.0/17,6251999,nan,North America,CA,Canada,0,0
+34.20.0.0/17,6251999,nan,North America,CA,Canada,0,0
+34.20.128.0/17,6252001,nan,North America,US,United States,0,0
+34.21.0.0/17,6252001,nan,North America,US,United States,0,0
+34.21.128.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.22.0.0/18,6252001,nan,North America,US,United States,0,0
+34.22.64.0/19,1835841,AS,Asia,KR,South Korea,0,0
+34.22.96.0/20,1835841,AS,Asia,KR,South Korea,0,0
+34.22.112.0/20,2802361,EU,Europe,BE,Belgium,0,0
+34.22.128.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.23.0.0/16,6252001,nan,North America,US,United States,0,0
+34.24.0.0/13,6252001,nan,North America,US,United States,0,0
+34.32.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.32.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.33.0.0/16,6252001,nan,North America,US,United States,0,0
+34.34.0.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.34.128.0/18,2802361,EU,Europe,BE,Belgium,0,0
+34.34.192.0/20,6252001,nan,North America,US,United States,0,0
+34.34.208.0/21,6252001,nan,North America,US,United States,0,0
+34.34.216.0/21,1643084,AS,Asia,ID,Indonesia,0,0
+34.34.224.0/23,6252001,nan,North America,US,United States,0,0
+34.34.226.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.34.228.0/23,6252001,nan,North America,US,United States,0,0
+34.34.230.0/24,289688,AS,Asia,QA,Qatar,0,0
+34.34.231.0/24,3469034,SA,South America,BR,Brazil,0,0
+34.34.232.0/24,6251999,nan,North America,CA,Canada,0,0
+34.34.233.0/24,6252001,nan,North America,US,United States,0,0
+34.34.234.0/24,6252001,nan,North America,US,United States,0,0
+34.34.235.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+34.34.236.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+34.34.237.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.34.238.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.34.239.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.34.240.0/24,660013,EU,Europe,FI,Finland,0,0
+34.34.241.0/24,6252001,nan,North America,US,United States,0,0
+34.34.242.0/24,798544,EU,Europe,PL,Poland,0,0
+34.34.243.0/24,6252001,nan,North America,US,United States,0,0
+34.34.244.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+34.34.245.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.34.246.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.34.247.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.34.248.0/24,6251999,nan,North America,CA,Canada,0,0
+34.34.249.0/24,294640,AS,Asia,IL,Israel,0,0
+34.34.250.0/24,6252001,nan,North America,US,United States,0,0
+34.34.251.0/24,953987,AF,Africa,ZA,South Africa,0,0
+34.34.252.0/24,3895114,SA,South America,CL,Chile,0,0
+34.34.253.0/24,6252001,nan,North America,US,United States,0,0
+34.34.254.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.34.255.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.35.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+34.36.0.0/15,6252001,nan,North America,US,United States,0,0
+34.38.0.0/21,2802361,EU,Europe,BE,Belgium,0,0
+34.38.8.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.38.12.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.38.14.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.38.15.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.38.16.0/20,2802361,EU,Europe,BE,Belgium,0,0
+34.38.32.0/19,2802361,EU,Europe,BE,Belgium,0,0
+34.38.64.0/18,2802361,EU,Europe,BE,Belgium,0,0
+34.38.128.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.39.0.0/17,2635167,EU,Europe,GB,United Kingdom,0,0
+34.39.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+34.40.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.40.128.0/17,2077456,OC,Oceania,AU,Australia,0,0
+34.41.0.0/16,6252001,nan,North America,US,United States,0,0
+34.42.0.0/15,6252001,nan,North America,US,United States,0,0
+34.44.0.0/15,6252001,nan,North America,US,United States,0,0
+34.46.0.0/16,6252001,nan,North America,US,United States,0,0
+34.47.0.0/18,6251999,nan,North America,CA,Canada,0,0
+34.47.64.0/18,1835841,AS,Asia,KR,South Korea,0,0
+34.47.128.0/17,1269750,AS,Asia,IN,India,0,0
+34.48.0.0/15,6252001,nan,North America,US,United States,0,0
+34.50.0.0/18,1835841,AS,Asia,KR,South Korea,0,0
+34.50.64.0/18,1643084,AS,Asia,ID,Indonesia,0,0
+34.50.128.0/18,6252001,nan,North America,US,United States,0,0
+34.50.192.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+34.51.0.0/17,3996063,nan,North America,MX,Mexico,0,0
+34.51.128.0/17,2661886,EU,Europe,SE,Sweden,0,0
+34.52.0.0/17,6252001,nan,North America,US,United States,0,0
+34.52.128.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.53.0.0/17,6252001,nan,North America,US,United States,0,0
+34.53.128.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.54.0.0/15,6252001,nan,North America,US,United States,0,0
+34.56.0.0/14,6252001,nan,North America,US,United States,0,0
+34.60.0.0/15,6252001,nan,North America,US,United States,0,0
+34.62.0.0/16,2802361,EU,Europe,BE,Belgium,0,0
+34.63.0.0/16,6252001,nan,North America,US,United States,0,0
+34.64.0.0/23,1835841,AS,Asia,KR,South Korea,0,0
+34.64.2.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.64.3.0/24,6252001,nan,North America,US,United States,0,0
+34.64.4.0/22,6252001,nan,North America,US,United States,0,0
+34.64.8.0/21,6252001,nan,North America,US,United States,0,0
+34.64.16.0/20,6252001,nan,North America,US,United States,0,0
+34.64.32.0/19,1835841,AS,Asia,KR,South Korea,0,0
+34.64.64.0/18,1835841,AS,Asia,KR,South Korea,0,0
+34.64.128.0/17,1835841,AS,Asia,KR,South Korea,0,0
+34.65.0.0/16,2658434,EU,Europe,CH,Switzerland,0,0
+34.66.0.0/15,6252001,nan,North America,US,United States,0,0
+34.68.0.0/14,6252001,nan,North America,US,United States,0,0
+34.72.0.0/14,6252001,nan,North America,US,United States,0,0
+34.76.0.0/15,2802361,EU,Europe,BE,Belgium,0,0
+34.78.0.0/19,2802361,EU,Europe,BE,Belgium,0,0
+34.78.32.0/20,2802361,EU,Europe,BE,Belgium,0,0
+34.78.48.0/21,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.0/25,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.128/26,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.192/28,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.208/30,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.212/31,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.214/32,2635167,EU,Europe,GB,United Kingdom,0,0
+34.78.56.215/32,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.216/29,2802361,EU,Europe,BE,Belgium,0,0
+34.78.56.224/27,2802361,EU,Europe,BE,Belgium,0,0
+34.78.57.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.78.58.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.78.60.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.78.64.0/18,2802361,EU,Europe,BE,Belgium,0,0
+34.78.128.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.79.0.0/16,2802361,EU,Europe,BE,Belgium,0,0
+34.80.0.0/15,1668284,AS,Asia,TW,Taiwan,0,0
+34.82.0.0/18,6252001,nan,North America,US,United States,0,0
+34.82.64.0/19,6252001,nan,North America,US,United States,0,0
+34.82.96.0/20,6252001,nan,North America,US,United States,0,0
+34.82.112.0/22,6252001,nan,North America,US,United States,0,0
+34.82.116.0/24,6252001,nan,North America,US,United States,0,0
+34.82.117.0/25,6252001,nan,North America,US,United States,0,0
+34.82.117.128/28,6252001,nan,North America,US,United States,0,0
+34.82.117.144/30,6252001,nan,North America,US,United States,0,0
+34.82.117.148/32,3895114,SA,South America,CL,Chile,0,0
+34.82.117.149/32,6252001,nan,North America,US,United States,0,0
+34.82.117.150/31,6252001,nan,North America,US,United States,0,0
+34.82.117.152/29,6252001,nan,North America,US,United States,0,0
+34.82.117.160/27,6252001,nan,North America,US,United States,0,0
+34.82.117.192/26,6252001,nan,North America,US,United States,0,0
+34.82.118.0/23,6252001,nan,North America,US,United States,0,0
+34.82.120.0/21,6252001,nan,North America,US,United States,0,0
+34.82.128.0/17,6252001,nan,North America,US,United States,0,0
+34.83.0.0/16,6252001,nan,North America,US,United States,0,0
+34.84.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+34.85.0.0/17,1861060,AS,Asia,JP,Japan,0,0
+34.85.128.0/17,6252001,nan,North America,US,United States,0,0
+34.86.0.0/16,6252001,nan,North America,US,United States,0,0
+34.87.0.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.87.128.0/18,1880251,AS,Asia,SG,Singapore,0,0
+34.87.192.0/18,2077456,OC,Oceania,AU,Australia,0,0
+34.88.0.0/16,660013,EU,Europe,FI,Finland,0,0
+34.89.0.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.16.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.24.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.0/25,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.128/31,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.130/32,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.131/32,2963597,EU,Europe,IE,Ireland,0,0
+34.89.25.132/30,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.136/29,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.144/28,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.160/27,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.25.192/26,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.26.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.28.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.32.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.64.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.96.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.100.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.0/25,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.128/26,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.192/27,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.224/29,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.232/31,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.234/32,2963597,EU,Europe,IE,Ireland,0,0
+34.89.102.235/32,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.236/30,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.102.240/28,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.103.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.104.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.112.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+34.89.128.0/18,2921044,EU,Europe,DE,Germany,0,0
+34.89.192.0/19,2921044,EU,Europe,DE,Germany,0,0
+34.89.224.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.89.226.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.89.227.0/24,3017382,EU,Europe,FR,France,0,0
+34.89.228.0/22,2921044,EU,Europe,DE,Germany,0,0
+34.89.232.0/21,2921044,EU,Europe,DE,Germany,0,0
+34.89.240.0/20,2921044,EU,Europe,DE,Germany,0,0
+34.90.0.0/15,2750405,EU,Europe,NL,The Netherlands,0,0
+34.92.0.0/16,1819730,AS,Asia,HK,Hong Kong,0,0
+34.93.0.0/16,1269750,AS,Asia,IN,India,0,0
+34.94.0.0/16,6252001,nan,North America,US,United States,0,0
+34.95.0.0/18,6251999,nan,North America,CA,Canada,0,0
+34.95.64.0/18,6252001,nan,North America,US,United States,0,0
+34.95.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+34.95.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+34.95.224.0/23,3469034,SA,South America,BR,Brazil,0,0
+34.95.226.0/24,3865483,SA,South America,AR,Argentina,0,0
+34.95.227.0/24,3469034,SA,South America,BR,Brazil,0,0
+34.95.228.0/22,3469034,SA,South America,BR,Brazil,0,0
+34.95.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+34.95.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+34.96.0.0/19,6252001,nan,North America,US,United States,0,0
+34.96.32.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.96.33.0/24,1269750,AS,Asia,IN,India,0,0
+34.96.34.0/24,6252001,nan,North America,US,United States,0,0
+34.96.35.0/24,3017382,EU,Europe,FR,France,0,0
+34.96.36.0/23,6252001,nan,North America,US,United States,0,0
+34.96.38.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.96.39.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.96.40.0/24,1269750,AS,Asia,IN,India,0,0
+34.96.41.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.96.42.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.96.43.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.96.44.0/22,6252001,nan,North America,US,United States,0,0
+34.96.48.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.96.49.0/24,6252001,nan,North America,US,United States,0,0
+34.96.50.0/23,6252001,nan,North America,US,United States,0,0
+34.96.52.0/24,6252001,nan,North America,US,United States,0,0
+34.96.53.0/24,1605651,AS,Asia,TH,Thailand,0,0
+34.96.54.0/24,2661886,EU,Europe,SE,Sweden,0,0
+34.96.55.0/24,3996063,nan,North America,MX,Mexico,0,0
+34.96.56.0/24,6252001,nan,North America,US,United States,0,0
+34.96.57.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.96.58.0/24,6252001,nan,North America,US,United States,0,0
+34.96.59.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.96.60.0/23,6252001,nan,North America,US,United States,0,0
+34.96.62.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.96.63.0/24,6252001,nan,North America,US,United States,0,0
+34.96.64.0/18,6252001,nan,North America,US,United States,0,0
+34.96.128.0/17,1819730,AS,Asia,HK,Hong Kong,0,0
+34.97.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+34.98.0.0/17,6252001,nan,North America,US,United States,0,0
+34.98.128.0/21,6252001,nan,North America,US,United States,0,0
+34.98.136.0/26,6252001,nan,North America,US,United States,0,0
+34.98.136.64/30,3895114,SA,South America,CL,Chile,0,0
+34.98.136.68/30,6252001,nan,North America,US,United States,0,0
+34.98.136.72/29,6252001,nan,North America,US,United States,0,0
+34.98.136.80/28,6252001,nan,North America,US,United States,0,0
+34.98.136.96/27,6252001,nan,North America,US,United States,0,0
+34.98.136.128/25,2635167,EU,Europe,GB,United Kingdom,0,0
+34.98.137.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.98.138.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.98.140.0/22,6252001,nan,North America,US,United States,0,0
+34.98.144.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+34.98.152.0/22,1668284,AS,Asia,TW,Taiwan,0,0
+34.98.156.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+34.98.160.0/22,1861060,AS,Asia,JP,Japan,0,0
+34.98.164.0/22,1835841,AS,Asia,KR,South Korea,0,0
+34.98.168.0/22,1861060,AS,Asia,JP,Japan,0,0
+34.98.172.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.98.174.0/23,1835841,AS,Asia,KR,South Korea,0,0
+34.98.176.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.98.180.0/22,3017382,EU,Europe,FR,France,0,0
+34.98.184.0/22,3017382,EU,Europe,FR,France,0,0
+34.98.188.0/22,2963597,EU,Europe,IE,Ireland,0,0
+34.98.192.0/22,1210997,AS,Asia,BD,Bangladesh,0,0
+34.98.196.0/22,1269750,AS,Asia,IN,India,0,0
+34.98.200.0/21,1269750,AS,Asia,IN,India,0,0
+34.98.208.0/21,1168579,AS,Asia,PK,Pakistan,0,0
+34.98.216.0/23,1269750,AS,Asia,IN,India,0,0
+34.98.218.0/23,1210997,AS,Asia,BD,Bangladesh,0,0
+34.98.220.0/22,1269750,AS,Asia,IN,India,0,0
+34.98.224.0/23,1831722,AS,Asia,KH,Cambodia,0,0
+34.98.226.0/23,1643084,AS,Asia,ID,Indonesia,0,0
+34.98.228.0/23,1733045,AS,Asia,MY,Malaysia,0,0
+34.98.230.0/23,1327865,AS,Asia,MM,Myanmar,0,0
+34.98.232.0/23,1694008,AS,Asia,PH,Philippines,0,0
+34.98.234.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.98.236.0/23,1605651,AS,Asia,TH,Thailand,0,0
+34.98.238.0/23,1562822,AS,Asia,VN,Vietnam,0,0
+34.98.240.0/23,1831722,AS,Asia,KH,Cambodia,0,0
+34.98.242.0/23,1643084,AS,Asia,ID,Indonesia,0,0
+34.98.244.0/23,1733045,AS,Asia,MY,Malaysia,0,0
+34.98.246.0/23,1327865,AS,Asia,MM,Myanmar,0,0
+34.98.248.0/23,1694008,AS,Asia,PH,Philippines,0,0
+34.98.250.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.98.252.0/23,1605651,AS,Asia,TH,Thailand,0,0
+34.98.254.0/23,1562822,AS,Asia,VN,Vietnam,0,0
+34.99.0.0/21,2077456,OC,Oceania,AU,Australia,0,0
+34.99.8.0/22,2077456,OC,Oceania,AU,Australia,0,0
+34.99.12.0/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.8/31,2077456,OC,Oceania,AU,Australia,0,0
+34.99.12.10/31,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.12/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.16/28,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.32/27,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.64/26,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.12.128/25,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.0/28,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.16/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.24/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.28/32,2077456,OC,Oceania,AU,Australia,0,0
+34.99.13.29/32,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.30/31,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.32/28,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.48/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.52/32,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.53/32,2077456,OC,Oceania,AU,Australia,0,0
+34.99.13.54/32,2077456,OC,Oceania,AU,Australia,0,0
+34.99.13.55/32,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.56/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.64/26,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.128/31,2077456,OC,Oceania,AU,Australia,0,0
+34.99.13.130/31,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.132/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.136/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.144/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.152/31,2077456,OC,Oceania,AU,Australia,0,0
+34.99.13.154/31,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.156/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.160/27,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.13.192/26,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.14.0/23,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.16.0/22,2088628,OC,Oceania,PG,Papua New Guinea,0,0
+34.99.20.0/22,2077456,OC,Oceania,AU,Australia,0,0
+34.99.24.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.99.26.0/27,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.32/29,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.40/30,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.44/32,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.45/32,2077456,OC,Oceania,AU,Australia,0,0
+34.99.26.46/31,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.48/28,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.64/26,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.26.128/25,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.27.0/24,2186224,OC,Oceania,NZ,New Zealand,0,0
+34.99.28.0/23,2088628,OC,Oceania,PG,Papua New Guinea,0,0
+34.99.30.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.99.32.0/22,630336,EU,Europe,BY,Belarus,0,0
+34.99.36.0/22,660013,EU,Europe,FI,Finland,0,0
+34.99.40.0/22,597427,EU,Europe,LT,Lithuania,0,0
+34.99.44.0/22,3144096,EU,Europe,NO,Norway,0,0
+34.99.48.0/21,2017370,EU,Europe,RU,Russia,0,0
+34.99.56.0/22,2661886,EU,Europe,SE,Sweden,0,0
+34.99.60.0/23,660013,EU,Europe,FI,Finland,0,0
+34.99.62.0/23,2661886,EU,Europe,SE,Sweden,0,0
+34.99.64.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.99.66.0/23,2623032,EU,Europe,DK,Denmark,0,0
+34.99.68.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+34.99.72.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.99.74.0/23,2623032,EU,Europe,DK,Denmark,0,0
+34.99.76.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+34.99.80.0/21,6251999,nan,North America,CA,Canada,0,0
+34.99.88.0/21,6252001,nan,North America,US,United States,0,0
+34.99.96.0/22,3624060,nan,North America,CR,Costa Rica,0,0
+34.99.100.0/22,3996063,nan,North America,MX,Mexico,0,0
+34.99.104.0/23,3996063,nan,North America,MX,Mexico,0,0
+34.99.106.0/24,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.0/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.4/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.5/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.6/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.8/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.9/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.10/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.12/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.16/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.32/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.34/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.35/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.36/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.38/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.39/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.40/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.44/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.45/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.46/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.48/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.50/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.51/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.52/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.53/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.54/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.56/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.57/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.58/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.59/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.60/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.64/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.68/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.70/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.71/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.72/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.73/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.74/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.76/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.80/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.82/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.83/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.84/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.88/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.90/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.92/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.94/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.95/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.96/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.97/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.107.98/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.100/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.104/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.112/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.107.128/25,3996063,nan,North America,MX,Mexico,0,0
+34.99.108.0/22,3703430,nan,North America,PA,Panama,0,0
+34.99.112.0/22,6252001,nan,North America,US,United States,0,0
+34.99.116.0/23,3624060,nan,North America,CR,Costa Rica,0,0
+34.99.118.0/23,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.0/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.8/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.9/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.10/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.12/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.13/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.14/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.16/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.18/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.19/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.20/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.22/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.23/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.24/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.32/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.40/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.42/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.44/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.48/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.64/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.72/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.76/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.78/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.79/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.80/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.96/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.100/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.102/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.104/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.112/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.128/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.130/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.131/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.132/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.136/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.140/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.141/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.142/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.144/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.146/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.148/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.152/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.153/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.154/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.156/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.157/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.158/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.159/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.160/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.162/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.164/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.168/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.176/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.180/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.182/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.183/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.184/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.185/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.186/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.188/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.189/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.190/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.191/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.192/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.196/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.198/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.200/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.202/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.204/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.205/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.206/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.208/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.212/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.214/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.215/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.216/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.218/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.219/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.120.220/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.120.224/27,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.0/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.4/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.6/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.7/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.8/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.16/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.32/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.48/31,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.50/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.52/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.56/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.64/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.68/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.69/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.70/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.72/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.76/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.77/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.78/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.80/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.81/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.82/31,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.84/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.88/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.96/28,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.112/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.113/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.114/32,3686110,SA,South America,CO,Colombia,0,0
+34.99.121.115/32,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.116/30,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.120/29,3996063,nan,North America,MX,Mexico,0,0
+34.99.121.128/25,3996063,nan,North America,MX,Mexico,0,0
+34.99.122.0/23,3703430,nan,North America,PA,Panama,0,0
+34.99.124.0/23,6252001,nan,North America,US,United States,0,0
+34.99.126.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+34.99.127.0/24,3996063,nan,North America,MX,Mexico,0,0
+34.99.128.0/23,192950,AF,Africa,KE,Kenya,0,0
+34.99.130.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+34.99.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+34.99.136.0/23,3041565,EU,Europe,AD,Andorra,0,0
+34.99.138.0/23,2782113,EU,Europe,AT,Austria,0,0
+34.99.140.0/23,732800,EU,Europe,BG,Bulgaria,0,0
+34.99.142.0/23,3202326,EU,Europe,HR,Croatia,0,0
+34.99.144.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+34.99.146.0/23,357994,AF,Africa,EG,Egypt,0,0
+34.99.148.0/22,2921044,EU,Europe,DE,Germany,0,0
+34.99.152.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.99.154.0/23,390903,EU,Europe,GR,Greece,0,0
+34.99.156.0/23,719819,EU,Europe,HU,Hungary,0,0
+34.99.158.0/23,294640,AS,Asia,IL,Israel,0,0
+34.99.160.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.99.162.0/23,248816,AS,Asia,JO,Jordan,0,0
+34.99.164.0/23,285570,AS,Asia,KW,Kuwait,0,0
+34.99.166.0/23,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.99.168.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+34.99.170.0/23,617790,EU,Europe,MD,Moldova,0,0
+34.99.172.0/23,2993457,EU,Europe,MC,Monaco,0,0
+34.99.174.0/23,798544,EU,Europe,PL,Poland,0,0
+34.99.176.0/23,2264397,EU,Europe,PT,Portugal,0,0
+34.99.178.0/23,798549,EU,Europe,RO,Romania,0,0
+34.99.180.0/23,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.99.182.0/23,3057568,EU,Europe,SK,Slovakia,0,0
+34.99.184.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+34.99.186.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.99.188.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.99.190.0/23,2658434,EU,Europe,CH,Switzerland,0,0
+34.99.192.0/23,298795,AS,Asia,TR,Türkiye,0,0
+34.99.194.0/23,690791,EU,Europe,UA,Ukraine,0,0
+34.99.196.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.99.198.0/23,1512440,AS,Asia,UZ,Uzbekistan,0,0
+34.99.200.0/23,192950,AF,Africa,KE,Kenya,0,0
+34.99.202.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+34.99.204.0/22,953987,AF,Africa,ZA,South Africa,0,0
+34.99.208.0/23,3041565,EU,Europe,AD,Andorra,0,0
+34.99.210.0/23,2782113,EU,Europe,AT,Austria,0,0
+34.99.212.0/23,732800,EU,Europe,BG,Bulgaria,0,0
+34.99.214.0/23,3202326,EU,Europe,HR,Croatia,0,0
+34.99.216.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+34.99.218.0/23,357994,AF,Africa,EG,Egypt,0,0
+34.99.220.0/22,2921044,EU,Europe,DE,Germany,0,0
+34.99.224.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.99.226.0/23,390903,EU,Europe,GR,Greece,0,0
+34.99.228.0/23,719819,EU,Europe,HU,Hungary,0,0
+34.99.230.0/23,294640,AS,Asia,IL,Israel,0,0
+34.99.232.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.99.234.0/23,248816,AS,Asia,JO,Jordan,0,0
+34.99.236.0/23,285570,AS,Asia,KW,Kuwait,0,0
+34.99.238.0/23,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.99.240.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+34.99.242.0/23,617790,EU,Europe,MD,Moldova,0,0
+34.99.244.0/23,2993457,EU,Europe,MC,Monaco,0,0
+34.99.246.0/23,798544,EU,Europe,PL,Poland,0,0
+34.99.248.0/23,2264397,EU,Europe,PT,Portugal,0,0
+34.99.250.0/23,798549,EU,Europe,RO,Romania,0,0
+34.99.252.0/23,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.99.254.0/23,3057568,EU,Europe,SK,Slovakia,0,0
+34.100.0.0/22,3865483,SA,South America,AR,Argentina,0,0
+34.100.4.0/22,3923057,SA,South America,BO,Bolivia,0,0
+34.100.8.0/21,3469034,SA,South America,BR,Brazil,0,0
+34.100.16.0/22,3469034,SA,South America,BR,Brazil,0,0
+34.100.20.0/22,3895114,SA,South America,CL,Chile,0,0
+34.100.24.0/24,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.0/25,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.128/27,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.160/28,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.176/29,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.184/30,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.188/32,3469034,SA,South America,BR,Brazil,0,0
+34.100.25.189/32,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.190/31,3686110,SA,South America,CO,Colombia,0,0
+34.100.25.192/26,3686110,SA,South America,CO,Colombia,0,0
+34.100.26.0/24,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.0/25,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.128/28,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.144/29,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.152/30,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.156/31,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.158/32,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.159/32,3469034,SA,South America,BR,Brazil,0,0
+34.100.27.160/27,3686110,SA,South America,CO,Colombia,0,0
+34.100.27.192/26,3686110,SA,South America,CO,Colombia,0,0
+34.100.28.0/22,3658394,SA,South America,EC,Ecuador,0,0
+34.100.32.0/22,3437598,SA,South America,PY,Paraguay,0,0
+34.100.36.0/22,3932488,SA,South America,PE,Peru,0,0
+34.100.40.0/22,3625428,SA,South America,VE,Venezuela,0,0
+34.100.44.0/23,3865483,SA,South America,AR,Argentina,0,0
+34.100.46.0/23,3923057,SA,South America,BO,Bolivia,0,0
+34.100.48.0/22,3469034,SA,South America,BR,Brazil,0,0
+34.100.52.0/23,3469034,SA,South America,BR,Brazil,0,0
+34.100.54.0/23,3895114,SA,South America,CL,Chile,0,0
+34.100.56.0/23,3686110,SA,South America,CO,Colombia,0,0
+34.100.58.0/23,3658394,SA,South America,EC,Ecuador,0,0
+34.100.60.0/23,3437598,SA,South America,PY,Paraguay,0,0
+34.100.62.0/23,3932488,SA,South America,PE,Peru,0,0
+34.100.64.0/21,6252001,nan,North America,US,United States,0,0
+34.100.72.0/23,6252001,nan,North America,US,United States,0,0
+34.100.74.0/24,6252001,nan,North America,US,United States,0,0
+34.100.75.0/31,6252001,nan,North America,US,United States,0,0
+34.100.75.2/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.3/32,6252001,nan,North America,US,United States,0,0
+34.100.75.4/30,6252001,nan,North America,US,United States,0,0
+34.100.75.8/29,6252001,nan,North America,US,United States,0,0
+34.100.75.16/31,6252001,nan,North America,US,United States,0,0
+34.100.75.18/32,6252001,nan,North America,US,United States,0,0
+34.100.75.19/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.20/31,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.22/31,6252001,nan,North America,US,United States,0,0
+34.100.75.24/29,6252001,nan,North America,US,United States,0,0
+34.100.75.32/27,6252001,nan,North America,US,United States,0,0
+34.100.75.64/27,6252001,nan,North America,US,United States,0,0
+34.100.75.96/28,6252001,nan,North America,US,United States,0,0
+34.100.75.112/29,6252001,nan,North America,US,United States,0,0
+34.100.75.120/31,6252001,nan,North America,US,United States,0,0
+34.100.75.122/31,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.124/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.125/32,6252001,nan,North America,US,United States,0,0
+34.100.75.126/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.127/32,6252001,nan,North America,US,United States,0,0
+34.100.75.128/26,6252001,nan,North America,US,United States,0,0
+34.100.75.192/32,6252001,nan,North America,US,United States,0,0
+34.100.75.193/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.194/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.195/32,6252001,nan,North America,US,United States,0,0
+34.100.75.196/32,6252001,nan,North America,US,United States,0,0
+34.100.75.197/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.198/31,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.200/30,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.204/31,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.206/31,6252001,nan,North America,US,United States,0,0
+34.100.75.208/32,6252001,nan,North America,US,United States,0,0
+34.100.75.209/32,3996063,nan,North America,MX,Mexico,0,0
+34.100.75.210/31,6252001,nan,North America,US,United States,0,0
+34.100.75.212/30,6252001,nan,North America,US,United States,0,0
+34.100.75.216/29,6252001,nan,North America,US,United States,0,0
+34.100.75.224/27,6252001,nan,North America,US,United States,0,0
+34.100.76.0/22,6252001,nan,North America,US,United States,0,0
+34.100.80.0/21,6251999,nan,North America,CA,Canada,0,0
+34.100.88.0/21,6252001,nan,North America,US,United States,0,0
+34.100.96.0/21,6252001,nan,North America,US,United States,0,0
+34.100.104.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.100.106.0/23,6252001,nan,North America,US,United States,0,0
+34.100.108.0/22,6252001,nan,North America,US,United States,0,0
+34.100.112.0/22,1168579,AS,Asia,PK,Pakistan,0,0
+34.100.116.0/24,1269750,AS,Asia,IN,India,0,0
+34.100.117.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+34.100.118.0/23,6252001,nan,North America,US,United States,0,0
+34.100.120.0/23,6252001,nan,North America,US,United States,0,0
+34.100.122.0/24,6252001,nan,North America,US,United States,0,0
+34.100.123.0/29,6252001,nan,North America,US,United States,0,0
+34.100.123.8/30,6252001,nan,North America,US,United States,0,0
+34.100.123.12/32,6252001,nan,North America,US,United States,0,0
+34.100.123.13/32,1269750,AS,Asia,IN,India,0,0
+34.100.123.14/31,6252001,nan,North America,US,United States,0,0
+34.100.123.16/28,6252001,nan,North America,US,United States,0,0
+34.100.123.32/27,6252001,nan,North America,US,United States,0,0
+34.100.123.64/26,6252001,nan,North America,US,United States,0,0
+34.100.123.128/25,6252001,nan,North America,US,United States,0,0
+34.100.124.0/24,6252001,nan,North America,US,United States,0,0
+34.100.125.0/29,6252001,nan,North America,US,United States,0,0
+34.100.125.8/31,6252001,nan,North America,US,United States,0,0
+34.100.125.10/32,6252001,nan,North America,US,United States,0,0
+34.100.125.11/32,1269750,AS,Asia,IN,India,0,0
+34.100.125.12/30,6252001,nan,North America,US,United States,0,0
+34.100.125.16/28,6252001,nan,North America,US,United States,0,0
+34.100.125.32/27,6252001,nan,North America,US,United States,0,0
+34.100.125.64/26,6252001,nan,North America,US,United States,0,0
+34.100.125.128/25,6252001,nan,North America,US,United States,0,0
+34.100.126.0/23,6252001,nan,North America,US,United States,0,0
+34.100.128.0/17,1269750,AS,Asia,IN,India,0,0
+34.101.0.0/23,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.2.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.3.0/24,6252001,nan,North America,US,United States,0,0
+34.101.4.0/22,6252001,nan,North America,US,United States,0,0
+34.101.8.0/21,6252001,nan,North America,US,United States,0,0
+34.101.16.0/23,6252001,nan,North America,US,United States,0,0
+34.101.18.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.19.0/24,6252001,nan,North America,US,United States,0,0
+34.101.20.0/22,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.24.0/22,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.28.0/22,6252001,nan,North America,US,United States,0,0
+34.101.32.0/19,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.64.0/18,1643084,AS,Asia,ID,Indonesia,0,0
+34.101.128.0/17,1643084,AS,Asia,ID,Indonesia,0,0
+34.102.0.0/16,6252001,nan,North America,US,United States,0,0
+34.103.0.0/23,1831722,AS,Asia,KH,Cambodia,0,0
+34.103.2.0/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.2/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.3/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.4/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.5/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.6/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.8/30,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.12/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.14/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.15/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.16/29,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.24/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.26/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.28/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.30/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.31/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.32/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.33/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.34/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.36/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.38/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.39/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.40/30,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.44/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.45/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.46/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.48/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.49/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.50/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.52/30,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.56/29,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.64/26,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.128/28,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.144/29,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.152/31,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.154/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.2.155/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.156/30,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.160/27,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.192/27,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.224/28,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.240/29,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.248/30,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.252/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.254/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.2.255/32,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.3.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.103.4.0/31,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.2/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.4/30,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.8/29,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.16/28,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.32/27,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.64/26,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.128/28,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.144/30,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.148/32,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.149/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.150/31,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.152/31,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.4.154/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.156/30,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.160/27,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.192/27,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.224/28,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.240/29,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.248/30,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.252/31,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.254/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.4.255/32,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.0/25,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.128/30,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.132/31,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.134/32,1880251,AS,Asia,SG,Singapore,0,0
+34.103.5.135/32,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.136/29,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.144/28,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.160/27,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.5.192/26,1733045,AS,Asia,MY,Malaysia,0,0
+34.103.6.0/23,1327865,AS,Asia,MM,Myanmar,0,0
+34.103.8.0/23,1694008,AS,Asia,PH,Philippines,0,0
+34.103.10.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.103.12.0/23,1605651,AS,Asia,TH,Thailand,0,0
+34.103.14.0/23,1562822,AS,Asia,VN,Vietnam,0,0
+34.103.16.0/21,6252001,nan,North America,US,United States,0,0
+34.103.24.0/23,6252001,nan,North America,US,United States,0,0
+34.103.26.0/24,6252001,nan,North America,US,United States,0,0
+34.103.27.0/26,6252001,nan,North America,US,United States,0,0
+34.103.27.64/28,6252001,nan,North America,US,United States,0,0
+34.103.27.80/29,6252001,nan,North America,US,United States,0,0
+34.103.27.88/30,6252001,nan,North America,US,United States,0,0
+34.103.27.92/31,6252001,nan,North America,US,United States,0,0
+34.103.27.94/32,6252001,nan,North America,US,United States,0,0
+34.103.27.95/32,2077456,OC,Oceania,AU,Australia,0,0
+34.103.27.96/27,6252001,nan,North America,US,United States,0,0
+34.103.27.128/25,6252001,nan,North America,US,United States,0,0
+34.103.28.0/22,6252001,nan,North America,US,United States,0,0
+34.103.32.0/23,630336,EU,Europe,BY,Belarus,0,0
+34.103.34.0/23,597427,EU,Europe,LT,Lithuania,0,0
+34.103.36.0/23,3144096,EU,Europe,NO,Norway,0,0
+34.103.38.0/23,2017370,EU,Europe,RU,Russia,0,0
+34.103.40.0/23,2017370,EU,Europe,RU,Russia,0,0
+34.103.42.0/23,6252001,nan,North America,US,United States,0,0
+34.103.44.0/22,6252001,nan,North America,US,United States,0,0
+34.103.48.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.103.50.0/23,3017382,EU,Europe,FR,France,0,0
+34.103.52.0/23,3017382,EU,Europe,FR,France,0,0
+34.103.54.0/23,2963597,EU,Europe,IE,Ireland,0,0
+34.103.56.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.103.58.0/23,2623032,EU,Europe,DK,Denmark,0,0
+34.103.60.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+34.103.64.0/22,6251999,nan,North America,CA,Canada,0,0
+34.103.68.0/22,6252001,nan,North America,US,United States,0,0
+34.103.72.0/21,6252001,nan,North America,US,United States,0,0
+34.103.80.0/30,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.4/31,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.6/31,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.8/32,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.9/32,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.10/31,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.12/30,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.16/28,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.32/28,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.48/31,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.50/31,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.52/30,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.56/29,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.64/28,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.80/32,3686110,SA,South America,CO,Colombia,0,0
+34.103.80.81/32,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.82/31,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.84/30,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.88/29,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.96/27,3996063,nan,North America,MX,Mexico,0,0
+34.103.80.128/25,3996063,nan,North America,MX,Mexico,0,0
+34.103.81.0/24,3703430,nan,North America,PA,Panama,0,0
+34.103.82.0/24,3703430,nan,North America,PA,Panama,0,0
+34.103.83.0/24,6252001,nan,North America,US,United States,0,0
+34.103.84.0/22,6252001,nan,North America,US,United States,0,0
+34.103.88.0/21,6252001,nan,North America,US,United States,0,0
+34.103.96.0/23,3625428,SA,South America,VE,Venezuela,0,0
+34.103.98.0/23,6252001,nan,North America,US,United States,0,0
+34.103.100.0/22,6252001,nan,North America,US,United States,0,0
+34.103.104.0/22,6252001,nan,North America,US,United States,0,0
+34.103.108.0/23,6252001,nan,North America,US,United States,0,0
+34.103.110.0/27,6252001,nan,North America,US,United States,0,0
+34.103.110.32/28,6252001,nan,North America,US,United States,0,0
+34.103.110.48/29,6252001,nan,North America,US,United States,0,0
+34.103.110.56/32,6252001,nan,North America,US,United States,0,0
+34.103.110.57/32,3469034,SA,South America,BR,Brazil,0,0
+34.103.110.58/31,6252001,nan,North America,US,United States,0,0
+34.103.110.60/30,6252001,nan,North America,US,United States,0,0
+34.103.110.64/26,6252001,nan,North America,US,United States,0,0
+34.103.110.128/25,6252001,nan,North America,US,United States,0,0
+34.103.111.0/24,6252001,nan,North America,US,United States,0,0
+34.103.112.0/21,6252001,nan,North America,US,United States,0,0
+34.103.120.0/23,6252001,nan,North America,US,United States,0,0
+34.103.122.0/25,6252001,nan,North America,US,United States,0,0
+34.103.122.128/28,6252001,nan,North America,US,United States,0,0
+34.103.122.144/29,6252001,nan,North America,US,United States,0,0
+34.103.122.152/32,6252001,nan,North America,US,United States,0,0
+34.103.122.153/32,3469034,SA,South America,BR,Brazil,0,0
+34.103.122.154/31,6252001,nan,North America,US,United States,0,0
+34.103.122.156/30,6252001,nan,North America,US,United States,0,0
+34.103.122.160/27,6252001,nan,North America,US,United States,0,0
+34.103.122.192/26,6252001,nan,North America,US,United States,0,0
+34.103.123.0/24,6252001,nan,North America,US,United States,0,0
+34.103.124.0/22,6252001,nan,North America,US,United States,0,0
+34.103.128.0/22,2510769,EU,Europe,ES,Spain,0,0
+34.103.132.0/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.2/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.3/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.4/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.6/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.7/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.8/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.10/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.12/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.16/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.18/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.20/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.22/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.24/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.25/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.26/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.28/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.32/29,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.40/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.42/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.44/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.48/29,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.56/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.60/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.61/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.62/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.64/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.65/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.66/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.68/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.70/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.71/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.72/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.74/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.75/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.76/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.80/28,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.96/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.132.100/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.104/29,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.112/28,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.128/27,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.160/28,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.176/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.180/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.184/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.186/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.188/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.190/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.191/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.192/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.193/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.194/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.196/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.198/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.199/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.200/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.201/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.202/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.204/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.208/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.209/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.210/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.212/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.216/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.220/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.221/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.222/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.223/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.224/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.225/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.226/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.228/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.229/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.230/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.232/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.236/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.238/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.240/29,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.248/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.249/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.132.250/31,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.132.252/30,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.133.0/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.2/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.3/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.4/30,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.8/31,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.10/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.12/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.16/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.17/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.18/31,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.20/30,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.24/31,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.26/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.27/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.28/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.29/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.30/31,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.32/31,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.34/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.35/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.36/30,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.40/29,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.48/28,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.64/30,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.68/31,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.70/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.72/29,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.80/28,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.96/30,357994,AF,Africa,EG,Egypt,0,0
+34.103.133.100/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.102/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.103/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.104/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.105/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.106/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.108/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.112/28,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.128/28,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.144/29,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.152/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.156/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.133.157/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.158/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.160/29,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.168/31,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.170/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.171/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.172/30,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.176/28,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.192/29,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.200/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.201/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.202/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.203/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.204/30,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.208/28,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.224/28,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.240/29,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.248/30,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.252/32,2782113,EU,Europe,AT,Austria,0,0
+34.103.133.253/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.133.254/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.134.0/23,298795,AS,Asia,TR,Türkiye,0,0
+34.103.136.0/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.4/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.6/31,294640,AS,Asia,IL,Israel,0,0
+34.103.136.8/31,285570,AS,Asia,KW,Kuwait,0,0
+34.103.136.10/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.12/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.16/28,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.32/29,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.40/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.44/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.46/32,294640,AS,Asia,IL,Israel,0,0
+34.103.136.47/32,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.48/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.52/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.54/32,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.55/32,294640,AS,Asia,IL,Israel,0,0
+34.103.136.56/29,294640,AS,Asia,IL,Israel,0,0
+34.103.136.64/30,294640,AS,Asia,IL,Israel,0,0
+34.103.136.68/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.70/31,294640,AS,Asia,IL,Israel,0,0
+34.103.136.72/32,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.73/32,294640,AS,Asia,IL,Israel,0,0
+34.103.136.74/31,294640,AS,Asia,IL,Israel,0,0
+34.103.136.76/32,294640,AS,Asia,IL,Israel,0,0
+34.103.136.77/32,285570,AS,Asia,KW,Kuwait,0,0
+34.103.136.78/31,285570,AS,Asia,KW,Kuwait,0,0
+34.103.136.80/28,285570,AS,Asia,KW,Kuwait,0,0
+34.103.136.96/30,285570,AS,Asia,KW,Kuwait,0,0
+34.103.136.100/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.104/29,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.112/28,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.136.128/25,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.0/31,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.2/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.4/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.8/31,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.10/31,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.12/32,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.13/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.14/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.15/32,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.16/28,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.32/27,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.64/27,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.96/30,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.100/30,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.104/29,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.112/29,2264397,EU,Europe,PT,Portugal,0,0
+34.103.137.120/29,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.128/29,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.136/30,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.140/31,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.142/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.137.143/32,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.144/28,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.160/27,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.137.192/26,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.138.0/23,690791,EU,Europe,UA,Ukraine,0,0
+34.103.140.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.142.0/23,1512440,AS,Asia,UZ,Uzbekistan,0,0
+34.103.144.0/23,192950,AF,Africa,KE,Kenya,0,0
+34.103.146.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.148.0/22,953987,AF,Africa,ZA,South Africa,0,0
+34.103.152.0/23,3041565,EU,Europe,AD,Andorra,0,0
+34.103.154.0/23,2782113,EU,Europe,AT,Austria,0,0
+34.103.156.0/23,732800,EU,Europe,BG,Bulgaria,0,0
+34.103.158.0/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.2/32,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.3/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.4/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.5/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.6/31,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.8/31,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.10/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.12/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.16/29,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.24/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.28/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.32/28,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.48/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.50/31,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.52/30,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.56/29,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.64/29,3041565,EU,Europe,AD,Andorra,0,0
+34.103.158.72/29,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.80/29,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.88/30,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.92/31,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.94/32,248816,AS,Asia,JO,Jordan,0,0
+34.103.158.95/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.158.96/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.158.100/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.104/29,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.112/28,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.128/26,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.192/27,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.224/28,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.240/29,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.248/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.252/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.158.254/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.158.255/32,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.0/32,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.1/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.2/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.4/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.8/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.10/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.12/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.16/28,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.32/27,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.64/27,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.96/30,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.100/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.104/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.112/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.116/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.159.117/32,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.118/31,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.120/29,3202326,EU,Europe,HR,Croatia,0,0
+34.103.159.128/25,3202326,EU,Europe,HR,Croatia,0,0
+34.103.160.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+34.103.162.0/23,357994,AF,Africa,EG,Egypt,0,0
+34.103.164.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.0/25,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.128/26,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.192/28,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.208/30,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.212/31,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.214/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.165.215/32,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.216/29,2921044,EU,Europe,DE,Germany,0,0
+34.103.165.224/27,2921044,EU,Europe,DE,Germany,0,0
+34.103.166.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.103.168.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.103.170.0/24,390903,EU,Europe,GR,Greece,0,0
+34.103.171.0/25,390903,EU,Europe,GR,Greece,0,0
+34.103.171.128/30,390903,EU,Europe,GR,Greece,0,0
+34.103.171.132/31,390903,EU,Europe,GR,Greece,0,0
+34.103.171.134/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.171.135/32,390903,EU,Europe,GR,Greece,0,0
+34.103.171.136/31,390903,EU,Europe,GR,Greece,0,0
+34.103.171.138/32,390903,EU,Europe,GR,Greece,0,0
+34.103.171.139/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.171.140/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.171.144/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.171.148/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.171.149/32,390903,EU,Europe,GR,Greece,0,0
+34.103.171.150/31,390903,EU,Europe,GR,Greece,0,0
+34.103.171.152/29,390903,EU,Europe,GR,Greece,0,0
+34.103.171.160/27,390903,EU,Europe,GR,Greece,0,0
+34.103.171.192/27,390903,EU,Europe,GR,Greece,0,0
+34.103.171.224/31,390903,EU,Europe,GR,Greece,0,0
+34.103.171.226/32,2921044,EU,Europe,DE,Germany,0,0
+34.103.171.227/32,390903,EU,Europe,GR,Greece,0,0
+34.103.171.228/30,390903,EU,Europe,GR,Greece,0,0
+34.103.171.232/29,390903,EU,Europe,GR,Greece,0,0
+34.103.171.240/28,390903,EU,Europe,GR,Greece,0,0
+34.103.172.0/23,719819,EU,Europe,HU,Hungary,0,0
+34.103.174.0/23,294640,AS,Asia,IL,Israel,0,0
+34.103.176.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.103.178.0/23,248816,AS,Asia,JO,Jordan,0,0
+34.103.180.0/23,285570,AS,Asia,KW,Kuwait,0,0
+34.103.182.0/23,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.184.0/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.2/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.3/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.4/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.6/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.7/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.8/31,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.10/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.12/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.16/29,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.24/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.25/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.26/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.28/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.32/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.36/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.38/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.40/31,798544,EU,Europe,PL,Poland,0,0
+34.103.184.42/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.43/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.44/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.45/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.46/31,798544,EU,Europe,PL,Poland,0,0
+34.103.184.48/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.49/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.50/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.52/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.53/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.54/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.56/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.57/32,798544,EU,Europe,PL,Poland,0,0
+34.103.184.58/31,798544,EU,Europe,PL,Poland,0,0
+34.103.184.60/30,798544,EU,Europe,PL,Poland,0,0
+34.103.184.64/30,798544,EU,Europe,PL,Poland,0,0
+34.103.184.68/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.70/32,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.71/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.72/30,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.76/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.77/32,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.78/31,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.80/29,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.88/31,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.184.90/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.92/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.96/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.100/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.104/29,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.112/28,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.128/26,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.192/27,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.224/29,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.232/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.236/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.238/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.239/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.240/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.244/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.184.245/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.246/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.248/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.252/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.254/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.184.255/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.0/32,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.1/32,192950,AF,Africa,KE,Kenya,0,0
+34.103.185.2/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.4/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.8/31,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.10/31,192950,AF,Africa,KE,Kenya,0,0
+34.103.185.12/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.16/28,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.32/27,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.64/27,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.96/30,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.100/30,192950,AF,Africa,KE,Kenya,0,0
+34.103.185.104/29,192950,AF,Africa,KE,Kenya,0,0
+34.103.185.112/28,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.185.128/25,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.186.0/24,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.0/25,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.128/30,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.132/31,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.134/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.187.135/32,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.136/31,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.138/32,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.139/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.187.140/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.187.144/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.187.148/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.187.149/32,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.150/31,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.152/29,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.160/27,617790,EU,Europe,MD,Moldova,0,0
+34.103.187.192/26,617790,EU,Europe,MD,Moldova,0,0
+34.103.188.0/23,2993457,EU,Europe,MC,Monaco,0,0
+34.103.190.0/23,798544,EU,Europe,PL,Poland,0,0
+34.103.192.0/23,2264397,EU,Europe,PT,Portugal,0,0
+34.103.194.0/23,798549,EU,Europe,RO,Romania,0,0
+34.103.196.0/23,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.198.0/23,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.200.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.202.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.103.204.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.0/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.1/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.2/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.3/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.4/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.5/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.6/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.8/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.9/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.10/31,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.12/32,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.13/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.14/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.16/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.20/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.22/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.23/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.24/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.25/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.26/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.28/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.32/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.36/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.40/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.41/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.42/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.43/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.44/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.45/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.46/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.48/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.50/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.52/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.54/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.56/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.58/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.60/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.61/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.62/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.64/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.68/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.69/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.70/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.71/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.72/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.74/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.75/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.76/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.77/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.78/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.80/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.82/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.83/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.84/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.85/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.86/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.87/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.88/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.90/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.92/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.93/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.94/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.95/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.96/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.98/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.100/30,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.104/29,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.112/29,357994,AF,Africa,EG,Egypt,0,0
+34.103.206.120/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.128/26,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.192/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.200/30,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.204/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.206/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.208/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.216/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.218/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.206.219/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.220/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.222/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.224/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.228/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.229/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.230/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.232/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.234/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.236/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.240/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.241/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.242/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.243/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.244/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.206.245/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.246/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.248/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.206.252/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.0/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.1/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.2/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.4/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.8/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.10/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.12/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.16/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.20/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.21/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.22/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.24/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.25/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.26/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.28/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.30/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.32/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.33/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.34/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.35/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.36/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.40/29,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.48/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.52/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.53/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.54/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.56/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.58/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.59/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.60/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.62/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.64/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.65/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.66/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.67/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.68/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.70/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.71/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.72/29,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.80/28,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.96/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.100/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.104/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.108/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.109/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.110/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.112/30,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.116/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.117/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.118/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.120/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.121/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.122/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.123/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.124/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.125/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.126/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.128/26,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.192/29,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.200/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.202/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.204/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.205/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.206/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.208/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.210/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.211/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.212/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.214/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.216/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.220/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.221/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.222/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.224/28,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.240/29,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.248/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.207.250/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.252/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.207.254/31,2658434,EU,Europe,CH,Switzerland,0,0
+34.103.208.0/23,298795,AS,Asia,TR,Türkiye,0,0
+34.103.210.0/23,690791,EU,Europe,UA,Ukraine,0,0
+34.103.212.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.214.0/23,1512440,AS,Asia,UZ,Uzbekistan,0,0
+34.103.216.0/32,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.1/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.216.2/31,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.4/30,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.8/29,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.16/28,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.32/27,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.64/27,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.96/28,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.112/30,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.116/31,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.118/32,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.119/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.216.120/29,2921044,EU,Europe,DE,Germany,0,0
+34.103.216.128/25,2921044,EU,Europe,DE,Germany,0,0
+34.103.217.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.103.218.0/24,192950,AF,Africa,KE,Kenya,0,0
+34.103.219.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+34.103.220.0/24,953987,AF,Africa,ZA,South Africa,0,0
+34.103.221.0/24,3041565,EU,Europe,AD,Andorra,0,0
+34.103.222.0/24,2782113,EU,Europe,AT,Austria,0,0
+34.103.223.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+34.103.224.0/24,3202326,EU,Europe,HR,Croatia,0,0
+34.103.225.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+34.103.226.0/24,357994,AF,Africa,EG,Egypt,0,0
+34.103.227.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.103.228.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.103.230.0/24,390903,EU,Europe,GR,Greece,0,0
+34.103.231.0/24,719819,EU,Europe,HU,Hungary,0,0
+34.103.232.0/24,294640,AS,Asia,IL,Israel,0,0
+34.103.233.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.103.234.0/24,248816,AS,Asia,JO,Jordan,0,0
+34.103.235.0/24,285570,AS,Asia,KW,Kuwait,0,0
+34.103.236.0/24,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.237.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+34.103.238.0/24,617790,EU,Europe,MD,Moldova,0,0
+34.103.239.0/24,2993457,EU,Europe,MC,Monaco,0,0
+34.103.240.0/24,798544,EU,Europe,PL,Poland,0,0
+34.103.241.0/24,2264397,EU,Europe,PT,Portugal,0,0
+34.103.242.0/24,798549,EU,Europe,RO,Romania,0,0
+34.103.243.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.244.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.245.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+34.103.246.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.103.248.0/24,298795,AS,Asia,TR,Türkiye,0,0
+34.103.249.0/24,690791,EU,Europe,UA,Ukraine,0,0
+34.103.250.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.103.251.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+34.103.252.0/24,953987,AF,Africa,ZA,South Africa,0,0
+34.103.253.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.103.254.0/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.1/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.2/31,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.4/30,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.8/29,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.16/28,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.32/30,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.36/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.37/32,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.38/31,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.40/29,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.48/28,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.64/29,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.72/32,248816,AS,Asia,JO,Jordan,0,0
+34.103.254.73/32,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.74/31,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.76/30,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.80/28,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.96/29,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.104/30,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.108/32,285570,AS,Asia,KW,Kuwait,0,0
+34.103.254.109/32,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.254.110/31,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.254.112/28,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.254.128/28,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.254.144/32,3042058,EU,Europe,LI,Liechtenstein,0,0
+34.103.254.145/32,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.146/31,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.148/30,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.152/29,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.160/28,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.176/30,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.180/32,2993457,EU,Europe,MC,Monaco,0,0
+34.103.254.181/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.182/31,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.184/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.192/28,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.208/29,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.216/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.254.217/32,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.218/31,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.220/30,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.224/28,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.240/29,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.248/30,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.252/32,690791,EU,Europe,UA,Ukraine,0,0
+34.103.254.253/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.254/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.254.255/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.255.0/32,2510769,EU,Europe,ES,Spain,0,0
+34.103.255.1/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.2/31,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.4/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.8/29,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.16/28,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.32/30,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.36/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.37/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.38/31,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.40/29,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.48/28,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.64/29,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.72/32,3041565,EU,Europe,AD,Andorra,0,0
+34.103.255.73/32,294640,AS,Asia,IL,Israel,0,0
+34.103.255.74/31,294640,AS,Asia,IL,Israel,0,0
+34.103.255.76/30,294640,AS,Asia,IL,Israel,0,0
+34.103.255.80/28,294640,AS,Asia,IL,Israel,0,0
+34.103.255.96/29,294640,AS,Asia,IL,Israel,0,0
+34.103.255.104/30,294640,AS,Asia,IL,Israel,0,0
+34.103.255.108/32,294640,AS,Asia,IL,Israel,0,0
+34.103.255.109/32,798544,EU,Europe,PL,Poland,0,0
+34.103.255.110/31,798544,EU,Europe,PL,Poland,0,0
+34.103.255.112/28,798544,EU,Europe,PL,Poland,0,0
+34.103.255.128/28,798544,EU,Europe,PL,Poland,0,0
+34.103.255.144/32,798544,EU,Europe,PL,Poland,0,0
+34.103.255.145/32,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.146/31,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.148/30,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.152/29,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.160/28,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.176/30,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.180/32,2264397,EU,Europe,PT,Portugal,0,0
+34.103.255.181/32,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.182/31,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.184/29,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.192/28,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.208/29,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.216/32,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.103.255.217/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.218/31,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.220/30,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.224/28,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.240/29,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.248/30,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.252/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.103.255.253/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.254/32,953987,AF,Africa,ZA,South Africa,0,0
+34.103.255.255/32,2510769,EU,Europe,ES,Spain,0,0
+34.104.0.0/19,6252001,nan,North America,US,United States,0,0
+34.104.32.0/20,6252001,nan,North America,US,United States,0,0
+34.104.48.0/24,6252001,nan,North America,US,United States,0,0
+34.104.49.0/24,1861060,AS,Asia,JP,Japan,0,0
+34.104.50.0/23,3895114,SA,South America,CL,Chile,0,0
+34.104.52.0/22,6252001,nan,North America,US,United States,0,0
+34.104.56.0/23,6252001,nan,North America,US,United States,0,0
+34.104.58.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.104.60.0/23,6252001,nan,North America,US,United States,0,0
+34.104.62.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.104.64.0/21,6252001,nan,North America,US,United States,0,0
+34.104.72.0/22,6252001,nan,North America,US,United States,0,0
+34.104.76.0/22,6251999,nan,North America,CA,Canada,0,0
+34.104.80.0/21,3469034,SA,South America,BR,Brazil,0,0
+34.104.88.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+34.104.96.0/21,660013,EU,Europe,FI,Finland,0,0
+34.104.104.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.104.106.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.104.108.0/23,1269750,AS,Asia,IN,India,0,0
+34.104.110.0/23,2658434,EU,Europe,CH,Switzerland,0,0
+34.104.112.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.104.114.0/23,6251999,nan,North America,CA,Canada,0,0
+34.104.116.0/22,798544,EU,Europe,PL,Poland,0,0
+34.104.120.0/23,1269750,AS,Asia,IN,India,0,0
+34.104.122.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.104.124.0/23,6252001,nan,North America,US,United States,0,0
+34.104.126.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.104.128.0/17,1861060,AS,Asia,JP,Japan,0,0
+34.105.0.0/17,6252001,nan,North America,US,United States,0,0
+34.105.128.0/17,2635167,EU,Europe,GB,United Kingdom,0,0
+34.106.0.0/16,6252001,nan,North America,US,United States,0,0
+34.107.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.107.128.0/17,6252001,nan,North America,US,United States,0,0
+34.108.0.0/17,6252001,nan,North America,US,United States,0,0
+34.108.128.0/19,6252001,nan,North America,US,United States,0,0
+34.108.160.0/20,6252001,nan,North America,US,United States,0,0
+34.108.176.0/21,6252001,nan,North America,US,United States,0,0
+34.108.184.0/23,6252001,nan,North America,US,United States,0,0
+34.108.186.0/23,617790,EU,Europe,MD,Moldova,0,0
+34.108.188.0/22,6252001,nan,North America,US,United States,0,0
+34.108.192.0/18,6252001,nan,North America,US,United States,0,0
+34.109.0.0/16,6252001,nan,North America,US,United States,0,0
+34.110.0.0/17,6252001,nan,North America,US,United States,0,0
+34.110.128.0/20,6252001,nan,North America,US,United States,0,0
+34.110.144.0/22,6252001,nan,North America,US,United States,0,0
+34.110.148.0/25,6252001,nan,North America,US,United States,0,0
+34.110.148.128/26,6252001,nan,North America,US,United States,0,0
+34.110.148.192/27,6252001,nan,North America,US,United States,0,0
+34.110.148.224/29,6252001,nan,North America,US,United States,0,0
+34.110.148.232/30,6252001,nan,North America,US,United States,0,0
+34.110.148.236/31,6252001,nan,North America,US,United States,0,0
+34.110.148.238/32,6252001,nan,North America,US,United States,0,0
+34.110.148.239/32,1880251,AS,Asia,SG,Singapore,0,0
+34.110.148.240/28,6252001,nan,North America,US,United States,0,0
+34.110.149.0/24,6252001,nan,North America,US,United States,0,0
+34.110.150.0/23,6252001,nan,North America,US,United States,0,0
+34.110.152.0/21,6252001,nan,North America,US,United States,0,0
+34.110.160.0/19,6252001,nan,North America,US,United States,0,0
+34.110.192.0/18,6252001,nan,North America,US,United States,0,0
+34.111.0.0/16,6252001,nan,North America,US,United States,0,0
+34.112.0.0/14,6252001,nan,North America,US,United States,0,0
+34.116.0.0/19,6252001,nan,North America,US,United States,0,0
+34.116.32.0/24,294640,AS,Asia,IL,Israel,0,0
+34.116.33.0/24,6252001,nan,North America,US,United States,0,0
+34.116.34.0/23,6252001,nan,North America,US,United States,0,0
+34.116.36.0/22,6252001,nan,North America,US,United States,0,0
+34.116.40.0/21,6252001,nan,North America,US,United States,0,0
+34.116.48.0/20,6252001,nan,North America,US,United States,0,0
+34.116.64.0/18,2077456,OC,Oceania,AU,Australia,0,0
+34.116.128.0/17,798544,EU,Europe,PL,Poland,0,0
+34.117.0.0/16,6252001,nan,North America,US,United States,0,0
+34.118.0.0/17,798544,EU,Europe,PL,Poland,0,0
+34.118.128.0/18,6251999,nan,North America,CA,Canada,0,0
+34.118.192.0/19,6252001,nan,North America,US,United States,0,0
+34.118.224.0/20,6252001,nan,North America,US,United States,0,0
+34.118.240.0/22,6252001,nan,North America,US,United States,0,0
+34.118.244.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.118.246.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.118.247.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.118.248.0/21,6252001,nan,North America,US,United States,0,0
+34.119.0.0/16,6252001,nan,North America,US,United States,0,0
+34.120.0.0/14,6252001,nan,North America,US,United States,0,0
+34.124.0.0/21,6252001,nan,North America,US,United States,0,0
+34.124.8.0/22,6252001,nan,North America,US,United States,0,0
+34.124.12.0/22,6251999,nan,North America,CA,Canada,0,0
+34.124.16.0/21,3469034,SA,South America,BR,Brazil,0,0
+34.124.24.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+34.124.32.0/21,660013,EU,Europe,FI,Finland,0,0
+34.124.40.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.124.42.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.124.44.0/23,1269750,AS,Asia,IN,India,0,0
+34.124.46.0/23,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.48.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.124.50.0/23,6251999,nan,North America,CA,Canada,0,0
+34.124.52.0/22,798544,EU,Europe,PL,Poland,0,0
+34.124.56.0/23,1269750,AS,Asia,IN,India,0,0
+34.124.58.0/23,2077456,OC,Oceania,AU,Australia,0,0
+34.124.60.0/23,6252001,nan,North America,US,United States,0,0
+34.124.62.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.124.64.0/23,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.66.0/24,192950,AF,Africa,KE,Kenya,0,0
+34.124.67.0/25,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.128/27,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.160/30,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.164/32,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.165/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.67.166/31,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.168/29,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.176/28,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.67.192/26,1168579,AS,Asia,PK,Pakistan,0,0
+34.124.68.0/23,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.70.0/24,2782113,EU,Europe,AT,Austria,0,0
+34.124.71.0/26,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.64/27,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.96/28,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.112/29,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.120/30,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.124/32,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.125/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.71.126/31,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.71.128/25,3057568,EU,Europe,SK,Slovakia,0,0
+34.124.72.0/26,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.64/27,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.96/28,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.112/32,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.113/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.72.114/31,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.116/30,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.120/29,357994,AF,Africa,EG,Egypt,0,0
+34.124.72.128/25,357994,AF,Africa,EG,Egypt,0,0
+34.124.73.0/27,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.32/28,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.48/29,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.56/31,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.58/32,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.59/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.73.60/30,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.64/26,248816,AS,Asia,JO,Jordan,0,0
+34.124.73.128/25,248816,AS,Asia,JO,Jordan,0,0
+34.124.74.0/24,285570,AS,Asia,KW,Kuwait,0,0
+34.124.75.0/26,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.64/28,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.80/31,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.82/32,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.83/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.75.84/30,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.88/29,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.96/27,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.75.128/25,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.124.76.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.0/26,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.64/29,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.72/30,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.76/31,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.78/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.77.79/32,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.80/28,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.96/27,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.128/28,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.144/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.77.145/32,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.146/31,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.148/30,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.152/29,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.160/27,2510769,EU,Europe,ES,Spain,0,0
+34.124.77.192/26,2510769,EU,Europe,ES,Spain,0,0
+34.124.78.0/25,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.128/27,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.160/28,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.176/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.180/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.182/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.183/32,2658434,EU,Europe,CH,Switzerland,0,0
+34.124.78.184/29,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.78.192/26,290557,AS,Asia,AE,United Arab Emirates,0,0
+34.124.79.0/24,6252001,nan,North America,US,United States,0,0
+34.124.80.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.124.82.0/23,6252001,nan,North America,US,United States,0,0
+34.124.84.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.124.88.0/21,6252001,nan,North America,US,United States,0,0
+34.124.96.0/20,6252001,nan,North America,US,United States,0,0
+34.124.112.0/20,6251999,nan,North America,CA,Canada,0,0
+34.124.128.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.125.0.0/16,6252001,nan,North America,US,United States,0,0
+34.126.0.0/18,6252001,nan,North America,US,United States,0,0
+34.126.64.0/19,1880251,AS,Asia,SG,Singapore,0,0
+34.126.96.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.126.112.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.126.114.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.0/26,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.64/27,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.96/28,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.112/29,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.120/30,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.124/31,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.126/32,1880251,AS,Asia,SG,Singapore,0,0
+34.126.115.127/32,1605651,AS,Asia,TH,Thailand,0,0
+34.126.115.128/25,1880251,AS,Asia,SG,Singapore,0,0
+34.126.116.0/22,1880251,AS,Asia,SG,Singapore,0,0
+34.126.120.0/21,1880251,AS,Asia,SG,Singapore,0,0
+34.126.128.0/19,1880251,AS,Asia,SG,Singapore,0,0
+34.126.160.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.126.176.0/21,1880251,AS,Asia,SG,Singapore,0,0
+34.126.184.0/22,1880251,AS,Asia,SG,Singapore,0,0
+34.126.188.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.126.190.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.0/26,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.64/27,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.96/28,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.112/29,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.120/31,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.122/32,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.123/32,1605651,AS,Asia,TH,Thailand,0,0
+34.126.191.124/30,1880251,AS,Asia,SG,Singapore,0,0
+34.126.191.128/25,1880251,AS,Asia,SG,Singapore,0,0
+34.126.192.0/20,2077456,OC,Oceania,AU,Australia,0,0
+34.126.208.0/20,1269750,AS,Asia,IN,India,0,0
+34.126.224.0/19,6252001,nan,North America,US,United States,0,0
+34.127.0.0/17,6252001,nan,North America,US,United States,0,0
+34.127.128.0/19,6252001,nan,North America,US,United States,0,0
+34.127.160.0/20,6252001,nan,North America,US,United States,0,0
+34.127.176.0/24,6252001,nan,North America,US,United States,0,0
+34.127.177.0/24,1861060,AS,Asia,JP,Japan,0,0
+34.127.178.0/23,3895114,SA,South America,CL,Chile,0,0
+34.127.180.0/22,6252001,nan,North America,US,United States,0,0
+34.127.184.0/23,6252001,nan,North America,US,United States,0,0
+34.127.186.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.127.188.0/23,6252001,nan,North America,US,United States,0,0
+34.127.190.0/23,1861060,AS,Asia,JP,Japan,0,0
+34.127.192.0/18,6252001,nan,North America,US,United States,0,0
+34.128.0.0/19,6252001,nan,North America,US,United States,0,0
+34.128.32.0/22,6252001,nan,North America,US,United States,0,0
+34.128.36.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.128.37.0/24,6251999,nan,North America,CA,Canada,0,0
+34.128.38.0/23,6252001,nan,North America,US,United States,0,0
+34.128.40.0/23,6252001,nan,North America,US,United States,0,0
+34.128.42.0/23,6251999,nan,North America,CA,Canada,0,0
+34.128.44.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.128.46.0/23,6252001,nan,North America,US,United States,0,0
+34.128.48.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.128.49.0/24,6251999,nan,North America,CA,Canada,0,0
+34.128.50.0/23,6252001,nan,North America,US,United States,0,0
+34.128.52.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.128.56.0/23,6252001,nan,North America,US,United States,0,0
+34.128.58.0/23,6251999,nan,North America,CA,Canada,0,0
+34.128.60.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.128.62.0/23,6252001,nan,North America,US,United States,0,0
+34.128.64.0/18,1643084,AS,Asia,ID,Indonesia,0,0
+34.128.128.0/18,6252001,nan,North America,US,United States,0,0
+34.128.192.0/20,6252001,nan,North America,US,United States,0,0
+34.128.208.0/20,798544,EU,Europe,PL,Poland,0,0
+34.128.224.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+34.128.240.0/20,6252001,nan,North America,US,United States,0,0
+34.129.0.0/16,2077456,OC,Oceania,AU,Australia,0,0
+34.130.0.0/16,6251999,nan,North America,CA,Canada,0,0
+34.131.0.0/16,1269750,AS,Asia,IN,India,0,0
+34.132.0.0/14,6252001,nan,North America,US,United States,0,0
+34.136.0.0/16,6252001,nan,North America,US,United States,0,0
+34.137.0.0/16,1668284,AS,Asia,TW,Taiwan,0,0
+34.138.0.0/15,6252001,nan,North America,US,United States,0,0
+34.140.0.0/17,2802361,EU,Europe,BE,Belgium,0,0
+34.140.128.0/19,2802361,EU,Europe,BE,Belgium,0,0
+34.140.160.0/21,2802361,EU,Europe,BE,Belgium,0,0
+34.140.168.0/24,3017382,EU,Europe,FR,France,0,0
+34.140.169.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.140.170.0/23,2802361,EU,Europe,BE,Belgium,0,0
+34.140.172.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.140.176.0/20,2802361,EU,Europe,BE,Belgium,0,0
+34.140.192.0/18,2802361,EU,Europe,BE,Belgium,0,0
+34.141.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.141.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.142.0.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.0/25,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.128/26,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.192/27,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.224/29,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.232/30,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.236/31,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.238/32,6252001,nan,North America,US,United States,0,0
+34.142.2.239/32,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.2.240/28,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.3.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.4.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.8.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.16.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.32.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.64.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+34.142.128.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.143.0.0/17,6252001,nan,North America,US,United States,0,0
+34.143.128.0/17,1880251,AS,Asia,SG,Singapore,0,0
+34.144.0.0/15,6252001,nan,North America,US,United States,0,0
+34.146.0.0/16,1861060,AS,Asia,JP,Japan,0,0
+34.147.0.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.147.128.0/17,2635167,EU,Europe,GB,United Kingdom,0,0
+34.148.0.0/15,6252001,nan,North America,US,United States,0,0
+34.150.0.0/17,1819730,AS,Asia,HK,Hong Kong,0,0
+34.150.128.0/17,6252001,nan,North America,US,United States,0,0
+34.151.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+34.151.64.0/18,2077456,OC,Oceania,AU,Australia,0,0
+34.151.128.0/18,2077456,OC,Oceania,AU,Australia,0,0
+34.151.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+34.152.0.0/18,6251999,nan,North America,CA,Canada,0,0
+34.152.64.0/22,1269750,AS,Asia,IN,India,0,0
+34.152.68.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.152.69.0/24,6251999,nan,North America,CA,Canada,0,0
+34.152.70.0/23,6252001,nan,North America,US,United States,0,0
+34.152.72.0/21,6252001,nan,North America,US,United States,0,0
+34.152.80.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.152.82.0/23,6252001,nan,North America,US,United States,0,0
+34.152.84.0/23,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.152.86.0/23,953987,AF,Africa,ZA,South Africa,0,0
+34.152.88.0/21,6252001,nan,North America,US,United States,0,0
+34.152.96.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.152.97.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.152.97.128/25,6251999,nan,North America,CA,Canada,0,0
+34.152.98.0/25,3895114,SA,South America,CL,Chile,0,0
+34.152.98.128/25,1269750,AS,Asia,IN,India,0,0
+34.152.99.0/24,6252001,nan,North America,US,United States,0,0
+34.152.100.0/24,1861060,AS,Asia,JP,Japan,0,0
+34.152.101.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.152.102.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.152.103.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.152.104.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.152.106.0/23,1269750,AS,Asia,IN,India,0,0
+34.152.108.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.152.110.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.152.110.128/25,6252001,nan,North America,US,United States,0,0
+34.152.111.0/24,6252001,nan,North America,US,United States,0,0
+34.152.112.0/20,6252001,nan,North America,US,United States,0,0
+34.152.128.0/17,6252001,nan,North America,US,United States,0,0
+34.153.0.0/19,6252001,nan,North America,US,United States,0,0
+34.153.32.0/24,1269750,AS,Asia,IN,India,0,0
+34.153.33.0/24,3895114,SA,South America,CL,Chile,0,0
+34.153.34.0/23,6252001,nan,North America,US,United States,0,0
+34.153.36.0/23,6252001,nan,North America,US,United States,0,0
+34.153.38.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.153.39.0/24,6252001,nan,North America,US,United States,0,0
+34.153.40.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.153.42.0/23,3996063,nan,North America,MX,Mexico,0,0
+34.153.44.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.153.45.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.153.46.0/23,2661886,EU,Europe,SE,Sweden,0,0
+34.153.48.0/21,6252001,nan,North America,US,United States,0,0
+34.153.56.0/23,6252001,nan,North America,US,United States,0,0
+34.153.58.0/23,1269750,AS,Asia,IN,India,0,0
+34.153.60.0/23,6252001,nan,North America,US,United States,0,0
+34.153.62.0/25,2077456,OC,Oceania,AU,Australia,0,0
+34.153.62.128/25,294640,AS,Asia,IL,Israel,0,0
+34.153.63.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.153.64.0/24,289688,AS,Asia,QA,Qatar,0,0
+34.153.65.0/25,289688,AS,Asia,QA,Qatar,0,0
+34.153.65.128/26,289688,AS,Asia,QA,Qatar,0,0
+34.153.65.192/26,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.153.66.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.153.67.0/24,6252001,nan,North America,US,United States,0,0
+34.153.68.0/22,6252001,nan,North America,US,United States,0,0
+34.153.72.0/21,6252001,nan,North America,US,United States,0,0
+34.153.80.0/20,6252001,nan,North America,US,United States,0,0
+34.153.96.0/19,6252001,nan,North America,US,United States,0,0
+34.153.128.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+34.153.192.0/19,1861060,AS,Asia,JP,Japan,0,0
+34.153.224.0/24,1269750,AS,Asia,IN,India,0,0
+34.153.225.0/24,3895114,SA,South America,CL,Chile,0,0
+34.153.226.0/23,6252001,nan,North America,US,United States,0,0
+34.153.228.0/23,6252001,nan,North America,US,United States,0,0
+34.153.230.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.153.231.0/24,6252001,nan,North America,US,United States,0,0
+34.153.232.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.153.234.0/23,3996063,nan,North America,MX,Mexico,0,0
+34.153.236.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.153.237.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.153.238.0/23,2661886,EU,Europe,SE,Sweden,0,0
+34.153.240.0/21,6252001,nan,North America,US,United States,0,0
+34.153.248.0/23,6252001,nan,North America,US,United States,0,0
+34.153.250.0/23,1269750,AS,Asia,IN,India,0,0
+34.153.252.0/25,2077456,OC,Oceania,AU,Australia,0,0
+34.153.252.128/25,294640,AS,Asia,IL,Israel,0,0
+34.153.253.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.153.254.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.154.0.0/19,3175395,EU,Europe,IT,Italy,0,0
+34.154.32.0/20,3175395,EU,Europe,IT,Italy,0,0
+34.154.48.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.154.50.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.154.50.128/27,2562770,EU,Europe,MT,Malta,0,0
+34.154.50.160/27,3175395,EU,Europe,IT,Italy,0,0
+34.154.50.192/27,2464461,AF,Africa,TN,Tunisia,0,0
+34.154.50.224/27,3175395,EU,Europe,IT,Italy,0,0
+34.154.51.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.154.52.0/22,3175395,EU,Europe,IT,Italy,0,0
+34.154.56.0/21,3175395,EU,Europe,IT,Italy,0,0
+34.154.64.0/18,3175395,EU,Europe,IT,Italy,0,0
+34.154.128.0/18,3175395,EU,Europe,IT,Italy,0,0
+34.154.192.0/19,3175395,EU,Europe,IT,Italy,0,0
+34.154.224.0/20,3175395,EU,Europe,IT,Italy,0,0
+34.154.240.0/21,3175395,EU,Europe,IT,Italy,0,0
+34.154.248.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.154.250.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.154.250.128/26,3175395,EU,Europe,IT,Italy,0,0
+34.154.250.192/27,2589581,AF,Africa,DZ,Algeria,0,0
+34.154.250.224/27,3175395,EU,Europe,IT,Italy,0,0
+34.154.251.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.154.252.0/22,3175395,EU,Europe,IT,Italy,0,0
+34.155.0.0/16,3017382,EU,Europe,FR,France,0,0
+34.156.0.0/16,2802361,EU,Europe,BE,Belgium,0,0
+34.157.0.0/21,6252001,nan,North America,US,United States,0,0
+34.157.8.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.157.10.0/23,6252001,nan,North America,US,United States,0,0
+34.157.12.0/22,3017382,EU,Europe,FR,France,0,0
+34.157.16.0/20,6252001,nan,North America,US,United States,0,0
+34.157.32.0/22,6252001,nan,North America,US,United States,0,0
+34.157.36.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.157.40.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.157.44.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.157.46.0/23,6252001,nan,North America,US,United States,0,0
+34.157.48.0/20,2921044,EU,Europe,DE,Germany,0,0
+34.157.64.0/20,1861060,AS,Asia,JP,Japan,0,0
+34.157.80.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.157.82.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.157.84.0/23,6252001,nan,North America,US,United States,0,0
+34.157.86.0/24,6252001,nan,North America,US,United States,0,0
+34.157.87.0/24,1269750,AS,Asia,IN,India,0,0
+34.157.88.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.157.90.0/23,294640,AS,Asia,IL,Israel,0,0
+34.157.92.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+34.157.96.0/20,6252001,nan,North America,US,United States,0,0
+34.157.112.0/21,6252001,nan,North America,US,United States,0,0
+34.157.120.0/24,6252001,nan,North America,US,United States,0,0
+34.157.121.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.157.122.0/25,3895114,SA,South America,CL,Chile,0,0
+34.157.122.128/25,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.157.123.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.157.123.128/25,6252001,nan,North America,US,United States,0,0
+34.157.124.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.157.126.0/23,289688,AS,Asia,QA,Qatar,0,0
+34.157.128.0/21,6252001,nan,North America,US,United States,0,0
+34.157.136.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.157.138.0/23,6252001,nan,North America,US,United States,0,0
+34.157.140.0/22,3017382,EU,Europe,FR,France,0,0
+34.157.144.0/20,6252001,nan,North America,US,United States,0,0
+34.157.160.0/22,6252001,nan,North America,US,United States,0,0
+34.157.164.0/22,1861060,AS,Asia,JP,Japan,0,0
+34.157.168.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+34.157.172.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.157.174.0/23,6252001,nan,North America,US,United States,0,0
+34.157.176.0/20,2921044,EU,Europe,DE,Germany,0,0
+34.157.192.0/20,1861060,AS,Asia,JP,Japan,0,0
+34.157.208.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.157.210.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.157.212.0/23,6252001,nan,North America,US,United States,0,0
+34.157.214.0/24,6252001,nan,North America,US,United States,0,0
+34.157.215.0/24,1269750,AS,Asia,IN,India,0,0
+34.157.216.0/23,294640,AS,Asia,IL,Israel,0,0
+34.157.218.0/25,3895114,SA,South America,CL,Chile,0,0
+34.157.218.128/25,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.157.219.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.157.219.128/25,6252001,nan,North America,US,United States,0,0
+34.157.220.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+34.157.224.0/20,6252001,nan,North America,US,United States,0,0
+34.157.240.0/21,6252001,nan,North America,US,United States,0,0
+34.157.248.0/24,6252001,nan,North America,US,United States,0,0
+34.157.249.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.157.250.0/23,3175395,EU,Europe,IT,Italy,0,0
+34.157.252.0/23,289688,AS,Asia,QA,Qatar,0,0
+34.157.254.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.157.255.0/24,6251999,nan,North America,CA,Canada,0,0
+34.158.0.0/20,6252001,nan,North America,US,United States,0,0
+34.158.16.0/20,2658434,EU,Europe,CH,Switzerland,0,0
+34.158.32.0/19,1880251,AS,Asia,SG,Singapore,0,0
+34.158.64.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+34.158.128.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+34.158.192.0/19,1835841,AS,Asia,KR,South Korea,0,0
+34.158.224.0/20,798544,EU,Europe,PL,Poland,0,0
+34.158.240.0/20,6252001,nan,North America,US,United States,0,0
+34.159.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+34.160.0.0/15,6252001,nan,North America,US,United States,0,0
+34.162.0.0/16,6252001,nan,North America,US,United States,0,0
+34.163.0.0/16,3017382,EU,Europe,FR,France,0,0
+34.164.0.0/16,2510769,EU,Europe,ES,Spain,0,0
+34.165.0.0/16,294640,AS,Asia,IL,Israel,0,0
+34.166.0.0/16,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.167.0.0/16,6252001,nan,North America,US,United States,0,0
+34.168.0.0/14,6252001,nan,North America,US,United States,0,0
+34.172.0.0/15,6252001,nan,North America,US,United States,0,0
+34.174.0.0/16,6252001,nan,North America,US,United States,0,0
+34.175.0.0/18,2510769,EU,Europe,ES,Spain,0,0
+34.175.64.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.0/26,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.64/30,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.68/32,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.69/32,2264397,EU,Europe,PT,Portugal,0,0
+34.175.65.70/31,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.72/29,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.80/28,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.96/27,2510769,EU,Europe,ES,Spain,0,0
+34.175.65.128/25,2510769,EU,Europe,ES,Spain,0,0
+34.175.66.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.175.68.0/22,2510769,EU,Europe,ES,Spain,0,0
+34.175.72.0/21,2510769,EU,Europe,ES,Spain,0,0
+34.175.80.0/20,2510769,EU,Europe,ES,Spain,0,0
+34.175.96.0/20,2510769,EU,Europe,ES,Spain,0,0
+34.175.112.0/21,2510769,EU,Europe,ES,Spain,0,0
+34.175.120.0/22,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.0/25,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.128/26,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.192/27,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.224/28,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.240/31,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.242/32,2542007,AF,Africa,MA,Morocco,0,0
+34.175.124.243/32,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.244/30,2510769,EU,Europe,ES,Spain,0,0
+34.175.124.248/29,2510769,EU,Europe,ES,Spain,0,0
+34.175.125.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.175.126.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.175.128.0/18,2510769,EU,Europe,ES,Spain,0,0
+34.175.192.0/20,2510769,EU,Europe,ES,Spain,0,0
+34.175.208.0/21,2510769,EU,Europe,ES,Spain,0,0
+34.175.216.0/22,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.0/25,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.128/28,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.144/29,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.152/30,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.156/32,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.157/32,2328926,AF,Africa,NG,Nigeria,0,0
+34.175.220.158/31,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.160/27,2510769,EU,Europe,ES,Spain,0,0
+34.175.220.192/26,2510769,EU,Europe,ES,Spain,0,0
+34.175.221.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.175.222.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.175.224.0/21,2510769,EU,Europe,ES,Spain,0,0
+34.175.232.0/23,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.0/25,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.128/26,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.192/31,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.194/32,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.195/32,2245662,AF,Africa,SN,Senegal,0,0
+34.175.234.196/30,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.200/29,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.208/28,2510769,EU,Europe,ES,Spain,0,0
+34.175.234.224/27,2510769,EU,Europe,ES,Spain,0,0
+34.175.235.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.175.236.0/22,2510769,EU,Europe,ES,Spain,0,0
+34.175.240.0/20,2510769,EU,Europe,ES,Spain,0,0
+34.176.0.0/16,3895114,SA,South America,CL,Chile,0,0
+34.177.0.0/19,6252001,nan,North America,US,United States,0,0
+34.177.32.0/22,1269750,AS,Asia,IN,India,0,0
+34.177.36.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.177.38.0/23,6252001,nan,North America,US,United States,0,0
+34.177.40.0/21,6252001,nan,North America,US,United States,0,0
+34.177.48.0/23,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.177.50.0/23,953987,AF,Africa,ZA,South Africa,0,0
+34.177.52.0/22,6252001,nan,North America,US,United States,0,0
+34.177.56.0/21,6252001,nan,North America,US,United States,0,0
+34.177.64.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.177.65.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.177.65.128/25,6251999,nan,North America,CA,Canada,0,0
+34.177.66.0/25,3895114,SA,South America,CL,Chile,0,0
+34.177.66.128/25,1269750,AS,Asia,IN,India,0,0
+34.177.67.0/24,6252001,nan,North America,US,United States,0,0
+34.177.68.0/24,1861060,AS,Asia,JP,Japan,0,0
+34.177.69.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.177.70.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.177.71.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.177.72.0/23,1880251,AS,Asia,SG,Singapore,0,0
+34.177.74.0/23,1269750,AS,Asia,IN,India,0,0
+34.177.76.0/23,2921044,EU,Europe,DE,Germany,0,0
+34.177.78.0/25,3175395,EU,Europe,IT,Italy,0,0
+34.177.78.128/25,6252001,nan,North America,US,United States,0,0
+34.177.79.0/24,6252001,nan,North America,US,United States,0,0
+34.177.80.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.177.96.0/20,1880251,AS,Asia,SG,Singapore,0,0
+34.177.112.0/20,6252001,nan,North America,US,United States,0,0
+34.177.128.0/17,6252001,nan,North America,US,United States,0,0
+34.178.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+34.179.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+34.180.0.0/18,1269750,AS,Asia,IN,India,0,0
+34.180.64.0/18,1861060,AS,Asia,JP,Japan,0,0
+34.180.128.0/17,6252001,nan,North America,US,United States,0,0
+34.181.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.181.128.0/17,6252001,nan,North America,US,United States,0,0
+34.182.0.0/16,6252001,nan,North America,US,United States,0,0
+34.183.0.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.183.1.0/24,3895114,SA,South America,CL,Chile,0,0
+34.183.2.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.183.3.0/25,1269750,AS,Asia,IN,India,0,0
+34.183.3.128/25,3175395,EU,Europe,IT,Italy,0,0
+34.183.4.0/23,6252001,nan,North America,US,United States,0,0
+34.183.6.0/23,1605651,AS,Asia,TH,Thailand,0,0
+34.183.8.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.183.10.0/23,6252001,nan,North America,US,United States,0,0
+34.183.12.0/22,6252001,nan,North America,US,United States,0,0
+34.183.16.0/22,6252001,nan,North America,US,United States,0,0
+34.183.20.0/25,6252001,nan,North America,US,United States,0,0
+34.183.20.128/25,294640,AS,Asia,IL,Israel,0,0
+34.183.21.0/24,6251999,nan,North America,CA,Canada,0,0
+34.183.22.0/23,6252001,nan,North America,US,United States,0,0
+34.183.24.0/22,6252001,nan,North America,US,United States,0,0
+34.183.28.0/24,1269750,AS,Asia,IN,India,0,0
+34.183.29.0/24,6251999,nan,North America,CA,Canada,0,0
+34.183.30.0/23,6252001,nan,North America,US,United States,0,0
+34.183.32.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.183.33.0/24,6252001,nan,North America,US,United States,0,0
+34.183.34.0/23,6252001,nan,North America,US,United States,0,0
+34.183.36.0/24,1269750,AS,Asia,IN,India,0,0
+34.183.37.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.183.38.0/23,6252001,nan,North America,US,United States,0,0
+34.183.40.0/21,6252001,nan,North America,US,United States,0,0
+34.183.48.0/23,6252001,nan,North America,US,United States,0,0
+34.183.50.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.183.52.0/22,6252001,nan,North America,US,United States,0,0
+34.183.56.0/23,6252001,nan,North America,US,United States,0,0
+34.183.58.0/24,6252001,nan,North America,US,United States,0,0
+34.183.59.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.183.60.0/24,6252001,nan,North America,US,United States,0,0
+34.183.61.0/24,294640,AS,Asia,IL,Israel,0,0
+34.183.62.0/23,6252001,nan,North America,US,United States,0,0
+34.183.64.0/23,6252001,nan,North America,US,United States,0,0
+34.183.66.0/24,6252001,nan,North America,US,United States,0,0
+34.183.67.0/24,289688,AS,Asia,QA,Qatar,0,0
+34.183.68.0/24,6252001,nan,North America,US,United States,0,0
+34.183.69.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.183.70.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.183.71.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+34.183.72.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.183.73.0/24,3017382,EU,Europe,FR,France,0,0
+34.183.74.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.183.75.0/24,6251999,nan,North America,CA,Canada,0,0
+34.183.76.0/22,6252001,nan,North America,US,United States,0,0
+34.183.80.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.183.81.0/24,6252001,nan,North America,US,United States,0,0
+34.183.82.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.183.83.0/24,6252001,nan,North America,US,United States,0,0
+34.183.84.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.183.88.0/21,6252001,nan,North America,US,United States,0,0
+34.183.96.0/21,6252001,nan,North America,US,United States,0,0
+34.183.104.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+34.183.105.0/24,6252001,nan,North America,US,United States,0,0
+34.183.106.0/23,1269750,AS,Asia,IN,India,0,0
+34.183.108.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.183.109.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+34.183.110.0/24,3895114,SA,South America,CL,Chile,0,0
+34.183.111.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.183.112.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.183.113.0/24,6252001,nan,North America,US,United States,0,0
+34.183.114.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.183.115.0/24,6252001,nan,North America,US,United States,0,0
+34.183.116.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.183.118.0/24,6251999,nan,North America,CA,Canada,0,0
+34.183.119.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.183.120.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.183.122.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.183.123.0/24,953987,AF,Africa,ZA,South Africa,0,0
+34.183.124.0/22,6252001,nan,North America,US,United States,0,0
+34.183.128.0/17,6252001,nan,North America,US,United States,0,0
+34.184.0.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.184.1.0/24,3895114,SA,South America,CL,Chile,0,0
+34.184.2.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.184.3.0/25,1269750,AS,Asia,IN,India,0,0
+34.184.3.128/25,294640,AS,Asia,IL,Israel,0,0
+34.184.4.0/23,6252001,nan,North America,US,United States,0,0
+34.184.6.0/23,1605651,AS,Asia,TH,Thailand,0,0
+34.184.8.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.184.10.0/23,6252001,nan,North America,US,United States,0,0
+34.184.12.0/22,6252001,nan,North America,US,United States,0,0
+34.184.16.0/22,6252001,nan,North America,US,United States,0,0
+34.184.20.0/23,6252001,nan,North America,US,United States,0,0
+34.184.22.0/24,6251999,nan,North America,CA,Canada,0,0
+34.184.23.0/24,1269750,AS,Asia,IN,India,0,0
+34.184.24.0/22,6252001,nan,North America,US,United States,0,0
+34.184.28.0/23,6252001,nan,North America,US,United States,0,0
+34.184.30.0/24,6251999,nan,North America,CA,Canada,0,0
+34.184.31.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.184.32.0/23,6252001,nan,North America,US,United States,0,0
+34.184.34.0/24,6252001,nan,North America,US,United States,0,0
+34.184.35.0/24,1269750,AS,Asia,IN,India,0,0
+34.184.36.0/22,6252001,nan,North America,US,United States,0,0
+34.184.40.0/21,6252001,nan,North America,US,United States,0,0
+34.184.48.0/22,6252001,nan,North America,US,United States,0,0
+34.184.52.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.184.54.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.184.55.0/24,6252001,nan,North America,US,United States,0,0
+34.184.56.0/23,6252001,nan,North America,US,United States,0,0
+34.184.58.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.184.59.0/24,6252001,nan,North America,US,United States,0,0
+34.184.60.0/22,6252001,nan,North America,US,United States,0,0
+34.184.64.0/24,294640,AS,Asia,IL,Israel,0,0
+34.184.65.0/24,6252001,nan,North America,US,United States,0,0
+34.184.66.0/24,289688,AS,Asia,QA,Qatar,0,0
+34.184.67.0/24,6252001,nan,North America,US,United States,0,0
+34.184.68.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.184.69.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+34.184.70.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+34.184.71.0/24,1835841,AS,Asia,KR,South Korea,0,0
+34.184.72.0/24,3017382,EU,Europe,FR,France,0,0
+34.184.73.0/24,2802361,EU,Europe,BE,Belgium,0,0
+34.184.74.0/24,6251999,nan,North America,CA,Canada,0,0
+34.184.75.0/24,1880251,AS,Asia,SG,Singapore,0,0
+34.184.76.0/22,6252001,nan,North America,US,United States,0,0
+34.184.80.0/24,6252001,nan,North America,US,United States,0,0
+34.184.81.0/24,2921044,EU,Europe,DE,Germany,0,0
+34.184.82.0/24,6252001,nan,North America,US,United States,0,0
+34.184.83.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+34.184.84.0/22,2802361,EU,Europe,BE,Belgium,0,0
+34.184.88.0/21,6252001,nan,North America,US,United States,0,0
+34.184.96.0/21,6252001,nan,North America,US,United States,0,0
+34.184.104.0/24,6252001,nan,North America,US,United States,0,0
+34.184.105.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.184.106.0/23,1269750,AS,Asia,IN,India,0,0
+34.184.108.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+34.184.109.0/24,3895114,SA,South America,CL,Chile,0,0
+34.184.110.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+34.184.111.0/24,2510769,EU,Europe,ES,Spain,0,0
+34.184.112.0/24,6252001,nan,North America,US,United States,0,0
+34.184.113.0/24,3175395,EU,Europe,IT,Italy,0,0
+34.184.114.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+34.184.116.0/24,6252001,nan,North America,US,United States,0,0
+34.184.117.0/24,6251999,nan,North America,CA,Canada,0,0
+34.184.118.0/24,2077456,OC,Oceania,AU,Australia,0,0
+34.184.119.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+34.184.120.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+34.184.122.0/24,953987,AF,Africa,ZA,South Africa,0,0
+34.184.123.0/24,6252001,nan,North America,US,United States,0,0
+34.184.124.0/22,6252001,nan,North America,US,United States,0,0
+34.184.128.0/17,6252001,nan,North America,US,United States,0,0
+34.185.0.0/17,6252001,nan,North America,US,United States,0,0
+34.185.128.0/17,2921044,EU,Europe,DE,Germany,0,0
+34.186.0.0/17,6252001,nan,North America,US,United States,0,0
+34.186.128.0/18,6252001,nan,North America,US,United States,0,0
+34.186.192.0/19,6251999,nan,North America,CA,Canada,0,0
+34.186.224.0/19,6252001,nan,North America,US,United States,0,0
+34.187.0.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+34.187.128.0/17,6252001,nan,North America,US,United States,0,0
+34.188.0.0/14,6252001,nan,North America,US,United States,0,0
+34.192.0.0/11,6252001,nan,North America,US,United States,0,0
+34.224.0.0/12,6252001,nan,North America,US,United States,0,0
+34.240.0.0/12,2963597,EU,Europe,IE,Ireland,0,0

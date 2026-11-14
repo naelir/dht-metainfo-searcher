@@ -1,0 +1,43 @@
+19.0.0.0/13,6252001,nan,North America,US,United States,0,0
+19.8.0.0/14,6252001,nan,North America,US,United States,0,0
+19.12.0.0/20,6252001,nan,North America,US,United States,0,0
+19.12.16.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+19.12.18.0/24,2921044,EU,Europe,DE,Germany,0,0
+19.12.19.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+19.12.20.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+19.12.24.0/21,6252001,nan,North America,US,United States,0,0
+19.12.32.0/22,1880251,AS,Asia,SG,Singapore,0,0
+19.12.36.0/22,6252001,nan,North America,US,United States,0,0
+19.12.40.0/21,6252001,nan,North America,US,United States,0,0
+19.12.48.0/20,6252001,nan,North America,US,United States,0,0
+19.12.64.0/18,6252001,nan,North America,US,United States,0,0
+19.12.128.0/17,6252001,nan,North America,US,United States,0,0
+19.13.0.0/16,6252001,nan,North America,US,United States,0,0
+19.14.0.0/15,6252001,nan,North America,US,United States,0,0
+19.16.0.0/12,6252001,nan,North America,US,United States,0,0
+19.32.0.0/11,6252001,nan,North America,US,United States,0,0
+19.64.0.0/10,6252001,nan,North America,US,United States,0,0
+19.128.0.0/10,6252001,nan,North America,US,United States,0,0
+19.192.0.0/11,6252001,nan,North America,US,United States,0,0
+19.224.0.0/13,6252001,nan,North America,US,United States,0,0
+19.232.0.0/15,6252001,nan,North America,US,United States,0,0
+19.234.0.0/18,6252001,nan,North America,US,United States,0,0
+19.234.64.0/21,6252001,nan,North America,US,United States,0,0
+19.234.72.0/23,6252001,nan,North America,US,United States,0,0
+19.234.74.0/25,6252001,nan,North America,US,United States,0,0
+19.234.74.128/27,6252001,nan,North America,US,United States,0,0
+19.234.74.160/28,6252001,nan,North America,US,United States,0,0
+19.234.74.176/32,6252001,nan,North America,US,United States,0,0
+19.234.74.177/32,3469034,SA,South America,BR,Brazil,0,0
+19.234.74.178/31,6252001,nan,North America,US,United States,0,0
+19.234.74.180/30,6252001,nan,North America,US,United States,0,0
+19.234.74.184/29,6252001,nan,North America,US,United States,0,0
+19.234.74.192/26,6252001,nan,North America,US,United States,0,0
+19.234.75.0/24,6252001,nan,North America,US,United States,0,0
+19.234.76.0/22,6252001,nan,North America,US,United States,0,0
+19.234.80.0/20,6252001,nan,North America,US,United States,0,0
+19.234.96.0/19,6252001,nan,North America,US,United States,0,0
+19.234.128.0/17,6252001,nan,North America,US,United States,0,0
+19.235.0.0/16,6252001,nan,North America,US,United States,0,0
+19.236.0.0/14,6252001,nan,North America,US,United States,0,0
+19.240.0.0/12,6252001,nan,North America,US,United States,0,0
