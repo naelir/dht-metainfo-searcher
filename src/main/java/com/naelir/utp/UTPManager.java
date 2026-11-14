@@ -46,7 +46,7 @@ import com.google.common.cache.RemovalNotification;
  */
 public class UTPManager {
     public static final Logger logger = LogManager.getLogger(UTPManager.class);
-    // ── Inner types ───────────────────────────────────────────────────────────
+
     /**
      * How long a connection may sit without receiving any packet before it is
      * forcibly evicted. Without this, connections that stall after a handshake (or
@@ -135,7 +135,6 @@ public class UTPManager {
         }
         return connection;
     }
-    // ── Public API ────────────────────────────────────────────────────────────
 
     /** Read-only snapshot of active connections. */
     public Map<ConnectionKey, UTPConnection> getConnections() {
@@ -244,7 +243,6 @@ public class UTPManager {
      */
     public record ConnectionKey(String ip, int port, int connId) {
     }
-    // ── Internal helpers ──────────────────────────────────────────────────────
 
     /**
      * A uTP packet that the caller must transmit over UDP. Mirrors one element of

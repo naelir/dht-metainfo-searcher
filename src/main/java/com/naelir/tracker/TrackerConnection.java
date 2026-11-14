@@ -31,18 +31,15 @@ public class TrackerConnection {
 
     private static final Random RNG = new Random();
 
-    // ── identity ─────────────────────────────────────────────────────────────
     protected final String hostAddress;
     protected final int port;
 
     /** Current transaction ID – changes on every {@link #reconnect()}. */
     protected int transactionId;
 
-    // ── connection state ─────────────────────────────────────────────────────
     protected long connectionId;
     protected long connectionReceivedAt; // epoch ms; 0 = no live connection
 
-    // ── scrape state ─────────────────────────────────────────────────────────
     /** All hashes that still need stats (the ones we haven't sent yet + pending). */
     protected final List<Entry> allHashes;
 
@@ -55,8 +52,6 @@ public class TrackerConnection {
         this.allHashes   = new ArrayList<>(hashes);
         this.transactionId = newTid();
     }
-
-    // ── public API ───────────────────────────────────────────────────────────
 
     /** Returns the transaction ID currently identifying this connection attempt. */
     public int transactionId() { return transactionId; }

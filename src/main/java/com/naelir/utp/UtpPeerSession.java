@@ -49,7 +49,6 @@ public class UtpPeerSession {
             }
         };
     }
-    // ── Inbound path ──────────────────────────────────────────────────────────
 
     /**
      * Closes the embedded pipeline (fires {@code channelInactive} on
@@ -72,7 +71,6 @@ public class UtpPeerSession {
         }
         this.embeddedChannel.close();
     }
-    // ── Lifecycle ─────────────────────────────────────────────────────────────
 
     /**
      * Feed a raw application-level payload (the {@code byte[]} from

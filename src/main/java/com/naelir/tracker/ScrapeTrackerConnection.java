@@ -41,8 +41,6 @@ public class ScrapeTrackerConnection extends TrackerConnection {
      */
     private int scrapeOffset;
 
-    // ─────────────────────────────────────────────────────────────────────────
-
     public ScrapeTrackerConnection(String hostAddress, int port, Set<Entry> hashes) {
         super(hostAddress, port, hashes);
     }

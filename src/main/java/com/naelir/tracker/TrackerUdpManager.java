@@ -52,12 +52,10 @@ public class TrackerUdpManager {
      * {@link TrackerConnection#reconnect()} is called.
      */
     private final Map<Integer, TrackerConnection> connections = new HashMap<>();
-    // ── static helper ────────────────────────────────────────────────────────
 
     public TrackerUdpManager(Data data) {
         this.data = data;
     }
-    // ── entry point ──────────────────────────────────────────────────────────
 
     /**
      * Parses a raw datagram and returns an optional response to send back.
@@ -92,7 +90,6 @@ public class TrackerUdpManager {
             return null;
         }
     }
-    // ── session factory ──────────────────────────────────────────────────────
 
     /**
      * Creates a new {@link TrackerConnection} for the given tracker and registers
@@ -109,7 +106,6 @@ public class TrackerUdpManager {
         logger.info("Initiating tracker session {}:{}", tc.hostAddress, tc.port);
         return tc.connect();
     }
-    // ── handlers ─────────────────────────────────────────────────────────────
 
     protected Optional<byte[]> onAnnounceResponse(AnnounceResponse resp, From from) {
         AnnounceTrackerConnection tc = (AnnounceTrackerConnection) this.connections.get(resp.transactionId);
