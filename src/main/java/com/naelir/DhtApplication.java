@@ -89,7 +89,7 @@ public final class DhtApplication implements Runnable {
                     ? new MongoEntryRepository(arguments.connectionString, arguments.db, arguments.table)
                     : new NullEntryRepository();
             Data data = new Data(udpmyselfs, tcpmyself, fileDB, locationDb, repo, this.arguments);
-            boolean crawl = arguments.mode < 1 && arguments.mode > 2;
+            boolean crawl = arguments.mode < 1 || arguments.mode > 2;
 
             if (crawl == false && arguments.scrapeIn != null) {
                 Set<Entry> all = fileDB.readScrape(arguments.scrapeIn);
@@ -136,6 +136,7 @@ public final class DhtApplication implements Runnable {
                 UdpTorrentResolverTask resolverTask = new UdpTorrentResolverTask(utpClient, data);
                 TcpTorrentResolverTask tcpResolverTask = new TcpTorrentResolverTask(tcpClient, data);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);
+                logger.info("crawl {}, loaded {} nodes from saved compact info", crawl, saved.size());
                 if (crawl) {
                     utpClient.explore(data.myself, saved);
                 }
