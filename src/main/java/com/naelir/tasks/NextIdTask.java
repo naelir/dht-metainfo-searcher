@@ -1,7 +1,6 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,14 +8,16 @@ import org.apache.logging.log4j.Logger;
 import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
-import com.naelir.dht.Node;
+import com.naelir.utp.UtpClient;
 
 public class NextIdTask implements ITask {
     public static final Logger logger = LogManager.getLogger(NextIdTask.class);
     private Data data;
     private ByteBuffer nextId;
+    private UtpClient client;
 
-    public NextIdTask(Data data) {
+    public NextIdTask(UtpClient client, Data data) {
+        this.client = client;
         this.data = data;
     }
 
@@ -40,14 +41,9 @@ public class NextIdTask implements ITask {
             } else {
                 k++;
             }
-            logger.info("{}", sample);
+            logger.debug("{}", sample);
         }
         logger.info("next id is {}, crap {}, resolved {}, not {}", myself, j, r, k);
-        List<Node> nodes = this.data.table.closest(this.nextId, 20);
-        this.data.clear();
-        for (Node e : nodes) {
-            e.queries.clear();
-            this.data.table.insert(e);
-        }
+
     }
 }

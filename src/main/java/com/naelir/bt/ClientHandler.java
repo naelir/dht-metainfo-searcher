@@ -30,7 +30,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
-    static final int MAX_ALLOWED_META_SIZE = 512 * 1024;
+    static final int MAX_ALLOWED_META_SIZE = 1024 * 1024;
     private static final List<String> DENIED_PRE = List.of("-XT");
     private String myself;
     private Torrent task;

@@ -132,7 +132,7 @@ public final class DhtApplication implements Runnable {
                     UtpClient utpClient = new UtpClient(channel, data, utpManager, trackerUdpManager);
                     BtTcpClient tcpClient = new BtTcpClient(data);
             ) {
-                NodeMaintainer maintainer = NodeMaintainer.of(data, utpClient, tcpClient);
+                NodeMaintainer maintainer = new NodeMaintainer(utpClient, data);
                 UdpTorrentResolverTask resolverTask = new UdpTorrentResolverTask(utpClient, data);
                 TcpTorrentResolverTask tcpResolverTask = new TcpTorrentResolverTask(tcpClient, data);
                 List<Node> saved = SavedCompactInfo.nodes(compactInfo);

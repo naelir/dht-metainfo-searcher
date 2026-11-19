@@ -1,12 +1,11 @@
 package com.naelir.tasks;
 
+import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.bt.BtTcpClient;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.utp.UtpClient;
@@ -14,17 +13,45 @@ import com.naelir.utp.UtpClient;
 public class NodeMaintainer implements Runnable {
     public static final Logger logger = LogManager.getLogger(NodeMaintainer.class);
 
-    public static NodeMaintainer of(Data data, UtpClient client, BtTcpClient tcp) throws Exception {
-        Queue<ITask> tasks = new LinkedList<>();
-        boolean rotate = true;
+    private Deque<ITask> tasks;
+    private Data data;
+    private UtpClient client;
+
+    public NodeMaintainer(UtpClient client, Data data) {
+        this.client = client;
+        this.tasks = new LinkedList<>();
+        this.data = data;
+    }
+
+    @Override
+    public void run() {
+        if (this.data.udptasks.size() > 10)
+            return;
+        ITask poll = tasks.poll();
+        if (poll != null) {
+            try {
+                poll.run();
+                if (poll.resolved()) {
+                    logger.info("task {} resolved", poll.getClass().getSimpleName());
+                } else {
+                    tasks.addFirst(poll);
+                }
+            } catch (Exception e) {
+                logger.error("task {} failed, will retry next tick: {}", poll.getClass().getSimpleName(),
+                        e.getMessage(), e);
+            }
+        } else {
+            tasks = tasks(data, client);
+        }
+    }
+    
+
+
+    Deque<ITask> tasks(Data data, UtpClient client) {
+        Deque<ITask> tasks = new LinkedList<>();
         if (data.config.mode == 0) {// normal search rotation
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
-            tasks.offer(new ScrapeSamplesTask(data));
-            tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask(data));
-            tasks.offer(new FilterSamplesTask(data));
-
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             tasks.offer(new ITask() {
@@ -39,7 +66,9 @@ public class NodeMaintainer implements Runnable {
                     ct.run();
                 }
             });
-            tasks.offer(new NextIdTask(data));
+
+            tasks.offer(new NextIdTask(client, data));
+            tasks.offer(new FireNextIdTask(client, data, true));
         } else if (data.config.mode == 1) { // scrape
             tasks.offer(new CreateScrapeHashesTask(data));
             tasks.offer(new ScrapeTask(client, data));
@@ -54,14 +83,18 @@ public class NodeMaintainer implements Runnable {
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new FindSampleInfohashesTask(client, data));
             tasks.offer(new ScrapeSamplesTask(data));
-            tasks.offer(new ScrapeTask(client, data));
-            tasks.offer(new WaitScrapeTask(data));
-            tasks.offer(new FilterSamplesTask(data));
-            tasks.offer(new NextIdTask(data));
+            boolean trackerScrape = data.scrapeHashes.size() > data.config.scrapeStep;
+            if (trackerScrape) {
+                tasks.offer(new ScrapeTask(client, data));
+                tasks.offer(new WaitScrapeTask(data));
+                tasks.offer(new FilterSamplesTask(data));
+            }
+            tasks.offer(new NextIdTask(client, data));
+            tasks.offer(new FireNextIdTask(client, data, trackerScrape));
+
         } else if (data.config.mode == 4) {// rotate old torrents
             tasks.offer(new FindNodeTask(client, data));
             tasks.offer(new LoadLowPeersHashesTask(data));
-
             GetPeersTask gpt = new GetPeersTask(client, data);
             CreateMetaTask ct = new CreateMetaTask(data);
             tasks.offer(new ITask() {
@@ -76,41 +109,9 @@ public class NodeMaintainer implements Runnable {
                     ct.run();
                 }
             });
-            tasks.offer(new NextIdTask(data));
+            tasks.offer(new NextIdTask(client, data));
+            tasks.offer(new FireNextIdTask(client, data, false));
         }
-        return new NodeMaintainer(tasks, data, rotate);
-    }
-
-    private Queue<ITask> tasks;
-    private ITask currentTask;
-    private boolean rotate;
-    private Data data;
-
-    public NodeMaintainer(Queue<ITask> tasks, Data data, boolean rotate) {
-        this.tasks = tasks;
-        this.data = data;
-        this.rotate = rotate;
-        this.currentTask = tasks.poll();
-    }
-
-    @Override
-    public void run() {
-        if (this.data.udptasks.size() > 10)
-            return;
-        if (this.currentTask != null) {
-            try {
-                this.currentTask.run();
-                if (this.currentTask.resolved()) {
-                    if (this.rotate) {
-                        this.tasks.offer(this.currentTask);
-                    }
-                    logger.info("task {} resolved", this.currentTask.getClass().getSimpleName());
-                    this.currentTask = this.tasks.poll();
-                }
-            } catch (Exception e) {
-                logger.error("task {} failed, will retry next tick: {}",
-                        this.currentTask.getClass().getSimpleName(), e.getMessage(), e);
-            }
-        }
+        return tasks;
     }
 }

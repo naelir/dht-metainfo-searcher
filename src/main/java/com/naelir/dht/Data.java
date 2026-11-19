@@ -84,18 +84,4 @@ public class Data {
         this.udpIds.offer(this.myself);
         return this.myself;
     }
-    
-    public void clear() {
-        scrapeHashes.clear();
-        requestsSent.invalidateAll();
-        tokensSent.invalidateAll();
-        tokensReceived.invalidateAll();
-        torrents.clear();
-        samples.clear();
-        forUpdate.clear();
-        forRemoval.clear();
-        table.clear();
-        stats.clear();
-        queue.clear();
-    }
 }
