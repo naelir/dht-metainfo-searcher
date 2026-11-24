@@ -76,7 +76,7 @@ public class SampleInfoHashesRequest implements IRequest {
 
     @Override
     public String toString() {
-        return "SampleInfoHashesRequest [id=" + Generator.toHex(this.id.array()) + ", target="
-                + Generator.toHex(this.target.array()) + "]";
+        return "SampleInfoHashesRequest [id=" + Converter.toHex(this.id.array()) + ", target="
+                + Converter.toHex(this.target.array()) + "]";
     }
 }

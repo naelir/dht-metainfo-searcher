@@ -20,10 +20,8 @@ import com.naelir.bt.messages.ext.ExtendedMessageHandshake;
 import com.naelir.bt.messages.ext.TorrentMetadataResponse;
 import com.naelir.bt.messages.ext.UtMetadataRequest;
 import com.naelir.dht.BDecoder;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
-import com.naelir.dht.Node;
-import com.naelir.tasks.MetaTorrentTask;
 import com.naelir.tasks.Sample;
 
 import io.netty.channel.Channel;
@@ -32,6 +30,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     public static final Logger logger = LogManager.getLogger(ClientHandler.class);
+    static final int MAX_ALLOWED_META_SIZE = 1024 * 1024;
     private static final List<String> DENIED_PRE = List.of("-XT");
     private String myself;
     private Torrent task;
@@ -51,7 +50,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
-        byte[] hex = Generator.toArray(this.task.infoHash);
+        byte[] hex = Converter.toArray(this.task.infoHash);
         channel.writeAndFlush(new HandshakeMessage(hex, this.myself));
     }
 
@@ -67,16 +66,10 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         if (this.piecesReceived > 0 && this.piecesReceived < this.piecesExpected) {
             decode(false, addr, port);
         }
-        if (task.meta() == null && this.metadata.length > 0 && task.retry == false) {
-            task.retry(true);
-            logger.info("task {} will be retried over tcp {}", task.infoHash, channel.getClass().getSimpleName());
-            data.tcptasks.add(new MetaTorrentTask(new Node(address.getAddress(), port), task));
-        }
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.debug("received {}", msg.getClass().getSimpleName());
         Channel channel = ctx.channel();
         InetSocketAddress remoteAddress = (InetSocketAddress) channel.remoteAddress();
         int port = remoteAddress.getPort();
@@ -96,7 +89,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
             channel.write(new ExtendedMessageHandshake(addr));
             channel.flush();
             logger.debug("peer {} responded: {}", eh.version, eh);
-            if (eh.metadata_size == 0) {
+            if (eh.metadata_size <= 0 || eh.metadata_size > MAX_ALLOWED_META_SIZE) {
                 logger.warn("will close peer {} metadata size {}", eh.version, eh.metadata_size);
                 ctx.close();
             }

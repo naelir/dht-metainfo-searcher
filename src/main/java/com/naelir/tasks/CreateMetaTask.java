@@ -7,7 +7,6 @@ import com.naelir.dht.Command;
 import com.naelir.dht.Data;
 import com.naelir.dht.ITask;
 import com.naelir.dht.Node;
-import com.naelir.fs.IpBlocker;
 
 public class CreateMetaTask implements ITask {
     public static final Logger logger = LogManager.getLogger(CreateMetaTask.class);
@@ -29,15 +28,11 @@ public class CreateMetaTask implements ITask {
                 logger.debug("createMetaTasks run on {} samples", this.data.samples.size());
             }
             for (Sample sample : this.data.samples.values()) {
-                if (sample.peers().size() < data.arguments.minPeers) {
-                    continue;
-                }
                 for (Node peer : sample.peers()) {
                     if (peer.have(Command.META) == false) {
                         peer.put(Command.META);
-                        if (IpBlocker.allowed(peer.location)) {
-                            this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent()));
-                        }
+                        this.data.udptasks.offer(new MetaTorrentTask(peer, sample.torrent()));
+//                        this.data.tcptasks.offerFirst(new MetaTorrentTask(peer, sample.torrent()));
                     }
                 }
             }

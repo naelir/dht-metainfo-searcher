@@ -6,36 +6,21 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.naelir.bt.Entry;
-/**
- * Simple file-backed CRUD store.
- *
- * <p>
- * The backing file is a CSV with {@code #} as separator and three columns:
- *
- * <pre>
- *   id#name#meta
- * </pre>
- *
- * {@code meta} is serialized as a JSON string value using Jackson. The
- * {@code id} column is the unique key.
- */
+
 public class FileDB implements IFileDB {
     public static final Logger logger = LogManager.getLogger(FileDB.class);
-    private static final String SEP = "#";
+    private static final String SEP = ",";
     private static final int SHARD_PREFIX_LEN = 3;
     public static final ObjectMapper MAPPER = new ObjectMapper();
-    /** Base directory: ~/filedb/ */
     static final Path HOME = Paths.get(System.getProperty("user.home")).resolve("dht-meta");
     static final Path BASE_DIR = HOME.resolve("filedb");
     static final Path UNRESOLVED = HOME.resolve("unresolved");
@@ -87,10 +72,6 @@ public class FileDB implements IFileDB {
         return id.substring(0, SHARD_PREFIX_LEN).toUpperCase();
     }
 
-    private static String toEntryLine(String hash, String json) throws IOException {
-        return hash + SEP + json;
-    }
-
     private BufferedWriter fineWriter;
     private BufferedWriter unresolvedWriter;
     private BufferedWriter resolvedWriter;
@@ -114,12 +95,11 @@ public class FileDB implements IFileDB {
             String prefix = shardPrefixForId(fr.hash);
             Path shard = shardPath(prefix);
             try (BufferedWriter writer = Files.newBufferedWriter(shard, java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)) {
-                String json = MAPPER.writeValueAsString(fr);
-                String entryLine = toEntryLine(fr.hash, json);
-                writer.write(entryLine);
+                String line = Entry.toLine(fr);
+                writer.write(line);
                 writer.newLine();
                 
-                resolvedWriter.write(entryLine);
+                resolvedWriter.write(line);
                 resolvedWriter.newLine();
                 resolvedWriter.flush();
             }
@@ -132,8 +112,7 @@ public class FileDB implements IFileDB {
     @Override
     public void fine(Entry fr) {
         try {
-            String json = MAPPER.writeValueAsString(fr);            
-            fineWriter.write(json);
+            fineWriter.write(Entry.toLine(fr));
             fineWriter.newLine();
             fineWriter.flush();
         } catch (Exception e) {
@@ -145,7 +124,7 @@ public class FileDB implements IFileDB {
     public void insertUnresolved(String hash) {
         try {
             unresolvedWriter.write(hash);
-            unresolvedWriter.write("\n");
+            unresolvedWriter.newLine();
             unresolvedWriter.flush();
         } catch (Exception e) {
             logger.error("cannot save", e);
@@ -173,65 +152,53 @@ public class FileDB implements IFileDB {
     }
     
     @Override
-    public List<String> readScrape(String path) {
-        List<String> result = new ArrayList<>();
+    public Set<Entry> readScrape(String path) {
+        Set<Entry> result = new HashSet<>();
         int i = 0;
         try (BufferedReader reader = Files.newBufferedReader(UNRESOLVED.resolve(path))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
-                if (line.isBlank() || line.length() < 40) {
-                    continue;
-                }
-                result.add(line);                
+                result.add(Entry.fromLine(line));                
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("on line {}", i);
         }
-
         return result;
     }
     
 
     @Override
-    public void writeScrape(String path, Set<Pair<String, Integer>> set) {
-        try (
-                BufferedWriter writer = Files.newBufferedWriter(UNRESOLVED.resolve(path), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE);
-                BufferedWriter writer0 = Files.newBufferedWriter(UNRESOLVED.resolve(path.concat(".0")), java.nio.file.StandardOpenOption.APPEND, java.nio.file.StandardOpenOption.CREATE)
-        ) {
-            for (Pair<String, Integer> e : set) {
-                if (e.getValue() == 0) {
-                    writer0.append(e.getKey());
-                    writer0.append("#");
-                    writer0.append(e.getValue().toString());
-                    writer0.append("\n");
-                } else {
-                    writer.append(e.getKey());
-                    writer.append("#");
-                    writer.append(e.getValue().toString());
-                    writer.append("\n");
-                }
+    public void writeScrape(Set<Entry> set) {
+        try {
+            Set<Entry> copyOf = Set.copyOf(set);
+            for (Entry e : copyOf) {
+                unresolvedWriter.append(Entry.toLine(e));
+                unresolvedWriter.newLine();
             }
-        } catch (IOException e) {
+            unresolvedWriter.flush();
+
+        } catch (Exception e) {
             logger.error("error when writing scrapes", e);
         }
     }
-    
+
     @Override
-    public List<String> unresolved(String path0) {
-        List<String> result = new ArrayList<>();
+    public Set<Entry> readResolved(String name) {
+        Set<Entry> result = new HashSet<>();
         int i = 0;
-        Path path = UNRESOLVED.resolve(path0);
-        try (BufferedReader reader = Files.newBufferedReader(path)) {
+        try (BufferedReader reader = Files.newBufferedReader(BASE_DIR.resolve(name.concat(".txt")))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 i++;
-                result.add(line.substring(0, 40));
+                Entry fromLine = Entry.fromLine(line);
+                result.remove(fromLine);
+                result.add(fromLine);                
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("on line {}", i);
         }
-
         return result;
     }
+
 }

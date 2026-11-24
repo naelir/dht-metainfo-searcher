@@ -1,0 +1,1952 @@
+201.0.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.2.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.2.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.2.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.2.224.0/20,6252001,nan,North America,US,United States,0,0
+201.2.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.3.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.3.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.3.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.3.112.0/21,2215636,AF,Africa,LY,Libya,0,0
+201.3.120.0/23,798544,EU,Europe,PL,Poland,0,0
+201.3.122.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.3.124.0/23,1643084,AS,Asia,ID,Indonesia,0,0
+201.3.126.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.3.127.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.3.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.3.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.3.224.0/22,798544,EU,Europe,PL,Poland,0,0
+201.3.228.0/23,798544,EU,Europe,PL,Poland,0,0
+201.3.230.0/24,798544,EU,Europe,PL,Poland,0,0
+201.3.231.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.3.232.0/22,798544,EU,Europe,PL,Poland,0,0
+201.3.236.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.3.237.0/24,798544,EU,Europe,PL,Poland,0,0
+201.3.238.0/23,798544,EU,Europe,PL,Poland,0,0
+201.3.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.4.0.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.2.0/24,6252001,nan,North America,US,United States,0,0
+201.4.3.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.4.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.6.0/24,6252001,nan,North America,US,United States,0,0
+201.4.7.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.8.0/21,6252001,nan,North America,US,United States,0,0
+201.4.16.0/20,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.32.0/21,1861060,AS,Asia,JP,Japan,0,0
+201.4.40.0/22,1861060,AS,Asia,JP,Japan,0,0
+201.4.44.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.4.45.0/24,453733,EU,Europe,EE,Estonia,0,0
+201.4.46.0/23,1880251,AS,Asia,SG,Singapore,0,0
+201.4.48.0/24,1880251,AS,Asia,SG,Singapore,0,0
+201.4.49.0/24,6252001,nan,North America,US,United States,0,0
+201.4.50.0/23,6252001,nan,North America,US,United States,0,0
+201.4.52.0/22,6252001,nan,North America,US,United States,0,0
+201.4.56.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+201.4.60.0/22,2921044,EU,Europe,DE,Germany,0,0
+201.4.64.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.4.72.0/23,798544,EU,Europe,PL,Poland,0,0
+201.4.74.0/24,798544,EU,Europe,PL,Poland,0,0
+201.4.75.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.76.0/22,798544,EU,Europe,PL,Poland,0,0
+201.4.80.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.4.96.0/22,6252001,nan,North America,US,United States,0,0
+201.4.100.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.4.101.0/24,6252001,nan,North America,US,United States,0,0
+201.4.102.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.4.103.0/24,6252001,nan,North America,US,United States,0,0
+201.4.104.0/24,3595528,nan,North America,GT,Guatemala,0,0
+201.4.105.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+201.4.106.0/24,3017382,EU,Europe,FR,France,0,0
+201.4.107.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.4.108.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.4.109.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.4.110.0/23,6252001,nan,North America,US,United States,0,0
+201.4.112.0/23,6252001,nan,North America,US,United States,0,0
+201.4.114.0/24,6252001,nan,North America,US,United States,0,0
+201.4.115.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.4.116.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.4.117.0/24,3017382,EU,Europe,FR,France,0,0
+201.4.118.0/24,3017382,EU,Europe,FR,France,0,0
+201.4.119.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+201.4.120.0/24,6252001,nan,North America,US,United States,0,0
+201.4.121.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.4.122.0/24,3017382,EU,Europe,FR,France,0,0
+201.4.123.0/24,6252001,nan,North America,US,United States,0,0
+201.4.124.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.4.125.0/24,6252001,nan,North America,US,United States,0,0
+201.4.126.0/23,6252001,nan,North America,US,United States,0,0
+201.4.128.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.4.132.0/24,6252001,nan,North America,US,United States,0,0
+201.4.133.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.134.0/24,6252001,nan,North America,US,United States,0,0
+201.4.135.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.136.0/24,6252001,nan,North America,US,United States,0,0
+201.4.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.138.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.139.0/24,6252001,nan,North America,US,United States,0,0
+201.4.140.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.141.0/24,6252001,nan,North America,US,United States,0,0
+201.4.142.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.143.0/24,6252001,nan,North America,US,United States,0,0
+201.4.144.0/24,6252001,nan,North America,US,United States,0,0
+201.4.145.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.146.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.147.0/24,6252001,nan,North America,US,United States,0,0
+201.4.148.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.149.0/24,6252001,nan,North America,US,United States,0,0
+201.4.150.0/24,6252001,nan,North America,US,United States,0,0
+201.4.151.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.152.0/21,6252001,nan,North America,US,United States,0,0
+201.4.160.0/22,6252001,nan,North America,US,United States,0,0
+201.4.164.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.165.0/24,6252001,nan,North America,US,United States,0,0
+201.4.166.0/23,6252001,nan,North America,US,United States,0,0
+201.4.168.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.169.0/24,6252001,nan,North America,US,United States,0,0
+201.4.170.0/23,6252001,nan,North America,US,United States,0,0
+201.4.172.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.174.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.175.0/24,6252001,nan,North America,US,United States,0,0
+201.4.176.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.177.0/24,6252001,nan,North America,US,United States,0,0
+201.4.178.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.180.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.182.0/24,6252001,nan,North America,US,United States,0,0
+201.4.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.184.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.185.0/24,6252001,nan,North America,US,United States,0,0
+201.4.186.0/23,6252001,nan,North America,US,United States,0,0
+201.4.188.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.190.0/24,6252001,nan,North America,US,United States,0,0
+201.4.191.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.192.0/23,6252001,nan,North America,US,United States,0,0
+201.4.194.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.196.0/22,6252001,nan,North America,US,United States,0,0
+201.4.200.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.4.204.0/23,6252001,nan,North America,US,United States,0,0
+201.4.206.0/24,6252001,nan,North America,US,United States,0,0
+201.4.207.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.208.0/21,6252001,nan,North America,US,United States,0,0
+201.4.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.217.0/24,6252001,nan,North America,US,United States,0,0
+201.4.218.0/24,6252001,nan,North America,US,United States,0,0
+201.4.219.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.220.0/24,6252001,nan,North America,US,United States,0,0
+201.4.221.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.222.0/24,6252001,nan,North America,US,United States,0,0
+201.4.223.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.225.0/24,6252001,nan,North America,US,United States,0,0
+201.4.226.0/24,6252001,nan,North America,US,United States,0,0
+201.4.227.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.228.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.230.0/23,6252001,nan,North America,US,United States,0,0
+201.4.232.0/22,6252001,nan,North America,US,United States,0,0
+201.4.236.0/24,6252001,nan,North America,US,United States,0,0
+201.4.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.238.0/24,6252001,nan,North America,US,United States,0,0
+201.4.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.240.0/24,6252001,nan,North America,US,United States,0,0
+201.4.241.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.243.0/24,6252001,nan,North America,US,United States,0,0
+201.4.244.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.4.245.0/24,6252001,nan,North America,US,United States,0,0
+201.4.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.4.248.0/21,6252001,nan,North America,US,United States,0,0
+201.5.0.0/16,1819730,AS,Asia,HK,Hong Kong,0,0
+201.6.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.7.0.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.7.16.0/22,798544,EU,Europe,PL,Poland,0,0
+201.7.20.0/23,798544,EU,Europe,PL,Poland,0,0
+201.7.22.0/24,798544,EU,Europe,PL,Poland,0,0
+201.7.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.24.0/23,798544,EU,Europe,PL,Poland,0,0
+201.7.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.27.0/24,798544,EU,Europe,PL,Poland,0,0
+201.7.28.0/23,798544,EU,Europe,PL,Poland,0,0
+201.7.30.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.7.32.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.7.34.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.35.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.36.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.38.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.39.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.40.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.44.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.47.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.48.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.56.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.57.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.58.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.60.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.61.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.62.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.7.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.7.128.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.7.144.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.7.146.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.0/28,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.16/32,2077456,OC,Oceania,AU,Australia,0,0
+201.7.147.17/32,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.18/31,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.20/30,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.24/29,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.32/27,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.64/26,3469034,SA,South America,BR,Brazil,0,0
+201.7.147.128/25,3469034,SA,South America,BR,Brazil,0,0
+201.7.148.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.7.152.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.7.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.7.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.8.0.0/19,6252001,nan,North America,US,United States,0,0
+201.8.32.0/23,6252001,nan,North America,US,United States,0,0
+201.8.34.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.36.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.37.0/24,6252001,nan,North America,US,United States,0,0
+201.8.38.0/24,6252001,nan,North America,US,United States,0,0
+201.8.39.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.40.0/24,6252001,nan,North America,US,United States,0,0
+201.8.41.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.42.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.44.0/23,6252001,nan,North America,US,United States,0,0
+201.8.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.47.0/24,6252001,nan,North America,US,United States,0,0
+201.8.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.8.64.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.66.0/23,6252001,nan,North America,US,United States,0,0
+201.8.68.0/24,6252001,nan,North America,US,United States,0,0
+201.8.69.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.70.0/23,6252001,nan,North America,US,United States,0,0
+201.8.72.0/22,6252001,nan,North America,US,United States,0,0
+201.8.76.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.8.80.0/22,6252001,nan,North America,US,United States,0,0
+201.8.84.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.85.0/24,6252001,nan,North America,US,United States,0,0
+201.8.86.0/24,6252001,nan,North America,US,United States,0,0
+201.8.87.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.88.0/23,6252001,nan,North America,US,United States,0,0
+201.8.90.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.91.0/24,6252001,nan,North America,US,United States,0,0
+201.8.92.0/24,6252001,nan,North America,US,United States,0,0
+201.8.93.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.94.0/24,6252001,nan,North America,US,United States,0,0
+201.8.95.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.96.0/23,6252001,nan,North America,US,United States,0,0
+201.8.98.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.99.0/24,6252001,nan,North America,US,United States,0,0
+201.8.100.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.101.0/24,6252001,nan,North America,US,United States,0,0
+201.8.102.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.103.0/24,6252001,nan,North America,US,United States,0,0
+201.8.104.0/24,6252001,nan,North America,US,United States,0,0
+201.8.105.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.107.0/24,6252001,nan,North America,US,United States,0,0
+201.8.108.0/22,6252001,nan,North America,US,United States,0,0
+201.8.112.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.8.116.0/24,6252001,nan,North America,US,United States,0,0
+201.8.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.118.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.120.0/23,6252001,nan,North America,US,United States,0,0
+201.8.122.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.124.0/24,6252001,nan,North America,US,United States,0,0
+201.8.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.126.0/23,6252001,nan,North America,US,United States,0,0
+201.8.128.0/21,6252001,nan,North America,US,United States,0,0
+201.8.136.0/22,6252001,nan,North America,US,United States,0,0
+201.8.140.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.141.0/24,6252001,nan,North America,US,United States,0,0
+201.8.142.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.143.0/24,6252001,nan,North America,US,United States,0,0
+201.8.144.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.146.0/23,6252001,nan,North America,US,United States,0,0
+201.8.148.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.150.0/24,6252001,nan,North America,US,United States,0,0
+201.8.151.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.152.0/21,6252001,nan,North America,US,United States,0,0
+201.8.160.0/22,6252001,nan,North America,US,United States,0,0
+201.8.164.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.165.0/24,6252001,nan,North America,US,United States,0,0
+201.8.166.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.167.0/24,6252001,nan,North America,US,United States,0,0
+201.8.168.0/21,6252001,nan,North America,US,United States,0,0
+201.8.176.0/21,6252001,nan,North America,US,United States,0,0
+201.8.184.0/23,6252001,nan,North America,US,United States,0,0
+201.8.186.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.188.0/24,6252001,nan,North America,US,United States,0,0
+201.8.189.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.190.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.191.0/24,6252001,nan,North America,US,United States,0,0
+201.8.192.0/21,6252001,nan,North America,US,United States,0,0
+201.8.200.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.201.0/24,6252001,nan,North America,US,United States,0,0
+201.8.202.0/23,6252001,nan,North America,US,United States,0,0
+201.8.204.0/23,6252001,nan,North America,US,United States,0,0
+201.8.206.0/24,6252001,nan,North America,US,United States,0,0
+201.8.207.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.208.0/22,6252001,nan,North America,US,United States,0,0
+201.8.212.0/23,6252001,nan,North America,US,United States,0,0
+201.8.214.0/24,6252001,nan,North America,US,United States,0,0
+201.8.215.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.217.0/24,6252001,nan,North America,US,United States,0,0
+201.8.218.0/23,6252001,nan,North America,US,United States,0,0
+201.8.220.0/22,6252001,nan,North America,US,United States,0,0
+201.8.224.0/23,6252001,nan,North America,US,United States,0,0
+201.8.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.227.0/24,6252001,nan,North America,US,United States,0,0
+201.8.228.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.229.0/24,6252001,nan,North America,US,United States,0,0
+201.8.230.0/24,6252001,nan,North America,US,United States,0,0
+201.8.231.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.232.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.8.234.0/23,6252001,nan,North America,US,United States,0,0
+201.8.236.0/23,6252001,nan,North America,US,United States,0,0
+201.8.238.0/24,6252001,nan,North America,US,United States,0,0
+201.8.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.8.240.0/20,6252001,nan,North America,US,United States,0,0
+201.9.0.0/16,6252001,nan,North America,US,United States,0,0
+201.10.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.10.64.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.10.65.0/24,6252001,nan,North America,US,United States,0,0
+201.10.66.0/23,6252001,nan,North America,US,United States,0,0
+201.10.68.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.10.72.0/21,6252001,nan,North America,US,United States,0,0
+201.10.80.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.10.81.0/24,6252001,nan,North America,US,United States,0,0
+201.10.82.0/23,2921044,EU,Europe,DE,Germany,0,0
+201.10.84.0/23,2921044,EU,Europe,DE,Germany,0,0
+201.10.86.0/24,458258,EU,Europe,LV,Latvia,0,0
+201.10.87.0/24,6252001,nan,North America,US,United States,0,0
+201.10.88.0/23,2921044,EU,Europe,DE,Germany,0,0
+201.10.90.0/23,798544,EU,Europe,PL,Poland,0,0
+201.10.92.0/23,2921044,EU,Europe,DE,Germany,0,0
+201.10.94.0/24,6252001,nan,North America,US,United States,0,0
+201.10.95.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.10.96.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.10.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.11.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.11.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.11.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.11.224.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.11.225.0/24,6252001,nan,North America,US,United States,0,0
+201.11.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.11.227.0/24,6252001,nan,North America,US,United States,0,0
+201.11.228.0/22,6252001,nan,North America,US,United States,0,0
+201.11.232.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.11.233.0/24,6252001,nan,North America,US,United States,0,0
+201.11.234.0/23,6252001,nan,North America,US,United States,0,0
+201.11.236.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.11.237.0/24,6252001,nan,North America,US,United States,0,0
+201.11.238.0/24,6252001,nan,North America,US,United States,0,0
+201.11.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.11.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.12.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.14.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.14.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.14.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.14.208.0/20,6252001,nan,North America,US,United States,0,0
+201.14.224.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.14.225.0/24,1861060,AS,Asia,JP,Japan,0,0
+201.14.226.0/24,6252001,nan,North America,US,United States,0,0
+201.14.227.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.14.228.0/23,6252001,nan,North America,US,United States,0,0
+201.14.230.0/24,1861060,AS,Asia,JP,Japan,0,0
+201.14.231.0/24,6252001,nan,North America,US,United States,0,0
+201.14.232.0/23,6252001,nan,North America,US,United States,0,0
+201.14.234.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.14.235.0/24,6252001,nan,North America,US,United States,0,0
+201.14.236.0/22,6252001,nan,North America,US,United States,0,0
+201.14.240.0/24,6252001,nan,North America,US,United States,0,0
+201.14.241.0/24,1861060,AS,Asia,JP,Japan,0,0
+201.14.242.0/23,6252001,nan,North America,US,United States,0,0
+201.14.244.0/23,6252001,nan,North America,US,United States,0,0
+201.14.246.0/24,6252001,nan,North America,US,United States,0,0
+201.14.247.0/24,3017382,EU,Europe,FR,France,0,0
+201.14.248.0/24,3017382,EU,Europe,FR,France,0,0
+201.14.249.0/24,6252001,nan,North America,US,United States,0,0
+201.14.250.0/23,6252001,nan,North America,US,United States,0,0
+201.14.252.0/24,6252001,nan,North America,US,United States,0,0
+201.14.253.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.14.254.0/24,6252001,nan,North America,US,United States,0,0
+201.14.255.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.15.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.15.128.0/20,1819730,AS,Asia,HK,Hong Kong,0,0
+201.15.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.15.160.0/20,1819730,AS,Asia,HK,Hong Kong,0,0
+201.15.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.15.192.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.15.208.0/20,1819730,AS,Asia,HK,Hong Kong,0,0
+201.15.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.16.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.18.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.18.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.18.192.0/20,1269750,AS,Asia,IN,India,0,0
+201.18.208.0/22,597427,EU,Europe,LT,Lithuania,0,0
+201.18.212.0/23,597427,EU,Europe,LT,Lithuania,0,0
+201.18.214.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.18.215.0/24,597427,EU,Europe,LT,Lithuania,0,0
+201.18.216.0/21,597427,EU,Europe,LT,Lithuania,0,0
+201.18.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.19.0.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.1.0/24,6252001,nan,North America,US,United States,0,0
+201.19.2.0/23,6252001,nan,North America,US,United States,0,0
+201.19.4.0/23,6252001,nan,North America,US,United States,0,0
+201.19.6.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.7.0/24,6252001,nan,North America,US,United States,0,0
+201.19.8.0/24,6252001,nan,North America,US,United States,0,0
+201.19.9.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.10.0/23,6252001,nan,North America,US,United States,0,0
+201.19.12.0/22,6252001,nan,North America,US,United States,0,0
+201.19.16.0/24,6252001,nan,North America,US,United States,0,0
+201.19.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.18.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.20.0/22,6252001,nan,North America,US,United States,0,0
+201.19.24.0/24,6252001,nan,North America,US,United States,0,0
+201.19.25.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.27.0/24,6252001,nan,North America,US,United States,0,0
+201.19.28.0/22,6252001,nan,North America,US,United States,0,0
+201.19.32.0/24,6252001,nan,North America,US,United States,0,0
+201.19.33.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.34.0/24,6252001,nan,North America,US,United States,0,0
+201.19.35.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.36.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.38.0/24,6252001,nan,North America,US,United States,0,0
+201.19.39.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.40.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.42.0/23,6252001,nan,North America,US,United States,0,0
+201.19.44.0/24,6252001,nan,North America,US,United States,0,0
+201.19.45.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.47.0/24,6252001,nan,North America,US,United States,0,0
+201.19.48.0/24,6252001,nan,North America,US,United States,0,0
+201.19.49.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.50.0/24,6252001,nan,North America,US,United States,0,0
+201.19.51.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.52.0/22,6252001,nan,North America,US,United States,0,0
+201.19.56.0/22,6252001,nan,North America,US,United States,0,0
+201.19.60.0/23,6252001,nan,North America,US,United States,0,0
+201.19.62.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.63.0/24,6252001,nan,North America,US,United States,0,0
+201.19.64.0/22,6252001,nan,North America,US,United States,0,0
+201.19.68.0/23,6252001,nan,North America,US,United States,0,0
+201.19.70.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.71.0/24,6252001,nan,North America,US,United States,0,0
+201.19.72.0/21,6252001,nan,North America,US,United States,0,0
+201.19.80.0/21,6252001,nan,North America,US,United States,0,0
+201.19.88.0/22,6252001,nan,North America,US,United States,0,0
+201.19.92.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.93.0/24,6252001,nan,North America,US,United States,0,0
+201.19.94.0/24,6252001,nan,North America,US,United States,0,0
+201.19.95.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.96.0/22,6252001,nan,North America,US,United States,0,0
+201.19.100.0/24,6252001,nan,North America,US,United States,0,0
+201.19.101.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.102.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.103.0/24,6252001,nan,North America,US,United States,0,0
+201.19.104.0/23,6252001,nan,North America,US,United States,0,0
+201.19.106.0/24,6252001,nan,North America,US,United States,0,0
+201.19.107.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.108.0/22,6252001,nan,North America,US,United States,0,0
+201.19.112.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.113.0/24,6252001,nan,North America,US,United States,0,0
+201.19.114.0/24,6252001,nan,North America,US,United States,0,0
+201.19.115.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.116.0/23,6252001,nan,North America,US,United States,0,0
+201.19.118.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.119.0/24,6252001,nan,North America,US,United States,0,0
+201.19.120.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.121.0/24,6252001,nan,North America,US,United States,0,0
+201.19.122.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.123.0/24,6252001,nan,North America,US,United States,0,0
+201.19.124.0/24,6252001,nan,North America,US,United States,0,0
+201.19.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.126.0/23,6252001,nan,North America,US,United States,0,0
+201.19.128.0/23,6252001,nan,North America,US,United States,0,0
+201.19.130.0/24,6252001,nan,North America,US,United States,0,0
+201.19.131.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.132.0/22,6252001,nan,North America,US,United States,0,0
+201.19.136.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.138.0/24,6252001,nan,North America,US,United States,0,0
+201.19.139.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.140.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.141.0/24,6252001,nan,North America,US,United States,0,0
+201.19.142.0/23,6252001,nan,North America,US,United States,0,0
+201.19.144.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.145.0/24,6252001,nan,North America,US,United States,0,0
+201.19.146.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.147.0/24,6252001,nan,North America,US,United States,0,0
+201.19.148.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.149.0/24,6252001,nan,North America,US,United States,0,0
+201.19.150.0/23,6252001,nan,North America,US,United States,0,0
+201.19.152.0/24,6252001,nan,North America,US,United States,0,0
+201.19.153.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.154.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.155.0/24,6252001,nan,North America,US,United States,0,0
+201.19.156.0/22,6252001,nan,North America,US,United States,0,0
+201.19.160.0/23,6252001,nan,North America,US,United States,0,0
+201.19.162.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.163.0/24,6252001,nan,North America,US,United States,0,0
+201.19.164.0/23,6252001,nan,North America,US,United States,0,0
+201.19.166.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.168.0/24,6252001,nan,North America,US,United States,0,0
+201.19.169.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.170.0/23,6252001,nan,North America,US,United States,0,0
+201.19.172.0/24,6252001,nan,North America,US,United States,0,0
+201.19.173.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.174.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.175.0/24,6252001,nan,North America,US,United States,0,0
+201.19.176.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.19.180.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.181.0/24,6252001,nan,North America,US,United States,0,0
+201.19.182.0/24,6252001,nan,North America,US,United States,0,0
+201.19.183.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.184.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.186.0/23,6252001,nan,North America,US,United States,0,0
+201.19.188.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.189.0/24,6252001,nan,North America,US,United States,0,0
+201.19.190.0/23,6252001,nan,North America,US,United States,0,0
+201.19.192.0/22,6252001,nan,North America,US,United States,0,0
+201.19.196.0/23,6252001,nan,North America,US,United States,0,0
+201.19.198.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.200.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.202.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.203.0/24,6252001,nan,North America,US,United States,0,0
+201.19.204.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.19.208.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.209.0/24,6252001,nan,North America,US,United States,0,0
+201.19.210.0/24,6252001,nan,North America,US,United States,0,0
+201.19.211.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.212.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.19.216.0/21,6252001,nan,North America,US,United States,0,0
+201.19.224.0/24,6252001,nan,North America,US,United States,0,0
+201.19.225.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.227.0/24,6252001,nan,North America,US,United States,0,0
+201.19.228.0/24,6252001,nan,North America,US,United States,0,0
+201.19.229.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.230.0/24,6252001,nan,North America,US,United States,0,0
+201.19.231.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.232.0/23,6252001,nan,North America,US,United States,0,0
+201.19.234.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.235.0/24,6252001,nan,North America,US,United States,0,0
+201.19.236.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.237.0/24,6252001,nan,North America,US,United States,0,0
+201.19.238.0/24,6252001,nan,North America,US,United States,0,0
+201.19.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.241.0/24,6252001,nan,North America,US,United States,0,0
+201.19.242.0/23,6252001,nan,North America,US,United States,0,0
+201.19.244.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.246.0/23,6252001,nan,North America,US,United States,0,0
+201.19.248.0/22,6252001,nan,North America,US,United States,0,0
+201.19.252.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.19.254.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.19.255.0/24,6252001,nan,North America,US,United States,0,0
+201.20.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.24.0.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.24.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.24.48.0/24,6252001,nan,North America,US,United States,0,0
+201.24.49.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.24.50.0/23,6252001,nan,North America,US,United States,0,0
+201.24.52.0/24,6252001,nan,North America,US,United States,0,0
+201.24.53.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.24.54.0/23,6252001,nan,North America,US,United States,0,0
+201.24.56.0/23,6252001,nan,North America,US,United States,0,0
+201.24.58.0/24,6252001,nan,North America,US,United States,0,0
+201.24.59.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.24.60.0/22,2017370,EU,Europe,RU,Russia,0,0
+201.24.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.24.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.24.112.0/22,2017370,EU,Europe,RU,Russia,0,0
+201.24.116.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.24.118.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.24.119.0/24,6252001,nan,North America,US,United States,0,0
+201.24.120.0/21,2017370,EU,Europe,RU,Russia,0,0
+201.24.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.24.160.0/23,6252001,nan,North America,US,United States,0,0
+201.24.162.0/23,3017382,EU,Europe,FR,France,0,0
+201.24.164.0/24,6252001,nan,North America,US,United States,0,0
+201.24.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.24.166.0/23,1835841,AS,Asia,KR,South Korea,0,0
+201.24.168.0/22,6252001,nan,North America,US,United States,0,0
+201.24.172.0/23,1835841,AS,Asia,KR,South Korea,0,0
+201.24.174.0/23,3017382,EU,Europe,FR,France,0,0
+201.24.176.0/23,1880251,AS,Asia,SG,Singapore,0,0
+201.24.178.0/23,6252001,nan,North America,US,United States,0,0
+201.24.180.0/23,1880251,AS,Asia,SG,Singapore,0,0
+201.24.182.0/23,3017382,EU,Europe,FR,France,0,0
+201.24.184.0/23,1880251,AS,Asia,SG,Singapore,0,0
+201.24.186.0/23,3017382,EU,Europe,FR,France,0,0
+201.24.188.0/23,1880251,AS,Asia,SG,Singapore,0,0
+201.24.190.0/23,1835841,AS,Asia,KR,South Korea,0,0
+201.24.192.0/20,6252001,nan,North America,US,United States,0,0
+201.24.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.24.224.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.24.232.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.24.234.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.24.236.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.24.238.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.24.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.24.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.25.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.25.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.25.160.0/23,6252001,nan,North America,US,United States,0,0
+201.25.162.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.25.164.0/22,6252001,nan,North America,US,United States,0,0
+201.25.168.0/22,6252001,nan,North America,US,United States,0,0
+201.25.172.0/23,6252001,nan,North America,US,United States,0,0
+201.25.174.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.25.176.0/22,6252001,nan,North America,US,United States,0,0
+201.25.180.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.25.182.0/23,2510769,EU,Europe,ES,Spain,0,0
+201.25.184.0/23,6252001,nan,North America,US,United States,0,0
+201.25.186.0/23,2510769,EU,Europe,ES,Spain,0,0
+201.25.188.0/23,6252001,nan,North America,US,United States,0,0
+201.25.190.0/23,2510769,EU,Europe,ES,Spain,0,0
+201.25.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.26.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.28.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.29.0.0/24,6252001,nan,North America,US,United States,0,0
+201.29.1.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.2.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.4.0/22,6252001,nan,North America,US,United States,0,0
+201.29.8.0/22,6252001,nan,North America,US,United States,0,0
+201.29.12.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.13.0/24,6252001,nan,North America,US,United States,0,0
+201.29.14.0/23,6252001,nan,North America,US,United States,0,0
+201.29.16.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.29.20.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.22.0/23,6252001,nan,North America,US,United States,0,0
+201.29.24.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.25.0/24,6252001,nan,North America,US,United States,0,0
+201.29.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.27.0/24,6252001,nan,North America,US,United States,0,0
+201.29.28.0/23,6252001,nan,North America,US,United States,0,0
+201.29.30.0/24,6252001,nan,North America,US,United States,0,0
+201.29.31.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.32.0/24,6252001,nan,North America,US,United States,0,0
+201.29.33.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.34.0/23,6252001,nan,North America,US,United States,0,0
+201.29.36.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.37.0/24,6252001,nan,North America,US,United States,0,0
+201.29.38.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.39.0/24,6252001,nan,North America,US,United States,0,0
+201.29.40.0/23,6252001,nan,North America,US,United States,0,0
+201.29.42.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.44.0/24,6252001,nan,North America,US,United States,0,0
+201.29.45.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.47.0/24,6252001,nan,North America,US,United States,0,0
+201.29.48.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.29.52.0/24,6252001,nan,North America,US,United States,0,0
+201.29.53.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.54.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.56.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.58.0/23,6252001,nan,North America,US,United States,0,0
+201.29.60.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.61.0/24,6252001,nan,North America,US,United States,0,0
+201.29.62.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.64.0/21,6252001,nan,North America,US,United States,0,0
+201.29.72.0/23,6252001,nan,North America,US,United States,0,0
+201.29.74.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.75.0/24,6252001,nan,North America,US,United States,0,0
+201.29.76.0/22,6252001,nan,North America,US,United States,0,0
+201.29.80.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.29.84.0/24,6252001,nan,North America,US,United States,0,0
+201.29.85.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.86.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.88.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.29.92.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.93.0/24,6252001,nan,North America,US,United States,0,0
+201.29.94.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.96.0/21,6252001,nan,North America,US,United States,0,0
+201.29.104.0/23,6252001,nan,North America,US,United States,0,0
+201.29.106.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.108.0/23,6252001,nan,North America,US,United States,0,0
+201.29.110.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.112.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.113.0/24,6252001,nan,North America,US,United States,0,0
+201.29.114.0/23,6252001,nan,North America,US,United States,0,0
+201.29.116.0/24,6252001,nan,North America,US,United States,0,0
+201.29.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.118.0/24,6252001,nan,North America,US,United States,0,0
+201.29.119.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.120.0/24,6252001,nan,North America,US,United States,0,0
+201.29.121.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.122.0/23,6252001,nan,North America,US,United States,0,0
+201.29.124.0/23,6252001,nan,North America,US,United States,0,0
+201.29.126.0/24,6252001,nan,North America,US,United States,0,0
+201.29.127.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.128.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.29.136.0/21,6252001,nan,North America,US,United States,0,0
+201.29.144.0/21,6252001,nan,North America,US,United States,0,0
+201.29.152.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.154.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.155.0/24,6252001,nan,North America,US,United States,0,0
+201.29.156.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.157.0/24,6252001,nan,North America,US,United States,0,0
+201.29.158.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.159.0/24,6252001,nan,North America,US,United States,0,0
+201.29.160.0/24,6252001,nan,North America,US,United States,0,0
+201.29.161.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.162.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.164.0/24,6252001,nan,North America,US,United States,0,0
+201.29.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.166.0/24,6252001,nan,North America,US,United States,0,0
+201.29.167.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.168.0/24,6252001,nan,North America,US,United States,0,0
+201.29.169.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.170.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.172.0/22,6252001,nan,North America,US,United States,0,0
+201.29.176.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.177.0/24,6252001,nan,North America,US,United States,0,0
+201.29.178.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.180.0/23,6252001,nan,North America,US,United States,0,0
+201.29.182.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.183.0/24,6252001,nan,North America,US,United States,0,0
+201.29.184.0/22,6252001,nan,North America,US,United States,0,0
+201.29.188.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.189.0/24,6252001,nan,North America,US,United States,0,0
+201.29.190.0/23,6252001,nan,North America,US,United States,0,0
+201.29.192.0/21,6252001,nan,North America,US,United States,0,0
+201.29.200.0/23,6252001,nan,North America,US,United States,0,0
+201.29.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.204.0/22,6252001,nan,North America,US,United States,0,0
+201.29.208.0/23,6252001,nan,North America,US,United States,0,0
+201.29.210.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.212.0/23,6252001,nan,North America,US,United States,0,0
+201.29.214.0/24,6252001,nan,North America,US,United States,0,0
+201.29.215.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.216.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.217.0/24,6252001,nan,North America,US,United States,0,0
+201.29.218.0/23,6252001,nan,North America,US,United States,0,0
+201.29.220.0/23,6252001,nan,North America,US,United States,0,0
+201.29.222.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.223.0/24,6252001,nan,North America,US,United States,0,0
+201.29.224.0/22,6252001,nan,North America,US,United States,0,0
+201.29.228.0/23,6252001,nan,North America,US,United States,0,0
+201.29.230.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.231.0/24,6252001,nan,North America,US,United States,0,0
+201.29.232.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.233.0/24,6252001,nan,North America,US,United States,0,0
+201.29.234.0/23,6252001,nan,North America,US,United States,0,0
+201.29.236.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.29.238.0/23,6252001,nan,North America,US,United States,0,0
+201.29.240.0/22,6252001,nan,North America,US,United States,0,0
+201.29.244.0/23,6252001,nan,North America,US,United States,0,0
+201.29.246.0/24,6252001,nan,North America,US,United States,0,0
+201.29.247.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.29.248.0/21,6252001,nan,North America,US,United States,0,0
+201.30.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.32.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.32.128.0/22,6252001,nan,North America,US,United States,0,0
+201.32.132.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.133.0/24,6252001,nan,North America,US,United States,0,0
+201.32.134.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.135.0/24,6252001,nan,North America,US,United States,0,0
+201.32.136.0/23,6252001,nan,North America,US,United States,0,0
+201.32.138.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.32.140.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.32.142.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.143.0/24,6252001,nan,North America,US,United States,0,0
+201.32.144.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.32.148.0/24,6252001,nan,North America,US,United States,0,0
+201.32.149.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.150.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.151.0/24,6252001,nan,North America,US,United States,0,0
+201.32.152.0/22,6252001,nan,North America,US,United States,0,0
+201.32.156.0/23,6252001,nan,North America,US,United States,0,0
+201.32.158.0/24,6252001,nan,North America,US,United States,0,0
+201.32.159.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.32.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.32.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.33.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.34.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.34.128.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.34.130.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.34.131.0/24,6252001,nan,North America,US,United States,0,0
+201.34.132.0/23,6252001,nan,North America,US,United States,0,0
+201.34.134.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.34.136.0/22,2017370,EU,Europe,RU,Russia,0,0
+201.34.140.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.34.142.0/23,6252001,nan,North America,US,United States,0,0
+201.34.144.0/21,6252001,nan,North America,US,United States,0,0
+201.34.152.0/23,6252001,nan,North America,US,United States,0,0
+201.34.154.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.34.155.0/24,6252001,nan,North America,US,United States,0,0
+201.34.156.0/22,2017370,EU,Europe,RU,Russia,0,0
+201.34.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.34.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.35.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.36.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.40.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.44.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.46.0.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.46.64.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.46.80.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.46.84.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.46.88.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.46.92.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.46.96.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.46.112.0/23,2510769,EU,Europe,ES,Spain,0,0
+201.46.114.0/24,3658394,SA,South America,EC,Ecuador,0,0
+201.46.115.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.46.116.0/22,3508796,nan,North America,DO,Dominican Republic,0,0
+201.46.120.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.46.124.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.46.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.47.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.48.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.49.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.49.128.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.49.132.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.49.136.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.49.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.49.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.49.176.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.49.184.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.49.186.0/23,3508796,nan,North America,DO,Dominican Republic,0,0
+201.49.188.0/22,2510769,EU,Europe,ES,Spain,0,0
+201.49.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.50.0.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.4.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.5.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.6.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.8.0/23,6252001,nan,North America,US,United States,0,0
+201.50.10.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.0/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.4/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.6/31,1819730,AS,Asia,HK,Hong Kong,0,0
+201.50.12.8/31,1819730,AS,Asia,HK,Hong Kong,0,0
+201.50.12.10/31,6252001,nan,North America,US,United States,0,0
+201.50.12.12/30,1819730,AS,Asia,HK,Hong Kong,0,0
+201.50.12.16/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.18/31,2017370,EU,Europe,RU,Russia,0,0
+201.50.12.20/31,2017370,EU,Europe,RU,Russia,0,0
+201.50.12.22/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.24/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.28/31,6252001,nan,North America,US,United States,0,0
+201.50.12.30/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.32/27,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.64/26,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.12.128/25,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.13.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.0/30,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.4/31,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.6/32,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.7/32,2921044,EU,Europe,DE,Germany,0,0
+201.50.14.8/29,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.16/28,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.32/27,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.64/26,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.14.128/25,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.15.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.16.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.17.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.18.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.20.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.21.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.22.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.24.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.26.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.28.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.32.0/22,2077456,OC,Oceania,AU,Australia,0,0
+201.50.36.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+201.50.40.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+201.50.44.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.50.46.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.48.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.52.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.55.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.56.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.60.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.61.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.62.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+201.50.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.50.96.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+201.50.97.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.50.98.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.50.99.0/24,1605651,AS,Asia,TH,Thailand,0,0
+201.50.100.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.50.101.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.50.102.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.50.103.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+201.50.104.0/24,1605651,AS,Asia,TH,Thailand,0,0
+201.50.105.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.50.106.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+201.50.107.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.50.108.0/24,1605651,AS,Asia,TH,Thailand,0,0
+201.50.109.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.50.110.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.50.111.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+201.50.112.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.50.113.0/24,1605651,AS,Asia,TH,Thailand,0,0
+201.50.114.0/24,6290252,EU,Europe,RS,Serbia,0,0
+201.50.115.0/24,298795,AS,Asia,TR,Türkiye,0,0
+201.50.116.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.50.117.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.50.118.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.50.119.0/24,6290252,EU,Europe,RS,Serbia,0,0
+201.50.120.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.50.121.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.50.122.0/24,241170,AF,Africa,SC,Seychelles,0,0
+201.50.123.0/24,3175395,EU,Europe,IT,Italy,0,0
+201.50.124.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.50.126.0/24,617790,EU,Europe,MD,Moldova,0,0
+201.50.127.0/24,390903,EU,Europe,GR,Greece,0,0
+201.50.128.0/22,6252001,nan,North America,US,United States,0,0
+201.50.132.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.133.0/24,6252001,nan,North America,US,United States,0,0
+201.50.134.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.136.0/23,6252001,nan,North America,US,United States,0,0
+201.50.138.0/24,6252001,nan,North America,US,United States,0,0
+201.50.139.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.140.0/23,6252001,nan,North America,US,United States,0,0
+201.50.142.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.143.0/24,6252001,nan,North America,US,United States,0,0
+201.50.144.0/21,6252001,nan,North America,US,United States,0,0
+201.50.152.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.50.156.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.158.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.159.0/24,6252001,nan,North America,US,United States,0,0
+201.50.160.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.162.0/23,6252001,nan,North America,US,United States,0,0
+201.50.164.0/24,6252001,nan,North America,US,United States,0,0
+201.50.165.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.166.0/23,6252001,nan,North America,US,United States,0,0
+201.50.168.0/22,6252001,nan,North America,US,United States,0,0
+201.50.172.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.50.176.0/24,6252001,nan,North America,US,United States,0,0
+201.50.177.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.178.0/24,6252001,nan,North America,US,United States,0,0
+201.50.179.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.180.0/23,6252001,nan,North America,US,United States,0,0
+201.50.182.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.183.0/24,6252001,nan,North America,US,United States,0,0
+201.50.184.0/21,6252001,nan,North America,US,United States,0,0
+201.50.192.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.193.0/24,6252001,nan,North America,US,United States,0,0
+201.50.194.0/23,6252001,nan,North America,US,United States,0,0
+201.50.196.0/24,6252001,nan,North America,US,United States,0,0
+201.50.197.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.198.0/23,6252001,nan,North America,US,United States,0,0
+201.50.200.0/24,6252001,nan,North America,US,United States,0,0
+201.50.201.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.202.0/24,6252001,nan,North America,US,United States,0,0
+201.50.203.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.204.0/24,6252001,nan,North America,US,United States,0,0
+201.50.205.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.206.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.208.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.50.210.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.211.0/24,6252001,nan,North America,US,United States,0,0
+201.50.212.0/24,6252001,nan,North America,US,United States,0,0
+201.50.213.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.214.0/23,6252001,nan,North America,US,United States,0,0
+201.50.216.0/22,6252001,nan,North America,US,United States,0,0
+201.50.220.0/23,6252001,nan,North America,US,United States,0,0
+201.50.222.0/24,6252001,nan,North America,US,United States,0,0
+201.50.223.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.224.0/24,6252001,nan,North America,US,United States,0,0
+201.50.225.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.226.0/23,6252001,nan,North America,US,United States,0,0
+201.50.228.0/22,6252001,nan,North America,US,United States,0,0
+201.50.232.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.233.0/24,6252001,nan,North America,US,United States,0,0
+201.50.234.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.235.0/24,6252001,nan,North America,US,United States,0,0
+201.50.236.0/24,6252001,nan,North America,US,United States,0,0
+201.50.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.238.0/23,6252001,nan,North America,US,United States,0,0
+201.50.240.0/24,6252001,nan,North America,US,United States,0,0
+201.50.241.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.242.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.243.0/24,6252001,nan,North America,US,United States,0,0
+201.50.244.0/23,6252001,nan,North America,US,United States,0,0
+201.50.246.0/24,6252001,nan,North America,US,United States,0,0
+201.50.247.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.50.248.0/21,6252001,nan,North America,US,United States,0,0
+201.51.0.0/21,2017370,EU,Europe,RU,Russia,0,0
+201.51.8.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.51.10.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+201.51.11.0/24,2017370,EU,Europe,RU,Russia,0,0
+201.51.12.0/23,2017370,EU,Europe,RU,Russia,0,0
+201.51.14.0/24,6252001,nan,North America,US,United States,0,0
+201.51.15.0/24,241170,AF,Africa,SC,Seychelles,0,0
+201.51.16.0/23,2921044,EU,Europe,DE,Germany,0,0
+201.51.18.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.51.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.20.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+201.51.24.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+201.51.26.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+201.51.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.28.0/22,2017370,EU,Europe,RU,Russia,0,0
+201.51.32.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.51.64.0/24,6252001,nan,North America,US,United States,0,0
+201.51.65.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.66.0/23,6252001,nan,North America,US,United States,0,0
+201.51.68.0/22,6252001,nan,North America,US,United States,0,0
+201.51.72.0/21,6252001,nan,North America,US,United States,0,0
+201.51.80.0/23,6252001,nan,North America,US,United States,0,0
+201.51.82.0/24,6252001,nan,North America,US,United States,0,0
+201.51.83.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.84.0/23,6252001,nan,North America,US,United States,0,0
+201.51.86.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.88.0/23,6252001,nan,North America,US,United States,0,0
+201.51.90.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.91.0/24,6252001,nan,North America,US,United States,0,0
+201.51.92.0/24,6252001,nan,North America,US,United States,0,0
+201.51.93.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.94.0/23,6252001,nan,North America,US,United States,0,0
+201.51.96.0/22,6252001,nan,North America,US,United States,0,0
+201.51.100.0/23,6252001,nan,North America,US,United States,0,0
+201.51.102.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.104.0/22,6252001,nan,North America,US,United States,0,0
+201.51.108.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.109.0/24,6252001,nan,North America,US,United States,0,0
+201.51.110.0/23,6252001,nan,North America,US,United States,0,0
+201.51.112.0/22,6252001,nan,North America,US,United States,0,0
+201.51.116.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.117.0/24,6252001,nan,North America,US,United States,0,0
+201.51.118.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.119.0/24,6252001,nan,North America,US,United States,0,0
+201.51.120.0/21,6252001,nan,North America,US,United States,0,0
+201.51.128.0/23,6252001,nan,North America,US,United States,0,0
+201.51.130.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.131.0/24,6252001,nan,North America,US,United States,0,0
+201.51.132.0/23,6252001,nan,North America,US,United States,0,0
+201.51.134.0/24,6252001,nan,North America,US,United States,0,0
+201.51.135.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.136.0/24,6252001,nan,North America,US,United States,0,0
+201.51.137.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.138.0/23,6252001,nan,North America,US,United States,0,0
+201.51.140.0/22,6252001,nan,North America,US,United States,0,0
+201.51.144.0/24,6252001,nan,North America,US,United States,0,0
+201.51.145.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.146.0/23,6252001,nan,North America,US,United States,0,0
+201.51.148.0/23,6252001,nan,North America,US,United States,0,0
+201.51.150.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.152.0/22,6252001,nan,North America,US,United States,0,0
+201.51.156.0/23,6252001,nan,North America,US,United States,0,0
+201.51.158.0/24,6252001,nan,North America,US,United States,0,0
+201.51.159.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.160.0/24,6252001,nan,North America,US,United States,0,0
+201.51.161.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.162.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.164.0/22,6252001,nan,North America,US,United States,0,0
+201.51.168.0/22,6252001,nan,North America,US,United States,0,0
+201.51.172.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.173.0/24,6252001,nan,North America,US,United States,0,0
+201.51.174.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.176.0/21,6252001,nan,North America,US,United States,0,0
+201.51.184.0/22,6252001,nan,North America,US,United States,0,0
+201.51.188.0/23,6252001,nan,North America,US,United States,0,0
+201.51.190.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.192.0/23,6252001,nan,North America,US,United States,0,0
+201.51.194.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.195.0/24,6252001,nan,North America,US,United States,0,0
+201.51.196.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.198.0/23,6252001,nan,North America,US,United States,0,0
+201.51.200.0/24,6252001,nan,North America,US,United States,0,0
+201.51.201.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.204.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.205.0/24,6252001,nan,North America,US,United States,0,0
+201.51.206.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.207.0/24,6252001,nan,North America,US,United States,0,0
+201.51.208.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.209.0/24,6252001,nan,North America,US,United States,0,0
+201.51.210.0/24,6252001,nan,North America,US,United States,0,0
+201.51.211.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.212.0/22,6252001,nan,North America,US,United States,0,0
+201.51.216.0/22,6252001,nan,North America,US,United States,0,0
+201.51.220.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.221.0/24,6252001,nan,North America,US,United States,0,0
+201.51.222.0/24,6252001,nan,North America,US,United States,0,0
+201.51.223.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.224.0/21,6252001,nan,North America,US,United States,0,0
+201.51.232.0/22,6252001,nan,North America,US,United States,0,0
+201.51.236.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.237.0/24,6252001,nan,North America,US,United States,0,0
+201.51.238.0/23,6252001,nan,North America,US,United States,0,0
+201.51.240.0/23,6252001,nan,North America,US,United States,0,0
+201.51.242.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.51.244.0/24,6252001,nan,North America,US,United States,0,0
+201.51.245.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.51.246.0/23,6252001,nan,North America,US,United States,0,0
+201.51.248.0/21,6252001,nan,North America,US,United States,0,0
+201.52.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.56.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.58.0.0/18,6252001,nan,North America,US,United States,0,0
+201.58.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.58.96.0/22,6252001,nan,North America,US,United States,0,0
+201.58.100.0/22,597427,EU,Europe,LT,Lithuania,0,0
+201.58.104.0/21,597427,EU,Europe,LT,Lithuania,0,0
+201.58.112.0/22,597427,EU,Europe,LT,Lithuania,0,0
+201.58.116.0/24,597427,EU,Europe,LT,Lithuania,0,0
+201.58.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.58.118.0/23,597427,EU,Europe,LT,Lithuania,0,0
+201.58.120.0/22,597427,EU,Europe,LT,Lithuania,0,0
+201.58.124.0/23,597427,EU,Europe,LT,Lithuania,0,0
+201.58.126.0/24,597427,EU,Europe,LT,Lithuania,0,0
+201.58.127.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.58.128.0/18,6252001,nan,North America,US,United States,0,0
+201.58.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.58.224.0/19,597427,EU,Europe,LT,Lithuania,0,0
+201.59.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.60.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.64.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.66.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.67.0.0/24,3277605,EU,Europe,BA,Bosnia and Herzegovina,0,0
+201.67.1.0/24,3175395,EU,Europe,IT,Italy,0,0
+201.67.2.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.67.3.0/24,2264397,EU,Europe,PT,Portugal,0,0
+201.67.4.0/24,2963597,EU,Europe,IE,Ireland,0,0
+201.67.5.0/24,1831722,AS,Asia,KH,Cambodia,0,0
+201.67.6.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+201.67.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.67.8.0/24,298795,AS,Asia,TR,Türkiye,0,0
+201.67.9.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+201.67.10.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+201.67.11.0/24,3923057,SA,South America,BO,Bolivia,0,0
+201.67.12.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.67.13.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.67.14.0/24,3017382,EU,Europe,FR,France,0,0
+201.67.15.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+201.67.16.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.67.17.0/24,3017382,EU,Europe,FR,France,0,0
+201.67.18.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+201.67.19.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.67.20.0/24,1694008,AS,Asia,PH,Philippines,0,0
+201.67.21.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+201.67.22.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+201.67.23.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+201.67.24.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.67.25.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+201.67.26.0/24,1227603,AS,Asia,LK,Sri Lanka,0,0
+201.67.27.0/24,953987,AF,Africa,ZA,South Africa,0,0
+201.67.28.0/24,357994,AF,Africa,EG,Egypt,0,0
+201.67.29.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+201.67.30.0/24,617790,EU,Europe,MD,Moldova,0,0
+201.67.31.0/24,3923057,SA,South America,BO,Bolivia,0,0
+201.67.32.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.67.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.67.128.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.67.160.0/21,597427,EU,Europe,LT,Lithuania,0,0
+201.67.168.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.67.170.0/23,597427,EU,Europe,LT,Lithuania,0,0
+201.67.172.0/22,597427,EU,Europe,LT,Lithuania,0,0
+201.67.176.0/20,597427,EU,Europe,LT,Lithuania,0,0
+201.67.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.68.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.70.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.71.0.0/23,3895114,SA,South America,CL,Chile,0,0
+201.71.2.0/23,3625428,SA,South America,VE,Venezuela,0,0
+201.71.4.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.71.8.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.71.16.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.71.32.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.71.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.71.128.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.71.192.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.71.200.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.71.204.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.71.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.71.224.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.72.0.0/14,3469034,SA,South America,BR,Brazil,0,0
+201.76.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.77.0.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.77.2.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.77.4.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.77.8.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.77.16.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.77.32.0/20,1605651,AS,Asia,TH,Thailand,0,0
+201.77.48.0/23,3932488,SA,South America,PE,Peru,0,0
+201.77.50.0/24,2510769,EU,Europe,ES,Spain,0,0
+201.77.51.0/24,3895114,SA,South America,CL,Chile,0,0
+201.77.52.0/24,2510769,EU,Europe,ES,Spain,0,0
+201.77.53.0/24,3703430,nan,North America,PA,Panama,0,0
+201.77.54.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.77.55.0/24,3703430,nan,North America,PA,Panama,0,0
+201.77.56.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.77.57.0/24,3658394,SA,South America,EC,Ecuador,0,0
+201.77.58.0/24,2510769,EU,Europe,ES,Spain,0,0
+201.77.59.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.77.60.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.77.61.0/24,3932488,SA,South America,PE,Peru,0,0
+201.77.62.0/24,3703430,nan,North America,PA,Panama,0,0
+201.77.63.0/24,3585968,nan,North America,SV,El Salvador,0,0
+201.77.64.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.77.96.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.77.100.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.77.104.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.77.108.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.77.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.77.128.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.78.0.0/22,6252001,nan,North America,US,United States,0,0
+201.78.4.0/23,6252001,nan,North America,US,United States,0,0
+201.78.6.0/24,6252001,nan,North America,US,United States,0,0
+201.78.7.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.8.0/22,6252001,nan,North America,US,United States,0,0
+201.78.12.0/24,6252001,nan,North America,US,United States,0,0
+201.78.13.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.14.0/23,6252001,nan,North America,US,United States,0,0
+201.78.16.0/24,6252001,nan,North America,US,United States,0,0
+201.78.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.18.0/24,6252001,nan,North America,US,United States,0,0
+201.78.19.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.20.0/23,6252001,nan,North America,US,United States,0,0
+201.78.22.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.24.0/23,6252001,nan,North America,US,United States,0,0
+201.78.26.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.28.0/22,6252001,nan,North America,US,United States,0,0
+201.78.32.0/23,6252001,nan,North America,US,United States,0,0
+201.78.34.0/24,6252001,nan,North America,US,United States,0,0
+201.78.35.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.36.0/22,6252001,nan,North America,US,United States,0,0
+201.78.40.0/24,6252001,nan,North America,US,United States,0,0
+201.78.41.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.42.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.44.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.46.0/23,6252001,nan,North America,US,United States,0,0
+201.78.48.0/23,6252001,nan,North America,US,United States,0,0
+201.78.50.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.52.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.53.0/24,6252001,nan,North America,US,United States,0,0
+201.78.54.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.56.0/23,6252001,nan,North America,US,United States,0,0
+201.78.58.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.59.0/24,6252001,nan,North America,US,United States,0,0
+201.78.60.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.61.0/24,6252001,nan,North America,US,United States,0,0
+201.78.62.0/23,6252001,nan,North America,US,United States,0,0
+201.78.64.0/21,6252001,nan,North America,US,United States,0,0
+201.78.72.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.73.0/24,6252001,nan,North America,US,United States,0,0
+201.78.74.0/23,6252001,nan,North America,US,United States,0,0
+201.78.76.0/23,6252001,nan,North America,US,United States,0,0
+201.78.78.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.80.0/23,6252001,nan,North America,US,United States,0,0
+201.78.82.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.78.84.0/22,6252001,nan,North America,US,United States,0,0
+201.78.88.0/24,6252001,nan,North America,US,United States,0,0
+201.78.89.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.90.0/23,6252001,nan,North America,US,United States,0,0
+201.78.92.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.78.96.0/21,6252001,nan,North America,US,United States,0,0
+201.78.104.0/23,6252001,nan,North America,US,United States,0,0
+201.78.106.0/24,6252001,nan,North America,US,United States,0,0
+201.78.107.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.108.0/22,6252001,nan,North America,US,United States,0,0
+201.78.112.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.113.0/24,6252001,nan,North America,US,United States,0,0
+201.78.114.0/23,6252001,nan,North America,US,United States,0,0
+201.78.116.0/22,6252001,nan,North America,US,United States,0,0
+201.78.120.0/21,6252001,nan,North America,US,United States,0,0
+201.78.128.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+201.78.130.0/23,6252001,nan,North America,US,United States,0,0
+201.78.132.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+201.78.133.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.134.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.136.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.140.0/24,2921044,EU,Europe,DE,Germany,0,0
+201.78.141.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.142.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.143.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.144.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.145.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.146.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.147.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.148.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.149.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.150.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.151.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.78.153.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.154.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+201.78.156.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.78.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.78.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.78.224.0/19,6252001,nan,North America,US,United States,0,0
+201.79.0.0/20,2921044,EU,Europe,DE,Germany,0,0
+201.79.16.0/24,6252001,nan,North America,US,United States,0,0
+201.79.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.18.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.19.0/24,6252001,nan,North America,US,United States,0,0
+201.79.20.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.21.0/24,6252001,nan,North America,US,United States,0,0
+201.79.22.0/24,6252001,nan,North America,US,United States,0,0
+201.79.23.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.24.0/23,6252001,nan,North America,US,United States,0,0
+201.79.26.0/24,6252001,nan,North America,US,United States,0,0
+201.79.27.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.28.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.29.0/24,6252001,nan,North America,US,United States,0,0
+201.79.30.0/23,6252001,nan,North America,US,United States,0,0
+201.79.32.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.33.0/24,6252001,nan,North America,US,United States,0,0
+201.79.34.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.36.0/24,6252001,nan,North America,US,United States,0,0
+201.79.37.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.38.0/23,6252001,nan,North America,US,United States,0,0
+201.79.40.0/21,6252001,nan,North America,US,United States,0,0
+201.79.48.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.49.0/24,6252001,nan,North America,US,United States,0,0
+201.79.50.0/23,6252001,nan,North America,US,United States,0,0
+201.79.52.0/23,6252001,nan,North America,US,United States,0,0
+201.79.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.55.0/24,6252001,nan,North America,US,United States,0,0
+201.79.56.0/23,6252001,nan,North America,US,United States,0,0
+201.79.58.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.60.0/22,6252001,nan,North America,US,United States,0,0
+201.79.64.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.65.0/24,6252001,nan,North America,US,United States,0,0
+201.79.66.0/23,6252001,nan,North America,US,United States,0,0
+201.79.68.0/22,6252001,nan,North America,US,United States,0,0
+201.79.72.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.79.76.0/22,6252001,nan,North America,US,United States,0,0
+201.79.80.0/24,6252001,nan,North America,US,United States,0,0
+201.79.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.82.0/23,6252001,nan,North America,US,United States,0,0
+201.79.84.0/22,6252001,nan,North America,US,United States,0,0
+201.79.88.0/24,6252001,nan,North America,US,United States,0,0
+201.79.89.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.90.0/23,6252001,nan,North America,US,United States,0,0
+201.79.92.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.93.0/24,6252001,nan,North America,US,United States,0,0
+201.79.94.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.95.0/24,6252001,nan,North America,US,United States,0,0
+201.79.96.0/21,6252001,nan,North America,US,United States,0,0
+201.79.104.0/23,6252001,nan,North America,US,United States,0,0
+201.79.106.0/24,6252001,nan,North America,US,United States,0,0
+201.79.107.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.108.0/24,6252001,nan,North America,US,United States,0,0
+201.79.109.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.110.0/23,6252001,nan,North America,US,United States,0,0
+201.79.112.0/22,6252001,nan,North America,US,United States,0,0
+201.79.116.0/24,6252001,nan,North America,US,United States,0,0
+201.79.117.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.118.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.120.0/22,6252001,nan,North America,US,United States,0,0
+201.79.124.0/24,6252001,nan,North America,US,United States,0,0
+201.79.125.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.126.0/24,6252001,nan,North America,US,United States,0,0
+201.79.127.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.128.0/23,6252001,nan,North America,US,United States,0,0
+201.79.130.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.131.0/24,6252001,nan,North America,US,United States,0,0
+201.79.132.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.79.136.0/23,6252001,nan,North America,US,United States,0,0
+201.79.138.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.139.0/24,6252001,nan,North America,US,United States,0,0
+201.79.140.0/22,6252001,nan,North America,US,United States,0,0
+201.79.144.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.145.0/24,6252001,nan,North America,US,United States,0,0
+201.79.146.0/23,6252001,nan,North America,US,United States,0,0
+201.79.148.0/24,6252001,nan,North America,US,United States,0,0
+201.79.149.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.150.0/23,6252001,nan,North America,US,United States,0,0
+201.79.152.0/23,6252001,nan,North America,US,United States,0,0
+201.79.154.0/24,6252001,nan,North America,US,United States,0,0
+201.79.155.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.156.0/24,6252001,nan,North America,US,United States,0,0
+201.79.157.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.158.0/23,6252001,nan,North America,US,United States,0,0
+201.79.160.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.161.0/24,6252001,nan,North America,US,United States,0,0
+201.79.162.0/24,6252001,nan,North America,US,United States,0,0
+201.79.163.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.164.0/22,6252001,nan,North America,US,United States,0,0
+201.79.168.0/22,6252001,nan,North America,US,United States,0,0
+201.79.172.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.174.0/23,6252001,nan,North America,US,United States,0,0
+201.79.176.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.178.0/23,6252001,nan,North America,US,United States,0,0
+201.79.180.0/22,6252001,nan,North America,US,United States,0,0
+201.79.184.0/22,6252001,nan,North America,US,United States,0,0
+201.79.188.0/24,6252001,nan,North America,US,United States,0,0
+201.79.189.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.190.0/23,6252001,nan,North America,US,United States,0,0
+201.79.192.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.193.0/24,6252001,nan,North America,US,United States,0,0
+201.79.194.0/23,6252001,nan,North America,US,United States,0,0
+201.79.196.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.79.200.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.202.0/23,6252001,nan,North America,US,United States,0,0
+201.79.204.0/22,6252001,nan,North America,US,United States,0,0
+201.79.208.0/23,6252001,nan,North America,US,United States,0,0
+201.79.210.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.212.0/22,6252001,nan,North America,US,United States,0,0
+201.79.216.0/21,6252001,nan,North America,US,United States,0,0
+201.79.224.0/23,6252001,nan,North America,US,United States,0,0
+201.79.226.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.227.0/24,6252001,nan,North America,US,United States,0,0
+201.79.228.0/23,6252001,nan,North America,US,United States,0,0
+201.79.230.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.232.0/22,6252001,nan,North America,US,United States,0,0
+201.79.236.0/24,6252001,nan,North America,US,United States,0,0
+201.79.237.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.238.0/23,6252001,nan,North America,US,United States,0,0
+201.79.240.0/23,6252001,nan,North America,US,United States,0,0
+201.79.242.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.244.0/23,6252001,nan,North America,US,United States,0,0
+201.79.246.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.79.248.0/24,6252001,nan,North America,US,United States,0,0
+201.79.249.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.250.0/23,6252001,nan,North America,US,United States,0,0
+201.79.252.0/24,6252001,nan,North America,US,United States,0,0
+201.79.253.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.79.254.0/23,6252001,nan,North America,US,United States,0,0
+201.80.0.0/13,3469034,SA,South America,BR,Brazil,0,0
+201.88.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.89.0.0/17,3469034,SA,South America,BR,Brazil,0,0
+201.89.128.0/20,6252001,nan,North America,US,United States,0,0
+201.89.144.0/22,6252001,nan,North America,US,United States,0,0
+201.89.148.0/24,6252001,nan,North America,US,United States,0,0
+201.89.149.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.89.150.0/23,6252001,nan,North America,US,United States,0,0
+201.89.152.0/22,6252001,nan,North America,US,United States,0,0
+201.89.156.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.89.157.0/24,6252001,nan,North America,US,United States,0,0
+201.89.158.0/23,6252001,nan,North America,US,United States,0,0
+201.89.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.89.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.90.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.92.0.0/15,3469034,SA,South America,BR,Brazil,0,0
+201.94.0.0/17,6252001,nan,North America,US,United States,0,0
+201.94.128.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.94.144.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.94.148.0/22,3895114,SA,South America,CL,Chile,0,0
+201.94.152.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.94.160.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.94.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.95.0.0/16,3469034,SA,South America,BR,Brazil,0,0
+201.96.0.0/11,3996063,nan,North America,MX,Mexico,0,0
+201.128.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+201.130.0.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.130.16.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.130.20.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.130.24.0/22,3932488,SA,South America,PE,Peru,0,0
+201.130.28.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.130.32.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.130.64.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.130.80.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.130.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.130.82.0/23,3625428,SA,South America,VE,Venezuela,0,0
+201.130.84.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.130.88.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.130.96.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.130.128.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.131.0.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.2.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.3.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.4.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.5.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.6.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.8.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.10.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.131.12.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.14.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.15.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.16.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.131.24.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.32.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.131.36.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.37.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+201.131.38.0/23,3895114,SA,South America,CL,Chile,0,0
+201.131.40.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.41.0/24,3923057,SA,South America,BO,Bolivia,0,0
+201.131.42.0/24,3585968,nan,North America,SV,El Salvador,0,0
+201.131.43.0/24,7626836,nan,North America,CW,Curaçao,0,0
+201.131.44.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.45.0/24,3923057,SA,South America,BO,Bolivia,0,0
+201.131.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.47.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.131.48.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.49.0/24,3703430,nan,North America,PA,Panama,0,0
+201.131.50.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+201.131.51.0/24,3437598,SA,South America,PY,Paraguay,0,0
+201.131.52.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.131.56.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.131.64.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.65.0/24,3625428,SA,South America,VE,Venezuela,0,0
+201.131.66.0/24,3617476,nan,North America,NI,Nicaragua,0,0
+201.131.67.0/24,3932488,SA,South America,PE,Peru,0,0
+201.131.68.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.131.72.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.73.0/24,3595528,nan,North America,GT,Guatemala,0,0
+201.131.74.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.131.76.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.77.0/24,3723988,nan,North America,HT,Haiti,0,0
+201.131.78.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.131.79.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.131.80.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.88.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.131.92.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.131.96.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.97.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.131.98.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.131.100.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.102.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.131.103.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.104.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.106.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.131.107.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+201.131.108.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.110.0/23,3585968,nan,North America,SV,El Salvador,0,0
+201.131.112.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+201.131.113.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.114.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.131.115.0/24,3617476,nan,North America,NI,Nicaragua,0,0
+201.131.116.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.131.118.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.131.120.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.131.121.0/24,3932488,SA,South America,PE,Peru,0,0
+201.131.122.0/23,3585968,nan,North America,SV,El Salvador,0,0
+201.131.124.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.131.128.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.131.136.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.144.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.131.148.0/22,3703430,nan,North America,PA,Panama,0,0
+201.131.152.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.131.176.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.184.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.131.188.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.131.192.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.131.208.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.216.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.131.220.0/22,3932488,SA,South America,PE,Peru,0,0
+201.131.224.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.232.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.131.240.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.131.248.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.132.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+201.136.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+201.138.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+201.139.0.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.139.64.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.139.80.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.139.84.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.139.88.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.139.96.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.139.128.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.139.160.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.139.168.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.139.172.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.139.176.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.139.184.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.139.192.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.139.208.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.139.216.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.139.224.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.140.0.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.140.128.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.140.192.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.140.208.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.140.224.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.140.228.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.140.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.140.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.141.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+201.142.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+201.144.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+201.148.0.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.148.64.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.148.96.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.148.104.0/22,3895114,SA,South America,CL,Chile,0,0
+201.148.108.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.148.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.148.128.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.148.160.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.148.168.0/22,2510769,EU,Europe,ES,Spain,0,0
+201.148.172.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.148.176.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.148.192.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.148.208.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.148.212.0/22,3895114,SA,South America,CL,Chile,0,0
+201.148.216.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.148.224.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.148.232.0/22,3624060,nan,North America,CR,Costa Rica,0,0
+201.148.236.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.148.240.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.149.0.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.149.64.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.149.96.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.149.100.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.149.104.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.149.112.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.149.128.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.150.0.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.150.8.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.150.12.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.16.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.150.24.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.28.0/22,3895114,SA,South America,CL,Chile,0,0
+201.150.32.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.150.48.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.150.56.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.60.0/22,3932488,SA,South America,PE,Peru,0,0
+201.150.64.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.150.80.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.84.0/22,3585968,nan,North America,SV,El Salvador,0,0
+201.150.88.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.150.96.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.150.100.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.104.0/22,3723988,nan,North America,HT,Haiti,0,0
+201.150.108.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.112.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.150.116.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.150.120.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.150.128.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.150.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.150.160.0/19,3923057,SA,South America,BO,Bolivia,0,0
+201.150.192.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.151.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+201.152.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+201.156.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+201.157.0.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.157.128.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.157.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.158.0.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.158.8.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.158.16.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.158.20.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.158.24.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.158.32.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.158.40.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.158.48.0/22,3608932,nan,North America,HN,Honduras,0,0
+201.158.52.0/22,3932488,SA,South America,PE,Peru,0,0
+201.158.56.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.158.64.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.158.96.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.158.98.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.158.99.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.158.100.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.158.104.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.158.108.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.158.112.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.158.120.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.158.128.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.159.0.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.159.8.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.159.16.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.159.24.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.159.32.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.159.48.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.159.52.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.159.56.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.159.64.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.159.68.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.159.70.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.159.71.0/24,6252001,nan,North America,US,United States,0,0
+201.159.72.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.159.80.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.159.84.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.159.88.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.159.96.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.159.112.0/23,3585968,nan,North America,SV,El Salvador,0,0
+201.159.114.0/23,3608932,nan,North America,HN,Honduras,0,0
+201.159.116.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.159.120.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.159.124.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.159.128.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.159.144.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.159.160.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.159.168.0/21,3895114,SA,South America,CL,Chile,0,0
+201.159.176.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.159.180.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.159.184.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.159.192.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.159.208.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.159.216.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.159.220.0/22,3658394,SA,South America,EC,Ecuador,0,0
+201.159.224.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.159.240.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.159.248.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.160.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+201.162.0.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.162.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.162.128.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.163.0.0/16,3996063,nan,North America,MX,Mexico,0,0
+201.164.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+201.168.0.0/14,3996063,nan,North America,MX,Mexico,0,0
+201.172.0.0/15,3996063,nan,North America,MX,Mexico,0,0
+201.174.0.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.174.2.0/26,3996063,nan,North America,MX,Mexico,0,0
+201.174.2.64/29,6252001,nan,North America,US,United States,0,0
+201.174.2.72/29,3996063,nan,North America,MX,Mexico,0,0
+201.174.2.80/28,3996063,nan,North America,MX,Mexico,0,0
+201.174.2.96/27,3996063,nan,North America,MX,Mexico,0,0
+201.174.2.128/25,3996063,nan,North America,MX,Mexico,0,0
+201.174.3.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.174.4.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.174.8.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.0/26,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.64/30,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.68/30,6252001,nan,North America,US,United States,0,0
+201.174.10.72/30,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.76/30,6252001,nan,North America,US,United States,0,0
+201.174.10.80/30,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.84/30,6252001,nan,North America,US,United States,0,0
+201.174.10.88/30,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.92/30,6252001,nan,North America,US,United States,0,0
+201.174.10.96/30,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.100/30,6252001,nan,North America,US,United States,0,0
+201.174.10.104/29,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.112/28,3996063,nan,North America,MX,Mexico,0,0
+201.174.10.128/25,3996063,nan,North America,MX,Mexico,0,0
+201.174.11.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.174.12.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.174.16.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.174.32.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.174.64.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.174.128.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.174.144.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.174.148.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.174.150.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.174.151.0/24,6252001,nan,North America,US,United States,0,0
+201.174.152.0/21,3996063,nan,North America,MX,Mexico,0,0
+201.174.160.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.174.192.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.175.0.0/19,3996063,nan,North America,MX,Mexico,0,0
+201.175.32.0/20,3996063,nan,North America,MX,Mexico,0,0
+201.175.48.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.175.64.0/18,3996063,nan,North America,MX,Mexico,0,0
+201.175.128.0/17,3996063,nan,North America,MX,Mexico,0,0
+201.176.0.0/14,3865483,SA,South America,AR,Argentina,0,0
+201.180.0.0/15,3865483,SA,South America,AR,Argentina,0,0
+201.182.0.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.4.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.8.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.16.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.20.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.182.24.0/22,3585968,nan,North America,SV,El Salvador,0,0
+201.182.28.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.32.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.182.48.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.52.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.182.54.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.182.55.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+201.182.56.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.64.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.72.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.76.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+201.182.77.0/24,3703430,nan,North America,PA,Panama,0,0
+201.182.78.0/23,3658394,SA,South America,EC,Ecuador,0,0
+201.182.80.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.84.0/22,3658394,SA,South America,EC,Ecuador,0,0
+201.182.88.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.96.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.104.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.108.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.112.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.116.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.120.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.128.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.182.144.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.148.0/22,3658394,SA,South America,EC,Ecuador,0,0
+201.182.152.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.160.0/20,3469034,SA,South America,BR,Brazil,0,0
+201.182.176.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.184.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.188.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.182.192.0/19,3469034,SA,South America,BR,Brazil,0,0
+201.182.224.0/23,3469034,SA,South America,BR,Brazil,0,0
+201.182.226.0/23,3624060,nan,North America,CR,Costa Rica,0,0
+201.182.228.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.232.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.182.240.0/22,3658394,SA,South America,EC,Ecuador,0,0
+201.182.244.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.182.248.0/22,3686110,SA,South America,CO,Colombia,0,0
+201.182.252.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.183.0.0/16,3658394,SA,South America,EC,Ecuador,0,0
+201.184.0.0/15,3686110,SA,South America,CO,Colombia,0,0
+201.186.0.0/15,3895114,SA,South America,CL,Chile,0,0
+201.188.0.0/15,3895114,SA,South America,CL,Chile,0,0
+201.190.0.0/18,3608932,nan,North America,HN,Honduras,0,0
+201.190.64.0/18,3686110,SA,South America,CO,Colombia,0,0
+201.190.128.0/17,3865483,SA,South America,AR,Argentina,0,0
+201.191.0.0/16,3624060,nan,North America,CR,Costa Rica,0,0
+201.192.0.0/12,3624060,nan,North America,CR,Costa Rica,0,0
+201.208.0.0/14,3625428,SA,South America,VE,Venezuela,0,0
+201.212.0.0/15,3865483,SA,South America,AR,Argentina,0,0
+201.214.0.0/15,3895114,SA,South America,CL,Chile,0,0
+201.216.0.0/18,3686110,SA,South America,CO,Colombia,0,0
+201.216.64.0/18,3469034,SA,South America,BR,Brazil,0,0
+201.216.128.0/18,3595528,nan,North America,GT,Guatemala,0,0
+201.216.192.0/18,3865483,SA,South America,AR,Argentina,0,0
+201.217.0.0/18,3437598,SA,South America,PY,Paraguay,0,0
+201.217.64.0/18,3658394,SA,South America,EC,Ecuador,0,0
+201.217.128.0/18,3439705,SA,South America,UY,Uruguay,0,0
+201.217.192.0/19,3686110,SA,South America,CO,Colombia,0,0
+201.217.224.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.217.240.0/22,3895114,SA,South America,CL,Chile,0,0
+201.217.244.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.217.248.0/21,3895114,SA,South America,CL,Chile,0,0
+201.218.0.0/18,3658394,SA,South America,EC,Ecuador,0,0
+201.218.64.0/18,3703430,nan,North America,PA,Panama,0,0
+201.218.128.0/23,3932488,SA,South America,PE,Peru,0,0
+201.218.130.0/24,3932488,SA,South America,PE,Peru,0,0
+201.218.131.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.218.132.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.218.133.0/24,3932488,SA,South America,PE,Peru,0,0
+201.218.134.0/23,3932488,SA,South America,PE,Peru,0,0
+201.218.136.0/21,3932488,SA,South America,PE,Peru,0,0
+201.218.144.0/20,3932488,SA,South America,PE,Peru,0,0
+201.218.160.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.218.168.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.218.172.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.218.176.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.218.180.0/22,3625428,SA,South America,VE,Venezuela,0,0
+201.218.184.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.218.188.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.218.192.0/18,3703430,nan,North America,PA,Panama,0,0
+201.219.0.0/18,3658394,SA,South America,EC,Ecuador,0,0
+201.219.64.0/19,3865483,SA,South America,AR,Argentina,0,0
+201.219.96.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.219.112.0/20,3686110,SA,South America,CO,Colombia,0,0
+201.219.128.0/19,3895114,SA,South America,CL,Chile,0,0
+201.219.160.0/19,3865483,SA,South America,AR,Argentina,0,0
+201.219.192.0/19,3686110,SA,South America,CO,Colombia,0,0
+201.219.224.0/21,3439705,SA,South America,UY,Uruguay,0,0
+201.219.232.0/21,3895114,SA,South America,CL,Chile,0,0
+201.219.240.0/21,3686110,SA,South America,CO,Colombia,0,0
+201.219.248.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.219.252.0/22,3439705,SA,South America,UY,Uruguay,0,0
+201.220.0.0/20,7609695,nan,North America,SX,Sint Maarten,0,0
+201.220.16.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.220.24.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.220.25.0/24,3437598,SA,South America,PY,Paraguay,0,0
+201.220.26.0/24,3469034,SA,South America,BR,Brazil,0,0
+201.220.27.0/24,3895114,SA,South America,CL,Chile,0,0
+201.220.28.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.220.29.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+201.220.30.0/23,3686110,SA,South America,CO,Colombia,0,0
+201.220.32.0/19,3686110,SA,South America,CO,Colombia,0,0
+201.220.64.0/19,3686110,SA,South America,CO,Colombia,0,0
+201.220.96.0/19,3895114,SA,South America,CL,Chile,0,0
+201.220.128.0/20,3608932,nan,North America,HN,Honduras,0,0
+201.220.144.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.220.160.0/19,3865483,SA,South America,AR,Argentina,0,0
+201.220.192.0/19,3562981,nan,North America,CU,Cuba,0,0
+201.220.224.0/19,3895114,SA,South America,CL,Chile,0,0
+201.221.0.0/18,3439705,SA,South America,UY,Uruguay,0,0
+201.221.64.0/19,3573591,nan,North America,TT,Trinidad and Tobago,0,0
+201.221.96.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.221.112.0/22,3625428,SA,South America,VE,Venezuela,0,0
+201.221.116.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.221.120.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.221.121.0/24,3895114,SA,South America,CL,Chile,0,0
+201.221.122.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.221.123.0/24,3895114,SA,South America,CL,Chile,0,0
+201.221.124.0/23,3686110,SA,South America,CO,Colombia,0,0
+201.221.126.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+201.221.127.0/24,3658394,SA,South America,EC,Ecuador,0,0
+201.221.128.0/18,3686110,SA,South America,CO,Colombia,0,0
+201.221.192.0/19,3895114,SA,South America,CL,Chile,0,0
+201.221.224.0/19,3703430,nan,North America,PA,Panama,0,0
+201.222.0.0/20,3625428,SA,South America,VE,Venezuela,0,0
+201.222.16.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.222.20.0/22,3469034,SA,South America,BR,Brazil,0,0
+201.222.24.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.222.32.0/21,3469034,SA,South America,BR,Brazil,0,0
+201.222.40.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.222.41.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.222.42.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.222.43.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.222.44.0/22,3895114,SA,South America,CL,Chile,0,0
+201.222.48.0/21,3437598,SA,South America,PY,Paraguay,0,0
+201.222.56.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.222.60.0/22,3595528,nan,North America,GT,Guatemala,0,0
+201.222.64.0/18,3923057,SA,South America,BO,Bolivia,0,0
+201.222.128.0/17,3895114,SA,South America,CL,Chile,0,0
+201.223.0.0/16,3895114,SA,South America,CL,Chile,0,0
+201.224.0.0/14,3703430,nan,North America,PA,Panama,0,0
+201.228.0.0/16,3686110,SA,South America,CO,Colombia,0,0
+201.229.0.0/17,3577279,nan,North America,AW,Aruba,0,0
+201.229.128.0/17,3508796,nan,North America,DO,Dominican Republic,0,0
+201.230.0.0/16,3932488,SA,South America,PE,Peru,0,0
+201.231.0.0/16,3865483,SA,South America,AR,Argentina,0,0
+201.232.0.0/15,3686110,SA,South America,CO,Colombia,0,0
+201.234.0.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.2.0/23,3996063,nan,North America,MX,Mexico,0,0
+201.234.4.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.8.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.12.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.13.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.14.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.16.0/20,3865483,SA,South America,AR,Argentina,0,0
+201.234.32.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.234.40.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.42.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.43.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.44.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.45.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.46.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.48.0/20,3932488,SA,South America,PE,Peru,0,0
+201.234.64.0/20,3686110,SA,South America,CO,Colombia,0,0
+201.234.80.0/21,3658394,SA,South America,EC,Ecuador,0,0
+201.234.88.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.89.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.90.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.92.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.96.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.97.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.98.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.99.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.100.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.104.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.234.112.0/20,3932488,SA,South America,PE,Peru,0,0
+201.234.128.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.132.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.133.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.134.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.135.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.234.136.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.140.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.142.0/23,3686110,SA,South America,CO,Colombia,0,0
+201.234.144.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.148.0/23,3686110,SA,South America,CO,Colombia,0,0
+201.234.150.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.152.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.153.0/24,3686110,SA,South America,CO,Colombia,0,0
+201.234.154.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.156.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.160.0/22,3996063,nan,North America,MX,Mexico,0,0
+201.234.164.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.234.168.0/21,3865483,SA,South America,AR,Argentina,0,0
+201.234.176.0/20,3686110,SA,South America,CO,Colombia,0,0
+201.234.192.0/19,3658394,SA,South America,EC,Ecuador,0,0
+201.234.224.0/20,3625428,SA,South America,VE,Venezuela,0,0
+201.234.240.0/21,3686110,SA,South America,CO,Colombia,0,0
+201.234.248.0/24,3996063,nan,North America,MX,Mexico,0,0
+201.234.249.0/24,3865483,SA,South America,AR,Argentina,0,0
+201.234.250.0/23,3865483,SA,South America,AR,Argentina,0,0
+201.234.252.0/22,3865483,SA,South America,AR,Argentina,0,0
+201.235.0.0/16,3865483,SA,South America,AR,Argentina,0,0
+201.236.0.0/17,3895114,SA,South America,CL,Chile,0,0
+201.236.128.0/18,3895114,SA,South America,CL,Chile,0,0
+201.236.192.0/18,3686110,SA,South America,CO,Colombia,0,0
+201.237.0.0/16,3624060,nan,North America,CR,Costa Rica,0,0
+201.238.0.0/18,3625428,SA,South America,VE,Venezuela,0,0
+201.238.64.0/18,3573591,nan,North America,TT,Trinidad and Tobago,0,0
+201.238.128.0/18,3658394,SA,South America,EC,Ecuador,0,0
+201.238.192.0/18,3895114,SA,South America,CL,Chile,0,0
+201.239.0.0/16,3895114,SA,South America,CL,Chile,0,0
+201.240.0.0/16,3932488,SA,South America,PE,Peru,0,0
+201.241.0.0/16,3895114,SA,South America,CL,Chile,0,0
+201.242.0.0/15,3625428,SA,South America,VE,Venezuela,0,0
+201.244.0.0/15,3686110,SA,South America,CO,Colombia,0,0
+201.246.0.0/16,3895114,SA,South America,CL,Chile,0,0
+201.247.0.0/16,3585968,nan,North America,SV,El Salvador,0,0
+201.248.0.0/15,3625428,SA,South America,VE,Venezuela,0,0
+201.250.0.0/15,3865483,SA,South America,AR,Argentina,0,0
+201.252.0.0/14,3865483,SA,South America,AR,Argentina,0,0

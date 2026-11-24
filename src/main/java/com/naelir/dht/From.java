@@ -19,6 +19,6 @@ public class From {
 
     @Override
     public String toString() {
-        return "From [ip=" + Generator.inet(this.ip) + ", port=" + this.port + "]";
+        return "From [ip=" + Converter.inet(this.ip) + ", port=" + this.port + "]";
     }
 }

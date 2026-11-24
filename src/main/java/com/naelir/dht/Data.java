@@ -2,11 +2,10 @@ package com.naelir.dht;
 
 import java.nio.ByteBuffer;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
@@ -15,15 +14,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.naelir.Arguments;
+import com.naelir.Config;
 import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.db.EntryRepository;
-import com.naelir.db.MongoEntryRepository;
 import com.naelir.fs.IFileDB;
 import com.naelir.fs.ILocationDb;
 import com.naelir.tasks.MetaTorrentTask;
@@ -31,33 +27,38 @@ import com.naelir.tasks.Sample;
 
 public class Data {
     public ByteBuffer myself;
-    public RoutingTable table;
+    public final RoutingTable table;
+    
     public final Cache<ByteBuffer, IRequest> requestsSent;
     public final Map<String, Torrent> torrents;
     public final Map<String, Sample> samples;
+    public final Queue<Sample> queue;
     public final Queue<MetaTorrentTask> udptasks;
     public final Cache<ByteBuffer, Node> tokensSent;
     public final Cache<ByteBuffer, Node> tokensReceived;
     public final String tcpmyself;
     public final IFileDB fileManager;
     public final Queue<ByteBuffer> udpIds;
-    public final Arguments arguments;
+    public final Config config;
     public final EntryRepository dbRepo;
     public final Deque<MetaTorrentTask> tcptasks;
-    public final Set<Pair<String, Integer>> forUpdate;
-    public final List<String> unresolved;
-    public final Set<String> scrapeHashes;
+    public final Set<Entry> forUpdate;
+    public final Set<Entry> forRemoval;
+    public final Queue<Entry> forScrape;
+    public final Set<Entry> scrapeHashes;
     public final ILocationDb locationDb;
+    public final Stats stats;
 
-    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, Arguments arguments) {
+    public Data(Queue<ByteBuffer> udpIds, String tcpmyself, IFileDB fm, ILocationDb locationDb, EntryRepository repo, Config arguments) {
         this.udpIds = udpIds;
-        this.locationDb = locationDb;
-        this.arguments = arguments;
-        this.dbRepo = getRepo();
         this.myself = udpIds.poll();
         this.tcpmyself = tcpmyself;
+        this.locationDb = locationDb;
+        this.config = arguments;
+        this.fileManager = fm;
+        this.dbRepo = repo;
         this.scrapeHashes = new HashSet<>();
-        this.unresolved = new ArrayList<>();
+        this.forScrape = new LinkedList<>();
         // These maps are keyed by transaction id / token and only ever removed
         // when a matching response/announce arrives. Requests that never get a
         // response (dropped UDP packets, offline nodes, DHT spam, etc.) used to
@@ -71,64 +72,11 @@ public class Data {
         this.tokensReceived = CacheBuilder.newBuilder().expireAfterWrite(Duration.ofMinutes(10)).build();
         this.table = new RoutingTable();
         this.udptasks = new LinkedBlockingQueue<>(5000);
+        this.queue = new LinkedBlockingQueue<>(5000);
         this.tcptasks = new LinkedBlockingDeque<>(5000);
-        this.fileManager = fm;
         this.forUpdate = new HashSet<>();
-    }
-
-    EntryRepository getRepo() {
-        return this.arguments.connectionString != null
-                ? new MongoEntryRepository(this.arguments.connectionString, this.arguments.db, this.arguments.table)
-                : new EntryRepository() {
-                    @Override
-                    public void close() throws Exception {
-                    }
-
-                    @Override
-                    public long count() {
-                        return 0;
-                    }
-
-                    @Override
-                    public List<Entry> findAll(int page, int pageSize) {
-                        return null;
-                    }
-
-                    @Override
-                    public Entry findByHash(String hash) {
-                        return null;
-                    }
-
-                    @Override
-                    public List<Entry> findByName(String pattern) {
-                        return null;
-                    }
-
-                    @Override
-                    public Entry insert(Entry entry) {
-                        return null;
-                    }
-
-                    @Override
-                    public boolean remove(String hash) {
-                        return false;
-                    }
-
-                    @Override
-                    public boolean update(Entry entry) {
-                        return false;
-                    }
-
-                    @Override
-                    public long updateMany(List<String> hashes) {
-                        return 0;
-                    }
-
-                    @Override
-                    public long updateMany(List<String> hashes, int newPeerCount) {
-                        return 0;
-                    }
-                };
+        this.forRemoval = new HashSet<>();
+        this.stats = new Stats();
     }
 
     public ByteBuffer nextId() {

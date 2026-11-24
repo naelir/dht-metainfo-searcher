@@ -15,7 +15,7 @@ public class Torrent {
     
     public Torrent(String infoHash) {
         this.infoHash = infoHash;
-        this.peers = new ArrayDeque<>(20);
+        this.peers = new ArrayDeque<>(1);
     }
 
     public Torrent peer(Node node) {

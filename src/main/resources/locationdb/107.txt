@@ -1,0 +1,1268 @@
+107.0.0.0/14,6252001,nan,North America,US,United States,0,0
+107.4.0.0/15,6252001,nan,North America,US,United States,0,0
+107.6.0.0/21,6251999,nan,North America,CA,Canada,0,0
+107.6.8.0/21,6252001,nan,North America,US,United States,0,0
+107.6.16.0/22,6252001,nan,North America,US,United States,0,0
+107.6.20.0/23,6251999,nan,North America,CA,Canada,0,0
+107.6.22.0/24,6251999,nan,North America,CA,Canada,0,0
+107.6.23.0/27,6252001,nan,North America,US,United States,0,0
+107.6.23.32/27,6251999,nan,North America,CA,Canada,0,0
+107.6.23.64/26,6251999,nan,North America,CA,Canada,0,0
+107.6.23.128/25,6251999,nan,North America,CA,Canada,0,0
+107.6.24.0/21,6251999,nan,North America,CA,Canada,0,0
+107.6.32.0/20,6251999,nan,North America,CA,Canada,0,0
+107.6.48.0/22,6251999,nan,North America,CA,Canada,0,0
+107.6.52.0/22,6252001,nan,North America,US,United States,0,0
+107.6.56.0/22,6251999,nan,North America,CA,Canada,0,0
+107.6.60.0/24,6251999,nan,North America,CA,Canada,0,0
+107.6.61.0/25,6252001,nan,North America,US,United States,0,0
+107.6.61.128/28,6252001,nan,North America,US,United States,0,0
+107.6.61.144/28,6251999,nan,North America,CA,Canada,0,0
+107.6.61.160/27,6252001,nan,North America,US,United States,0,0
+107.6.61.192/26,6252001,nan,North America,US,United States,0,0
+107.6.62.0/23,6251999,nan,North America,CA,Canada,0,0
+107.6.64.0/19,6252001,nan,North America,US,United States,0,0
+107.6.96.0/21,6252001,nan,North America,US,United States,0,0
+107.6.104.0/22,798544,EU,Europe,PL,Poland,0,0
+107.6.108.0/22,6252001,nan,North America,US,United States,0,0
+107.6.112.0/21,6252001,nan,North America,US,United States,0,0
+107.6.120.0/22,6252001,nan,North America,US,United States,0,0
+107.6.124.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.6.125.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.6.126.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.6.128.0/21,6252001,nan,North America,US,United States,0,0
+107.6.136.0/22,6252001,nan,North America,US,United States,0,0
+107.6.140.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.144.0/22,6252001,nan,North America,US,United States,0,0
+107.6.148.0/23,6252001,nan,North America,US,United States,0,0
+107.6.150.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.152.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.156.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.158.0/23,6252001,nan,North America,US,United States,0,0
+107.6.160.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.176.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.184.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.6.188.0/22,6252001,nan,North America,US,United States,0,0
+107.6.192.0/18,6252001,nan,North America,US,United States,0,0
+107.7.0.0/16,6252001,nan,North America,US,United States,0,0
+107.8.0.0/13,6252001,nan,North America,US,United States,0,0
+107.16.0.0/12,6252001,nan,North America,US,United States,0,0
+107.32.0.0/11,2635167,EU,Europe,GB,United Kingdom,0,0
+107.64.0.0/10,6252001,nan,North America,US,United States,0,0
+107.128.0.0/15,6252001,nan,North America,US,United States,0,0
+107.130.0.0/16,6252001,nan,North America,US,United States,0,0
+107.131.0.0/18,6252001,nan,North America,US,United States,0,0
+107.131.64.0/21,6252001,nan,North America,US,United States,0,0
+107.131.72.0/23,6252001,nan,North America,US,United States,0,0
+107.131.74.0/29,6252001,nan,North America,US,United States,0,0
+107.131.74.8/31,6252001,nan,North America,US,United States,0,0
+107.131.74.11/32,6252001,nan,North America,US,United States,0,0
+107.131.74.12/30,6252001,nan,North America,US,United States,0,0
+107.131.74.16/28,6252001,nan,North America,US,United States,0,0
+107.131.74.32/27,6252001,nan,North America,US,United States,0,0
+107.131.74.64/26,6252001,nan,North America,US,United States,0,0
+107.131.74.128/25,6252001,nan,North America,US,United States,0,0
+107.131.75.0/24,6252001,nan,North America,US,United States,0,0
+107.131.76.0/22,6252001,nan,North America,US,United States,0,0
+107.131.80.0/20,6252001,nan,North America,US,United States,0,0
+107.131.96.0/19,6252001,nan,North America,US,United States,0,0
+107.131.128.0/17,6252001,nan,North America,US,United States,0,0
+107.132.0.0/14,6252001,nan,North America,US,United States,0,0
+107.136.0.0/13,6252001,nan,North America,US,United States,0,0
+107.144.0.0/14,6252001,nan,North America,US,United States,0,0
+107.148.0.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.148.4.0/23,6252001,nan,North America,US,United States,0,0
+107.148.6.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.148.7.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.148.8.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.16.0/20,6252001,nan,North America,US,United States,0,0
+107.148.32.0/21,1880251,AS,Asia,SG,Singapore,0,0
+107.148.40.0/22,6252001,nan,North America,US,United States,0,0
+107.148.44.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.48.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.56.0/22,1835841,AS,Asia,KR,South Korea,0,0
+107.148.60.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.64.0/22,2921044,EU,Europe,DE,Germany,0,0
+107.148.68.0/23,6252001,nan,North America,US,United States,0,0
+107.148.70.0/23,1835841,AS,Asia,KR,South Korea,0,0
+107.148.72.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.76.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.148.78.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.148.80.0/20,6252001,nan,North America,US,United States,0,0
+107.148.96.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.148.104.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.148.105.0/24,6252001,nan,North America,US,United States,0,0
+107.148.106.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.148.108.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.148.112.0/20,1861060,AS,Asia,JP,Japan,0,0
+107.148.128.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.132.0/22,6252001,nan,North America,US,United States,0,0
+107.148.136.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.144.0/22,6252001,nan,North America,US,United States,0,0
+107.148.148.0/23,1835841,AS,Asia,KR,South Korea,0,0
+107.148.150.0/23,6252001,nan,North America,US,United States,0,0
+107.148.152.0/21,6252001,nan,North America,US,United States,0,0
+107.148.160.0/19,6252001,nan,North America,US,United States,0,0
+107.148.192.0/19,6252001,nan,North America,US,United States,0,0
+107.148.224.0/22,6252001,nan,North America,US,United States,0,0
+107.148.228.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.148.230.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.232.0/22,6252001,nan,North America,US,United States,0,0
+107.148.236.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.148.240.0/20,6252001,nan,North America,US,United States,0,0
+107.149.0.0/23,6252001,nan,North America,US,United States,0,0
+107.149.2.0/24,6252001,nan,North America,US,United States,0,0
+107.149.3.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.4.0/22,6252001,nan,North America,US,United States,0,0
+107.149.8.0/24,6252001,nan,North America,US,United States,0,0
+107.149.9.0/24,1814991,AS,Asia,CN,China,0,0
+107.149.10.0/23,6252001,nan,North America,US,United States,0,0
+107.149.12.0/22,6252001,nan,North America,US,United States,0,0
+107.149.16.0/20,6252001,nan,North America,US,United States,0,0
+107.149.32.0/23,6252001,nan,North America,US,United States,0,0
+107.149.34.0/24,6252001,nan,North America,US,United States,0,0
+107.149.35.0/24,660013,EU,Europe,FI,Finland,0,0
+107.149.36.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.149.37.0/24,6252001,nan,North America,US,United States,0,0
+107.149.38.0/23,6252001,nan,North America,US,United States,0,0
+107.149.40.0/21,6252001,nan,North America,US,United States,0,0
+107.149.48.0/21,6252001,nan,North America,US,United States,0,0
+107.149.56.0/23,6252001,nan,North America,US,United States,0,0
+107.149.58.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.60.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.61.0/24,6252001,nan,North America,US,United States,0,0
+107.149.62.0/23,6252001,nan,North America,US,United States,0,0
+107.149.64.0/20,6252001,nan,North America,US,United States,0,0
+107.149.80.0/23,6252001,nan,North America,US,United States,0,0
+107.149.82.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.84.0/23,6252001,nan,North America,US,United States,0,0
+107.149.86.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.88.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.90.0/23,6252001,nan,North America,US,United States,0,0
+107.149.92.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.96.0/22,6252001,nan,North America,US,United States,0,0
+107.149.100.0/23,6252001,nan,North America,US,United States,0,0
+107.149.102.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.104.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.149.106.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.108.0/22,6252001,nan,North America,US,United States,0,0
+107.149.112.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.114.0/23,6252001,nan,North America,US,United States,0,0
+107.149.116.0/23,6252001,nan,North America,US,United States,0,0
+107.149.118.0/23,1733045,AS,Asia,MY,Malaysia,0,0
+107.149.120.0/24,6252001,nan,North America,US,United States,0,0
+107.149.121.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+107.149.122.0/23,6252001,nan,North America,US,United States,0,0
+107.149.124.0/23,6252001,nan,North America,US,United States,0,0
+107.149.126.0/23,1835841,AS,Asia,KR,South Korea,0,0
+107.149.128.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.149.130.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.132.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.134.0/23,6252001,nan,North America,US,United States,0,0
+107.149.136.0/23,1733045,AS,Asia,MY,Malaysia,0,0
+107.149.138.0/23,6252001,nan,North America,US,United States,0,0
+107.149.140.0/22,6252001,nan,North America,US,United States,0,0
+107.149.144.0/21,6252001,nan,North America,US,United States,0,0
+107.149.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.149.153.0/24,6252001,nan,North America,US,United States,0,0
+107.149.154.0/23,6252001,nan,North America,US,United States,0,0
+107.149.156.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.149.157.0/24,6252001,nan,North America,US,United States,0,0
+107.149.158.0/23,6252001,nan,North America,US,United States,0,0
+107.149.160.0/22,6252001,nan,North America,US,United States,0,0
+107.149.164.0/24,6252001,nan,North America,US,United States,0,0
+107.149.165.0/24,3686110,SA,South America,CO,Colombia,0,0
+107.149.166.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.168.0/21,6252001,nan,North America,US,United States,0,0
+107.149.176.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+107.149.177.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.149.178.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.180.0/23,1733045,AS,Asia,MY,Malaysia,0,0
+107.149.182.0/23,6252001,nan,North America,US,United States,0,0
+107.149.184.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.149.185.0/24,6252001,nan,North America,US,United States,0,0
+107.149.186.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.188.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.149.190.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.192.0/23,6252001,nan,North America,US,United States,0,0
+107.149.194.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.149.196.0/22,6252001,nan,North America,US,United States,0,0
+107.149.200.0/24,6252001,nan,North America,US,United States,0,0
+107.149.201.0/24,798549,EU,Europe,RO,Romania,0,0
+107.149.202.0/23,2921044,EU,Europe,DE,Germany,0,0
+107.149.204.0/22,6252001,nan,North America,US,United States,0,0
+107.149.208.0/22,6252001,nan,North America,US,United States,0,0
+107.149.212.0/23,6252001,nan,North America,US,United States,0,0
+107.149.214.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.216.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.220.0/22,6252001,nan,North America,US,United States,0,0
+107.149.224.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.228.0/22,6252001,nan,North America,US,United States,0,0
+107.149.232.0/22,6252001,nan,North America,US,United States,0,0
+107.149.236.0/24,6252001,nan,North America,US,United States,0,0
+107.149.237.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.149.238.0/23,6252001,nan,North America,US,United States,0,0
+107.149.240.0/21,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.248.0/23,1835841,AS,Asia,KR,South Korea,0,0
+107.149.250.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.149.251.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.149.252.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.150.0.0/22,6252001,nan,North America,US,United States,0,0
+107.150.4.0/23,6252001,nan,North America,US,United States,0,0
+107.150.6.0/24,1269750,AS,Asia,IN,India,0,0
+107.150.7.0/24,6252001,nan,North America,US,United States,0,0
+107.150.8.0/21,6252001,nan,North America,US,United States,0,0
+107.150.16.0/24,2186224,OC,Oceania,NZ,New Zealand,0,0
+107.150.17.0/24,6252001,nan,North America,US,United States,0,0
+107.150.18.0/23,6252001,nan,North America,US,United States,0,0
+107.150.20.0/25,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.128/26,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.192/29,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.200/31,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.202/32,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.203/32,2658434,EU,Europe,CH,Switzerland,0,0
+107.150.20.204/32,2077456,OC,Oceania,AU,Australia,0,0
+107.150.20.205/32,2017370,EU,Europe,RU,Russia,0,0
+107.150.20.206/31,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.208/28,2963597,EU,Europe,IE,Ireland,0,0
+107.150.20.224/27,2963597,EU,Europe,IE,Ireland,0,0
+107.150.21.0/24,6252001,nan,North America,US,United States,0,0
+107.150.22.0/24,719819,EU,Europe,HU,Hungary,0,0
+107.150.23.0/24,3017382,EU,Europe,FR,France,0,0
+107.150.24.0/22,6252001,nan,North America,US,United States,0,0
+107.150.28.0/23,6252001,nan,North America,US,United States,0,0
+107.150.30.0/24,798544,EU,Europe,PL,Poland,0,0
+107.150.31.0/24,6252001,nan,North America,US,United States,0,0
+107.150.32.0/19,6252001,nan,North America,US,United States,0,0
+107.150.64.0/22,6252001,nan,North America,US,United States,0,0
+107.150.68.0/24,6252001,nan,North America,US,United States,0,0
+107.150.69.0/24,6251999,nan,North America,CA,Canada,0,0
+107.150.70.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.150.71.0/24,6252001,nan,North America,US,United States,0,0
+107.150.72.0/24,6252001,nan,North America,US,United States,0,0
+107.150.73.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.150.74.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.150.75.0/24,241170,AF,Africa,SC,Seychelles,0,0
+107.150.76.0/22,6252001,nan,North America,US,United States,0,0
+107.150.80.0/23,6252001,nan,North America,US,United States,0,0
+107.150.82.0/24,241170,AF,Africa,SC,Seychelles,0,0
+107.150.83.0/24,6252001,nan,North America,US,United States,0,0
+107.150.84.0/22,6252001,nan,North America,US,United States,0,0
+107.150.88.0/22,6252001,nan,North America,US,United States,0,0
+107.150.92.0/24,6252001,nan,North America,US,United States,0,0
+107.150.93.0/24,2017370,EU,Europe,RU,Russia,0,0
+107.150.94.0/23,241170,AF,Africa,SC,Seychelles,0,0
+107.150.96.0/20,6252001,nan,North America,US,United States,0,0
+107.150.112.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.150.113.0/24,6252001,nan,North America,US,United States,0,0
+107.150.114.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.150.115.0/24,6252001,nan,North America,US,United States,0,0
+107.150.116.0/24,6252001,nan,North America,US,United States,0,0
+107.150.117.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.150.118.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.150.120.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+107.150.124.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.150.126.0/23,1835841,AS,Asia,KR,South Korea,0,0
+107.150.128.0/19,6252001,nan,North America,US,United States,0,0
+107.150.160.0/23,6252001,nan,North America,US,United States,0,0
+107.150.162.0/23,614540,AS,Asia,GE,Georgia,0,0
+107.150.164.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.150.165.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.150.166.0/24,6252001,nan,North America,US,United States,0,0
+107.150.167.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.150.168.0/24,3175395,EU,Europe,IT,Italy,0,0
+107.150.169.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.150.170.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.150.171.0/24,614540,AS,Asia,GE,Georgia,0,0
+107.150.172.0/24,3175395,EU,Europe,IT,Italy,0,0
+107.150.173.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.150.174.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.150.175.0/24,614540,AS,Asia,GE,Georgia,0,0
+107.150.176.0/24,6252001,nan,North America,US,United States,0,0
+107.150.177.0/24,614540,AS,Asia,GE,Georgia,0,0
+107.150.178.0/23,294640,AS,Asia,IL,Israel,0,0
+107.150.180.0/22,6252001,nan,North America,US,United States,0,0
+107.150.184.0/21,6252001,nan,North America,US,United States,0,0
+107.150.192.0/20,6252001,nan,North America,US,United States,0,0
+107.150.208.0/23,6252001,nan,North America,US,United States,0,0
+107.150.210.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+107.150.212.0/22,6252001,nan,North America,US,United States,0,0
+107.150.216.0/22,6252001,nan,North America,US,United States,0,0
+107.150.220.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+107.150.222.0/23,2921044,EU,Europe,DE,Germany,0,0
+107.150.224.0/19,6251999,nan,North America,CA,Canada,0,0
+107.151.0.0/20,6252001,nan,North America,US,United States,0,0
+107.151.16.0/21,6252001,nan,North America,US,United States,0,0
+107.151.24.0/21,6251999,nan,North America,CA,Canada,0,0
+107.151.32.0/19,6252001,nan,North America,US,United States,0,0
+107.151.64.0/20,6252001,nan,North America,US,United States,0,0
+107.151.80.0/24,6252001,nan,North America,US,United States,0,0
+107.151.81.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.151.82.0/24,6252001,nan,North America,US,United States,0,0
+107.151.83.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.151.84.0/22,6252001,nan,North America,US,United States,0,0
+107.151.88.0/21,6252001,nan,North America,US,United States,0,0
+107.151.96.0/19,6252001,nan,North America,US,United States,0,0
+107.151.128.0/24,6252001,nan,North America,US,United States,0,0
+107.151.129.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.151.130.0/24,6252001,nan,North America,US,United States,0,0
+107.151.131.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.151.132.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.151.133.0/24,6252001,nan,North America,US,United States,0,0
+107.151.134.0/24,285570,AS,Asia,KW,Kuwait,0,0
+107.151.135.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.151.136.0/24,6251999,nan,North America,CA,Canada,0,0
+107.151.137.0/24,6252001,nan,North America,US,United States,0,0
+107.151.138.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.151.139.0/24,6252001,nan,North America,US,United States,0,0
+107.151.140.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+107.151.141.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.151.142.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.151.143.0/24,6252001,nan,North America,US,United States,0,0
+107.151.144.0/24,3686110,SA,South America,CO,Colombia,0,0
+107.151.145.0/24,3865483,SA,South America,AR,Argentina,0,0
+107.151.146.0/23,6252001,nan,North America,US,United States,0,0
+107.151.148.0/22,6252001,nan,North America,US,United States,0,0
+107.151.152.0/24,3932488,SA,South America,PE,Peru,0,0
+107.151.153.0/24,6252001,nan,North America,US,United States,0,0
+107.151.154.0/24,6251999,nan,North America,CA,Canada,0,0
+107.151.155.0/24,6252001,nan,North America,US,United States,0,0
+107.151.156.0/22,6252001,nan,North America,US,United States,0,0
+107.151.160.0/23,6252001,nan,North America,US,United States,0,0
+107.151.162.0/24,6252001,nan,North America,US,United States,0,0
+107.151.163.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.151.164.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+107.151.165.0/24,6252001,nan,North America,US,United States,0,0
+107.151.166.0/23,6252001,nan,North America,US,United States,0,0
+107.151.168.0/23,6252001,nan,North America,US,United States,0,0
+107.151.170.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.151.171.0/24,6252001,nan,North America,US,United States,0,0
+107.151.172.0/22,6252001,nan,North America,US,United States,0,0
+107.151.176.0/21,6252001,nan,North America,US,United States,0,0
+107.151.184.0/24,3895114,SA,South America,CL,Chile,0,0
+107.151.185.0/24,6252001,nan,North America,US,United States,0,0
+107.151.186.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.151.187.0/24,6252001,nan,North America,US,United States,0,0
+107.151.188.0/22,6252001,nan,North America,US,United States,0,0
+107.151.192.0/23,3686110,SA,South America,CO,Colombia,0,0
+107.151.194.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.151.195.0/24,6252001,nan,North America,US,United States,0,0
+107.151.196.0/22,6252001,nan,North America,US,United States,0,0
+107.151.200.0/21,6252001,nan,North America,US,United States,0,0
+107.151.208.0/20,6252001,nan,North America,US,United States,0,0
+107.151.224.0/20,6252001,nan,North America,US,United States,0,0
+107.151.240.0/23,3686110,SA,South America,CO,Colombia,0,0
+107.151.242.0/23,6252001,nan,North America,US,United States,0,0
+107.151.244.0/22,6252001,nan,North America,US,United States,0,0
+107.151.248.0/23,6252001,nan,North America,US,United States,0,0
+107.151.250.0/23,3932488,SA,South America,PE,Peru,0,0
+107.151.252.0/22,6252001,nan,North America,US,United States,0,0
+107.152.0.0/19,6252001,nan,North America,US,United States,0,0
+107.152.32.0/21,6252001,nan,North America,US,United States,0,0
+107.152.40.0/22,6252001,nan,North America,US,United States,0,0
+107.152.44.0/23,6252001,nan,North America,US,United States,0,0
+107.152.46.0/25,6252001,nan,North America,US,United States,0,0
+107.152.46.128/29,6252001,nan,North America,US,United States,0,0
+107.152.46.136/30,6252001,nan,North America,US,United States,0,0
+107.152.46.140/32,4796775,nan,North America,VI,U.S. Virgin Islands,0,0
+107.152.46.141/32,6252001,nan,North America,US,United States,0,0
+107.152.46.142/31,6252001,nan,North America,US,United States,0,0
+107.152.46.144/28,6252001,nan,North America,US,United States,0,0
+107.152.46.160/27,6252001,nan,North America,US,United States,0,0
+107.152.46.192/26,6252001,nan,North America,US,United States,0,0
+107.152.47.0/24,6252001,nan,North America,US,United States,0,0
+107.152.48.0/20,6252001,nan,North America,US,United States,0,0
+107.152.64.0/20,6252001,nan,North America,US,United States,0,0
+107.152.80.0/20,6251999,nan,North America,CA,Canada,0,0
+107.152.96.0/19,6252001,nan,North America,US,United States,0,0
+107.152.128.0/21,6252001,nan,North America,US,United States,0,0
+107.152.136.0/22,6252001,nan,North America,US,United States,0,0
+107.152.140.0/25,6252001,nan,North America,US,United States,0,0
+107.152.140.128/28,6252001,nan,North America,US,United States,0,0
+107.152.140.144/29,6252001,nan,North America,US,United States,0,0
+107.152.140.152/29,6251999,nan,North America,CA,Canada,0,0
+107.152.140.160/29,6252001,nan,North America,US,United States,0,0
+107.152.140.168/29,6251999,nan,North America,CA,Canada,0,0
+107.152.140.176/28,6251999,nan,North America,CA,Canada,0,0
+107.152.140.192/26,6252001,nan,North America,US,United States,0,0
+107.152.141.0/24,6252001,nan,North America,US,United States,0,0
+107.152.142.0/23,6252001,nan,North America,US,United States,0,0
+107.152.144.0/20,6252001,nan,North America,US,United States,0,0
+107.152.160.0/21,6252001,nan,North America,US,United States,0,0
+107.152.168.0/23,6252001,nan,North America,US,United States,0,0
+107.152.170.0/24,3017382,EU,Europe,FR,France,0,0
+107.152.171.0/24,6252001,nan,North America,US,United States,0,0
+107.152.172.0/22,6252001,nan,North America,US,United States,0,0
+107.152.176.0/20,6252001,nan,North America,US,United States,0,0
+107.152.192.0/21,6252001,nan,North America,US,United States,0,0
+107.152.200.0/22,6252001,nan,North America,US,United States,0,0
+107.152.204.0/23,6252001,nan,North America,US,United States,0,0
+107.152.206.0/28,6252001,nan,North America,US,United States,0,0
+107.152.206.16/29,6252001,nan,North America,US,United States,0,0
+107.152.206.24/29,6251999,nan,North America,CA,Canada,0,0
+107.152.206.32/29,6252001,nan,North America,US,United States,0,0
+107.152.206.40/29,6251999,nan,North America,CA,Canada,0,0
+107.152.206.48/28,6251999,nan,North America,CA,Canada,0,0
+107.152.206.64/26,6252001,nan,North America,US,United States,0,0
+107.152.206.128/25,6252001,nan,North America,US,United States,0,0
+107.152.207.0/24,6252001,nan,North America,US,United States,0,0
+107.152.208.0/22,6252001,nan,North America,US,United States,0,0
+107.152.212.0/24,6252001,nan,North America,US,United States,0,0
+107.152.213.0/28,6252001,nan,North America,US,United States,0,0
+107.152.213.16/29,6252001,nan,North America,US,United States,0,0
+107.152.213.24/29,6251999,nan,North America,CA,Canada,0,0
+107.152.213.32/29,6252001,nan,North America,US,United States,0,0
+107.152.213.40/29,6251999,nan,North America,CA,Canada,0,0
+107.152.213.48/28,6251999,nan,North America,CA,Canada,0,0
+107.152.213.64/26,6252001,nan,North America,US,United States,0,0
+107.152.213.128/25,6252001,nan,North America,US,United States,0,0
+107.152.214.0/23,6252001,nan,North America,US,United States,0,0
+107.152.216.0/21,6252001,nan,North America,US,United States,0,0
+107.152.224.0/19,6252001,nan,North America,US,United States,0,0
+107.153.0.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.4.0/24,6252001,nan,North America,US,United States,0,0
+107.153.5.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.153.6.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.153.7.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.8.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.153.16.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.20.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.153.21.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.22.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.24.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.28.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.153.29.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.30.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.32.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.34.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.153.35.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.36.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.37.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.153.38.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.153.39.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.40.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.42.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.43.0/24,6252001,nan,North America,US,United States,0,0
+107.153.44.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.46.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.47.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.153.48.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.153.56.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.60.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.62.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.63.0/24,6252001,nan,North America,US,United States,0,0
+107.153.64.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.68.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.70.0/23,3469034,SA,South America,BR,Brazil,0,0
+107.153.72.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.153.80.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.81.0/24,6251999,nan,North America,CA,Canada,0,0
+107.153.82.0/23,6251999,nan,North America,CA,Canada,0,0
+107.153.84.0/24,357994,AF,Africa,EG,Egypt,0,0
+107.153.85.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.86.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.88.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.90.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.91.0/24,1814991,AS,Asia,CN,China,0,0
+107.153.92.0/24,1814991,AS,Asia,CN,China,0,0
+107.153.93.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.94.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.96.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.100.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.101.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.153.102.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.153.103.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.104.0/24,6252001,nan,North America,US,United States,0,0
+107.153.105.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.106.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.108.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.110.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.153.111.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.112.0/23,6252001,nan,North America,US,United States,0,0
+107.153.114.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.116.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.120.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.124.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.126.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.153.127.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.128.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.153.136.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.140.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.141.0/24,6252001,nan,North America,US,United States,0,0
+107.153.142.0/24,6252001,nan,North America,US,United States,0,0
+107.153.143.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.144.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.145.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.153.146.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.148.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.152.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.153.0/24,6252001,nan,North America,US,United States,0,0
+107.153.154.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.156.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.160.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.162.0/23,6252001,nan,North America,US,United States,0,0
+107.153.164.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.168.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.172.0/23,6252001,nan,North America,US,United States,0,0
+107.153.174.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.176.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.153.177.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.178.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.180.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.182.0/24,6252001,nan,North America,US,United States,0,0
+107.153.183.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.184.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.188.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.189.0/24,6252001,nan,North America,US,United States,0,0
+107.153.190.0/23,6252001,nan,North America,US,United States,0,0
+107.153.192.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.196.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.198.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.199.0/24,6252001,nan,North America,US,United States,0,0
+107.153.200.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.204.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.206.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.207.0/24,6252001,nan,North America,US,United States,0,0
+107.153.208.0/23,6252001,nan,North America,US,United States,0,0
+107.153.210.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.212.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.216.0/23,6252001,nan,North America,US,United States,0,0
+107.153.218.0/24,6252001,nan,North America,US,United States,0,0
+107.153.219.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.220.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.224.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.226.0/23,6252001,nan,North America,US,United States,0,0
+107.153.228.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.232.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.234.0/23,6252001,nan,North America,US,United States,0,0
+107.153.236.0/24,6252001,nan,North America,US,United States,0,0
+107.153.237.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.238.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.240.0/21,1861060,AS,Asia,JP,Japan,0,0
+107.153.248.0/22,1861060,AS,Asia,JP,Japan,0,0
+107.153.252.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.153.254.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.153.255.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.154.0.0/19,6252001,nan,North America,US,United States,0,0
+107.154.32.0/20,6252001,nan,North America,US,United States,0,0
+107.154.48.0/23,6252001,nan,North America,US,United States,0,0
+107.154.50.0/24,6252001,nan,North America,US,United States,0,0
+107.154.51.0/27,6252001,nan,North America,US,United States,0,0
+107.154.51.32/29,6252001,nan,North America,US,United States,0,0
+107.154.51.40/30,6252001,nan,North America,US,United States,0,0
+107.154.51.44/31,6252001,nan,North America,US,United States,0,0
+107.154.51.46/32,6252001,nan,North America,US,United States,0,0
+107.154.51.47/32,2921044,EU,Europe,DE,Germany,0,0
+107.154.51.48/28,6252001,nan,North America,US,United States,0,0
+107.154.51.64/26,6252001,nan,North America,US,United States,0,0
+107.154.51.128/25,6252001,nan,North America,US,United States,0,0
+107.154.52.0/24,6252001,nan,North America,US,United States,0,0
+107.154.53.0/24,953987,AF,Africa,ZA,South Africa,0,0
+107.154.54.0/23,6252001,nan,North America,US,United States,0,0
+107.154.56.0/23,6252001,nan,North America,US,United States,0,0
+107.154.58.0/24,6252001,nan,North America,US,United States,0,0
+107.154.59.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+107.154.60.0/22,6252001,nan,North America,US,United States,0,0
+107.154.64.0/24,1694008,AS,Asia,PH,Philippines,0,0
+107.154.65.0/24,6252001,nan,North America,US,United States,0,0
+107.154.66.0/24,6252001,nan,North America,US,United States,0,0
+107.154.67.0/24,3469034,SA,South America,BR,Brazil,0,0
+107.154.68.0/22,6252001,nan,North America,US,United States,0,0
+107.154.72.0/22,6252001,nan,North America,US,United States,0,0
+107.154.76.0/23,6252001,nan,North America,US,United States,0,0
+107.154.78.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.154.79.0/24,6252001,nan,North America,US,United States,0,0
+107.154.80.0/21,6252001,nan,North America,US,United States,0,0
+107.154.88.0/22,6252001,nan,North America,US,United States,0,0
+107.154.92.0/24,6252001,nan,North America,US,United States,0,0
+107.154.93.0/24,3932488,SA,South America,PE,Peru,0,0
+107.154.94.0/23,6252001,nan,North America,US,United States,0,0
+107.154.96.0/20,6252001,nan,North America,US,United States,0,0
+107.154.112.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.154.113.0/24,6252001,nan,North America,US,United States,0,0
+107.154.114.0/23,6252001,nan,North America,US,United States,0,0
+107.154.116.0/23,6252001,nan,North America,US,United States,0,0
+107.154.118.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.154.119.0/24,6252001,nan,North America,US,United States,0,0
+107.154.120.0/21,6252001,nan,North America,US,United States,0,0
+107.154.128.0/19,6252001,nan,North America,US,United States,0,0
+107.154.160.0/20,6252001,nan,North America,US,United States,0,0
+107.154.176.0/21,6252001,nan,North America,US,United States,0,0
+107.154.184.0/22,6252001,nan,North America,US,United States,0,0
+107.154.188.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+107.154.189.0/24,6252001,nan,North America,US,United States,0,0
+107.154.190.0/24,6251999,nan,North America,CA,Canada,0,0
+107.154.191.0/24,3996063,nan,North America,MX,Mexico,0,0
+107.154.192.0/19,6252001,nan,North America,US,United States,0,0
+107.154.224.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.154.225.0/24,6252001,nan,North America,US,United States,0,0
+107.154.226.0/23,6252001,nan,North America,US,United States,0,0
+107.154.228.0/22,6252001,nan,North America,US,United States,0,0
+107.154.232.0/21,6252001,nan,North America,US,United States,0,0
+107.154.240.0/20,6252001,nan,North America,US,United States,0,0
+107.155.0.0/22,6252001,nan,North America,US,United States,0,0
+107.155.4.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.155.5.0/24,6252001,nan,North America,US,United States,0,0
+107.155.6.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+107.155.7.0/24,6252001,nan,North America,US,United States,0,0
+107.155.8.0/24,6252001,nan,North America,US,United States,0,0
+107.155.9.0/24,1694008,AS,Asia,PH,Philippines,0,0
+107.155.10.0/24,2017370,EU,Europe,RU,Russia,0,0
+107.155.11.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.155.12.0/23,1880251,AS,Asia,SG,Singapore,0,0
+107.155.14.0/24,6252001,nan,North America,US,United States,0,0
+107.155.15.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.155.16.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.155.17.0/24,3017382,EU,Europe,FR,France,0,0
+107.155.18.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.155.19.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.155.20.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.155.21.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+107.155.22.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.155.23.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.24.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.25.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.155.26.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+107.155.27.0/24,1605651,AS,Asia,TH,Thailand,0,0
+107.155.28.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.155.29.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.155.30.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+107.155.31.0/24,1269750,AS,Asia,IN,India,0,0
+107.155.32.0/24,3996063,nan,North America,MX,Mexico,0,0
+107.155.33.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+107.155.34.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.155.35.0/24,953987,AF,Africa,ZA,South Africa,0,0
+107.155.36.0/24,6252001,nan,North America,US,United States,0,0
+107.155.37.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.155.38.0/23,1605651,AS,Asia,TH,Thailand,0,0
+107.155.40.0/23,1269750,AS,Asia,IN,India,0,0
+107.155.42.0/24,6252001,nan,North America,US,United States,0,0
+107.155.43.0/24,1835841,AS,Asia,KR,South Korea,0,0
+107.155.44.0/23,6252001,nan,North America,US,United States,0,0
+107.155.46.0/23,1269750,AS,Asia,IN,India,0,0
+107.155.48.0/24,6252001,nan,North America,US,United States,0,0
+107.155.49.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.155.50.0/24,6252001,nan,North America,US,United States,0,0
+107.155.51.0/24,2017370,EU,Europe,RU,Russia,0,0
+107.155.52.0/23,2017370,EU,Europe,RU,Russia,0,0
+107.155.54.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+107.155.55.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.56.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.57.0/24,6252001,nan,North America,US,United States,0,0
+107.155.58.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+107.155.59.0/24,6252001,nan,North America,US,United States,0,0
+107.155.60.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+107.155.61.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.155.62.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+107.155.63.0/24,1269750,AS,Asia,IN,India,0,0
+107.155.64.0/24,6252001,nan,North America,US,United States,0,0
+107.155.65.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.66.0/23,6252001,nan,North America,US,United States,0,0
+107.155.68.0/22,6252001,nan,North America,US,United States,0,0
+107.155.72.0/23,6252001,nan,North America,US,United States,0,0
+107.155.74.0/24,6252001,nan,North America,US,United States,0,0
+107.155.75.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.76.0/24,6251999,nan,North America,CA,Canada,0,0
+107.155.77.0/24,6252001,nan,North America,US,United States,0,0
+107.155.78.0/23,6252001,nan,North America,US,United States,0,0
+107.155.80.0/21,6252001,nan,North America,US,United States,0,0
+107.155.88.0/22,6252001,nan,North America,US,United States,0,0
+107.155.92.0/23,6252001,nan,North America,US,United States,0,0
+107.155.94.0/24,6252001,nan,North America,US,United States,0,0
+107.155.95.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.155.96.0/23,6252001,nan,North America,US,United States,0,0
+107.155.98.0/24,6251999,nan,North America,CA,Canada,0,0
+107.155.99.0/24,6252001,nan,North America,US,United States,0,0
+107.155.100.0/23,6252001,nan,North America,US,United States,0,0
+107.155.102.0/24,2077456,OC,Oceania,AU,Australia,0,0
+107.155.103.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.155.104.0/22,6252001,nan,North America,US,United States,0,0
+107.155.108.0/24,6252001,nan,North America,US,United States,0,0
+107.155.109.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+107.155.110.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.155.111.0/24,6252001,nan,North America,US,United States,0,0
+107.155.112.0/23,6252001,nan,North America,US,United States,0,0
+107.155.114.0/24,3017382,EU,Europe,FR,France,0,0
+107.155.115.0/24,6252001,nan,North America,US,United States,0,0
+107.155.116.0/22,6252001,nan,North America,US,United States,0,0
+107.155.120.0/23,6252001,nan,North America,US,United States,0,0
+107.155.122.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.155.123.0/24,6252001,nan,North America,US,United States,0,0
+107.155.124.0/24,6252001,nan,North America,US,United States,0,0
+107.155.125.0/24,2661886,EU,Europe,SE,Sweden,0,0
+107.155.126.0/23,6252001,nan,North America,US,United States,0,0
+107.155.128.0/17,6252001,nan,North America,US,United States,0,0
+107.156.0.0/15,6252001,nan,North America,US,United States,0,0
+107.158.0.0/18,6252001,nan,North America,US,United States,0,0
+107.158.64.0/20,6252001,nan,North America,US,United States,0,0
+107.158.80.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.158.81.0/24,6251999,nan,North America,CA,Canada,0,0
+107.158.82.0/23,6252001,nan,North America,US,United States,0,0
+107.158.84.0/22,6252001,nan,North America,US,United States,0,0
+107.158.88.0/22,6252001,nan,North America,US,United States,0,0
+107.158.92.0/23,6252001,nan,North America,US,United States,0,0
+107.158.94.0/28,2921044,EU,Europe,DE,Germany,0,0
+107.158.94.16/28,6252001,nan,North America,US,United States,0,0
+107.158.94.32/27,6252001,nan,North America,US,United States,0,0
+107.158.94.64/26,2921044,EU,Europe,DE,Germany,0,0
+107.158.94.128/26,2921044,EU,Europe,DE,Germany,0,0
+107.158.94.192/26,6252001,nan,North America,US,United States,0,0
+107.158.95.0/24,6252001,nan,North America,US,United States,0,0
+107.158.96.0/19,6252001,nan,North America,US,United States,0,0
+107.158.128.0/20,6252001,nan,North America,US,United States,0,0
+107.158.144.0/21,6252001,nan,North America,US,United States,0,0
+107.158.152.0/24,6252001,nan,North America,US,United States,0,0
+107.158.153.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+107.158.154.0/23,6252001,nan,North America,US,United States,0,0
+107.158.156.0/22,6252001,nan,North America,US,United States,0,0
+107.158.160.0/20,6252001,nan,North America,US,United States,0,0
+107.158.176.0/21,6252001,nan,North America,US,United States,0,0
+107.158.184.0/23,6252001,nan,North America,US,United States,0,0
+107.158.186.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+107.158.188.0/22,6252001,nan,North America,US,United States,0,0
+107.158.192.0/20,6252001,nan,North America,US,United States,0,0
+107.158.208.0/21,6252001,nan,North America,US,United States,0,0
+107.158.216.0/22,6251999,nan,North America,CA,Canada,0,0
+107.158.220.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.158.224.0/19,6252001,nan,North America,US,United States,0,0
+107.159.0.0/16,6251999,nan,North America,CA,Canada,0,0
+107.160.0.0/16,6252001,nan,North America,US,United States,0,0
+107.161.0.0/20,6251999,nan,North America,CA,Canada,0,0
+107.161.16.0/20,6252001,nan,North America,US,United States,0,0
+107.161.32.0/21,6251999,nan,North America,CA,Canada,0,0
+107.161.40.0/21,6252001,nan,North America,US,United States,0,0
+107.161.48.0/21,6252001,nan,North America,US,United States,0,0
+107.161.56.0/21,6251999,nan,North America,CA,Canada,0,0
+107.161.64.0/20,6251999,nan,North America,CA,Canada,0,0
+107.161.80.0/22,6252001,nan,North America,US,United States,0,0
+107.161.84.0/24,3508796,nan,North America,DO,Dominican Republic,0,0
+107.161.85.0/24,6252001,nan,North America,US,United States,0,0
+107.161.86.0/23,6252001,nan,North America,US,United States,0,0
+107.161.88.0/24,3996063,nan,North America,MX,Mexico,0,0
+107.161.89.0/24,6252001,nan,North America,US,United States,0,0
+107.161.90.0/23,6252001,nan,North America,US,United States,0,0
+107.161.92.0/24,6252001,nan,North America,US,United States,0,0
+107.161.93.0/24,3996063,nan,North America,MX,Mexico,0,0
+107.161.94.0/23,6252001,nan,North America,US,United States,0,0
+107.161.96.0/20,6251999,nan,North America,CA,Canada,0,0
+107.161.112.0/20,6252001,nan,North America,US,United States,0,0
+107.161.128.0/20,6252001,nan,North America,US,United States,0,0
+107.161.144.0/21,6252001,nan,North America,US,United States,0,0
+107.161.152.0/24,6251999,nan,North America,CA,Canada,0,0
+107.161.153.0/24,6252001,nan,North America,US,United States,0,0
+107.161.154.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.161.155.0/24,6252001,nan,North America,US,United States,0,0
+107.161.156.0/22,6252001,nan,North America,US,United States,0,0
+107.161.160.0/24,3017382,EU,Europe,FR,France,0,0
+107.161.161.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.161.162.0/23,6252001,nan,North America,US,United States,0,0
+107.161.164.0/22,6252001,nan,North America,US,United States,0,0
+107.161.168.0/24,6252001,nan,North America,US,United States,0,0
+107.161.169.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.161.170.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+107.161.172.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+107.161.174.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.161.175.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.161.176.0/20,6252001,nan,North America,US,United States,0,0
+107.161.192.0/18,6252001,nan,North America,US,United States,0,0
+107.162.0.0/17,6252001,nan,North America,US,United States,0,0
+107.162.128.0/18,6252001,nan,North America,US,United States,0,0
+107.162.192.0/19,6252001,nan,North America,US,United States,0,0
+107.162.224.0/20,6252001,nan,North America,US,United States,0,0
+107.162.240.0/20,6252001,nan,North America,US,United States,0,0
+107.163.0.0/16,6252001,nan,North America,US,United States,0,0
+107.164.0.0/15,6252001,nan,North America,US,United States,0,0
+107.166.0.0/16,6252001,nan,North America,US,United States,0,0
+107.167.0.0/18,6252001,nan,North America,US,United States,0,0
+107.167.64.0/19,6252001,nan,North America,US,United States,0,0
+107.167.96.0/23,6252001,nan,North America,US,United States,0,0
+107.167.98.0/24,6252001,nan,North America,US,United States,0,0
+107.167.99.0/25,6252001,nan,North America,US,United States,0,0
+107.167.99.128/26,6252001,nan,North America,US,United States,0,0
+107.167.99.192/29,6252001,nan,North America,US,United States,0,0
+107.167.99.200/31,6252001,nan,North America,US,United States,0,0
+107.167.99.202/32,6252001,nan,North America,US,United States,0,0
+107.167.99.203/32,1694008,AS,Asia,PH,Philippines,0,0
+107.167.99.204/30,6252001,nan,North America,US,United States,0,0
+107.167.99.208/28,6252001,nan,North America,US,United States,0,0
+107.167.99.224/27,6252001,nan,North America,US,United States,0,0
+107.167.100.0/22,6252001,nan,North America,US,United States,0,0
+107.167.104.0/22,6252001,nan,North America,US,United States,0,0
+107.167.108.0/23,6252001,nan,North America,US,United States,0,0
+107.167.110.0/24,6252001,nan,North America,US,United States,0,0
+107.167.111.0/26,6252001,nan,North America,US,United States,0,0
+107.167.111.64/28,6252001,nan,North America,US,United States,0,0
+107.167.111.80/29,6252001,nan,North America,US,United States,0,0
+107.167.111.88/31,6252001,nan,North America,US,United States,0,0
+107.167.111.90/32,6252001,nan,North America,US,United States,0,0
+107.167.111.91/32,1269750,AS,Asia,IN,India,0,0
+107.167.111.92/32,1269750,AS,Asia,IN,India,0,0
+107.167.111.93/32,6252001,nan,North America,US,United States,0,0
+107.167.111.94/31,6252001,nan,North America,US,United States,0,0
+107.167.111.96/27,6252001,nan,North America,US,United States,0,0
+107.167.111.128/25,6252001,nan,North America,US,United States,0,0
+107.167.112.0/20,6252001,nan,North America,US,United States,0,0
+107.167.128.0/19,6252001,nan,North America,US,United States,0,0
+107.167.160.0/20,6252001,nan,North America,US,United States,0,0
+107.167.176.0/20,1668284,AS,Asia,TW,Taiwan,0,0
+107.167.192.0/19,6252001,nan,North America,US,United States,0,0
+107.167.224.0/20,6252001,nan,North America,US,United States,0,0
+107.167.240.0/21,6252001,nan,North America,US,United States,0,0
+107.167.248.0/21,6251999,nan,North America,CA,Canada,0,0
+107.170.0.0/16,6252001,nan,North America,US,United States,0,0
+107.171.0.0/17,6252001,nan,North America,US,United States,0,0
+107.171.128.0/17,6251999,nan,North America,CA,Canada,0,0
+107.172.0.0/19,6252001,nan,North America,US,United States,0,0
+107.172.32.0/22,6252001,nan,North America,US,United States,0,0
+107.172.36.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.172.37.0/24,6252001,nan,North America,US,United States,0,0
+107.172.38.0/23,6252001,nan,North America,US,United States,0,0
+107.172.40.0/21,6252001,nan,North America,US,United States,0,0
+107.172.48.0/20,6252001,nan,North America,US,United States,0,0
+107.172.64.0/18,6252001,nan,North America,US,United States,0,0
+107.172.128.0/20,6252001,nan,North America,US,United States,0,0
+107.172.144.0/24,6252001,nan,North America,US,United States,0,0
+107.172.145.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.172.146.0/23,6252001,nan,North America,US,United States,0,0
+107.172.148.0/24,6252001,nan,North America,US,United States,0,0
+107.172.149.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.172.150.0/23,6252001,nan,North America,US,United States,0,0
+107.172.152.0/21,6252001,nan,North America,US,United States,0,0
+107.172.160.0/19,6252001,nan,North America,US,United States,0,0
+107.172.192.0/18,6252001,nan,North America,US,United States,0,0
+107.173.0.0/17,6252001,nan,North America,US,United States,0,0
+107.173.128.0/18,6252001,nan,North America,US,United States,0,0
+107.173.192.0/19,6252001,nan,North America,US,United States,0,0
+107.173.224.0/21,6252001,nan,North America,US,United States,0,0
+107.173.232.0/22,6252001,nan,North America,US,United States,0,0
+107.173.236.0/23,6252001,nan,North America,US,United States,0,0
+107.173.238.0/24,6252001,nan,North America,US,United States,0,0
+107.173.239.0/24,1269750,AS,Asia,IN,India,0,0
+107.173.240.0/21,6252001,nan,North America,US,United States,0,0
+107.173.248.0/24,6252001,nan,North America,US,United States,0,0
+107.173.249.0/24,1269750,AS,Asia,IN,India,0,0
+107.173.250.0/23,6252001,nan,North America,US,United States,0,0
+107.173.252.0/22,6252001,nan,North America,US,United States,0,0
+107.174.0.0/19,6252001,nan,North America,US,United States,0,0
+107.174.32.0/21,6252001,nan,North America,US,United States,0,0
+107.174.40.0/22,6252001,nan,North America,US,United States,0,0
+107.174.44.0/23,6252001,nan,North America,US,United States,0,0
+107.174.46.0/24,3017382,EU,Europe,FR,France,0,0
+107.174.47.0/24,6252001,nan,North America,US,United States,0,0
+107.174.48.0/21,6252001,nan,North America,US,United States,0,0
+107.174.56.0/22,6252001,nan,North America,US,United States,0,0
+107.174.60.0/24,6252001,nan,North America,US,United States,0,0
+107.174.61.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.174.62.0/23,6252001,nan,North America,US,United States,0,0
+107.174.64.0/19,6252001,nan,North America,US,United States,0,0
+107.174.96.0/20,6252001,nan,North America,US,United States,0,0
+107.174.112.0/23,6252001,nan,North America,US,United States,0,0
+107.174.114.0/24,3144096,EU,Europe,NO,Norway,0,0
+107.174.115.0/24,6252001,nan,North America,US,United States,0,0
+107.174.116.0/22,6252001,nan,North America,US,United States,0,0
+107.174.120.0/21,6252001,nan,North America,US,United States,0,0
+107.174.128.0/18,6252001,nan,North America,US,United States,0,0
+107.174.192.0/21,6252001,nan,North America,US,United States,0,0
+107.174.200.0/23,6252001,nan,North America,US,United States,0,0
+107.174.202.0/24,6252001,nan,North America,US,United States,0,0
+107.174.203.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.174.204.0/22,6252001,nan,North America,US,United States,0,0
+107.174.208.0/20,6252001,nan,North America,US,United States,0,0
+107.174.224.0/19,6252001,nan,North America,US,United States,0,0
+107.175.0.0/20,6252001,nan,North America,US,United States,0,0
+107.175.16.0/23,6252001,nan,North America,US,United States,0,0
+107.175.18.0/24,6252001,nan,North America,US,United States,0,0
+107.175.19.0/24,2510769,EU,Europe,ES,Spain,0,0
+107.175.20.0/22,6252001,nan,North America,US,United States,0,0
+107.175.24.0/21,6252001,nan,North America,US,United States,0,0
+107.175.32.0/20,6252001,nan,North America,US,United States,0,0
+107.175.48.0/21,6252001,nan,North America,US,United States,0,0
+107.175.56.0/23,6252001,nan,North America,US,United States,0,0
+107.175.58.0/24,6252001,nan,North America,US,United States,0,0
+107.175.59.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.175.60.0/24,6252001,nan,North America,US,United States,0,0
+107.175.61.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.175.62.0/23,6252001,nan,North America,US,United States,0,0
+107.175.64.0/19,6252001,nan,North America,US,United States,0,0
+107.175.96.0/20,6252001,nan,North America,US,United States,0,0
+107.175.112.0/24,1269750,AS,Asia,IN,India,0,0
+107.175.113.0/24,6252001,nan,North America,US,United States,0,0
+107.175.114.0/23,6252001,nan,North America,US,United States,0,0
+107.175.116.0/22,6252001,nan,North America,US,United States,0,0
+107.175.120.0/21,6252001,nan,North America,US,United States,0,0
+107.175.128.0/19,6252001,nan,North America,US,United States,0,0
+107.175.160.0/20,6252001,nan,North America,US,United States,0,0
+107.175.176.0/21,6252001,nan,North America,US,United States,0,0
+107.175.184.0/23,6252001,nan,North America,US,United States,0,0
+107.175.186.0/24,6252001,nan,North America,US,United States,0,0
+107.175.187.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.175.188.0/22,6252001,nan,North America,US,United States,0,0
+107.175.192.0/24,6252001,nan,North America,US,United States,0,0
+107.175.193.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.175.194.0/23,6252001,nan,North America,US,United States,0,0
+107.175.196.0/22,6252001,nan,North America,US,United States,0,0
+107.175.200.0/21,6252001,nan,North America,US,United States,0,0
+107.175.208.0/20,6252001,nan,North America,US,United States,0,0
+107.175.224.0/19,6252001,nan,North America,US,United States,0,0
+107.176.0.0/15,6252001,nan,North America,US,United States,0,0
+107.178.0.0/19,6252001,nan,North America,US,United States,0,0
+107.178.32.0/20,6252001,nan,North America,US,United States,0,0
+107.178.48.0/22,6252001,nan,North America,US,United States,0,0
+107.178.52.0/23,6252001,nan,North America,US,United States,0,0
+107.178.54.0/24,6252001,nan,North America,US,United States,0,0
+107.178.55.0/24,1880251,AS,Asia,SG,Singapore,0,0
+107.178.56.0/21,6252001,nan,North America,US,United States,0,0
+107.178.64.0/18,6252001,nan,North America,US,United States,0,0
+107.178.128.0/17,6252001,nan,North America,US,United States,0,0
+107.179.0.0/17,6252001,nan,North America,US,United States,0,0
+107.179.128.0/17,6251999,nan,North America,CA,Canada,0,0
+107.180.0.0/17,6252001,nan,North America,US,United States,0,0
+107.180.128.0/21,6252001,nan,North America,US,United States,0,0
+107.180.136.0/21,3996063,nan,North America,MX,Mexico,0,0
+107.180.144.0/21,6252001,nan,North America,US,United States,0,0
+107.180.152.0/21,3996063,nan,North America,MX,Mexico,0,0
+107.180.160.0/19,6252001,nan,North America,US,United States,0,0
+107.180.192.0/18,6252001,nan,North America,US,United States,0,0
+107.181.0.0/17,6252001,nan,North America,US,United States,0,0
+107.181.128.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.132.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.134.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.135.0/24,6252001,nan,North America,US,United States,0,0
+107.181.136.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.137.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.181.138.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.139.0/24,1269750,AS,Asia,IN,India,0,0
+107.181.140.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.144.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.152.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.154.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.181.155.0/24,298795,AS,Asia,TR,Türkiye,0,0
+107.181.156.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.181.160.0/20,6252001,nan,North America,US,United States,0,0
+107.181.176.0/23,6251999,nan,North America,CA,Canada,0,0
+107.181.178.0/24,6252001,nan,North America,US,United States,0,0
+107.181.179.0/24,6251999,nan,North America,CA,Canada,0,0
+107.181.180.0/22,6251999,nan,North America,CA,Canada,0,0
+107.181.184.0/22,6252001,nan,North America,US,United States,0,0
+107.181.188.0/24,6252001,nan,North America,US,United States,0,0
+107.181.189.0/24,6251999,nan,North America,CA,Canada,0,0
+107.181.190.0/23,6252001,nan,North America,US,United States,0,0
+107.181.192.0/18,6252001,nan,North America,US,United States,0,0
+107.182.0.0/20,6252001,nan,North America,US,United States,0,0
+107.182.16.0/20,6252001,nan,North America,US,United States,0,0
+107.182.32.0/19,6252001,nan,North America,US,United States,0,0
+107.182.64.0/19,6252001,nan,North America,US,United States,0,0
+107.182.96.0/20,6252001,nan,North America,US,United States,0,0
+107.182.112.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+107.182.128.0/21,6252001,nan,North America,US,United States,0,0
+107.182.136.0/22,6252001,nan,North America,US,United States,0,0
+107.182.140.0/24,1605651,AS,Asia,TH,Thailand,0,0
+107.182.141.0/24,1269750,AS,Asia,IN,India,0,0
+107.182.142.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.182.143.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+107.182.144.0/20,6252001,nan,North America,US,United States,0,0
+107.182.160.0/20,6252001,nan,North America,US,United States,0,0
+107.182.176.0/20,6252001,nan,North America,US,United States,0,0
+107.182.192.0/18,6252001,nan,North America,US,United States,0,0
+107.183.0.0/17,2960313,EU,Europe,LU,Luxembourg,0,0
+107.183.128.0/17,2510769,EU,Europe,ES,Spain,0,0
+107.184.0.0/29,6252001,nan,North America,US,United States,0,0
+107.184.0.8/30,6252001,nan,North America,US,United States,0,0
+107.184.0.12/31,6252001,nan,North America,US,United States,0,0
+107.184.0.14/32,6252001,nan,North America,US,United States,0,0
+107.184.0.16/28,6252001,nan,North America,US,United States,0,0
+107.184.0.32/27,6252001,nan,North America,US,United States,0,0
+107.184.0.64/26,6252001,nan,North America,US,United States,0,0
+107.184.0.128/25,6252001,nan,North America,US,United States,0,0
+107.184.1.0/24,6252001,nan,North America,US,United States,0,0
+107.184.2.0/23,6252001,nan,North America,US,United States,0,0
+107.184.4.0/22,6252001,nan,North America,US,United States,0,0
+107.184.8.0/21,6252001,nan,North America,US,United States,0,0
+107.184.16.0/20,6252001,nan,North America,US,United States,0,0
+107.184.32.0/21,6252001,nan,North America,US,United States,0,0
+107.184.40.0/22,6252001,nan,North America,US,United States,0,0
+107.184.44.0/24,6252001,nan,North America,US,United States,0,0
+107.184.45.0/28,6252001,nan,North America,US,United States,0,0
+107.184.45.16/32,6252001,nan,North America,US,United States,0,0
+107.184.45.18/31,6252001,nan,North America,US,United States,0,0
+107.184.45.20/30,6252001,nan,North America,US,United States,0,0
+107.184.45.24/29,6252001,nan,North America,US,United States,0,0
+107.184.45.32/27,6252001,nan,North America,US,United States,0,0
+107.184.45.64/26,6252001,nan,North America,US,United States,0,0
+107.184.45.128/25,6252001,nan,North America,US,United States,0,0
+107.184.46.0/23,6252001,nan,North America,US,United States,0,0
+107.184.48.0/20,6252001,nan,North America,US,United States,0,0
+107.184.64.0/18,6252001,nan,North America,US,United States,0,0
+107.184.128.0/23,6252001,nan,North America,US,United States,0,0
+107.184.130.0/26,6252001,nan,North America,US,United States,0,0
+107.184.130.64/28,6252001,nan,North America,US,United States,0,0
+107.184.130.80/29,6252001,nan,North America,US,United States,0,0
+107.184.130.88/30,6252001,nan,North America,US,United States,0,0
+107.184.130.92/31,6252001,nan,North America,US,United States,0,0
+107.184.130.94/32,6252001,nan,North America,US,United States,0,0
+107.184.130.96/27,6252001,nan,North America,US,United States,0,0
+107.184.130.128/25,6252001,nan,North America,US,United States,0,0
+107.184.131.0/24,6252001,nan,North America,US,United States,0,0
+107.184.132.0/22,6252001,nan,North America,US,United States,0,0
+107.184.136.0/22,6252001,nan,North America,US,United States,0,0
+107.184.140.0/23,6252001,nan,North America,US,United States,0,0
+107.184.142.0/25,6252001,nan,North America,US,United States,0,0
+107.184.142.128/29,6252001,nan,North America,US,United States,0,0
+107.184.142.136/30,6252001,nan,North America,US,United States,0,0
+107.184.142.141/32,6252001,nan,North America,US,United States,0,0
+107.184.142.142/31,6252001,nan,North America,US,United States,0,0
+107.184.142.144/28,6252001,nan,North America,US,United States,0,0
+107.184.142.160/27,6252001,nan,North America,US,United States,0,0
+107.184.142.192/26,6252001,nan,North America,US,United States,0,0
+107.184.143.0/24,6252001,nan,North America,US,United States,0,0
+107.184.144.0/20,6252001,nan,North America,US,United States,0,0
+107.184.160.0/21,6252001,nan,North America,US,United States,0,0
+107.184.168.0/24,6252001,nan,North America,US,United States,0,0
+107.184.169.0/25,6252001,nan,North America,US,United States,0,0
+107.184.169.128/26,6252001,nan,North America,US,United States,0,0
+107.184.169.192/28,6252001,nan,North America,US,United States,0,0
+107.184.169.208/29,6252001,nan,North America,US,United States,0,0
+107.184.169.217/32,6252001,nan,North America,US,United States,0,0
+107.184.169.218/31,6252001,nan,North America,US,United States,0,0
+107.184.169.220/30,6252001,nan,North America,US,United States,0,0
+107.184.169.224/27,6252001,nan,North America,US,United States,0,0
+107.184.170.0/23,6252001,nan,North America,US,United States,0,0
+107.184.172.0/22,6252001,nan,North America,US,United States,0,0
+107.184.176.0/20,6252001,nan,North America,US,United States,0,0
+107.184.192.0/18,6252001,nan,North America,US,United States,0,0
+107.185.0.0/18,6252001,nan,North America,US,United States,0,0
+107.185.64.0/20,6252001,nan,North America,US,United States,0,0
+107.185.80.0/21,6252001,nan,North America,US,United States,0,0
+107.185.88.0/22,6252001,nan,North America,US,United States,0,0
+107.185.92.0/24,6252001,nan,North America,US,United States,0,0
+107.185.93.0/25,6252001,nan,North America,US,United States,0,0
+107.185.93.128/27,6252001,nan,North America,US,United States,0,0
+107.185.93.160/28,6252001,nan,North America,US,United States,0,0
+107.185.93.176/30,6252001,nan,North America,US,United States,0,0
+107.185.93.180/31,6252001,nan,North America,US,United States,0,0
+107.185.93.182/32,6252001,nan,North America,US,United States,0,0
+107.185.93.184/29,6252001,nan,North America,US,United States,0,0
+107.185.93.192/26,6252001,nan,North America,US,United States,0,0
+107.185.94.0/23,6252001,nan,North America,US,United States,0,0
+107.185.96.0/23,6252001,nan,North America,US,United States,0,0
+107.185.98.0/25,6252001,nan,North America,US,United States,0,0
+107.185.98.128/26,6252001,nan,North America,US,United States,0,0
+107.185.98.192/28,6252001,nan,North America,US,United States,0,0
+107.185.98.208/32,6252001,nan,North America,US,United States,0,0
+107.185.98.210/31,6252001,nan,North America,US,United States,0,0
+107.185.98.212/30,6252001,nan,North America,US,United States,0,0
+107.185.98.216/29,6252001,nan,North America,US,United States,0,0
+107.185.98.224/27,6252001,nan,North America,US,United States,0,0
+107.185.99.0/24,6252001,nan,North America,US,United States,0,0
+107.185.100.0/22,6252001,nan,North America,US,United States,0,0
+107.185.104.0/21,6252001,nan,North America,US,United States,0,0
+107.185.112.0/21,6252001,nan,North America,US,United States,0,0
+107.185.120.0/22,6252001,nan,North America,US,United States,0,0
+107.185.124.0/23,6252001,nan,North America,US,United States,0,0
+107.185.126.0/24,6252001,nan,North America,US,United States,0,0
+107.185.127.0/25,6252001,nan,North America,US,United States,0,0
+107.185.127.128/27,6252001,nan,North America,US,United States,0,0
+107.185.127.160/28,6252001,nan,North America,US,United States,0,0
+107.185.127.176/29,6252001,nan,North America,US,United States,0,0
+107.185.127.184/30,6252001,nan,North America,US,United States,0,0
+107.185.127.189/32,6252001,nan,North America,US,United States,0,0
+107.185.127.190/31,6252001,nan,North America,US,United States,0,0
+107.185.127.192/26,6252001,nan,North America,US,United States,0,0
+107.185.128.0/20,6252001,nan,North America,US,United States,0,0
+107.185.144.0/23,6252001,nan,North America,US,United States,0,0
+107.185.146.0/24,6252001,nan,North America,US,United States,0,0
+107.185.147.0/25,6252001,nan,North America,US,United States,0,0
+107.185.147.128/27,6252001,nan,North America,US,United States,0,0
+107.185.147.160/29,6252001,nan,North America,US,United States,0,0
+107.185.147.169/32,6252001,nan,North America,US,United States,0,0
+107.185.147.170/31,6252001,nan,North America,US,United States,0,0
+107.185.147.172/30,6252001,nan,North America,US,United States,0,0
+107.185.147.176/28,6252001,nan,North America,US,United States,0,0
+107.185.147.192/26,6252001,nan,North America,US,United States,0,0
+107.185.148.0/22,6252001,nan,North America,US,United States,0,0
+107.185.152.0/21,6252001,nan,North America,US,United States,0,0
+107.185.160.0/19,6252001,nan,North America,US,United States,0,0
+107.185.192.0/19,6252001,nan,North America,US,United States,0,0
+107.185.224.0/21,6252001,nan,North America,US,United States,0,0
+107.185.232.0/25,6252001,nan,North America,US,United States,0,0
+107.185.232.128/26,6252001,nan,North America,US,United States,0,0
+107.185.232.193/32,6252001,nan,North America,US,United States,0,0
+107.185.232.194/31,6252001,nan,North America,US,United States,0,0
+107.185.232.196/30,6252001,nan,North America,US,United States,0,0
+107.185.232.200/29,6252001,nan,North America,US,United States,0,0
+107.185.232.208/28,6252001,nan,North America,US,United States,0,0
+107.185.232.224/27,6252001,nan,North America,US,United States,0,0
+107.185.233.0/24,6252001,nan,North America,US,United States,0,0
+107.185.234.0/23,6252001,nan,North America,US,United States,0,0
+107.185.236.0/22,6252001,nan,North America,US,United States,0,0
+107.185.240.0/20,6252001,nan,North America,US,United States,0,0
+107.186.0.0/15,6252001,nan,North America,US,United States,0,0
+107.188.0.0/16,6252001,nan,North America,US,United States,0,0
+107.189.0.0/21,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.8.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.10.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.0/25,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.128/27,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.160/28,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.176/30,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.180/32,2658434,EU,Europe,CH,Switzerland,0,0
+107.189.11.181/32,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.182/31,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.184/29,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.11.192/26,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.12.0/24,2921044,EU,Europe,DE,Germany,0,0
+107.189.13.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.14.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.15.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+107.189.16.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+107.189.24.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+107.189.28.0/22,2960313,EU,Europe,LU,Luxembourg,0,0
+107.189.32.0/19,6252001,nan,North America,US,United States,0,0
+107.189.64.0/18,6252001,nan,North America,US,United States,0,0
+107.189.128.0/18,6252001,nan,North America,US,United States,0,0
+107.189.192.0/18,6251999,nan,North America,CA,Canada,0,0
+107.190.0.0/17,6251999,nan,North America,CA,Canada,0,0
+107.190.128.0/17,6252001,nan,North America,US,United States,0,0
+107.191.0.0/19,6252001,nan,North America,US,United States,0,0
+107.191.32.0/21,6252001,nan,North America,US,United States,0,0
+107.191.40.0/22,6252001,nan,North America,US,United States,0,0
+107.191.44.0/23,6252001,nan,North America,US,United States,0,0
+107.191.46.0/23,3017382,EU,Europe,FR,France,0,0
+107.191.48.0/22,6252001,nan,North America,US,United States,0,0
+107.191.52.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.191.54.0/23,6252001,nan,North America,US,United States,0,0
+107.191.56.0/23,2077456,OC,Oceania,AU,Australia,0,0
+107.191.58.0/23,6252001,nan,North America,US,United States,0,0
+107.191.60.0/23,1861060,AS,Asia,JP,Japan,0,0
+107.191.62.0/23,3017382,EU,Europe,FR,France,0,0
+107.191.64.0/22,6252001,nan,North America,US,United States,0,0
+107.191.68.0/24,2963597,EU,Europe,IE,Ireland,0,0
+107.191.69.0/24,6252001,nan,North America,US,United States,0,0
+107.191.70.0/23,6252001,nan,North America,US,United States,0,0
+107.191.72.0/21,6252001,nan,North America,US,United States,0,0
+107.191.80.0/20,6252001,nan,North America,US,United States,0,0
+107.191.96.0/19,6252001,nan,North America,US,United States,0,0
+107.191.128.0/18,6252001,nan,North America,US,United States,0,0
+107.191.192.0/20,6252001,nan,North America,US,United States,0,0
+107.191.208.0/20,3579143,nan,North America,GP,Guadeloupe,0,0
+107.191.224.0/19,6252001,nan,North America,US,United States,0,0
+107.192.0.0/14,6252001,nan,North America,US,United States,0,0
+107.196.0.0/16,6252001,nan,North America,US,United States,0,0
+107.197.0.0/17,6252001,nan,North America,US,United States,0,0
+107.197.128.0/21,6252001,nan,North America,US,United States,0,0
+107.197.136.0/23,6252001,nan,North America,US,United States,0,0
+107.197.138.0/24,6252001,nan,North America,US,United States,0,0
+107.197.139.0/26,6252001,nan,North America,US,United States,0,0
+107.197.139.64/29,6252001,nan,North America,US,United States,0,0
+107.197.139.72/30,6252001,nan,North America,US,United States,0,0
+107.197.139.76/31,6252001,nan,North America,US,United States,0,0
+107.197.139.79/32,6252001,nan,North America,US,United States,0,0
+107.197.139.80/28,6252001,nan,North America,US,United States,0,0
+107.197.139.96/27,6252001,nan,North America,US,United States,0,0
+107.197.139.128/25,6252001,nan,North America,US,United States,0,0
+107.197.140.0/22,6252001,nan,North America,US,United States,0,0
+107.197.144.0/20,6252001,nan,North America,US,United States,0,0
+107.197.160.0/19,6252001,nan,North America,US,United States,0,0
+107.197.192.0/18,6252001,nan,North America,US,United States,0,0
+107.198.0.0/19,6252001,nan,North America,US,United States,0,0
+107.198.32.0/20,6252001,nan,North America,US,United States,0,0
+107.198.48.0/22,6252001,nan,North America,US,United States,0,0
+107.198.52.0/23,6252001,nan,North America,US,United States,0,0
+107.198.54.0/24,6252001,nan,North America,US,United States,0,0
+107.198.55.0/27,6252001,nan,North America,US,United States,0,0
+107.198.55.32/28,6252001,nan,North America,US,United States,0,0
+107.198.55.48/29,6252001,nan,North America,US,United States,0,0
+107.198.55.56/31,6252001,nan,North America,US,United States,0,0
+107.198.55.58/32,6252001,nan,North America,US,United States,0,0
+107.198.55.60/30,6252001,nan,North America,US,United States,0,0
+107.198.55.64/26,6252001,nan,North America,US,United States,0,0
+107.198.55.128/25,6252001,nan,North America,US,United States,0,0
+107.198.56.0/21,6252001,nan,North America,US,United States,0,0
+107.198.64.0/18,6252001,nan,North America,US,United States,0,0
+107.198.128.0/17,6252001,nan,North America,US,United States,0,0
+107.199.0.0/16,6252001,nan,North America,US,United States,0,0
+107.200.0.0/13,6252001,nan,North America,US,United States,0,0
+107.208.0.0/14,6252001,nan,North America,US,United States,0,0
+107.212.0.0/15,6252001,nan,North America,US,United States,0,0
+107.214.0.0/18,6252001,nan,North America,US,United States,0,0
+107.214.64.0/19,6252001,nan,North America,US,United States,0,0
+107.214.96.0/20,6252001,nan,North America,US,United States,0,0
+107.214.112.0/22,6252001,nan,North America,US,United States,0,0
+107.214.116.0/24,6252001,nan,North America,US,United States,0,0
+107.214.117.0/25,6252001,nan,North America,US,United States,0,0
+107.214.117.128/28,6252001,nan,North America,US,United States,0,0
+107.214.117.144/29,6252001,nan,North America,US,United States,0,0
+107.214.117.152/30,6252001,nan,North America,US,United States,0,0
+107.214.117.156/31,6252001,nan,North America,US,United States,0,0
+107.214.117.159/32,6252001,nan,North America,US,United States,0,0
+107.214.117.160/27,6252001,nan,North America,US,United States,0,0
+107.214.117.192/26,6252001,nan,North America,US,United States,0,0
+107.214.118.0/23,6252001,nan,North America,US,United States,0,0
+107.214.120.0/21,6252001,nan,North America,US,United States,0,0
+107.214.128.0/17,6252001,nan,North America,US,United States,0,0
+107.215.0.0/16,6252001,nan,North America,US,United States,0,0
+107.216.0.0/18,6252001,nan,North America,US,United States,0,0
+107.216.64.0/21,6252001,nan,North America,US,United States,0,0
+107.216.72.0/23,6252001,nan,North America,US,United States,0,0
+107.216.74.0/24,6252001,nan,North America,US,United States,0,0
+107.216.75.0/25,6252001,nan,North America,US,United States,0,0
+107.216.75.128/29,6252001,nan,North America,US,United States,0,0
+107.216.75.136/31,6252001,nan,North America,US,United States,0,0
+107.216.75.138/32,6252001,nan,North America,US,United States,0,0
+107.216.75.140/30,6252001,nan,North America,US,United States,0,0
+107.216.75.144/28,6252001,nan,North America,US,United States,0,0
+107.216.75.160/27,6252001,nan,North America,US,United States,0,0
+107.216.75.192/26,6252001,nan,North America,US,United States,0,0
+107.216.76.0/22,6252001,nan,North America,US,United States,0,0
+107.216.80.0/20,6252001,nan,North America,US,United States,0,0
+107.216.96.0/19,6252001,nan,North America,US,United States,0,0
+107.216.128.0/17,6252001,nan,North America,US,United States,0,0
+107.217.0.0/17,6252001,nan,North America,US,United States,0,0
+107.217.128.0/19,6252001,nan,North America,US,United States,0,0
+107.217.160.0/20,6252001,nan,North America,US,United States,0,0
+107.217.176.0/21,6252001,nan,North America,US,United States,0,0
+107.217.184.0/25,6252001,nan,North America,US,United States,0,0
+107.217.184.128/27,6252001,nan,North America,US,United States,0,0
+107.217.184.160/28,6252001,nan,North America,US,United States,0,0
+107.217.184.176/31,6252001,nan,North America,US,United States,0,0
+107.217.184.178/32,6252001,nan,North America,US,United States,0,0
+107.217.184.180/30,6252001,nan,North America,US,United States,0,0
+107.217.184.184/29,6252001,nan,North America,US,United States,0,0
+107.217.184.192/26,6252001,nan,North America,US,United States,0,0
+107.217.185.0/24,6252001,nan,North America,US,United States,0,0
+107.217.186.0/23,6252001,nan,North America,US,United States,0,0
+107.217.188.0/22,6252001,nan,North America,US,United States,0,0
+107.217.192.0/18,6252001,nan,North America,US,United States,0,0
+107.218.0.0/15,6252001,nan,North America,US,United States,0,0
+107.220.0.0/15,6252001,nan,North America,US,United States,0,0
+107.222.0.0/20,6252001,nan,North America,US,United States,0,0
+107.222.16.0/21,6252001,nan,North America,US,United States,0,0
+107.222.24.0/23,6252001,nan,North America,US,United States,0,0
+107.222.26.0/24,6252001,nan,North America,US,United States,0,0
+107.222.27.0/26,6252001,nan,North America,US,United States,0,0
+107.222.27.64/29,6252001,nan,North America,US,United States,0,0
+107.222.27.72/31,6252001,nan,North America,US,United States,0,0
+107.222.27.75/32,6252001,nan,North America,US,United States,0,0
+107.222.27.76/30,6252001,nan,North America,US,United States,0,0
+107.222.27.80/28,6252001,nan,North America,US,United States,0,0
+107.222.27.96/27,6252001,nan,North America,US,United States,0,0
+107.222.27.128/25,6252001,nan,North America,US,United States,0,0
+107.222.28.0/22,6252001,nan,North America,US,United States,0,0
+107.222.32.0/19,6252001,nan,North America,US,United States,0,0
+107.222.64.0/18,6252001,nan,North America,US,United States,0,0
+107.222.128.0/17,6252001,nan,North America,US,United States,0,0
+107.223.0.0/16,6252001,nan,North America,US,United States,0,0
+107.224.0.0/12,6252001,nan,North America,US,United States,0,0
+107.240.0.0/13,6252001,nan,North America,US,United States,0,0
+107.248.0.0/14,6252001,nan,North America,US,United States,0,0
+107.252.0.0/15,6252001,nan,North America,US,United States,0,0
+107.254.0.0/16,6252001,nan,North America,US,United States,0,0
+107.255.0.0/17,6252001,nan,North America,US,United States,0,0
+107.255.128.0/18,6252001,nan,North America,US,United States,0,0
+107.255.192.0/22,6252001,nan,North America,US,United States,0,0
+107.255.196.0/23,6252001,nan,North America,US,United States,0,0
+107.255.198.0/24,6252001,nan,North America,US,United States,0,0
+107.255.199.0/24,1861060,AS,Asia,JP,Japan,0,0
+107.255.200.0/21,6252001,nan,North America,US,United States,0,0
+107.255.208.0/20,6252001,nan,North America,US,United States,0,0
+107.255.224.0/19,6252001,nan,North America,US,United States,0,0

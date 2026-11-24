@@ -38,15 +38,17 @@ public class UtpPeerSession {
         // Anonymous subclass: override remoteAddress() so ClientHandler's
         // ctx.channel().remoteAddress() sees the real peer InetSocketAddress
         // instead of null (the EmbeddedChannel default).
-        this.embeddedChannel = new EmbeddedChannel(new HandshakeEncoder(), new HandshakeDecoder(),
-                new ClientHandler(data, torrent)) {
+        this.embeddedChannel = new EmbeddedChannel(
+                new HandshakeEncoder(), 
+                new HandshakeDecoder(),
+                new ClientHandler(data, torrent)
+        ) {
             @Override
             public SocketAddress remoteAddress() {
                 return remote;
             }
         };
     }
-    // ── Inbound path ──────────────────────────────────────────────────────────
 
     /**
      * Closes the embedded pipeline (fires {@code channelInactive} on
@@ -69,7 +71,6 @@ public class UtpPeerSession {
         }
         this.embeddedChannel.close();
     }
-    // ── Lifecycle ─────────────────────────────────────────────────────────────
 
     /**
      * Feed a raw application-level payload (the {@code byte[]} from
@@ -83,7 +84,9 @@ public class UtpPeerSession {
      * @param payload raw bytes emitted by {@link UTPConnection
      */
     public void in(byte[] payload) {
-        logger.debug("feeding {} bytes from {} into BT pipeline", payload.length, this.embeddedChannel.remoteAddress());
+        if (logger.isDebugEnabled()) {
+            logger.debug("feeding {} bytes from {} into BT pipeline", payload.length, this.embeddedChannel.remoteAddress());
+        }
         if (this.embeddedChannel.isActive()) {
             this.embeddedChannel.writeInbound(Unpooled.wrappedBuffer(payload));
         }

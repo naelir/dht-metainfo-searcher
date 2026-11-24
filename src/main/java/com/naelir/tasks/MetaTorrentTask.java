@@ -3,7 +3,7 @@ package com.naelir.tasks;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.Node;
 
-public class MetaTorrentTask {
+public final class MetaTorrentTask {
     public final Node node;
     public final Torrent torrent;
 

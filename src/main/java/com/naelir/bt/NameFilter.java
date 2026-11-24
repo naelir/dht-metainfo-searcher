@@ -7,32 +7,56 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.naelir.bt.TorrentMeta.Genre;
 import com.naelir.bt.TorrentMeta.MetaFile;
- 
-public class NameFilter {
-    private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "x264", "x265", "h264", "h265", "dvdrip",
-            "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "cam", "hdcam", "hdts", "hdtv", "dvdr", "dvd5",
-            "dvd9", "bgaudio");
-    private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl");
-    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime", "-uranime");
-    private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
-    private static final List<String> INVALID = List.of("torrent");
-    private static final List<Genre> DENIED_GENRES = List.of(Genre.UNKNOWN, Genre.XXX, Genre.TVEP);
-    public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+\\.");
-    public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
-    // do not allow group to start with DL, because it is not the real group name, but a part of WEB-DL
-    private static final Pattern GROUP = Pattern.compile("(?!DL)[\\d\\[\\]a-zA-Z]+");
 
+public class NameFilter {
+    private static final List<String> MOVIE_KEYWORDS = List.of("bluray", "blu-ray", "x264", "x265", "h264", "h265", "dvdrip",
+            "bdrip", "hdrip", "web-dl", "webrip", "webdl", "dvdscr", "hdts", "hdtv", "dvdr", "dvd5",
+            "dvd9", "bgaudio");
+    private static final List<String> GAME_REPACK_KEYWORDS = List.of("fitgirl", "dodi");
+    private static final List<String> ANIME_KEYWORDS = List.of("-toonshub", "-varyg", "-tsundere-raws", "-skyanime",
+            "-uranime", "-yurasuka", "-crucible", "-iahd");
+    private static final List<String> XXX = List.of("xxx", "jav", "worldmkv");
+    private static final List<String> EBOOK = List.of(".pdf", ".epub", ".mobi", ".azw3", ".djvu", ".fb2", ".lit", ".lrf", ".pdb", ".prc", ".rtf", ".txt");
+    
+    private static final List<String> OS = List.of("ubuntu", "debian", "archlinux", "fedora", "centos", "mint", "kali",
+            "manjaro", "suse", "opensuse", "gentoo", "slackware", "alpine", "raspbian", "zorin", "popos",
+            "elementaryos", "aerynos", "endeavouros", "garuda", "deepin", "nixos", "solus", "kaos", "rebornos",
+            "archlabs", "bunsenlabs", "crux", "dragonfly bsd", "gobolinux", "kde neon", "lubuntu", "mageia", "nitrux",
+            "pclinuxos", "almalinux", "anduinos", "freebsd", "openbsd", "netbsd", "reactos", "geckolinux", "ghostbsd",
+            "nitrux", "tuxedo", "openindiana", "smartos", "trueos", "ghostbsd", "midnightbsd", "nomadbsd");
+
+    private static final List<String> INVALID = List.of("torrent", "new-team", "hq-video", "hellywood", "dual-lat", "dvdrip-lat");
+    private static final List<Genre> DENIED_GENRES = List.of(Genre.NA, Genre.XXX, Genre.TVEP);
+
+    public static final Pattern TV_SERIES = Pattern.compile("\\.[Ss]\\d+[eE]\\d+[\\.\\-]");
+    public static final Pattern TV_SEASON = Pattern.compile("\\.S\\d\\d\\.[^E]");
+    // do not allow group to start with DL, because it is not the real group name,
+    // but a part of WEB-DL
+    private static final Pattern GROUP = Pattern.compile("(?!DL)[\\d\\[\\]a-zA-Z]+");
     private static final Pattern MUSIC = Pattern.compile("\\([A-Z]+\\d+\\)");
-    private static final Pattern VALID_NAMES = Pattern.compile("[\\[\\]\\-_()\\.\\da-zA-Z]+");
+    private static final Pattern VALID_NAMES = Pattern.compile("[\\dA-Z][\\[\\]\\-_'()\\.\\da-zA-Z]+");
+
+    public static boolean fine(TorrentMeta meta) {
+        String name = meta.getName();
+        if (DENIED_GENRES.contains(meta.genre))
+            return false;
+        return match(name);
+    }
+
+    public static boolean fineMatch(String name) {
+        if (matchKeyword(name.toLowerCase(), XXX))
+            return false;
+        return match(name);
+    }
 
     public static Genre from(String name, List<MetaFile> list) {
         if (name == null)
-            return Genre.UNKNOWN;
+            return Genre.NA;
         String lower = StringUtils.lowerCase(name);
         if (matchKeyword(lower, XXX))
             return Genre.XXX;
         else if (matchKeyword(lower, INVALID))
-            return Genre.UNKNOWN;
+            return Genre.NA;
         else if (matchKeyword(lower, ANIME_KEYWORDS))
             return Genre.ANIME;
         else if (TV_SERIES.matcher(name).find())
@@ -41,7 +65,8 @@ public class NameFilter {
             return Genre.TV;
         else if (MUSIC.matcher(name).find())
             return Genre.MUSIC;
-        else if (lower.indexOf(".ps5-") >= 0 || lower.indexOf(".psx-") >= 0 || lower.indexOf(".ps4-") >= 0)
+        else if (lower.indexOf(".ps5-") >= 0 || lower.indexOf(".psx-") >= 0 || lower.indexOf(".ps4-") >= 0
+                || lower.indexOf(".ps2-") >= 0 || lower.indexOf(".ps3-") >= 0)
             return Genre.GAME_PLAYSTATION;
         else if (lower.indexOf("_nsw-") >= 0)
             return Genre.GAME_NINTENDO;
@@ -55,45 +80,35 @@ public class NameFilter {
             return Genre.GAME_PC;
         else if (matchKeyword(lower, GAME_REPACK_KEYWORDS))
             return Genre.GAME_REPACK;
-        return Genre.UNKNOWN;
+        else if (lower.endsWith(".iso") && matchKeyword(lower, OS))
+            return Genre.OS;
+        else if (matchKeyword(lower, EBOOK)) {
+            return Genre.EBOOK;
+        }
+        return Genre.NA;
     }
 
     public static boolean match(String name) {
         boolean isOk = VALID_NAMES.matcher(name).matches();
-        if (isOk == false) {
+        if (isOk == false)
             return false;
-        }
         boolean haveDash = name.indexOf("-") > 0;
-        if (haveDash == false) {
+        if (haveDash == false)
             return false;
-        }
         String group = name.substring(name.lastIndexOf("-") + 1, name.length()).replace(".mkv", "");
-
         return GROUP.matcher(group).matches();
-    }
-
-    public static boolean fineMatch(String name) {
-        if (matchKeyword(name.toLowerCase(), XXX))
-            return false;
-        return match(name);
-    }
-    
-    public static boolean fine(TorrentMeta meta) {
-        String name = meta.getName();
-        if (DENIED_GENRES.contains(meta.genre)) {
-            return false;
-        }
-        return match(name);
     }
 
     static boolean matchGameKeyword(List<MetaFile> list) {
         boolean hasIso = false;
         boolean hasNfo = false;
         for (MetaFile e : list) {
-            if (e.path.endsWith(".iso"))
+            if (e.path.endsWith(".iso")) {
                 hasIso = true;
-            if (e.path.endsWith(".nfo"))
+            }
+            if (e.path.endsWith(".nfo")) {
                 hasNfo = true;
+            }
         }
         return hasIso && hasNfo;
     }

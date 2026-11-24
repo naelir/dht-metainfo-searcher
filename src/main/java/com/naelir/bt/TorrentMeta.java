@@ -110,10 +110,12 @@ public class TorrentMeta {
     
     public TorrentMeta(String hash, String name, List<MetaFile> list) {
         this.hash = hash;
-        this.name = name;
         this.list = list;
-        this.found = System.currentTimeMillis();
         this.genre = NameFilter.from(name, list);
+
+        this.name = Genre.GAME_REPACK == this.genre ? name.replaceAll(" ", "-") : name;
+
+        this.found = System.currentTimeMillis();
         this.count = list.size();
     }
 
@@ -149,7 +151,7 @@ public class TorrentMeta {
 
     public enum Genre {
         MOVIE_VIDEO("MOV"), TV("TV"), TVEP("TVEP"), MUSIC("MUSIC"), GAME_PC("GAME_PC"), GAME_REPACK("GAME_REPACK"), GAME_PLAYSTATION("GAME_PS"), GAME_NINTENDO("NSW"),
-        GAME_XBOX("XBOX"), SOFTWARE("APP"), UNKNOWN("NA"), XXX("XXX"), ANIME("ANIME");
+        GAME_XBOX("XBOX"), SOFTWARE("APP"), NA("NA"), XXX("XXX"), ANIME("ANIME"), OS("OS"), EBOOK("EBOOK");
 
         private String txt;
 
@@ -194,6 +196,10 @@ public class TorrentMeta {
         for (MetaFile b : meta.list) {
             size += b.bytes;
         }
-        return new Entry(meta.getName(), infoHash, meta.count, meta.getFound(), size, genre.getTxt(), 0);
+        String name = meta.getName();
+        if (name.indexOf(',') >= 0) {
+            name = name.replace(',', '_');
+        }
+        return new Entry(name, infoHash, meta.count, meta.getFound(), size, genre.getTxt(), 0);
     }
 }

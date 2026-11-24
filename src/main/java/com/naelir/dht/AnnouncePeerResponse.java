@@ -56,6 +56,6 @@ public class AnnouncePeerResponse implements IResponse {
 
     @Override
     public String toString() {
-        return "AnnouncePeerResponse [id=" + Generator.toHex(this.id.array()) + "]";
+        return "AnnouncePeerResponse [id=" + Converter.toHex(this.id.array()) + "]";
     }
 }

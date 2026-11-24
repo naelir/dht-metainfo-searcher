@@ -8,6 +8,8 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
+
 /**
  * Represents an ongoing UDP tracker session for a given tracker host.
  *
@@ -29,32 +31,27 @@ public class TrackerConnection {
 
     private static final Random RNG = new Random();
 
-    // ── identity ─────────────────────────────────────────────────────────────
     protected final String hostAddress;
     protected final int port;
 
     /** Current transaction ID – changes on every {@link #reconnect()}. */
     protected int transactionId;
 
-    // ── connection state ─────────────────────────────────────────────────────
     protected long connectionId;
     protected long connectionReceivedAt; // epoch ms; 0 = no live connection
 
-    // ── scrape state ─────────────────────────────────────────────────────────
     /** All hashes that still need stats (the ones we haven't sent yet + pending). */
-    protected final List<String> allHashes;
+    protected final List<Entry> allHashes;
 
 
     // ─────────────────────────────────────────────────────────────────────────
 
-    public TrackerConnection(String hostAddress, int port, Set<String> hashes) {
+    public TrackerConnection(String hostAddress, int port, Set<Entry> hashes) {
         this.hostAddress = hostAddress;
         this.port        = port;
         this.allHashes   = new ArrayList<>(hashes);
         this.transactionId = newTid();
     }
-
-    // ── public API ───────────────────────────────────────────────────────────
 
     /** Returns the transaction ID currently identifying this connection attempt. */
     public int transactionId() { return transactionId; }

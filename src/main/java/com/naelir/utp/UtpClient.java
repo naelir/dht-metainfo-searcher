@@ -10,14 +10,15 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.bt.Entry;
 import com.naelir.bt.Torrent;
 import com.naelir.dht.AnnouncePeerRequest;
 import com.naelir.dht.BEncoder;
 import com.naelir.dht.Command;
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
 import com.naelir.dht.FindNodeRequest;
 import com.naelir.dht.From;
-import com.naelir.dht.Generator;
 import com.naelir.dht.GetPeersRequest;
 import com.naelir.dht.IRequest;
 import com.naelir.dht.Node;
@@ -37,7 +38,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.socket.DatagramPacket;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import io.netty.util.ReferenceCountUtil;
- 
+
 /**
  * A Netty-based UDP client that mirrors {@link UtpClient} but uses Netty's
  * {@link NioDatagramChannel} and event-loop infrastructure instead of a plain
@@ -90,7 +91,7 @@ public class UtpClient implements AutoCloseable {
     private Data data;
     private UTPManager utpManager;
     private TrackerUdpManager trackerUdpManager;
-    
+
     public UtpClient(Channel channel, Data data, UTPManager utpManager, TrackerUdpManager trackerUdpManager) {
         this.data = data;
         this.channel = channel;
@@ -128,7 +129,7 @@ public class UtpClient implements AutoCloseable {
         logger.debug("connecting to {}, port {}", ip, port);
         InetSocketAddress remote = new InetSocketAddress(addr, port);
         UtpPeerSession session = new UtpPeerSession(this.data, torrent, remote);
-        UTPConnection connection = utpManager.newConnection(session, ip, port);
+        UTPConnection connection = this.utpManager.newConnection(session, ip, port);
         // Send the uTP SYN to start the handshake.
         byte[] syn = connection.connect();
         if (syn != null && syn.length > 0) {
@@ -138,24 +139,6 @@ public class UtpClient implements AutoCloseable {
 
     public void connectPeer(Torrent torrent, Node node) throws Exception {
         connectPeer(torrent, node.address(), node.port());
-    }
-
-    public void scrape(Set<String> hashes, InetAddress addr, int port) throws Exception {
-
-        TrackerConnection tc = new ScrapeTrackerConnection(addr.getHostAddress(), port, hashes);
-        byte[] encode = trackerUdpManager.newConnection(tc);
-        if (encode != null && encode.length > 0) {
-            writeUdp(encode, addr, port);
-        }
-    }
-
-    public void obtainPeers(Set<String> list, InetAddress addr, int port) throws Exception {
-
-        TrackerConnection tc = new AnnounceTrackerConnection(addr.getHostAddress(), port, list, data.myself.array(), data.samples);
-        byte[] encode = trackerUdpManager.newConnection(tc);
-        if (encode != null && encode.length > 0) {
-            writeUdp(encode, addr, port);
-        }
     }
 
     private List<Node> contactPoints() throws UnknownHostException {
@@ -191,7 +174,27 @@ public class UtpClient implements AutoCloseable {
     }
 
     private void logTo(Object decode, From from) {
-        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Generator.inet(from.ip), from.port);
+        if (logger.isDebugEnabled() == false)
+            return;
+        logger.debug("{}, {} to {}, port {}", decode.getClass().getSimpleName(), decode, Converter.inet(from.ip),
+                from.port);
+    }
+
+    public void obtainPeers(Set<Entry> list, InetAddress addr, int port) throws Exception {
+        TrackerConnection tc = new AnnounceTrackerConnection(addr.getHostAddress(), port, list,
+                this.data.myself.array(), this.data.samples);
+        byte[] encode = this.trackerUdpManager.newConnection(tc);
+        if (encode != null && encode.length > 0) {
+            writeUdp(encode, addr, port);
+        }
+    }
+
+    public void scrape(Set<Entry> hashes, InetAddress addr, int port) throws Exception {
+        TrackerConnection tc = new ScrapeTrackerConnection(addr.getHostAddress(), port, hashes);
+        byte[] encode = this.trackerUdpManager.newConnection(tc);
+        if (encode != null && encode.length > 0) {
+            writeUdp(encode, addr, port);
+        }
     }
 
     void send(IRequest request, InetAddress addr, int port) throws Exception {
@@ -229,8 +232,7 @@ public class UtpClient implements AutoCloseable {
         send(r, node.address(), node.port());
     }
 
-    public void sendSampleInfohashes(ByteBuffer myself, ByteBuffer range, Node node)
-            throws Exception {
+    public void sendSampleInfohashes(ByteBuffer myself, ByteBuffer range, Node node) throws Exception {
         SampleInfoHashesRequest r = new SampleInfoHashesRequest(myself, range, node);
         node.put(Command.SAMPLE);
         send(r, node.address(), node.port());
@@ -238,7 +240,7 @@ public class UtpClient implements AutoCloseable {
 
     public void tick() {
 //        double deltaSeconds = TICK_INTERVAL_MS / 1000.0;
-        List<UTPManager.PendingPacket> pending = utpManager.tick();
+        List<UTPManager.PendingPacket> pending = this.utpManager.tick();
         for (UTPManager.PendingPacket pp : pending) {
             try {
                 InetAddress tickAddr = InetAddress.getByName(pp.ip());
@@ -256,6 +258,8 @@ public class UtpClient implements AutoCloseable {
             logger.warn("writeUdp: channel not active, dropping {} byte(s) to {}:{}", data.length, addr, port);
             return;
         }
+        if (port < 10)
+            return;
         ByteBuf buf = Unpooled.wrappedBuffer(data);
         DatagramPacket pkt = new DatagramPacket(buf, new InetSocketAddress(addr, port));
         this.channel.writeAndFlush(pkt).addListener((ChannelFuture f) -> {
@@ -264,7 +268,8 @@ public class UtpClient implements AutoCloseable {
                 // on failure, but if the channel closed between the isActive() guard and
                 // the actual write, Netty may not have taken ownership. Defend with
                 // safeRelease so we never double-release.
-                logger.warn("writeUdp: failed to send {} byte(s) to {}:{}: {}", data.length, addr, port, f.cause().getMessage());
+                logger.warn("writeUdp: failed to send {} byte(s) to {}:{}: {}", data.length, addr, port,
+                        f.cause().getMessage());
                 if (pkt.refCnt() > 0) {
                     ReferenceCountUtil.safeRelease(pkt);
                 }

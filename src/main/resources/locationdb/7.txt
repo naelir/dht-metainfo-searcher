@@ -1,0 +1,25 @@
+7.0.0.0/10,6252001,nan,North America,US,United States,0,0
+7.64.0.0/12,6252001,nan,North America,US,United States,0,0
+7.80.0.0/16,6252001,nan,North America,US,United States,0,0
+7.81.0.0/17,6252001,nan,North America,US,United States,0,0
+7.81.128.0/19,6252001,nan,North America,US,United States,0,0
+7.81.160.0/22,6252001,nan,North America,US,United States,0,0
+7.81.164.0/23,6252001,nan,North America,US,United States,0,0
+7.81.166.0/24,6252001,nan,North America,US,United States,0,0
+7.81.167.0/25,6252001,nan,North America,US,United States,0,0
+7.81.167.128/28,6252001,nan,North America,US,United States,0,0
+7.81.167.144/32,6252001,nan,North America,US,United States,0,0
+7.81.167.145/32,2510769,EU,Europe,ES,Spain,0,0
+7.81.167.146/31,6252001,nan,North America,US,United States,0,0
+7.81.167.148/30,6252001,nan,North America,US,United States,0,0
+7.81.167.152/29,6252001,nan,North America,US,United States,0,0
+7.81.167.160/27,6252001,nan,North America,US,United States,0,0
+7.81.167.192/26,6252001,nan,North America,US,United States,0,0
+7.81.168.0/21,6252001,nan,North America,US,United States,0,0
+7.81.176.0/20,6252001,nan,North America,US,United States,0,0
+7.81.192.0/18,6252001,nan,North America,US,United States,0,0
+7.82.0.0/15,6252001,nan,North America,US,United States,0,0
+7.84.0.0/14,6252001,nan,North America,US,United States,0,0
+7.88.0.0/13,6252001,nan,North America,US,United States,0,0
+7.96.0.0/11,6252001,nan,North America,US,United States,0,0
+7.128.0.0/9,6252001,nan,North America,US,United States,0,0

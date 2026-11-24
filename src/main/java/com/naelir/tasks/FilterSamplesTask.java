@@ -1,0 +1,50 @@
+package com.naelir.tasks;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.naelir.bt.Entry;
+import com.naelir.dht.Command;
+import com.naelir.dht.Data;
+import com.naelir.dht.ITask;
+
+public class FilterSamplesTask implements ITask {
+    public static final Logger logger = LogManager.getLogger(FilterSamplesTask.class);
+    private Data data;
+
+    public FilterSamplesTask(Data data) {
+        this.data = data;
+    }
+
+    @Override
+    public boolean resolved() {
+        return true;
+    }
+
+    @Override
+    public void run() {
+        data.stats.log();
+        logger.info("samples before {}", data.samples.size());
+        this.data.forRemoval.stream()
+                .forEach(e -> {
+                    data.samples.remove(e.hash);
+                    data.fileManager.insert(Entry.lowPeers(e.hash));
+                });
+        this.data.forRemoval.clear();
+        this.data.scrapeHashes.clear();
+        logger.info("samples after {}", data.samples.size());
+
+        var list = data.table.nodes().stream().filter(e -> e.have(Command.SAMPLE_R) == false).toList();
+        list.forEach(e -> {
+            data.table.remove(e.id());
+        });
+        logger.info("table nodes after {}", data.table.nodes().size());
+
+        int pd = this.data.config.getPeersDepth;
+        for (int i = pd; i > 0; i--) {
+            for (Sample sample : this.data.samples.values()) {
+                this.data.queue.offer(sample);
+            }
+        }
+    }
+}

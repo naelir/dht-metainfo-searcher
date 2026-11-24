@@ -9,7 +9,6 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,10 +36,9 @@ public class Node {
     ByteBuffer id;
     private int c;
     public Queue<Command> queries;
-    public Pair<String, String> location;
     
     public Node(byte[] ip, int port) {
-        this(ip, port, Generator.generateRandomID());
+        this(ip, port, Converter.generateRandomID());
     }
 
     public Node(byte[] ip, int port, ByteBuffer id) {
@@ -51,13 +49,7 @@ public class Node {
         this.c = COUNTER.incrementAndGet();
         this.queries = new LinkedList<>();
     }
-    
-    public void setLocation(Pair<String, String> location) {
-        this.location = location;
-    }
-    public Pair<String, String> getLocation() {
-        return location;
-    }
+
 
     public byte[] ip() {
         return ip;
@@ -68,7 +60,7 @@ public class Node {
     }
     
     public String hash() {
-        return Generator.toHex(id.array());
+        return Converter.toHex(id.array());
     }
     
     public InetAddress address() {
@@ -120,8 +112,12 @@ public class Node {
         this.queries.add(command);
     }
 
+    public boolean applicable() {
+        return this.queries.isEmpty() || have(Command.GET_PEER_R) || have(Command.SAMPLE_R);
+    }
+    
     @Override
     public String toString() {
-        return "Node [id=" + this.c + ", ip=" + Generator.ip(this.ip) + ", port=" + this.port;
+        return "Node [id=" + this.c + ", ip=" + Converter.ip(this.ip) + ", port=" + this.port + ", applicable=" + applicable() + "]";
     }
 }

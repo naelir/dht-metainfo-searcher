@@ -1,0 +1,312 @@
+171.0.0.0/15,1880251,AS,Asia,SG,Singapore,0,0
+171.2.0.0/15,1861060,AS,Asia,JP,Japan,0,0
+171.4.0.0/14,1605651,AS,Asia,TH,Thailand,0,0
+171.8.0.0/13,1814991,AS,Asia,CN,China,0,0
+171.16.0.0/16,3017382,EU,Europe,FR,France,0,0
+171.17.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+171.18.0.0/20,3017382,EU,Europe,FR,France,0,0
+171.18.16.0/21,3017382,EU,Europe,FR,France,0,0
+171.18.24.0/21,2921044,EU,Europe,DE,Germany,0,0
+171.18.32.0/20,3017382,EU,Europe,FR,France,0,0
+171.18.48.0/22,1880251,AS,Asia,SG,Singapore,0,0
+171.18.52.0/22,3017382,EU,Europe,FR,France,0,0
+171.18.56.0/21,3017382,EU,Europe,FR,France,0,0
+171.18.64.0/18,3017382,EU,Europe,FR,France,0,0
+171.18.128.0/22,3996063,nan,North America,MX,Mexico,0,0
+171.18.132.0/24,1605651,AS,Asia,TH,Thailand,0,0
+171.18.133.0/24,3017382,EU,Europe,FR,France,0,0
+171.18.134.0/23,3017382,EU,Europe,FR,France,0,0
+171.18.136.0/21,3017382,EU,Europe,FR,France,0,0
+171.18.144.0/20,3017382,EU,Europe,FR,France,0,0
+171.18.160.0/19,3017382,EU,Europe,FR,France,0,0
+171.18.192.0/18,3017382,EU,Europe,FR,France,0,0
+171.19.0.0/16,719819,EU,Europe,HU,Hungary,0,0
+171.20.0.0/16,2623032,EU,Europe,DK,Denmark,0,0
+171.21.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.0.0/22,3017382,EU,Europe,FR,France,0,0
+171.22.4.0/22,597427,EU,Europe,LT,Lithuania,0,0
+171.22.8.0/22,2510769,EU,Europe,ES,Spain,0,0
+171.22.12.0/22,2658434,EU,Europe,CH,Switzerland,0,0
+171.22.16.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+171.22.17.0/24,3175395,EU,Europe,IT,Italy,0,0
+171.22.18.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.22.19.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+171.22.20.0/22,3277605,EU,Europe,BA,Bosnia and Herzegovina,0,0
+171.22.24.0/22,130758,AS,Asia,IR,Iran,0,0
+171.22.28.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.22.29.0/24,3175395,EU,Europe,IT,Italy,0,0
+171.22.30.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.31.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.22.32.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.36.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.40.0/22,2963597,EU,Europe,IE,Ireland,0,0
+171.22.44.0/22,3175395,EU,Europe,IT,Italy,0,0
+171.22.48.0/22,2921044,EU,Europe,DE,Germany,0,0
+171.22.52.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.56.0/22,298795,AS,Asia,TR,Türkiye,0,0
+171.22.60.0/23,6252001,nan,North America,US,United States,0,0
+171.22.62.0/23,1880251,AS,Asia,SG,Singapore,0,0
+171.22.64.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.68.0/22,2661886,EU,Europe,SE,Sweden,0,0
+171.22.72.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.22.76.0/24,6252001,nan,North America,US,United States,0,0
+171.22.77.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.78.0/24,6252001,nan,North America,US,United States,0,0
+171.22.79.0/24,1861060,AS,Asia,JP,Japan,0,0
+171.22.80.0/22,798544,EU,Europe,PL,Poland,0,0
+171.22.84.0/22,2510769,EU,Europe,ES,Spain,0,0
+171.22.88.0/22,798544,EU,Europe,PL,Poland,0,0
+171.22.92.0/22,3175395,EU,Europe,IT,Italy,0,0
+171.22.96.0/22,3057568,EU,Europe,SK,Slovakia,0,0
+171.22.100.0/24,2077456,OC,Oceania,AU,Australia,0,0
+171.22.101.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.102.0/23,6251999,nan,North America,CA,Canada,0,0
+171.22.104.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.108.0/22,6252001,nan,North America,US,United States,0,0
+171.22.112.0/22,146669,EU,Europe,CY,Cyprus,0,0
+171.22.116.0/23,146669,EU,Europe,CY,Cyprus,0,0
+171.22.118.0/24,146669,EU,Europe,CY,Cyprus,0,0
+171.22.119.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.22.120.0/23,146669,EU,Europe,CY,Cyprus,0,0
+171.22.122.0/24,6251999,nan,North America,CA,Canada,0,0
+171.22.123.0/24,146669,EU,Europe,CY,Cyprus,0,0
+171.22.124.0/22,146669,EU,Europe,CY,Cyprus,0,0
+171.22.128.0/23,146669,EU,Europe,CY,Cyprus,0,0
+171.22.130.0/24,146669,EU,Europe,CY,Cyprus,0,0
+171.22.131.0/24,3017382,EU,Europe,FR,France,0,0
+171.22.132.0/24,146669,EU,Europe,CY,Cyprus,0,0
+171.22.133.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.22.134.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.22.136.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.22.138.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.22.139.0/24,1880251,AS,Asia,SG,Singapore,0,0
+171.22.140.0/22,2510769,EU,Europe,ES,Spain,0,0
+171.22.144.0/24,3017382,EU,Europe,FR,France,0,0
+171.22.145.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.22.146.0/23,3017382,EU,Europe,FR,France,0,0
+171.22.148.0/22,783754,EU,Europe,AL,Albania,0,0
+171.22.152.0/22,3144096,EU,Europe,NO,Norway,0,0
+171.22.156.0/22,3017382,EU,Europe,FR,France,0,0
+171.22.160.0/22,798544,EU,Europe,PL,Poland,0,0
+171.22.164.0/24,2510769,EU,Europe,ES,Spain,0,0
+171.22.165.0/24,3658394,SA,South America,EC,Ecuador,0,0
+171.22.166.0/23,3658394,SA,South America,EC,Ecuador,0,0
+171.22.168.0/22,597427,EU,Europe,LT,Lithuania,0,0
+171.22.172.0/23,2921044,EU,Europe,DE,Germany,0,0
+171.22.174.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.22.175.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.176.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.178.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.179.0/24,2802361,EU,Europe,BE,Belgium,0,0
+171.22.180.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.22.181.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.182.0/24,3175395,EU,Europe,IT,Italy,0,0
+171.22.183.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.22.184.0/22,298795,AS,Asia,TR,Türkiye,0,0
+171.22.188.0/23,798544,EU,Europe,PL,Poland,0,0
+171.22.190.0/24,3175395,EU,Europe,IT,Italy,0,0
+171.22.191.0/24,6252001,nan,North America,US,United States,0,0
+171.22.192.0/24,1861060,AS,Asia,JP,Japan,0,0
+171.22.193.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+171.22.194.0/24,1861060,AS,Asia,JP,Japan,0,0
+171.22.195.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+171.22.196.0/22,2960313,EU,Europe,LU,Luxembourg,0,0
+171.22.200.0/22,6252001,nan,North America,US,United States,0,0
+171.22.204.0/22,2921044,EU,Europe,DE,Germany,0,0
+171.22.208.0/22,3175395,EU,Europe,IT,Italy,0,0
+171.22.212.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.22.216.0/22,6252001,nan,North America,US,United States,0,0
+171.22.220.0/22,2921044,EU,Europe,DE,Germany,0,0
+171.22.224.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+171.22.228.0/22,1861060,AS,Asia,JP,Japan,0,0
+171.22.232.0/22,3175395,EU,Europe,IT,Italy,0,0
+171.22.236.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.22.240.0/24,3017382,EU,Europe,FR,France,0,0
+171.22.241.0/24,660013,EU,Europe,FI,Finland,0,0
+171.22.242.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.22.243.0/24,3577718,nan,North America,VG,British Virgin Islands,0,0
+171.22.244.0/22,453733,EU,Europe,EE,Estonia,0,0
+171.22.248.0/22,3017382,EU,Europe,FR,France,0,0
+171.22.252.0/24,6252001,nan,North America,US,United States,0,0
+171.22.253.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+171.22.254.0/24,2562770,EU,Europe,MT,Malta,0,0
+171.22.255.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.23.0.0/16,3144096,EU,Europe,NO,Norway,0,0
+171.24.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+171.25.0.0/17,2658434,EU,Europe,CH,Switzerland,0,0
+171.25.128.0/19,2661886,EU,Europe,SE,Sweden,0,0
+171.25.160.0/22,3144096,EU,Europe,NO,Norway,0,0
+171.25.164.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.168.0/22,690791,EU,Europe,UA,Ukraine,0,0
+171.25.172.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.176.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+171.25.177.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.25.178.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.25.179.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+171.25.180.0/23,719819,EU,Europe,HU,Hungary,0,0
+171.25.182.0/23,798544,EU,Europe,PL,Poland,0,0
+171.25.184.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.188.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.25.190.0/24,2017370,EU,Europe,RU,Russia,0,0
+171.25.191.0/24,3175395,EU,Europe,IT,Italy,0,0
+171.25.192.0/24,798544,EU,Europe,PL,Poland,0,0
+171.25.193.0/24,2661886,EU,Europe,SE,Sweden,0,0
+171.25.194.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.25.196.0/22,798544,EU,Europe,PL,Poland,0,0
+171.25.200.0/23,2921044,EU,Europe,DE,Germany,0,0
+171.25.202.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.25.204.0/22,690791,EU,Europe,UA,Ukraine,0,0
+171.25.208.0/22,3017382,EU,Europe,FR,France,0,0
+171.25.212.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.216.0/24,6252001,nan,North America,US,United States,0,0
+171.25.217.0/24,2802361,EU,Europe,BE,Belgium,0,0
+171.25.218.0/23,458258,EU,Europe,LV,Latvia,0,0
+171.25.220.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+171.25.222.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+171.25.223.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+171.25.224.0/24,285570,AS,Asia,KW,Kuwait,0,0
+171.25.225.0/24,2921044,EU,Europe,DE,Germany,0,0
+171.25.226.0/23,798544,EU,Europe,PL,Poland,0,0
+171.25.228.0/24,2623032,EU,Europe,DK,Denmark,0,0
+171.25.229.0/24,2802361,EU,Europe,BE,Belgium,0,0
+171.25.230.0/23,798544,EU,Europe,PL,Poland,0,0
+171.25.232.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.236.0/22,690791,EU,Europe,UA,Ukraine,0,0
+171.25.240.0/24,597427,EU,Europe,LT,Lithuania,0,0
+171.25.241.0/24,690791,EU,Europe,UA,Ukraine,0,0
+171.25.242.0/23,2017370,EU,Europe,RU,Russia,0,0
+171.25.244.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.25.248.0/21,2017370,EU,Europe,RU,Russia,0,0
+171.26.0.0/16,2802361,EU,Europe,BE,Belgium,0,0
+171.27.0.0/16,2658434,EU,Europe,CH,Switzerland,0,0
+171.28.0.0/15,2635167,EU,Europe,GB,United Kingdom,0,0
+171.30.0.0/16,2635167,EU,Europe,GB,United Kingdom,0,0
+171.31.0.0/16,719819,EU,Europe,HU,Hungary,0,0
+171.32.0.0/16,2661886,EU,Europe,SE,Sweden,0,0
+171.33.0.0/18,2658434,EU,Europe,CH,Switzerland,0,0
+171.33.64.0/18,3017382,EU,Europe,FR,France,0,0
+171.33.128.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+171.33.136.0/21,3077311,EU,Europe,CZ,Czechia,0,0
+171.33.144.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+171.33.152.0/21,3017382,EU,Europe,FR,France,0,0
+171.33.160.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+171.33.176.0/20,2921044,EU,Europe,DE,Germany,0,0
+171.33.192.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+171.33.224.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+171.33.232.0/21,2510769,EU,Europe,ES,Spain,0,0
+171.33.240.0/24,2264397,EU,Europe,PT,Portugal,0,0
+171.33.241.0/24,690791,EU,Europe,UA,Ukraine,0,0
+171.33.242.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+171.33.243.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+171.33.244.0/22,2017370,EU,Europe,RU,Russia,0,0
+171.33.248.0/21,2017370,EU,Europe,RU,Russia,0,0
+171.34.0.0/15,1814991,AS,Asia,CN,China,0,0
+171.36.0.0/14,1814991,AS,Asia,CN,China,0,0
+171.40.0.0/13,1814991,AS,Asia,CN,China,0,0
+171.48.0.0/12,1269750,AS,Asia,IN,India,0,0
+171.64.0.0/13,6252001,nan,North America,US,United States,0,0
+171.72.0.0/17,6252001,nan,North America,US,United States,0,0
+171.72.128.0/18,6252001,nan,North America,US,United States,0,0
+171.72.192.0/20,6252001,nan,North America,US,United States,0,0
+171.72.208.0/27,6252001,nan,North America,US,United States,0,0
+171.72.208.32/28,6252001,nan,North America,US,United States,0,0
+171.72.208.48/28,2921044,EU,Europe,DE,Germany,0,0
+171.72.208.64/26,6252001,nan,North America,US,United States,0,0
+171.72.208.128/25,6252001,nan,North America,US,United States,0,0
+171.72.209.0/24,6252001,nan,North America,US,United States,0,0
+171.72.210.0/23,6252001,nan,North America,US,United States,0,0
+171.72.212.0/24,6252001,nan,North America,US,United States,0,0
+171.72.213.0/27,6252001,nan,North America,US,United States,0,0
+171.72.213.32/28,6252001,nan,North America,US,United States,0,0
+171.72.213.48/28,2635167,EU,Europe,GB,United Kingdom,0,0
+171.72.213.64/26,6252001,nan,North America,US,United States,0,0
+171.72.213.128/25,6252001,nan,North America,US,United States,0,0
+171.72.214.0/23,6252001,nan,North America,US,United States,0,0
+171.72.216.0/21,6252001,nan,North America,US,United States,0,0
+171.72.224.0/19,6252001,nan,North America,US,United States,0,0
+171.73.0.0/16,6252001,nan,North America,US,United States,0,0
+171.74.0.0/16,6252001,nan,North America,US,United States,0,0
+171.75.0.0/16,2635167,EU,Europe,GB,United Kingdom,0,0
+171.76.0.0/14,1269750,AS,Asia,IN,India,0,0
+171.80.0.0/12,1814991,AS,Asia,CN,China,0,0
+171.96.0.0/13,1605651,AS,Asia,TH,Thailand,0,0
+171.104.0.0/13,1814991,AS,Asia,CN,China,0,0
+171.112.0.0/12,1814991,AS,Asia,CN,China,0,0
+171.128.0.0/12,6252001,nan,North America,US,United States,0,0
+171.144.0.0/13,6252001,nan,North America,US,United States,0,0
+171.152.0.0/14,6252001,nan,North America,US,United States,0,0
+171.156.0.0/15,6252001,nan,North America,US,United States,0,0
+171.158.0.0/16,6252001,nan,North America,US,United States,0,0
+171.159.0.0/19,6252001,nan,North America,US,United States,0,0
+171.159.32.0/20,6252001,nan,North America,US,United States,0,0
+171.159.48.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+171.159.64.0/18,6252001,nan,North America,US,United States,0,0
+171.159.128.0/17,6252001,nan,North America,US,United States,0,0
+171.160.0.0/16,6252001,nan,North America,US,United States,0,0
+171.161.0.0/21,6252001,nan,North America,US,United States,0,0
+171.161.8.0/21,1880251,AS,Asia,SG,Singapore,0,0
+171.161.16.0/20,6252001,nan,North America,US,United States,0,0
+171.161.32.0/20,6252001,nan,North America,US,United States,0,0
+171.161.48.0/21,6252001,nan,North America,US,United States,0,0
+171.161.56.0/28,6252001,nan,North America,US,United States,0,0
+171.161.56.16/32,1880251,AS,Asia,SG,Singapore,0,0
+171.161.56.17/32,6252001,nan,North America,US,United States,0,0
+171.161.56.18/31,6252001,nan,North America,US,United States,0,0
+171.161.56.20/30,6252001,nan,North America,US,United States,0,0
+171.161.56.24/29,6252001,nan,North America,US,United States,0,0
+171.161.56.32/27,6252001,nan,North America,US,United States,0,0
+171.161.56.64/26,6252001,nan,North America,US,United States,0,0
+171.161.56.128/25,6252001,nan,North America,US,United States,0,0
+171.161.57.0/24,6252001,nan,North America,US,United States,0,0
+171.161.58.0/23,6252001,nan,North America,US,United States,0,0
+171.161.60.0/24,6252001,nan,North America,US,United States,0,0
+171.161.61.0/26,1880251,AS,Asia,SG,Singapore,0,0
+171.161.61.64/26,6252001,nan,North America,US,United States,0,0
+171.161.61.128/26,6252001,nan,North America,US,United States,0,0
+171.161.61.192/26,1880251,AS,Asia,SG,Singapore,0,0
+171.161.62.0/23,6252001,nan,North America,US,United States,0,0
+171.161.64.0/20,6252001,nan,North America,US,United States,0,0
+171.161.80.0/23,6252001,nan,North America,US,United States,0,0
+171.161.82.0/26,1880251,AS,Asia,SG,Singapore,0,0
+171.161.82.64/26,6252001,nan,North America,US,United States,0,0
+171.161.82.128/26,6252001,nan,North America,US,United States,0,0
+171.161.82.192/27,6252001,nan,North America,US,United States,0,0
+171.161.82.224/30,6252001,nan,North America,US,United States,0,0
+171.161.82.228/32,6252001,nan,North America,US,United States,0,0
+171.161.82.229/32,1880251,AS,Asia,SG,Singapore,0,0
+171.161.82.230/31,6252001,nan,North America,US,United States,0,0
+171.161.82.232/29,6252001,nan,North America,US,United States,0,0
+171.161.82.240/28,6252001,nan,North America,US,United States,0,0
+171.161.83.0/24,6252001,nan,North America,US,United States,0,0
+171.161.84.0/22,6252001,nan,North America,US,United States,0,0
+171.161.88.0/22,6252001,nan,North America,US,United States,0,0
+171.161.92.0/22,1269750,AS,Asia,IN,India,0,0
+171.161.96.0/19,6252001,nan,North America,US,United States,0,0
+171.161.128.0/17,6252001,nan,North America,US,United States,0,0
+171.162.0.0/20,6252001,nan,North America,US,United States,0,0
+171.162.16.0/21,6252001,nan,North America,US,United States,0,0
+171.162.24.0/22,6252001,nan,North America,US,United States,0,0
+171.162.28.0/23,6252001,nan,North America,US,United States,0,0
+171.162.30.0/24,6252001,nan,North America,US,United States,0,0
+171.162.31.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+171.162.32.0/19,6252001,nan,North America,US,United States,0,0
+171.162.64.0/18,6252001,nan,North America,US,United States,0,0
+171.162.128.0/17,6252001,nan,North America,US,United States,0,0
+171.163.0.0/16,6252001,nan,North America,US,United States,0,0
+171.164.0.0/14,6252001,nan,North America,US,United States,0,0
+171.168.0.0/13,6252001,nan,North America,US,United States,0,0
+171.176.0.0/12,6252001,nan,North America,US,United States,0,0
+171.192.0.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+171.192.16.0/20,6252001,nan,North America,US,United States,0,0
+171.192.32.0/19,6252001,nan,North America,US,United States,0,0
+171.192.64.0/18,6252001,nan,North America,US,United States,0,0
+171.192.128.0/17,6252001,nan,North America,US,United States,0,0
+171.193.0.0/16,6252001,nan,North America,US,United States,0,0
+171.194.0.0/15,6252001,nan,North America,US,United States,0,0
+171.196.0.0/14,6252001,nan,North America,US,United States,0,0
+171.200.0.0/14,6252001,nan,North America,US,United States,0,0
+171.204.0.0/15,6252001,nan,North America,US,United States,0,0
+171.206.0.0/16,6252001,nan,North America,US,United States,0,0
+171.207.0.0/16,1880251,AS,Asia,SG,Singapore,0,0
+171.208.0.0/12,1814991,AS,Asia,CN,China,0,0
+171.224.0.0/11,1562822,AS,Asia,VN,Vietnam,0,0

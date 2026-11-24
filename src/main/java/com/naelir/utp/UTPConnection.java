@@ -44,6 +44,7 @@ import io.netty.buffer.ByteBuf;
  * </ul>
  */
 public class UTPConnection {
+    private static final Random RANDOM = new Random();
     public static final Logger logger = LogManager.getLogger(UTPConnection.class);
     // ── Packet types ──────────────────────────────────────────────────────────
     public static final int ST_DATA = 0;
@@ -86,7 +87,7 @@ public class UTPConnection {
     private int seqNr;
     private int ackNr = 0;
     private int windowSize = 1500;
-    private int curWindow = 0;
+//    private int curWindow = 0;
     private final List<Long> baseDelays = new ArrayList<>();
     private long lastDelay = 0;
     /**
@@ -119,7 +120,7 @@ public class UTPConnection {
         this.session = session;
         this.connIdSend = connIdSend;
         this.connIdRecv = connIdRecv;
-        this.seqNr = new Random().nextInt(65535);
+        this.seqNr = RANDOM.nextInt(65535);
     }
 
     /**
@@ -169,7 +170,7 @@ public class UTPConnection {
         if (this.rto < 0.5) {
             this.rto = 0.5;
         }
-        this.curWindow -= entry.data.length;
+//        this.curWindow -= entry.data.length;
         this.outBuffer.remove(sn);
     }
 
@@ -372,7 +373,7 @@ public class UTPConnection {
             byte[] pkt = concat(packHeader(ST_DATA), chunk);
             this.outBuffer.put(this.seqNr, new OutEntry(pkt, now, 0));
             out.write(pkt, 0, pkt.length);
-            this.curWindow += pkt.length;
+//            this.curWindow += pkt.length;
         }
         return out.toByteArray();
     }

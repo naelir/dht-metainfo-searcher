@@ -1,15 +1,10 @@
 package com.naelir.tasks;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.naelir.bt.BtTcpClient;
 import com.naelir.dht.Data;
-import com.naelir.dht.ITask;
 
 public class TcpTorrentResolverTask implements Runnable {
     private static final Logger logger = LogManager.getLogger(TcpTorrentResolverTask.class);
@@ -27,24 +22,18 @@ public class TcpTorrentResolverTask implements Runnable {
             if (data.tcptasks.isEmpty()) {
                 return;
             }
-            int step = 1;
-            List<MetaTorrentTask> list = new ArrayList<>(step);
-            for (int i = 0; i < step; i++) {
-                MetaTorrentTask task = get();
-                if (task == null) {
-                    continue;
-                }
-                list.add(task);
+            MetaTorrentTask task = get();
+            if (task == null) {
+                return;
             }
             int size = this.data.tcptasks.size();
             if (size % 10 == 0 && size > 0) {
                 logger.info("tasks left {}", size);
             }
-            for (MetaTorrentTask task : list) {
-                String hex = task.torrent.infoHash();
-                logger.info("resolving torrent {} from {}, {}", hex, task.node.address(), task.node.port());
-                this.client.connect(task.torrent, task.node);
-            }
+            String hex = task.torrent.infoHash();
+            logger.info("resolving torrent {} from {}, {}", hex, task.node.address(), task.node.port());
+            this.client.connect(task.torrent, task.node);
+            
         } catch (Exception e) {
             logger.error("Unexpected error resolving torrent", e);
         }

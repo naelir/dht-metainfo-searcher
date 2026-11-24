@@ -14,13 +14,11 @@ public class UtpOnDataListener {
     public UtpOnDataListener(UTPManager utpManager) {
         this.utpManager = utpManager;
     }
-
-    public UTPManager getUtpManager() {
-        return this.utpManager;
-    }
-
+    
     public Optional<byte[]> onData(byte[] data, InetAddress addr, int port) {
-        logger.debug("Received data from {}:{}", addr.getHostAddress(), port);
+        if (logger.isDebugEnabled()) {
+            logger.debug("Received data from {}:{}", addr.getHostAddress(), port);
+        }
         byte[] response = this.utpManager.handlePacket(data, new InetSocketAddress(addr, port));
         return response != null ? Optional.of(response) : Optional.empty();
     }

@@ -1,65 +1,60 @@
 package com.naelir.bt;
 
+import java.nio.ByteBuffer;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.naelir.bt.TorrentMeta.Genre;
+import com.naelir.dht.Converter;
 
 public class Entry {
-    
     private static final String ANY_HASH = "0000000000000000000000000000000000000000";
-    
-    public static Entry empty() {
-        return new Entry("empty", ANY_HASH, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-    
-    public static Entry crap(String hash) {
-        return new Entry("chinese_korean_ru", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
-    }
-    
+    public static final ByteBuffer FIRST_HASH = ByteBuffer.wrap(Converter.toArray(ANY_HASH));
+
     public static Entry ban(String name, String hash) {
-        return new Entry(name, hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry(name, hash, 0, 0, 0, Genre.NA.name(), 0);
     }
 
-    public static Entry notEu(String hash) {
-        return new Entry("not_eu", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    public static Entry crap(String hash) {
+        return new Entry("c", hash, 0, 0, 0, Genre.NA.name(), 0);
     }
 
     public static Entry lowPeers(String hash) {
-        return new Entry("low_peers", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+        return new Entry("l", hash, 0, 0, 0, Genre.NA.getTxt(), 0);
     }
 
-    public static Entry unresolved(String hash) {
-        return new Entry("unresolved", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    public static String toLine(Entry e) {
+        String n = e.name.contains(",") ? e.name.replace(",", "_") : e.name;
+        return String.format("%s,%s,%d,%d,%s", e.hash, n, e.fileCount, e.size, e.genre);
     }
 
-    public static Entry lowPeersNotEu(String hash) {
-        return new Entry("low_peers_?", hash, 0, 0, 0, Genre.UNKNOWN.name(), 0);
+    public static Entry fromLine(String e) {
+        if (e.length() == 40) {
+            return lowPeers(e);
+        } else {
+            String[] split = e.split(",");
+            return new Entry(split[1], split[0], Integer.parseInt(split[2]), 0, Long.parseLong(split[3]), split[4], 0);
+        }
     }
-    
+
     @JsonProperty("n")
     public String name;
-
     @JsonProperty("h")
     public String hash;
-
     @JsonProperty("fc")
     public int fileCount;
-
     /** Unix epoch milliseconds */
     @JsonProperty("se")
     public long foundTime;
-    
     @JsonProperty("sz")
     public long size;
-    
     @JsonProperty("g")
     public String genre;
-    
     @JsonProperty("p")
     public int peers;
-    
-    public Entry() {}
+
+    public Entry() {
+    }
 
     public Entry(String name, String hash, int fileCount, long foundTime, long size, String genre, int peers) {
         this.name = name;
@@ -72,11 +67,6 @@ public class Entry {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(hash);
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -85,8 +75,11 @@ public class Entry {
         if (getClass() != obj.getClass())
             return false;
         Entry other = (Entry) obj;
-        return Objects.equals(hash, other.hash);
+        return Objects.equals(this.hash, other.hash);
     }
-    
-    
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.hash);
+    }
 }

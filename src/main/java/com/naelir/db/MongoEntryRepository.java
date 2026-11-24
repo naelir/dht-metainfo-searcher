@@ -34,7 +34,6 @@ public class MongoEntryRepository implements EntryRepository {
         ensureIndexes();
     }
 
-    /** Releases the underlying connection pool and background threads. */
     @Override
     public void close() {
         client.close();

@@ -1,0 +1,326 @@
+package com.naelir;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class Config {
+
+    public static Config parse(String[] args) {
+        String from = null;
+        String to = null;
+        int bitspaceParts = 256;
+        int resolverMillis = 300;
+        String connectionString = null;
+        String db = null;
+        String table = null;
+        String scrapeIn = null;
+        int getPeerDepth = 3;
+        int minPeers = 1;
+        int maxNodes = 400;
+        int scrapeStep = 5000;
+        int hashesStep = 20;
+        int mode = 0;
+        InetAddress trackerUrl = null;
+        int trackerPort = 0;
+        int scheduleInterval = 3;
+        for (int i = 0; i < args.length; i++) {
+            switch (args[i]) {
+            case "--help":
+                System.out.println(
+                    "Usage: dht-metainfo-searcher [OPTIONS]\n" +
+                    "\n" +
+                    "Options:\n" +
+                    "  --bitspace-parts <int>        Number of bit-space partitions to explore (default: 256)\n" +
+                    "  --from <hash>                 Hash to continue crawling from\n" +
+                    "  --to <hash>                   Hash to end crawling to\n" +
+                    "  --connection-string <string>  Database connection string\n" +
+                    "  --db <string>                 Database name\n" +
+                    "  --table <string>              Table name\n" +
+                    "  --scrape-file-in <path>       File with scrape results to read in\n" +
+                    "  --get-peers-depth <int>       Number of get-peers depth per hash (default: 3)\n" +
+                    "  --hashes-step <int>           Number of hashes to send get-peers at once (default: 20)\n" +
+                    "  --min-peers <int>             Minimum peers required before resolving metadata (default: 1)\n" +
+                    "  --max-nodes <int>             Maximum number of DHT nodes (default: 400)\n" +
+                    "  --mode <int>                  Operating mode (default: 0) 0 - search iteratively over bitspace, 1 - scrape, 2 - search predefined hashes, 3 - ban old hashes, 3 - resolve banned old hashes\n" +
+                    "  --resolver-millis <int>       wait in milliseconds before submitting new utp connection task (default: 300)\n" +
+                    "  --schedule-interval <int>     Schedule interval in seconds (default: 3)\n" +
+                    "  --scrape-step <int>           Number of hashes between scrape calls (default: 5000)\n" +
+                    "  --tracker-url <host>          Tracker host address\n" +
+                    "  --tracker-port <int>          Tracker port (default: 0)\n" +
+                    "  --help                        Show this help message and exit\n"
+                );
+                System.exit(0);
+                break;
+            case "--from":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --from");
+                from = args[++i];
+                break;
+            case "--to":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --to");
+                to = args[++i];
+                break;
+            case "--bitspace-parts":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --bitspace-parts");
+                bitspaceParts = Integer.parseInt(args[++i]);
+                break;
+
+            case "--resolver-millis":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --resolver-millis");
+                resolverMillis = Integer.parseInt(args[++i]);
+                break;
+            case "--schedule-interval":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --schedule-interval");
+                scheduleInterval = Integer.parseInt(args[++i]);
+                break;
+            case "--connection-string":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --connection-string");
+                connectionString = args[++i];
+                break;
+            case "--db":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --db");
+                db = args[++i];
+                break;
+            case "--table":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --table");
+                table = args[++i];
+                break;
+            case "--scrape-file-in":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --table");
+                scrapeIn = args[++i];
+                break;
+            case "--get-peers-depth":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --get-peers-depth");
+                getPeerDepth = Integer.parseInt(args[++i]);
+                break;
+            case "--min-peers":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --min-peers");
+                minPeers = Integer.parseInt(args[++i]);
+                break;
+            case "--max-nodes":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --max-nodes");
+                maxNodes = Integer.parseInt(args[++i]);
+                break;
+            case "--hashes-step":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --hashes-step");
+                hashesStep = Integer.parseInt(args[++i]);
+                break;
+            case "--mode":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --mode");
+                mode = Integer.parseInt(args[++i]);
+                break;
+            case "--scrape-step":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --scrape-step");
+                scrapeStep = Integer.parseInt(args[++i]);
+                break;
+            case "--tracker-url":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --tracker-url");
+                try {
+                    trackerUrl = InetAddress.getByName(args[++i]);
+                } catch (UnknownHostException e) {
+                    throw new IllegalArgumentException("Invalid value for --tracker-url: " + args[i], e);
+                }
+                break;
+            case "--tracker-port":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --tracker-port");
+                trackerPort = Integer.parseInt(args[++i]);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown argument: " + args[i]);
+            }
+        }
+        return new Builder().bitspaceParts(bitspaceParts)
+                .continueFrom(from)
+                .continueTo(to)
+                .connectionString(connectionString)
+                .db(db)
+                .table(table)
+                .getPeersDepth(getPeerDepth)
+                .minPeers(minPeers)
+                .mode(mode)
+                .trackerUrl(trackerUrl)
+                .trackerPort(trackerPort)
+                .maxNodes(maxNodes)
+                .scrapeStep(scrapeStep)
+                .scheduleInterval(scheduleInterval)
+                .hashesStep(hashesStep)
+                .resolverMillis(resolverMillis)
+                .scrapeIn(scrapeIn)
+                .build();
+    }
+
+    public final String from;
+    public final int bitspaceParts;
+    public final String connectionString;
+    public final String db;
+    public final String table;
+    public final int getPeersDepth;
+    public final int minPeers;
+    public final int mode;
+    public final InetAddress trackerUrl;
+    public final int trackerPort;
+    public final int scrapeStep;
+    public final int maxNodes;
+    public final int scheduleInterval;
+    public final int hashesStep;
+    public final String to;
+    public final int resolverMillis;
+    
+    @Override
+    public String toString() {
+        return "Config [bitspaceParts=" + bitspaceParts + ", maxNodes=" + maxNodes + ", hashesStep=" + hashesStep
+                + ", mode=" + mode + ", resolverMillis=" + resolverMillis + ", connectionString=" + connectionString
+                + ", db=" + db + ", table=" + table + ", getPeersDepth=" + getPeersDepth + ", minPeers=" + minPeers
+                + ", trackerUrl=" + trackerUrl + ", trackerPort=" + trackerPort + ", scrapeStep=" + scrapeStep
+                + ", scheduleInterval=" + scheduleInterval + ", from=" + from + ", to="
+                + to + ", scrapeIn=" + scrapeIn + "]";
+    }
+
+    public final String scrapeIn;
+
+    private Config(Builder builder) {
+        this.bitspaceParts = builder.bitspaceParts;
+        this.from = builder.from;
+        this.to = builder.to;
+        this.connectionString = builder.connectionString;
+        this.db = builder.db;
+        this.table = builder.table;
+        this.getPeersDepth = builder.getPeersDepth;
+        this.minPeers = builder.minPeers;
+        this.mode = builder.mode;
+        this.trackerUrl = builder.trackerUrl;
+        this.trackerPort = builder.trackerPort;
+        this.maxNodes = builder.maxNodes;
+        this.scrapeStep = builder.scrapeStep;
+        this.scheduleInterval = builder.scheduleInterval;
+        this.hashesStep = builder.hashesStep;
+        this.resolverMillis = builder.resolverMillis;
+        this.scrapeIn = builder.scrapeIn;
+    }
+    
+
+    public static class Builder {
+        private int bitspaceParts = 256;
+        private String from;
+        private String connectionString;
+        private String db;
+        private String table;
+        private int getPeersDepth = 3;
+        private int minPeers = 1;
+        private int mode = 0;
+        private InetAddress trackerUrl;
+        private int trackerPort;
+        private int maxNodes = 200;
+        private int scrapeStep = 5000;
+        private int scheduleInterval = 3;
+        private int hashesStep = 10;
+        private String to;
+        private int resolverMillis = 500;
+        private String scrapeIn;
+        
+        public Builder scrapeStep(int scrapeStep) {
+            this.scrapeStep = scrapeStep;
+            return this;
+        }
+        
+        public Builder scrapeIn(String scrapeIn) {
+            this.scrapeIn = scrapeIn;
+            return this;
+        }
+
+        public Builder resolverMillis(int resolverMillis) {
+            this.resolverMillis  = resolverMillis;
+            return this;
+        }
+
+        public Builder continueTo(String to) {
+            this.to = to;
+            return this;
+        }
+
+        public Builder hashesStep(int hashesStep) {
+            this.hashesStep   = hashesStep;
+            return this;
+        }
+
+        public Builder scheduleInterval(int scheduleInterval) {
+            this.scheduleInterval  = scheduleInterval;
+            return this;
+        }
+
+        public Builder bitspaceParts(int bitspaceParts) {
+            this.bitspaceParts = bitspaceParts;
+            return this;
+        }
+
+        public Builder maxNodes(int maxNodes) {
+            this.maxNodes = maxNodes;
+            return this;
+        }
+
+        public Config build() {
+            return new Config(this);
+        }
+
+        public Builder connectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+
+        public Builder continueFrom(String continueFrom) {
+            this.from = continueFrom;
+            return this;
+        }
+
+        public Builder db(String db) {
+            this.db = db;
+            return this;
+        }
+
+        public Builder table(String table) {
+            this.table = table;
+            return this;
+        }
+
+        public Builder getPeersDepth(int queryCount) {
+            this.getPeersDepth = queryCount;
+            return this;
+        }
+
+        public Builder minPeers(int minPeers) {
+            this.minPeers = minPeers;
+            return this;
+        }
+
+        public Builder mode(int scrape) {
+            this.mode = scrape;
+            return this;
+        }
+
+        public Builder trackerUrl(InetAddress trackerUrl) {
+            this.trackerUrl = trackerUrl;
+            return this;
+        }
+
+        public Builder trackerPort(int trackerPort) {
+            this.trackerPort = trackerPort;
+            return this;
+        }
+    }
+}

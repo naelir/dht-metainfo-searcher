@@ -1,0 +1,2659 @@
+102.0.0.0/13,192950,AF,Africa,KE,Kenya,0,0
+102.8.0.0/13,357994,AF,Africa,EG,Egypt,0,0
+102.16.0.0/14,1062947,AF,Africa,MG,Madagascar,0,0
+102.20.0.0/15,1062947,AF,Africa,MG,Madagascar,0,0
+102.22.0.0/19,2300660,AF,Africa,GH,Ghana,0,0
+102.22.32.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.22.64.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.22.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.22.88.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.22.100.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.22.104.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.22.108.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.22.112.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.22.128.0/18,49518,AF,Africa,RW,Rwanda,0,0
+102.22.192.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.22.208.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.22.216.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.22.224.0/21,2275384,AF,Africa,LR,Liberia,0,0
+102.22.232.0/28,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.16/30,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.20/31,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.22/32,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.23/32,366755,AF,Africa,SD,Sudan,0,0
+102.22.232.24/29,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.32/27,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.64/26,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.232.128/25,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.233.0/24,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.234.0/23,7909807,AF,Africa,SS,South Sudan,0,0
+102.22.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.22.240.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.23.0.0/18,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.23.80.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.23.84.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.23.88.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.23.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.23.112.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.23.116.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.23.120.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.23.132.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.23.136.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.23.140.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.23.144.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.23.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.23.164.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.23.168.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.23.176.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.23.192.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.23.208.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.23.218.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.23.220.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.23.224.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.24.0.0/13,2464461,AF,Africa,TN,Tunisia,0,0
+102.32.0.0/15,953987,AF,Africa,ZA,South Africa,0,0
+102.34.0.0/16,226074,AF,Africa,UG,Uganda,0,0
+102.35.0.0/16,935317,AF,Africa,RE,Réunion,0,0
+102.36.0.0/17,953987,AF,Africa,ZA,South Africa,0,0
+102.36.132.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.36.136.0/22,2245662,AF,Africa,SN,Senegal,0,0
+102.36.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.36.144.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.36.145.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.36.146.0/24,1036973,AF,Africa,MZ,Mozambique,0,0
+102.36.147.0/24,2245662,AF,Africa,SN,Senegal,0,0
+102.36.148.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.36.152.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.36.160.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.36.164.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.36.168.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.36.172.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.36.176.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.36.180.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.36.181.0/24,934841,AF,Africa,SZ,Eswatini,0,0
+102.36.182.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.36.183.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.36.184.0/23,2275384,AF,Africa,LR,Liberia,0,0
+102.36.186.0/24,2275384,AF,Africa,LR,Liberia,0,0
+102.36.187.0/24,2378080,AF,Africa,MR,Mauritania,0,0
+102.36.192.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.36.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.36.200.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.36.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.36.212.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.36.216.0/21,226074,AF,Africa,UG,Uganda,0,0
+102.36.224.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.36.228.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.36.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.36.240.0/22,932692,AF,Africa,LS,Lesotho,0,0
+102.36.248.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.37.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.38.0.0/19,2215636,AF,Africa,LY,Libya,0,0
+102.38.32.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.38.48.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.38.56.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.38.64.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.38.128.0/19,2395170,AF,Africa,BJ,Benin,0,0
+102.38.160.0/19,2300660,AF,Africa,GH,Ghana,0,0
+102.38.192.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.196.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.198.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.199.0/24,3895114,SA,South America,CL,Chile,0,0
+102.38.200.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.204.0/24,3932488,SA,South America,PE,Peru,0,0
+102.38.205.0/24,6252001,nan,North America,US,United States,0,0
+102.38.206.0/23,6252001,nan,North America,US,United States,0,0
+102.38.208.0/20,2328926,AF,Africa,NG,Nigeria,0,0
+102.38.224.0/24,6252001,nan,North America,US,United States,0,0
+102.38.225.0/24,3041565,EU,Europe,AD,Andorra,0,0
+102.38.226.0/23,6252001,nan,North America,US,United States,0,0
+102.38.228.0/23,6252001,nan,North America,US,United States,0,0
+102.38.230.0/24,3686110,SA,South America,CO,Colombia,0,0
+102.38.231.0/24,6252001,nan,North America,US,United States,0,0
+102.38.232.0/24,3624060,nan,North America,CR,Costa Rica,0,0
+102.38.233.0/24,146669,EU,Europe,CY,Cyprus,0,0
+102.38.234.0/24,3202326,EU,Europe,HR,Croatia,0,0
+102.38.235.0/24,3595528,nan,North America,GT,Guatemala,0,0
+102.38.236.0/24,3658394,SA,South America,EC,Ecuador,0,0
+102.38.237.0/24,3042058,EU,Europe,LI,Liechtenstein,0,0
+102.38.238.0/24,6252001,nan,North America,US,United States,0,0
+102.38.239.0/24,2562770,EU,Europe,MT,Malta,0,0
+102.38.240.0/24,2993457,EU,Europe,MC,Monaco,0,0
+102.38.241.0/24,1282988,AS,Asia,NP,Nepal,0,0
+102.38.242.0/23,6252001,nan,North America,US,United States,0,0
+102.38.244.0/23,6252001,nan,North America,US,United States,0,0
+102.38.246.0/24,6252001,nan,North America,US,United States,0,0
+102.38.247.0/24,458258,EU,Europe,LV,Latvia,0,0
+102.38.248.0/22,6252001,nan,North America,US,United States,0,0
+102.38.252.0/24,6252001,nan,North America,US,United States,0,0
+102.38.253.0/24,453733,EU,Europe,EE,Estonia,0,0
+102.38.254.0/24,390903,EU,Europe,GR,Greece,0,0
+102.38.255.0/24,6252001,nan,North America,US,United States,0,0
+102.39.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.40.0.0/13,357994,AF,Africa,EG,Egypt,0,0
+102.48.0.0/13,2542007,AF,Africa,MA,Morocco,0,0
+102.56.0.0/13,357994,AF,Africa,EG,Egypt,0,0
+102.64.0.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.64.4.0/23,2542007,AF,Africa,MA,Morocco,0,0
+102.64.6.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.64.8.0/21,2300660,AF,Africa,GH,Ghana,0,0
+102.64.16.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.64.32.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.64.48.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.64.56.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.64.58.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.64.59.0/24,7909807,AF,Africa,SS,South Sudan,0,0
+102.64.60.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.64.64.0/21,149590,AF,Africa,TZ,Tanzania,0,0
+102.64.72.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.64.76.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.64.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.64.96.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.64.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.64.116.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.64.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.64.124.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.64.128.0/17,2363686,AF,Africa,TG,Togo,0,0
+102.65.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.66.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.67.0.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.2.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.0/26,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.64/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.72/31,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.74/32,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.75/32,934292,AF,Africa,MU,Mauritius,0,0
+102.67.3.76/30,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.80/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.96/27,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.3.128/25,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.4.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.8.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.16.0/20,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.32.0/20,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.48.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.67.56.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.67.60.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.67.64.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.67.96.0/21,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.104.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.108.0/23,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.0/28,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.16/29,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.25/32,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.26/31,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.28/30,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.32/27,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.64/26,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.110.128/25,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.111.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.112.0/20,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.128.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.67.144.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.67.148.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.67.152.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.67.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.67.160.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.67.164.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.67.166.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.67.168.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.67.172.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.67.176.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.67.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.67.188.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.67.192.0/18,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.68.0.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.68.8.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.68.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.16.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.68.20.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.68.22.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.68.24.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.68.32.0/21,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.68.40.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.68.48.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.68.56.0/21,203312,AF,Africa,CD,Congo (DRC),0,0
+102.68.64.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.68.68.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.68.70.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.71.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.68.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.76.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.68.80.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.68.82.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.68.83.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.68.84.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.86.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.68.96.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.100.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.68.104.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.116.0/23,934292,AF,Africa,MU,Mauritius,0,0
+102.68.118.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.68.119.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.124.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.68.125.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.68.126.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.128.0/21,2215636,AF,Africa,LY,Libya,0,0
+102.68.136.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.68.141.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.68.142.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.68.143.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.68.144.0/21,51537,AF,Africa,SO,Somalia,0,0
+102.68.152.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.68.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.160.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.68.168.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.68.172.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.68.176.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.68.180.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.68.188.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.68.192.0/18,1062947,AF,Africa,MG,Madagascar,0,0
+102.69.0.0/17,2215636,AF,Africa,LY,Libya,0,0
+102.69.128.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.69.144.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.69.148.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.69.149.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.69.150.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.69.151.0/24,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.69.152.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.69.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.69.160.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.69.164.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.69.168.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.69.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.69.180.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.69.184.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.69.192.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.69.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.69.212.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.69.216.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.69.220.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.69.224.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.69.232.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.69.236.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.69.238.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.69.239.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.69.240.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.69.244.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.69.246.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.69.248.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.70.0.0/15,927384,AF,Africa,MW,Malawi,0,0
+102.72.0.0/13,2542007,AF,Africa,MA,Morocco,0,0
+102.80.0.0/13,226074,AF,Africa,UG,Uganda,0,0
+102.88.0.0/13,2328926,AF,Africa,NG,Nigeria,0,0
+102.96.0.0/17,2542007,AF,Africa,MA,Morocco,0,0
+102.96.128.0/20,2542007,AF,Africa,MA,Morocco,0,0
+102.96.144.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.96.148.0/23,2542007,AF,Africa,MA,Morocco,0,0
+102.96.150.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.0/25,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.128/27,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.160/29,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.168/30,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.172/31,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.174/32,3017382,EU,Europe,FR,France,0,0
+102.96.151.175/32,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.176/28,2542007,AF,Africa,MA,Morocco,0,0
+102.96.151.192/26,2542007,AF,Africa,MA,Morocco,0,0
+102.96.152.0/21,2542007,AF,Africa,MA,Morocco,0,0
+102.96.160.0/19,2542007,AF,Africa,MA,Morocco,0,0
+102.96.192.0/18,2542007,AF,Africa,MA,Morocco,0,0
+102.97.0.0/16,2542007,AF,Africa,MA,Morocco,0,0
+102.98.0.0/15,2542007,AF,Africa,MA,Morocco,0,0
+102.100.0.0/14,2542007,AF,Africa,MA,Morocco,0,0
+102.104.0.0/13,2464461,AF,Africa,TN,Tunisia,0,0
+102.112.0.0/13,934292,AF,Africa,MU,Mauritius,0,0
+102.120.0.0/13,366755,AF,Africa,SD,Sudan,0,0
+102.128.0.0/18,2464461,AF,Africa,TN,Tunisia,0,0
+102.128.76.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.128.80.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.128.96.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.128.128.0/21,51537,AF,Africa,SO,Somalia,0,0
+102.128.136.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.128.144.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.128.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.128.164.0/24,6252001,nan,North America,US,United States,0,0
+102.128.165.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.128.166.0/24,294640,AS,Asia,IL,Israel,0,0
+102.128.167.0/24,6252001,nan,North America,US,United States,0,0
+102.128.168.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.128.176.0/21,357994,AF,Africa,EG,Egypt,0,0
+102.128.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.128.192.0/18,2328926,AF,Africa,NG,Nigeria,0,0
+102.129.32.0/22,2400553,AF,Africa,GA,Gabon,0,0
+102.129.40.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.129.48.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.129.64.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.65.0/24,2260494,AF,Africa,CG,Congo Republic,0,0
+102.129.66.0/23,2260494,AF,Africa,CG,Congo Republic,0,0
+102.129.68.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.129.72.0/21,2260494,AF,Africa,CG,Congo Republic,0,0
+102.129.80.0/20,2260494,AF,Africa,CG,Congo Republic,0,0
+102.129.96.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.129.128.0/24,1835841,AS,Asia,KR,South Korea,0,0
+102.129.129.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.129.130.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.131.0/24,6252001,nan,North America,US,United States,0,0
+102.129.132.0/24,6252001,nan,North America,US,United States,0,0
+102.129.133.0/24,1562822,AS,Asia,VN,Vietnam,0,0
+102.129.134.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.129.136.0/24,1880251,AS,Asia,SG,Singapore,0,0
+102.129.137.0/24,6252001,nan,North America,US,United States,0,0
+102.129.138.0/23,1605651,AS,Asia,TH,Thailand,0,0
+102.129.140.0/24,3017382,EU,Europe,FR,France,0,0
+102.129.141.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.142.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.143.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+102.129.144.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.145.0/24,6252001,nan,North America,US,United States,0,0
+102.129.146.0/23,6252001,nan,North America,US,United States,0,0
+102.129.148.0/24,6252001,nan,North America,US,United States,0,0
+102.129.149.0/24,1835841,AS,Asia,KR,South Korea,0,0
+102.129.150.0/23,6252001,nan,North America,US,United States,0,0
+102.129.152.0/23,6252001,nan,North America,US,United States,0,0
+102.129.154.0/24,6252001,nan,North America,US,United States,0,0
+102.129.155.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.156.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.129.157.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.158.0/24,6251999,nan,North America,CA,Canada,0,0
+102.129.159.0/24,6252001,nan,North America,US,United States,0,0
+102.129.160.0/24,3996063,nan,North America,MX,Mexico,0,0
+102.129.161.0/24,6251999,nan,North America,CA,Canada,0,0
+102.129.162.0/23,6252001,nan,North America,US,United States,0,0
+102.129.164.0/24,6252001,nan,North America,US,United States,0,0
+102.129.165.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.166.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+102.129.167.0/24,1210997,AS,Asia,BD,Bangladesh,0,0
+102.129.168.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+102.129.169.0/24,6252001,nan,North America,US,United States,0,0
+102.129.170.0/23,6252001,nan,North America,US,United States,0,0
+102.129.172.0/24,6252001,nan,North America,US,United States,0,0
+102.129.173.0/24,1820814,AS,Asia,BN,Brunei,0,0
+102.129.174.0/23,6252001,nan,North America,US,United States,0,0
+102.129.176.0/23,6252001,nan,North America,US,United States,0,0
+102.129.178.0/24,6252001,nan,North America,US,United States,0,0
+102.129.179.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.180.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.129.181.0/24,6252001,nan,North America,US,United States,0,0
+102.129.182.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.129.184.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.185.0/24,6252001,nan,North America,US,United States,0,0
+102.129.186.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.187.0/24,1880251,AS,Asia,SG,Singapore,0,0
+102.129.188.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.129.190.0/23,6252001,nan,North America,US,United States,0,0
+102.129.192.0/23,6252001,nan,North America,US,United States,0,0
+102.129.194.0/24,6252001,nan,North America,US,United States,0,0
+102.129.195.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+102.129.196.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.129.198.0/23,6252001,nan,North America,US,United States,0,0
+102.129.200.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.201.0/24,6252001,nan,North America,US,United States,0,0
+102.129.202.0/23,6252001,nan,North America,US,United States,0,0
+102.129.204.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.205.0/24,3175395,EU,Europe,IT,Italy,0,0
+102.129.206.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.207.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.129.208.0/24,6252001,nan,North America,US,United States,0,0
+102.129.209.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.129.210.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+102.129.211.0/24,6252001,nan,North America,US,United States,0,0
+102.129.212.0/24,6252001,nan,North America,US,United States,0,0
+102.129.213.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.214.0/24,6252001,nan,North America,US,United States,0,0
+102.129.215.0/24,2077456,OC,Oceania,AU,Australia,0,0
+102.129.216.0/24,6252001,nan,North America,US,United States,0,0
+102.129.217.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.129.218.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.129.219.0/24,6252001,nan,North America,US,United States,0,0
+102.129.220.0/22,6252001,nan,North America,US,United States,0,0
+102.129.224.0/24,6252001,nan,North America,US,United States,0,0
+102.129.225.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.226.0/23,6252001,nan,North America,US,United States,0,0
+102.129.228.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.229.0/24,1605651,AS,Asia,TH,Thailand,0,0
+102.129.230.0/23,6252001,nan,North America,US,United States,0,0
+102.129.232.0/22,6252001,nan,North America,US,United States,0,0
+102.129.236.0/24,6252001,nan,North America,US,United States,0,0
+102.129.237.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.238.0/24,6252001,nan,North America,US,United States,0,0
+102.129.239.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.129.240.0/24,6252001,nan,North America,US,United States,0,0
+102.129.241.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.129.242.0/23,6252001,nan,North America,US,United States,0,0
+102.129.244.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.129.246.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+102.129.247.0/24,6252001,nan,North America,US,United States,0,0
+102.129.248.0/23,6252001,nan,North America,US,United States,0,0
+102.129.250.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.251.0/24,6252001,nan,North America,US,United States,0,0
+102.129.252.0/24,6252001,nan,North America,US,United States,0,0
+102.129.253.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.254.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.129.255.0/24,6252001,nan,North America,US,United States,0,0
+102.130.0.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.130.16.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.130.32.0/21,49518,AF,Africa,RW,Rwanda,0,0
+102.130.40.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.130.48.0/30,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.4/31,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.6/32,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.7/32,2264397,EU,Europe,PT,Portugal,0,0
+102.130.48.8/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.16/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.32/27,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.64/26,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.48.128/25,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.49.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.130.50.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.0/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.1/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.2/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.3/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.4/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.5/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.6/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.7/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.8/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.9/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.51.10/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.12/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.16/28,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.32/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.40/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.44/32,2921044,EU,Europe,DE,Germany,0,0
+102.130.51.45/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.46/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.48/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.52/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.54/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.55/32,6252001,nan,North America,US,United States,0,0
+102.130.51.56/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.58/32,2921044,EU,Europe,DE,Germany,0,0
+102.130.51.59/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.60/31,6252001,nan,North America,US,United States,0,0
+102.130.51.62/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.63/32,6252001,nan,North America,US,United States,0,0
+102.130.51.64/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.66/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.68/30,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.72/32,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.73/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.74/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.76/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.78/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.80/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.84/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.85/32,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.86/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.88/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.90/31,2921044,EU,Europe,DE,Germany,0,0
+102.130.51.92/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.96/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.100/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.102/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.104/32,6252001,nan,North America,US,United States,0,0
+102.130.51.105/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.106/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.108/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.110/31,1861060,AS,Asia,JP,Japan,0,0
+102.130.51.112/31,1861060,AS,Asia,JP,Japan,0,0
+102.130.51.114/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.116/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.120/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.128/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.136/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.140/32,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.141/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.142/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.143/32,1880251,AS,Asia,SG,Singapore,0,0
+102.130.51.144/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.148/30,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.152/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.160/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.162/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.164/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.168/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.169/32,2635167,EU,Europe,GB,United Kingdom,0,0
+102.130.51.170/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.172/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.176/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.184/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.186/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.188/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.190/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.191/32,6252001,nan,North America,US,United States,0,0
+102.130.51.192/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.193/32,6252001,nan,North America,US,United States,0,0
+102.130.51.194/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.196/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.200/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.204/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.206/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.207/32,6252001,nan,North America,US,United States,0,0
+102.130.51.208/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.209/32,6252001,nan,North America,US,United States,0,0
+102.130.51.210/31,6252001,nan,North America,US,United States,0,0
+102.130.51.212/31,6252001,nan,North America,US,United States,0,0
+102.130.51.214/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.216/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.224/30,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.228/31,6252001,nan,North America,US,United States,0,0
+102.130.51.230/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.232/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.240/31,1819730,AS,Asia,HK,Hong Kong,0,0
+102.130.51.242/31,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.244/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.245/32,6252001,nan,North America,US,United States,0,0
+102.130.51.246/32,241170,AF,Africa,SC,Seychelles,0,0
+102.130.51.247/32,1880251,AS,Asia,SG,Singapore,0,0
+102.130.51.248/29,241170,AF,Africa,SC,Seychelles,0,0
+102.130.52.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.64.0/23,3351879,AF,Africa,AO,Angola,0,0
+102.130.66.0/25,3351879,AF,Africa,AO,Angola,0,0
+102.130.66.128/26,3351879,AF,Africa,AO,Angola,0,0
+102.130.66.192/28,3351879,AF,Africa,AO,Angola,0,0
+102.130.66.208/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.66.224/27,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.0/28,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.16/29,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.24/32,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.25/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.67.26/31,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.28/30,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.32/27,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.64/26,3351879,AF,Africa,AO,Angola,0,0
+102.130.67.128/25,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.0/25,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.128/28,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.144/29,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.152/32,953987,AF,Africa,ZA,South Africa,0,0
+102.130.68.153/32,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.154/31,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.156/30,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.160/27,3351879,AF,Africa,AO,Angola,0,0
+102.130.68.192/26,3351879,AF,Africa,AO,Angola,0,0
+102.130.69.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.130.70.0/25,3351879,AF,Africa,AO,Angola,0,0
+102.130.70.128/27,3351879,AF,Africa,AO,Angola,0,0
+102.130.70.160/27,3469034,SA,South America,BR,Brazil,0,0
+102.130.70.192/26,3351879,AF,Africa,AO,Angola,0,0
+102.130.71.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.130.72.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.130.80.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.130.96.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.130.100.0/24,895949,AF,Africa,ZM,Zambia,0,0
+102.130.101.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.130.102.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.130.103.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.130.104.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.130.112.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.130.128.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.130.192.0/19,3351879,AF,Africa,AO,Angola,0,0
+102.130.224.0/21,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.130.232.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.130.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.130.240.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.130.248.0/21,366755,AF,Africa,SD,Sudan,0,0
+102.131.16.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.131.18.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.131.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.131.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.131.32.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.131.36.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.131.48.0/21,934292,AF,Africa,MU,Mauritius,0,0
+102.131.56.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.131.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.131.64.0/18,2328926,AF,Africa,NG,Nigeria,0,0
+102.131.128.0/17,2328926,AF,Africa,NG,Nigeria,0,0
+102.132.0.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.132.16.0/20,2233387,AF,Africa,CM,Cameroon,0,0
+102.132.32.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.132.64.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.132.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.132.96.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.132.97.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.132.98.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.132.100.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.132.102.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.132.103.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.132.104.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.132.112.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.132.128.0/17,953987,AF,Africa,ZA,South Africa,0,0
+102.133.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.134.0.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.134.16.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.134.20.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.134.22.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.134.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.28.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.134.32.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.36.0/22,1668284,AS,Asia,TW,Taiwan,0,0
+102.134.40.0/21,1835841,AS,Asia,KR,South Korea,0,0
+102.134.48.0/22,1861060,AS,Asia,JP,Japan,0,0
+102.134.52.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.56.0/21,1835841,AS,Asia,KR,South Korea,0,0
+102.134.64.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.134.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.84.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.134.88.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.134.96.0/20,433561,AF,Africa,BI,Burundi,0,0
+102.134.112.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.134.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.134.128.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.134.129.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.134.130.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.134.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.134.140.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.134.144.0/21,226074,AF,Africa,UG,Uganda,0,0
+102.134.152.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.134.160.0/20,933860,AF,Africa,BW,Botswana,0,0
+102.134.176.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.134.192.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.135.0.0/21,241170,AF,Africa,SC,Seychelles,0,0
+102.135.8.0/24,6252001,nan,North America,US,United States,0,0
+102.135.9.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.10.0/23,241170,AF,Africa,SC,Seychelles,0,0
+102.135.12.0/23,241170,AF,Africa,SC,Seychelles,0,0
+102.135.14.0/24,6252001,nan,North America,US,United States,0,0
+102.135.15.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.16.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.17.0/24,3469034,SA,South America,BR,Brazil,0,0
+102.135.18.0/24,6252001,nan,North America,US,United States,0,0
+102.135.19.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.135.20.0/24,6252001,nan,North America,US,United States,0,0
+102.135.21.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.22.0/24,6252001,nan,North America,US,United States,0,0
+102.135.23.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.24.0/21,241170,AF,Africa,SC,Seychelles,0,0
+102.135.32.0/19,241170,AF,Africa,SC,Seychelles,0,0
+102.135.64.0/19,241170,AF,Africa,SC,Seychelles,0,0
+102.135.96.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.97.0/24,6252001,nan,North America,US,United States,0,0
+102.135.98.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.135.99.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.135.100.0/22,241170,AF,Africa,SC,Seychelles,0,0
+102.135.104.0/21,241170,AF,Africa,SC,Seychelles,0,0
+102.135.112.0/20,241170,AF,Africa,SC,Seychelles,0,0
+102.135.128.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.135.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.135.168.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.135.176.0/21,203312,AF,Africa,CD,Congo (DRC),0,0
+102.135.184.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.135.188.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.135.189.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.135.190.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.135.191.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.135.192.0/19,2328926,AF,Africa,NG,Nigeria,0,0
+102.135.224.0/23,935317,AF,Africa,RE,Réunion,0,0
+102.135.226.0/23,1024031,AF,Africa,YT,Mayotte,0,0
+102.135.228.0/24,935317,AF,Africa,RE,Réunion,0,0
+102.135.229.0/24,1024031,AF,Africa,YT,Mayotte,0,0
+102.135.230.0/23,935317,AF,Africa,RE,Réunion,0,0
+102.135.232.0/21,935317,AF,Africa,RE,Réunion,0,0
+102.135.240.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.135.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.135.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.136.0.0/14,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.140.0.0/23,298795,AS,Asia,TR,Türkiye,0,0
+102.140.2.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.140.4.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.140.8.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.140.16.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.140.32.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.140.64.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.140.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.140.84.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.140.86.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.140.87.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.140.88.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.140.89.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.140.90.0/23,1861060,AS,Asia,JP,Japan,0,0
+102.140.92.0/23,1861060,AS,Asia,JP,Japan,0,0
+102.140.94.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.140.96.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.140.112.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.140.128.0/19,2413451,AF,Africa,GM,Gambia,0,0
+102.140.160.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.140.176.0/20,934292,AF,Africa,MU,Mauritius,0,0
+102.140.192.0/20,192950,AF,Africa,KE,Kenya,0,0
+102.140.208.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.140.212.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.213.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.140.214.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.140.216.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.140.224.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.140.232.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.140.234.0/25,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.128/27,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.160/31,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.162/32,192950,AF,Africa,KE,Kenya,0,0
+102.140.234.163/32,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.164/30,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.168/29,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.176/28,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.234.192/26,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.235.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.140.236.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.140.240.0/20,192950,AF,Africa,KE,Kenya,0,0
+102.141.0.0/18,2260494,AF,Africa,CG,Congo Republic,0,0
+102.141.64.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.141.96.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.141.112.0/21,933860,AF,Africa,BW,Botswana,0,0
+102.141.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.141.128.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.141.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.141.196.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.141.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.141.204.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.141.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.141.212.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.141.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.141.232.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.141.233.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.141.234.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.141.235.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.141.236.0/22,241170,AF,Africa,SC,Seychelles,0,0
+102.141.240.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.142.0.0/17,2400553,AF,Africa,GA,Gabon,0,0
+102.142.128.0/18,2400553,AF,Africa,GA,Gabon,0,0
+102.142.192.0/19,2400553,AF,Africa,GA,Gabon,0,0
+102.142.224.0/20,226074,AF,Africa,UG,Uganda,0,0
+102.142.240.0/20,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.143.0.0/17,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.143.128.0/17,366755,AF,Africa,SD,Sudan,0,0
+102.144.0.0/13,895949,AF,Africa,ZM,Zambia,0,0
+102.152.0.0/13,2464461,AF,Africa,TN,Tunisia,0,0
+102.160.0.0/17,934292,AF,Africa,MU,Mauritius,0,0
+102.160.128.0/20,934292,AF,Africa,MU,Mauritius,0,0
+102.160.144.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.0/26,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.64/30,1269750,AS,Asia,IN,India,0,0
+102.160.145.68/30,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.72/29,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.80/28,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.96/27,934292,AF,Africa,MU,Mauritius,0,0
+102.160.145.128/25,934292,AF,Africa,MU,Mauritius,0,0
+102.160.146.0/23,934292,AF,Africa,MU,Mauritius,0,0
+102.160.148.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.160.152.0/21,934292,AF,Africa,MU,Mauritius,0,0
+102.160.160.0/19,934292,AF,Africa,MU,Mauritius,0,0
+102.160.192.0/18,934292,AF,Africa,MU,Mauritius,0,0
+102.161.0.0/16,934292,AF,Africa,MU,Mauritius,0,0
+102.162.0.0/15,934292,AF,Africa,MU,Mauritius,0,0
+102.164.0.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.164.32.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.164.44.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.164.52.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.164.56.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+102.164.60.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.164.64.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.164.96.0/21,2215636,AF,Africa,LY,Libya,0,0
+102.164.104.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.164.112.0/23,2464461,AF,Africa,TN,Tunisia,0,0
+102.164.114.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.164.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.164.120.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.164.121.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.164.122.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.164.123.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.164.124.0/22,2400553,AF,Africa,GA,Gabon,0,0
+102.164.128.0/18,2245662,AF,Africa,SN,Senegal,0,0
+102.164.192.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.164.224.0/20,2363686,AF,Africa,TG,Togo,0,0
+102.164.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.164.244.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.164.248.0/21,2309096,AF,Africa,GQ,Equatorial Guinea,0,0
+102.165.0.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.1.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.165.2.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.3.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+102.165.4.0/24,6252001,nan,North America,US,United States,0,0
+102.165.5.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.6.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.165.8.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.9.0/24,6252001,nan,North America,US,United States,0,0
+102.165.10.0/24,3175395,EU,Europe,IT,Italy,0,0
+102.165.11.0/24,6252001,nan,North America,US,United States,0,0
+102.165.12.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+102.165.13.0/24,6252001,nan,North America,US,United States,0,0
+102.165.14.0/23,6252001,nan,North America,US,United States,0,0
+102.165.16.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.17.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.18.0/24,6252001,nan,North America,US,United States,0,0
+102.165.19.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.20.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.21.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.22.0/24,6252001,nan,North America,US,United States,0,0
+102.165.23.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.24.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.25.0/24,3469034,SA,South America,BR,Brazil,0,0
+102.165.26.0/24,6252001,nan,North America,US,United States,0,0
+102.165.27.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.28.0/24,6252001,nan,North America,US,United States,0,0
+102.165.29.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.30.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.31.0/24,6252001,nan,North America,US,United States,0,0
+102.165.32.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.33.0/24,6252001,nan,North America,US,United States,0,0
+102.165.34.0/24,6252001,nan,North America,US,United States,0,0
+102.165.35.0/24,3017382,EU,Europe,FR,France,0,0
+102.165.36.0/22,6252001,nan,North America,US,United States,0,0
+102.165.40.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.165.42.0/24,6251999,nan,North America,CA,Canada,0,0
+102.165.43.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.44.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.45.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.165.46.0/24,3469034,SA,South America,BR,Brazil,0,0
+102.165.47.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.48.0/23,6252001,nan,North America,US,United States,0,0
+102.165.50.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.165.51.0/24,6252001,nan,North America,US,United States,0,0
+102.165.52.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.165.56.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.165.57.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+102.165.58.0/24,1831722,AS,Asia,KH,Cambodia,0,0
+102.165.59.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.165.60.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.61.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.165.62.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.165.64.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.165.96.0/20,2453866,AF,Africa,ML,Mali,0,0
+102.165.112.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.165.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.165.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.165.124.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.165.128.0/19,933860,AF,Africa,BW,Botswana,0,0
+102.165.160.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.165.176.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.165.184.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.165.188.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.165.189.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.165.191.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.165.192.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.166.0.0/15,192950,AF,Africa,KE,Kenya,0,0
+102.168.0.0/13,2464461,AF,Africa,TN,Tunisia,0,0
+102.176.0.0/17,2300660,AF,Africa,GH,Ghana,0,0
+102.176.128.0/23,6252001,nan,North America,US,United States,0,0
+102.176.130.0/24,1880251,AS,Asia,SG,Singapore,0,0
+102.176.131.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+102.176.132.0/22,1668284,AS,Asia,TW,Taiwan,0,0
+102.176.136.0/22,1668284,AS,Asia,TW,Taiwan,0,0
+102.176.140.0/24,6252001,nan,North America,US,United States,0,0
+102.176.141.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+102.176.142.0/23,1668284,AS,Asia,TW,Taiwan,0,0
+102.176.144.0/20,934292,AF,Africa,MU,Mauritius,0,0
+102.176.160.0/20,2420477,AF,Africa,GN,Guinea,0,0
+102.176.176.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.176.180.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.176.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.176.188.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.176.192.0/19,953987,AF,Africa,ZA,South Africa,0,0
+102.176.224.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.176.240.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.176.248.0/23,1036973,AF,Africa,MZ,Mozambique,0,0
+102.176.250.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.176.251.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.176.252.0/22,2363686,AF,Africa,TG,Togo,0,0
+102.177.0.0/18,953987,AF,Africa,ZA,South Africa,0,0
+102.177.64.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.177.72.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.177.80.0/21,149590,AF,Africa,TZ,Tanzania,0,0
+102.177.100.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.177.112.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.177.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.177.124.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.177.126.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.177.127.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+102.177.128.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.177.144.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.177.146.0/23,2661886,EU,Europe,SE,Sweden,0,0
+102.177.148.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.177.152.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.177.160.0/20,3658394,SA,South America,EC,Ecuador,0,0
+102.177.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.177.180.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.177.182.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.177.183.0/24,6252001,nan,North America,US,United States,0,0
+102.177.184.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.177.192.0/21,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.178.0.0/15,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.180.0.0/16,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.181.0.0/17,366755,AF,Africa,SD,Sudan,0,0
+102.181.128.0/18,366755,AF,Africa,SD,Sudan,0,0
+102.181.192.0/19,366755,AF,Africa,SD,Sudan,0,0
+102.182.0.0/16,953987,AF,Africa,ZA,South Africa,0,0
+102.184.0.0/13,357994,AF,Africa,EG,Egypt,0,0
+102.201.176.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.201.180.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.201.184.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.201.188.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.201.192.0/23,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.201.194.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.201.196.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.201.200.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.201.204.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.201.208.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.201.210.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.201.211.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.201.212.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.201.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.201.232.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.201.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.201.240.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.201.244.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.201.248.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.201.252.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.201.253.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.201.254.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.202.0.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.202.4.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.202.5.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.202.6.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.202.7.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.8.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.202.10.0/24,1036973,AF,Africa,MZ,Mozambique,0,0
+102.202.11.0/24,2378080,AF,Africa,MR,Mauritania,0,0
+102.202.12.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.202.16.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.202.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.28.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.32.0/22,921929,AF,Africa,KM,Comoros,0,0
+102.202.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.40.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.202.44.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.48.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.202.52.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.53.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.202.54.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.202.55.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.202.56.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.202.60.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.64.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.202.66.0/23,933860,AF,Africa,BW,Botswana,0,0
+102.202.68.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.202.70.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.202.72.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.76.0/24,1036973,AF,Africa,MZ,Mozambique,0,0
+102.202.77.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.202.78.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.202.79.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.202.80.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.88.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.92.0/22,2410758,AF,Africa,ST,São Tomé and Príncipe,0,0
+102.202.96.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.202.100.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.104.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.108.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.202.112.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.202.116.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.202.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.202.128.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.202.130.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.202.132.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.202.136.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.140.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.202.144.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.148.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.202.152.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.154.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.202.155.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.160.0/22,935317,AF,Africa,RE,Réunion,0,0
+102.202.164.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.166.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.202.168.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.202.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.180.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.184.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.188.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.202.189.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.202.190.0/23,933860,AF,Africa,BW,Botswana,0,0
+102.202.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.196.0/24,1036973,AF,Africa,MZ,Mozambique,0,0
+102.202.197.0/24,2245662,AF,Africa,SN,Senegal,0,0
+102.202.198.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.202.200.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.202.208.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.202.212.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.216.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.220.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.221.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.202.222.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.202.223.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.202.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.202.228.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.202.232.0/22,223816,AF,Africa,DJ,Djibouti,0,0
+102.202.236.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.202.240.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.202.244.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.202.248.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.202.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.0.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.203.1.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.203.2.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.203.4.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.203.8.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.203.12.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.203.16.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.32.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.203.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.40.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.203.44.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.56.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.203.60.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.203.64.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.203.72.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.84.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.203.86.0/23,2245662,AF,Africa,SN,Senegal,0,0
+102.203.88.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.203.92.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.203.96.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.100.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.104.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.203.108.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.112.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.203.113.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.203.114.0/23,934841,AF,Africa,SZ,Eswatini,0,0
+102.203.116.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.120.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.203.124.0/24,3355338,AF,Africa,nan,Namibia,0,0
+102.203.125.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.203.126.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.203.128.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.203.132.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.136.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.203.137.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.203.138.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.203.139.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.203.140.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.144.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.148.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.152.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.203.156.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.203.160.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.203.164.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.203.168.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.203.172.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.176.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.203.180.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.203.184.0/22,2363686,AF,Africa,TG,Togo,0,0
+102.203.188.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.203.192.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.203.193.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.203.194.0/23,932692,AF,Africa,LS,Lesotho,0,0
+102.203.196.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.203.200.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.203.204.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.203.208.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.203.212.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.203.214.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.203.215.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.203.216.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.203.220.0/22,2245662,AF,Africa,SN,Senegal,0,0
+102.203.224.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.203.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.203.232.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.203.240.0/20,3351879,AF,Africa,AO,Angola,0,0
+102.204.0.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.1.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.2.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.3.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.4.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.8.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.12.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.204.14.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.15.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.204.16.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.24.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.204.28.0/22,2245662,AF,Africa,SN,Senegal,0,0
+102.204.32.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.204.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.40.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.44.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.46.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.47.0/24,921929,AF,Africa,KM,Comoros,0,0
+102.204.48.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.204.52.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.56.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.204.64.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.204.65.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.204.66.0/23,895949,AF,Africa,ZM,Zambia,0,0
+102.204.68.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.76.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.80.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.204.84.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.88.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.96.0/24,934841,AF,Africa,SZ,Eswatini,0,0
+102.204.97.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.204.98.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.99.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.100.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.104.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.108.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.204.112.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.204.116.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.204.120.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.121.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.204.122.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.123.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.124.0/24,2260494,AF,Africa,CG,Congo Republic,0,0
+102.204.125.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.204.126.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.204.127.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.204.144.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.204.148.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.152.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.160.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.204.164.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.204.168.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.172.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.204.176.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.180.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.204.184.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.204.188.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.204.190.0/23,337996,AF,Africa,ET,Ethiopia,0,0
+102.204.192.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.204.196.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.204.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.204.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.204.208.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.204.212.0/23,2542007,AF,Africa,MA,Morocco,0,0
+102.204.214.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.204.215.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.216.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.220.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.224.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.204.232.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.204.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.240.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.204.244.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.204.252.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.204.254.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.205.0.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.4.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.205.8.0/23,933860,AF,Africa,BW,Botswana,0,0
+102.205.10.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.12.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.205.16.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.24.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.205.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.32.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.205.34.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.205.35.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.205.36.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.40.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.44.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.45.0/24,6252001,nan,North America,US,United States,0,0
+102.205.46.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.48.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.52.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.205.56.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.205.60.0/23,239880,AF,Africa,CF,Central African Republic,0,0
+102.205.62.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.63.0/24,1062947,AF,Africa,MG,Madagascar,0,0
+102.205.64.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.205.68.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.72.0/23,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.205.74.0/24,2420477,AF,Africa,GN,Guinea,0,0
+102.205.75.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.205.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.80.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.205.88.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.205.92.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.96.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.205.100.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.104.0/23,223816,AF,Africa,DJ,Djibouti,0,0
+102.205.106.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.108.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.112.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.205.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.120.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.205.122.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.205.123.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.205.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.128.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.205.130.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.205.132.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.205.136.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.144.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.146.0/23,3351879,AF,Africa,AO,Angola,0,0
+102.205.148.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.152.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.205.156.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.160.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.205.168.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.172.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.176.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.205.180.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.184.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.188.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.205.190.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.205.192.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.200.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.204.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.205.206.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.205.207.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.205.208.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.205.212.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.216.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.205.224.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.205.228.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.232.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.205.233.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.234.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.205.235.0/24,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.205.236.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.205.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.205.244.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.205.248.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.252.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.254.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.205.255.0/24,6252001,nan,North America,US,United States,0,0
+102.206.0.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.206.4.0/22,2275384,AF,Africa,LR,Liberia,0,0
+102.206.8.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.206.9.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.206.10.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.206.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.16.0/21,149590,AF,Africa,TZ,Tanzania,0,0
+102.206.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.28.0/22,1062947,AF,Africa,MG,Madagascar,0,0
+102.206.32.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.36.0/22,935317,AF,Africa,RE,Réunion,0,0
+102.206.40.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.206.44.0/22,2410758,AF,Africa,ST,São Tomé and Príncipe,0,0
+102.206.48.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.206.49.0/24,3041565,EU,Europe,AD,Andorra,0,0
+102.206.50.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+102.206.51.0/24,3042058,EU,Europe,LI,Liechtenstein,0,0
+102.206.52.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.206.56.0/21,3351879,AF,Africa,AO,Angola,0,0
+102.206.64.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.206.68.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.72.0/22,2420477,AF,Africa,GN,Guinea,0,0
+102.206.76.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.206.80.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.206.81.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.206.82.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.206.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.88.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.206.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.96.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.100.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.104.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.206.108.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.206.112.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.120.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.206.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.128.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.206.132.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.206.136.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.206.140.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.144.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.148.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.206.152.0/22,927384,AF,Africa,MW,Malawi,0,0
+102.206.156.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.206.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.164.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.168.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.206.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.180.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.206.184.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.206.185.0/24,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.206.186.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.206.188.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.196.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.206.200.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.206.204.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.208.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.206.224.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.206.228.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.206.232.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.206.240.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.206.244.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.206.248.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.206.252.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.207.0.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.207.4.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.207.8.0/21,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.207.16.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.207.24.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.207.28.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.32.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.207.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.40.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.44.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.207.48.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.207.49.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.50.0/23,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.207.52.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.207.56.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.207.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.68.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.207.72.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.207.76.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.207.80.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.88.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.96.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.207.104.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.207.108.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.207.112.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.207.116.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.207.128.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.207.132.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.207.136.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.140.0/24,2245662,AF,Africa,SN,Senegal,0,0
+102.207.141.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.207.142.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.207.144.0/23,203312,AF,Africa,CD,Congo (DRC),0,0
+102.207.146.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.148.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.0/30,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.4/32,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.5/32,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.149.6/31,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.8/29,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.16/28,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.32/27,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.64/26,192950,AF,Africa,KE,Kenya,0,0
+102.207.149.128/25,192950,AF,Africa,KE,Kenya,0,0
+102.207.150.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.207.152.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.207.156.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.207.160.0/20,192950,AF,Africa,KE,Kenya,0,0
+102.207.176.0/22,921929,AF,Africa,KM,Comoros,0,0
+102.207.180.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.188.0/23,2275384,AF,Africa,LR,Liberia,0,0
+102.207.190.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.207.191.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.207.192.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.207.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.204.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.208.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.212.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.207.216.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.207.220.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.221.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.207.222.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.207.223.0/24,1036973,AF,Africa,MZ,Mozambique,0,0
+102.207.224.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.207.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.207.232.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.207.236.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.207.240.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.207.244.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.207.248.0/23,203312,AF,Africa,CD,Congo (DRC),0,0
+102.207.250.0/23,2464461,AF,Africa,TN,Tunisia,0,0
+102.207.252.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.208.0.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.4.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.208.8.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.208.16.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.208.20.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.208.24.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.208.32.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.208.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.40.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.208.44.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.48.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.208.52.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.208.53.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.208.54.0/23,2233387,AF,Africa,CM,Cameroon,0,0
+102.208.56.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.208.60.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.68.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.208.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.76.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.208.80.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.208.81.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.208.82.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.208.83.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.208.84.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.208.88.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.208.90.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.208.92.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.208.96.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.208.100.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.208.104.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.208.105.0/24,2363686,AF,Africa,TG,Togo,0,0
+102.208.106.0/23,2233387,AF,Africa,CM,Cameroon,0,0
+102.208.108.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.208.110.0/23,2245662,AF,Africa,SN,Senegal,0,0
+102.208.112.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.208.120.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.208.124.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.208.128.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.208.132.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.208.136.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.208.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.144.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.208.146.0/23,2542007,AF,Africa,MA,Morocco,0,0
+102.208.148.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.208.152.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.208.160.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.208.164.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.168.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.172.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.208.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.180.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.184.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.208.188.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.208.190.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.208.191.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.208.192.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.208.196.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.208.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.204.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.208.206.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.208.207.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.208.208.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.208.216.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.220.0/23,895949,AF,Africa,ZM,Zambia,0,0
+102.208.222.0/24,2420477,AF,Africa,GN,Guinea,0,0
+102.208.223.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.208.224.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.208.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.232.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.208.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.208.240.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.208.241.0/24,2420477,AF,Africa,GN,Guinea,0,0
+102.208.242.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.208.243.0/24,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.208.244.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.208.248.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.208.250.0/23,6252001,nan,North America,US,United States,0,0
+102.208.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.0.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.209.4.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.209.8.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.209.16.0/23,927384,AF,Africa,MW,Malawi,0,0
+102.209.18.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.209.19.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.209.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.24.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.209.28.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.209.32.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.209.36.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.209.40.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.44.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.209.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.52.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.209.56.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.60.0/22,927384,AF,Africa,MW,Malawi,0,0
+102.209.64.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.209.68.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.72.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.209.76.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.80.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.209.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.88.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.209.90.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.209.92.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.209.96.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.209.100.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.104.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.209.108.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.209.112.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.209.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.209.128.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.209.132.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.209.136.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.144.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.148.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.209.152.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.209.153.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.209.154.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.209.155.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.209.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.160.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.209.164.0/22,2245662,AF,Africa,SN,Senegal,0,0
+102.209.168.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.209.172.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.209.176.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.209.180.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.209.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.188.0/23,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.209.190.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.209.191.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.209.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.196.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.209.200.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.209.204.0/22,2420477,AF,Africa,GN,Guinea,0,0
+102.209.208.0/22,2245662,AF,Africa,SN,Senegal,0,0
+102.209.212.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.209.216.0/21,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.209.224.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.209.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.236.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.209.238.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.209.239.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.209.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.209.244.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.209.248.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.209.252.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.210.0.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.4.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.8.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.12.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.16.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.210.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.24.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.210.32.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.210.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.40.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.44.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.210.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.52.0/24,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.210.53.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.210.54.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.210.56.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.60.0/24,660013,EU,Europe,FI,Finland,0,0
+102.210.61.0/24,3144096,EU,Europe,NO,Norway,0,0
+102.210.62.0/24,2510769,EU,Europe,ES,Spain,0,0
+102.210.63.0/24,660013,EU,Europe,FI,Finland,0,0
+102.210.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.68.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.210.72.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.210.76.0/22,2275384,AF,Africa,LR,Liberia,0,0
+102.210.80.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.210.84.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.210.88.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.92.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.210.96.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.210.100.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.210.102.0/23,895949,AF,Africa,ZM,Zambia,0,0
+102.210.104.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.108.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.210.112.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.210.116.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.210.120.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.210.124.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.128.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.210.136.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.140.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.210.144.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.210.152.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.156.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.210.158.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.210.159.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.210.160.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.210.164.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.210.168.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.210.169.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.210.170.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.210.171.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.210.172.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.176.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.210.180.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.210.184.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.210.188.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.210.190.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.210.192.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.210.193.0/24,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.210.194.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.210.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.200.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.210.204.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.208.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.210.209.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.210.210.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.210.212.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.210.216.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.210.220.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.228.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.210.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.236.0/22,366755,AF,Africa,SD,Sudan,0,0
+102.210.240.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.210.242.0/24,51537,AF,Africa,SO,Somalia,0,0
+102.210.243.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.210.244.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.210.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.210.252.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.210.253.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.210.254.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.211.0.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.211.4.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.211.8.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.211.12.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.211.16.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.20.0/23,927384,AF,Africa,MW,Malawi,0,0
+102.211.22.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.211.23.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.211.24.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.211.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.32.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.40.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.44.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.52.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.211.54.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.211.55.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.211.56.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.211.57.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.211.58.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.211.60.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.211.64.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.211.68.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.72.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.211.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.80.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.88.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.100.0/22,1062947,AF,Africa,MG,Madagascar,0,0
+102.211.104.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.211.105.0/24,337996,AF,Africa,ET,Ethiopia,0,0
+102.211.106.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.211.107.0/24,2434508,AF,Africa,TD,Chad,0,0
+102.211.108.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.211.112.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.211.114.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.211.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.120.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.121.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.211.122.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.123.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.211.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.128.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.211.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.136.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.211.140.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.211.144.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.211.152.0/24,3469034,SA,South America,BR,Brazil,0,0
+102.211.153.0/29,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.8/30,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.12/30,1036973,AF,Africa,MZ,Mozambique,0,0
+102.211.153.16/28,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.32/28,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.48/29,953987,AF,Africa,ZA,South Africa,0,0
+102.211.153.56/29,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.64/26,3351879,AF,Africa,AO,Angola,0,0
+102.211.153.128/25,3351879,AF,Africa,AO,Angola,0,0
+102.211.154.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.211.155.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.160.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.211.162.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.211.163.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.164.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.168.0/24,2363686,AF,Africa,TG,Togo,0,0
+102.211.169.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.211.170.0/24,2363686,AF,Africa,TG,Togo,0,0
+102.211.171.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.211.172.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.211.176.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.211.192.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.211.196.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.198.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.211.199.0/24,2420477,AF,Africa,GN,Guinea,0,0
+102.211.200.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.211.204.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.208.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.211.212.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.211.216.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.211.220.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.224.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.211.228.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.211.230.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.211.232.0/23,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.211.234.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+102.211.235.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.211.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.211.244.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.211.248.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.211.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.0.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.4.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.212.8.0/23,2464461,AF,Africa,TN,Tunisia,0,0
+102.212.10.0/24,337996,AF,Africa,ET,Ethiopia,0,0
+102.212.11.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.212.12.0/24,203312,AF,Africa,CD,Congo (DRC),0,0
+102.212.13.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.212.14.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.212.16.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.212.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.28.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.212.32.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.212.40.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.44.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.48.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.212.56.0/24,2264397,EU,Europe,PT,Portugal,0,0
+102.212.57.0/24,3175395,EU,Europe,IT,Italy,0,0
+102.212.58.0/24,3175395,EU,Europe,IT,Italy,0,0
+102.212.59.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+102.212.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.64.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.212.66.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.212.68.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.212.72.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.212.76.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.212.80.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.81.0/24,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.212.82.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.212.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.88.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.92.0/22,2363686,AF,Africa,TG,Togo,0,0
+102.212.96.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.100.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.104.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.108.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.212.112.0/21,149590,AF,Africa,TZ,Tanzania,0,0
+102.212.120.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.212.128.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.132.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.212.136.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.212.140.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.141.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.212.142.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.212.144.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.212.160.0/23,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.212.162.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.212.163.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.164.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.168.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.172.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.212.174.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.175.0/24,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.212.176.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.212.180.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.212.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.188.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.212.192.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.212.200.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.212.204.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.205.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.212.206.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.208.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.212.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.212.216.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.212.220.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.212.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.212.228.0/24,934841,AF,Africa,SZ,Eswatini,0,0
+102.212.229.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.230.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.212.231.0/24,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.212.232.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.236.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.212.240.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.212.244.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.212.248.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.212.252.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.0.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.213.8.0/22,935317,AF,Africa,RE,Réunion,0,0
+102.213.12.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.213.16.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.213.18.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.28.0/22,927384,AF,Africa,MW,Malawi,0,0
+102.213.32.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.213.36.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.213.40.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.213.44.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.213.48.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.52.0/23,2309096,AF,Africa,GQ,Equatorial Guinea,0,0
+102.213.54.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.213.55.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.213.56.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.213.60.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.213.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.68.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.213.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.76.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.84.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.88.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.92.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.96.0/20,3351879,AF,Africa,AO,Angola,0,0
+102.213.112.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.213.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.120.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.213.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.128.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.213.136.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.213.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.144.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.213.152.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.213.154.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.213.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.160.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.164.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.168.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.172.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.213.176.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.213.177.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.213.178.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.213.179.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.213.180.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.213.184.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.213.188.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.213.192.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.213.196.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.213.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.204.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.213.208.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.212.0/23,49518,AF,Africa,RW,Rwanda,0,0
+102.213.214.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.213.216.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.220.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.213.228.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.213.232.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.213.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.213.240.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.213.241.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.213.242.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.213.243.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.213.244.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.213.248.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.213.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.0.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.214.4.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.214.8.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.12.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.214.13.0/24,7909807,AF,Africa,SS,South Sudan,0,0
+102.214.14.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.16.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.214.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.24.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.214.28.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.214.32.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.214.36.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.214.40.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.214.44.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.214.48.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.214.52.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.214.56.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.64.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.214.68.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.214.72.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.214.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.84.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.214.88.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.214.89.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.214.90.0/24,223816,AF,Africa,DJ,Djibouti,0,0
+102.214.91.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.96.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.214.100.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.214.104.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.214.108.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.112.0/22,932692,AF,Africa,LS,Lesotho,0,0
+102.214.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.120.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.214.124.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.126.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.214.127.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.214.128.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.214.132.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.214.136.0/22,2275384,AF,Africa,LR,Liberia,0,0
+102.214.140.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.214.142.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.214.143.0/24,2395170,AF,Africa,BJ,Benin,0,0
+102.214.144.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.148.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.214.152.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.156.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.214.160.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.214.164.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.214.168.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.214.172.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.176.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.214.184.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.214.185.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.214.186.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.214.188.0/24,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.214.189.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.214.190.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.214.191.0/24,2245662,AF,Africa,SN,Senegal,0,0
+102.214.192.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.214.208.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.214.212.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.214.216.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.220.0/23,49518,AF,Africa,RW,Rwanda,0,0
+102.214.222.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.214.224.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.214.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.214.236.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.214.240.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.244.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.214.247.0/24,2395170,AF,Africa,BJ,Benin,0,0
+102.214.248.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.214.252.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.0.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.215.4.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.8.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.215.12.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.16.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.215.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.24.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.215.28.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.215.32.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.40.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.44.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.215.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.52.0/22,2275384,AF,Africa,LR,Liberia,0,0
+102.215.56.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.215.60.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.215.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.76.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.84.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.215.88.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.215.92.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.215.93.0/24,2395170,AF,Africa,BJ,Benin,0,0
+102.215.94.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.215.95.0/24,2378080,AF,Africa,MR,Mauritania,0,0
+102.215.96.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.215.97.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.215.98.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.215.99.0/24,934841,AF,Africa,SZ,Eswatini,0,0
+102.215.100.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.104.0/22,3355338,AF,Africa,nan,Namibia,0,0
+102.215.108.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.215.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.116.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.120.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.124.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.215.128.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.215.136.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.215.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.148.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.215.152.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.160.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.215.164.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.215.168.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.215.176.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.215.180.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.215.184.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.215.188.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.215.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.196.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.215.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.204.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.215.208.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.215.218.0/23,2464461,AF,Africa,TN,Tunisia,0,0
+102.215.222.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.215.224.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.215.225.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.215.226.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.215.227.0/24,1861060,AS,Asia,JP,Japan,0,0
+102.215.228.0/24,2921044,EU,Europe,DE,Germany,0,0
+102.215.229.0/24,1835841,AS,Asia,KR,South Korea,0,0
+102.215.230.0/23,6252001,nan,North America,US,United States,0,0
+102.215.236.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.240.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.215.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.215.252.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.216.0.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.216.8.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.12.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.216.16.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.20.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.216.21.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.22.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.216.23.0/24,1062947,AF,Africa,MG,Madagascar,0,0
+102.216.25.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.216.27.0/24,2378080,AF,Africa,MR,Mauritania,0,0
+102.216.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.32.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.36.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.216.38.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.216.39.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.216.40.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.44.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.216.48.0/21,3351879,AF,Africa,AO,Angola,0,0
+102.216.56.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.216.60.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.216.64.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.216.72.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.216.80.0/24,6252001,nan,North America,US,United States,0,0
+102.216.81.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.216.82.0/24,3469034,SA,South America,BR,Brazil,0,0
+102.216.83.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.216.84.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.216.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.100.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.216.104.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.108.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.216.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.116.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.216.118.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.216.119.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.216.120.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.216.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.128.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.130.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.216.131.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.216.132.0/24,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.216.133.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.216.134.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.136.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.216.140.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.216.144.0/21,226074,AF,Africa,UG,Uganda,0,0
+102.216.152.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.154.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.216.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.168.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.216.172.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.216.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.180.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.184.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.216.192.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.200.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.204.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.216.208.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.216.212.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.216.214.0/23,895949,AF,Africa,ZM,Zambia,0,0
+102.216.216.0/22,2378080,AF,Africa,MR,Mauritania,0,0
+102.216.220.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.216.236.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.216.238.0/23,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.216.240.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.216.244.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.216.248.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.216.252.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.217.0.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.4.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.8.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.12.0/22,2363686,AF,Africa,TG,Togo,0,0
+102.217.16.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.217.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.24.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.217.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.32.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.217.48.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.217.52.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.217.54.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.217.56.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.217.64.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.68.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.217.72.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.217.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.80.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.217.84.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.88.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.96.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.217.100.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.104.0/24,2077456,OC,Oceania,AU,Australia,0,0
+102.217.105.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.217.106.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.217.107.0/24,690791,EU,Europe,UA,Ukraine,0,0
+102.217.108.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.112.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.217.116.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.217.120.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.217.128.0/21,192950,AF,Africa,KE,Kenya,0,0
+102.217.136.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.140.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.217.144.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.148.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.217.152.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.156.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.160.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.217.168.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.217.172.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.217.174.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.217.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.180.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.184.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.217.192.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.217.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.204.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.209.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.217.210.0/24,2464461,AF,Africa,TN,Tunisia,0,0
+102.217.211.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.217.212.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.216.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.217.224.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.217.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.236.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.217.237.0/24,3865483,SA,South America,AR,Argentina,0,0
+102.217.238.0/24,3686110,SA,South America,CO,Colombia,0,0
+102.217.239.0/24,285570,AS,Asia,KW,Kuwait,0,0
+102.217.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.244.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.217.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.217.252.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.217.254.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.217.255.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.0.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.218.8.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.218.10.0/23,51537,AF,Africa,SO,Somalia,0,0
+102.218.12.0/22,878675,AF,Africa,ZW,Zimbabwe,0,0
+102.218.16.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.20.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.218.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.28.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.218.32.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.218.36.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.218.40.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.218.48.0/22,337996,AF,Africa,ET,Ethiopia,0,0
+102.218.52.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.56.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.218.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.68.0/22,366755,AF,Africa,SD,Sudan,0,0
+102.218.72.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.218.76.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.80.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.84.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.218.88.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.218.92.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.218.98.0/24,51537,AF,Africa,SO,Somalia,0,0
+102.218.99.0/24,366755,AF,Africa,SD,Sudan,0,0
+102.218.100.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.102.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.103.0/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.103.16/28,2510769,EU,Europe,ES,Spain,0,0
+102.218.103.32/27,2510769,EU,Europe,ES,Spain,0,0
+102.218.103.64/26,2510769,EU,Europe,ES,Spain,0,0
+102.218.103.128/25,2510769,EU,Europe,ES,Spain,0,0
+102.218.104.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.108.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.218.112.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.218.116.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.124.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.218.128.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.218.129.0/24,2420477,AF,Africa,GN,Guinea,0,0
+102.218.130.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.218.131.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.218.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.136.0/22,2420477,AF,Africa,GN,Guinea,0,0
+102.218.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.144.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.218.148.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.218.152.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.218.160.0/22,927384,AF,Africa,MW,Malawi,0,0
+102.218.164.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.218.165.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.218.166.0/23,2233387,AF,Africa,CM,Cameroon,0,0
+102.218.172.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.218.176.0/22,49518,AF,Africa,RW,Rwanda,0,0
+102.218.180.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.218.184.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.188.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.218.192.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.196.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.218.200.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.218.204.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.208.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.218.212.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.216.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.218.224.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.218.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.232.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.218.236.0/22,2420477,AF,Africa,GN,Guinea,0,0
+102.218.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.218.244.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.218.252.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.219.0.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.219.8.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.219.16.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.20.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.219.22.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.219.23.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.219.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.28.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.29.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.30.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.219.31.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.32.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.219.40.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.44.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.219.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.52.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.56.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.219.64.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.68.0/22,2233387,AF,Africa,CM,Cameroon,0,0
+102.219.72.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.219.74.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.75.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.219.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.80.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.219.81.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.219.82.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.83.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.84.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.219.86.0/23,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.219.88.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.92.0/24,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.219.93.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.94.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.219.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.100.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.219.104.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.219.108.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.112.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.219.116.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.120.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.124.0/23,3351879,AF,Africa,AO,Angola,0,0
+102.219.126.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.0/28,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.16/29,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.24/31,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.26/32,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.27/32,1880251,AS,Asia,SG,Singapore,0,0
+102.219.127.28/30,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.32/27,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.64/26,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.128/26,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.192/27,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.224/30,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.228/32,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.229/32,6252001,nan,North America,US,United States,0,0
+102.219.127.230/31,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.232/29,3351879,AF,Africa,AO,Angola,0,0
+102.219.127.240/28,3351879,AF,Africa,AO,Angola,0,0
+102.219.132.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.219.136.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.219.138.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.139.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.219.140.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.219.144.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.219.152.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.160.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.164.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.219.168.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.172.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.173.0/24,49518,AF,Africa,RW,Rwanda,0,0
+102.219.174.0/23,2372248,AF,Africa,GW,Guinea-Bissau,0,0
+102.219.176.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.219.180.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.219.181.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.219.182.0/23,927384,AF,Africa,MW,Malawi,0,0
+102.219.184.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.219.188.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.190.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.219.192.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.219.194.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.204.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.206.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.219.207.0/24,2378080,AF,Africa,MR,Mauritania,0,0
+102.219.208.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.219.216.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.219.220.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.219.224.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.219.226.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.219.227.0/24,2215636,AF,Africa,LY,Libya,0,0
+102.219.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.236.0/22,2363686,AF,Africa,TG,Togo,0,0
+102.219.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.219.248.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.219.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.8.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.12.0/27,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.32/29,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.40/31,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.42/32,934292,AF,Africa,MU,Mauritius,0,0
+102.220.12.43/32,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.44/30,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.48/28,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.64/26,192950,AF,Africa,KE,Kenya,0,0
+102.220.12.128/25,192950,AF,Africa,KE,Kenya,0,0
+102.220.13.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.220.14.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.220.16.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.220.17.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.220.18.0/23,2233387,AF,Africa,CM,Cameroon,0,0
+102.220.20.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.220.21.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.220.22.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.220.24.0/22,2440476,AF,Africa,NE,Niger,0,0
+102.220.28.0/22,2589581,AF,Africa,DZ,Algeria,0,0
+102.220.36.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.220.40.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.220.44.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.48.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.220.56.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.220.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.64.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.220.72.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.220.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.80.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.220.88.0/23,241170,AF,Africa,SC,Seychelles,0,0
+102.220.90.0/24,1831722,AS,Asia,KH,Cambodia,0,0
+102.220.91.0/24,241170,AF,Africa,SC,Seychelles,0,0
+102.220.92.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.220.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.100.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.220.101.0/24,2434508,AF,Africa,TD,Chad,0,0
+102.220.102.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.220.104.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.108.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.220.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.116.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.220.118.0/24,2464461,AF,Africa,TN,Tunisia,0,0
+102.220.119.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.220.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.124.0/24,2542007,AF,Africa,MA,Morocco,0,0
+102.220.125.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.220.126.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.220.128.0/23,149590,AF,Africa,TZ,Tanzania,0,0
+102.220.130.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.140.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.220.144.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.220.152.0/22,366755,AF,Africa,SD,Sudan,0,0
+102.220.156.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.220.158.0/23,895949,AF,Africa,ZM,Zambia,0,0
+102.220.160.0/22,3190538,EU,Europe,SI,Slovenia,0,0
+102.220.164.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.220.168.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.220.172.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.184.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.220.188.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.192.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.220.196.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.220.200.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.220.204.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.212.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.216.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.220.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.220.221.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.220.222.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.220.223.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.220.224.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.228.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.220.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.220.236.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.220.244.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.220.248.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.220.249.0/24,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.220.250.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.220.251.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.220.252.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.0.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.221.8.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.221.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.16.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.20.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.221.24.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.28.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.221.32.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.221.36.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.40.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.44.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.48.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.52.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.221.56.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.221.60.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.64.0/22,2413451,AF,Africa,GM,Gambia,0,0
+102.221.68.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.221.72.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.221.73.0/24,192950,AF,Africa,KE,Kenya,0,0
+102.221.74.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.221.75.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.84.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.88.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.92.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.96.0/23,203312,AF,Africa,CD,Congo (DRC),0,0
+102.221.98.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.221.100.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.108.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.221.112.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.221.114.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.116.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.221.117.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.221.118.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.221.120.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.124.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.221.128.0/22,2464461,AF,Africa,TN,Tunisia,0,0
+102.221.132.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.221.136.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.140.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.221.142.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.221.152.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.221.154.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.221.156.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.160.0/21,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.168.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.172.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.221.176.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.180.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.221.182.0/23,934292,AF,Africa,MU,Mauritius,0,0
+102.221.184.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.188.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.192.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.221.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.200.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.221.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.216.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.221.224.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.221.228.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.221.232.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.236.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.221.240.0/22,895949,AF,Africa,ZM,Zambia,0,0
+102.221.244.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.221.248.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.222.0.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.4.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.222.8.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.222.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.16.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.222.20.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.25.0/24,934292,AF,Africa,MU,Mauritius,0,0
+102.222.27.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.222.28.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.36.0/22,7909807,AF,Africa,SS,South Sudan,0,0
+102.222.40.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.44.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.222.48.0/22,933860,AF,Africa,BW,Botswana,0,0
+102.222.56.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.222.61.0/24,7909807,AF,Africa,SS,South Sudan,0,0
+102.222.62.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.64.0/23,7909807,AF,Africa,SS,South Sudan,0,0
+102.222.66.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.68.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.222.72.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.222.73.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.222.74.0/23,226074,AF,Africa,UG,Uganda,0,0
+102.222.76.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.222.77.0/24,2017370,EU,Europe,RU,Russia,0,0
+102.222.78.0/23,2017370,EU,Europe,RU,Russia,0,0
+102.222.80.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.82.0/23,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.222.84.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.222.88.0/22,1036973,AF,Africa,MZ,Mozambique,0,0
+102.222.92.0/22,3351879,AF,Africa,AO,Angola,0,0
+102.222.96.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.222.100.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.104.0/22,934292,AF,Africa,MU,Mauritius,0,0
+102.222.108.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.112.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.116.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.222.120.0/22,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.222.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.128.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.132.0/22,934841,AF,Africa,SZ,Eswatini,0,0
+102.222.136.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.138.0/29,953987,AF,Africa,ZA,South Africa,0,0
+102.222.138.8/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.222.138.16/28,953987,AF,Africa,ZA,South Africa,0,0
+102.222.138.32/27,953987,AF,Africa,ZA,South Africa,0,0
+102.222.138.64/26,953987,AF,Africa,ZA,South Africa,0,0
+102.222.138.128/25,953987,AF,Africa,ZA,South Africa,0,0
+102.222.139.0/29,2300660,AF,Africa,GH,Ghana,0,0
+102.222.139.8/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.222.139.16/28,953987,AF,Africa,ZA,South Africa,0,0
+102.222.139.32/29,192950,AF,Africa,KE,Kenya,0,0
+102.222.139.40/29,953987,AF,Africa,ZA,South Africa,0,0
+102.222.139.48/28,953987,AF,Africa,ZA,South Africa,0,0
+102.222.139.64/26,953987,AF,Africa,ZA,South Africa,0,0
+102.222.139.128/25,953987,AF,Africa,ZA,South Africa,0,0
+102.222.140.0/22,3374766,AF,Africa,CV,Cabo Verde,0,0
+102.222.144.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.222.148.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.152.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.222.156.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.0/25,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.128/26,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.192/27,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.224/28,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.240/29,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.248/30,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.252/31,953987,AF,Africa,ZA,South Africa,0,0
+102.222.157.254/32,2750405,EU,Europe,NL,The Netherlands,0,0
+102.222.157.255/32,953987,AF,Africa,ZA,South Africa,0,0
+102.222.158.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.160.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.222.168.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.172.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.222.173.0/24,933860,AF,Africa,BW,Botswana,0,0
+102.222.174.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.222.176.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.222.180.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.184.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.222.192.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.222.200.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.222.204.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.222.208.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.212.0/22,2542007,AF,Africa,MA,Morocco,0,0
+102.222.216.0/22,2395170,AF,Africa,BJ,Benin,0,0
+102.222.220.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.222.228.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.222.232.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.222.236.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.222.240.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.248.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.222.252.0/23,2215636,AF,Africa,LY,Libya,0,0
+102.222.255.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.0.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.223.1.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.2.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.3.0/24,3351879,AF,Africa,AO,Angola,0,0
+102.223.4.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.5.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.6.0/24,2233387,AF,Africa,CM,Cameroon,0,0
+102.223.7.0/24,149590,AF,Africa,TZ,Tanzania,0,0
+102.223.8.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.223.12.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.16.0/22,149590,AF,Africa,TZ,Tanzania,0,0
+102.223.20.0/22,2300660,AF,Africa,GH,Ghana,0,0
+102.223.24.0/22,2309096,AF,Africa,GQ,Equatorial Guinea,0,0
+102.223.28.0/22,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.223.32.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.223.36.0/22,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.40.0/21,953987,AF,Africa,ZA,South Africa,0,0
+102.223.48.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.223.52.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.54.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.0/27,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.32/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.48/29,2233387,AF,Africa,CM,Cameroon,0,0
+102.223.55.56/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.64/29,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.72/29,192950,AF,Africa,KE,Kenya,0,0
+102.223.55.80/28,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.96/27,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.55.128/25,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.56.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.62.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.223.64.0/22,2453866,AF,Africa,ML,Mali,0,0
+102.223.72.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.76.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.80.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.84.0/22,192950,AF,Africa,KE,Kenya,0,0
+102.223.88.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.223.92.0/23,2300660,AF,Africa,GH,Ghana,0,0
+102.223.94.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.223.95.0/24,927384,AF,Africa,MW,Malawi,0,0
+102.223.96.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.100.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.223.101.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.103.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.104.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.110.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.111.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.223.114.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.223.116.0/22,241170,AF,Africa,SC,Seychelles,0,0
+102.223.120.0/22,921929,AF,Africa,KM,Comoros,0,0
+102.223.124.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.128.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.223.132.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.140.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.144.0/22,357994,AF,Africa,EG,Egypt,0,0
+102.223.148.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.154.0/23,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.223.156.0/22,2215636,AF,Africa,LY,Libya,0,0
+102.223.164.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.168.0/22,2403846,AF,Africa,SL,Sierra Leone,0,0
+102.223.173.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.223.174.0/23,2361809,AF,Africa,BF,Burkina Faso,0,0
+102.223.176.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.223.180.0/23,2328926,AF,Africa,NG,Nigeria,0,0
+102.223.182.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.223.184.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+102.223.188.0/22,51537,AF,Africa,SO,Somalia,0,0
+102.223.192.0/22,2434508,AF,Africa,TD,Chad,0,0
+102.223.196.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.200.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.204.0/23,192950,AF,Africa,KE,Kenya,0,0
+102.223.206.0/23,934292,AF,Africa,MU,Mauritius,0,0
+102.223.208.0/22,203312,AF,Africa,CD,Congo (DRC),0,0
+102.223.212.0/22,953987,AF,Africa,ZA,South Africa,0,0
+102.223.216.0/22,226074,AF,Africa,UG,Uganda,0,0
+102.223.220.0/22,2260494,AF,Africa,CG,Congo Republic,0,0
+102.223.224.0/20,953987,AF,Africa,ZA,South Africa,0,0
+102.223.240.0/23,953987,AF,Africa,ZA,South Africa,0,0
+102.223.242.0/23,357994,AF,Africa,EG,Egypt,0,0
+102.223.248.0/24,226074,AF,Africa,UG,Uganda,0,0
+102.223.249.0/24,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.223.250.0/24,357994,AF,Africa,EG,Egypt,0,0
+102.223.251.0/24,953987,AF,Africa,ZA,South Africa,0,0
+102.223.252.0/23,2287781,AF,Africa,CI,Ivory Coast,0,0
+102.223.254.0/24,2300660,AF,Africa,GH,Ghana,0,0
+102.223.255.0/24,2328926,AF,Africa,NG,Nigeria,0,0
+102.240.0.0/14,2464461,AF,Africa,TN,Tunisia,0,0
+102.244.0.0/14,2233387,AF,Africa,CM,Cameroon,0,0
+102.248.0.0/13,953987,AF,Africa,ZA,South Africa,0,0

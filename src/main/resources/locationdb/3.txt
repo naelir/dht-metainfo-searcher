@@ -1,0 +1,566 @@
+3.0.0.0/15,1880251,AS,Asia,SG,Singapore,0,0
+3.2.0.0/19,6252001,nan,North America,US,United States,0,0
+3.2.32.0/26,2186224,OC,Oceania,NZ,New Zealand,0,0
+3.2.32.64/26,2661886,EU,Europe,SE,Sweden,0,0
+3.2.32.128/26,290291,AS,Asia,BH,Bahrain,0,0
+3.2.32.192/26,1269750,AS,Asia,IN,India,0,0
+3.2.33.0/26,6252001,nan,North America,US,United States,0,0
+3.2.33.64/26,3017382,EU,Europe,FR,France,0,0
+3.2.33.128/26,1643084,AS,Asia,ID,Indonesia,0,0
+3.2.33.192/26,6252001,nan,North America,US,United States,0,0
+3.2.34.0/26,953987,AF,Africa,ZA,South Africa,0,0
+3.2.34.64/26,6252001,nan,North America,US,United States,0,0
+3.2.34.128/26,2963597,EU,Europe,IE,Ireland,0,0
+3.2.34.192/26,290557,AS,Asia,AE,United Arab Emirates,0,0
+3.2.35.0/27,2921044,EU,Europe,DE,Germany,0,0
+3.2.35.32/29,2921044,EU,Europe,DE,Germany,0,0
+3.2.35.40/29,298795,AS,Asia,TR,Türkiye,0,0
+3.2.35.48/29,390903,EU,Europe,GR,Greece,0,0
+3.2.35.56/29,2921044,EU,Europe,DE,Germany,0,0
+3.2.35.64/26,3469034,SA,South America,BR,Brazil,0,0
+3.2.35.128/26,1819730,AS,Asia,HK,Hong Kong,0,0
+3.2.35.192/26,1269750,AS,Asia,IN,India,0,0
+3.2.36.0/24,6252001,nan,North America,US,United States,0,0
+3.2.37.0/26,1835841,AS,Asia,KR,South Korea,0,0
+3.2.37.64/26,6252001,nan,North America,US,United States,0,0
+3.2.37.128/26,1861060,AS,Asia,JP,Japan,0,0
+3.2.37.192/26,1733045,AS,Asia,MY,Malaysia,0,0
+3.2.38.0/26,2635167,EU,Europe,GB,United Kingdom,0,0
+3.2.38.64/26,6252001,nan,North America,US,United States,0,0
+3.2.38.128/26,2077456,OC,Oceania,AU,Australia,0,0
+3.2.38.192/26,3175395,EU,Europe,IT,Italy,0,0
+3.2.39.0/26,1861060,AS,Asia,JP,Japan,0,0
+3.2.39.64/26,6252001,nan,North America,US,United States,0,0
+3.2.39.128/25,6252001,nan,North America,US,United States,0,0
+3.2.40.0/25,6252001,nan,North America,US,United States,0,0
+3.2.40.128/26,102358,AS,Asia,SA,Saudi Arabia,0,0
+3.2.40.192/26,3895114,SA,South America,CL,Chile,0,0
+3.2.41.0/25,6252001,nan,North America,US,United States,0,0
+3.2.41.128/27,1880251,AS,Asia,SG,Singapore,0,0
+3.2.41.160/29,1880251,AS,Asia,SG,Singapore,0,0
+3.2.41.168/29,1562822,AS,Asia,VN,Vietnam,0,0
+3.2.41.176/28,1880251,AS,Asia,SG,Singapore,0,0
+3.2.41.192/26,2077456,OC,Oceania,AU,Australia,0,0
+3.2.42.0/26,294640,AS,Asia,IL,Israel,0,0
+3.2.42.64/26,6251999,nan,North America,CA,Canada,0,0
+3.2.42.128/26,6252001,nan,North America,US,United States,0,0
+3.2.42.192/26,6251999,nan,North America,CA,Canada,0,0
+3.2.43.0/26,2510769,EU,Europe,ES,Spain,0,0
+3.2.43.64/26,2658434,EU,Europe,CH,Switzerland,0,0
+3.2.43.128/26,6252001,nan,North America,US,United States,0,0
+3.2.43.192/26,1605651,AS,Asia,TH,Thailand,0,0
+3.2.44.0/26,3996063,nan,North America,MX,Mexico,0,0
+3.2.44.64/26,1668284,AS,Asia,TW,Taiwan,0,0
+3.2.44.128/25,6252001,nan,North America,US,United States,0,0
+3.2.45.0/24,6252001,nan,North America,US,United States,0,0
+3.2.46.0/23,6252001,nan,North America,US,United States,0,0
+3.2.48.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+3.2.49.0/24,3469034,SA,South America,BR,Brazil,0,0
+3.2.50.0/23,6252001,nan,North America,US,United States,0,0
+3.2.52.0/24,6252001,nan,North America,US,United States,0,0
+3.2.53.0/24,2921044,EU,Europe,DE,Germany,0,0
+3.2.54.0/23,6252001,nan,North America,US,United States,0,0
+3.2.56.0/24,290291,AS,Asia,BH,Bahrain,0,0
+3.2.57.0/24,2963597,EU,Europe,IE,Ireland,0,0
+3.2.58.0/24,6252001,nan,North America,US,United States,0,0
+3.2.59.0/24,2963597,EU,Europe,IE,Ireland,0,0
+3.2.60.0/24,2077456,OC,Oceania,AU,Australia,0,0
+3.2.61.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.2.62.0/23,6252001,nan,North America,US,United States,0,0
+3.2.64.0/23,6252001,nan,North America,US,United States,0,0
+3.2.66.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.2.67.0/24,6252001,nan,North America,US,United States,0,0
+3.2.68.0/24,6252001,nan,North America,US,United States,0,0
+3.2.69.0/24,1269750,AS,Asia,IN,India,0,0
+3.2.70.0/24,2921044,EU,Europe,DE,Germany,0,0
+3.2.71.0/24,2661886,EU,Europe,SE,Sweden,0,0
+3.2.72.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+3.2.73.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+3.2.74.0/24,6252001,nan,North America,US,United States,0,0
+3.2.75.0/24,1835841,AS,Asia,KR,South Korea,0,0
+3.2.76.0/24,1880251,AS,Asia,SG,Singapore,0,0
+3.2.77.0/24,2077456,OC,Oceania,AU,Australia,0,0
+3.2.78.0/24,6251999,nan,North America,CA,Canada,0,0
+3.2.79.0/24,2963597,EU,Europe,IE,Ireland,0,0
+3.2.80.0/24,3469034,SA,South America,BR,Brazil,0,0
+3.2.81.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+3.2.82.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.2.83.0/24,2510769,EU,Europe,ES,Spain,0,0
+3.2.84.0/24,3017382,EU,Europe,FR,France,0,0
+3.2.85.0/24,290291,AS,Asia,BH,Bahrain,0,0
+3.2.86.0/24,6252001,nan,North America,US,United States,0,0
+3.2.87.0/24,953987,AF,Africa,ZA,South Africa,0,0
+3.2.88.0/24,1605651,AS,Asia,TH,Thailand,0,0
+3.2.89.0/24,3017382,EU,Europe,FR,France,0,0
+3.2.90.0/24,1269750,AS,Asia,IN,India,0,0
+3.2.91.0/24,1733045,AS,Asia,MY,Malaysia,0,0
+3.2.92.0/24,2077456,OC,Oceania,AU,Australia,0,0
+3.2.93.0/24,3175395,EU,Europe,IT,Italy,0,0
+3.2.94.0/24,3996063,nan,North America,MX,Mexico,0,0
+3.2.95.0/24,294640,AS,Asia,IL,Israel,0,0
+3.2.96.0/24,6251999,nan,North America,CA,Canada,0,0
+3.2.97.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+3.2.98.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+3.2.99.0/24,6252001,nan,North America,US,United States,0,0
+3.2.100.0/24,6252001,nan,North America,US,United States,0,0
+3.2.101.0/24,1668284,AS,Asia,TW,Taiwan,0,0
+3.2.102.0/24,2186224,OC,Oceania,NZ,New Zealand,0,0
+3.2.103.0/24,6252001,nan,North America,US,United States,0,0
+3.2.104.0/21,6252001,nan,North America,US,United States,0,0
+3.2.112.0/20,6252001,nan,North America,US,United States,0,0
+3.2.128.0/17,6252001,nan,North America,US,United States,0,0
+3.3.0.0/16,6252001,nan,North America,US,United States,0,0
+3.4.0.0/21,6252001,nan,North America,US,United States,0,0
+3.4.8.0/22,6252001,nan,North America,US,United States,0,0
+3.4.12.0/32,6252001,nan,North America,US,United States,0,0
+3.4.12.1/32,2077456,OC,Oceania,AU,Australia,0,0
+3.4.12.2/32,2077456,OC,Oceania,AU,Australia,0,0
+3.4.12.3/32,2963597,EU,Europe,IE,Ireland,0,0
+3.4.12.4/32,2963597,EU,Europe,IE,Ireland,0,0
+3.4.12.5/32,6252001,nan,North America,US,United States,0,0
+3.4.12.6/31,6252001,nan,North America,US,United States,0,0
+3.4.12.8/31,6252001,nan,North America,US,United States,0,0
+3.4.12.10/32,6252001,nan,North America,US,United States,0,0
+3.4.12.11/32,1835841,AS,Asia,KR,South Korea,0,0
+3.4.12.12/32,1835841,AS,Asia,KR,South Korea,0,0
+3.4.12.13/32,6252001,nan,North America,US,United States,0,0
+3.4.12.14/32,6252001,nan,North America,US,United States,0,0
+3.4.12.15/32,2077456,OC,Oceania,AU,Australia,0,0
+3.4.12.16/31,2077456,OC,Oceania,AU,Australia,0,0
+3.4.12.18/32,2077456,OC,Oceania,AU,Australia,0,0
+3.4.12.19/32,1269750,AS,Asia,IN,India,0,0
+3.4.12.20/31,1269750,AS,Asia,IN,India,0,0
+3.4.12.22/32,1269750,AS,Asia,IN,India,0,0
+3.4.12.23/32,1880251,AS,Asia,SG,Singapore,0,0
+3.4.12.24/31,1880251,AS,Asia,SG,Singapore,0,0
+3.4.12.26/32,1880251,AS,Asia,SG,Singapore,0,0
+3.4.12.27/32,1861060,AS,Asia,JP,Japan,0,0
+3.4.12.28/31,1861060,AS,Asia,JP,Japan,0,0
+3.4.12.30/32,1861060,AS,Asia,JP,Japan,0,0
+3.4.12.31/32,3469034,SA,South America,BR,Brazil,0,0
+3.4.12.32/32,3469034,SA,South America,BR,Brazil,0,0
+3.4.12.33/32,2921044,EU,Europe,DE,Germany,0,0
+3.4.12.34/32,2921044,EU,Europe,DE,Germany,0,0
+3.4.12.35/32,6252001,nan,North America,US,United States,0,0
+3.4.12.36/30,6252001,nan,North America,US,United States,0,0
+3.4.12.40/31,6252001,nan,North America,US,United States,0,0
+3.4.12.42/32,6252001,nan,North America,US,United States,0,0
+3.4.12.43/32,2635167,EU,Europe,GB,United Kingdom,0,0
+3.4.12.44/31,2635167,EU,Europe,GB,United Kingdom,0,0
+3.4.12.46/32,2635167,EU,Europe,GB,United Kingdom,0,0
+3.4.12.47/32,6252001,nan,North America,US,United States,0,0
+3.4.12.48/32,6252001,nan,North America,US,United States,0,0
+3.4.12.49/32,3469034,SA,South America,BR,Brazil,0,0
+3.4.12.50/32,3469034,SA,South America,BR,Brazil,0,0
+3.4.12.51/32,2921044,EU,Europe,DE,Germany,0,0
+3.4.12.52/32,2921044,EU,Europe,DE,Germany,0,0
+3.4.12.53/32,2963597,EU,Europe,IE,Ireland,0,0
+3.4.12.54/32,2963597,EU,Europe,IE,Ireland,0,0
+3.4.12.55/32,3895114,SA,South America,CL,Chile,0,0
+3.4.12.56/30,3895114,SA,South America,CL,Chile,0,0
+3.4.12.60/32,3895114,SA,South America,CL,Chile,0,0
+3.4.12.61/32,2661886,EU,Europe,SE,Sweden,0,0
+3.4.12.62/32,2661886,EU,Europe,SE,Sweden,0,0
+3.4.12.63/32,3175395,EU,Europe,IT,Italy,0,0
+3.4.12.64/31,3175395,EU,Europe,IT,Italy,0,0
+3.4.12.66/32,3175395,EU,Europe,IT,Italy,0,0
+3.4.12.67/32,1819730,AS,Asia,HK,Hong Kong,0,0
+3.4.12.68/31,1819730,AS,Asia,HK,Hong Kong,0,0
+3.4.12.70/32,1819730,AS,Asia,HK,Hong Kong,0,0
+3.4.12.71/32,1835841,AS,Asia,KR,South Korea,0,0
+3.4.12.72/31,1835841,AS,Asia,KR,South Korea,0,0
+3.4.12.74/32,1835841,AS,Asia,KR,South Korea,0,0
+3.4.12.75/32,3017382,EU,Europe,FR,France,0,0
+3.4.12.76/30,3017382,EU,Europe,FR,France,0,0
+3.4.12.80/30,3017382,EU,Europe,FR,France,0,0
+3.4.12.84/32,3017382,EU,Europe,FR,France,0,0
+3.4.12.85/32,6252001,nan,North America,US,United States,0,0
+3.4.12.86/31,6252001,nan,North America,US,United States,0,0
+3.4.12.88/29,6252001,nan,North America,US,United States,0,0
+3.4.12.96/27,6252001,nan,North America,US,United States,0,0
+3.4.12.128/25,6252001,nan,North America,US,United States,0,0
+3.4.13.0/27,2077456,OC,Oceania,AU,Australia,0,0
+3.4.13.32/27,2963597,EU,Europe,IE,Ireland,0,0
+3.4.13.64/26,6252001,nan,North America,US,United States,0,0
+3.4.13.128/25,6252001,nan,North America,US,United States,0,0
+3.4.14.0/27,3017382,EU,Europe,FR,France,0,0
+3.4.14.32/29,3017382,EU,Europe,FR,France,0,0
+3.4.14.40/29,6252001,nan,North America,US,United States,0,0
+3.4.14.48/28,6252001,nan,North America,US,United States,0,0
+3.4.14.64/26,6252001,nan,North America,US,United States,0,0
+3.4.14.128/25,6252001,nan,North America,US,United States,0,0
+3.4.15.0/29,1835841,AS,Asia,KR,South Korea,0,0
+3.4.15.8/29,6252001,nan,North America,US,United States,0,0
+3.4.15.16/28,2077456,OC,Oceania,AU,Australia,0,0
+3.4.15.32/28,1269750,AS,Asia,IN,India,0,0
+3.4.15.48/28,1880251,AS,Asia,SG,Singapore,0,0
+3.4.15.64/28,1861060,AS,Asia,JP,Japan,0,0
+3.4.15.80/29,2921044,EU,Europe,DE,Germany,0,0
+3.4.15.88/29,3469034,SA,South America,BR,Brazil,0,0
+3.4.15.96/27,6252001,nan,North America,US,United States,0,0
+3.4.15.128/28,2635167,EU,Europe,GB,United Kingdom,0,0
+3.4.15.144/29,6252001,nan,North America,US,United States,0,0
+3.4.15.152/29,3469034,SA,South America,BR,Brazil,0,0
+3.4.15.160/29,2921044,EU,Europe,DE,Germany,0,0
+3.4.15.168/29,2963597,EU,Europe,IE,Ireland,0,0
+3.4.15.176/28,3895114,SA,South America,CL,Chile,0,0
+3.4.15.192/29,3895114,SA,South America,CL,Chile,0,0
+3.4.15.200/29,2661886,EU,Europe,SE,Sweden,0,0
+3.4.15.208/28,3175395,EU,Europe,IT,Italy,0,0
+3.4.15.224/28,1819730,AS,Asia,HK,Hong Kong,0,0
+3.4.15.240/28,1835841,AS,Asia,KR,South Korea,0,0
+3.4.16.0/20,6252001,nan,North America,US,United States,0,0
+3.4.32.0/19,6252001,nan,North America,US,United States,0,0
+3.4.64.0/18,6252001,nan,North America,US,United States,0,0
+3.4.128.0/17,6252001,nan,North America,US,United States,0,0
+3.5.0.0/19,6252001,nan,North America,US,United States,0,0
+3.5.32.0/22,2510769,EU,Europe,ES,Spain,0,0
+3.5.36.0/22,1643084,AS,Asia,ID,Indonesia,0,0
+3.5.40.0/22,2077456,OC,Oceania,AU,Australia,0,0
+3.5.44.0/22,1269750,AS,Asia,IN,India,0,0
+3.5.48.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+3.5.52.0/22,2658434,EU,Europe,CH,Switzerland,0,0
+3.5.56.0/22,294640,AS,Asia,IL,Israel,0,0
+3.5.60.0/22,1605651,AS,Asia,TH,Thailand,0,0
+3.5.64.0/21,2963597,EU,Europe,IE,Ireland,0,0
+3.5.72.0/22,2963597,EU,Europe,IE,Ireland,0,0
+3.5.76.0/22,6252001,nan,North America,US,United States,0,0
+3.5.80.0/21,6252001,nan,North America,US,United States,0,0
+3.5.88.0/22,6252001,nan,North America,US,United States,0,0
+3.5.92.0/23,6252001,nan,North America,US,United States,0,0
+3.5.94.0/23,2963597,EU,Europe,IE,Ireland,0,0
+3.5.96.0/22,2963597,EU,Europe,IE,Ireland,0,0
+3.5.100.0/22,6252001,nan,North America,US,United States,0,0
+3.5.104.0/21,6252001,nan,North America,US,United States,0,0
+3.5.112.0/21,6252001,nan,North America,US,United States,0,0
+3.5.120.0/22,2921044,EU,Europe,DE,Germany,0,0
+3.5.124.0/23,6252001,nan,North America,US,United States,0,0
+3.5.126.0/23,2510769,EU,Europe,ES,Spain,0,0
+3.5.128.0/22,6252001,nan,North America,US,United States,0,0
+3.5.132.0/23,6252001,nan,North America,US,United States,0,0
+3.5.134.0/23,2921044,EU,Europe,DE,Germany,0,0
+3.5.136.0/22,2921044,EU,Europe,DE,Germany,0,0
+3.5.140.0/22,1835841,AS,Asia,KR,South Korea,0,0
+3.5.144.0/23,1835841,AS,Asia,KR,South Korea,0,0
+3.5.146.0/23,1880251,AS,Asia,SG,Singapore,0,0
+3.5.148.0/22,1880251,AS,Asia,SG,Singapore,0,0
+3.5.152.0/21,1861060,AS,Asia,JP,Japan,0,0
+3.5.160.0/22,6252001,nan,North America,US,United States,0,0
+3.5.164.0/22,2077456,OC,Oceania,AU,Australia,0,0
+3.5.168.0/23,2077456,OC,Oceania,AU,Australia,0,0
+3.5.170.0/23,6252001,nan,North America,US,United States,0,0
+3.5.172.0/22,6251999,nan,North America,CA,Canada,0,0
+3.5.176.0/22,6252001,nan,North America,US,United States,0,0
+3.5.180.0/22,1733045,AS,Asia,MY,Malaysia,0,0
+3.5.184.0/21,1835841,AS,Asia,KR,South Korea,0,0
+3.5.192.0/22,3996063,nan,North America,MX,Mexico,0,0
+3.5.196.0/22,1668284,AS,Asia,TW,Taiwan,0,0
+3.5.200.0/23,6252001,nan,North America,US,United States,0,0
+3.5.202.0/23,953987,AF,Africa,ZA,South Africa,0,0
+3.5.204.0/22,3017382,EU,Europe,FR,France,0,0
+3.5.208.0/22,1269750,AS,Asia,IN,India,0,0
+3.5.212.0/23,1269750,AS,Asia,IN,India,0,0
+3.5.214.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+3.5.216.0/22,2661886,EU,Europe,SE,Sweden,0,0
+3.5.220.0/22,290291,AS,Asia,BH,Bahrain,0,0
+3.5.224.0/22,3017382,EU,Europe,FR,France,0,0
+3.5.228.0/22,953987,AF,Africa,ZA,South Africa,0,0
+3.5.232.0/22,3469034,SA,South America,BR,Brazil,0,0
+3.5.236.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+3.5.240.0/22,1861060,AS,Asia,JP,Japan,0,0
+3.5.244.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+3.5.248.0/22,3175395,EU,Europe,IT,Italy,0,0
+3.5.252.0/22,6251999,nan,North America,CA,Canada,0,0
+3.6.0.0/15,1269750,AS,Asia,IN,India,0,0
+3.8.0.0/14,2635167,EU,Europe,GB,United Kingdom,0,0
+3.12.0.0/14,6252001,nan,North America,US,United States,0,0
+3.16.0.0/13,6252001,nan,North America,US,United States,0,0
+3.24.0.0/14,2077456,OC,Oceania,AU,Australia,0,0
+3.28.0.0/15,290557,AS,Asia,AE,United Arab Emirates,0,0
+3.30.0.0/15,6252001,nan,North America,US,United States,0,0
+3.32.0.0/16,6252001,nan,North America,US,United States,0,0
+3.33.0.0/19,6252001,nan,North America,US,United States,0,0
+3.33.32.0/21,6252001,nan,North America,US,United States,0,0
+3.33.40.0/24,6252001,nan,North America,US,United States,0,0
+3.33.41.0/24,2077456,OC,Oceania,AU,Australia,0,0
+3.33.42.0/23,6252001,nan,North America,US,United States,0,0
+3.33.44.0/22,6252001,nan,North America,US,United States,0,0
+3.33.48.0/20,6252001,nan,North America,US,United States,0,0
+3.33.64.0/18,6252001,nan,North America,US,United States,0,0
+3.33.128.0/17,6252001,nan,North America,US,United States,0,0
+3.34.0.0/15,1835841,AS,Asia,KR,South Korea,0,0
+3.36.0.0/14,1835841,AS,Asia,KR,South Korea,0,0
+3.40.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+3.40.128.0/17,2963597,EU,Europe,IE,Ireland,0,0
+3.41.0.0/17,2635167,EU,Europe,GB,United Kingdom,0,0
+3.41.128.0/17,6252001,nan,North America,US,United States,0,0
+3.42.0.0/16,6252001,nan,North America,US,United States,0,0
+3.43.0.0/18,1835841,AS,Asia,KR,South Korea,0,0
+3.43.64.0/18,6252001,nan,North America,US,United States,0,0
+3.43.128.0/18,953987,AF,Africa,ZA,South Africa,0,0
+3.43.192.0/18,290291,AS,Asia,BH,Bahrain,0,0
+3.44.0.0/18,1880251,AS,Asia,SG,Singapore,0,0
+3.44.64.0/18,2077456,OC,Oceania,AU,Australia,0,0
+3.44.128.0/18,1861060,AS,Asia,JP,Japan,0,0
+3.44.192.0/18,3469034,SA,South America,BR,Brazil,0,0
+3.45.0.0/18,1819730,AS,Asia,HK,Hong Kong,0,0
+3.45.64.0/18,6252001,nan,North America,US,United States,0,0
+3.45.128.0/17,6252001,nan,North America,US,United States,0,0
+3.46.0.0/15,6252001,nan,North America,US,United States,0,0
+3.48.0.0/14,6252001,nan,North America,US,United States,0,0
+3.52.0.0/15,6252001,nan,North America,US,United States,0,0
+3.54.0.0/17,6252001,nan,North America,US,United States,0,0
+3.54.128.0/18,6252001,nan,North America,US,United States,0,0
+3.54.192.0/22,6252001,nan,North America,US,United States,0,0
+3.54.196.0/23,6252001,nan,North America,US,United States,0,0
+3.54.198.0/25,6252001,nan,North America,US,United States,0,0
+3.54.198.128/27,6252001,nan,North America,US,United States,0,0
+3.54.198.160/28,6252001,nan,North America,US,United States,0,0
+3.54.198.176/29,6252001,nan,North America,US,United States,0,0
+3.54.198.184/30,6252001,nan,North America,US,United States,0,0
+3.54.198.188/30,2077456,OC,Oceania,AU,Australia,0,0
+3.54.198.192/26,6252001,nan,North America,US,United States,0,0
+3.54.199.0/24,6252001,nan,North America,US,United States,0,0
+3.54.200.0/21,6252001,nan,North America,US,United States,0,0
+3.54.208.0/20,6252001,nan,North America,US,United States,0,0
+3.54.224.0/19,6252001,nan,North America,US,United States,0,0
+3.55.0.0/16,6252001,nan,North America,US,United States,0,0
+3.56.0.0/13,6252001,nan,North America,US,United States,0,0
+3.64.0.0/12,2921044,EU,Europe,DE,Germany,0,0
+3.80.0.0/12,6252001,nan,North America,US,United States,0,0
+3.96.0.0/14,6251999,nan,North America,CA,Canada,0,0
+3.100.0.0/15,6252001,nan,North America,US,United States,0,0
+3.102.0.0/15,2186224,OC,Oceania,NZ,New Zealand,0,0
+3.104.0.0/14,2077456,OC,Oceania,AU,Australia,0,0
+3.108.0.0/14,1269750,AS,Asia,IN,India,0,0
+3.112.0.0/14,1861060,AS,Asia,JP,Japan,0,0
+3.116.0.0/14,6252001,nan,North America,US,United States,0,0
+3.120.0.0/13,2921044,EU,Europe,DE,Germany,0,0
+3.128.0.0/11,6252001,nan,North America,US,United States,0,0
+3.160.0.0/13,6252001,nan,North America,US,United States,0,0
+3.168.0.0/17,6252001,nan,North America,US,United States,0,0
+3.168.128.0/19,6252001,nan,North America,US,United States,0,0
+3.168.160.0/20,6252001,nan,North America,US,United States,0,0
+3.168.176.0/21,1835841,AS,Asia,KR,South Korea,0,0
+3.168.184.0/21,6252001,nan,North America,US,United States,0,0
+3.168.192.0/18,6252001,nan,North America,US,United States,0,0
+3.169.0.0/16,6252001,nan,North America,US,United States,0,0
+3.170.0.0/15,6252001,nan,North America,US,United States,0,0
+3.172.0.0/24,6252001,nan,North America,US,United States,0,0
+3.172.1.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.2.0/24,298795,AS,Asia,TR,Türkiye,0,0
+3.172.3.0/25,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.3.128/26,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.3.192/26,6252001,nan,North America,US,United States,0,0
+3.172.4.0/25,6251999,nan,North America,CA,Canada,0,0
+3.172.4.128/26,6251999,nan,North America,CA,Canada,0,0
+3.172.4.192/26,6252001,nan,North America,US,United States,0,0
+3.172.5.0/25,2802361,EU,Europe,BE,Belgium,0,0
+3.172.5.128/25,6252001,nan,North America,US,United States,0,0
+3.172.6.0/25,289688,AS,Asia,QA,Qatar,0,0
+3.172.6.128/25,6252001,nan,North America,US,United States,0,0
+3.172.7.0/26,2921044,EU,Europe,DE,Germany,0,0
+3.172.7.64/26,6252001,nan,North America,US,United States,0,0
+3.172.7.128/25,6252001,nan,North America,US,United States,0,0
+3.172.8.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.172.9.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.9.128/25,6252001,nan,North America,US,United States,0,0
+3.172.10.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.10.128/26,2921044,EU,Europe,DE,Germany,0,0
+3.172.10.192/26,6252001,nan,North America,US,United States,0,0
+3.172.11.0/24,6252001,nan,North America,US,United States,0,0
+3.172.12.0/26,3469034,SA,South America,BR,Brazil,0,0
+3.172.12.64/26,6252001,nan,North America,US,United States,0,0
+3.172.12.128/25,6252001,nan,North America,US,United States,0,0
+3.172.13.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.13.128/25,6252001,nan,North America,US,United States,0,0
+3.172.14.0/25,357994,AF,Africa,EG,Egypt,0,0
+3.172.14.128/26,357994,AF,Africa,EG,Egypt,0,0
+3.172.14.192/26,6252001,nan,North America,US,United States,0,0
+3.172.15.0/24,6252001,nan,North America,US,United States,0,0
+3.172.16.0/25,2077456,OC,Oceania,AU,Australia,0,0
+3.172.16.128/25,6252001,nan,North America,US,United States,0,0
+3.172.17.0/25,2661886,EU,Europe,SE,Sweden,0,0
+3.172.17.128/25,6252001,nan,North America,US,United States,0,0
+3.172.18.0/24,1880251,AS,Asia,SG,Singapore,0,0
+3.172.19.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.19.128/26,1861060,AS,Asia,JP,Japan,0,0
+3.172.19.192/26,6252001,nan,North America,US,United States,0,0
+3.172.20.0/24,6252001,nan,North America,US,United States,0,0
+3.172.21.0/26,798544,EU,Europe,PL,Poland,0,0
+3.172.21.64/26,6252001,nan,North America,US,United States,0,0
+3.172.21.128/25,6252001,nan,North America,US,United States,0,0
+3.172.22.0/24,6252001,nan,North America,US,United States,0,0
+3.172.23.0/25,660013,EU,Europe,FI,Finland,0,0
+3.172.23.128/25,6252001,nan,North America,US,United States,0,0
+3.172.24.0/25,3017382,EU,Europe,FR,France,0,0
+3.172.24.128/25,6252001,nan,North America,US,United States,0,0
+3.172.25.0/25,3175395,EU,Europe,IT,Italy,0,0
+3.172.25.128/25,6252001,nan,North America,US,United States,0,0
+3.172.26.0/26,2077456,OC,Oceania,AU,Australia,0,0
+3.172.26.64/26,6252001,nan,North America,US,United States,0,0
+3.172.26.128/25,6252001,nan,North America,US,United States,0,0
+3.172.27.0/24,6252001,nan,North America,US,United States,0,0
+3.172.28.0/25,1562822,AS,Asia,VN,Vietnam,0,0
+3.172.28.128/25,6252001,nan,North America,US,United States,0,0
+3.172.29.0/25,1819730,AS,Asia,HK,Hong Kong,0,0
+3.172.29.128/25,6252001,nan,North America,US,United States,0,0
+3.172.30.0/25,1819730,AS,Asia,HK,Hong Kong,0,0
+3.172.30.128/25,6252001,nan,North America,US,United States,0,0
+3.172.31.0/24,6252001,nan,North America,US,United States,0,0
+3.172.32.0/23,6252001,nan,North America,US,United States,0,0
+3.172.34.0/26,1819730,AS,Asia,HK,Hong Kong,0,0
+3.172.34.64/26,6252001,nan,North America,US,United States,0,0
+3.172.34.128/25,6252001,nan,North America,US,United States,0,0
+3.172.35.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.35.128/26,1861060,AS,Asia,JP,Japan,0,0
+3.172.35.192/26,6252001,nan,North America,US,United States,0,0
+3.172.36.0/25,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.36.128/25,6252001,nan,North America,US,United States,0,0
+3.172.37.0/24,6252001,nan,North America,US,United States,0,0
+3.172.38.0/24,6252001,nan,North America,US,United States,0,0
+3.172.39.0/25,1835841,AS,Asia,KR,South Korea,0,0
+3.172.39.128/26,1835841,AS,Asia,KR,South Korea,0,0
+3.172.39.192/26,6252001,nan,North America,US,United States,0,0
+3.172.40.0/23,6252001,nan,North America,US,United States,0,0
+3.172.42.0/24,6252001,nan,North America,US,United States,0,0
+3.172.43.0/25,1733045,AS,Asia,MY,Malaysia,0,0
+3.172.43.128/25,6252001,nan,North America,US,United States,0,0
+3.172.44.0/23,6252001,nan,North America,US,United States,0,0
+3.172.46.0/25,1668284,AS,Asia,TW,Taiwan,0,0
+3.172.46.128/25,6252001,nan,North America,US,United States,0,0
+3.172.47.0/25,1668284,AS,Asia,TW,Taiwan,0,0
+3.172.47.128/25,6252001,nan,North America,US,United States,0,0
+3.172.48.0/24,6252001,nan,North America,US,United States,0,0
+3.172.49.0/26,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.49.64/26,6252001,nan,North America,US,United States,0,0
+3.172.49.128/25,6252001,nan,North America,US,United States,0,0
+3.172.50.0/23,6252001,nan,North America,US,United States,0,0
+3.172.52.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.172.53.0/25,6251999,nan,North America,CA,Canada,0,0
+3.172.53.128/25,6252001,nan,North America,US,United States,0,0
+3.172.54.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+3.172.55.0/24,6252001,nan,North America,US,United States,0,0
+3.172.56.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.56.128/25,6252001,nan,North America,US,United States,0,0
+3.172.57.0/24,6252001,nan,North America,US,United States,0,0
+3.172.58.0/24,6252001,nan,North America,US,United States,0,0
+3.172.59.0/25,294640,AS,Asia,IL,Israel,0,0
+3.172.59.128/25,6252001,nan,North America,US,United States,0,0
+3.172.60.0/25,298795,AS,Asia,TR,Türkiye,0,0
+3.172.60.128/25,6252001,nan,North America,US,United States,0,0
+3.172.61.0/25,1880251,AS,Asia,SG,Singapore,0,0
+3.172.61.128/25,6252001,nan,North America,US,United States,0,0
+3.172.62.0/24,6252001,nan,North America,US,United States,0,0
+3.172.63.0/26,2921044,EU,Europe,DE,Germany,0,0
+3.172.63.64/26,6252001,nan,North America,US,United States,0,0
+3.172.63.128/25,6252001,nan,North America,US,United States,0,0
+3.172.64.0/25,102358,AS,Asia,SA,Saudi Arabia,0,0
+3.172.64.128/25,6252001,nan,North America,US,United States,0,0
+3.172.65.0/24,1835841,AS,Asia,KR,South Korea,0,0
+3.172.66.0/24,6252001,nan,North America,US,United States,0,0
+3.172.67.0/26,290291,AS,Asia,BH,Bahrain,0,0
+3.172.67.64/26,6252001,nan,North America,US,United States,0,0
+3.172.67.128/25,6252001,nan,North America,US,United States,0,0
+3.172.68.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.68.128/25,6252001,nan,North America,US,United States,0,0
+3.172.69.0/24,6252001,nan,North America,US,United States,0,0
+3.172.70.0/23,1269750,AS,Asia,IN,India,0,0
+3.172.72.0/25,3469034,SA,South America,BR,Brazil,0,0
+3.172.72.128/25,6252001,nan,North America,US,United States,0,0
+3.172.73.0/25,1269750,AS,Asia,IN,India,0,0
+3.172.73.128/25,6252001,nan,North America,US,United States,0,0
+3.172.74.0/25,6252001,nan,North America,US,United States,0,0
+3.172.74.128/25,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.75.0/25,1269750,AS,Asia,IN,India,0,0
+3.172.75.128/25,6252001,nan,North America,US,United States,0,0
+3.172.76.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.76.128/25,6252001,nan,North America,US,United States,0,0
+3.172.77.0/24,3469034,SA,South America,BR,Brazil,0,0
+3.172.78.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.78.128/25,6252001,nan,North America,US,United States,0,0
+3.172.79.0/26,3077311,EU,Europe,CZ,Czechia,0,0
+3.172.79.64/26,6252001,nan,North America,US,United States,0,0
+3.172.79.128/25,6252001,nan,North America,US,United States,0,0
+3.172.80.0/26,3202326,EU,Europe,HR,Croatia,0,0
+3.172.80.64/26,6252001,nan,North America,US,United States,0,0
+3.172.80.128/25,6252001,nan,North America,US,United States,0,0
+3.172.81.0/25,1269750,AS,Asia,IN,India,0,0
+3.172.81.128/25,6252001,nan,North America,US,United States,0,0
+3.172.82.0/26,1694008,AS,Asia,PH,Philippines,0,0
+3.172.82.64/26,6252001,nan,North America,US,United States,0,0
+3.172.82.128/25,6252001,nan,North America,US,United States,0,0
+3.172.83.0/25,390903,EU,Europe,GR,Greece,0,0
+3.172.83.128/25,6252001,nan,North America,US,United States,0,0
+3.172.84.0/24,6252001,nan,North America,US,United States,0,0
+3.172.85.0/26,3469034,SA,South America,BR,Brazil,0,0
+3.172.85.64/26,6252001,nan,North America,US,United States,0,0
+3.172.85.128/25,6252001,nan,North America,US,United States,0,0
+3.172.86.0/25,798544,EU,Europe,PL,Poland,0,0
+3.172.86.128/25,6252001,nan,North America,US,United States,0,0
+3.172.87.0/25,192950,AF,Africa,KE,Kenya,0,0
+3.172.87.128/25,6252001,nan,North America,US,United States,0,0
+3.172.88.0/25,1694008,AS,Asia,PH,Philippines,0,0
+3.172.88.128/25,6252001,nan,North America,US,United States,0,0
+3.172.89.0/24,1605651,AS,Asia,TH,Thailand,0,0
+3.172.90.0/24,2921044,EU,Europe,DE,Germany,0,0
+3.172.91.0/24,6252001,nan,North America,US,United States,0,0
+3.172.92.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.92.128/25,6252001,nan,North America,US,United States,0,0
+3.172.93.0/25,3469034,SA,South America,BR,Brazil,0,0
+3.172.93.128/25,6252001,nan,North America,US,United States,0,0
+3.172.94.0/25,1269750,AS,Asia,IN,India,0,0
+3.172.94.128/25,6252001,nan,North America,US,United States,0,0
+3.172.95.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+3.172.96.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.96.128/25,6252001,nan,North America,US,United States,0,0
+3.172.97.0/24,3017382,EU,Europe,FR,France,0,0
+3.172.98.0/24,3865483,SA,South America,AR,Argentina,0,0
+3.172.99.0/24,6252001,nan,North America,US,United States,0,0
+3.172.100.0/24,6252001,nan,North America,US,United States,0,0
+3.172.101.0/24,2921044,EU,Europe,DE,Germany,0,0
+3.172.102.0/24,6252001,nan,North America,US,United States,0,0
+3.172.103.0/24,660013,EU,Europe,FI,Finland,0,0
+3.172.104.0/25,2623032,EU,Europe,DK,Denmark,0,0
+3.172.104.128/25,6252001,nan,North America,US,United States,0,0
+3.172.105.0/24,6252001,nan,North America,US,United States,0,0
+3.172.106.0/25,1880251,AS,Asia,SG,Singapore,0,0
+3.172.106.128/25,6252001,nan,North America,US,United States,0,0
+3.172.107.0/24,1861060,AS,Asia,JP,Japan,0,0
+3.172.108.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.108.128/25,6252001,nan,North America,US,United States,0,0
+3.172.109.0/24,3469034,SA,South America,BR,Brazil,0,0
+3.172.110.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.110.128/25,6252001,nan,North America,US,United States,0,0
+3.172.111.0/26,2510769,EU,Europe,ES,Spain,0,0
+3.172.111.64/26,6252001,nan,North America,US,United States,0,0
+3.172.111.128/25,6252001,nan,North America,US,United States,0,0
+3.172.112.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.112.128/25,6252001,nan,North America,US,United States,0,0
+3.172.113.0/25,1861060,AS,Asia,JP,Japan,0,0
+3.172.113.128/25,6252001,nan,North America,US,United States,0,0
+3.172.114.0/25,3469034,SA,South America,BR,Brazil,0,0
+3.172.114.128/25,6252001,nan,North America,US,United States,0,0
+3.172.115.0/24,6252001,nan,North America,US,United States,0,0
+3.172.116.0/24,6252001,nan,North America,US,United States,0,0
+3.172.117.0/25,2963597,EU,Europe,IE,Ireland,0,0
+3.172.117.128/25,6252001,nan,North America,US,United States,0,0
+3.172.118.0/24,3996063,nan,North America,MX,Mexico,0,0
+3.172.119.0/24,6252001,nan,North America,US,United States,0,0
+3.172.120.0/24,6252001,nan,North America,US,United States,0,0
+3.172.121.0/25,3932488,SA,South America,PE,Peru,0,0
+3.172.121.128/25,6252001,nan,North America,US,United States,0,0
+3.172.122.0/24,6252001,nan,North America,US,United States,0,0
+3.172.123.0/24,3017382,EU,Europe,FR,France,0,0
+3.172.124.0/23,6252001,nan,North America,US,United States,0,0
+3.172.126.0/24,6252001,nan,North America,US,United States,0,0
+3.172.127.0/25,2921044,EU,Europe,DE,Germany,0,0
+3.172.127.128/25,6252001,nan,North America,US,United States,0,0
+3.172.128.0/17,6252001,nan,North America,US,United States,0,0
+3.173.0.0/16,6252001,nan,North America,US,United States,0,0
+3.174.0.0/15,6252001,nan,North America,US,United States,0,0
+3.176.0.0/12,6252001,nan,North America,US,United States,0,0
+3.192.0.0/11,6252001,nan,North America,US,United States,0,0
+3.224.0.0/12,6252001,nan,North America,US,United States,0,0
+3.240.0.0/13,6252001,nan,North America,US,United States,0,0
+3.248.0.0/13,2963597,EU,Europe,IE,Ireland,0,0

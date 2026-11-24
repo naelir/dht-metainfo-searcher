@@ -74,7 +74,7 @@ public class AnnouncePeerRequest implements IRequest {
 
     @Override
     public String toString() {
-        return "AnnouncePeerRequest [id=" + Generator.toHex(this.id.array()) + ", infoHash="
-                + Generator.toHex(this.infoHash.array()) + ", implied=" + this.implied + ", port=" + this.port + "]";
+        return "AnnouncePeerRequest [id=" + Converter.toHex(this.id.array()) + ", infoHash="
+                + Converter.toHex(this.infoHash.array()) + ", implied=" + this.implied + ", port=" + this.port + "]";
     }
 }

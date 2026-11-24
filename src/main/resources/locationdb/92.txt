@@ -1,0 +1,3070 @@
+92.0.0.0/14,2661886,EU,Europe,SE,Sweden,0,0
+92.4.0.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.4.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.6.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.4.8.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.16.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.24.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.4.32.0/19,2661886,EU,Europe,SE,Sweden,0,0
+92.4.64.0/19,1269750,AS,Asia,IN,India,0,0
+92.4.96.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.100.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.102.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.4.104.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.112.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.4.120.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.4.128.0/19,953987,AF,Africa,ZA,South Africa,0,0
+92.4.160.0/20,3175395,EU,Europe,IT,Italy,0,0
+92.4.176.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.4.192.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.4.200.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.4.202.0/23,2542007,AF,Africa,MA,Morocco,0,0
+92.4.204.0/22,2661886,EU,Europe,SE,Sweden,0,0
+92.4.208.0/20,3175395,EU,Europe,IT,Italy,0,0
+92.4.224.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.4.228.0/22,102358,AS,Asia,SA,Saudi Arabia,0,0
+92.4.232.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.4.234.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.4.235.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+92.4.236.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.4.238.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.4.240.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.5.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+92.5.128.0/18,2921044,EU,Europe,DE,Germany,0,0
+92.5.192.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.5.224.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.5.240.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.5.248.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.5.252.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.5.254.0/24,294640,AS,Asia,IL,Israel,0,0
+92.5.255.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.6.0.0/15,2661886,EU,Europe,SE,Sweden,0,0
+92.8.0.0/15,6252001,nan,North America,US,United States,0,0
+92.10.0.0/15,2635167,EU,Europe,GB,United Kingdom,0,0
+92.12.0.0/14,2635167,EU,Europe,GB,United Kingdom,0,0
+92.16.0.0/12,2635167,EU,Europe,GB,United Kingdom,0,0
+92.32.0.0/16,2661886,EU,Europe,SE,Sweden,0,0
+92.33.0.0/20,2661886,EU,Europe,SE,Sweden,0,0
+92.33.16.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.33.24.0/22,2661886,EU,Europe,SE,Sweden,0,0
+92.33.28.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.33.30.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.33.31.0/24,660013,EU,Europe,FI,Finland,0,0
+92.33.32.0/19,2661886,EU,Europe,SE,Sweden,0,0
+92.33.64.0/18,2661886,EU,Europe,SE,Sweden,0,0
+92.33.128.0/17,2661886,EU,Europe,SE,Sweden,0,0
+92.34.0.0/15,2661886,EU,Europe,SE,Sweden,0,0
+92.36.0.0/17,2017370,EU,Europe,RU,Russia,0,0
+92.36.128.0/17,3277605,EU,Europe,BA,Bosnia and Herzegovina,0,0
+92.37.0.0/17,3190538,EU,Europe,SI,Slovenia,0,0
+92.37.128.0/17,2017370,EU,Europe,RU,Russia,0,0
+92.38.0.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.4.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.38.5.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.6.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.8.0/21,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.16.0/22,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.20.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.22.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.38.24.0/22,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.28.0/22,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.38.32.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.34.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.38.35.0/24,1527747,AS,Asia,KG,Kyrgyzstan,0,0
+92.38.36.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.38.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.38.39.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.40.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.41.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.38.42.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.44.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.46.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.48.0/23,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.38.50.0/23,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.52.0/22,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.38.56.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.38.64.0/20,630336,EU,Europe,BY,Belarus,0,0
+92.38.80.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.84.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.38.86.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.88.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.92.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.38.93.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.94.0/24,3017382,EU,Europe,FR,France,0,0
+92.38.95.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.38.96.0/19,3077311,EU,Europe,CZ,Czechia,0,0
+92.38.128.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.132.0/23,6252001,nan,North America,US,United States,0,0
+92.38.134.0/23,1835841,AS,Asia,KR,South Korea,0,0
+92.38.136.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.140.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.141.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.38.142.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.38.143.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.38.144.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.145.0/24,6252001,nan,North America,US,United States,0,0
+92.38.146.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.148.0/23,6252001,nan,North America,US,United States,0,0
+92.38.150.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.38.152.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.38.154.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.38.156.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.38.157.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.158.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.159.0/24,6252001,nan,North America,US,United States,0,0
+92.38.160.0/23,1835841,AS,Asia,KR,South Korea,0,0
+92.38.162.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.164.0/22,1835841,AS,Asia,KR,South Korea,0,0
+92.38.168.0/23,6252001,nan,North America,US,United States,0,0
+92.38.170.0/24,6252001,nan,North America,US,United States,0,0
+92.38.171.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.38.172.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.38.173.0/24,6252001,nan,North America,US,United States,0,0
+92.38.174.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.38.176.0/23,6252001,nan,North America,US,United States,0,0
+92.38.178.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.38.179.0/24,6252001,nan,North America,US,United States,0,0
+92.38.180.0/23,298795,AS,Asia,TR,Türkiye,0,0
+92.38.182.0/24,6252001,nan,North America,US,United States,0,0
+92.38.183.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.38.184.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.38.185.0/24,6252001,nan,North America,US,United States,0,0
+92.38.186.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.38.188.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.192.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.38.208.0/22,6252001,nan,North America,US,United States,0,0
+92.38.212.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.38.216.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.38.224.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.39.0.0/20,2661886,EU,Europe,SE,Sweden,0,0
+92.39.16.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.39.32.0/20,2661886,EU,Europe,SE,Sweden,0,0
+92.39.48.0/21,2658434,EU,Europe,CH,Switzerland,0,0
+92.39.56.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.39.60.0/22,2658434,EU,Europe,CH,Switzerland,0,0
+92.39.64.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.39.80.0/20,587116,AS,Asia,AZ,Azerbaijan,0,0
+92.39.96.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.39.112.0/23,6252001,nan,North America,US,United States,0,0
+92.39.114.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.39.116.0/24,6252001,nan,North America,US,United States,0,0
+92.39.117.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.39.118.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.39.120.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.39.128.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.39.144.0/20,3175395,EU,Europe,IT,Italy,0,0
+92.39.160.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.39.176.0/20,2963597,EU,Europe,IE,Ireland,0,0
+92.39.192.0/20,3042225,EU,Europe,IM,Isle of Man,0,0
+92.39.208.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.39.224.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.39.240.0/20,3017382,EU,Europe,FR,France,0,0
+92.40.0.0/15,2635167,EU,Europe,GB,United Kingdom,0,0
+92.42.0.0/24,798549,EU,Europe,RO,Romania,0,0
+92.42.1.0/24,102358,AS,Asia,SA,Saudi Arabia,0,0
+92.42.2.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.42.3.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.42.4.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.42.5.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.42.6.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.42.7.0/24,660013,EU,Europe,FI,Finland,0,0
+92.42.8.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.16.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.42.20.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.42.24.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.32.0/21,298795,AS,Asia,TR,Türkiye,0,0
+92.42.40.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.42.44.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.42.48.0/21,130758,AS,Asia,IR,Iran,0,0
+92.42.56.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.42.64.0/21,3144096,EU,Europe,NO,Norway,0,0
+92.42.72.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.42.80.0/21,3175395,EU,Europe,IT,Italy,0,0
+92.42.88.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.96.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.42.97.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.42.98.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.42.99.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.42.100.0/24,798549,EU,Europe,RO,Romania,0,0
+92.42.101.0/24,2802361,EU,Europe,BE,Belgium,0,0
+92.42.102.0/24,660013,EU,Europe,FI,Finland,0,0
+92.42.103.0/24,289688,AS,Asia,QA,Qatar,0,0
+92.42.104.0/21,3017382,EU,Europe,FR,France,0,0
+92.42.112.0/21,798544,EU,Europe,PL,Poland,0,0
+92.42.120.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.42.128.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.136.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.42.140.0/27,2782113,EU,Europe,AT,Austria,0,0
+92.42.140.32/28,2782113,EU,Europe,AT,Austria,0,0
+92.42.140.48/29,2782113,EU,Europe,AT,Austria,0,0
+92.42.140.56/29,6252001,nan,North America,US,United States,0,0
+92.42.140.64/26,2782113,EU,Europe,AT,Austria,0,0
+92.42.140.128/25,2782113,EU,Europe,AT,Austria,0,0
+92.42.141.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.42.142.0/23,2782113,EU,Europe,AT,Austria,0,0
+92.42.144.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.42.152.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.42.160.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.168.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.42.176.0/21,2960313,EU,Europe,LU,Luxembourg,0,0
+92.42.184.0/21,2658434,EU,Europe,CH,Switzerland,0,0
+92.42.192.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.42.200.0/24,6251999,nan,North America,CA,Canada,0,0
+92.42.201.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+92.42.202.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.42.203.0/24,130758,AS,Asia,IR,Iran,0,0
+92.42.204.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.42.205.0/24,130758,AS,Asia,IR,Iran,0,0
+92.42.206.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.42.207.0/24,130758,AS,Asia,IR,Iran,0,0
+92.42.208.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.42.216.0/21,3017382,EU,Europe,FR,France,0,0
+92.42.224.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.42.232.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.42.240.0/21,2658434,EU,Europe,CH,Switzerland,0,0
+92.42.248.0/21,6290252,EU,Europe,RS,Serbia,0,0
+92.43.0.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.43.8.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.43.16.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.43.24.0/21,3077311,EU,Europe,CZ,Czechia,0,0
+92.43.32.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.43.40.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.43.48.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.43.56.0/21,3077311,EU,Europe,CZ,Czechia,0,0
+92.43.64.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.43.72.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.43.80.0/22,458258,EU,Europe,LV,Latvia,0,0
+92.43.84.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.43.88.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.43.96.0/21,2782113,EU,Europe,AT,Austria,0,0
+92.43.104.0/26,2921044,EU,Europe,DE,Germany,0,0
+92.43.104.64/28,2658434,EU,Europe,CH,Switzerland,0,0
+92.43.104.80/28,2921044,EU,Europe,DE,Germany,0,0
+92.43.104.96/27,2921044,EU,Europe,DE,Germany,0,0
+92.43.104.128/25,2921044,EU,Europe,DE,Germany,0,0
+92.43.105.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.43.106.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.43.108.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.43.112.0/21,798544,EU,Europe,PL,Poland,0,0
+92.43.120.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.43.128.0/21,3017382,EU,Europe,FR,France,0,0
+92.43.136.0/21,174982,AS,Asia,AM,Armenia,0,0
+92.43.144.0/21,798544,EU,Europe,PL,Poland,0,0
+92.43.152.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.43.160.0/22,130758,AS,Asia,IR,Iran,0,0
+92.43.164.0/23,617790,EU,Europe,MD,Moldova,0,0
+92.43.166.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.43.168.0/21,102358,AS,Asia,SA,Saudi Arabia,0,0
+92.43.176.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.43.184.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.43.192.0/21,2629691,EU,Europe,IS,Iceland,0,0
+92.43.200.0/21,719819,EU,Europe,HU,Hungary,0,0
+92.43.208.0/21,3042362,EU,Europe,GG,Guernsey,0,0
+92.43.216.0/21,2658434,EU,Europe,CH,Switzerland,0,0
+92.43.224.0/21,2510769,EU,Europe,ES,Spain,0,0
+92.43.232.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.43.240.0/21,3175395,EU,Europe,IT,Italy,0,0
+92.43.248.0/21,3017382,EU,Europe,FR,France,0,0
+92.44.0.0/16,298795,AS,Asia,TR,Türkiye,0,0
+92.45.0.0/18,298795,AS,Asia,TR,Türkiye,0,0
+92.45.64.0/19,298795,AS,Asia,TR,Türkiye,0,0
+92.45.96.0/23,298795,AS,Asia,TR,Türkiye,0,0
+92.45.98.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.0/25,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.128/29,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.136/31,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.138/32,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.139/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.45.99.140/30,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.144/28,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.160/27,298795,AS,Asia,TR,Türkiye,0,0
+92.45.99.192/26,298795,AS,Asia,TR,Türkiye,0,0
+92.45.100.0/22,298795,AS,Asia,TR,Türkiye,0,0
+92.45.104.0/21,298795,AS,Asia,TR,Türkiye,0,0
+92.45.112.0/20,298795,AS,Asia,TR,Türkiye,0,0
+92.45.128.0/17,298795,AS,Asia,TR,Türkiye,0,0
+92.46.0.0/15,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.48.0.0/18,102358,AS,Asia,SA,Saudi Arabia,0,0
+92.48.64.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+92.48.128.0/18,2802361,EU,Europe,BE,Belgium,0,0
+92.48.192.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.49.0.0/18,458258,EU,Europe,LV,Latvia,0,0
+92.49.64.0/20,3579143,nan,North America,GP,Guadeloupe,0,0
+92.49.80.0/21,3570311,nan,North America,MQ,Martinique,0,0
+92.49.88.0/21,3579143,nan,North America,GP,Guadeloupe,0,0
+92.49.96.0/20,3579143,nan,North America,GP,Guadeloupe,0,0
+92.49.112.0/20,3570311,nan,North America,MQ,Martinique,0,0
+92.49.128.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.49.192.0/18,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.50.0.0/22,6252001,nan,North America,US,United States,0,0
+92.50.4.0/24,1269750,AS,Asia,IN,India,0,0
+92.50.5.0/24,6252001,nan,North America,US,United States,0,0
+92.50.6.0/23,6252001,nan,North America,US,United States,0,0
+92.50.8.0/24,6252001,nan,North America,US,United States,0,0
+92.50.9.0/24,1269750,AS,Asia,IN,India,0,0
+92.50.10.0/23,6252001,nan,North America,US,United States,0,0
+92.50.12.0/22,6252001,nan,North America,US,United States,0,0
+92.50.16.0/20,6252001,nan,North America,US,United States,0,0
+92.50.32.0/19,6252001,nan,North America,US,United States,0,0
+92.50.64.0/18,2921044,EU,Europe,DE,Germany,0,0
+92.50.128.0/17,2017370,EU,Europe,RU,Russia,0,0
+92.51.0.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.51.8.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.51.12.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.51.14.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.51.16.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.51.20.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.51.21.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.51.22.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.51.24.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.51.28.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.51.32.0/22,6252001,nan,North America,US,United States,0,0
+92.51.36.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.51.38.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.51.40.0/22,6252001,nan,North America,US,United States,0,0
+92.51.44.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.51.48.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.51.52.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.51.53.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.51.54.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.51.56.0/21,130758,AS,Asia,IR,Iran,0,0
+92.51.64.0/18,614540,AS,Asia,GE,Georgia,0,0
+92.51.128.0/20,3017382,EU,Europe,FR,France,0,0
+92.51.144.0/21,3017382,EU,Europe,FR,France,0,0
+92.51.152.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.51.160.0/21,3017382,EU,Europe,FR,France,0,0
+92.51.168.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.51.176.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.51.192.0/19,2963597,EU,Europe,IE,Ireland,0,0
+92.51.224.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.51.232.0/21,6252001,nan,North America,US,United States,0,0
+92.51.240.0/21,2963597,EU,Europe,IE,Ireland,0,0
+92.51.248.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.51.249.0/24,3017382,EU,Europe,FR,France,0,0
+92.51.250.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.51.251.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.51.252.0/24,2963597,EU,Europe,IE,Ireland,0,0
+92.51.253.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.51.254.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.51.255.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.52.0.0/18,3057568,EU,Europe,SK,Slovakia,0,0
+92.52.64.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+92.52.128.0/18,690791,EU,Europe,UA,Ukraine,0,0
+92.52.192.0/20,719819,EU,Europe,HU,Hungary,0,0
+92.52.208.0/22,719819,EU,Europe,HU,Hungary,0,0
+92.52.212.0/23,719819,EU,Europe,HU,Hungary,0,0
+92.52.214.0/24,6252001,nan,North America,US,United States,0,0
+92.52.215.0/24,719819,EU,Europe,HU,Hungary,0,0
+92.52.216.0/24,719819,EU,Europe,HU,Hungary,0,0
+92.52.217.0/24,6252001,nan,North America,US,United States,0,0
+92.52.218.0/23,6252001,nan,North America,US,United States,0,0
+92.52.220.0/22,719819,EU,Europe,HU,Hungary,0,0
+92.52.224.0/19,719819,EU,Europe,HU,Hungary,0,0
+92.53.0.0/18,718075,EU,Europe,MK,North Macedonia,0,0
+92.53.64.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.53.128.0/19,3190538,EU,Europe,SI,Slovenia,0,0
+92.53.160.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.53.161.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.53.162.0/23,3017382,EU,Europe,FR,France,0,0
+92.53.164.0/22,3190538,EU,Europe,SI,Slovenia,0,0
+92.53.168.0/21,3190538,EU,Europe,SI,Slovenia,0,0
+92.53.176.0/22,6252001,nan,North America,US,United States,0,0
+92.53.180.0/22,3190538,EU,Europe,SI,Slovenia,0,0
+92.53.184.0/21,3190538,EU,Europe,SI,Slovenia,0,0
+92.53.192.0/19,2510769,EU,Europe,ES,Spain,0,0
+92.53.224.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.53.232.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.53.240.0/21,2635167,EU,Europe,GB,United Kingdom,0,0
+92.53.248.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.54.0.0/18,2510769,EU,Europe,ES,Spain,0,0
+92.54.64.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.54.128.0/18,2635167,EU,Europe,GB,United Kingdom,0,0
+92.54.192.0/18,614540,AS,Asia,GE,Georgia,0,0
+92.55.0.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.55.64.0/18,718075,EU,Europe,MK,North Macedonia,0,0
+92.55.128.0/19,798549,EU,Europe,RO,Romania,0,0
+92.55.160.0/19,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.55.192.0/18,798544,EU,Europe,PL,Poland,0,0
+92.56.0.0/14,2510769,EU,Europe,ES,Spain,0,0
+92.60.0.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.60.16.0/20,783754,EU,Europe,AL,Albania,0,0
+92.60.32.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.60.34.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.60.35.0/24,2963597,EU,Europe,IE,Ireland,0,0
+92.60.36.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.60.40.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.60.41.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.60.42.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.60.43.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.60.44.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.60.48.0/20,3057568,EU,Europe,SK,Slovakia,0,0
+92.60.64.0/27,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.32/28,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.48/29,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.56/30,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.60/32,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.61/32,2921044,EU,Europe,DE,Germany,0,0
+92.60.64.62/31,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.64/26,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.64.128/25,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.65.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.66.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.68.0/22,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.72.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.74.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.75.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.60.76.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.77.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.60.78.0/23,3190538,EU,Europe,SI,Slovenia,0,0
+92.60.80.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.60.96.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.60.112.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.60.128.0/20,798544,EU,Europe,PL,Poland,0,0
+92.60.144.0/20,2623032,EU,Europe,DK,Denmark,0,0
+92.60.160.0/20,2510769,EU,Europe,ES,Spain,0,0
+92.60.176.0/20,690791,EU,Europe,UA,Ukraine,0,0
+92.60.192.0/20,2963597,EU,Europe,IE,Ireland,0,0
+92.60.208.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.60.224.0/20,6290252,EU,Europe,RS,Serbia,0,0
+92.60.240.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.61.0.0/20,298795,AS,Asia,TR,Türkiye,0,0
+92.61.16.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.61.32.0/20,597427,EU,Europe,LT,Lithuania,0,0
+92.61.48.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.61.64.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.61.68.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.61.70.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+92.61.72.0/21,3017382,EU,Europe,FR,France,0,0
+92.61.80.0/20,3077311,EU,Europe,CZ,Czechia,0,0
+92.61.96.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.61.97.0/24,719819,EU,Europe,HU,Hungary,0,0
+92.61.98.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.61.100.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.61.102.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.61.103.0/24,798549,EU,Europe,RO,Romania,0,0
+92.61.104.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.61.105.0/24,2264397,EU,Europe,PT,Portugal,0,0
+92.61.106.0/24,6252001,nan,North America,US,United States,0,0
+92.61.107.0/24,2264397,EU,Europe,PT,Portugal,0,0
+92.61.108.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.61.109.0/24,6252001,nan,North America,US,United States,0,0
+92.61.110.0/24,3017382,EU,Europe,FR,France,0,0
+92.61.111.0/24,798544,EU,Europe,PL,Poland,0,0
+92.61.112.0/20,719819,EU,Europe,HU,Hungary,0,0
+92.61.128.0/20,3017382,EU,Europe,FR,France,0,0
+92.61.144.0/20,2661886,EU,Europe,SE,Sweden,0,0
+92.61.160.0/20,3017382,EU,Europe,FR,France,0,0
+92.61.176.0/20,130758,AS,Asia,IR,Iran,0,0
+92.61.192.0/20,2963597,EU,Europe,IE,Ireland,0,0
+92.61.208.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.0/30,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.4/31,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.6/32,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.7/32,6255148,EU,Europe,nan,nan,0,0
+92.61.209.8/29,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.16/28,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.32/27,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.64/26,2782113,EU,Europe,AT,Austria,0,0
+92.61.209.128/25,2782113,EU,Europe,AT,Austria,0,0
+92.61.210.0/23,2782113,EU,Europe,AT,Austria,0,0
+92.61.212.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.61.216.0/21,2782113,EU,Europe,AT,Austria,0,0
+92.61.224.0/22,294640,AS,Asia,IL,Israel,0,0
+92.61.228.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.61.229.0/24,294640,AS,Asia,IL,Israel,0,0
+92.61.230.0/25,294640,AS,Asia,IL,Israel,0,0
+92.61.230.128/30,294640,AS,Asia,IL,Israel,0,0
+92.61.230.132/31,294640,AS,Asia,IL,Israel,0,0
+92.61.230.134/31,2077456,OC,Oceania,AU,Australia,0,0
+92.61.230.136/31,2077456,OC,Oceania,AU,Australia,0,0
+92.61.230.138/31,294640,AS,Asia,IL,Israel,0,0
+92.61.230.140/30,294640,AS,Asia,IL,Israel,0,0
+92.61.230.144/28,294640,AS,Asia,IL,Israel,0,0
+92.61.230.160/27,294640,AS,Asia,IL,Israel,0,0
+92.61.230.192/26,294640,AS,Asia,IL,Israel,0,0
+92.61.231.0/24,294640,AS,Asia,IL,Israel,0,0
+92.61.232.0/21,294640,AS,Asia,IL,Israel,0,0
+92.61.240.0/22,6252001,nan,North America,US,United States,0,0
+92.61.244.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.61.245.0/24,6252001,nan,North America,US,United States,0,0
+92.61.246.0/23,6252001,nan,North America,US,United States,0,0
+92.61.248.0/21,6252001,nan,North America,US,United States,0,0
+92.62.0.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.62.16.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.62.32.0/20,3144096,EU,Europe,NO,Norway,0,0
+92.62.48.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.62.64.0/20,1527747,AS,Asia,KG,Kyrgyzstan,0,0
+92.62.80.0/20,3175395,EU,Europe,IT,Italy,0,0
+92.62.96.0/20,453733,EU,Europe,EE,Estonia,0,0
+92.62.112.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.62.116.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.62.117.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.62.118.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.62.119.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.62.120.0/24,174982,AS,Asia,AM,Armenia,0,0
+92.62.121.0/24,1269750,AS,Asia,IN,India,0,0
+92.62.122.0/24,3658394,SA,South America,EC,Ecuador,0,0
+92.62.123.0/24,3425505,nan,North America,GL,Greenland,0,0
+92.62.124.0/22,3077311,EU,Europe,CZ,Czechia,0,0
+92.62.128.0/20,597427,EU,Europe,LT,Lithuania,0,0
+92.62.144.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.62.160.0/20,272103,AS,Asia,LB,Lebanon,0,0
+92.62.176.0/20,2658434,EU,Europe,CH,Switzerland,0,0
+92.62.192.0/20,2623032,EU,Europe,DK,Denmark,0,0
+92.62.224.0/20,3077311,EU,Europe,CZ,Czechia,0,0
+92.62.240.0/24,1269750,AS,Asia,IN,India,0,0
+92.62.241.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.62.242.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.62.243.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.62.244.0/22,732800,EU,Europe,BG,Bulgaria,0,0
+92.62.248.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.62.249.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.62.250.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.62.251.0/24,798544,EU,Europe,PL,Poland,0,0
+92.62.252.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.62.253.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.62.254.0/24,6252001,nan,North America,US,United States,0,0
+92.62.255.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.63.0.0/20,298795,AS,Asia,TR,Türkiye,0,0
+92.63.16.0/20,3190538,EU,Europe,SI,Slovenia,0,0
+92.63.32.0/20,798544,EU,Europe,PL,Poland,0,0
+92.63.48.0/20,3077311,EU,Europe,CZ,Czechia,0,0
+92.63.64.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.63.80.0/20,458258,EU,Europe,LV,Latvia,0,0
+92.63.96.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.63.112.0/20,2510769,EU,Europe,ES,Spain,0,0
+92.63.128.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.63.144.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.63.160.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.63.176.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.63.180.0/24,1605651,AS,Asia,TH,Thailand,0,0
+92.63.181.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.63.182.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.63.184.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.63.188.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.63.190.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.63.191.0/24,2802361,EU,Europe,BE,Belgium,0,0
+92.63.192.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.63.196.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.63.197.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.63.198.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.63.200.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.63.204.0/22,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.63.208.0/20,2782113,EU,Europe,AT,Austria,0,0
+92.63.224.0/24,660013,EU,Europe,FI,Finland,0,0
+92.63.225.0/24,6252001,nan,North America,US,United States,0,0
+92.63.226.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.63.227.0/24,798544,EU,Europe,PL,Poland,0,0
+92.63.228.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.63.232.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.63.233.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.63.234.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.63.236.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.63.240.0/20,719819,EU,Europe,HU,Hungary,0,0
+92.64.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.0.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.64.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.96.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.104.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.108.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.110.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.64/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.96/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.108/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.65.111.109/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.110/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.112/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.111.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.112.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.65.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.66.0.0/15,2750405,EU,Europe,NL,The Netherlands,0,0
+92.68.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.0.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.32.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.40.0/27,2921044,EU,Europe,DE,Germany,0,0
+92.69.40.32/27,2802361,EU,Europe,BE,Belgium,0,0
+92.69.40.64/27,2802361,EU,Europe,BE,Belgium,0,0
+92.69.40.96/27,2921044,EU,Europe,DE,Germany,0,0
+92.69.40.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.41.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.42.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.44.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.69.45.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.69.46.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.48.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.69.52.0/22,2802361,EU,Europe,BE,Belgium,0,0
+92.69.56.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.60.0/26,2264397,EU,Europe,PT,Portugal,0,0
+92.69.60.64/27,798544,EU,Europe,PL,Poland,0,0
+92.69.60.96/27,2782113,EU,Europe,AT,Austria,0,0
+92.69.60.128/27,719819,EU,Europe,HU,Hungary,0,0
+92.69.60.160/27,3190538,EU,Europe,SI,Slovenia,0,0
+92.69.60.192/28,3175395,EU,Europe,IT,Italy,0,0
+92.69.60.208/28,2510769,EU,Europe,ES,Spain,0,0
+92.69.60.224/28,798549,EU,Europe,RO,Romania,0,0
+92.69.60.240/28,3077311,EU,Europe,CZ,Czechia,0,0
+92.69.61.0/28,3175395,EU,Europe,IT,Italy,0,0
+92.69.61.16/28,2510769,EU,Europe,ES,Spain,0,0
+92.69.61.32/28,798549,EU,Europe,RO,Romania,0,0
+92.69.61.48/28,3077311,EU,Europe,CZ,Czechia,0,0
+92.69.61.64/26,3175395,EU,Europe,IT,Italy,0,0
+92.69.61.128/26,2510769,EU,Europe,ES,Spain,0,0
+92.69.61.192/26,3175395,EU,Europe,IT,Italy,0,0
+92.69.62.0/26,2510769,EU,Europe,ES,Spain,0,0
+92.69.62.64/26,2264397,EU,Europe,PT,Portugal,0,0
+92.69.62.128/26,2264397,EU,Europe,PT,Portugal,0,0
+92.69.62.192/27,2782113,EU,Europe,AT,Austria,0,0
+92.69.62.224/27,3175395,EU,Europe,IT,Italy,0,0
+92.69.63.0/27,2510769,EU,Europe,ES,Spain,0,0
+92.69.63.32/27,798544,EU,Europe,PL,Poland,0,0
+92.69.63.64/27,3077311,EU,Europe,CZ,Czechia,0,0
+92.69.63.96/27,798549,EU,Europe,RO,Romania,0,0
+92.69.63.128/27,719819,EU,Europe,HU,Hungary,0,0
+92.69.63.160/27,3190538,EU,Europe,SI,Slovenia,0,0
+92.69.63.192/26,2635167,EU,Europe,GB,United Kingdom,0,0
+92.69.64.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.69.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.70.0.0/16,2750405,EU,Europe,NL,The Netherlands,0,0
+92.71.0.0/23,6252001,nan,North America,US,United States,0,0
+92.71.2.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.71.4.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.71.6.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.7.0/24,6252001,nan,North America,US,United States,0,0
+92.71.8.0/26,6252001,nan,North America,US,United States,0,0
+92.71.8.64/27,6252001,nan,North America,US,United States,0,0
+92.71.8.96/28,6252001,nan,North America,US,United States,0,0
+92.71.8.112/29,6252001,nan,North America,US,United States,0,0
+92.71.8.120/29,798544,EU,Europe,PL,Poland,0,0
+92.71.8.128/29,798544,EU,Europe,PL,Poland,0,0
+92.71.8.136/29,2802361,EU,Europe,BE,Belgium,0,0
+92.71.8.144/29,2802361,EU,Europe,BE,Belgium,0,0
+92.71.8.152/29,6252001,nan,North America,US,United States,0,0
+92.71.8.160/27,6252001,nan,North America,US,United States,0,0
+92.71.8.192/26,6252001,nan,North America,US,United States,0,0
+92.71.9.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.10.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.71.12.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.13.0/31,6252001,nan,North America,US,United States,0,0
+92.71.13.2/31,6255148,EU,Europe,nan,nan,0,0
+92.71.13.4/30,6252001,nan,North America,US,United States,0,0
+92.71.13.8/29,6252001,nan,North America,US,United States,0,0
+92.71.13.16/28,6252001,nan,North America,US,United States,0,0
+92.71.13.32/27,6252001,nan,North America,US,United States,0,0
+92.71.13.64/26,6252001,nan,North America,US,United States,0,0
+92.71.13.128/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.71.13.192/26,6252001,nan,North America,US,United States,0,0
+92.71.14.0/27,6252001,nan,North America,US,United States,0,0
+92.71.14.32/28,6252001,nan,North America,US,United States,0,0
+92.71.14.48/29,6252001,nan,North America,US,United States,0,0
+92.71.14.56/29,2921044,EU,Europe,DE,Germany,0,0
+92.71.14.64/27,6252001,nan,North America,US,United States,0,0
+92.71.14.96/27,2635167,EU,Europe,GB,United Kingdom,0,0
+92.71.14.128/25,6252001,nan,North America,US,United States,0,0
+92.71.15.0/24,6252001,nan,North America,US,United States,0,0
+92.71.16.0/24,6252001,nan,North America,US,United States,0,0
+92.71.17.0/26,6252001,nan,North America,US,United States,0,0
+92.71.17.64/27,6252001,nan,North America,US,United States,0,0
+92.71.17.96/27,2635167,EU,Europe,GB,United Kingdom,0,0
+92.71.17.128/25,6252001,nan,North America,US,United States,0,0
+92.71.18.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.19.0/24,6252001,nan,North America,US,United States,0,0
+92.71.20.0/24,6252001,nan,North America,US,United States,0,0
+92.71.21.0/25,6252001,nan,North America,US,United States,0,0
+92.71.21.128/27,6252001,nan,North America,US,United States,0,0
+92.71.21.160/27,3017382,EU,Europe,FR,France,0,0
+92.71.21.192/26,6252001,nan,North America,US,United States,0,0
+92.71.22.0/25,6252001,nan,North America,US,United States,0,0
+92.71.22.128/28,6252001,nan,North America,US,United States,0,0
+92.71.22.144/29,6252001,nan,North America,US,United States,0,0
+92.71.22.152/31,6252001,nan,North America,US,United States,0,0
+92.71.22.154/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.71.22.155/32,6252001,nan,North America,US,United States,0,0
+92.71.22.156/30,6252001,nan,North America,US,United States,0,0
+92.71.22.160/27,6252001,nan,North America,US,United States,0,0
+92.71.22.192/26,6252001,nan,North America,US,United States,0,0
+92.71.23.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.24.0/23,6252001,nan,North America,US,United States,0,0
+92.71.26.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.71.28.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.71.32.0/22,6252001,nan,North America,US,United States,0,0
+92.71.36.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.71.38.0/23,6252001,nan,North America,US,United States,0,0
+92.71.40.0/21,6252001,nan,North America,US,United States,0,0
+92.71.48.0/21,6252001,nan,North America,US,United States,0,0
+92.71.56.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.71.60.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.71.61.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.71.62.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.71.64.0/22,6252001,nan,North America,US,United States,0,0
+92.71.68.0/25,6252001,nan,North America,US,United States,0,0
+92.71.68.128/26,6252001,nan,North America,US,United States,0,0
+92.71.68.192/27,6252001,nan,North America,US,United States,0,0
+92.71.68.224/28,6252001,nan,North America,US,United States,0,0
+92.71.68.240/29,6252001,nan,North America,US,United States,0,0
+92.71.68.248/31,6252001,nan,North America,US,United States,0,0
+92.71.68.250/32,2077456,OC,Oceania,AU,Australia,0,0
+92.71.68.251/32,6252001,nan,North America,US,United States,0,0
+92.71.68.252/30,6252001,nan,North America,US,United States,0,0
+92.71.69.0/25,6252001,nan,North America,US,United States,0,0
+92.71.69.128/29,6252001,nan,North America,US,United States,0,0
+92.71.69.136/32,6252001,nan,North America,US,United States,0,0
+92.71.69.137/32,2077456,OC,Oceania,AU,Australia,0,0
+92.71.69.138/31,6252001,nan,North America,US,United States,0,0
+92.71.69.140/30,6252001,nan,North America,US,United States,0,0
+92.71.69.144/28,6252001,nan,North America,US,United States,0,0
+92.71.69.160/27,6252001,nan,North America,US,United States,0,0
+92.71.69.192/26,6252001,nan,North America,US,United States,0,0
+92.71.70.0/25,6252001,nan,North America,US,United States,0,0
+92.71.70.128/26,6252001,nan,North America,US,United States,0,0
+92.71.70.192/29,6252001,nan,North America,US,United States,0,0
+92.71.70.200/31,6252001,nan,North America,US,United States,0,0
+92.71.70.202/32,2077456,OC,Oceania,AU,Australia,0,0
+92.71.70.203/32,6252001,nan,North America,US,United States,0,0
+92.71.70.204/30,6252001,nan,North America,US,United States,0,0
+92.71.70.208/28,6252001,nan,North America,US,United States,0,0
+92.71.70.224/27,6252001,nan,North America,US,United States,0,0
+92.71.71.0/24,6252001,nan,North America,US,United States,0,0
+92.71.72.0/21,6252001,nan,North America,US,United States,0,0
+92.71.80.0/20,6252001,nan,North America,US,United States,0,0
+92.71.96.0/19,6252001,nan,North America,US,United States,0,0
+92.71.128.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+92.71.160.0/19,6252001,nan,North America,US,United States,0,0
+92.71.192.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.72.0.0/13,2921044,EU,Europe,DE,Germany,0,0
+92.80.0.0/14,798549,EU,Europe,RO,Romania,0,0
+92.84.0.0/17,798549,EU,Europe,RO,Romania,0,0
+92.84.128.0/18,798549,EU,Europe,RO,Romania,0,0
+92.84.192.0/22,798549,EU,Europe,RO,Romania,0,0
+92.84.196.0/23,798549,EU,Europe,RO,Romania,0,0
+92.84.198.0/24,798549,EU,Europe,RO,Romania,0,0
+92.84.199.0/24,660013,EU,Europe,FI,Finland,0,0
+92.84.200.0/21,798549,EU,Europe,RO,Romania,0,0
+92.84.208.0/20,798549,EU,Europe,RO,Romania,0,0
+92.84.224.0/19,798549,EU,Europe,RO,Romania,0,0
+92.85.0.0/16,798549,EU,Europe,RO,Romania,0,0
+92.86.0.0/15,798549,EU,Europe,RO,Romania,0,0
+92.88.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.89.0.0/18,3017382,EU,Europe,FR,France,0,0
+92.89.64.0/23,3017382,EU,Europe,FR,France,0,0
+92.89.66.0/24,3017382,EU,Europe,FR,France,0,0
+92.89.67.0/26,3017382,EU,Europe,FR,France,0,0
+92.89.67.64/27,3017382,EU,Europe,FR,France,0,0
+92.89.67.96/28,3017382,EU,Europe,FR,France,0,0
+92.89.67.112/30,3017382,EU,Europe,FR,France,0,0
+92.89.67.116/30,660013,EU,Europe,FI,Finland,0,0
+92.89.67.120/29,3017382,EU,Europe,FR,France,0,0
+92.89.67.128/25,3017382,EU,Europe,FR,France,0,0
+92.89.68.0/22,3017382,EU,Europe,FR,France,0,0
+92.89.72.0/21,3017382,EU,Europe,FR,France,0,0
+92.89.80.0/20,3017382,EU,Europe,FR,France,0,0
+92.89.96.0/19,3017382,EU,Europe,FR,France,0,0
+92.89.128.0/17,3017382,EU,Europe,FR,France,0,0
+92.90.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.92.0.0/14,3017382,EU,Europe,FR,France,0,0
+92.96.0.0/14,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.100.0.0/15,2017370,EU,Europe,RU,Russia,0,0
+92.102.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.104.0.0/14,2658434,EU,Europe,CH,Switzerland,0,0
+92.108.0.0/14,2750405,EU,Europe,NL,The Netherlands,0,0
+92.112.0.0/24,3017382,EU,Europe,FR,France,0,0
+92.112.1.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.2.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.112.4.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.5.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.6.0/24,6252001,nan,North America,US,United States,0,0
+92.112.7.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.8.0/24,6252001,nan,North America,US,United States,0,0
+92.112.9.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.10.0/23,798544,EU,Europe,PL,Poland,0,0
+92.112.12.0/24,3017382,EU,Europe,FR,France,0,0
+92.112.13.0/24,6252001,nan,North America,US,United States,0,0
+92.112.14.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.15.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.16.0/22,6252001,nan,North America,US,United States,0,0
+92.112.20.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.112.24.0/21,1269750,AS,Asia,IN,India,0,0
+92.112.32.0/22,6252001,nan,North America,US,United States,0,0
+92.112.36.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.112.40.0/21,690791,EU,Europe,UA,Ukraine,0,0
+92.112.48.0/23,2782113,EU,Europe,AT,Austria,0,0
+92.112.50.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.51.0/24,6252001,nan,North America,US,United States,0,0
+92.112.52.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.53.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.54.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.55.0/24,6252001,nan,North America,US,United States,0,0
+92.112.56.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.57.0/24,6252001,nan,North America,US,United States,0,0
+92.112.58.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.59.0/24,3017382,EU,Europe,FR,France,0,0
+92.112.60.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.112.61.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.112.62.0/24,6252001,nan,North America,US,United States,0,0
+92.112.63.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.112.64.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.65.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.66.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.67.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.68.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.69.0/24,6252001,nan,North America,US,United States,0,0
+92.112.70.0/24,798544,EU,Europe,PL,Poland,0,0
+92.112.71.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.72.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.112.74.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.112.76.0/24,6252001,nan,North America,US,United States,0,0
+92.112.77.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.78.0/24,6252001,nan,North America,US,United States,0,0
+92.112.79.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.112.80.0/24,6252001,nan,North America,US,United States,0,0
+92.112.81.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.82.0/23,390903,EU,Europe,GR,Greece,0,0
+92.112.84.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.85.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.86.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.87.0/24,6252001,nan,North America,US,United States,0,0
+92.112.88.0/23,6252001,nan,North America,US,United States,0,0
+92.112.90.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.91.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.92.0/24,6252001,nan,North America,US,United States,0,0
+92.112.93.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.94.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.95.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.96.0/22,2186224,OC,Oceania,NZ,New Zealand,0,0
+92.112.100.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.112.104.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.112.105.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.106.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.112.108.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.112.110.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.111.0/24,6252001,nan,North America,US,United States,0,0
+92.112.112.0/22,6252001,nan,North America,US,United States,0,0
+92.112.116.0/23,6252001,nan,North America,US,United States,0,0
+92.112.118.0/24,6252001,nan,North America,US,United States,0,0
+92.112.119.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.120.0/22,2963597,EU,Europe,IE,Ireland,0,0
+92.112.124.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.112.128.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.112.129.0/24,390903,EU,Europe,GR,Greece,0,0
+92.112.130.0/24,3017382,EU,Europe,FR,France,0,0
+92.112.131.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.112.132.0/23,390903,EU,Europe,GR,Greece,0,0
+92.112.134.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.135.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.136.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.137.0/24,6251999,nan,North America,CA,Canada,0,0
+92.112.138.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.139.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.140.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.141.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.112.142.0/24,6252001,nan,North America,US,United States,0,0
+92.112.143.0/24,6251999,nan,North America,CA,Canada,0,0
+92.112.144.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.145.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.146.0/24,798544,EU,Europe,PL,Poland,0,0
+92.112.147.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.112.148.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.149.0/24,798544,EU,Europe,PL,Poland,0,0
+92.112.150.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.151.0/24,798544,EU,Europe,PL,Poland,0,0
+92.112.152.0/23,798544,EU,Europe,PL,Poland,0,0
+92.112.154.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.112.155.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.112.156.0/24,798544,EU,Europe,PL,Poland,0,0
+92.112.157.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+92.112.158.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.112.159.0/24,3017382,EU,Europe,FR,France,0,0
+92.112.160.0/22,2077456,OC,Oceania,AU,Australia,0,0
+92.112.164.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.165.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.112.166.0/23,2077456,OC,Oceania,AU,Australia,0,0
+92.112.168.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.112.170.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.112.172.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.112.173.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.174.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.175.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.112.176.0/22,3469034,SA,South America,BR,Brazil,0,0
+92.112.180.0/22,597427,EU,Europe,LT,Lithuania,0,0
+92.112.184.0/21,6252001,nan,North America,US,United States,0,0
+92.112.192.0/22,3017382,EU,Europe,FR,France,0,0
+92.112.196.0/22,6252001,nan,North America,US,United States,0,0
+92.112.200.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.112.201.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.112.202.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.112.203.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.204.0/22,2186224,OC,Oceania,NZ,New Zealand,0,0
+92.112.208.0/22,2186224,OC,Oceania,NZ,New Zealand,0,0
+92.112.212.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.213.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.214.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.215.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.216.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.217.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.218.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.112.220.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.221.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.222.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.223.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.224.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.112.226.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.227.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.228.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.229.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.230.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.112.231.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.232.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.112.234.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.235.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.236.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.237.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.112.238.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.112.239.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.112.240.0/22,6252001,nan,North America,US,United States,0,0
+92.112.244.0/23,3017382,EU,Europe,FR,France,0,0
+92.112.246.0/23,6252001,nan,North America,US,United States,0,0
+92.112.248.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.112.250.0/23,6252001,nan,North America,US,United States,0,0
+92.112.252.0/23,6252001,nan,North America,US,United States,0,0
+92.112.254.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.113.0.0/23,6252001,nan,North America,US,United States,0,0
+92.113.2.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.3.0/24,6252001,nan,North America,US,United States,0,0
+92.113.4.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.5.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.6.0/23,6252001,nan,North America,US,United States,0,0
+92.113.8.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.9.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.10.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.12.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.13.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.113.14.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.15.0/24,6252001,nan,North America,US,United States,0,0
+92.113.16.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.113.24.0/21,3017382,EU,Europe,FR,France,0,0
+92.113.32.0/21,3469034,SA,South America,BR,Brazil,0,0
+92.113.40.0/24,6252001,nan,North America,US,United States,0,0
+92.113.41.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.113.42.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.44.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.48.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.49.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.50.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.113.52.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.113.54.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.55.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.113.56.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.60.0/24,6252001,nan,North America,US,United States,0,0
+92.113.61.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.62.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.113.63.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.64.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.65.0/24,6251999,nan,North America,CA,Canada,0,0
+92.113.66.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.113.67.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.68.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.113.69.0/24,2623032,EU,Europe,DK,Denmark,0,0
+92.113.70.0/23,6252001,nan,North America,US,United States,0,0
+92.113.72.0/23,6252001,nan,North America,US,United States,0,0
+92.113.74.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.75.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.76.0/24,3017382,EU,Europe,FR,France,0,0
+92.113.77.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.78.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.79.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.113.80.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.81.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.113.82.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.83.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.84.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.113.85.0/24,3144096,EU,Europe,NO,Norway,0,0
+92.113.86.0/24,6252001,nan,North America,US,United States,0,0
+92.113.87.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.88.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.89.0/24,6252001,nan,North America,US,United States,0,0
+92.113.90.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.91.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.92.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.93.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.94.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.113.96.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.113.100.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.101.0/24,6252001,nan,North America,US,United States,0,0
+92.113.102.0/24,6252001,nan,North America,US,United States,0,0
+92.113.103.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.104.0/23,6252001,nan,North America,US,United States,0,0
+92.113.106.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.113.107.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.108.0/22,2963597,EU,Europe,IE,Ireland,0,0
+92.113.112.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.114.0/24,6252001,nan,North America,US,United States,0,0
+92.113.115.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.116.0/23,1819730,AS,Asia,HK,Hong Kong,0,0
+92.113.118.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.119.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.120.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.113.124.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.125.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.126.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.127.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.128.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.129.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.113.130.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.113.132.0/24,798544,EU,Europe,PL,Poland,0,0
+92.113.133.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.113.134.0/23,2077456,OC,Oceania,AU,Australia,0,0
+92.113.136.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.137.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.138.0/23,2077456,OC,Oceania,AU,Australia,0,0
+92.113.140.0/23,2077456,OC,Oceania,AU,Australia,0,0
+92.113.142.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.143.0/24,6251999,nan,North America,CA,Canada,0,0
+92.113.144.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.113.152.0/22,2186224,OC,Oceania,NZ,New Zealand,0,0
+92.113.156.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.113.158.0/23,6252001,nan,North America,US,United States,0,0
+92.113.160.0/23,6252001,nan,North America,US,United States,0,0
+92.113.162.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.163.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.164.0/23,1861060,AS,Asia,JP,Japan,0,0
+92.113.166.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.113.167.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.168.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.169.0/24,6251999,nan,North America,CA,Canada,0,0
+92.113.170.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.172.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.176.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.113.177.0/24,2963597,EU,Europe,IE,Ireland,0,0
+92.113.178.0/24,3017382,EU,Europe,FR,France,0,0
+92.113.179.0/24,3686110,SA,South America,CO,Colombia,0,0
+92.113.180.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.181.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.113.182.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.183.0/24,6251999,nan,North America,CA,Canada,0,0
+92.113.184.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.188.0/22,6252001,nan,North America,US,United States,0,0
+92.113.192.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.113.193.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.194.0/24,6252001,nan,North America,US,United States,0,0
+92.113.195.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.113.196.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.200.0/22,6252001,nan,North America,US,United States,0,0
+92.113.204.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.113.205.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.206.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.208.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.212.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.214.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.215.0/24,6252001,nan,North America,US,United States,0,0
+92.113.216.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.113.217.0/24,6252001,nan,North America,US,United States,0,0
+92.113.218.0/23,6252001,nan,North America,US,United States,0,0
+92.113.220.0/22,6252001,nan,North America,US,United States,0,0
+92.113.224.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.225.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.226.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.113.227.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.228.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.230.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.113.231.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.232.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.113.234.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.113.236.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.237.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.238.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.113.239.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.113.240.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.113.241.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.242.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.113.244.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.113.246.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.113.247.0/24,6251999,nan,North America,CA,Canada,0,0
+92.113.248.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.113.252.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.113.254.0/23,6252001,nan,North America,US,United States,0,0
+92.114.0.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.114.1.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.114.2.0/23,798549,EU,Europe,RO,Romania,0,0
+92.114.4.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.114.5.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.114.6.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.114.7.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.114.8.0/21,3175395,EU,Europe,IT,Italy,0,0
+92.114.16.0/20,130758,AS,Asia,IR,Iran,0,0
+92.114.32.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.114.33.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.34.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.114.36.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.114.37.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.38.0/23,798549,EU,Europe,RO,Romania,0,0
+92.114.40.0/22,6254930,AS,Asia,PS,Palestine,0,0
+92.114.44.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.114.48.0/22,130758,AS,Asia,IR,Iran,0,0
+92.114.52.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.53.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.114.54.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.114.55.0/24,3042225,EU,Europe,IM,Isle of Man,0,0
+92.114.56.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.114.60.0/22,6252001,nan,North America,US,United States,0,0
+92.114.64.0/20,130758,AS,Asia,IR,Iran,0,0
+92.114.80.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.114.81.0/24,6252001,nan,North America,US,United States,0,0
+92.114.82.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.83.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.114.84.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.114.86.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.114.88.0/22,798549,EU,Europe,RO,Romania,0,0
+92.114.93.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.94.0/23,798549,EU,Europe,RO,Romania,0,0
+92.114.96.0/23,3144096,EU,Europe,NO,Norway,0,0
+92.114.98.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.99.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.114.100.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.114.104.0/23,2782113,EU,Europe,AT,Austria,0,0
+92.114.106.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.107.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.114.108.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.109.0/24,1605651,AS,Asia,TH,Thailand,0,0
+92.114.110.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.114.111.0/24,798549,EU,Europe,RO,Romania,0,0
+92.114.112.0/20,2510769,EU,Europe,ES,Spain,0,0
+92.114.128.0/17,617790,EU,Europe,MD,Moldova,0,0
+92.115.0.0/16,617790,EU,Europe,MD,Moldova,0,0
+92.116.0.0/15,2921044,EU,Europe,DE,Germany,0,0
+92.118.0.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.4.0/22,660013,EU,Europe,FI,Finland,0,0
+92.118.8.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.118.10.0/24,6252001,nan,North America,US,United States,0,0
+92.118.11.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.118.12.0/22,1861060,AS,Asia,JP,Japan,0,0
+92.118.16.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.18.0/23,6252001,nan,North America,US,United States,0,0
+92.118.20.0/22,272103,AS,Asia,LB,Lebanon,0,0
+92.118.24.0/22,719819,EU,Europe,HU,Hungary,0,0
+92.118.28.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.30.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.31.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.32.0/22,2963597,EU,Europe,IE,Ireland,0,0
+92.118.36.0/24,798549,EU,Europe,RO,Romania,0,0
+92.118.37.0/24,6252001,nan,North America,US,United States,0,0
+92.118.38.0/24,798549,EU,Europe,RO,Romania,0,0
+92.118.39.0/28,6252001,nan,North America,US,United States,0,0
+92.118.39.16/29,6252001,nan,North America,US,United States,0,0
+92.118.39.24/30,6252001,nan,North America,US,United States,0,0
+92.118.39.28/31,6252001,nan,North America,US,United States,0,0
+92.118.39.30/32,798549,EU,Europe,RO,Romania,0,0
+92.118.39.31/32,6252001,nan,North America,US,United States,0,0
+92.118.39.32/27,6252001,nan,North America,US,United States,0,0
+92.118.39.64/26,6252001,nan,North America,US,United States,0,0
+92.118.39.128/25,798549,EU,Europe,RO,Romania,0,0
+92.118.40.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.44.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.45.0/24,6252001,nan,North America,US,United States,0,0
+92.118.46.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.48.0/24,6252001,nan,North America,US,United States,0,0
+92.118.49.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.118.50.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.118.52.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.118.56.0/22,6252001,nan,North America,US,United States,0,0
+92.118.60.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.62.0/24,6252001,nan,North America,US,United States,0,0
+92.118.63.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.118.64.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.68.0/24,1168579,AS,Asia,PK,Pakistan,0,0
+92.118.69.0/24,390903,EU,Europe,GR,Greece,0,0
+92.118.70.0/24,2542007,AF,Africa,MA,Morocco,0,0
+92.118.71.0/24,3190538,EU,Europe,SI,Slovenia,0,0
+92.118.72.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.76.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.118.80.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.84.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.88.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.118.96.0/22,3017382,EU,Europe,FR,France,0,0
+92.118.100.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.118.104.0/22,798544,EU,Europe,PL,Poland,0,0
+92.118.108.0/24,6252001,nan,North America,US,United States,0,0
+92.118.109.0/24,2264397,EU,Europe,PT,Portugal,0,0
+92.118.110.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.111.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.118.112.0/24,6252001,nan,North America,US,United States,0,0
+92.118.113.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.118.114.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.118.115.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.118.116.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.120.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.118.124.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.118.125.0/24,798544,EU,Europe,PL,Poland,0,0
+92.118.126.0/24,6252001,nan,North America,US,United States,0,0
+92.118.127.0/24,2510769,EU,Europe,ES,Spain,0,0
+92.118.128.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.118.132.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.136.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.118.140.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.144.0/22,1819730,AS,Asia,HK,Hong Kong,0,0
+92.118.148.0/24,458258,EU,Europe,LV,Latvia,0,0
+92.118.149.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.118.150.0/24,798544,EU,Europe,PL,Poland,0,0
+92.118.151.0/24,6252001,nan,North America,US,United States,0,0
+92.118.152.0/22,732800,EU,Europe,BG,Bulgaria,0,0
+92.118.156.0/22,798549,EU,Europe,RO,Romania,0,0
+92.118.160.0/24,6252001,nan,North America,US,United States,0,0
+92.118.161.0/24,3017382,EU,Europe,FR,France,0,0
+92.118.162.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.118.163.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.118.164.0/22,798544,EU,Europe,PL,Poland,0,0
+92.118.168.0/24,798544,EU,Europe,PL,Poland,0,0
+92.118.169.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.170.0/24,458258,EU,Europe,LV,Latvia,0,0
+92.118.171.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.118.172.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.118.176.0/22,719819,EU,Europe,HU,Hungary,0,0
+92.118.180.0/24,3895114,SA,South America,CL,Chile,0,0
+92.118.181.0/24,3932488,SA,South America,PE,Peru,0,0
+92.118.182.0/24,3625428,SA,South America,VE,Venezuela,0,0
+92.118.183.0/24,3996063,nan,North America,MX,Mexico,0,0
+92.118.184.0/25,3508796,nan,North America,DO,Dominican Republic,0,0
+92.118.184.128/25,3703430,nan,North America,PA,Panama,0,0
+92.118.185.0/25,4566966,nan,North America,PR,Puerto Rico,0,0
+92.118.185.128/25,3489940,nan,North America,JM,Jamaica,0,0
+92.118.186.0/25,3439705,SA,South America,UY,Uruguay,0,0
+92.118.186.128/25,3932488,SA,South America,PE,Peru,0,0
+92.118.187.0/25,2542007,AF,Africa,MA,Morocco,0,0
+92.118.187.128/25,241170,AF,Africa,SC,Seychelles,0,0
+92.118.188.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.118.189.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.118.190.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.118.192.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.118.196.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.200.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.118.204.0/24,6252001,nan,North America,US,United States,0,0
+92.118.205.0/24,798544,EU,Europe,PL,Poland,0,0
+92.118.206.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.118.208.0/22,798544,EU,Europe,PL,Poland,0,0
+92.118.212.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.118.214.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.118.216.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.118.220.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.118.224.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.118.228.0/22,6252001,nan,North America,US,United States,0,0
+92.118.232.0/24,146669,EU,Europe,CY,Cyprus,0,0
+92.118.233.0/24,660013,EU,Europe,FI,Finland,0,0
+92.118.234.0/23,146669,EU,Europe,CY,Cyprus,0,0
+92.118.236.0/22,146669,EU,Europe,CY,Cyprus,0,0
+92.118.240.0/22,2658434,EU,Europe,CH,Switzerland,0,0
+92.118.244.0/22,3017382,EU,Europe,FR,France,0,0
+92.118.248.0/21,2510769,EU,Europe,ES,Spain,0,0
+92.119.0.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.4.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.8.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.12.0/24,6254930,AS,Asia,PS,Palestine,0,0
+92.119.13.0/24,597427,EU,Europe,LT,Lithuania,0,0
+92.119.14.0/23,6254930,AS,Asia,PS,Palestine,0,0
+92.119.16.0/22,6252001,nan,North America,US,United States,0,0
+92.119.20.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.24.0/22,6252001,nan,North America,US,United States,0,0
+92.119.28.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.32.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.119.33.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.119.34.0/23,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.119.36.0/24,6252001,nan,North America,US,United States,0,0
+92.119.37.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.119.38.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.119.39.0/24,2963597,EU,Europe,IE,Ireland,0,0
+92.119.40.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.119.44.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.45.0/24,798544,EU,Europe,PL,Poland,0,0
+92.119.46.0/24,3017382,EU,Europe,FR,France,0,0
+92.119.47.0/24,6252001,nan,North America,US,United States,0,0
+92.119.48.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.119.52.0/22,3017382,EU,Europe,FR,France,0,0
+92.119.56.0/24,3017382,EU,Europe,FR,France,0,0
+92.119.57.0/24,130758,AS,Asia,IR,Iran,0,0
+92.119.58.0/24,130758,AS,Asia,IR,Iran,0,0
+92.119.59.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.119.60.0/22,99237,AS,Asia,IQ,Iraq,0,0
+92.119.64.0/22,3077311,EU,Europe,CZ,Czechia,0,0
+92.119.68.0/22,130758,AS,Asia,IR,Iran,0,0
+92.119.72.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.76.0/22,298795,AS,Asia,TR,Türkiye,0,0
+92.119.80.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.88.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.92.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.119.96.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.100.0/22,2802361,EU,Europe,BE,Belgium,0,0
+92.119.104.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.108.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.112.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.116.0/22,3077311,EU,Europe,CZ,Czechia,0,0
+92.119.120.0/22,719819,EU,Europe,HU,Hungary,0,0
+92.119.124.0/22,3017382,EU,Europe,FR,France,0,0
+92.119.128.0/24,2589581,AF,Africa,DZ,Algeria,0,0
+92.119.129.0/24,2623032,EU,Europe,DK,Denmark,0,0
+92.119.130.0/24,1643084,AS,Asia,ID,Indonesia,0,0
+92.119.131.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.132.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.119.136.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.140.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.119.144.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.148.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.119.152.0/22,1861060,AS,Asia,JP,Japan,0,0
+92.119.156.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.157.0/29,1269750,AS,Asia,IN,India,0,0
+92.119.157.8/32,6252001,nan,North America,US,United States,0,0
+92.119.157.9/32,1269750,AS,Asia,IN,India,0,0
+92.119.157.10/31,1269750,AS,Asia,IN,India,0,0
+92.119.157.12/32,6252001,nan,North America,US,United States,0,0
+92.119.157.13/32,1269750,AS,Asia,IN,India,0,0
+92.119.157.14/31,1269750,AS,Asia,IN,India,0,0
+92.119.157.16/28,1269750,AS,Asia,IN,India,0,0
+92.119.157.32/27,1269750,AS,Asia,IN,India,0,0
+92.119.157.64/26,1269750,AS,Asia,IN,India,0,0
+92.119.157.128/25,1269750,AS,Asia,IN,India,0,0
+92.119.158.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.159.0/24,1269750,AS,Asia,IN,India,0,0
+92.119.160.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.161.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.162.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.163.0/24,6252001,nan,North America,US,United States,0,0
+92.119.164.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.119.165.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.119.166.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.119.168.0/22,3996063,nan,North America,MX,Mexico,0,0
+92.119.172.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.176.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.177.0/24,6252001,nan,North America,US,United States,0,0
+92.119.178.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.119.179.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.180.0/24,3017382,EU,Europe,FR,France,0,0
+92.119.181.0/24,798544,EU,Europe,PL,Poland,0,0
+92.119.182.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.119.183.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.119.184.0/27,3017382,EU,Europe,FR,France,0,0
+92.119.184.32/28,3017382,EU,Europe,FR,France,0,0
+92.119.184.48/32,3017382,EU,Europe,FR,France,0,0
+92.119.184.49/32,2017370,EU,Europe,RU,Russia,0,0
+92.119.184.50/31,3017382,EU,Europe,FR,France,0,0
+92.119.184.52/30,3017382,EU,Europe,FR,France,0,0
+92.119.184.56/29,3017382,EU,Europe,FR,France,0,0
+92.119.184.64/28,3017382,EU,Europe,FR,France,0,0
+92.119.184.80/30,3017382,EU,Europe,FR,France,0,0
+92.119.184.84/31,3017382,EU,Europe,FR,France,0,0
+92.119.184.86/32,3017382,EU,Europe,FR,France,0,0
+92.119.184.87/32,2017370,EU,Europe,RU,Russia,0,0
+92.119.184.88/29,3017382,EU,Europe,FR,France,0,0
+92.119.184.96/27,3017382,EU,Europe,FR,France,0,0
+92.119.184.128/25,3017382,EU,Europe,FR,France,0,0
+92.119.185.0/24,3017382,EU,Europe,FR,France,0,0
+92.119.186.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.119.188.0/22,798549,EU,Europe,RO,Romania,0,0
+92.119.192.0/24,798544,EU,Europe,PL,Poland,0,0
+92.119.193.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.194.0/23,241170,AF,Africa,SC,Seychelles,0,0
+92.119.196.0/23,732800,EU,Europe,BG,Bulgaria,0,0
+92.119.198.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.200.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.119.204.0/22,2658434,EU,Europe,CH,Switzerland,0,0
+92.119.208.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.119.212.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.119.216.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.119.220.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.119.224.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.119.228.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.119.229.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.119.230.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.119.231.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.119.232.0/22,3017382,EU,Europe,FR,France,0,0
+92.119.236.0/22,783754,EU,Europe,AL,Albania,0,0
+92.119.240.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.119.244.0/22,6252001,nan,North America,US,United States,0,0
+92.119.248.0/22,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.119.252.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.120.0.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.0.64/28,1269750,AS,Asia,IN,India,0,0
+92.120.0.80/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.0.96/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.0.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.0/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.128/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.192/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.224/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.240/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.248/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.250/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.1.251/32,1269750,AS,Asia,IN,India,0,0
+92.120.1.252/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.2.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.0/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.12/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.14/32,798549,EU,Europe,RO,Romania,0,0
+92.120.4.15/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.16/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.32/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.64/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.4.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.0/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.12/32,798549,EU,Europe,RO,Romania,0,0
+92.120.5.13/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.14/32,798549,EU,Europe,RO,Romania,0,0
+92.120.5.15/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.16/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.32/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.64/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.5.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.6.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.8.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.16.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.32.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.64.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.120.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.121.0.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.121.64.0/21,1880251,AS,Asia,SG,Singapore,0,0
+92.121.72.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.121.80.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.121.96.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.121.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.0.0/21,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.122.8.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.122.12.0/22,6252001,nan,North America,US,United States,0,0
+92.122.16.0/22,798549,EU,Europe,RO,Romania,0,0
+92.122.20.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.24.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.122.28.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.32.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.40.0/22,3017382,EU,Europe,FR,France,0,0
+92.122.44.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.48.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.122.49.0/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.128/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.160/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.176/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.178/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.179/32,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.180/31,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.182/32,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.183/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.184/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.192/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.194/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.195/32,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.196/31,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.198/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.200/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.202/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.203/32,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.204/31,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.206/32,2921044,EU,Europe,DE,Germany,0,0
+92.122.49.207/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.208/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.49.224/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.50.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.4/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.52/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.60/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.62/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.63/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.68/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.76/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.84/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.86/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.87/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.92/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.93/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.94/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.95/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.100/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.108/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.116/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.124/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.52.126/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.52.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.64/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.84/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.92/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.100/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.108/31,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.110/32,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.111/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.116/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.124/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.132/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.136/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.140/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.144/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.148/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.152/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.156/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.160/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.164/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.168/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.172/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.176/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.180/30,2802361,EU,Europe,BE,Belgium,0,0
+92.122.53.184/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.53.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.54.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.56.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.64.0/22,2661886,EU,Europe,SE,Sweden,0,0
+92.122.68.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.122.72.0/22,2623032,EU,Europe,DK,Denmark,0,0
+92.122.76.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.80.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.88.0/22,3686110,SA,South America,CO,Colombia,0,0
+92.122.92.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.96.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.122.100.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.104.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.122.108.0/22,458258,EU,Europe,LV,Latvia,0,0
+92.122.112.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.120.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.124.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.126.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.64/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.96/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.116/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.124/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.132/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.136/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.140/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.144/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.148/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.152/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.156/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.160/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.164/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.168/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.172/30,2921044,EU,Europe,DE,Germany,0,0
+92.122.127.176/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.127.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.128.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.144.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.152.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.4/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.52/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.60/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.68/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.76/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.84/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.92/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.94/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.95/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.100/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.108/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.110/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.111/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.116/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.124/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.125/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.126/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.132/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.136/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.140/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.144/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.148/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.149/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.150/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.153.151/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.152/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.160/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.153.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.154.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.0/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.52/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.155.54/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.56/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.64/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.155.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.156.0/23,3686110,SA,South America,CO,Colombia,0,0
+92.122.158.0/23,3017382,EU,Europe,FR,France,0,0
+92.122.160.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.164.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.165.0/24,3017382,EU,Europe,FR,France,0,0
+92.122.166.0/24,3017382,EU,Europe,FR,France,0,0
+92.122.167.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.168.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.176.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.184.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.186.0/24,2420477,AF,Africa,GN,Guinea,0,0
+92.122.187.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.188.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.0/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.32/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.44/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.52/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.60/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.68/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.76/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.84/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.88/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.96/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.108/30,2661886,EU,Europe,SE,Sweden,0,0
+92.122.190.112/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.190.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.191.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.192.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.0/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.52/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.60/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.68/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.69/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.70/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.76/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.84/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.193.88/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.96/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.193.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.194.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.196.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.200.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.202.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.122.204.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.0/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.12/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.14/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.16/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.18/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.20/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.22/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.24/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.26/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.28/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.30/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.32/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.34/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.36/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.38/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.40/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.42/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.44/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.46/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.48/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.50/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.52/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.54/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.56/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.58/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.60/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.62/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.64/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.66/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.68/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.70/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.72/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.74/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.76/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.78/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.80/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.81/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.82/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.84/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.88/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.100/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.102/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.104/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.106/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.108/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.110/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.112/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.113/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.114/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.116/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.118/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.119/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.120/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.121/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.122/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.124/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.126/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.127/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.128/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.130/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.132/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.134/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.136/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.138/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.140/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.142/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.144/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.146/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.148/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.150/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.152/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.154/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.156/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.158/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.160/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.162/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.164/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.166/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.168/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.170/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.172/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.174/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.206.175/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.176/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.206.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.207.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.208.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.210.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.211.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.122.212.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.122.213.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.214.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.122.216.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.122.224.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.0.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.1.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.123.2.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.3.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.123.4.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.8.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.123.10.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.123.11.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.12.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.123.14.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.16.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.24.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.26.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.27.0/24,2658434,EU,Europe,CH,Switzerland,0,0
+92.123.28.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.32.0/19,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.64.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.4/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.5/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.6/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.44/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.45/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.46/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.52/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.53/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.54/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.60/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.68/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.76/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.77/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.78/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.79/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.84/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.92/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.100/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.108/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.109/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.110/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.116/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.117/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.118/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.124/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.126/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.127/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.132/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.136/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.140/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.144/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.148/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.152/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.156/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.160/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.164/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.168/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.172/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.66.176/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.66.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.67.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.68.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.70.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.123.71.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.72.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.76.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.4/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.52/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.60/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.68/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.76/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.78/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.80/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.96/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.128/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.130/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.131/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.132/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.136/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.138/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.140/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.144/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.160/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.161/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.162/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.164/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.168/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.176/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.192/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.208/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.212/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.213/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.214/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.78.215/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.216/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.78.224/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.79.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.80.0/20,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.96.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.4/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.12/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.20/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.28/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.36/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.44/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.52/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.60/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.68/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.76/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.84/31,3017382,EU,Europe,FR,France,0,0
+92.123.100.86/32,3017382,EU,Europe,FR,France,0,0
+92.123.100.87/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.92/32,3017382,EU,Europe,FR,France,0,0
+92.123.100.93/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.94/31,3017382,EU,Europe,FR,France,0,0
+92.123.100.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.100/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.108/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.116/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.124/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.132/31,3017382,EU,Europe,FR,France,0,0
+92.123.100.134/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.135/32,3017382,EU,Europe,FR,France,0,0
+92.123.100.136/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.140/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.144/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.148/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.152/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.156/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.160/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.164/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.168/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.172/30,3017382,EU,Europe,FR,France,0,0
+92.123.100.176/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.180/31,3017382,EU,Europe,FR,France,0,0
+92.123.100.182/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.184/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.100.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.101.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.102.0/23,798549,EU,Europe,RO,Romania,0,0
+92.123.104.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.123.106.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.123.107.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.123.108.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.112.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.123.116.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.118.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.120.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.121.0/24,3895114,SA,South America,CL,Chile,0,0
+92.123.122.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.123.123.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.124.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.128.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.130.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.132.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.133.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.123.134.0/23,2661886,EU,Europe,SE,Sweden,0,0
+92.123.136.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.144.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.145.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.123.146.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.148.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.123.152.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.154.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.64/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.84/31,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.86/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.88/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.90/31,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.92/30,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.96/31,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.98/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.100/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.102/31,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.104/29,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.112/28,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.128/28,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.144/32,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.145/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.146/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.148/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.152/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.160/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.192/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.208/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.216/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.220/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.222/31,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.224/28,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.240/32,2661886,EU,Europe,SE,Sweden,0,0
+92.123.155.241/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.242/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.244/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.155.248/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.156.0/22,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.123.160.0/21,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.168.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.172.0/22,953987,AF,Africa,ZA,South Africa,0,0
+92.123.176.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.123.180.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.184.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.188.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.189.0/24,798544,EU,Europe,PL,Poland,0,0
+92.123.190.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.192.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.196.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.200.0/22,6252001,nan,North America,US,United States,0,0
+92.123.204.0/22,2661886,EU,Europe,SE,Sweden,0,0
+92.123.208.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.123.212.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.216.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.4/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.12/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.20/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.28/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.36/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.44/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.52/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.60/30,2921044,EU,Europe,DE,Germany,0,0
+92.123.220.64/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.220.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.221.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.222.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.224.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.64/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.100/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.102/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.103/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.104/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.112/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.128/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.132/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.134/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.135/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.136/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.144/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.152/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.156/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.158/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.159/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.160/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.162/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.163/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.164/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.166/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.167/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.168/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.170/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.171/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.172/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.174/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.175/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.176/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.178/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.179/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.180/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.182/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.183/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.184/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.186/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.187/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.188/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.190/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.191/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.192/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.194/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.195/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.196/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.198/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.199/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.200/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.202/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.203/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.204/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.206/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.207/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.208/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.210/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.211/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.212/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.214/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.215/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.216/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.218/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.219/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.220/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.222/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.223/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.224/31,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.226/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.227/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.228/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.230/32,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.231/32,2921044,EU,Europe,DE,Germany,0,0
+92.123.225.232/29,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.225.240/28,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.226.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.228.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.232.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.236.0/22,3017382,EU,Europe,FR,France,0,0
+92.123.240.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.244.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.123.245.0/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.128/27,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.160/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.162/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.164/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.166/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.168/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.170/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.172/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.174/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.176/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.178/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.180/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.182/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.184/31,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.186/31,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.245.188/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.245.192/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.246.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.248.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.250.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.0/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.4/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.8/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.12/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.16/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.20/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.24/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.28/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.32/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.36/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.40/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.44/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.48/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.52/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.56/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.60/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.64/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.68/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.72/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.76/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.80/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.84/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.88/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.92/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.96/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.100/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.104/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.108/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.112/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.116/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.120/30,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.251.124/30,2635167,EU,Europe,GB,United Kingdom,0,0
+92.123.251.128/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.123.252.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.124.0.0/14,2017370,EU,Europe,RU,Russia,0,0
+92.128.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.130.0.0/16,935317,AF,Africa,RE,Réunion,0,0
+92.131.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.132.0.0/14,3017382,EU,Europe,FR,France,0,0
+92.136.0.0/14,3017382,EU,Europe,FR,France,0,0
+92.140.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.141.0.0/19,3017382,EU,Europe,FR,France,0,0
+92.141.32.0/20,3017382,EU,Europe,FR,France,0,0
+92.141.48.0/21,3017382,EU,Europe,FR,France,0,0
+92.141.56.0/22,3017382,EU,Europe,FR,France,0,0
+92.141.60.0/23,3017382,EU,Europe,FR,France,0,0
+92.141.62.0/24,3017382,EU,Europe,FR,France,0,0
+92.141.63.0/26,3017382,EU,Europe,FR,France,0,0
+92.141.63.64/27,3017382,EU,Europe,FR,France,0,0
+92.141.63.96/30,3017382,EU,Europe,FR,France,0,0
+92.141.63.100/32,6252001,nan,North America,US,United States,0,0
+92.141.63.101/32,3017382,EU,Europe,FR,France,0,0
+92.141.63.102/31,3017382,EU,Europe,FR,France,0,0
+92.141.63.104/29,3017382,EU,Europe,FR,France,0,0
+92.141.63.112/28,3017382,EU,Europe,FR,France,0,0
+92.141.63.128/25,3017382,EU,Europe,FR,France,0,0
+92.141.64.0/18,3017382,EU,Europe,FR,France,0,0
+92.141.128.0/17,3017382,EU,Europe,FR,France,0,0
+92.142.0.0/19,3381670,SA,South America,GF,French Guiana,0,0
+92.142.32.0/20,3017382,EU,Europe,FR,France,0,0
+92.142.48.0/20,3381670,SA,South America,GF,French Guiana,0,0
+92.142.64.0/18,3381670,SA,South America,GF,French Guiana,0,0
+92.142.128.0/18,1024031,AF,Africa,YT,Mayotte,0,0
+92.142.192.0/20,3017382,EU,Europe,FR,France,0,0
+92.142.208.0/20,1024031,AF,Africa,YT,Mayotte,0,0
+92.142.224.0/19,3017382,EU,Europe,FR,France,0,0
+92.143.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.144.0.0/16,3570311,nan,North America,MQ,Martinique,0,0
+92.145.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.146.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.148.0.0/14,3017382,EU,Europe,FR,France,0,0
+92.152.0.0/13,3017382,EU,Europe,FR,France,0,0
+92.160.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.161.0.0/17,3017382,EU,Europe,FR,France,0,0
+92.161.128.0/18,3017382,EU,Europe,FR,France,0,0
+92.161.192.0/20,3017382,EU,Europe,FR,France,0,0
+92.161.208.0/21,3017382,EU,Europe,FR,France,0,0
+92.161.216.0/27,3017382,EU,Europe,FR,France,0,0
+92.161.216.32/28,3017382,EU,Europe,FR,France,0,0
+92.161.216.48/29,3017382,EU,Europe,FR,France,0,0
+92.161.216.56/32,2802361,EU,Europe,BE,Belgium,0,0
+92.161.216.57/32,3017382,EU,Europe,FR,France,0,0
+92.161.216.58/31,3017382,EU,Europe,FR,France,0,0
+92.161.216.60/30,3017382,EU,Europe,FR,France,0,0
+92.161.216.64/26,3017382,EU,Europe,FR,France,0,0
+92.161.216.128/25,3017382,EU,Europe,FR,France,0,0
+92.161.217.0/24,3017382,EU,Europe,FR,France,0,0
+92.161.218.0/23,3017382,EU,Europe,FR,France,0,0
+92.161.220.0/22,3017382,EU,Europe,FR,France,0,0
+92.161.224.0/19,3017382,EU,Europe,FR,France,0,0
+92.162.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.164.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.165.0.0/17,3017382,EU,Europe,FR,France,0,0
+92.165.128.0/18,935317,AF,Africa,RE,Réunion,0,0
+92.165.192.0/18,3017382,EU,Europe,FR,France,0,0
+92.166.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.168.0.0/24,3017382,EU,Europe,FR,France,0,0
+92.168.1.0/26,3017382,EU,Europe,FR,France,0,0
+92.168.1.64/29,3017382,EU,Europe,FR,France,0,0
+92.168.1.72/31,3017382,EU,Europe,FR,France,0,0
+92.168.1.74/32,3017382,EU,Europe,FR,France,0,0
+92.168.1.75/32,935317,AF,Africa,RE,Réunion,0,0
+92.168.1.76/30,3017382,EU,Europe,FR,France,0,0
+92.168.1.80/28,3017382,EU,Europe,FR,France,0,0
+92.168.1.96/27,3017382,EU,Europe,FR,France,0,0
+92.168.1.128/25,3017382,EU,Europe,FR,France,0,0
+92.168.2.0/23,3017382,EU,Europe,FR,France,0,0
+92.168.4.0/22,3017382,EU,Europe,FR,France,0,0
+92.168.8.0/21,3017382,EU,Europe,FR,France,0,0
+92.168.16.0/20,3017382,EU,Europe,FR,France,0,0
+92.168.32.0/19,3017382,EU,Europe,FR,France,0,0
+92.168.64.0/18,3017382,EU,Europe,FR,France,0,0
+92.168.128.0/17,3017382,EU,Europe,FR,France,0,0
+92.169.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.170.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.172.0.0/16,2510769,EU,Europe,ES,Spain,0,0
+92.173.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.174.0.0/17,3017382,EU,Europe,FR,France,0,0
+92.174.128.0/18,3017382,EU,Europe,FR,France,0,0
+92.174.192.0/19,3017382,EU,Europe,FR,France,0,0
+92.174.224.0/20,3017382,EU,Europe,FR,France,0,0
+92.174.240.0/21,3017382,EU,Europe,FR,France,0,0
+92.174.248.0/24,3017382,EU,Europe,FR,France,0,0
+92.174.249.0/25,3017382,EU,Europe,FR,France,0,0
+92.174.249.128/27,3017382,EU,Europe,FR,France,0,0
+92.174.249.160/30,3017382,EU,Europe,FR,France,0,0
+92.174.249.164/31,3017382,EU,Europe,FR,France,0,0
+92.174.249.166/32,2510769,EU,Europe,ES,Spain,0,0
+92.174.249.167/32,3017382,EU,Europe,FR,France,0,0
+92.174.249.168/29,3017382,EU,Europe,FR,France,0,0
+92.174.249.176/28,3017382,EU,Europe,FR,France,0,0
+92.174.249.192/26,3017382,EU,Europe,FR,France,0,0
+92.174.250.0/23,3017382,EU,Europe,FR,France,0,0
+92.174.252.0/22,3017382,EU,Europe,FR,France,0,0
+92.175.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.176.0.0/15,2510769,EU,Europe,ES,Spain,0,0
+92.178.0.0/16,2510769,EU,Europe,ES,Spain,0,0
+92.179.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.180.0.0/17,798549,EU,Europe,RO,Romania,0,0
+92.180.128.0/18,3017382,EU,Europe,FR,France,0,0
+92.180.192.0/18,3057568,EU,Europe,SK,Slovakia,0,0
+92.181.0.0/17,617790,EU,Europe,MD,Moldova,0,0
+92.181.128.0/19,617790,EU,Europe,MD,Moldova,0,0
+92.181.160.0/19,3017382,EU,Europe,FR,France,0,0
+92.181.192.0/18,3017382,EU,Europe,FR,France,0,0
+92.182.0.0/15,3017382,EU,Europe,FR,France,0,0
+92.184.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.185.0.0/16,2510769,EU,Europe,ES,Spain,0,0
+92.186.0.0/15,2510769,EU,Europe,ES,Spain,0,0
+92.188.0.0/16,3017382,EU,Europe,FR,France,0,0
+92.189.0.0/16,2510769,EU,Europe,ES,Spain,0,0
+92.190.0.0/15,2510769,EU,Europe,ES,Spain,0,0
+92.192.0.0/15,6252001,nan,North America,US,United States,0,0
+92.194.0.0/16,6252001,nan,North America,US,United States,0,0
+92.195.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+92.196.0.0/14,2921044,EU,Europe,DE,Germany,0,0
+92.200.0.0/15,6252001,nan,North America,US,United States,0,0
+92.202.0.0/15,1861060,AS,Asia,JP,Japan,0,0
+92.204.0.0/20,3017382,EU,Europe,FR,France,0,0
+92.204.16.0/20,2635167,EU,Europe,GB,United Kingdom,0,0
+92.204.32.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.204.40.0/21,3017382,EU,Europe,FR,France,0,0
+92.204.48.0/20,3017382,EU,Europe,FR,France,0,0
+92.204.64.0/21,3017382,EU,Europe,FR,France,0,0
+92.204.72.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.204.80.0/21,3017382,EU,Europe,FR,France,0,0
+92.204.88.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.204.96.0/20,6252001,nan,North America,US,United States,0,0
+92.204.112.0/24,6252001,nan,North America,US,United States,0,0
+92.204.113.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.204.114.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.204.116.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.204.120.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.204.128.0/20,6252001,nan,North America,US,United States,0,0
+92.204.144.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.204.160.0/19,3017382,EU,Europe,FR,France,0,0
+92.204.192.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.204.208.0/20,3017382,EU,Europe,FR,France,0,0
+92.204.224.0/19,3017382,EU,Europe,FR,France,0,0
+92.205.0.0/19,3017382,EU,Europe,FR,France,0,0
+92.205.32.0/22,6252001,nan,North America,US,United States,0,0
+92.205.36.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.205.38.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.205.40.0/22,3017382,EU,Europe,FR,France,0,0
+92.205.44.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.205.48.0/20,3017382,EU,Europe,FR,France,0,0
+92.205.64.0/20,3017382,EU,Europe,FR,France,0,0
+92.205.80.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.205.88.0/21,3017382,EU,Europe,FR,France,0,0
+92.205.96.0/19,3017382,EU,Europe,FR,France,0,0
+92.205.128.0/20,3017382,EU,Europe,FR,France,0,0
+92.205.144.0/21,3017382,EU,Europe,FR,France,0,0
+92.205.152.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.205.160.0/21,3017382,EU,Europe,FR,France,0,0
+92.205.168.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.205.176.0/20,3017382,EU,Europe,FR,France,0,0
+92.205.192.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.205.208.0/21,3017382,EU,Europe,FR,France,0,0
+92.205.216.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.205.224.0/19,2921044,EU,Europe,DE,Germany,0,0
+92.206.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+92.207.0.0/16,2635167,EU,Europe,GB,United Kingdom,0,0
+92.208.0.0/15,2921044,EU,Europe,DE,Germany,0,0
+92.210.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+92.210.128.0/19,2921044,EU,Europe,DE,Germany,0,0
+92.210.160.0/20,2921044,EU,Europe,DE,Germany,0,0
+92.210.176.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.210.180.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.210.182.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.210.183.0/24,6252001,nan,North America,US,United States,0,0
+92.210.184.0/21,2921044,EU,Europe,DE,Germany,0,0
+92.210.192.0/18,2921044,EU,Europe,DE,Germany,0,0
+92.211.0.0/16,2921044,EU,Europe,DE,Germany,0,0
+92.212.0.0/14,2921044,EU,Europe,DE,Germany,0,0
+92.216.0.0/14,2921044,EU,Europe,DE,Germany,0,0
+92.220.0.0/15,3144096,EU,Europe,NO,Norway,0,0
+92.222.0.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.2.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.3.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.3.128/32,3017382,EU,Europe,FR,France,0,0
+92.222.3.129/32,2264397,EU,Europe,PT,Portugal,0,0
+92.222.3.130/31,3017382,EU,Europe,FR,France,0,0
+92.222.3.132/30,3017382,EU,Europe,FR,France,0,0
+92.222.3.136/29,3017382,EU,Europe,FR,France,0,0
+92.222.3.144/28,3017382,EU,Europe,FR,France,0,0
+92.222.3.160/27,3017382,EU,Europe,FR,France,0,0
+92.222.3.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.4.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.5.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.5.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.5.192/28,3017382,EU,Europe,FR,France,0,0
+92.222.5.208/32,2264397,EU,Europe,PT,Portugal,0,0
+92.222.5.209/32,3017382,EU,Europe,FR,France,0,0
+92.222.5.210/31,3017382,EU,Europe,FR,France,0,0
+92.222.5.212/30,3017382,EU,Europe,FR,France,0,0
+92.222.5.216/29,3017382,EU,Europe,FR,France,0,0
+92.222.5.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.6.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.222.7.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.8.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.12.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.12.128/27,3017382,EU,Europe,FR,France,0,0
+92.222.12.160/30,3017382,EU,Europe,FR,France,0,0
+92.222.12.164/31,3017382,EU,Europe,FR,France,0,0
+92.222.12.166/32,3017382,EU,Europe,FR,France,0,0
+92.222.12.167/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.12.168/29,3017382,EU,Europe,FR,France,0,0
+92.222.12.176/28,3017382,EU,Europe,FR,France,0,0
+92.222.12.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.13.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.14.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.16.0/20,3017382,EU,Europe,FR,France,0,0
+92.222.32.0/19,3017382,EU,Europe,FR,France,0,0
+92.222.64.0/19,3017382,EU,Europe,FR,France,0,0
+92.222.96.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.97.0/29,3017382,EU,Europe,FR,France,0,0
+92.222.97.8/30,3175395,EU,Europe,IT,Italy,0,0
+92.222.97.12/30,3017382,EU,Europe,FR,France,0,0
+92.222.97.16/28,3017382,EU,Europe,FR,France,0,0
+92.222.97.32/27,3017382,EU,Europe,FR,France,0,0
+92.222.97.64/26,3017382,EU,Europe,FR,France,0,0
+92.222.97.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.98.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.100.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.102.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.103.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.103.128/27,3017382,EU,Europe,FR,France,0,0
+92.222.103.160/28,3017382,EU,Europe,FR,France,0,0
+92.222.103.176/29,798544,EU,Europe,PL,Poland,0,0
+92.222.103.184/29,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.103.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.104.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.105.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.105.128/28,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.105.144/28,3017382,EU,Europe,FR,France,0,0
+92.222.105.160/27,3017382,EU,Europe,FR,France,0,0
+92.222.105.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.106.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.108.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.110.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.110.128/28,3017382,EU,Europe,FR,France,0,0
+92.222.110.144/29,3017382,EU,Europe,FR,France,0,0
+92.222.110.152/29,2802361,EU,Europe,BE,Belgium,0,0
+92.222.110.160/27,3017382,EU,Europe,FR,France,0,0
+92.222.110.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.111.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.112.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.114.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.114.64/28,3017382,EU,Europe,FR,France,0,0
+92.222.114.80/29,3017382,EU,Europe,FR,France,0,0
+92.222.114.88/30,3017382,EU,Europe,FR,France,0,0
+92.222.114.92/30,2510769,EU,Europe,ES,Spain,0,0
+92.222.114.96/27,3017382,EU,Europe,FR,France,0,0
+92.222.114.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.115.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.116.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.117.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.117.128/28,798544,EU,Europe,PL,Poland,0,0
+92.222.117.144/28,3017382,EU,Europe,FR,France,0,0
+92.222.117.160/27,3017382,EU,Europe,FR,France,0,0
+92.222.117.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.118.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.120.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.120.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.120.192/28,2921044,EU,Europe,DE,Germany,0,0
+92.222.120.208/28,3017382,EU,Europe,FR,France,0,0
+92.222.120.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.121.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.121.64/27,3017382,EU,Europe,FR,France,0,0
+92.222.121.96/28,3017382,EU,Europe,FR,France,0,0
+92.222.121.112/29,3017382,EU,Europe,FR,France,0,0
+92.222.121.120/30,3077311,EU,Europe,CZ,Czechia,0,0
+92.222.121.124/30,3017382,EU,Europe,FR,France,0,0
+92.222.121.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.122.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.122.64/27,3017382,EU,Europe,FR,France,0,0
+92.222.122.96/28,3017382,EU,Europe,FR,France,0,0
+92.222.122.112/32,3017382,EU,Europe,FR,France,0,0
+92.222.122.113/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.122.114/31,3017382,EU,Europe,FR,France,0,0
+92.222.122.116/30,3017382,EU,Europe,FR,France,0,0
+92.222.122.120/29,3017382,EU,Europe,FR,France,0,0
+92.222.122.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.123.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.124.0/27,3017382,EU,Europe,FR,France,0,0
+92.222.124.32/29,3017382,EU,Europe,FR,France,0,0
+92.222.124.40/31,3017382,EU,Europe,FR,France,0,0
+92.222.124.42/32,3175395,EU,Europe,IT,Italy,0,0
+92.222.124.43/32,3017382,EU,Europe,FR,France,0,0
+92.222.124.44/30,3017382,EU,Europe,FR,France,0,0
+92.222.124.48/30,2802361,EU,Europe,BE,Belgium,0,0
+92.222.124.52/30,3017382,EU,Europe,FR,France,0,0
+92.222.124.56/29,3017382,EU,Europe,FR,France,0,0
+92.222.124.64/26,3017382,EU,Europe,FR,France,0,0
+92.222.124.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.124.192/27,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.124.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.125.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.125.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.125.192/28,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.125.208/28,3017382,EU,Europe,FR,France,0,0
+92.222.125.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.126.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.128.0/21,3017382,EU,Europe,FR,France,0,0
+92.222.136.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.136.128/27,3017382,EU,Europe,FR,France,0,0
+92.222.136.160/29,3017382,EU,Europe,FR,France,0,0
+92.222.136.168/30,2921044,EU,Europe,DE,Germany,0,0
+92.222.136.172/30,3017382,EU,Europe,FR,France,0,0
+92.222.136.176/28,3017382,EU,Europe,FR,France,0,0
+92.222.136.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.137.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.138.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.138.128/30,2510769,EU,Europe,ES,Spain,0,0
+92.222.138.132/30,3017382,EU,Europe,FR,France,0,0
+92.222.138.136/29,3017382,EU,Europe,FR,France,0,0
+92.222.138.144/28,3017382,EU,Europe,FR,France,0,0
+92.222.138.160/27,3017382,EU,Europe,FR,France,0,0
+92.222.138.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.139.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.140.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.144.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.148.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.150.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.150.64/28,3017382,EU,Europe,FR,France,0,0
+92.222.150.80/29,3017382,EU,Europe,FR,France,0,0
+92.222.150.88/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.150.89/32,3017382,EU,Europe,FR,France,0,0
+92.222.150.90/31,3017382,EU,Europe,FR,France,0,0
+92.222.150.92/30,3017382,EU,Europe,FR,France,0,0
+92.222.150.96/27,3017382,EU,Europe,FR,France,0,0
+92.222.150.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.151.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.152.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.156.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.158.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.158.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.158.192/28,3017382,EU,Europe,FR,France,0,0
+92.222.158.208/29,3017382,EU,Europe,FR,France,0,0
+92.222.158.216/30,3017382,EU,Europe,FR,France,0,0
+92.222.158.220/32,3202326,EU,Europe,HR,Croatia,0,0
+92.222.158.221/32,3017382,EU,Europe,FR,France,0,0
+92.222.158.222/31,3017382,EU,Europe,FR,France,0,0
+92.222.158.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.159.0/27,3017382,EU,Europe,FR,France,0,0
+92.222.159.32/29,3017382,EU,Europe,FR,France,0,0
+92.222.159.40/31,3017382,EU,Europe,FR,France,0,0
+92.222.159.42/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.159.43/32,3017382,EU,Europe,FR,France,0,0
+92.222.159.44/30,3017382,EU,Europe,FR,France,0,0
+92.222.159.48/28,3017382,EU,Europe,FR,France,0,0
+92.222.159.64/26,3017382,EU,Europe,FR,France,0,0
+92.222.159.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.160.0/20,3017382,EU,Europe,FR,France,0,0
+92.222.176.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.177.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.178.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.180.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.184.0/21,3017382,EU,Europe,FR,France,0,0
+92.222.192.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.193.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.193.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.193.192/27,3017382,EU,Europe,FR,France,0,0
+92.222.193.224/30,3017382,EU,Europe,FR,France,0,0
+92.222.193.228/31,3017382,EU,Europe,FR,France,0,0
+92.222.193.230/32,2921044,EU,Europe,DE,Germany,0,0
+92.222.193.231/32,3017382,EU,Europe,FR,France,0,0
+92.222.193.232/30,3017382,EU,Europe,FR,France,0,0
+92.222.193.236/32,2921044,EU,Europe,DE,Germany,0,0
+92.222.193.237/32,3017382,EU,Europe,FR,France,0,0
+92.222.193.238/31,3017382,EU,Europe,FR,France,0,0
+92.222.193.240/28,3017382,EU,Europe,FR,France,0,0
+92.222.194.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.196.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.196.64/27,3017382,EU,Europe,FR,France,0,0
+92.222.196.96/28,3017382,EU,Europe,FR,France,0,0
+92.222.196.112/29,3017382,EU,Europe,FR,France,0,0
+92.222.196.120/29,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.196.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.197.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.198.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.199.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.199.128/27,3017382,EU,Europe,FR,France,0,0
+92.222.199.160/27,2510769,EU,Europe,ES,Spain,0,0
+92.222.199.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.200.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.202.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.202.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.202.192/27,3017382,EU,Europe,FR,France,0,0
+92.222.202.224/28,3017382,EU,Europe,FR,France,0,0
+92.222.202.240/28,2921044,EU,Europe,DE,Germany,0,0
+92.222.203.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.204.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.208.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.210.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.211.0/28,3017382,EU,Europe,FR,France,0,0
+92.222.211.16/30,3017382,EU,Europe,FR,France,0,0
+92.222.211.20/31,3017382,EU,Europe,FR,France,0,0
+92.222.211.22/32,2921044,EU,Europe,DE,Germany,0,0
+92.222.211.23/32,3017382,EU,Europe,FR,France,0,0
+92.222.211.24/29,3017382,EU,Europe,FR,France,0,0
+92.222.211.32/27,3017382,EU,Europe,FR,France,0,0
+92.222.211.64/26,3017382,EU,Europe,FR,France,0,0
+92.222.211.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.212.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.213.0/26,2750405,EU,Europe,NL,The Netherlands,0,0
+92.222.213.64/26,3017382,EU,Europe,FR,France,0,0
+92.222.213.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.214.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.216.0/21,3017382,EU,Europe,FR,France,0,0
+92.222.224.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.225.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.225.64/27,3017382,EU,Europe,FR,France,0,0
+92.222.225.96/29,3017382,EU,Europe,FR,France,0,0
+92.222.225.104/32,3017382,EU,Europe,FR,France,0,0
+92.222.225.105/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.222.225.106/31,3017382,EU,Europe,FR,France,0,0
+92.222.225.108/30,3017382,EU,Europe,FR,France,0,0
+92.222.225.112/28,3017382,EU,Europe,FR,France,0,0
+92.222.225.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.226.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.228.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.230.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.231.0/26,3017382,EU,Europe,FR,France,0,0
+92.222.231.64/27,3017382,EU,Europe,FR,France,0,0
+92.222.231.96/27,2510769,EU,Europe,ES,Spain,0,0
+92.222.231.128/26,3017382,EU,Europe,FR,France,0,0
+92.222.231.192/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.231.193/32,3017382,EU,Europe,FR,France,0,0
+92.222.231.194/31,3017382,EU,Europe,FR,France,0,0
+92.222.231.196/31,3017382,EU,Europe,FR,France,0,0
+92.222.231.198/32,3017382,EU,Europe,FR,France,0,0
+92.222.231.199/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.231.200/29,3017382,EU,Europe,FR,France,0,0
+92.222.231.208/32,2510769,EU,Europe,ES,Spain,0,0
+92.222.231.209/32,3017382,EU,Europe,FR,France,0,0
+92.222.231.210/31,2510769,EU,Europe,ES,Spain,0,0
+92.222.231.212/30,3017382,EU,Europe,FR,France,0,0
+92.222.231.216/29,3017382,EU,Europe,FR,France,0,0
+92.222.231.224/27,3017382,EU,Europe,FR,France,0,0
+92.222.232.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.234.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.235.0/25,3017382,EU,Europe,FR,France,0,0
+92.222.235.128/27,3017382,EU,Europe,FR,France,0,0
+92.222.235.160/28,3017382,EU,Europe,FR,France,0,0
+92.222.235.176/32,3017382,EU,Europe,FR,France,0,0
+92.222.235.177/32,2921044,EU,Europe,DE,Germany,0,0
+92.222.235.178/31,3017382,EU,Europe,FR,France,0,0
+92.222.235.180/30,3017382,EU,Europe,FR,France,0,0
+92.222.235.184/29,3017382,EU,Europe,FR,France,0,0
+92.222.235.192/26,3017382,EU,Europe,FR,France,0,0
+92.222.236.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.240.0/22,3017382,EU,Europe,FR,France,0,0
+92.222.244.0/25,2750405,EU,Europe,NL,The Netherlands,0,0
+92.222.244.128/25,3017382,EU,Europe,FR,France,0,0
+92.222.245.0/24,3017382,EU,Europe,FR,France,0,0
+92.222.246.0/23,3017382,EU,Europe,FR,France,0,0
+92.222.248.0/21,3017382,EU,Europe,FR,France,0,0
+92.223.0.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.223.1.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.223.2.0/24,174982,AS,Asia,AM,Armenia,0,0
+92.223.3.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.223.4.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.223.6.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.7.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.8.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.223.10.0/23,3469034,SA,South America,BR,Brazil,0,0
+92.223.12.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.223.13.0/24,6252001,nan,North America,US,United States,0,0
+92.223.14.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.15.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.16.0/23,1880251,AS,Asia,SG,Singapore,0,0
+92.223.18.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.223.19.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.20.0/22,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.24.0/22,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.28.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.29.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.223.30.0/24,6252001,nan,North America,US,United States,0,0
+92.223.31.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.223.32.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.223.36.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.37.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.38.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.39.0/24,6252001,nan,North America,US,United States,0,0
+92.223.40.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.223.41.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.42.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.43.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.44.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.223.45.0/24,6252001,nan,North America,US,United States,0,0
+92.223.46.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.223.47.0/24,357994,AF,Africa,EG,Egypt,0,0
+92.223.48.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.49.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.50.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.52.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.223.53.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.223.54.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.55.0/24,3017382,EU,Europe,FR,France,0,0
+92.223.56.0/23,6252001,nan,North America,US,United States,0,0
+92.223.58.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.223.60.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.61.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.223.62.0/24,587116,AS,Asia,AZ,Azerbaijan,0,0
+92.223.63.0/24,1861060,AS,Asia,JP,Japan,0,0
+92.223.64.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.223.66.0/24,6252001,nan,North America,US,United States,0,0
+92.223.67.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.68.0/22,6252001,nan,North America,US,United States,0,0
+92.223.72.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.73.0/24,1835841,AS,Asia,KR,South Korea,0,0
+92.223.74.0/23,3077311,EU,Europe,CZ,Czechia,0,0
+92.223.76.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.223.77.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.78.0/24,2077456,OC,Oceania,AU,Australia,0,0
+92.223.79.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.223.80.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.81.0/24,3469034,SA,South America,BR,Brazil,0,0
+92.223.82.0/23,6252001,nan,North America,US,United States,0,0
+92.223.84.0/26,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.64/28,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.80/30,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.84/32,3017382,EU,Europe,FR,France,0,0
+92.223.84.85/32,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.86/31,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.88/29,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.96/27,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.84.128/25,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.85.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.223.86.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.223.87.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.88.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.90.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.223.91.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.92.0/24,798544,EU,Europe,PL,Poland,0,0
+92.223.93.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.223.94.0/24,6252001,nan,North America,US,United States,0,0
+92.223.95.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.223.96.0/24,6252001,nan,North America,US,United States,0,0
+92.223.97.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.98.0/24,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.99.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.223.100.0/24,1880251,AS,Asia,SG,Singapore,0,0
+92.223.101.0/24,6252001,nan,North America,US,United States,0,0
+92.223.102.0/24,6252001,nan,North America,US,United States,0,0
+92.223.103.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.104.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.106.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.223.107.0/24,6252001,nan,North America,US,United States,0,0
+92.223.108.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.223.112.0/23,2960313,EU,Europe,LU,Luxembourg,0,0
+92.223.114.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.223.116.0/23,1880251,AS,Asia,SG,Singapore,0,0
+92.223.118.0/23,6252001,nan,North America,US,United States,0,0
+92.223.120.0/24,6252001,nan,North America,US,United States,0,0
+92.223.121.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.223.122.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.223.124.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.223.126.0/23,2750405,EU,Europe,NL,The Netherlands,0,0
+92.223.128.0/17,3175395,EU,Europe,IT,Italy,0,0
+92.224.0.0/13,2921044,EU,Europe,DE,Germany,0,0
+92.232.0.0/15,2635167,EU,Europe,GB,United Kingdom,0,0
+92.234.0.0/16,2635167,EU,Europe,GB,United Kingdom,0,0
+92.235.0.0/18,2750405,EU,Europe,NL,The Netherlands,0,0
+92.235.64.0/19,719819,EU,Europe,HU,Hungary,0,0
+92.235.96.0/19,719819,EU,Europe,HU,Hungary,0,0
+92.235.128.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.236.0.0/14,2635167,EU,Europe,GB,United Kingdom,0,0
+92.240.0.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+92.240.32.0/19,3277605,EU,Europe,BA,Bosnia and Herzegovina,0,0
+92.240.64.0/19,458258,EU,Europe,LV,Latvia,0,0
+92.240.96.0/19,2658434,EU,Europe,CH,Switzerland,0,0
+92.240.128.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.240.144.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.240.148.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.240.149.0/24,798544,EU,Europe,PL,Poland,0,0
+92.240.150.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.240.151.0/24,798544,EU,Europe,PL,Poland,0,0
+92.240.152.0/21,660013,EU,Europe,FI,Finland,0,0
+92.240.160.0/19,3077311,EU,Europe,CZ,Czechia,0,0
+92.240.192.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.240.200.0/24,953987,AF,Africa,ZA,South Africa,0,0
+92.240.201.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.240.202.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.240.204.0/24,2542007,AF,Africa,MA,Morocco,0,0
+92.240.205.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.240.206.0/24,3703430,nan,North America,PA,Panama,0,0
+92.240.207.0/24,798544,EU,Europe,PL,Poland,0,0
+92.240.208.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.240.212.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.240.214.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.240.215.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.240.216.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.240.217.0/24,6252001,nan,North America,US,United States,0,0
+92.240.218.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.240.220.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.240.224.0/20,3057568,EU,Europe,SK,Slovakia,0,0
+92.240.240.0/23,3057568,EU,Europe,SK,Slovakia,0,0
+92.240.242.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.240.243.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.240.244.0/22,3057568,EU,Europe,SK,Slovakia,0,0
+92.240.248.0/21,3057568,EU,Europe,SK,Slovakia,0,0
+92.241.0.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.241.32.0/19,248816,AS,Asia,JO,Jordan,0,0
+92.241.64.0/19,614540,AS,Asia,GE,Georgia,0,0
+92.241.96.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.241.128.0/19,3277605,EU,Europe,BA,Bosnia and Herzegovina,0,0
+92.241.160.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.241.192.0/20,2623032,EU,Europe,DK,Denmark,0,0
+92.241.208.0/21,2661886,EU,Europe,SE,Sweden,0,0
+92.241.216.0/21,2623032,EU,Europe,DK,Denmark,0,0
+92.241.224.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.242.0.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.242.64.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.242.96.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.242.100.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.242.104.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.242.112.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.242.128.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+92.242.160.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.242.164.0/22,660013,EU,Europe,FI,Finland,0,0
+92.242.168.0/22,272103,AS,Asia,LB,Lebanon,0,0
+92.242.172.0/22,3175395,EU,Europe,IT,Italy,0,0
+92.242.176.0/22,732800,EU,Europe,BG,Bulgaria,0,0
+92.242.180.0/22,798544,EU,Europe,PL,Poland,0,0
+92.242.184.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.242.185.0/24,6252001,nan,North America,US,United States,0,0
+92.242.186.0/24,290557,AS,Asia,AE,United Arab Emirates,0,0
+92.242.187.0/24,597427,EU,Europe,LT,Lithuania,0,0
+92.242.188.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.242.192.0/19,130758,AS,Asia,IR,Iran,0,0
+92.242.224.0/19,3202326,EU,Europe,HR,Croatia,0,0
+92.243.0.0/19,3017382,EU,Europe,FR,France,0,0
+92.243.32.0/19,2782113,EU,Europe,AT,Austria,0,0
+92.243.64.0/24,6251999,nan,North America,CA,Canada,0,0
+92.243.65.0/24,3202326,EU,Europe,HR,Croatia,0,0
+92.243.66.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.243.67.0/24,617790,EU,Europe,MD,Moldova,0,0
+92.243.68.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.243.69.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.243.70.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.243.71.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.243.72.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.243.74.0/23,1880251,AS,Asia,SG,Singapore,0,0
+92.243.76.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.243.80.0/24,3202326,EU,Europe,HR,Croatia,0,0
+92.243.81.0/24,2264397,EU,Europe,PT,Portugal,0,0
+92.243.82.0/24,6252001,nan,North America,US,United States,0,0
+92.243.83.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.243.84.0/24,6252001,nan,North America,US,United States,0,0
+92.243.85.0/24,298795,AS,Asia,TR,Türkiye,0,0
+92.243.86.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.243.88.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.243.89.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.243.90.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.243.92.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.243.93.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.243.94.0/23,3175395,EU,Europe,IT,Italy,0,0
+92.243.96.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.243.128.0/19,3175395,EU,Europe,IT,Italy,0,0
+92.243.160.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.243.192.0/19,3077311,EU,Europe,CZ,Czechia,0,0
+92.243.224.0/19,2623032,EU,Europe,DK,Denmark,0,0
+92.244.0.0/19,2661886,EU,Europe,SE,Sweden,0,0
+92.244.32.0/19,798544,EU,Europe,PL,Poland,0,0
+92.244.64.0/19,3190538,EU,Europe,SI,Slovenia,0,0
+92.244.96.0/19,690791,EU,Europe,UA,Ukraine,0,0
+92.244.128.0/19,6290252,EU,Europe,RS,Serbia,0,0
+92.244.160.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.244.161.0/24,1269750,AS,Asia,IN,India,0,0
+92.244.162.0/23,1880251,AS,Asia,SG,Singapore,0,0
+92.244.164.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.244.166.0/23,1880251,AS,Asia,SG,Singapore,0,0
+92.244.168.0/22,1880251,AS,Asia,SG,Singapore,0,0
+92.244.172.0/23,2802361,EU,Europe,BE,Belgium,0,0
+92.244.174.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.244.176.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.244.178.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.244.180.0/23,3996063,nan,North America,MX,Mexico,0,0
+92.244.182.0/23,2510769,EU,Europe,ES,Spain,0,0
+92.244.184.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.244.186.0/23,1269750,AS,Asia,IN,India,0,0
+92.244.188.0/23,2921044,EU,Europe,DE,Germany,0,0
+92.244.190.0/23,2635167,EU,Europe,GB,United Kingdom,0,0
+92.244.192.0/19,2661886,EU,Europe,SE,Sweden,0,0
+92.244.224.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.245.0.0/19,3057568,EU,Europe,SK,Slovakia,0,0
+92.245.32.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.245.64.0/19,719819,EU,Europe,HU,Hungary,0,0
+92.245.96.0/19,1527747,AS,Asia,KG,Kyrgyzstan,0,0
+92.245.128.0/19,3017382,EU,Europe,FR,France,0,0
+92.245.160.0/19,3175395,EU,Europe,IT,Italy,0,0
+92.245.192.0/19,3057568,EU,Europe,SK,Slovakia,0,0
+92.245.224.0/19,2635167,EU,Europe,GB,United Kingdom,0,0
+92.246.0.0/19,2623032,EU,Europe,DK,Denmark,0,0
+92.246.32.0/19,3175395,EU,Europe,IT,Italy,0,0
+92.246.64.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.246.68.0/22,6252001,nan,North America,US,United States,0,0
+92.246.72.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.246.76.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.246.77.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.246.78.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.246.79.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.246.80.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.246.84.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.246.88.0/22,2921044,EU,Europe,DE,Germany,0,0
+92.246.92.0/22,2750405,EU,Europe,NL,The Netherlands,0,0
+92.246.96.0/19,3175395,EU,Europe,IT,Italy,0,0
+92.246.128.0/22,3469034,SA,South America,BR,Brazil,0,0
+92.246.132.0/22,174982,AS,Asia,AM,Armenia,0,0
+92.246.136.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.246.137.0/24,2661886,EU,Europe,SE,Sweden,0,0
+92.246.138.0/24,174982,AS,Asia,AM,Armenia,0,0
+92.246.139.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.246.140.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.246.142.0/23,174982,AS,Asia,AM,Armenia,0,0
+92.246.144.0/22,130758,AS,Asia,IR,Iran,0,0
+92.246.148.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.246.152.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.246.156.0/22,130758,AS,Asia,IR,Iran,0,0
+92.246.160.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.246.192.0/19,2017370,EU,Europe,RU,Russia,0,0
+92.246.224.0/21,6252001,nan,North America,US,United States,0,0
+92.246.232.0/22,6252001,nan,North America,US,United States,0,0
+92.246.236.0/24,6252001,nan,North America,US,United States,0,0
+92.246.237.0/27,6252001,nan,North America,US,United States,0,0
+92.246.237.32/28,6252001,nan,North America,US,United States,0,0
+92.246.237.48/29,6252001,nan,North America,US,United States,0,0
+92.246.237.56/32,2635167,EU,Europe,GB,United Kingdom,0,0
+92.246.237.57/32,6252001,nan,North America,US,United States,0,0
+92.246.237.58/31,6252001,nan,North America,US,United States,0,0
+92.246.237.60/30,6252001,nan,North America,US,United States,0,0
+92.246.237.64/26,6252001,nan,North America,US,United States,0,0
+92.246.237.128/25,6252001,nan,North America,US,United States,0,0
+92.246.238.0/23,6252001,nan,North America,US,United States,0,0
+92.246.240.0/20,6252001,nan,North America,US,United States,0,0
+92.247.0.0/16,732800,EU,Europe,BG,Bulgaria,0,0
+92.248.0.0/17,2782113,EU,Europe,AT,Austria,0,0
+92.248.128.0/17,2017370,EU,Europe,RU,Russia,0,0
+92.249.0.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.249.4.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.249.5.0/24,2411586,EU,Europe,GI,Gibraltar,0,0
+92.249.6.0/24,2802361,EU,Europe,BE,Belgium,0,0
+92.249.7.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.249.8.0/22,2510769,EU,Europe,ES,Spain,0,0
+92.249.12.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.249.13.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.249.14.0/24,798544,EU,Europe,PL,Poland,0,0
+92.249.15.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.249.16.0/22,1861060,AS,Asia,JP,Japan,0,0
+92.249.20.0/22,2782113,EU,Europe,AT,Austria,0,0
+92.249.24.0/24,2750405,EU,Europe,NL,The Netherlands,0,0
+92.249.25.0/24,6252001,nan,North America,US,United States,0,0
+92.249.26.0/24,3057568,EU,Europe,SK,Slovakia,0,0
+92.249.27.0/24,390903,EU,Europe,GR,Greece,0,0
+92.249.28.0/23,6252001,nan,North America,US,United States,0,0
+92.249.30.0/24,357994,AF,Africa,EG,Egypt,0,0
+92.249.31.0/24,6252001,nan,North America,US,United States,0,0
+92.249.32.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.249.36.0/24,2782113,EU,Europe,AT,Austria,0,0
+92.249.37.0/24,3703430,nan,North America,PA,Panama,0,0
+92.249.38.0/23,3703430,nan,North America,PA,Panama,0,0
+92.249.40.0/22,3017382,EU,Europe,FR,France,0,0
+92.249.44.0/23,6252001,nan,North America,US,United States,0,0
+92.249.46.0/23,1269750,AS,Asia,IN,India,0,0
+92.249.48.0/24,2921044,EU,Europe,DE,Germany,0,0
+92.249.49.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.249.50.0/24,732800,EU,Europe,BG,Bulgaria,0,0
+92.249.51.0/24,3175395,EU,Europe,IT,Italy,0,0
+92.249.52.0/22,6290252,EU,Europe,RS,Serbia,0,0
+92.249.56.0/22,130758,AS,Asia,IR,Iran,0,0
+92.249.60.0/22,298795,AS,Asia,TR,Türkiye,0,0
+92.249.64.0/18,690791,EU,Europe,UA,Ukraine,0,0
+92.249.128.0/17,719819,EU,Europe,HU,Hungary,0,0
+92.250.0.0/17,2264397,EU,Europe,PT,Portugal,0,0
+92.250.128.0/17,2960313,EU,Europe,LU,Luxembourg,0,0
+92.251.0.0/17,2562770,EU,Europe,MT,Malta,0,0
+92.251.128.0/17,2963597,EU,Europe,IE,Ireland,0,0
+92.252.0.0/17,2921044,EU,Europe,DE,Germany,0,0
+92.252.128.0/17,2017370,EU,Europe,RU,Russia,0,0
+92.253.0.0/17,248816,AS,Asia,JO,Jordan,0,0
+92.253.128.0/18,2017370,EU,Europe,RU,Russia,0,0
+92.253.192.0/21,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.253.200.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.253.201.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.253.202.0/24,1512440,AS,Asia,UZ,Uzbekistan,0,0
+92.253.203.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.253.204.0/23,690791,EU,Europe,UA,Ukraine,0,0
+92.253.206.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.253.208.0/23,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.253.210.0/24,3077311,EU,Europe,CZ,Czechia,0,0
+92.253.211.0/24,1522867,AS,Asia,KZ,Kazakhstan,0,0
+92.253.212.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.253.216.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.253.220.0/22,3077311,EU,Europe,CZ,Czechia,0,0
+92.253.224.0/21,163843,AS,Asia,SY,Syria,0,0
+92.253.232.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.253.233.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.253.234.0/24,690791,EU,Europe,UA,Ukraine,0,0
+92.253.235.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.253.236.0/22,690791,EU,Europe,UA,Ukraine,0,0
+92.253.240.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.254.0.0/17,2750405,EU,Europe,NL,The Netherlands,0,0
+92.254.128.0/17,2661886,EU,Europe,SE,Sweden,0,0
+92.255.0.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.255.1.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.255.2.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.255.4.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.255.8.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.255.16.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.255.32.0/21,6252001,nan,North America,US,United States,0,0
+92.255.40.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.255.48.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.255.52.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.255.53.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.255.54.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.255.56.0/24,146669,EU,Europe,CY,Cyprus,0,0
+92.255.57.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.255.58.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.255.60.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.255.64.0/24,2635167,EU,Europe,GB,United Kingdom,0,0
+92.255.65.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.255.66.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.255.68.0/22,146669,EU,Europe,CY,Cyprus,0,0
+92.255.72.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.255.80.0/22,2635167,EU,Europe,GB,United Kingdom,0,0
+92.255.84.0/24,146669,EU,Europe,CY,Cyprus,0,0
+92.255.85.0/24,1819730,AS,Asia,HK,Hong Kong,0,0
+92.255.86.0/23,6252001,nan,North America,US,United States,0,0
+92.255.88.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.255.96.0/20,2017370,EU,Europe,RU,Russia,0,0
+92.255.112.0/27,2017370,EU,Europe,RU,Russia,0,0
+92.255.112.32/27,660013,EU,Europe,FI,Finland,0,0
+92.255.112.64/27,660013,EU,Europe,FI,Finland,0,0
+92.255.112.96/27,2017370,EU,Europe,RU,Russia,0,0
+92.255.112.128/25,2017370,EU,Europe,RU,Russia,0,0
+92.255.113.0/24,2017370,EU,Europe,RU,Russia,0,0
+92.255.114.0/23,2017370,EU,Europe,RU,Russia,0,0
+92.255.116.0/22,2017370,EU,Europe,RU,Russia,0,0
+92.255.120.0/21,2017370,EU,Europe,RU,Russia,0,0
+92.255.128.0/17,2017370,EU,Europe,RU,Russia,0,0

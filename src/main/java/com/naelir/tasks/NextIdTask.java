@@ -1,23 +1,23 @@
 package com.naelir.tasks;
 
 import java.nio.ByteBuffer;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.naelir.dht.Converter;
 import com.naelir.dht.Data;
-import com.naelir.dht.Generator;
 import com.naelir.dht.ITask;
-import com.naelir.dht.Node;
-import com.naelir.dht.RoutingTable;
+import com.naelir.utp.UtpClient;
 
 public class NextIdTask implements ITask {
     public static final Logger logger = LogManager.getLogger(NextIdTask.class);
     private Data data;
     private ByteBuffer nextId;
+    private UtpClient client;
 
-    public NextIdTask(Data data) {
+    public NextIdTask(UtpClient client, Data data) {
+        this.client = client;
         this.data = data;
     }
 
@@ -29,51 +29,21 @@ public class NextIdTask implements ITask {
     @Override
     public void run() {
         this.nextId = this.data.nextId();
-        if (this.nextId != null) {
-            String myself = Generator.toHex(this.nextId.array());
-            logger.warn("next id is {}", myself);
-            List<Node> nodes = this.data.table.closest(this.nextId, 20);
-            this.data.table = new RoutingTable();
-            for (Node e : nodes) {
-                e.queries.clear();
-                this.data.table.insert(e);
-            }
-            if (this.data.arguments.getPeersDepth > 1) {
-                int i = 0;
-                int j = 0;
-                int k = 0;
-                int r = 0;
-                for (Sample sample : this.data.samples.values()) {
-                    if (sample.torrent.meta() != null) {
-                        r++;
-                    } else
-//                    if (sample.peers().size() <= 3 && sample.skip == false && data.arguments.mode != 2) {
-//                        i++;
-//                        data.fileManager.insert(Entry.lowPeers(sample.torrent.infoHash()));
-//                    } else
-                    if (sample.skip) {
-                        j++;
-                    } else {
-                        k++;
-                        this.data.fileManager.insertUnresolved(sample.torrent.infoHash());
-                    }
-                }
-                logger.warn("samples; low peers {}, crap {}, resolved {}, not {}", i, j, r, k);
+        String myself = Converter.toHex(this.nextId.array());
+        int j = 0;
+        int k = 0;
+        int r = 0;
+        for (Sample sample : this.data.samples.values()) {
+            if (sample.torrent.meta() != null) {
+                r++;
+            } else if (sample.skip) {
+                j++;
             } else {
-                for (Sample sample : this.data.samples.values()) {
-                    this.data.fileManager.insertUnresolved(sample.torrent.infoHash());
-                }
+                k++;
             }
-            this.data.samples.clear();
-            this.data.torrents.clear();
-            this.data.requestsSent.invalidateAll();
-            this.data.tokensSent.invalidateAll();
-            this.data.tokensReceived.invalidateAll();
+            logger.debug("{}", sample);
         }
-    }
+        logger.info("next id is {}, crap {}, resolved {}, not {}", myself, j, r, k);
 
-    @Override
-    public boolean stop() {
-        return this.nextId == null;
     }
 }

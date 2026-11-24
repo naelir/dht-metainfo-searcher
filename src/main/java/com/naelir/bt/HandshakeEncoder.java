@@ -17,7 +17,9 @@ public class HandshakeEncoder extends MessageToByteEncoder<Object> {
 
     @Override
     protected void encode(ChannelHandlerContext ctx, Object msg, ByteBuf out) throws Exception {
-        logger.debug("sending {}", msg.getClass().getSimpleName());
+        if (logger.isDebugEnabled()) {
+            logger.debug("sending {} to {}", msg.getClass().getSimpleName(), ctx.channel().remoteAddress());
+        }
         if (msg instanceof HandshakeMessage hm) {
             hm.write(out);
         } else if (msg instanceof ExtendedPeerWireMessage br) {

@@ -6,7 +6,8 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.naelir.dht.Generator;
+import com.naelir.bt.Entry;
+import com.naelir.dht.Converter;
 
 /**
  * Represents an ongoing UDP tracker session for a given tracker host.
@@ -40,9 +41,7 @@ public class ScrapeTrackerConnection extends TrackerConnection {
      */
     private int scrapeOffset;
 
-    // ─────────────────────────────────────────────────────────────────────────
-
-    public ScrapeTrackerConnection(String hostAddress, int port, Set<String> hashes) {
+    public ScrapeTrackerConnection(String hostAddress, int port, Set<Entry> hashes) {
         super(hostAddress, port, hashes);
     }
 
@@ -69,7 +68,7 @@ public class ScrapeTrackerConnection extends TrackerConnection {
      *
      * @throws IllegalStateException if no batch is pending
      */
-    public List<String> currentBatch() {
+    public List<Entry> currentBatch() {
         if (pendingBatchStart < 0)
             throw new IllegalStateException("No batch is currently pending");
         int end = Math.min(pendingBatchStart + BATCH_SIZE, allHashes.size());
@@ -104,11 +103,11 @@ public class ScrapeTrackerConnection extends TrackerConnection {
 
         int batchStart = scrapeOffset;
         int batchEnd   = Math.min(batchStart + BATCH_SIZE, allHashes.size());
-        List<String> batch = allHashes.subList(batchStart, batchEnd);
+        List<Entry> batch = allHashes.subList(batchStart, batchEnd);
 
         byte[][] hashBytes = new byte[batch.size()][];
         for (int i = 0; i < batch.size(); i++) {
-            hashBytes[i] = Generator.toArray(batch.get(i));
+            hashBytes[i] = Converter.toArray(batch.get(i).hash);
         }
 
         pendingBatchStart = batchStart;
