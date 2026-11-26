@@ -285,7 +285,7 @@ public class DhtResponseResolver {
             for (String hash : decode.samples) {
                 data.stats.received.incrementAndGet();
 
-                String value = this.data.fileManager.get(hash);
+                Entry value = this.data.fileManager.get(hash);
                 if (value != null) {
                     logger.debug("hash {} already resolved as {}", hash, value);
                     i++;

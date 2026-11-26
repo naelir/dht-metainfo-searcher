@@ -14,6 +14,7 @@ public class Config {
         String db = null;
         String table = null;
         String scrapeIn = null;
+        String localDbFile = null;
         int getPeerDepth = 3;
         int minPeers = 1;
         int maxNodes = 400;
@@ -81,6 +82,11 @@ public class Config {
                 if (i + 1 >= args.length)
                     throw new IllegalArgumentException("Missing value for --connection-string");
                 connectionString = args[++i];
+                break;
+            case "--localdb-file":
+                if (i + 1 >= args.length)
+                    throw new IllegalArgumentException("Missing value for --localdb-file");
+                localDbFile = args[++i];
                 break;
             case "--db":
                 if (i + 1 >= args.length)
@@ -162,12 +168,14 @@ public class Config {
                 .hashesStep(hashesStep)
                 .resolverMillis(resolverMillis)
                 .scrapeIn(scrapeIn)
+                .localDbFile(localDbFile)
                 .build();
     }
 
     public final String from;
     public final int bitspaceParts;
     public final String connectionString;
+    public final String localDbFile;
     public final String db;
     public final String table;
     public final int getPeersDepth;
@@ -212,10 +220,12 @@ public class Config {
         this.hashesStep = builder.hashesStep;
         this.resolverMillis = builder.resolverMillis;
         this.scrapeIn = builder.scrapeIn;
+        this.localDbFile = builder.localDbFile;
     }
     
 
     public static class Builder {
+        private String localDbFile;
         private int bitspaceParts = 256;
         private String from;
         private String connectionString;
@@ -241,6 +251,11 @@ public class Config {
         
         public Builder scrapeIn(String scrapeIn) {
             this.scrapeIn = scrapeIn;
+            return this;
+        }
+        
+        public Builder localDbFile(String localDbFile) {
+            this.localDbFile = localDbFile;
             return this;
         }
 

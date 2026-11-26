@@ -32,6 +32,7 @@ import com.naelir.fs.FileLocationDb;
 import com.naelir.fs.IFileDB;
 import com.naelir.fs.ILocationDb;
 import com.naelir.fs.SavedCompactInfoFileManager;
+import com.naelir.fs.SqliteFileDB;
 import com.naelir.tasks.NodeMaintainer;
 import com.naelir.tasks.TcpTorrentResolverTask;
 import com.naelir.tasks.UdpTorrentResolverTask;
@@ -80,7 +81,7 @@ public final class DhtApplication implements Runnable {
                     : BigInteger.ZERO;
             Queue<ByteBuffer> udpmyselfs = divide(from, to);
             String tcpmyself = Converter.generatePeerID();
-            IFileDB fileDB = FileDB.of();
+            IFileDB fileDB = this.arguments.localDbFile != null ? new SqliteFileDB(this.arguments.localDbFile) : FileDB.of();
             
             SavedCompactInfoFileManager peersFm = SavedCompactInfoFileManager.of();
             SavedCompactInfo compactInfo = peersFm.readCompactInfo();

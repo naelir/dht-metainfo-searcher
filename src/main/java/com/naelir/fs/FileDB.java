@@ -132,7 +132,7 @@ public class FileDB implements IFileDB {
     }
     
 
-    public String get(String hash) {
+    public Entry get(String hash) {
         String prefix = shardPrefixForId(hash);
         Path shard = shardPath(prefix);
         if (!Files.exists(shard))
@@ -142,7 +142,7 @@ public class FileDB implements IFileDB {
             while ((line = reader.readLine()) != null) {
                 int sep = line.indexOf(SEP);
                 if (sep >= 0 && line.substring(0, sep).equalsIgnoreCase(hash)) {
-                    return line.substring(sep + 1, line.length());
+                    return Entry.fromLine(line);
                 }
             }
         } catch (IOException e) {

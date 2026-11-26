@@ -13,7 +13,7 @@ public interface IFileDB extends AutoCloseable {
 
     void insertUnresolved(String hash);
 
-    String get(String hash);
+    Entry get(String hash);
 
     Set<Entry> readScrape(String path);
 
